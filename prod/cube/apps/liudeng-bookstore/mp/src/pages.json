@@ -1,0 +1,115 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path" : "pages/mine/mine",
+			"style" : {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/login",
+			"pages": [
+				{
+					"path" : "login",
+					"style" : {
+						"navigationBarTitleText": "登录",
+						"navigationBarBackgroundColor": "#ffffff",
+						"backgroundColor":"#F4F4F4"
+					}
+				},
+				{
+					"path" : "agreement",
+					"style" :
+					{
+						"navigationBarTitleText": "用户协议与隐私政策",
+						"navigationBarBackgroundColor": "#ffffff",
+						"backgroundColor":"#F4F4F4"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/web-page",
+			"pages": [
+				{
+					"path" : "web-page",
+					"style" : {
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/person",
+			"pages": [
+				{
+					"path" : "person",
+					"style" : {
+						"navigationBarTitleText": "个人信息",
+						"navigationBarBackgroundColor": "#ffffff",
+						"backgroundColor":"#F4F4F4"
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F4F4F4"
+	},
+	"tabBar": {
+		"color": "#222",
+		"selectedColor": "#1D66FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/static/icon/index.png",
+				"selectedIconPath": "/static/icon/index-select.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "/static/icon/person.png",
+				"selectedIconPath": "/static/icon/person-select.png"
+			}
+		]
+  },
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式（list 的索引项）
+		"list": [
+			{
+					"name": "首页",
+					"path": "pages/index/index"
+			},
+			{
+					"name": "我的",
+					"path": "pages/mine/mine"
+			},
+			{
+					"name": "登录",
+					"path": "pages/login/login"
+			}
+		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	}
+}

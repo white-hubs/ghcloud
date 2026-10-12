@@ -1,0 +1,93 @@
+
+.cell-group {
+  margin: 3vw;
+}
+.cell-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .name-status {
+    display: flex;
+    align-items: center;
+
+    .name {
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 500;
+      font-size: 15px;
+      color: #1F3140;
+    }
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+}
+.cell-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #666666;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  label {
+    color: #666666;
+  }
+}
+.booking-cell-item{
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #666666;
+  text-align: left;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  label {
+    color: #666666;
+  }
+}
+.fill{
+  font-size: 12px;
+  position: absolute;
+  top:15px;
+  right:0;
+  background-color: #F7F8F9;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+}
+.container {
+  position: relative;
+}
+.booking {
+  font-size: 12px;
+  padding: 12px;
+  background-color: var(--van-primary-color);
+  white-space: normal;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  position: fixed;
+  right: 5px;
+  top: 88vh;
+
+  p {
+    line-height: 16px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@ghcloud/cube-static-site-generator-cli",
+  "version": "0.0.38",
+  "type": "module",
+  "bin": {
+    "ssg": "./src/cli.ts"
+  },
+  "scripts": {
+    "build": "SSG_INPUT_DIR=./test-site astro build"
+  },
+  "dependencies": {
+    "@ghcloud/cube-static-site-generator-components": "workspace:*",
+    "archiver": "^6.0.0",
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/vue": "^6.0.0",
+    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@types/archiver": "^6.0.0",
+    "@types/node": "catalog:",
+    "astro": "^6.0.0",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vue": "catalog:"
+  }
+}

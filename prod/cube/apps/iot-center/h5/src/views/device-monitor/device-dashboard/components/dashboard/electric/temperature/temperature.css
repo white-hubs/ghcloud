@@ -1,0 +1,27 @@
+.cube-temperature-dashboard {
+  color: #323233;
+  border:1px solid var(--van-primary-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.cube-temperature-echart {
+  width: 50%;
+  height: 100%;
+}
+.cube-temperature-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.cube-temperature-dashboard span{
+  font-size: 15px;
+}

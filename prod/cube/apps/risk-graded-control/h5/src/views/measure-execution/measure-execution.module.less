@@ -1,0 +1,377 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 24px;
+  background: #f5f5f5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.statsPanel {
+  padding: 12px 16px 0;
+}
+
+.statsInner {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
+}
+
+.statItem {
+  flex: 1;
+  text-align: center;
+}
+
+.statNum {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.statOverdue {
+  color: #ef4444;
+}
+
+.statPending {
+  color: #f59e0b;
+}
+
+.statDone {
+  color: #10b981;
+}
+
+.statText {
+  margin-top: 4px;
+  color: #999;
+  font-size: 12px;
+}
+
+.filterRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 16px 12px;
+}
+
+.unitFilter {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  color: #666;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.unitFilter span:first-child {
+  min-width: 0;
+  word-break: break-all;
+}
+
+.chevron {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.list {
+  padding: 0 16px 16px;
+}
+
+.empty {
+  padding: 48px 0;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.unitCard {
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-left-width: 4px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
+}
+
+.unitHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px 8px;
+}
+
+.unitTitleRow {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.unitName {
+  min-width: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.overdueHint {
+  flex-shrink: 0;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.deadlineHint {
+  flex-shrink: 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.measureBlock {
+  margin: 0 12px 8px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.measureMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.measureType {
+  min-width: 0;
+  color: #999;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.deadlineOverdue {
+  color: #ef4444;
+  font-size: 12px;
+}
+
+.deadlineNormal {
+  color: #999;
+  font-size: 12px;
+}
+
+.measureContent {
+  margin: 0 0 10px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.measureActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.markGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.markBtn {
+  padding: 4px 10px;
+  color: #999;
+  font-size: 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.markActive {
+  color: #fff;
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.markUndone {
+  color: #666;
+  background: #fff;
+  border-color: #d1d5db;
+}
+
+.actionGroup {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.photoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.measureForm {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.uploadRow {
+  margin-bottom: 10px;
+}
+
+.uploadLabel {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 12px;
+}
+
+.uploadPanel {
+  :global(.van-uploader) {
+    width: 100%;
+  }
+
+  :global(.van-uploader__wrapper) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  :global(.van-uploader__preview) {
+    margin: 0;
+  }
+
+  :global(.van-uploader__upload) {
+    margin: 0;
+  }
+}
+
+.uploadTrigger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  color: #666;
+  font-size: 12px;
+  background: #fff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.uploadIcon {
+  color: #3b82f6;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.uploadText {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.attachmentItem {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.attachmentThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.attachmentPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  font-size: 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.attachmentRemove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  background: rgb(0 0 0 / 55%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.uploadLink {
+  padding: 0;
+  color: #666;
+  font-size: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.remarkRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  :global(.van-button) {
+    flex-shrink: 0;
+  }
+}
+
+.remarkInput {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  color: #333;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  outline: none;
+
+  &::placeholder {
+    color: #bbb;
+  }
+}

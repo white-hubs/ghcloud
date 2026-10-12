@@ -1,0 +1,70 @@
+
+.chart {
+    height: 140px;
+}
+
+.product-table {
+    height: 360px;
+
+    .radioBar {
+        text-align: right;
+        margin: 6px 0;
+
+        :deep(.ant-radio-button-wrapper) {
+            height: 28px;
+            line-height: 28px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px 2px 2px 2px;
+            font-size: 12px;
+            color: #ABB8CB;
+            margin-left: 6px;
+
+            background: rgba(216, 216, 216, .1) !important;
+            border: 1px solid rgba(96, 112, 128, 0.6) !important;
+            border-radius: 2px;
+            color: #fff;
+        }
+
+        :deep(.ant-radio-button-wrapper-checked) {
+            background: rgba(216, 216, 216, .1) !important;
+            border: 1px solid rgba(96, 112, 128, 0.6) !important;
+            border-radius: 2px;
+            color: #fff;
+        }
+    }
+
+    :deep(.ant-radio-button-wrapper:not(:first-child)::before) {
+        display: none;
+    }
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .camera {
+        width: 168px;
+        height: 90px;
+        margin-top: 10px;
+    }
+}
+
+.alarm-level {
+    height: 350px;
+    .chart {
+        display: flex;
+        height: 120px;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.body {
+    height: 140px;
+    margin-top: 10px;
+}

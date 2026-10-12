@@ -1,0 +1,32 @@
+.options_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.item_container {
+  width: 30%;
+  cursor: pointer;
+  text-align: center;
+
+  .model-img {
+    width: 80%;
+    border-radius: 6px;
+    object-fit: contain;
+    transition: all 0.4s;
+    margin-bottom: 10px;
+  }
+
+  &:hover .model-img {
+    transform: scale(1.1);
+  }
+
+  &:hover .list-img {
+    transform: scale(1.1);
+  }
+}

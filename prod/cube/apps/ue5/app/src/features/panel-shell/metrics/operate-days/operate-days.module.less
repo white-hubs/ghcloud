@@ -1,0 +1,110 @@
+
+.operateDays {
+	cursor: pointer;
+	.top {
+		height: 50px;
+		line-height: 50px;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 16px 0 12px;
+		background-image: url("/resource/v1/ue5-migrate/assets/images/dutybg.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+
+		.tit {
+			color: #d0deee;
+			font-size: 16px;
+		}
+
+		.statstics {
+			font-size: 22px;
+			font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+			font-weight: bold;
+			color: #eff6ff;
+			text-shadow: 0px 0px 6px rgba(54, 132, 228, 0.8);
+			align-items: flex-end;
+
+			.unit {
+				font-family: Source Han Sans CN-Regula;
+				font-weight: normal;
+				color: #BAD9FF;
+				font-size: 12px;
+				margin-left: 4px;
+			}
+		}
+	}
+}
+
+:global(.access-control-card-theme) .operateDays {
+	.top {
+		box-sizing: border-box;
+		align-items: center;
+		gap: var(--access-control-space-md, 10px);
+		height: 50px;
+		padding: var(--access-control-surface-padding, 10px 12px);
+		line-height: normal;
+		background: var(--access-control-surface-background);
+		border: var(--access-control-surface-border);
+		border-radius: var(--access-control-surface-radius, 10px);
+		box-shadow: var(--access-control-surface-shadow);
+
+		.tit {
+			color: var(--access-control-text-label, #d0deee);
+			font-size: var(--access-control-font-label, 12px);
+			font-weight: 600;
+			line-height: 1.4;
+		}
+
+		.statstics {
+			display: inline-flex;
+			align-items: baseline;
+			gap: var(--access-control-space-xs, 4px);
+			color: var(--access-control-value-color, #eff6ff);
+			font-family: DIN Alternate, Roboto, Source Han Sans CN, sans-serif;
+			font-size: var(--access-control-font-value, 22px);
+			font-weight: 700;
+			line-height: 1;
+			text-shadow: var(--access-control-value-shadow, none);
+
+			.unit {
+				margin-left: 0;
+				color: var(--access-control-text-secondary, #bad9ff);
+				font-family: Source Han Sans CN, sans-serif;
+				font-size: var(--access-control-font-label, 12px);
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+:global(:root[data-visual-theme="minimal-white"] .access-control-card-theme) .operateDays {
+	.top {
+		.tit {
+			color: var(--access-control-text-label, #526b92);
+		}
+
+		.statstics {
+			color: var(--access-control-value-color, #0f49a3);
+			text-shadow: var(--access-control-value-shadow, none);
+
+			.unit {
+				color: var(--access-control-text-secondary, #49628f);
+			}
+		}
+	}
+}
+
+.downtriangle {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #D2FFF3;
+	margin-right: 3px;
+	transform: rotate(180deg);
+}
+
+.uptriangle {
+	border-bottom: 8px solid #FFCECE;
+	transform: rotate(0deg);
+}

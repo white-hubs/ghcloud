@@ -1,0 +1,68 @@
+{
+  "name": "@ghcloud/cube-daily-task-h5",
+  "version": "1.1.77",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts --mode dev",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "vite build --mode test",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@fingerprintjs/fingerprintjs": "4.2.2",
+    "@ghcloud-legacy/streamengine-h5-migrate": "workspace:^",
+    "@ghcloud/cube-app-generic-component": "workspace:^",
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/cube-asset-management-service": "workspace:^",
+    "@ghcloud/cube-auth-utils": "workspace:^",
+    "@ghcloud/cube-daily-inspection-service": "workspace:^",
+    "@ghcloud/cube-daily-task-service": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-grid-management-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-maintain-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-risk-management-service": "workspace:^",
+    "@ghcloud/cube-small-engineering-service": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@vant/auto-import-resolver": "^1.0.1",
+    "dayjs": "catalog:",
+    "echarts": "catalog:",
+    "lodash": "^4.17.21",
+    "pinia": "catalog:",
+    "pinia-plugin-persistedstate": "^3.1.0",
+    "qs": "6.13.1",
+    "vant": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.1",
+    "@types/node": "catalog:",
+    "@types/qs": "^6.9.7",
+    "@vitejs/plugin-legacy": "4.1.1",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "postcss-px-to-viewport": "^1.1.1",
+    "typescript": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vconsole": "^3.15.1",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-vconsole": "^1.3.1"
+  }
+}

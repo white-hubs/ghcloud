@@ -1,0 +1,103 @@
+.dosage-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 12px;
+
+  .ring-chart {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .ring-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .ring-track {
+      fill: none;
+      stroke: #E5EEFF;
+      stroke-width: 22;
+    }
+
+    .ring-progress {
+      fill: none;
+      stroke: #1547FF;
+      stroke-width: 22;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.4s ease;
+    }
+
+    .progress-marker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transition: transform 0.4s ease;
+      z-index: 3;
+    }
+
+    .progress-marker-inner {
+      width: 38px;
+      height: 38px;
+      margin-left: -19px;
+      margin-top: -19px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff 0%, #f6f9ff 55%, #d6def0 100%);
+      box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.86),
+        0 4px 10px rgba(31, 89, 237, 0.25);
+    }
+    .chart-content-bo{
+      position: absolute;
+      background-color: #F2F8FE;
+      border-radius: 50%;
+      width: 176px;
+      height: 176px;
+    }
+    .chart-content {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #edf1f8;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .value {
+      font-weight: Medium;
+      color: #31456A;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .unit {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1;
+      color: #8d9ab0;
+      text-transform: uppercase;
+    }
+  }
+
+  .label {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+  }
+}

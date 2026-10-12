@@ -1,0 +1,16 @@
+export * as videoMonitorClient from "./video-monitor.client";
+export * as safetyPersonnelClient from "./safety-personnel.client";
+export * as accessControlClient from "./access-control.client";
+export * as securityOpinionClient from "./security-opinion.client";
+export * as workPermitClient from "./work-permit.client";
+export * as fumigationOperationClient from "./fumigation-operation.client";
+export * as emergencyDispatchClient from "./emergency-dispatch.client";
+export * as emergencySuppliesClient from "./emergency-supplies.client";
+export * as processEngineClient from "./process-engine.client";
+export * as inspectionAiClient from "./inspection-ai.client";
+export * as emergencyPlanAiClient from "./emergency-plan-ai.client";
+export * as coldStorageClient from "./cold-storage.client";
+export * as warehouseSafetyClient from "./warehouse-safety.client";
+export * as deviceCenterClient from "./device-center.client";
+export * as electricalSafetyClient from "./electrical-safety.client";
+export * from "./auth-request";

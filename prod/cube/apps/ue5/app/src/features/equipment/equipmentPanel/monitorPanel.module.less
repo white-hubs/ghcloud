@@ -1,0 +1,98 @@
+/* 视频监控弹窗：对齐 legacy monitorPanel.vue */
+:global {
+  .video-monitor-dialog {
+    .camera-box {
+      box-sizing: border-box;
+      width: 100%;
+      height: min(530px, calc(100vh - 190px));
+      min-height: 320px;
+      padding: 6px;
+      overflow: hidden;
+      background: var(--visual-monitor-viewport-bg, #02080f);
+      border: 1px solid var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+      border-radius: 6px;
+      box-shadow:
+        inset 0 0 18px rgba(31, 127, 255, 0.12),
+        0 6px 20px rgba(0, 8, 20, 0.2);
+
+      .h5s_container,
+      .cube-player,
+      video,
+      canvas {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .video-monitor-dialog.sub-panel,
+  .device-panel-shell.video-monitor-dialog.sub-panel {
+    box-sizing: border-box;
+    overflow: hidden;
+    color: var(--visual-data-modal-text-color, #ffffff);
+    background: var(--visual-data-modal-bg, rgba(4, 17, 32, 0.96));
+    border: 1px solid var(--visual-data-modal-border, #2989ff);
+    border-radius: 12px;
+    box-shadow:
+      0 0 0 100vmax var(--visual-data-modal-mask-bg, rgba(0, 0, 0, 0.58)),
+      var(--visual-data-modal-shadow, 0 18px 48px rgba(0, 0, 0, 0.5)),
+      inset 0 1px 0 rgba(114, 194, 255, 0.12);
+    backdrop-filter: blur(12px);
+  }
+
+  .video-monitor-dialog .sub-panel-header {
+    box-sizing: border-box;
+    height: 52px;
+    padding: 0 20px;
+    background: var(--visual-data-modal-toolbar-bg, rgba(7, 28, 56, 0.72));
+    border-bottom: 1px solid var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+  }
+
+  .video-monitor-dialog .sub-panel-header .title {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--visual-data-modal-title-color, #ffffff) !important;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .video-monitor-dialog .sub-panel-header .close {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    color: var(--visual-data-modal-close-color, var(--visual-data-modal-muted-color, #d0deee));
+    background: var(--visual-data-modal-close-bg, rgba(5, 15, 26, 0.86));
+    border: 1px solid var(--visual-data-modal-close-border, var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34)));
+    border-radius: 6px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    .anticon,
+    svg {
+      display: block;
+      width: 14px !important;
+      height: 14px !important;
+      color: inherit !important;
+      fill: currentColor !important;
+    }
+
+    &:hover {
+      color: var(--visual-zoom-modal-close-hover-color, var(--visual-primary, #2989ff));
+      background: var(--visual-data-modal-close-hover-bg, rgba(41, 137, 255, 0.28));
+      border-color: var(--visual-primary, #2989ff);
+      box-shadow: 0 0 10px rgba(41, 137, 255, 0.24);
+    }
+  }
+
+  .video-monitor-dialog .sub-panel-content {
+    box-sizing: border-box;
+    min-height: 0;
+    padding: 14px 16px 16px;
+    background: transparent;
+  }
+}

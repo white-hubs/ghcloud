@@ -1,0 +1,227 @@
+.inventory-loss-root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+  min-width: 0;
+}
+
+.inventory-loss-toolbar {
+  align-items: center;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 8px 16px;
+}
+
+.inventory-loss-toolbar-left {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+.inventory-loss-toolbar-left strong {
+  color: #111827;
+  font-size: 16px;
+}
+
+.inventory-loss-warehouse-select {
+  width: 132px;
+}
+
+.inventory-loss-batch-select {
+  width: 126px;
+}
+
+.inventory-loss-range-buttons,
+.inventory-loss-mode-buttons {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.inventory-loss-updated {
+  color: #6b7280;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.inventory-loss-summary {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.inventory-loss-summary-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 8%);
+  box-sizing: border-box;
+  min-height: 92px;
+  padding: 14px 16px 12px;
+  position: relative;
+}
+
+.inventory-loss-summary-card::before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+
+.inventory-loss-summary-card.is-warning::before {
+  background: #f6a400;
+}
+
+.inventory-loss-summary-card.is-danger::before {
+  background: #ff4d4f;
+}
+
+.inventory-loss-summary-label {
+  color: #7a8290;
+  font-size: 12px;
+}
+
+.inventory-loss-summary-value {
+  align-items: baseline;
+  color: #1f2329;
+  display: flex;
+  font-size: 22px;
+  font-weight: 700;
+  gap: 4px;
+  line-height: 28px;
+  margin-top: 2px;
+}
+
+.inventory-loss-summary-value span {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.inventory-loss-panel {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 5%);
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.inventory-loss-panel-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.inventory-loss-panel-header h3 {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+
+.inventory-loss-chart-panel {
+  min-height: 366px;
+}
+
+.inventory-loss-chart {
+  height: 304px;
+  width: 100%;
+}
+
+.inventory-loss-bottom {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr);
+}
+
+.inventory-loss-detail-table {
+  border-collapse: collapse;
+  color: #1f2329;
+  font-size: 13px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.inventory-loss-detail-table th,
+.inventory-loss-detail-table td {
+  height: 38px;
+  padding: 0 12px;
+  text-align: left;
+}
+
+.inventory-loss-detail-table th {
+  background: #fff;
+  color: #374151;
+  font-weight: 700;
+}
+
+.inventory-loss-detail-table tr.is-high {
+  background: #fff1f0;
+  color: #ff4d4f;
+}
+
+.inventory-loss-detail-table tr.is-medium {
+  background: #fff7e6;
+}
+
+.inventory-loss-detail-table tr.is-low {
+  background: #f6ffed;
+}
+
+.inventory-loss-risk-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.inventory-loss-risk-dot.is-high {
+  background: #e33b45;
+  box-shadow: 0 0 6px rgb(227 59 69 / 40%);
+}
+
+.inventory-loss-risk-dot.is-low {
+  background: #52c41a;
+  box-shadow: 0 0 6px rgb(82 196 26 / 40%);
+}
+
+.inventory-loss-share-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-loss-share-chart {
+  height: 220px;
+  width: 100%;
+}
+
+.inventory-loss-share-note {
+  background: #fafafa;
+  color: #4e5969;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 10px 12px;
+}
+
+.inventory-loss-share-note strong {
+  color: #1f2329;
+}
+
+@media screen and (max-width: 1280px) {
+  .inventory-loss-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inventory-loss-bottom {
+    grid-template-columns: 1fr;
+  }
+}

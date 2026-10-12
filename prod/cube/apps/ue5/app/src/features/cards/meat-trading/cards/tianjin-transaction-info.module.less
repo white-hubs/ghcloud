@@ -1,0 +1,76 @@
+
+.transaction-info-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  font-size: 16px;
+
+  .transaction-info {
+    margin: 10px;
+    color: #fff;
+
+    .transaction-info-title {
+      font-size: 12px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .transaction-info-data {
+      font-size: 22px;
+
+      .unit {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.ringRatio {
+  display: flex;
+  align-items: center;
+  min-width: 120px; // 增加最小宽度，确保有足够空间
+  width: auto; // 改为自适应宽度
+  color: #fff;
+  font-size: 14px;
+  gap: 4px; // 添加元素间距
+
+  .ratio-label {
+    white-space: nowrap; // 防止"环比"文字换行
+    flex-shrink: 0; // 防止被压缩
+  }
+
+  .ratio-value {
+    white-space: nowrap; // 防止百分比数值换行
+    flex-shrink: 0; // 防止被压缩
+    min-width: 0; // 允许内容溢出时正常显示
+  }
+
+  .downtriangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #d2fff3;
+    transform: rotate(180deg);
+    flex-shrink: 0; // 防止三角形被压缩
+  }
+
+  .uptriangle {
+    border-bottom: 8px solid #ffcece;
+    transform: rotate(0deg);
+  }
+
+  // 添加颜色样式
+  .up {
+    color: #ffcece;
+  }
+
+  .down {
+    color: #d2fff3;
+  }
+}

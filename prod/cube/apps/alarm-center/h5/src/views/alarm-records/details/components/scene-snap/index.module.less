@@ -1,0 +1,30 @@
+.sceneSnap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // 使用 gap 属性设置间距
+
+  .snapVideo {
+    margin-top: 10px;
+    width: 100%;
+
+    video {
+      border-radius: 6px;
+      width: 100%;
+      height: 168px;
+      object-fit: fill;
+    }
+  }
+
+  .snapImage {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    img {
+      height: 74px;
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+}

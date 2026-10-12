@@ -1,0 +1,42 @@
+.container {
+  margin-top: 10px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  .stat-item {
+    .stat-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .stat-title {
+        font-size: 6px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #85aad3;
+      }
+
+      .stat-value {
+        font-size: 6px;
+        font-family: Roboto, Roboto-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+
+    .stat-progress {
+      margin-top: 3px;
+      height: 1.5px;
+      background: #0b2249;
+
+      .stat-progress-bar {
+        height: 1.5px;
+        background: #48E5E5;
+      }
+    }
+  }
+}

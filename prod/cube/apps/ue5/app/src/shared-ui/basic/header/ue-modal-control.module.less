@@ -1,0 +1,29 @@
+
+.ue-modal-control {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translate(150px, -50%);
+  transition: all 1s ease-in-out;
+
+  .item {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: rgba(6, 6, 6, 0.7);
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    user-select: none;
+    .anticon{
+      transform: scale(1.5);
+    }
+  }
+}
+
+.show {
+  transform: translate(0, -50%) !important;
+}

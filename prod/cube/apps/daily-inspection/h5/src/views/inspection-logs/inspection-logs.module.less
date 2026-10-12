@@ -1,0 +1,92 @@
+.log-cell-group {
+  margin: 3vw;
+}
+
+.log-cell-title {
+  .name-status {
+    display: flex;
+    align-items: center;
+
+    .log-status {
+      padding: 1px 6px 0px;
+      font-size: 12px;
+      color: #FFFFFF;
+      background: #FE8704;
+      border-radius: 10px 10px 10px 0px;
+      margin-right: 6px;
+    }
+
+    .name {
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 500;
+      font-size: 15px;
+      color: #1F3140;
+    }
+    .status{
+      margin-left: 8px;
+      display: inline-block;
+      font-size: 12px;
+      padding: 0 4px;
+    }
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+}
+
+.log-cell-item {
+  display: flex;
+  align-items: center;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #86909C;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  label {
+    color: #666666;
+  }
+}
+
+.statistics-cell-item {
+  display: flex;
+  height: 60px;
+  background: #f7f8fa;
+  border-radius: 4px;
+  justify-content: space-around;
+  margin-top: 5px;
+  .num{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    label{font-size: 12px;}
+    span{
+      font-size: 18px;
+      color: #1F3140;
+    }
+  }
+}
+
+.filter {
+  margin-left: 12px;
+  margin-top: 20px;
+
+  .checkbox {
+    margin-top: 10px;
+    margin-right: 12px;
+    border-radius: 4px 4px 4px 4px;
+    width: 90px;
+    height: 32px;
+    color: #1F3140;
+    background-color: #F8F9F9;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

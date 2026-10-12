@@ -1,0 +1,52 @@
+.itemEnergy-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+
+  .itemEnergy-type {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+
+    .type-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #000000;
+      font-size: 14px;
+      font-family: Roboto-Regular, Roboto;
+      font-weight: 400;
+
+      &.active {
+        .item-icon {
+          background: rgba(24, 144, 255, 1);
+        }
+      }
+
+      .item-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+        border-radius: 12px;
+        background: #ebebeb;
+      }
+    }
+  }
+
+  > :first-child {
+    flex: none;
+    margin-bottom: 8px;
+  }
+
+  .itemEnergy-chart {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+}

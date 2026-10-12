@@ -1,0 +1,44 @@
+{
+  "name": "@ghcloud/cube-service-intercept",
+  "private": false,
+  "version": "1.0.1",
+  "type": "module",
+  "main": "src/main.ts",
+  "module": "src/main.ts",
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "tsc": "vue-tsc",
+    "build:lib": "vue-tsc && vite build -c vite.lib.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "dependencies": {
+    "vue": "catalog:",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/epp": "workspace:^",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vant/auto-import-resolver": "^1.0.1",
+    "ant-design-vue": "catalog:",
+    "vant": "catalog:",
+    "vue3-hash-calendar": "1.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:",
+    "@types/lodash": "^4.14.191",
+    "@vitejs/plugin-legacy": "4.1.1",
+    "postcss-px-to-viewport": "^1.1.1",
+    "unplugin-vue-components": "catalog:",
+    "vconsole": "^3.15.1",
+    "vite-plugin-vconsole": "^1.3.1"
+  }
+}

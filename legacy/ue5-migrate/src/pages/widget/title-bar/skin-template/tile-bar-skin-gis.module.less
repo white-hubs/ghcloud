@@ -1,0 +1,105 @@
+.title-bar {
+  width: 100%;
+  height: 66px;
+  position: relative;
+  .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .title-value {
+    height: 40px;
+    background: linear-gradient(180deg, #ffffff, #ffffff 26%, #e9f8ff 62%, #77baff 76%);
+    font-size: 38px;
+    font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+    font-weight: Regular;
+    text-align: left;
+    -webkit-background-clip: text;
+    /*将设置的背景颜色限制在文字中*/
+    -webkit-text-fill-color: transparent;
+    /*给文字设置成透明*/
+    line-height: 40px;
+    letter-spacing: 0.11px;
+    text-shadow: 0px 4px 1px 0px rgba(19, 80, 143, 0.66), 0px 0px 18px 0px rgba(130, 165, 255, 0.35), 0px 0px 2px 0px rgba(255, 255, 255, 0.80) inset;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+
+
+  .right-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .right-container {
+    padding-right: 20px;
+    padding-left: 0;
+    left: unset;
+    right: 0;
+  }
+
+  .menu-container {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    left: 665px;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 152px;
+      position: relative;
+      opacity: 0.8;
+      font-size: 26px;
+      font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #fff;
+      cursor: pointer;
+      transform: skew(-15deg);
+      transform-origin: center;
+      margin-right: 20px;
+      span{
+        display: inline-block;
+        transform: skew(15deg);
+        position: relative;
+        z-index: 1;
+      }
+
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #283763;
+        border: none;
+        z-index: -1;
+        transition: all .3s ease-in-out;
+      }
+
+      &.active {
+        &::before {
+          background: linear-gradient(180deg,rgba(102,163,245,0.00), rgba(89,152,244,0.66) 53%, rgba(97,152,255,0.90));
+        }
+      }
+    }
+  }
+}

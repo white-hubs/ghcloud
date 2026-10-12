@@ -1,0 +1,11 @@
+{
+  "name": "scada-studio-service-build",
+  "private": true,
+  "dependencies": {
+    "@cube-scada/core": "file:./prod/cube/scada/basic/core",
+    "@dangao/bun-server": "^2.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

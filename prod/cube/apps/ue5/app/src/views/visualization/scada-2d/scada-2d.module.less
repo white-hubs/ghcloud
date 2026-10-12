@@ -1,0 +1,152 @@
+:global {
+  .ant-modal-content {
+    background: rgba(4, 17, 32, 0.6) !important;
+  }
+
+  :root {
+    box-sizing: border-box;
+  }
+
+  #modelContainer {
+    overflow: hidden;
+  }
+}
+
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.player,
+.configuration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(circle, #7b9dbe, #112440);
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#7b9dbe), to(#112440));
+  background-image: url("/resource/v1/ue5-migrate/assets/images/sky-texture2.jpg");
+  overflow: hidden;
+}
+
+.configuration {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -moz-radial-gradient(circle, #7b9dbe, #112440);
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#7b9dbe), to(#112440));
+  background: -webkit-radial-gradient(circle, #7b9dbe, #112440);
+}
+
+.top-container {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  left: 0;
+  z-index: 200;
+  transition: all 1s ease;
+
+  &.show {
+    top: 0;
+    opacity: 1;
+  }
+
+  &.hide {
+    top: -64px;
+    opacity: 0;
+  }
+}
+
+.device-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  transition: all 1s ease;
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.floor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  min-width: 60px;
+  height: auto;
+  transition: all 1s ease;
+
+  &.show {
+    left: calc(var(--ue5-panel-width, 400px) + 20px);
+  }
+
+  &.hide-all-panel {
+    left: 20px;
+  }
+
+  &.hide {
+    left: 40px;
+  }
+}
+
+.build-tag {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  min-width: 60px;
+  height: auto;
+  transition: all 1s ease;
+
+  &.show {
+    left: var(--ue5-panel-width, 400px);
+  }
+
+  &.hide-all-panel {
+    left: 20px;
+  }
+
+  &.hide {
+    left: 40px;
+  }
+}
+
+.nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 103;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+
+  &.show {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  &.hide {
+    bottom: -100px;
+    opacity: 0;
+  }
+}

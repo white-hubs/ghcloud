@@ -1,0 +1,59 @@
+.type-select-container {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(2px);
+  padding: 20rpx 16rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 24rpx;
+  z-index: 999;
+  top: 148rpx;
+}
+.type-select-container .triangle {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 10rpx solid #d0ddea;
+}
+.type-select-container .scroll-container ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.type-select-container .select-list {
+  text-align: center;
+  height: 364rpx;
+  margin-bottom: 12px;
+}
+.type-select-container .select-list .select-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12rpx;
+}
+.type-select-container .select-list .select-item.active {
+  color: #1f3140;
+  transform: scale(1.2);
+}
+.type-select-container .select-list .select-item:first-child {
+  margin-top: 4px;
+}
+.type-select-container .select-list .select-item image {
+  width: 48rpx;
+  height: 48rpx;
+  background: #dafbec;
+  border-radius: 8rpx;
+}
+.type-select-container .select-list .select-item text {
+  font-size: 20rpx;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: Medium;
+  text-align: left;
+  color: #1f3140;
+  margin-top: 8rpx;
+}

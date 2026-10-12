@@ -1,0 +1,51 @@
+{
+  "name": "@ghcloud/cube-intelligent-grain-app",
+  "version": "1.0.5",
+  "private": false,
+  "description": "Cube 子应用工程模板。通过 `bun run scaffold` 快速生成新应用。详见 readme.md。",
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "NODE_ENV=dev vite build -c vite.build.config.ts --mode dev",
+    "build:test": "NODE_ENV=test vite build -c vite.build.config.ts --mode test",
+    "build:prod": "NODE_ENV=prod vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts",
+    "scaffold": "bun scripts/scaffold.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-service-interface": "workspace:^",
+    "@ghcloud/cube-services-client": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "dayjs": "catalog:",
+    "echarts": "catalog:",
+    "exceljs": "catalog:",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

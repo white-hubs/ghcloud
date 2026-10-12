@@ -1,0 +1,73 @@
+.inspection-detail-header {
+  display: flex;
+  padding: 10px;
+  color: #969799;
+  font-size: 14px;
+  background: #FFFFFF;
+  justify-content: space-between;
+}
+
+.inspection-detail-content {
+  height: 89vh;
+  overflow: auto;
+  padding: 0 10px;
+
+  .detail-cell-group {
+    margin: 3vw 0vw 0vw 0vw;
+  }
+
+  .detail-cell-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .name-status {
+      display: flex;
+      align-items: center;
+
+      .detail-status {
+        padding: 1px 6px 0px;
+        font-size: 12px;
+        color: #FFFFFF;
+        background: #FE8704;
+        border-radius: 10px 10px 10px 0px;
+        margin-right: 6px;
+      }
+
+      .name {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 500;
+        font-size: 15px;
+        color: #1F3140;
+      }
+    }
+
+    .status {
+      font-size: 14px;
+    }
+
+  }
+
+  .detail-cell-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6px;
+    color: #666666;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    label {
+      color: #666666;
+    }
+  }
+}
+
+// .van-pull-refresh {
+//   height: 100%;
+// }

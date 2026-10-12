@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-security-detail.html",
+  "meta": {
+    "title": "安防监控 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+    "keywords": "安防监控,智慧园区,物联网,数字化,AI算法"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/安防监控/main.png",
+        "productName": "安防监控",
+        "productDescription": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "安防监控"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">安防监控系统统一管理园区所有监控摄像头，支持查看实时监控、进行线上视频巡逻；提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963160417930850306.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>数据总览</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">以可视化的形式呈现，统计园安防模块的报警情况及巡逻情况，为相关管理人员提供数据支撑。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963164878078226434.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963845562983788546.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>监控视频</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>实时监控</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">统一查看园区所有监控，支持1/4/9/16多种分屏模式展示监控视频；支持直接在监控视频页面发起呼叫其他设备的功能，配合指挥调度使用；支持点选设备在孪生上查看设备点位，支持联动附近视频，在孪生上直观展示点位视频画面。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963853451961163778.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>录像回放</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持查看固定摄像头的历史录像。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>在线巡逻</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对固定摄像头，配置在线巡逻计划，系统将自动按照巡逻计划轮播视频，实现在线巡逻功能。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344409989074946",
+            "name": "报警中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          },
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "id": "1811344408630120449",
+            "name": "动环监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+            "href": "/product-center/app-env-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

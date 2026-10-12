@@ -1,0 +1,202 @@
+.visual-container {
+  min-height: 100vh;
+  background: radial-gradient(#e0effe, #ebf1f7);
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .container {
+    padding: 12px;
+
+    .model-container {
+      height: 374px;
+    }
+
+    .market-card {
+      background: rgba(255, 255, 255, 0.50);
+      border: 1px solid #ffffff;
+      border-radius: 12px;
+      padding: 14px;
+
+      .market-title {
+        font-size: 16px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        color: #2b2c32;
+      }
+
+      .card-content {
+        margin-top: 18px;
+
+        .horizontal-list {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          overflow-x: auto;
+          gap: 10px;
+
+          // 隐藏滚动条
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .list-item {
+            padding: 10px 42px 14px 10px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            background: linear-gradient(221deg, #f2f5ff 6%, #ffffff 52%, #ffffff 90%);
+            border: 1px solid #ffffff;
+            border-radius: 14px;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.04);
+            gap: 8px;
+
+            img {
+              width: 30px;
+              height: 30px;
+            }
+
+            .item-stat {
+              display: flex;
+              flex-direction: column;
+              font-size: 19px;
+              font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+              font-weight: Regular;
+              color: #364257;
+
+              .stat-label {
+                font-size: 13px;
+                font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+                color: #646e7e;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card-container {
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+      gap: 18px;
+      justify-content: space-between;
+
+      .card-item {
+        background: rgba(255, 255, 255, 0.60);
+        border-radius: 12px;
+        border: 1px solid #ffffff;
+        padding: 8px;
+        flex: 1;
+
+        .card-stat {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 8px;
+          background: #5680fe;
+          border-radius: 8px;
+          font-size: 13px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          color: #ffffff;
+
+          &.alarm {
+            background: #F47E70;
+          }
+
+          .stat-value {
+            font-size: 26px;
+            font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+            font-weight: Regular;
+          }
+        }
+
+        .status-stat {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          justify-content: space-between;
+
+          .status-item {
+            padding: 7px 7px;
+            flex: 1;
+            font-size: 13px;
+            background: #ffffff;
+            border-radius: 6px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            color: #979da6;
+
+            .status-value {
+              font-size: 18px;
+              font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+              font-weight: Regular;
+              color: #41454b;
+            }
+
+          }
+        }
+
+        .progress-stat {
+          padding: 10px 6px 6px;
+          background: #fff;
+          border-radius: 6px;
+
+          .progress-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+            font-weight: Regular;
+            color: #41454b;
+            margin-bottom: 6px;
+
+            .progress-label {
+              font-size: 13px;
+              font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+              font-weight: Regular;
+              color: #979da6;
+            }
+          }
+
+          .progress-container {
+            height: 6px;
+            background: #edf1f6;
+            border-radius: 2px;
+
+            .progress-bar {
+              height: 100%;
+              background: #1578ff;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+
+
+
+  }
+
+  :global {
+    .van-nav-bar {
+      background: transparent !important;
+
+      &::after {
+        background: transparent !important;
+      }
+    }
+  }
+}

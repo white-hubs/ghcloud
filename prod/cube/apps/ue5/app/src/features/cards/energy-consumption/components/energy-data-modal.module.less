@@ -1,0 +1,306 @@
+/* 能耗数据弹窗：结构/表格样式对齐设备列表（CSS Module + :global） */
+:global {
+  .modal-table-device.device-records-theme-tech-blue {
+    --visual-primary: #2989ff;
+    --visual-data-modal-bg: rgba(5, 22, 45, 0.62);
+    --visual-data-modal-border: #2989ff;
+    --visual-data-modal-title-color: #ffffff;
+    --visual-data-modal-text-color: #dcecff;
+    --visual-data-modal-muted-color: #9fb6d1;
+    --visual-data-modal-placeholder-color: rgba(159, 182, 209, 0.92);
+    --visual-data-modal-toolbar-bg: rgba(8, 34, 67, 0.56);
+    --visual-data-modal-toolbar-border: rgba(76, 160, 255, 0.34);
+    --visual-data-modal-table-header-bg: rgba(17, 51, 86, 0.72);
+    --visual-data-modal-table-body-bg: rgba(16, 40, 68, 0.58);
+    --visual-data-modal-table-row-hover-bg: rgba(41, 137, 255, 0.15);
+    --visual-data-modal-pagination-bg: rgba(41, 137, 255, 0.1);
+    --visual-data-modal-btn-default-bg: rgba(41, 137, 255, 0.08);
+    --visual-data-modal-btn-default-border: rgba(76, 160, 255, 0.48);
+    --visual-data-modal-btn-default-color: #dcecff;
+    --visual-date-control-bg: rgba(7, 28, 56, 0.82);
+    --visual-date-control-border: rgba(76, 160, 255, 0.4);
+    --visual-date-control-focus-shadow: 0 0 0 2px rgba(41, 137, 255, 0.16);
+    --device-records-modal-bg: rgba(5, 22, 45, 0.58);
+    --data-list-table-outer-border: rgba(82, 168, 255, 0.18);
+    --data-list-table-header-border: rgba(91, 177, 255, 0.16);
+    --data-list-table-row-border: rgba(105, 180, 241, 0.11);
+    --data-list-table-body-min-height: clamp(300px, 34vh, 378px);
+    --device-records-table-min-height: calc(42px + var(--data-list-table-body-min-height));
+  }
+
+  .modal-table-device.device-records-theme-minimal-white {
+    --visual-primary: #2476ee;
+    --visual-data-modal-bg: rgba(255, 255, 255, 0.99);
+    --visual-data-modal-border: rgba(82, 142, 222, 0.34);
+    --visual-data-modal-title-color: #0d2f75;
+    --visual-data-modal-text-color: #17366d;
+    --visual-data-modal-muted-color: #667da3;
+    --visual-data-modal-placeholder-color: #8a9dbd;
+    --visual-data-modal-toolbar-bg: rgba(244, 249, 255, 0.96);
+    --visual-data-modal-toolbar-border: rgba(66, 126, 207, 0.2);
+    --visual-data-modal-table-header-bg: rgba(236, 245, 255, 0.98);
+    --visual-data-modal-table-body-bg: rgba(255, 255, 255, 0.99);
+    --visual-data-modal-table-row-hover-bg: rgba(36, 118, 238, 0.07);
+    --visual-data-modal-pagination-bg: rgba(244, 249, 255, 0.96);
+    --visual-data-modal-btn-default-bg: #ffffff;
+    --visual-data-modal-btn-default-border: rgba(76, 137, 220, 0.3);
+    --visual-data-modal-btn-default-color: #17366d;
+    --visual-date-control-bg: #ffffff;
+    --visual-date-control-border: rgba(67, 124, 204, 0.3);
+    --visual-date-control-focus-shadow: 0 0 0 2px rgba(36, 118, 238, 0.12);
+    --device-records-modal-bg: rgba(255, 255, 255, 0.99);
+    --data-list-table-outer-border: rgba(78, 132, 207, 0.18);
+    --data-list-table-header-border: rgba(78, 132, 207, 0.16);
+    --data-list-table-row-border: rgba(78, 132, 207, 0.12);
+    --data-list-table-body-min-height: clamp(300px, 34vh, 378px);
+    --device-records-table-min-height: calc(42px + var(--data-list-table-body-min-height));
+  }
+
+  /* 能耗弹窗：复用设备列表结构类名 + 日期筛选扩展 */
+  .energy-data-list-modal {
+    .device-records-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-toolbar {
+      padding: 9px 12px !important;
+      background: var(--visual-data-modal-toolbar-bg) !important;
+      border: 1px solid var(--visual-data-modal-toolbar-border) !important;
+      border-radius: 8px;
+    }
+
+    .filter-fields {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 0;
+      min-width: 0;
+    }
+
+    .filter-item {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 6px;
+      margin-right: 14px;
+      min-width: 0;
+    }
+
+    .filter-item-actions {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+
+    .filter-label {
+      flex: 0 0 auto;
+      color: var(--visual-data-modal-muted-color, var(--visual-data-modal-text-color));
+      font-size: 13px;
+      line-height: 32px;
+      white-space: nowrap;
+    }
+
+    .filter-item-type .filter-control-select {
+      width: 116px !important;
+    }
+
+    .filter-item-period .filter-control-picker {
+      width: 288px !important;
+    }
+
+    .filter-actions {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 12px;
+
+      .ant-btn {
+        min-width: 64px;
+        height: 32px;
+      }
+
+      .reset-btn {
+        color: var(--visual-data-modal-btn-default-color) !important;
+        background: var(--visual-data-modal-btn-default-bg) !important;
+        border-color: var(--visual-data-modal-btn-default-border) !important;
+      }
+    }
+
+    .filter-toolbar .filter-control-select.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .filter-toolbar .filter-control-picker.ant-picker {
+      display: flex;
+      align-items: center;
+      min-height: 32px !important;
+      height: 32px !important;
+      color: var(--visual-data-modal-text-color);
+      background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54)) !important;
+      border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34)) !important;
+      border-radius: 6px !important;
+      box-shadow: none;
+    }
+
+    .filter-toolbar .filter-control-select.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      padding: 0 11px;
+    }
+
+    .filter-toolbar .filter-control-picker.ant-picker {
+      padding: 4px 11px;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-selection-item,
+    .filter-toolbar .filter-control-picker .ant-picker-input > input,
+    .filter-toolbar .filter-control-picker .ant-picker-separator,
+    .filter-toolbar .filter-control-picker .ant-picker-suffix {
+      color: var(--visual-data-modal-text-color) !important;
+      line-height: 22px;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-selection-placeholder {
+      color: var(--visual-data-modal-placeholder-color, var(--visual-data-modal-muted-color)) !important;
+      opacity: 1 !important;
+    }
+
+    .filter-toolbar .filter-control-picker .ant-picker-input > input::placeholder {
+      color: var(--visual-data-modal-placeholder-color, var(--visual-data-modal-muted-color)) !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: var(--visual-data-modal-placeholder-color, var(--visual-data-modal-muted-color)) !important;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-arrow,
+    .filter-toolbar .filter-control-picker .ant-picker-suffix,
+    .filter-toolbar .filter-control-picker .ant-picker-clear {
+      color: var(--visual-data-modal-muted-color);
+    }
+
+    .filter-toolbar .filter-control-picker .ant-picker-clear {
+      background: transparent !important;
+    }
+
+    .filter-toolbar .filter-control-select.ant-select-focused:not(.ant-select-disabled) .ant-select-selector,
+    .filter-toolbar .filter-control-picker.ant-picker-focused {
+      border-color: var(--visual-primary, #2989ff) !important;
+      box-shadow: var(--visual-date-control-focus-shadow, 0 0 0 1px rgba(41, 137, 255, 0.32));
+    }
+
+    .table-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: visible;
+    }
+
+    .table-wrapper {
+      box-sizing: border-box;
+      min-height: var(--device-records-table-min-height);
+      overflow: hidden;
+      background: var(--visual-data-modal-table-body-bg);
+      border: 1px solid var(--data-list-table-outer-border, rgba(82, 168, 255, 0.18));
+      border-radius: 8px;
+    }
+
+    /* 与设备列表共用 device-records-table，并强制去掉刺眼的白线 */
+    .device-records-table {
+      .ant-table,
+      .ant-table-container,
+      .ant-table-content,
+      .ant-table-wrapper {
+        color: var(--visual-data-modal-text-color);
+        background: transparent !important;
+        border: none !important;
+        border-radius: 8px;
+        box-shadow: none !important;
+      }
+
+      .ant-table-container {
+        border: none !important;
+      }
+
+      .ant-table-thead > tr > th {
+        height: 40px;
+        padding: 0 12px !important;
+        color: var(--visual-data-modal-text-color) !important;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        background: var(--visual-data-modal-table-header-bg) !important;
+        border: none !important;
+        border-bottom: 1px solid var(--data-list-table-header-border, rgba(91, 177, 255, 0.16)) !important;
+        border-inline-end: none !important;
+        box-shadow: none !important;
+
+        &::before,
+        &::after {
+          display: none !important;
+          width: 0 !important;
+          content: none !important;
+          background: transparent !important;
+        }
+      }
+
+      .ant-table-tbody > tr > td {
+        height: 42px;
+        padding: 3px 12px !important;
+        color: var(--visual-data-modal-text-color) !important;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        background: var(--visual-data-modal-table-body-bg) !important;
+        border: none !important;
+        border-bottom: 1px solid var(--data-list-table-row-border, rgba(105, 180, 241, 0.11)) !important;
+        border-inline-end: none !important;
+        box-shadow: none !important;
+        transition: background-color 0.15s ease;
+      }
+
+      .ant-table-tbody > tr:last-child > td {
+        border-bottom: none !important;
+      }
+
+      .ant-table-tbody > tr:hover > td,
+      .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+        background: var(--visual-data-modal-table-row-hover-bg) !important;
+      }
+
+      .ant-table-placeholder {
+        height: var(--data-list-table-body-min-height);
+        background: var(--visual-data-modal-table-body-bg) !important;
+      }
+
+      .ant-empty-description {
+        color: var(--visual-data-modal-muted-color) !important;
+      }
+
+      .ant-table-body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+      }
+
+      .ant-table-cell-scrollbar {
+        background: var(--visual-data-modal-table-body-bg) !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .table-pagination {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .energy-data-list-modal .device-records-table {
+    .ant-table-tbody > tr:nth-child(even) > td {
+      background: rgba(244, 249, 255, 0.88) !important;
+    }
+
+    .ant-table-tbody > tr:hover > td,
+    .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+      background: rgba(36, 118, 238, 0.07) !important;
+    }
+  }
+}

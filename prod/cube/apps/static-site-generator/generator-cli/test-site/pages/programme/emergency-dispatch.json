@@ -1,0 +1,320 @@
+{
+  "path": "/programme/emergency-dispatch.html",
+  "meta": {
+    "title": "应急处置_应急调度管理系统_古河云科技",
+    "keywords": "应急处置,预案管理,应急调度管理,可视化指挥调度",
+    "description": "古河云应急调度管理系统整合灾害分析、通信调度、预案管理、智能决策等功能模块，通过数据汇聚、可视化呈现及智能算法，提升突发事件响应效率，保障应急资源的科学调配。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-emergency-dispatch-banner.webp",
+            "title": "应急调度管理系统",
+            "subtitle": "整合灾害分析、通信调度、预案管理、智能决策等功能模块，通过数据汇聚、可视化呈现及智能算法，提升突发事件响应效率，保障应急资源的科学调配。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "资源调度低效",
+            "description": "人工协调耗时长，无法快速匹配需求与可用资源（如人员、物资）。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "决策依赖经验",
+            "description": "缺乏实时数据支撑，预案执行灵活性不足，难以应对复杂灾情。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "通信协同不足",
+            "description": "指挥指令传递层级多，易出现信息失真或延迟。无法保证指挥及时性。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "设备存在隐患",
+            "description": "主要靠人防，设施设备运行无法实时感知，存在较大的安全隐患。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《突发事件应对法》",
+            "description": "明确要求建立健全应急指挥体系，提高突发事件应对能力，保障人民群众生命财产安全。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《生产安全事故应急条例》",
+            "description": "要求企业建立应急救援队伍，配备必要的应急救援装备，定期开展应急演练。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《应急管理部关于推进应急管理信息化建设的意见》",
+            "description": "推动建设应急指挥平台，实现指挥调度可视化、资源管理精细化、决策支持智能化。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《国家突发事件总体应急预案》",
+            "description": "要求建立统一领导、综合协调、分类管理、分级负责的应急管理体制。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/emergency-scene-1.webp",
+            "title": "应急预案管理",
+            "subtitle": "对各类重点事件建立应急预案，并可对应急预案的相关要素及指挥过程进行可视化呈现，对预案流程及当前处置环节进行跟踪监测，为指挥人员提供分析、决策支持，增强处置突发事件的能力和效率。",
+            "features": [
+              {
+                "label": "预案库：",
+                "value": "建立多层级、多类型预案库"
+              },
+              {
+                "label": "智能匹配：",
+                "value": "根据事件特征自动匹配预案"
+              },
+              {
+                "label": "演练管理：",
+                "value": "定期开展预案演练，持续优化"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/emergency-scene-2.webp",
+            "title": "应急事件告警",
+            "subtitle": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "features": [
+              {
+                "label": "多渠道接警：",
+                "value": "多渠道接警，自动识别事件类型"
+              },
+              {
+                "label": "快速响应：",
+                "value": "秒级响应，自动启动应急预案"
+              },
+              {
+                "label": "人员通知：",
+                "value": "自动通知应急人员，确认到岗"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/emergency-scene-3.webp",
+            "title": "应急资源分布",
+            "subtitle": "支持整合应急指挥所需各类资源，可实时监测应急人员、车辆、物资、设备等应急保障资源的部署情况，为突发情况下指挥人员进行大规模应急资源管理和调配提供支持。",
+            "features": [
+              {
+                "label": "资源上图：",
+                "value": "应急资源GIS上图，一目了然"
+              },
+              {
+                "label": "智能调度：",
+                "value": "就近调度，最优路径规划"
+              },
+              {
+                "label": "状态跟踪：",
+                "value": "实时跟踪资源状态和位置"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/emergency-scene-4.webp",
+            "title": "可视化指挥调度",
+            "subtitle": "引进AI智能分析、IOT物联网、数字孪生等技术，可以查看园区内所有还未处理的报警记录、现场安保人员的实时位置、现场监控轮播画面，当发生紧急突发事件时，根据报警记录紧急定位，联动现场监控查看现场情况，调度离事发地最新的人员赶往现场处理。",
+            "features": [
+              {
+                "label": "态势感知：",
+                "value": "实时展示现场视频、人员位置"
+              },
+              {
+                "label": "指挥调度：",
+                "value": "一键调度人员、车辆、物资"
+              },
+              {
+                "label": "协同会商：",
+                "value": "多方视频会议，协同决策"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "快速定位，及时处理",
+            "description": "自动报警、快速定位事件位置，事故发现和响应时间缩短90%。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "数字化预案，智能匹配推送",
+            "description": "对应急预案进行数字化管理，事件发生时，通过AI智能匹配推送预案，实现应急预案快速启动、高效执行。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "高效调配资源，降低事故损失",
+            "description": "可视化呈现应急资源分布，依托融合通信能力进行指挥调度，提升应急事件协同处置效能，有效降低事故损失。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "平战结合，提升整体应急水平",
+            "description": "提供模拟应急演练，利用AI进行智能推演和事后评估，提升应急救援和协同能力，提升园区应急管理水平。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "园区管理",
+                "href": "/product-center/app-park-detail.html"
+              },
+              {
+                "name": "指挥调度",
+                "href": "/product-center/app-command-detail.html"
+              },
+              {
+                "name": "风险源管理",
+                "href": "/product-center/app-risk-detail.html"
+              },
+              {
+                "name": "入侵报警",
+                "href": "/product-center/app-intrusion-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-foshan.webp",
+            "title": "深圳光明海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-bengbu.webp",
+            "title": "柳州海吉星物流园",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-chengdu.webp",
+            "title": "天津海吉星物流园",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,42 @@
+.notify-box {
+  position: fixed;
+  right: -100%;
+  bottom: 24px;
+  z-index: 1000;
+  top: auto;
+  width: 384px;
+  height: 130px;
+  max-width: calc(100vw - 48px);
+  margin-bottom: 16px;
+  margin-left: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 1.5715;
+  word-wrap: break-word;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  transition: all 0.3s ease-in-out;
+  .top{
+    display: flex;
+    align-items: center;
+    p{
+      margin: 0;
+    }
+    .avatar{
+      background-color: var(--cube-theme-var--primary-color) !important;
+      margin-right: 10px !important;
+    }
+  }
+  .bottom{
+    display: flex;
+    justify-self: flex-end;
+    svg{
+      width: 45px;
+      height: 45px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+}

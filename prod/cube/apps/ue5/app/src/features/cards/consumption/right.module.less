@@ -1,0 +1,67 @@
+
+.pie-chart {
+  height: 250px;
+}
+
+.chart {
+  height: 200px;
+}
+
+.extra {
+  margin-left: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Roboto-Regular, Roboto;
+
+  .mode {
+    color: #e7f0ff;
+  }
+
+  .downtriangle {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #d2fff3;
+    margin: 0 3px;
+    transform: rotate(180deg);
+  }
+
+  .uptriangle {
+    border-bottom: 4px solid #ffcece;
+    transform: rotate(0deg);
+  }
+
+  .down {
+    color: #2ae8bd;
+    font-family: Roboto-Regular, Roboto;
+  }
+
+  .up {
+    color: #f14545;
+    font-family: Roboto-Regular, Roboto;
+  }
+}
+
+.environment-box {
+  display: flex;
+justify-content: space-between;
+  .environment-item {
+    background: rgba(142, 172, 206, 0.1);
+    padding: 4px;
+
+    .environment-item-title {
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .environment-item-box {
+      display: flex;
+
+      .environment-item-value {
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}

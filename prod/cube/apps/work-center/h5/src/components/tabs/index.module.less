@@ -1,0 +1,40 @@
+.cubeTabs {
+  padding: 8px 0;
+  background: var(--van-tabs-nav-background);
+
+  .cubeTabWarp {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none
+  }
+
+  .cubeTab {
+    padding: 8px var(--van-padding-sm);
+    color: var(--van-tab-text-color);
+    flex-shrink: 0;
+    font-size: var(--van-tab-font-size);
+  }
+
+  .activeTab {
+    font-size: var(--van-tab-font-size);
+    color: var(--van-tab-active-text-color);
+    font-weight: var(--van-font-bold);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      transform: translateX(50%);
+      height: var(--van-tabs-bottom-bar-height);
+      bottom: 0;
+      left: 0;
+      border-radius: var(--van-tabs-bottom-bar-height);
+      background-color: var(--van-primary-color);
+    }
+  }
+}

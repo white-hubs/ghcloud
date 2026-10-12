@@ -1,0 +1,103 @@
+{
+  "path": "/industry/venue.html",
+  "meta": {
+    "title": "场馆案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "venue",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%87%A4%E5%87%B0%E5%B1%B1.png",
+            "title": "成都大运会主场馆凤凰山体育馆",
+            "category": "场馆",
+            "description": "项目基于三维可视化技术，呈现各个建筑设备的位置、运行状态的真实映象，辅助于设备的业务管理，包含设备维修记录、设备巡检记录、设备告警等信息，完整呈现设备整个生命周期管理。同时基于强大的物联网支撑平台，实现多设备报警及联动，最终实现整个场馆的数字化智能管理。",
+            "video": "https://qiniu.guhecloud.com/video/%E5%9C%BA%E9%A6%86%E9%A6%96%E9%A1%B5.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B2%B3%E5%8D%97%E9%A9%BB%E9%A9%AC%E5%BA%97%E7%BA%AA%E5%BF%B5%E9%A6%86.png",
+            "title": "河南驻马店纪念馆",
+            "category": "场馆",
+            "description": "纪念馆的可视化系统，运用三维虚拟仿真技术，将场馆运行环境真实呈现。这个系统能够基于3D环境，对场馆内安保工作、人员、设备和赛事数据进行高效管理。让你体验到真正的立体式、可视化新一代纪念馆运行管理系统！",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%96%87%E4%BD%93%E4%B8%AD%E5%BF%83.jpg",
+            "title": "江苏泰州文体中心",
+            "category": "场馆",
+            "description": "文体中心作为服务于市民文体活动的基础设施，建筑面积大、流动人员广、现场情况多变，对人员疏散、暴力事件预警、应急方案的制定都有高要求。利用古河云科技数字孪生技术将监控系统与其他子系统（如报警、灯光、扩声等系统）联动可视，有效保证文体中心的安全运营。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%AE%89%E5%BE%BD%E7%9C%81%E5%85%AD%E5%AE%89%E5%B8%82%E6%A1%A3%E6%A1%88%E9%A6%86.jpeg",
+            "title": "安徽省六安市档案馆",
+            "category": "场馆",
+            "description": "通过1:1建模在线上孪生虚拟档案馆，档案馆内的数据驾驶舱看板能直观查看馆内各项活动的数据变化，如当天入馆的人员访问情况、工作人员的工作情况或者机械设备的管理情况等；智能查询能有效节省人力寻找时间，精准快速的找到需要的资料。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

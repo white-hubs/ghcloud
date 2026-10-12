@@ -1,0 +1,171 @@
+.rich-text-content {
+  padding: 30px 300px;
+  
+  @media (max-width: 1200px) {
+    padding: 20px 100px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  text-align: left; /* 确保标题左对齐 */
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+}
+
+.content {
+  line-height: 1.8;
+  color: #595959;
+  font-size: 14px;
+  text-align: left; /* 确保内容左对齐 */
+  
+  // 富文本内容样式
+  h1, h2, h3, h4, h5, h6 {
+    color: #262626;
+    margin: 20px 0 12px 0;
+    font-weight: 600;
+    text-align: left; /* 确保所有标题左对齐 */
+  }
+  
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 18px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
+  
+  p {
+    margin: 12px 0;
+    text-align: left; /* 改为左对齐，而不是两端对齐 */
+  }
+  
+  ul, ol {
+    margin: 12px 0;
+    padding-left: 24px;
+    text-align: left; /* 确保列表左对齐 */
+    
+    li {
+      margin: 8px 0;
+      text-align: left; /* 确保列表项左对齐 */
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* 确保图片块级显示 */
+  }
+  
+  blockquote {
+    border-left: 4px solid #1677ff;
+    background-color: #f6f8ff;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    text-align: left; /* 确保引用块左对齐 */
+    
+    p {
+      margin: 0;
+      color: #434343;
+      text-align: left; /* 确保引用内容左对齐 */
+    }
+  }
+  
+  code {
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 13px;
+    color: #d63384;
+  }
+  
+  pre {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 16px 0;
+    text-align: left; /* 确保代码块左对齐 */
+    
+    code {
+      background: none;
+      padding: 0;
+      color: #212529;
+    }
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    
+    th, td {
+      border: 1px solid #e8e8e8;
+      padding: 12px;
+      text-align: left; /* 确保表格内容左对齐 */
+    }
+    
+    th {
+      background-color: #fafafa;
+      font-weight: 600;
+      color: #262626;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+  }
+  
+  // 确保所有文本元素都左对齐
+  * {
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+    
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+    h5 { font-size: 14px; }
+    h6 { font-size: 13px; }
+    
+    ul, ol {
+      padding-left: 20px;
+    }
+    
+    blockquote {
+      padding: 12px 16px;
+    }
+    
+    pre {
+      padding: 12px;
+    }
+    
+    table {
+      font-size: 12px;
+      
+      th, td {
+        padding: 8px;
+      }
+    }
+  }
+}

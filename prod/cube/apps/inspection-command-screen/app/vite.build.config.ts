@@ -1,0 +1,25 @@
+import { defineConfig } from "vite";
+
+import { getBaseConfig } from "./vite.config";
+
+export default defineConfig(async (configEnv) => {
+  const baseConfig = await getBaseConfig(configEnv);
+
+  return {
+    ...baseConfig,
+    build: {
+      ...baseConfig.build,
+      rollupOptions: {
+        ...baseConfig.build?.rollupOptions,
+        output: {
+          ...(typeof baseConfig.build?.rollupOptions?.output === "object" && !Array.isArray(baseConfig.build.rollupOptions.output)
+            ? baseConfig.build.rollupOptions.output
+            : {}),
+          chunkFileNames: "assets/[hash].js",
+          assetFileNames: "assets/[hash].[ext]",
+          entryFileNames: "assets/[hash].js",
+        },
+      },
+    },
+  };
+});

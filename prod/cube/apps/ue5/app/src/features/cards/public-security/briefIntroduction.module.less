@@ -1,0 +1,520 @@
+:global {
+
+/* 必须挂在面板下，避免 .sub-panel / .sub-panel-content 边框泄漏到其它改造卡片 */
+.brief-introduction-v2-panel {
+  .sub-panel {
+    padding: 0 10px 10px;
+    overflow: hidden;
+    background: var(--visual-card-glass-bg);
+    border: 1px solid var(--visual-card-glass-border, rgba(54, 164, 255, 0.38));
+    border-radius: 8px;
+    box-shadow:
+      inset 0 0 18px rgba(44, 151, 255, 0.16),
+      0 0 18px rgba(31, 127, 255, 0.16);
+    backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+    -webkit-backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+  }
+
+  .sub-panel-content {
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(13, 50, 96, 0.26), rgba(5, 22, 55, 0.12)), rgba(6, 19, 59, 0.1);
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+.brief-introduction-v2-panel .title {
+  display: flex;
+  align-items: center;
+}
+
+.brief-introduction-v2-panel .mark {
+  display: none;
+}
+
+.title-park-icon {
+  color: #ffffff;
+  background: linear-gradient(145deg, #3f8dff, #1f6fe5);
+  border: 1px solid rgba(76, 160, 255, 0.42);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(36, 118, 238, 0.28);
+}
+
+.title-park-svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.brief-introduction-v2 {
+  padding: 0;
+}
+
+/* 必须挂在面板下，避免 .metric-card / .metric-icon 泄漏到能耗等其它卡片 */
+.brief-introduction-v2-panel {
+  .monitorPanelBox {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 12px;
+
+    &.is-zoom {
+      gap: 16px;
+      margin-bottom: 20px;
+
+      .metric-card {
+        height: 96px;
+        padding: 14px 16px 14px 14px;
+      }
+
+      .metric-icon,
+      .metric-icon-img {
+        width: 56px;
+        height: 56px;
+        flex-basis: 56px;
+      }
+
+      .metric-name {
+        font-size: 14px;
+      }
+
+      .metric-value {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      .metric-unit {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .metric-card {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    height: 88px;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 12px 12px 10px;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.18), rgba(12, 230, 255, 0.06)), var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+    border-radius: 8px;
+    box-shadow:
+      inset 0 0 16px rgba(46, 148, 255, 0.16),
+      0 8px 18px rgba(0, 27, 66, 0.1);
+  }
+
+  .metric-card::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.32), transparent 34%),
+      radial-gradient(circle at 18% 20%, rgba(82, 176, 255, 0.25), transparent 38%);
+    opacity: 0.5;
+  }
+
+  .metric-card::after {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    width: 38px;
+    height: 2px;
+    content: "";
+    background: linear-gradient(90deg, transparent, rgba(79, 169, 255, 0.72));
+    border-radius: 999px;
+  }
+
+  .metric-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.95) 0 6px, rgba(255, 255, 255, 0) 7px),
+      linear-gradient(165deg, #5eb0ff 0%, #2f7fe8 48%, #1a5fc9 100%);
+    box-shadow:
+      inset 0 -8px 14px rgba(18, 78, 170, 0.28),
+      inset 0 5px 10px rgba(255, 255, 255, 0.34),
+      0 6px 16px rgba(30, 132, 255, 0.38);
+  }
+
+  .metric-icon.is-building {
+    background:
+      radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.95) 0 6px, rgba(255, 255, 255, 0) 7px),
+      linear-gradient(165deg, #6ec8ff 0%, #3f9ef0 45%, #2474d8 100%);
+  }
+
+  .metric-icon::before,
+  .metric-icon::after {
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 6px;
+    height: 7px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(17, 105, 235, 0.42);
+    box-shadow: 0 0 10px rgba(27, 133, 255, 0.62);
+  }
+
+  .metric-icon::after {
+    left: 11px;
+    right: 11px;
+    bottom: 11px;
+    height: 4px;
+    background: rgba(168, 214, 255, 0.74);
+  }
+
+  .metric-svg {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    filter: drop-shadow(0 2px 6px rgba(18, 78, 170, 0.28));
+  }
+
+  .metric-icon.metric-icon-image {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .metric-icon.metric-icon-image::before,
+  .metric-icon.metric-icon-image::after {
+    display: none;
+  }
+
+  .metric-icon-img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+  }
+
+  .metric-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .metric-name {
+    margin-bottom: 0;
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: 12px;
+    line-height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .metric-value-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    min-width: 0;
+    align-items: baseline !important;
+    gap: 6px;
+    white-space: nowrap;
+
+    &.is-large {
+      .metric-value {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      .metric-unit {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .metric-value {
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-width: 0;
+    align-items: baseline;
+    color: var(--visual-number-color, #35a9ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    white-space: nowrap;
+    text-shadow: 0 0 12px rgba(43, 147, 255, 0.38);
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+      white-space: nowrap;
+    }
+  }
+
+  .metric-unit {
+    display: inline-block;
+    flex: 0 0 auto;
+    color: var(--visual-muted-color, #d9e7ff);
+    font-size: 13px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+.title-card-icon {
+  display: block;
+  width: var(--card-title-icon-size, 32px);
+  height: var(--card-title-icon-size, 32px);
+  object-fit: contain;
+}
+
+.hospitalInfo {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  min-height: 0;
+  padding: 0;
+
+  &.is-zoom {
+    gap: 18px;
+    align-items: flex-start;
+    min-height: 280px;
+
+    .promotion-media {
+      width: 320px;
+      height: 240px;
+      flex: 0 0 320px;
+    }
+
+    .hospitalInfo-text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-height: 240px;
+      max-height: min(52vh, 420px);
+      font-size: 14px;
+      line-height: 24px;
+
+      .hospitalInfo-title {
+        flex: 0 0 auto;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 26px;
+        white-space: normal;
+      }
+    }
+
+    .remark-box {
+      flex: 1;
+      min-height: 0;
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+      mask-image: none;
+      padding-right: 4px;
+
+      .remark-text {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+        word-break: break-word;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--visual-primary, rgba(41, 137, 255, 0.45));
+        border-radius: 999px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    }
+
+    &.is-text-only {
+      .hospitalInfo-text {
+        max-height: min(58vh, 480px);
+      }
+
+      .remark-box {
+        height: auto;
+      }
+    }
+  }
+
+  &.is-text-only {
+    .hospitalInfo-text {
+      padding: 4px 2px;
+    }
+
+    .remark-box {
+      height: 140px;
+    }
+  }
+
+  .promotion-media {
+    display: block;
+    width: 188px;
+    height: 148px;
+    flex: 0 0 188px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .hospitalInfo-text {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding: 2px 0 0;
+    color: var(--visual-text-color, #fff);
+    font-size: 12px;
+    line-height: 20px;
+
+    .hospitalInfo-title {
+      margin-bottom: 8px;
+      overflow: hidden;
+      color: var(--visual-title-color, #ffffff);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .remark-box {
+    height: 118px;
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, transparent 0, #000 10%, #000 90%, transparent 100%);
+
+    .remark-scroll {
+      will-change: transform;
+    }
+
+    .remark-text {
+      color: var(--visual-muted-color, #d9e7ff);
+      text-align: justify;
+      line-height: 20px;
+    }
+
+    .remark-text-gap {
+      margin-top: 12px;
+    }
+  }
+}
+}
+
+/* 动画改由全局 brief-intro-remark-marquee + 内联 style 驱动 */
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .sub-panel) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 250, 255, 0.84)), var(--visual-card-bg, rgba(244, 249, 255, 0.82));
+  border-color: rgba(116, 158, 210, 0.22);
+  box-shadow: 0 8px 22px rgba(50, 102, 166, 0.08);
+  backdrop-filter: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .sub-panel-header) {
+  background-image: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .sub-panel-content) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(247, 251, 255, 0.46)), rgba(255, 255, 255, 0.36);
+  border: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .title-park-icon) {
+  color: #ffffff;
+  background: linear-gradient(145deg, #5b9ce2, #2f7fe8);
+  border-color: rgba(91, 155, 226, 0.42);
+  box-shadow: 0 4px 10px rgba(55, 118, 200, 0.22);
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-card) {
+  background:
+    linear-gradient(180deg, rgba(232, 242, 255, 0.96), rgba(255, 255, 255, 0.94)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.78));
+  border-color: rgba(82, 142, 222, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 6px 14px rgba(61, 111, 175, 0.1);
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-card::before) {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.62), transparent 44%);
+  opacity: 0.64;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-card::after) {
+  background: linear-gradient(90deg, transparent, rgba(68, 132, 210, 0.28));
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-icon),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-icon.is-building),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-icon.metric-icon-image) {
+  background: transparent;
+  box-shadow: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-icon::before),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-icon::after) {
+  display: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-svg) {
+  filter: drop-shadow(0 3px 8px rgba(47, 127, 232, 0.32));
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-value) {
+  color: #1a6fe8;
+  text-shadow: none;
+
+  .gh-count-to {
+    text-shadow: none;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-unit),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .metric-name),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .hospitalInfo .hospitalInfo-title),
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .hospitalInfo .remark-box .remark-text) {
+  color: var(--visual-muted-color, #49628f);
+  text-shadow: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .hospitalInfo .hospitalInfo-title) {
+  color: #17366d;
+  font-weight: 600;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .brief-introduction-v2-panel .hospitalInfo .promotion-media) {
+  background: rgba(232, 243, 255, 0.5);
+  border: 1px solid rgba(116, 158, 210, 0.14);
+  box-shadow: 0 4px 12px rgba(61, 111, 175, 0.06);
+}

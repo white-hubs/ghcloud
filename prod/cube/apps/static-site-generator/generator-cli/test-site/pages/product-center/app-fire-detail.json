@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-fire-detail.html",
+  "meta": {
+    "title": "消防管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿消防安全管理系统以\"物联感知+数据智能+场景联动\"为核心，构建全域覆盖的消防安全防护网。依托边缘计算与AI算法，对设备状态、环境参数进行实时分析，精准识别温度异常、烟雾浓度超标等风险征兆并自动触发预警。",
+    "keywords": "消防管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/消防管理/main.png",
+        "productName": "消防管理",
+        "productDescription": "﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿消防安全管理系统以\"物联感知+数据智能+场景联动\"为核心，构建全域覆盖的消防安全防护网。依托边缘计算与AI算法，对设备状态、环境参数进行实时分析，精准识别温度异常、烟雾浓度超标等风险征兆并自动触发预警。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "消防管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">消防安全管理系统以\"物联感知+数据智能+场景联动\"为核心，构建全域覆盖的消防安全防护网。依托边缘计算与AI算法，对设备状态、环境参数进行实时分析，精准识别温度异常、烟雾浓度超标等风险征兆并自动触发预警。集成火灾报警、可燃气体探测、消防水源等子系统，灾情发生时秒级启动多设备协同处置，同时通过三维数字孪生平台对全域数据进行实时监测预警、数据统计和趋势分析 。</span></p><p style=\"text-align: center;\"><span style=\"font-size: 15px;\"> </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963151831028740098.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>消防中心</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">采用图表形式对监测设备数、报警数据进行统计，支持查看报警级别、数量分布情况，对报警区域及报警设备前10名进行排名统计，可按不同时间维度对上述数据进行统计分析。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963138999621005314.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>消防监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">在线展示消防系统设备的基本情况，包括设备名称、位置、运行状态等设备基本信息，支持查看设备历史数据及关联监控。通过直观的界面设计，管理者可以方便地查看和管理消防设备，确保设备的正常运行和消防安全。</span><span style=\"color: rgb(38, 38, 38);\"> </span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963415629715222529.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963415547733356546.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>消防报警</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对报警事件的基本信息、报警触发规则、报警设备、报警指派、消息抄送、设备联动条件进行配置管理。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1963152656094474241.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">提供历史报警记录的查看功能，支持按时间、级别、状态等条件进行筛选和查询。支持对生成的报警记录进行确认或处理操作，用户可以对每条报警记录进行状态更新，如指派、挂起、处理等，确保报警信息的准确性和及时性。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965603976583852034.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警处理统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">从人员报警处理的维度展示报警处理的时间、人员、结果等信息。用户可以通过系统了解人员报警处理的效率、及时性和处理结果，评估人员的工作表现和应对能力。同时，系统还支持数据的筛选和查询功能，方便用户快速定位并处理相关报警记录，支持对数据进行导出操作。 </span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>消防分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过图表对设备基本信息进行汇总统计，展示不同报警级别的占比情况，支持从报警事件、区域、处理情况及处理效率等多维数据进行综合分析。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">从设备报警的维度展示消防报警数、待处理数、已处理数等相关信息。用户可以通过系统方便地查看设备的报警情况和处理进度，了解设备的运行状况和消防安全风险。同时，系统还支持数据的图表展示和导出功能，方便用户进行离线分析和存档。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>消防设备</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">关联监测的消防设备，通过手动添加配置可将已接入物联中心的消防设备关联到业务应用中进行使用，确保实时、准确地获取消防设备相关数据。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          },
+          {
+            "id": "1811344409699667969",
+            "name": "安全管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全园区/main.png",
+            "version": "1.0.0",
+            "description": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+            "href": "/product-center/app-safety-detail.html"
+          },
+          {
+            "id": "1811344408495902722",
+            "name": "安防监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安防监控/main.png",
+            "version": "1.0.0",
+            "description": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-security-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

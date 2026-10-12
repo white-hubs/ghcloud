@@ -1,0 +1,1 @@
+declare const __CONTAINER_ID__: string;

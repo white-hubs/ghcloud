@@ -1,0 +1,241 @@
+// 能耗态势
+
+/**
+ *  能碳概览
+ */
+interface ReceptionStatusType {
+    TODAY: number[];
+    THIS_WEEK: number[];
+    THIS_MONTH: number[];
+    THIS_YEAR: number[];
+}
+export const OverviewSituation = <T extends Record<string, any>>(params: string): ReceptionStatusType => {
+    const mokeData = {
+        TODAY: [45, 60],
+        THIS_WEEK: [450, 607],
+        THIS_MONTH: [1690, 2014],
+        THIS_YEAR: [8845, 8100]
+    }
+    return mokeData[params]
+}
+/**
+ *  综合能耗分布
+ */
+interface Consumption {
+    label: string;
+    value: number;
+    color: string;
+}
+export const consumptionDistribution = <T extends Record<string, any>>(params: string): Consumption[] => {
+    const mokeData = {
+        TODAY: [
+            { label: "电能", value: 450, color: "#FFAB10" },
+            { label: "水能", value: 234, color: "#2F8DFF" },
+            { label: "燃气", value: 580, color: "#F14545" },
+            { label: "蒸汽", value: 489, color: "#19F8F7" },
+        ],
+        THIS_WEEK: [
+            { label: "电能", value: 1825, color: "#FFAB10" },
+            { label: "水能", value: 4532, color: "#2F8DFF" },
+            { label: "燃气", value: 2468, color: "#F14545" },
+            { label: "蒸汽", value: 3878, color: "#19F8F7" },
+        ],
+        THIS_MONTH: [
+            { label: "电能", value: 5687, color: "#FFAB10" },
+            { label: "水能", value: 4535, color: "#2F8DFF" },
+            { label: "燃气", value: 4456, color: "#F14545" },
+            { label: "蒸汽", value: 8487, color: "#19F8F7" },
+        ],
+        THIS_YEAR: [
+            { label: "电能", value: 10587, color: "#FFAB10" },
+            { label: "水能", value: 56875, color: "#2F8DFF" },
+            { label: "燃气", value: 13548, color: "#F14545" },
+            { label: "蒸汽", value: 87384, color: "#19F8F7" },
+        ],
+    }
+    return mokeData[params]
+}
+/**
+ *  能碳概览
+ */
+export const EnergyCarbon = <T extends Record<string, any>>(params: string): Consumption[] => {
+    const mokeData = {
+        TODAY: [10, 25, 46, 15, 26, 40, 35, 56],
+        THIS_WEEK: [80, 70, 64, 109, 200, 147, 38],
+        THIS_MONTH: [54, 15, 47, 13, 26, 84, 95, 12, 35],
+        THIS_YEAR: [570, 860, 410, 603, 840, 955, 412, 481, 960, 1230, 1084, 1038],
+    }
+    return mokeData[params]
+}
+/**
+ *  设备状态
+ */
+export const DeviceStatus = <T extends Record<string, any>>(params: string): number[] => {
+    const mokeData = {
+        TODAY: [15, 18, 5, 20, 14, 5, 14, 30, 15],
+        THIS_WEEK: [45, 80, 102, 43, 50, 68, 71, 91, 20],
+        THIS_MONTH: [14, 28, 19, 32, 47, 70, 45, 30, 10],
+        THIS_YEAR: [15, 47, 80, 73, 108, 79, 155, 40, 30],
+    }
+    return mokeData[params]
+}
+/**
+ *  燃气消耗趋势
+ */
+export const getGasConsumptionData = <T extends Record<string, any>>(params: string): number[] => {
+    const mokeData = {
+        TODAY: [0, 0, 0, 0, 0, 0, 0, 104, 44, 78, 91, 12, 30, 51, 77, 15, 30, 20],
+        THIS_WEEK: [145, 80, 102, 143, 30, 12, 50, 21],
+        THIS_MONTH: [12, 128, 119, 80, 77, 70, 45, 30, 10, 58, 80, 47, 50, 100, 170, 39, 80, 90],
+        THIS_YEAR: [15, 40, 100, 80, 100, 207],
+    }
+    return mokeData[params]
+}
+/**
+ *  综合能耗趋势
+ */
+export const EnergyConsumptionTrends = <T extends Record<string, any>>(params: string): number[] => {
+    const mokeData = {
+        TODAY: [0, 0, 0, 0, 0, 0, 0, 45, 20, 78, 51, 51, 5, 14, 30, 15, 30, 20],
+        THIS_WEEK: [45, 80, 102, 43, 50, 68, 71, 91],
+        THIS_MONTH: [14, 28, 19, 32, 47, 70, 45, 30, 10, 58, 46, 105, 108, 200, 170, 39, 80, 90],
+        THIS_YEAR: [15, 40, 30, 200, 400, 300],
+    }
+    return mokeData[params]
+}
+/**
+ *  费用信息
+ */
+export const getCostInfoData = <T extends Record<string, any>>(params: string): Consumption[] => {
+    const mokeData = {
+        TODAY: [
+            { label: "电能", value: 450, color: "#FFAB10" },
+            { label: "水能", value: 234, color: "#2F8DFF" },
+            { label: "燃气", value: 580, color: "#F14545" },
+            { label: "蒸汽", value: 489, color: "#19F8F7" },
+        ],
+        THIS_WEEK: [
+            { label: "电能", value: 1825, color: "#FFAB10" },
+            { label: "水能", value: 4532, color: "#2F8DFF" },
+            { label: "燃气", value: 2468, color: "#F14545" },
+            { label: "蒸汽", value: 3878, color: "#19F8F7" },
+        ],
+        THIS_MONTH: [
+            { label: "电能", value: 5687, color: "#FFAB10" },
+            { label: "水能", value: 4535, color: "#2F8DFF" },
+            { label: "燃气", value: 4456, color: "#F14545" },
+            { label: "蒸汽", value: 8487, color: "#19F8F7" },
+        ],
+        THIS_YEAR: [
+            { label: "电能", value: 10587, color: "#FFAB10" },
+            { label: "水能", value: 56875, color: "#2F8DFF" },
+            { label: "燃气", value: 13548, color: "#F14545" },
+            { label: "蒸汽", value: 87384, color: "#19F8F7" },
+        ],
+    }
+    return mokeData[params]
+}
+/**
+ *  用能分析
+ */
+export const EnergySnalysis = <T extends Record<string, any>>(params: string) => {
+    const mokeData = {
+        TODAY: [
+            {
+                data: [
+                    { label: "动力用电", value: 72, color: "#FFAB10" },
+                    { label: "生活用电", value: 103, color: "#2F8DFF" },
+                    { label: "生产用电", value: 156, color: "#F14545" },
+                    { label: "其他用电", value: 78, color: "#19F8F7" },
+                ],
+                unit: 'kw.h',
+                title: '电力'
+            },
+            {
+                data: [
+                    { label: "生活用水", value: 167, color: "#FFAB10" },
+                    { label: "生成用水", value: 106, color: "#2F8DFF" },
+                    { label: "医疗用水", value: 187, color: "#F14545" },
+                    { label: "其他用水", value: 118, color: "#19F8F7" },
+                ],
+                unit: 't',
+                title: '水'
+            },
+            {
+                data: [
+                    { label: "生活用气", value: 80, color: "#FFAB10" },
+                    { label: "生产用气", value: 182, color: "#2F8DFF" },
+                    { label: "动力用气", value: 91, color: "#F14545" },
+                    { label: "其他用气", value: 158, color: "#19F8F7" },
+                ],
+                unit: 'm³',
+                title: '燃气'
+            },
+        ],
+        THIS_WEEK: [
+            {
+                data: [
+                    { label: "动力用电", value: 624, color: "#FFAB10" },
+                    { label: "生活用电", value: 702, color: "#2F8DFF" },
+                    { label: "生产用电", value: 516, color: "#F14545" },
+                    { label: "其他用电", value: 756, color: "#19F8F7" },
+                ],
+                unit: 'kw.h',
+                title: '电力'
+            },
+            {
+                data: [
+                    { label: "生活用水", value: 681, color: "#FFAB10" },
+                    { label: "生成用水", value: 559, color: "#2F8DFF" },
+                    { label: "医疗用水", value: 448, color: "#F14545" },
+                    { label: "其他用水", value: 330, color: "#19F8F7" },
+                ],
+                unit: 't',
+                title: '水'
+            },
+            {
+                data: [
+                    { label: "生活用气", value: 514, color: "#FFAB10" },
+                    { label: "生产用气", value: 407, color: "#2F8DFF" },
+                    { label: "动力用气", value: 577, color: "#F14545" },
+                    { label: "其他用气", value: 782, color: "#19F8F7" },
+                ],
+                unit: 'm³',
+                title: '燃气'
+            },
+        ],
+        THIS_MONTH: [
+            {
+                data: [
+                    { label: "动力用电", value: 2039, color: "#FFAB10" },
+                    { label: "生活用电", value: 2216, color: "#2F8DFF" },
+                    { label: "生产用电", value: 2592, color: "#F14545" },
+                    { label: "其他用电", value: 2820, color: "#19F8F7" },
+                ],
+                unit: 'kw.h',
+                title: '电力'
+            },
+            {
+                data: [
+                    { label: "生活用水", value: 4490, color: "#FFAB10" },
+                    { label: "生成用水", value: 4030, color: "#2F8DFF" },
+                    { label: "医疗用水", value: 3767, color: "#F14545" },
+                    { label: "其他用水", value: 4647, color: "#19F8F7" },
+                ],
+                unit: 't',
+                title: '水'
+            },
+            {
+                data: [
+                    { label: "生活用气", value: 3678, color: "#FFAB10" },
+                    { label: "生产用气", value: 3628, color: "#2F8DFF" },
+                    { label: "动力用气", value: 4558, color: "#F14545" },
+                    { label: "其他用气", value: 3421, color: "#19F8F7" },
+                ],
+                unit: 'm³',
+                title: '燃气'
+            },
+        ]
+    }
+    return mokeData[params]
+}

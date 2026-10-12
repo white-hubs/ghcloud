@@ -1,0 +1,357 @@
+:root {
+  --work-permit-primary: var(--van-primary-color, #1d66ff);
+  --work-permit-text: #15283d;
+  --work-permit-sub-text: #66788f;
+  --work-permit-bg: #ffffff;
+  --work-permit-card: #ffffff;
+  --work-permit-line: #e8eef5;
+}
+
+.navbarWrap {
+  :global {
+    .van-nav-bar {
+      background: #fff;
+      border-bottom: 1px solid #e8eef5;
+    }
+
+    .van-nav-bar__title {
+      color: #15283d;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+}
+
+.container {
+  min-height: calc(100vh - var(--van-nav-bar-height, 46px));
+  padding: 12px;
+  overflow-y: auto;
+  background: #f3f7fa;
+  color: var(--work-permit-text);
+}
+
+.timeTabs button,
+.statItem,
+.flowItem {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  background: var(--work-permit-card);
+  border: 1px solid rgba(232, 238, 245, 0.86);
+  border-radius: 10px;
+}
+
+.searchBox input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--work-permit-text);
+  font-size: 15px;
+}
+
+.searchBox input::placeholder {
+  color: #8b99a6;
+}
+
+.searchIcon {
+  position: relative;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.searchIcon::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--work-permit-primary);
+  border-radius: 50%;
+  content: '';
+}
+
+.searchIcon::after {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 8px;
+  height: 2px;
+  background: var(--work-permit-primary);
+  border-radius: 2px;
+  content: '';
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.dashboard {
+  margin-top: 12px;
+  padding: 16px 14px 18px;
+  background: var(--work-permit-card);
+  border-radius: 10px;
+}
+
+.dashboardHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboardHeader h2,
+.flowGroup h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.timeTabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex: 0 0 min(198px, 56vw);
+  height: 30px;
+  padding: 3px;
+  background: #ffffff;
+  border: 1px solid var(--work-permit-line);
+  border-radius: 15px;
+}
+
+.timeTabs button {
+  min-width: 0;
+  border-radius: 12px;
+  color: var(--work-permit-sub-text);
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.timeTabs .timeActive {
+  background: var(--work-permit-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 10px 4px;
+  background: #ffffff;
+  border: 1px solid var(--work-permit-line);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.16s ease, transform 0.16s ease;
+}
+
+.statItem:active {
+  border-color: var(--work-permit-primary);
+  transform: scale(0.98);
+}
+
+.statItem strong {
+  color: var(--work-permit-primary);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.statItem span {
+  margin-top: 5px;
+  color: var(--work-permit-sub-text);
+  font-size: 13px;
+}
+
+.flowGroup {
+  position: relative;
+  margin-top: 12px;
+  padding: 16px 14px 20px;
+  background: var(--work-permit-card);
+  border-radius: 10px;
+}
+
+.flowHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flowGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flowGroupSection {
+  min-width: 0;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 24px;
+  margin-bottom: 12px;
+}
+
+.groupTitle span {
+  position: relative;
+  min-width: 0;
+  padding-left: 11px;
+  overflow: hidden;
+  color: var(--work-permit-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.groupTitle span::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 3px;
+  height: 12px;
+  background: var(--work-permit-primary);
+  border-radius: 2px;
+  content: '';
+}
+
+.groupTitle em {
+  flex: 0 0 auto;
+  margin-left: 8px;
+  color: var(--work-permit-sub-text);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+}
+
+.flowGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 10px;
+}
+
+.flowItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc((100% - 20px) / 3);
+  min-width: 0;
+  min-height: 92px;
+}
+
+.flowIcon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--work-permit-line);
+  border-radius: 14px;
+}
+
+.flowIcon::before {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 20px;
+  height: 25px;
+  background: #ffffff;
+  border: 2px solid var(--work-permit-primary);
+  border-radius: 4px;
+  content: '';
+}
+
+.flowIcon::after {
+  position: absolute;
+  top: 18px;
+  left: 17px;
+  width: 12px;
+  height: 8px;
+  border-bottom: 2px solid var(--work-permit-primary);
+  border-left: 2px solid var(--work-permit-primary);
+  content: '';
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.flowName {
+  width: 100%;
+  margin-top: 9px;
+  overflow: hidden;
+  color: var(--work-permit-text);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emptyGroup {
+  padding: 18px 0 20px;
+  color: var(--work-permit-sub-text);
+  font-size: 13px;
+  text-align: center;
+}
+
+.placeholder {
+  margin-top: 12px;
+  padding: 42px 16px;
+  background: var(--work-permit-card);
+  border-radius: 10px;
+  color: var(--work-permit-sub-text);
+  font-size: 14px;
+  text-align: center;
+}
+
+.loadingBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.loadingBar::after {
+  display: block;
+  width: 38%;
+  height: 100%;
+  background: var(--work-permit-primary);
+  content: '';
+  animation: loading-slide 1s linear infinite;
+}
+
+@keyframes loading-slide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(270%);
+  }
+}

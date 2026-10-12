@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-ac-detail.html",
+  "meta": {
+    "title": "空调管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+    "keywords": "空调管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+        "productName": "空调管理",
+        "productDescription": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "空调管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">空调管理系统通过集成先进的监测技术与设备导入管理模块，构建起一套标准化的设备运维解决方案。系统能够实时监测空调设备的运行状态，包括温度、湿度、能耗、风速等关键工作数据，并通过可视化界面进行集中展示与分析。用户可随时查看设备历史记录与实时动态，及时发现异常情况并进行处理，大幅提升管理响应速度与运维效率。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">该系统支持批量导入和管理各类空调设备信息，建立设备与监控平台的数字链接，实现设备全生命周期管理。通过预设运行策略和自动化控制机制，系统可辅助实现节能运行，有效降低用电成本，并延长设备使用寿命。此外，系统还提供故障预警、维护提醒和报表统计等功能，帮助用户从被动维修转向主动预防，显著减少人工巡检需求和管理负担，最终达成节约管理成本、提升运营质量的智能化管理目标。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965377784987529217.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备对接</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实现本系统与子系统设备对接，通过设备接口实现获取相关设备参数与控制权限</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备监控</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对空调设备进行管理，对其重要的运行参数状态展示，包括如：启停工作状态、制热/制冷工作模式、出风口温度、设定温度等数据，确认系统处于正常工作状态。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备控制</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对空调相关设备进行管理，能对设备的如送风温湿度、水阀、新风阀等开度、风机运转状态、滤网状态、手自动状态等参数，从而实现掌握整个空调机组的运行状态；通过设备管控实现对空调控制（参数设置），如温度设定、湿度设定。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>策略控制</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">设定空调系统的工作时间表，例如根据每天的时间段调整温度设定或开关机时间。系统提前根据园区不同区域的使用情况和人员流量，预设参数实现策略自动调整空调的工作模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>联动控制</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过接入气象数据，平台可以根据当地的天气情况调整空调系统的运行策略，如根据温度、湿度等参数动态调整空调设定。与安防监控系统联动，根据安全情况调整空调系统的运行状态，如在紧急情况下自动开启通风或关闭空调系统以提高建筑安全。通过火警系统的触发信号，自动调整空调系统以支持消防活动。与照明系统集成，根据人员流量和使用模式调整空调系统，例如在人员较少时降低空调运行强度以节约能源。根据会议室预订情况，自动调整会议室内的空调设置。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>异常报警</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">监控空调设备的运行情况及故障报警，当设备发生故障报警时，通过系统通知等消息推送给指定维修、管理人员。展示空调的报警记录和报警规则配置。展示报警统计数据，包含全部状态（待确认、处理中、已处理、已挂起）的统计数据，点击可以查看明细；报警处理统计。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">报警分析，包含区域分析、时段分析、事件分析等</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408588177410",
+            "name": "预案管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+            "href": "/product-center/app-plan-detail.html"
+          },
+          {
+            "id": "1811344410744049666",
+            "name": "门禁管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          },
+          {
+            "id": "1811344409989074946",
+            "name": "报警中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

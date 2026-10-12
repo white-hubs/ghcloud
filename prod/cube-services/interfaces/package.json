@@ -1,0 +1,41 @@
+{
+  "name": "@ghcloud/cube-service-interface",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./base": "./src/base/main.ts",
+    "./video-monitor": "./src/video-monitor/main.ts",
+    "./device-center": "./src/device-center/main.ts",
+    "./metadata": "./src/metadata/main.ts",
+    "./ouaa": "./src/ouaa/main.ts",
+    "./dictionary": "./src/dictionary/main.ts",
+    "./auth": "./src/auth/main.ts",
+    "./safety-personnel": "./src/safety-personnel/main.ts",
+    "./access-control": "./src/access-control/main.ts",
+    "./hazard-governance": "./src/hazard-governance/main.ts",
+    "./ai-workflow": "./src/ai-workflow/main.ts",
+    "./security-opinion": "./src/security-opinion/main.ts",
+    "./risk-graded-control": "./src/risk-graded-control/main.ts",
+    "./work-permit": "./src/work-permit/main.ts",
+    "./fumigation-operation": "./src/fumigation-operation/main.ts",
+    "./emergency-dispatch": "./src/emergency-dispatch/main.ts",
+    "./emergency-supplies": "./src/emergency-supplies/main.ts",
+    "./process-engine": "./src/process-engine/main.ts",
+    "./template-demo": "./src/template-demo/main.ts",
+    "./inspection-ai": "./src/inspection-ai/main.ts",
+    "./intelligent-grain": "./src/intelligent-grain/main.ts",
+    "./cold-storage": "./src/cold-storage/main.ts",
+    "./alarm-center": "./src/alarm-center/main.ts",
+    "./warehouse-safety": "./src/warehouse-safety/main.ts",
+    "./fire-management": "./src/fire-management/main.ts",
+    "./mdata": "./src/mdata/main.ts",
+    "./property": "./src/property/main.ts",
+    "./visualization": "./src/visualization/main.ts",
+    "./electrical-safety": "./src/electrical-safety/main.ts",
+    "./emergency-plan-ai": "./src/emergency-plan-ai/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

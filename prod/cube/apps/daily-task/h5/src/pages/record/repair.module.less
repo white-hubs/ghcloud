@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 72px;
+  background: #f4f7fa;
+  box-sizing: border-box;
+}
+
+.summary,
+.section {
+  padding: 16px 12px;
+  background: #fff;
+}
+
+.summary {
+  margin-bottom: 12px;
+  color: #8f8f8f;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.taskName {
+  color: #0e161d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.abnormal {
+  color: #ee0a24;
+}
+
+.section {
+  margin-bottom: 12px;
+}
+
+.title {
+  margin-bottom: 12px;
+  color: #0e161d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.remark {
+  min-height: 118px;
+  padding: 10px;
+  border: 1px solid #ebedf0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.upload {
+  width: calc(100vw - 24px);
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #969799;
+  border: 1px dashed #dcdee0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.submit {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: #fff;
+
+  :global(.van-button) {
+    border-radius: 0;
+  }
+}

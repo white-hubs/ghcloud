@@ -1,0 +1,71 @@
+.entrance-screen-footer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .copyright {
+    height: 14px;
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #8baceb;
+    line-height: 14px;
+    letter-spacing: 0.02px;
+  }
+
+  .legend {
+    display: flex;
+    align-items: center;
+
+    .text {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #c8dbff;
+    }
+
+    .dot {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: rgba(196,221,255,0.20);
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:rgba(196,221,255);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+    .dot-high{
+      background: rgba(255,68,90,0.20);
+      &::after{
+        background-color:rgba(255,68,90);
+      }
+    }
+    .dot-low{
+      background: rgba(251,145,19,0.20);
+      &::after{
+        background-color:rgba(251,145,19);
+      }
+    }
+
+    .item {
+      margin-left: 60px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

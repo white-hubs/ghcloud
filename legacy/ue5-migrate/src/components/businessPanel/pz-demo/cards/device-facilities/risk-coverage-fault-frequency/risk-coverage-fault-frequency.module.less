@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 300px;
+}
+
+.statisticsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.statisticsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .value {
+    font-size: 20px;
+    color: #3B82F6;
+    font-weight: bold;
+  }
+}

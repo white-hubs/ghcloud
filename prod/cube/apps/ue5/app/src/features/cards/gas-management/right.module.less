@@ -1,0 +1,63 @@
+
+.elevator-analysis {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+
+  .pie_list {
+    width: 150px;
+    margin-left: 10px;
+  }
+}
+
+.chart {
+  flex: 1;
+  height: 180px;
+}
+
+.monitorCard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 150px;
+  overflow-y: auto;
+
+  .cardItem {
+    display: flex;
+    cursor: pointer;
+    padding: 6px;
+    min-width: 158px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.05) linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.35) 100%);
+
+    img {
+      margin-right: 5px;
+    }
+
+    .label {
+      width: 108px;
+      height: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #CAD9EE;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .value {
+      font-size: 14px;
+      font-family: DIN Alternate, DIN Alternate;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .unit {
+      font-size: 12px;
+      font-family: DIN Alternate, DIN Alternate;
+      font-weight: 500;
+      color: #CAD9EE;
+    }
+  }
+}

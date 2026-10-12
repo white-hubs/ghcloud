@@ -1,0 +1,40 @@
+{
+  "name": "@ghcloud/cube-player",
+  "version": "1.1.15",
+  "private": false,
+  "type": "module",
+  "main": "src/main.ts",
+  "module": "src/main.ts",
+  "publishConfig": {
+    "main": "./lib/main.js",
+    "module": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build:lib": "vite build -c vite.lib.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-security-management-service": "workspace:^",
+    "@ghcloud/ghcloud-business-request": "workspace:^",
+    "axios": "1.6.5",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

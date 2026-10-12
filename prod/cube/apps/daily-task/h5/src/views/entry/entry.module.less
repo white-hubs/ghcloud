@@ -1,0 +1,73 @@
+.container {
+  height: 100vh;
+  background: #F3F7FA;
+  padding: 12px;
+
+  .app-group {
+    width: 351px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    .inspection-num {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 8px;
+      padding: 10px 0px;
+      flex-wrap: wrap;
+
+      .inspection-num-item {
+        width: 33.33%;
+        text-align: center;
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 500;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        color: #888888;
+
+        .item-title {
+          font-size: 20px;
+          color: #1F3140;
+          font-weight: 600;
+        }
+
+        .item-radio {
+          font-size: 12px;
+          margin-top: 6px;
+          font-weight: 350;
+        }
+
+        .item-name {
+          position: relative;
+          font-family: Roboto, Roboto;
+          font-weight: 400;
+          color: #1F3140;
+          font-style: normal;
+          text-transform: none;
+          font-size: 13px;
+          display: inline-block;
+        }
+      }
+      .inspection-num-item:nth-of-type(4),
+      .inspection-num-item:nth-of-type(5),
+      .inspection-num-item:nth-of-type(6){
+        margin-top: 20px;
+      }
+    }
+    .radio {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+      span:nth-of-type(1) {
+        color: #1F3140;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}

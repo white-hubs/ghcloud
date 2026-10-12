@@ -1,0 +1,115 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px;
+  background: #fff;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+
+
+  :global {
+    .van-search {
+      flex: 1;
+      padding: 0;
+    }
+  }
+
+}
+
+.pull-refresh {
+  height: 87vh;
+  background: #F3F7FA;
+  overflow-y: scroll;
+  padding: 12px;
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .task-item {
+      padding: 16px 12px;
+      background: #f9fbff;
+      border-radius: 8px;
+
+      .task-item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .task-item-title {
+          font-size: 15px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: left;
+          color: #172433;
+        }
+
+        .task-item-status {
+          padding: 4px;
+          background: rgba(246, 151, 3, 0.16);
+          border-radius: 4px;
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #f69703;
+          flex-shrink: 0;
+
+          &.DONE {
+            color: #FFF;
+            background: #29BC9F;
+          }
+
+        }
+      }
+
+      .task-item-content {
+        margin-top: 8px;
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        // justify-content: space-between;
+        gap: 4px;
+
+        .task-item-content-item {
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #8e97a4;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          // &:last-child {
+          //   &::after {
+          //     display: none;
+          //   }
+          // }
+
+          // &::after {
+          //   content: '';
+          //   width: 1px;
+          //   height: 12px;
+          //   // background: #e0e0e0;
+          //   border: 1px dashed #8e97a4;
+          //   margin-left: 56px;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.nav-add {
+  font-size: 16px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: Medium;
+  text-align: center;
+  color: #1578FF;
+}

@@ -1,0 +1,43 @@
+.panel-config {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  padding: 0 16px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  .right,.left {
+    margin: 16px;
+    width: 45%;
+   
+  }
+  .img-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+.content-left{
+  width: 240px;
+  border-right: 1px solid #f3f3f3;
+  height: 100%;
+  overflow: auto;
+}
+
+.search-right{padding: 0 16px;}
+
+.footer-page{
+  float: right;
+  margin-top:20px;
+}
+:global{
+  .content-search{
+    display: none;
+  }
+}
+.panel-header-page{
+  width: calc(100vw - 350px);
+  display: flex;
+  justify-content: space-between;
+}

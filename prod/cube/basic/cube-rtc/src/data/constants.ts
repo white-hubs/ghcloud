@@ -1,0 +1,62 @@
+export class Constants {
+  // 多人通话最大用户数
+  public static readonly GROUP_CALL_MAX_USER_COUNT = 9
+
+  /** ** socket通知事件 ****/
+  static SOCKET_EVENT = {
+    // socket-通讯消息
+    SOCKET_COMMUNICATE_MESSAGE: 'SOCKET_COMMUNICATE_MESSAGE',
+    // 来电
+    INCOMING_CALL: 'PROPOSE_CONFERENCE_ROOM',
+    // 用户加入房间
+    USER_JOIN_ROOM: 'USER_JOIN_CONFERENCE_ROOM',
+    // 用户离开房间
+    USER_LEAVE_ROOM: 'USER_LEAVE_CONFERENCE_ROOM',
+    // 远端用户拒绝加入房间
+    USER_REFUSE_JOIN_ROOM: 'USER_REFUSE_JOIN_CONFERENCE_ROOM',
+    // 远端用户关闭房间
+    USER_CLOSE_ROOM: 'CLOSE_CONFERENCE_ROOM',
+    // 其他客户端接听
+    USER_OTHER_TERMINAL_JOIN: 'USER_OTHER_TERMINAL_JOIN',
+    // 被踢出房间
+    REMOVE_USER: 'REMOVE_CONFERENCE_ROOM_USER',
+    // 邀请用户加入房间（与来电似乎是一的处理）
+    INVITE_USER_JOIN_ROOM: 'INVITE_USER_JOIN_CONFERENCE_ROOM',
+  }
+
+  /** ** 数据状态事件名称 ****/
+  static STATE_EVENT = {
+    // 通话状态改变
+    SET_STATE: 'SET_STATE_EVENT',
+    // 发起了呼叫
+    CALL_RECEIVED: 'SET_STATE_EVENT_CALL_RECEIVED',
+    // 刷新通话时间
+    REFRESH_TIMING: 'SET_STATE_EVENT_REFRESH_TIMING',
+    // 开始通话
+    CALL_BEGIN: 'SET_STATE_EVENT_CALL_BEGIN',
+    // 通话结束
+    CALL_END: 'SET_STATE_EVENT_CALL_END',
+    // 多人通话-用户列表刷新
+    GROUP_CALL_USER_WIDGET_REFRESH: 'SET_STATE_EVENT_GROUP_CALL_USER_WIDGET_REFRESH',
+    // 更改通话场景
+    CHANGE_CALL_SCENE: 'SET_STATE_EVENT_CHANGE_CALL_SCENE',
+  }
+
+  /** ** RTC事件名称 ****/
+  static RTC_EVENT = {
+    // sdk发生错误
+    ERROR: 'RTC_EVENT_ERROR',
+    // 远端用户加入房间
+    REMOTE_USER_ENTER: 'RTC_EVENT_REMOTE_USER_ENTER',
+    // 远端用户离开房间
+    REMOTE_USER_EXIT: 'RTC_EVENT_REMOTE_USER_EXIT',
+    // 远端用户音频可用
+    REMOTE_AUDIO_AVAILABLE: 'RTC_EVENT_REMOTE_AUDIO_AVAILABLE',
+    // 远端用户音频不可用
+    REMOTE_AUDIO_UNAVAILABLE: 'RTC_EVENT_REMOTE_AUDIO_UNAVAILABLE',
+    // 远端用户视频可用
+    REMOTE_VIDEO_AVAILABLE: 'RTC_EVENT_REMOTE_VIDEO_AVAILABLE',
+    // 远端用户视频不可用
+    REMOTE_VIDEO_UNAVAILABLE: 'RTC_EVENT_REMOTE_VIDEO_UNAVAILABLE',
+  }
+}

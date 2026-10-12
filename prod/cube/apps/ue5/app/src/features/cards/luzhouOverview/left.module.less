@@ -1,0 +1,143 @@
+
+.hospitalInfo {
+    padding: 10px;
+
+    img {
+        width: 336px;
+        height: 128px;
+    }
+
+    .hospitalInfo-text {
+        color: #fff;
+        text-align: center;
+
+        .hospitalInfo-title {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .scroll_box {
+            text-align: left;
+            overflow: hidden;
+            height: 100px;
+
+            .scroll-text {
+                animation: scroll 10s linear infinite;
+                color: #D9E7FF;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.chart {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+}
+
+.deviceList {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 10px;
+
+    .deviceBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        height: 24px;
+        background: rgba(142, 172, 206, 0.1);
+        margin-bottom: 8px;
+        padding: 0 10px;
+
+        .deviceBox_left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .deviceBox_color {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+        }
+
+        .deviceBox_name {
+            color: #D0DEEE;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .deviceBox_right {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+    }
+}
+
+.deviceTypeList {
+    height: 250px;
+    overflow-y: auto;
+
+
+    .deviceTypeBox {
+        width: 336px;
+        height: 40px;
+        background-image: url("/resource/v1/ue5-migrate/assets/images/overView48.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        margin-bottom: 10px;
+
+        .deviceTypeBox_left {
+            display: flex;
+            align-items: center;
+
+            .iconStyle {
+                font-size: 26px;
+                color: #A6CFFF;
+            }
+
+            span {
+                font-size: 14px;
+                color: #D0DEEE;
+                text-align: center;
+                padding-left: 10px;
+                display: inline-block;
+                border-left: 1px dashed rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        .deviceTypeBox_right {
+            color: #fff;
+            font-size: 18px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    /* 设置滚动条的宽度 */
+}

@@ -1,0 +1,36 @@
+.input-wrapper,
+.text-wrapper {
+  padding-right: 24px;
+  position: relative;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.editable-cell-icon,
+.editable-cell-icon-check {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+}
+
+.editable-cell-icon-check {
+  line-height: 28px;
+}
+
+.editable-cell-icon {
+  margin-top: 4px;
+  display: none;
+}
+
+.editable-cell-icon:hover,
+.editable-cell-icon-check:hover {
+  color: #108ee9;
+}
+
+.text-wrapper:hover .editable-cell-icon {
+  display: inline-block;
+}

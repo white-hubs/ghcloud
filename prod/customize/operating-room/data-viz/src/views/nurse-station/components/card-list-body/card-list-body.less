@@ -1,0 +1,328 @@
+.card-list-body {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: white;
+  height: calc(100% - 170px);
+  padding-right: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  .operating-room-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+
+  .card {
+    width: 614px;
+    height: 436px;
+    background: #091e5f;
+    border: 1px solid rgba(21, 120, 255, 0.50);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 14px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-right: 19px;
+
+
+    .left {
+      width: 372px;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .left-small-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        height:calc(100% - 144px);
+      }
+      
+      .small-card {
+        width: 116px;
+        height: 120px;
+        margin-bottom: 12px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .title {
+          height: 13px;
+          font-size: 13px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #c8dbff;
+          line-height: 13px;
+          margin-top: 7px;
+        }
+
+        .numerical {
+          color: #c4ddff;
+          margin-top: 9px;
+
+          .value {
+            font-size: 24px;
+            font-family: Roboto, Roboto-Medium;
+            font-weight: Medium;
+          }
+
+          .unit {
+            font-size: 12px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            margin-left: 2px;
+          }
+        }
+      }
+
+      .middle-card {
+        width: 372px;
+        height: 144px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 17px 12px;
+        overflow-y: scroll;
+
+        .middle-card-item {
+          width: 48%;
+          display: flex;
+          position: relative;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+          height: 25px;
+
+          &.driver::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 1px;
+            left: -8.5px;
+            border: 1px dashed #919CB2;
+          }
+
+          .title {
+            font-size: 13px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            color: #c8dbff;
+          }
+
+          .numerical {
+            color: #c4ddff;
+            display: inline-flex;
+            align-items: center;
+
+            .value {
+              font-size:20px;
+              font-family: Roboto, Roboto-Medium;
+              font-weight: Medium;
+            }
+
+            .unit {
+              font-size: 12px;
+              font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+              margin-left: 2px;
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 200px;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      box-sizing: border-box;
+      padding-top: 32px;
+      text-align: center;
+
+      .name {
+        width: 168px;
+        height: 34px;
+        background: rgba(21, 120, 255, 0.10);
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        text-align: left;
+        color: #7fbfff;
+        line-height: 34px;
+        text-align: center;
+      }
+
+      .um-count {
+        margin-top: 32px;
+
+        .um-count-item {
+          margin-bottom: 14px;
+          width: 168px;
+          height: 34px;
+          background: rgba(21, 120, 255, 0.10);
+          border-radius: 8px;
+          padding: 12px 14px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .label {
+            height: 19px;
+            font-size: 16px;
+            font-family: Roboto, Roboto-Regular;
+            font-weight: Regular;
+            text-align: left;
+            color: #c8dbff;
+            line-height: 19px;
+          }
+
+          .value {
+            height: 21px;
+            font-size: 18px;
+            font-family: Roboto, Roboto-Medium;
+            font-weight: Medium;
+            text-align: left;
+            color: #c4ddff;
+            line-height: 21px;
+
+            .unit {
+              font-size: 12px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      .level {
+        display: flex;
+        flex-flow: column;
+        position: relative;
+
+        .level-value {
+          position: relative;
+          overflow: hidden;
+          img {
+            width: 113px;
+          }
+
+          .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-family: Roboto, Roboto-Black;
+            font-weight: bolder;
+            text-align: left;
+            color: #ffffff;
+            text-shadow: 0px 2px 4px 0px #071941;
+          }
+        }
+
+        .title {
+          font-size: 16px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          color: #1578ff;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .item {
+      background: #162d71;
+      border-radius: 6px;
+    }
+  }
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 80px;
+  .operating-room-pagination{
+    padding-right: 20px;
+  }
+
+  .operating-room-pagination-item-ellipsis {
+    color: #c8dbff !important;
+  }
+
+  .operating-room-pagination-item,
+  .operating-room-pagination-prev,
+  .operating-room-pagination-next {
+    width: 42px;
+    height: 42px;
+    background: #31457f;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    font-size: 18px;
+    font-family: Roboto, Roboto-Regular;
+    font-weight: Regular;
+    border: 0;
+    overflow: hidden;
+
+    a {
+      color: #c8dbff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .operating-room-pagination-item-active {
+    background: #ffffff;
+
+    a {
+      color: #1578ff;
+    }
+  }
+
+  .operating-room-pagination-item-link {
+    background: transparent;
+    border: 0;
+    color: #c8dbff;
+  }
+
+  .operating-room-pagination-options {
+    color: #c8dbff;
+    margin: 0;
+    transform: translateX(15px);
+
+    .operating-room-pagination-options-quick-jumper {
+      height: auto;
+
+      input {
+        width: 42px;
+        height: 42px;
+        background: #31457f;
+        border-radius: 8px;
+        backdrop-filter: blur(4px);
+        color: #c8dbff;
+        border: 0;
+      }
+    }
+  }
+
+}

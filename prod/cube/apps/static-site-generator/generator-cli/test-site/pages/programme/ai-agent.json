@@ -1,0 +1,298 @@
+{
+  "path": "/programme/ai-agent.html",
+  "meta": {
+    "title": "AI智能体_智能体部署_AI智能体管理系统_古河云科技",
+    "keywords": "AI智能体,大模型接入,智能体编排,智能体管理,知识库引擎",
+    "description": "古河云AI智能体管理实现多类型智能体的统一编排与分发管理。支持与DeepSeek等大模型无缝集成，帮助企业快速构建、部署和监控AI应用，降低技术门槛与运维成本。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-fire-safety-banner.webp",
+            "title": "AI智能体管理系统",
+            "subtitle": "通过标准化接口和低代码工具，实现多类型智能体的统一编排与分发管理。支持与DeepSeek等大模型无缝集成，帮助企业快速构建、部署和监控AI应用，降低技术门槛与运维成本。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "产品试用",
+              "link": "#"
+            },
+            "secondaryButton": {
+              "text": "联系我们",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "features",
+            "name": "产品功能"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "业务模式以人工为主",
+            "description": "业务管理模式主要以人工操作、固定流程和简单的信息化工具为主，事务繁杂，需要依赖大量人力，员工工作负担重。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "决策方式以经验为主",
+            "description": "信息传递方式大多依赖人工记录、文件传递或简单的电子表格，过程中容易发生记录错误、传递偏差、查找困难等问题。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "信息收集传递以纸质为主",
+            "description": "信息传递方式大多依赖人工记录、文件传递或简单的电子表格，过程中容易发生记录错误、传递偏差、查找困难等问题。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "运营管理能力有限",
+            "description": "管理主要依赖人工统计，流程繁琐、效率低下，不仅耗费大量人力成本，且容易出现数据遗漏与统计偏差，影响报告的真实性与决策价值。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《新一代人工智能发展规划》",
+            "description": "推动AI技术在经济社会各领域广泛应用，构建开放协同的人工智能科技创新体系。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《关于加快场景创新以人工智能高水平应用促进经济高质量发展的指导意见》",
+            "description": "鼓励行业龙头企业开放应用场景，打造形成一批可复制、可推广的标杆型示范应用场景。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《数字中国建设整体布局规划》",
+            "description": "推动数字技术和实体经济深度融合，加快企业数字化智能化转型升级。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《“十四五”数字经济发展规划》",
+            "description": "深化人工智能应用，丰富智能产品和服务，推动智能制造、智慧园区等场景落地。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/ai-agent-scene-1.webp",
+            "title": "孪生助理",
+            "subtitle": "通过多端构建智能体对话，为孪生注入智能交互引擎，实现“言随令动”的沉浸式操控体验。支持多轮对话理解，人机交互更自然，助力企业快速进入AI时代。",
+            "features": [
+              {
+                "label": "语音交互：",
+                "value": "支持通过语音进行孪生场景交互控制、页面跳转、数据查询等操作。"
+              },
+              {
+                "label": "数据分析：",
+                "value": "通过语音问答的方式快速进行数据统计分析，例如：“统计本月各类型报警数量”。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/ai-agent-scene-2.webp",
+            "title": "安全分析评估",
+            "subtitle": "深度融合AI和大数据技术，实现业务数据集中化智能分析，提前预警潜在风险，为安全业务管理提供科学决策依据，降低事故发生率。",
+            "features": [
+              {
+                "label": "风险预警：",
+                "value": "基于融合分析结果，结合大数据智能预测潜在的安全风险，并提出应对建议。"
+              },
+              {
+                "label": "安全报告：",
+                "value": "智能生成安全分析报告，可导出报告文档辅助管理者进行研讨和分析决策。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/ai-agent-scene-3.webp",
+            "title": "安全知识顾问",
+            "subtitle": "提供业务咨询和问题引导功能，提升信息检索查询效率，并保障信息时效性和完整性，有效提升工作效率和质量。",
+            "features": [
+              {
+                "label": "业务咨询：",
+                "value": "对园区导览、业务流程、资讯信息等提供精准快速查询。"
+              },
+              {
+                "label": "问题引导：",
+                "value": "支持多轮对话及上下文记忆，引动用户找到解决问题的最佳路径。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/ai-agent-scene-4.webp",
+            "title": "风险源辨识",
+            "subtitle": "打造风险源辨识助手，智能体自动生成报告文档，大幅提升风险源辨识效率及准确性，避免因人工识别遗漏或不准确被出发。",
+            "features": [
+              {
+                "label": "智能辨识：",
+                "value": "用户在对话框输入“罐区新增 1 台 200 m³ 甲醇储罐”，智能体自动输出“构成三级重大危险源，临界量 500 t，当前存量 158 t，需备案”。"
+              },
+              {
+                "label": "报告自动生成：",
+                "value": "点击“输出备案报告”，智能体自动输出带报告文档，支持下载到本地进行编辑、修改。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/ai-agent-scene-5.webp",
+            "title": "应急预案",
+            "subtitle": "智能体基于企业实际情况，快速指定贴合实际的应急预案，相关法规、政策日级自动同步，实现“越用越懂你”。",
+            "features": [
+              {
+                "label": "动态更新优化：",
+                "value": "定期自动检索更新法规政策与行业事故案例，对预案进行动态更新。"
+              },
+              {
+                "label": "案例知识自进化：",
+                "value": "每次演练或真实处置的语音、图文记录自动回流，智能体通过 RAG 存入“私域案例库”。"
+              }
+            ]
+          }
+        ],
+        "theme": "light"
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "企业降本增效",
+            "description": "人工智能技术能够自动化、优化业务流程，从而提高生产效率，减少人为错误，并降低运营成本。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "成本结构优化",
+            "description": "本地部署，控制AI应用成本支出。自动化替代一些规则任务，减少业务开发依赖。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "业务效率跃升",
+            "description": "AI赋能上层业务应用，AI提升设备利用率，工单处理效率，安全风险评测等。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "创新增长模式",
+            "description": "人工智能即将成为未来企业发展的重要支撑。为企业带来了全新的商业模式与增长机会。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用中心",
+            "cardUrl": "#",
+            "items": [
+              {
+                "name": "智能客服",
+                "href": "#"
+              },
+              {
+                "name": "安全分析助手",
+                "href": "#"
+              },
+              {
+                "name": "文档智能处理",
+                "href": "#"
+              },
+              {
+                "name": "决策参谋",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "#",
+            "items": [
+              {
+                "name": "智能边缘分析一体机",
+                "href": "#"
+              },
+              {
+                "name": "AI推理服务器",
+                "href": "#"
+              },
+              {
+                "name": "边缘智算网关",
+                "href": "#"
+              },
+              {
+                "name": "智能视频分析设备",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

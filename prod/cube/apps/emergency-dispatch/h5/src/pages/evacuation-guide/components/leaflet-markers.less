@@ -1,0 +1,64 @@
+.evacuation-plan-overlay {
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  box-sizing: border-box;
+  pointer-events: none;
+  user-select: none;
+}
+
+:global(.evacuation-map-dom-overlay) {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  overflow: visible;
+}
+
+:global(.evacuation-dom-marker) {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+:global(.evacuation-dom-marker--alarm) {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  animation: evacuation-marker-blink 0.8s infinite;
+}
+
+:global(.evacuation-dom-marker--user) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: evacuation-marker-blink 1.2s infinite;
+}
+
+:global(.evacuation-route-arrow-marker) {
+  background: transparent !important;
+  border: none !important;
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@keyframes evacuation-marker-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}

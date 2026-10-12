@@ -1,0 +1,15 @@
+{
+  "id": 129,
+  "title": "IBMS如何让联动集成各个子系统",
+  "date": "2022-08-17",
+  "summary": "",
+  "abstract": null,
+  "category": "公司动态",
+  "href": "/information/detail-129.html",
+  "image": "https://qiniu.guhecloud.com/legacy-site/Uploadfiles/Picture/2022-7-6/202276164593225.jpg",
+  "author": "古河云科技",
+  "content": "<p><img src=\"https://qiniu.guhecloud.com/legacy-site/Uploadfiles/Picture/2022-7-6/202276164595766.jpg\" alt=\"4\" title=\"4\" /><br /><br /><br /></p><p>通过接口网关，智能集成系统实现了各子系统之间的连接“对话”，每个子系统都可以相互联系和协调，处理整个事件之间的响应。</p><p>智能集成系统集成<a href=\"https://www.guhecloud.com/product.aspx?t=7\" target=\"_self\"><span style=\"color:#FF0000;\">IBMS</span></a>后，从集成平台的角度来看，独立的子系统就像一个系统，无论信息点和控制点是否在子系统中，都可以通过编程建立子系统之间的联动关系。这种跨系统的控制过程，大大提高了建筑物的自动化水平。例如，在工作期间，建筑设备的自动监控系统会自动打开办公室的灯光和空调，安全集成系统会立即撤回工作区域，并控制门禁。考勤系统可以记录通勤人员和时间，闭路电视监控系统也可以记录人员进出的情况。当建筑物发生火灾报警时，建筑设备自动监控系统关闭相关区域的照明、电源和空调，进出口控制系统打开门的磁锁，闭路电视监控系统将火灾图片转换给管理人员和相关领导。同时，停车场系统打开护栏机，尽快疏散车辆。这些事件的综合处理在各自独立的智能子系统中是不可能的，但在集成系统中可以根据实际需要设置，大大提高了建筑的集成管理能力。</p><p>智能集成系统<a href=\"https://www.guhecloud.com/product.aspx?t=7\" target=\"_self\" style=\"color:#FF0000;text-decoration:underline;\"><span style=\"color:#FF0000;\">IBM</span></a><span style=\"color:#FF0000;\">S</span>的跨系统联动，实现全球事件管理和工作流自动化是系统集成的重要特点，也是最直接地为客户服务的功能。通过各子系统的集成，智能集成系统可以更有效地对建筑物内的各种事件进行全球联动管理，节省人力，提高建筑物应对突发事件的能力，使管理者能够快速做出决策，从而减少一些事故造成的伤害和损失。同时，通过编制时间响应程序和事件响应程序，可以实现建筑物内机械设备过程的自动控制，节约能源消耗和人员成本。</p>",
+  "click": 209795,
+  "create_time": "2022-08-17 17:34:39",
+  "update_time": "2026-04-14 01:07:25"
+}

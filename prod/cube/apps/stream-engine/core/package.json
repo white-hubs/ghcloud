@@ -1,0 +1,48 @@
+{
+  "name": "@ghcloud/cube-stream-engine-core",
+  "version": "0.0.1",
+  "description": "流引擎核心",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "service",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/epp": "workspace:^",
+    "ant-design-vue": "^4.2.6",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-stream-engine-service": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

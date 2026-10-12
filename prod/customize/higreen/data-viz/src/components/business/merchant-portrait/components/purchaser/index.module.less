@@ -1,0 +1,58 @@
+.container {
+  .sex-age-stat {
+    padding: 0 3.5px 0 1px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .stat-chart {
+    margin-top: 6px;
+    display: flex;
+    align-items: stretch;
+    gap: 7px;
+
+    .bar-chart {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .circular-chart {
+      flex: 1;
+      padding: 2px;
+      background: rgba(11, 102, 240, 0.05);
+
+      .chart {
+        height: 37px;
+        position: relative;
+
+        .chart-center {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          border: 0.25px solid rgba(42, 123, 241, 0.50);
+          z-index: 999;
+          border-radius: 50%;
+          box-shadow: 0px 0px 4px 0px #2b7bf1 inset;
+          font-size: 5px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: right;
+          color: #d0deee;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 11px;
+            height: 9px;
+          }
+        }
+      }
+    }
+  }
+}

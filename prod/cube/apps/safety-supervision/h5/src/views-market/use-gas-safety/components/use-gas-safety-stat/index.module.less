@@ -1,0 +1,79 @@
+.container {
+  .item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+    .title {
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #646d81;
+    }
+
+    .count {
+      font-size: 26px;
+      font-family: Roboto, Roboto-Medium;
+      font-weight: Medium;
+      color: #1f3140;
+    }
+
+    .ratio {
+      display: flex;
+      align-items: center;
+      margin-left: 3px;
+      font-size: 11px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      gap: 2px;
+      text-align: left;
+      color: #707579;
+
+
+      .ratio_num {
+        color: #01b377;
+      }
+
+      .ratio_up {
+        color: red;
+      }
+
+      .img_down {
+        transform: rotateX(180deg);
+      }
+
+      img {
+        width: 6px;
+        height: 8px;
+      }
+    }
+  }
+
+  :global {
+    .van-grid:after {
+      display: none !important;
+    }
+
+    .van-grid-item {
+      &:nth-last-child(1) .van-hairline::after {
+        border-bottom: none !important;
+      }
+
+      &:nth-child(2) .van-hairline,
+      &:nth-child(1) .van-hairline {
+        padding-top: 5px !important;
+      }
+
+      &:nth-child(2n) .van-hairline::after {
+        border-right: none !important;
+      }
+
+      &:nth-last-child(2) .van-hairline::after {
+        border-bottom: none !important;
+      }
+    }
+
+  }
+}

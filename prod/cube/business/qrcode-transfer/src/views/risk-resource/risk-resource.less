@@ -1,0 +1,92 @@
+.card-list{
+  background-color: #ffffff;
+  margin: 20px 10px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  .title{
+    font-weight: 600;
+    padding-top: 5px;
+    color: #1F3140;
+  }
+  .content{
+    .card-item{
+      margin: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+        & :nth-of-type(1){
+          font-size: 14px;
+          color: #7e7e7e;
+           padding-right: 6px;
+        }
+        & :nth-of-type(21){
+          color: #1f3140;
+        }
+    }
+  }
+  .status-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .status {
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    .EXPIRE{
+      color: #f69703;
+      background: rgba(246, 151, 3, 0.10);
+    }
+
+    .UNEXPIRE {
+      background: rgba(21, 120, 255, 0.10);
+      color: #1578FF;
+    }
+
+    .ALARM_HANDLER {
+      background: rgba(106, 181, 57, 0.10);
+      color: #6AB539;
+    }
+
+    .level {
+      padding: 5px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+    }
+
+    .one_level {
+      color: #f01c1c;
+      background: rgba(240, 28, 28, 0.10);
+    }
+
+    .two_level {
+      color: #F69703;
+      background: rgba(246, 151, 3, 0.10);
+    }
+
+    .three_level {
+      color: #F4CF00;
+      background: rgba(244, 207, 0, 0.10)
+    }
+
+    .four_level {
+      color: #1578FF;
+      background: rgba(21, 120, 255, 0.10);
+    }
+  }
+}
+.noData{
+  color: #7e7e7e;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}

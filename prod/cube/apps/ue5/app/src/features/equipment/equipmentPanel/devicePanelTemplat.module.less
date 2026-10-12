@@ -1,0 +1,62 @@
+/* 设备弹窗壳层：对齐 legacy devicePanelTemplat.vue */
+:global {
+  .device-panel-shell.sub-panel {
+    box-sizing: border-box;
+    overflow: hidden;
+    color: var(--visual-data-modal-text-color, #ffffff);
+    background: var(--visual-data-modal-bg, rgba(4, 17, 32, 0.8));
+    border: 1px solid var(--visual-data-modal-border, #2989ff);
+    border-radius: 12px;
+    box-shadow: var(--visual-data-modal-shadow, 0 18px 48px rgba(0, 0, 0, 0.5));
+
+    .sub-panel-header {
+      height: 48px;
+      padding: 0 12px;
+      border-bottom: 1px solid var(--visual-data-modal-toolbar-border, #2989ff);
+      background: var(--visual-data-modal-toolbar-bg, transparent);
+
+      .close {
+        width: 24px;
+        height: 24px;
+        color: var(--visual-data-modal-close-color, var(--visual-data-modal-muted-color, #ffffff));
+        background: var(--visual-data-modal-close-bg, #101010);
+        border: 1px solid var(--visual-data-modal-close-border, var(--visual-data-modal-toolbar-border, transparent));
+        border-radius: 6px;
+        cursor: pointer;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+
+        .anticon,
+        svg {
+          display: block;
+          width: 14px;
+          height: 14px;
+          color: inherit !important;
+          fill: currentColor !important;
+        }
+
+        &:hover {
+          color: var(--visual-zoom-modal-close-hover-color, var(--visual-primary, #2989ff));
+          background: var(--visual-data-modal-close-hover-bg, rgba(41, 137, 255, 0.28));
+          border-color: var(--visual-primary, #2989ff);
+        }
+      }
+
+      .title {
+        min-width: 0;
+        overflow: hidden;
+        color: var(--visual-data-modal-title-color, #fff);
+        font-size: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .sub-panel-content {
+      min-height: 400px;
+      padding: 12px;
+    }
+  }
+}

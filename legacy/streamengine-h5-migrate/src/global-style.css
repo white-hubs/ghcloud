@@ -1,0 +1,22 @@
+:root:root {
+    /* button-primary */
+    /* --van-button-primary-background: #1C66FF; */
+    --van-radius-md: 8px;
+    --van-border-width: 0;
+    /* button-danger */
+    --van-button-danger-background: #FF4158;
+    --van-field-disabled-text-color: #323233;
+    --van-field-input-disabled-text-color:#51555e;
+}
+.van-field__control:disabled{
+  -webkit-text-fill-color: unset !important
+}
+body{
+  background-color: #f7f8fa;
+}
+input.van-field__control::-webkit-input-placeholder {
+  color: #51555e;
+  }
+textarea.van-field__control::-webkit-input-placeholder {
+  color: #51555e;
+  }

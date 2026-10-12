@@ -1,0 +1,90 @@
+.security-analysis-title-picker {
+  width: 300px !important;
+  margin-left: 10px;
+}
+
+/**
+ * 跟随宿主主题变量；无变量时回退浅色（safety-supervision 独立页）。
+ * UE5 另挂 visual-data-modal-dropdown，与大屏下拉色一致。
+ * 保留 overflow:visible，避免区间虚线被裁切。
+ */
+:global(.security-analysis-date-popup.ant-select-dropdown) {
+  z-index: 2147483001 !important;
+  overflow: visible !important;
+  background: var(--visual-data-modal-dropdown-bg, #fff) !important;
+  border: 1px solid var(--visual-data-modal-dropdown-border, #f0f0f0);
+
+  .ant-select-item {
+    color: var(--visual-data-modal-dropdown-text, rgba(0, 0, 0, 0.85)) !important;
+  }
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background: var(--visual-data-modal-dropdown-hover-bg, #e6f7ff) !important;
+    color: var(--visual-data-modal-dropdown-text, rgba(0, 0, 0, 0.85)) !important;
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background: var(--visual-data-modal-dropdown-selected-bg, #1890ff) !important;
+    color: #fff !important;
+  }
+}
+
+:global(.security-analysis-date-popup.ant-picker-dropdown) {
+  z-index: 2147483001 !important;
+  overflow: visible !important;
+
+  .ant-picker-panel-container,
+  .ant-picker-panels,
+  .ant-picker-panel,
+  .ant-picker-month-panel,
+  .ant-picker-quarter-panel,
+  .ant-picker-year-panel,
+  .ant-picker-date-panel,
+  .ant-picker-body,
+  .ant-picker-content {
+    background: var(--visual-data-modal-dropdown-bg, #fff) !important;
+    color: var(--visual-data-modal-dropdown-text, rgba(0, 0, 0, 0.85)) !important;
+    overflow: visible !important;
+  }
+
+  .ant-picker-header {
+    color: var(--visual-data-modal-dropdown-text, rgba(0, 0, 0, 0.85)) !important;
+    border-bottom: 1px solid var(--visual-data-modal-dropdown-border, #f0f0f0) !important;
+  }
+
+  .ant-picker-header button,
+  .ant-picker-header-view button {
+    color: var(--visual-data-modal-muted-color, rgba(0, 0, 0, 0.45)) !important;
+  }
+
+  .ant-picker-content thead tr th,
+  .ant-picker-content tbody tr td,
+  .ant-picker-cell-in-view,
+  .ant-picker-cell-in-view .ant-picker-cell-inner {
+    color: var(--visual-data-modal-dropdown-text, rgba(0, 0, 0, 0.85)) !important;
+  }
+
+  .ant-picker-cell:not(.ant-picker-cell-in-view),
+  .ant-picker-cell:not(.ant-picker-cell-in-view) .ant-picker-cell-inner {
+    color: var(--visual-data-modal-muted-color, rgba(0, 0, 0, 0.25)) !important;
+  }
+
+  .ant-picker-cell-selected .ant-picker-cell-inner,
+  .ant-picker-cell-range-start .ant-picker-cell-inner,
+  .ant-picker-cell-range-end .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+    background: var(--visual-data-modal-picker-cell-active-bg, #1890ff) !important;
+    color: #fff !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+    background: var(--visual-data-modal-dropdown-hover-bg, #e6f7ff) !important;
+  }
+
+  /* 勿覆盖 range-hover 虚线 */
+  .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover) .ant-picker-cell-inner {
+    background: var(--visual-data-modal-picker-cell-hover-bg, #f5f5f5) !important;
+  }
+}

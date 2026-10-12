@@ -1,0 +1,50 @@
+{
+  "name": "@ghcloud/electronic-guide",
+  "private": false,
+  "version": "2.0.4",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts ",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/dynamic-form-render": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "axios": "^0.27.2",
+    "dayjs": "catalog:",
+    "@ghcloud/cube-map-plugins": "workspace:^",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@unocss/preset-attributify": "^0.51.6",
+    "@unocss/preset-icons": "^0.51.6",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@amap/amap-jsapi-types": "^0.0.13",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

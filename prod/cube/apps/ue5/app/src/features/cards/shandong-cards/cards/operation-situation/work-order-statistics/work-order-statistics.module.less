@@ -1,0 +1,250 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .shanghai-work-order-v2-body {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shanghai-work-order-v2-body.is-zoom {
+    min-height: 430px;
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .shanghai-work-order-v2-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .shanghai-work-order-v2-summary-card {
+    display: flex;
+    box-sizing: border-box;
+    height: 42px;
+    min-width: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 9px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.16), rgba(12, 230, 255, 0.05)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.24));
+    border-radius: 8px;
+    box-shadow: inset 0 0 12px rgba(46, 148, 255, 0.1);
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .shanghai-work-order-v2-summary-card:hover {
+    border-color: rgba(80, 184, 255, 0.52);
+    transform: translateY(-1px);
+  }
+
+  .shanghai-work-order-v2-summary-label {
+    flex: 1;
+    min-width: 0;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .shanghai-work-order-v2-summary-value {
+    flex: 0 0 auto;
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .shanghai-work-order-v2-summary-card.is-fault .shanghai-work-order-v2-summary-value {
+    color: #f7b733;
+  }
+
+  .shanghai-work-order-v2-summary-card.is-maintenance .shanghai-work-order-v2-summary-value {
+    color: #35e69b;
+  }
+
+  .shanghai-work-order-v2-summary-card.is-inspection .shanghai-work-order-v2-summary-value {
+    color: #4aa3ff;
+  }
+
+  .shanghai-work-order-v2-chart-row {
+    display: flex;
+    min-height: 126px;
+    flex: 1;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  .shanghai-work-order-v2-chart-row.is-zoom {
+    min-height: 320px;
+    gap: 20px;
+  }
+
+  .shanghai-work-order-v2-pie-wrap {
+    position: relative;
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
+    overflow: hidden;
+  }
+
+  .shanghai-work-order-v2-pie-wrap.is-zoom {
+    flex-basis: 230px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .shanghai-work-order-v2-pie,
+  .shanghai-work-order-v2-pie .elevator-analysis-pie-box,
+  .shanghai-work-order-v2-pie-chart {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .shanghai-work-order-v2-pie-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--visual-text-color, #fff);
+    text-align: center;
+  }
+
+  .shanghai-work-order-v2-pie-value {
+    color: var(--visual-number-color, #fff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  .shanghai-work-order-v2-pie-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 15px;
+  }
+
+  .shanghai-work-order-v2-legend {
+    display: flex;
+    min-width: 0;
+    max-height: 140px;
+    flex: 1;
+    flex-direction: column;
+    gap: 7px;
+    overflow: auto;
+    padding-right: 2px;
+  }
+
+  .shanghai-work-order-v2-legend.is-zoom {
+    max-height: 260px;
+    gap: 10px;
+  }
+
+  .shanghai-work-order-v2-legend-item {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 28px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 3px 8px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background: rgba(43, 120, 205, 0.13);
+    border: 1px solid rgba(113, 178, 255, 0.16);
+    border-radius: 6px;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .shanghai-work-order-v2-legend-item:hover {
+    background: rgba(43, 120, 205, 0.22);
+    border-color: rgba(80, 184, 255, 0.38);
+  }
+
+  .shanghai-work-order-v2-legend-left,
+  .shanghai-work-order-v2-legend-right {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .shanghai-work-order-v2-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .shanghai-work-order-v2-name {
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.84));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .shanghai-work-order-v2-legend-right {
+    flex: 0 0 auto;
+  }
+
+  .shanghai-work-order-v2-legend-right strong {
+    color: var(--visual-number-color, #fff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    font-weight: 700;
+  }
+
+  .shanghai-work-order-v2-legend-right em {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.68));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    font-style: normal;
+  }
+
+  .shanghai-work-order-v2-empty {
+    display: flex;
+    width: 100%;
+    min-height: 126px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shanghai-work-order-v2-empty.is-zoom {
+    min-height: 320px;
+  }
+
+  :root[data-visual-theme="minimal-white"] .shanghai-work-order-v2-summary-card,
+  :root[data-visual-theme="minimal-white"] .shanghai-work-order-v2-legend-item {
+    background: rgba(246, 250, 255, 0.72);
+    border-color: rgba(116, 158, 210, 0.18);
+    box-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .shanghai-work-order-v2-summary-value,
+  :root[data-visual-theme="minimal-white"] .shanghai-work-order-v2-pie-value,
+  :root[data-visual-theme="minimal-white"] .shanghai-work-order-v2-legend-right strong {
+    color: #0d2f75;
+    text-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(shanghai-work-order-v2-panel);

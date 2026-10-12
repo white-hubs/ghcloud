@@ -1,0 +1,26 @@
+<svg width="299" height="261" viewBox="0 0 299 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 923">
+<g id="Group 1107">
+<g id="Union" filter="url(#filter0_b_220_2239)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4L6 2H293L295 4L297 6V30L293 33V228L297 231V247L295 249L293 251H159.456L151.485 258.971L143.515 251H6L4 249L2 247V230L5.5 227.5L6.5 31.5L2 29V6L4 4ZM7 235H16V237H7V235ZM16 239H7V241H16V239ZM7 243H16V245H7V243Z" fill="url(#paint0_linear_220_2239)" fill-opacity="0.9"/>
+</g>
+<g id="Group 268">
+<path id="Rectangle 307" d="M42 2H141L131.635 17H51.3649L42 2Z" fill="#052E78"/>
+<circle id="Ellipse 4" cx="15" cy="8" r="3" fill="#003BA6"/>
+<circle id="Ellipse 5" cx="166" cy="8" r="3" fill="#003BA6"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_b_220_2239" x="-6" y="-6" width="311" height="272.971" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="4"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_220_2239"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_220_2239" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_220_2239" x1="149.5" y1="2" x2="149.5" y2="258.971" gradientUnits="userSpaceOnUse">
+<stop stop-color="#144398"/>
+<stop offset="1" stop-color="#13326A"/>
+</linearGradient>
+</defs>
+</svg>

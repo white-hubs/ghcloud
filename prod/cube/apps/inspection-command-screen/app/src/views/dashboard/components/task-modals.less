@@ -1,0 +1,185 @@
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  p {
+    margin-bottom: 0;
+    color: rgba(216, 234, 255, 0.92);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  span {
+    color: rgba(180, 206, 238, 0.72);
+  }
+}
+
+.candidate-list {
+  margin-top: 6px;
+  max-height: 220px;
+  height: 220px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.transfer-user-summary {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+.transfer-load-status {
+  flex-shrink: 0;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.transfer-load-sentinel {
+  flex-shrink: 0;
+  height: 1px;
+}
+
+.candidate-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.candidate-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+.candidate-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #d8ebff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(75, 139, 255, 0.1);
+    border-color: rgba(75, 139, 255, 0.3);
+  }
+
+  &.active {
+    border-color: rgba(75, 139, 255, 0.45);
+    background: rgba(75, 139, 255, 0.15);
+  }
+
+  .person-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(75, 139, 255, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #7aaaff;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .person-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .p-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e0e8f0;
+  }
+
+  .p-detail {
+    margin-top: 2px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .person-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: transparent;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  &.active .person-check {
+    border-color: #4b8bff;
+    background: rgba(75, 139, 255, 0.3);
+    color: #fff;
+  }
+}
+
+.transfer-task-info {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.transfer-task-info strong {
+  color: #e0e8f0;
+}
+
+.transfer-search {
+  margin-bottom: 4px;
+  background: transparent;
+  border:1px solid rgba(255, 255, 255, 0.12);
+  input{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .inspection-command-screen-input-suffix,
+  .inspection-command-screen-input-clear-icon-has-suffix,
+  .inspection-command-screen-input-show-count-suffix{
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+.screen-modal-wrap .inspection-command-screen-modal {
+  top: 80px;
+}
+
+.screen-modal-wrap .inspection-command-screen-modal-content {
+  background: rgba(10, 14, 30, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(24px);
+}
+
+.screen-modal-wrap .inspection-command-screen-modal-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.screen-modal-wrap .inspection-command-screen-modal-title {
+  color: #a0c4ff;
+}
+
+.screen-modal-wrap .inspection-command-screen-modal-body {
+  color: #d7e9ff;
+}

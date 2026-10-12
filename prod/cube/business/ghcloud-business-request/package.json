@@ -1,0 +1,51 @@
+{
+  "name": "@ghcloud/ghcloud-business-request",
+  "version": "0.0.4",
+  "description": "axios请求封装",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build:lib": "vue-tsc && vite build -c vite.lib.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vue/compiler-sfc": "^3.2.45",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-macros": "^2.0.0",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vue-router": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "dependencies": {
+    "ant-design-vue": "catalog:",
+    "axios": "^1.3.6",
+    "vue": "catalog:"
+  }
+}

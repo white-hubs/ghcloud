@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-gas-detail.html",
+  "meta": {
+    "title": "用气管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+    "keywords": "用气管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com /resource/app-icons/用气管理/main.png",
+        "productName": "用气管理",
+        "productDescription": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "用气管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用气管理模块，统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>数据总览</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">基于用气业务产生的事件，生成统计数据，以可视化形式呈现，满足管理及业务需求。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>用气监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">将物联网接入的用气设备数据，在业务平台以图文加列表的形式进行呈现，支持按照设备区域、设备状态、产品品类等进行筛选查询。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>用气报警</strong></span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965604323847057409.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp; &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965604431422566401.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示用气设备报警记录，包括报警事件、报警级别、报警区域、详细位置、报警时间、报警设备、处理状态、处理人等，点击报警记录可查看详情、联动动作及处理记录。</span></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警配置</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于用气的报警规则配置，配置完成后系统会根据规则监测对应设备，一旦触发规则即可生产报警信息进行上报。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示用气报警统计数据，包括报警事件、报警总数、待接收、处理中、已处理、已挂起报警数等，支持按照时间、事件进行筛选查询。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>AI助手</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于实现基于用气安全的报警数据,报警处置相关数据进行,借助大模型的能力和人工智能技术实现数据的深度分析,并给出相应的建议。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965606008136937473.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>用气设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立用气设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现用气设备在线管理。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408495902722",
+            "name": "安防监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安防监控/main.png",
+            "version": "1.0.0",
+            "description": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-security-detail.html"
+          },
+          {
+            "id": "1811344408630120449",
+            "name": "动环监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+            "href": "/product-center/app-env-detail.html"
+          },
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,60 @@
+.examRecord {
+  margin-top: 26px;
+  padding-bottom: 80px;
+
+  .recordItem {
+    padding-left: 29px;
+    margin-left: 8px;
+    position: relative;
+    border-left: 1px dashed #ebebeb;
+    padding-bottom: 20px;
+
+    .stepIcon {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(315deg, #005DFF 0%, #0089FF 69%, #5FB5FF 100%);
+      box-shadow: 0px 2px 4px 0px rgba(4, 139, 255, 0.2);
+      position: absolute;
+      left: -7px;
+      top: 0px;
+    }
+
+    .examTime {
+      font-weight: 400;
+      font-size: 14px;
+      color: #1F3140;
+    }
+
+    .examResult {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: #fff;
+      border-radius: 6px;
+      font-weight: 400;
+      font-size: 13px;
+      color: #1F3140;
+      margin: 12px 0 0;
+
+      .passed {
+        color: #6AB539;
+      }
+
+      .unpassed {
+        color: #FE8704;
+      }
+
+      .status {
+        color: #6AB539;
+      }
+
+      .operate {
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--van-primary-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.cycleContainer {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow-x: auto;
+  :global(.ant-select),
+  :global(.ant-picker) {
+    height: 32px;
+  }
+  :global(.ant-select-selector) {
+    min-height: 32px;
+  }
+  :global(.ant-select-multiple .ant-select-selector) {
+    overflow-x: auto;
+  }
+  :global(.ant-select-multiple .ant-select-selection-overflow) {
+    flex-wrap: nowrap;
+  }
+}

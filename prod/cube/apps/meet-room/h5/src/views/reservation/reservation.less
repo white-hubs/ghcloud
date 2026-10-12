@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    flex: 1;
+    margin-top: 12px;
+  }
+
+  .footer {
+    padding: 12px 16px;
+    background: #fff;
+  }
+
+  :global {
+    // .van-field:not(:first-child) {
+    //   &::after {
+    //     display: none;
+    //   }
+    // }
+
+    .van-field:nth-child(3),.van-field:nth-child(4),.van-field:nth-child(5) {
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    textarea {
+      padding: 6px;
+      border-radius: 2px;
+      background: #f8f9f9;
+    }
+  }
+}
+.mb-5{
+  margin-bottom: 4px;
+}

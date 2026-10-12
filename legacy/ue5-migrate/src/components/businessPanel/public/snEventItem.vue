@@ -1,0 +1,250 @@
+<template>
+  <div class="eventAlarmItem">
+    <div class="top">
+      <div>
+        <div class="left">
+        <div class="sort" :class="{ up_sort: props.sort > 3 }">{{ props.sort }}</div>
+        <div class="name" :style="piniaStoreMarket.currentMarketName==props.name?'color:#6194f7':''">{{ props.name }}
+      
+        </div>
+      </div>
+          <div class="name">{{ props.code }}</div>
+      </div>
+      <!-- <div class="middle">
+        {{ props.code }}
+      </div> -->
+      <div class="right">
+        <div class="count" :class="{ up_count: props.sort > 3 }">{{ props.count }}</div>
+        <div class="modes"  v-if="props.sn">{{ props.modes }}</div>
+        <!-- uptriangle 向上三角根据Prop改变 -->
+        <div  >
+ 
+     <img v-if="sn" :src="props.linkRatio > 0?getSnImage('up.png'):getSnImage('down.png')" alt="">
+        </div>
+        <div  v-if="sn" :class="[props.linkRatio > 0 ? 'up' : 'down']" >
+          {{ (props.linkRatio || 0)+ "%" }}
+        </div>
+      </div>
+    </div>
+    <div class="line">
+      <!-- up_proress 前三个一个颜色，后面一个颜色 -->
+      <div class="progress" :class="{ up_proress: props.sort > 3 }" :style="proStyle(props.width)"></div>
+      <div class="light_dot"></div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+// 事件报警列表组件
+import { getSnImage } from '@/utils/getImage'
+import {  computed, watch } from "vue";
+import { storeMarket } from "@/piniaStore/other";
+const piniaStoreMarket = storeMarket();
+
+
+type items = {
+  sort: number;
+  name: string;
+  count: number;
+  ratio: string;
+  modes?: string;
+  linkRatio?: number | string;
+  code?:number
+  sn?:boolean
+  width:number
+};
+
+const props = withDefaults(defineProps<items>(), {
+  sort: 1,
+  name: "事件",
+  count: 33,
+  modes: "环比",
+  ratio: "3%",
+  linkRatio: 0,
+  sn:true,
+  width:0
+});
+
+const proStyle=(width)=>{
+
+  
+return `width:${width*100}%`
+}
+// const proStyle = computed(() => (width) => {
+//   return {
+//     width: width*100 + '%',
+//   };
+// });
+
+</script>
+
+<style lang="less" scoped>
+.eventAlarmItem {
+  margin-bottom: 20px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .sort {
+        width: 30px;
+        line-height: 18px;
+        border-radius: 2px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 18px;
+        margin-right: 11px;
+        background: rgba(50, 142, 255, 0.2);
+        border: 1px solid #2989ff;
+        color: #2f8dff;
+
+        &.up_sort {
+          background: rgba(21, 58, 105, 0.3);
+          border: 1px solid #79a0d0;
+          color: #e6f7ff;
+        }
+      }
+
+    }
+    .name {
+      color: #e6f7ff;
+      font-size: 14px;
+      width: 100%;
+      // overflow: hidden; //超出的文本隐藏
+      // text-overflow: ellipsis; //溢出用省略号显示
+      // white-space: nowrap; // 默认不换行；
+    }
+   .middle{
+    color: #fff;
+    font-size: 14px;
+   }
+    .right {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+
+      .count {
+        font-size: 18px;
+        font-family: Roboto-Medium, Roboto;
+        font-weight: 500;
+        color: rgba(210, 224, 253, 1);
+        line-height: 19px;
+        margin-right: 6px;
+        // text-shadow: 0px 0px 10px #2989ff;
+
+        &.up_count {
+          color: #ffffff;
+        }
+      }
+
+      .modes {
+        font-size: 12px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: #d9e7ff;
+        line-height: 21px;
+        margin-right: 3px;
+      }
+
+      .downtriangle {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #d2fff3;
+        margin-right: 3px;
+        transform: rotate(180deg);
+      }
+
+      .uptriangle {
+        border-bottom: 8px solid #ffcece;
+        transform: rotate(0deg);
+      }
+
+      .up {
+        color: #f14545;
+      }
+
+      .down {
+        color: #2ae8bd;
+      }
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    background: rgba(217, 231, 255, 0.1);
+    border-radius: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+
+    .progress {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(63deg, rgba(97, 148, 247, 0.14) 0%, rgba(148, 186, 249, 1) 100%);
+      opacity: 1;
+      transition: all 2s ease 1s;
+
+      &.up_proress {
+        background: linear-gradient(63deg, rgba(217, 231, 255, 0.2) 0%, #d9e7ff 100%);
+      }
+    }
+
+    .light_dot {
+      width: 13px;
+      height: 13px;
+      box-shadow: 0px 0px 2px 0px #2f8dff;
+      opacity: 1;
+      border-radius: 50%;
+      position: relative;
+      border: 1px solid #edf4ff;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #edf4ff;
+        box-shadow: 0px 0px 4px 0px #2f8dff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.eventAlarmItem .top .left .sort {
+  color: #E6F7FF;
+  background: rgba(21, 58, 105, 0.3);
+  border: 1px solid #79A0D0;
+}
+
+.eventAlarmItem:nth-child(1) .top .left .sort {
+  background: rgba(241, 69, 69, 0.302);
+  border: 1px solid #F14545;
+  color: #fff;
+}
+
+.eventAlarmItem:nth-child(2) .top .left .sort {
+  background: rgba(255, 171, 16, 0.3);
+  border: 1px solid #FFAB10;
+  color: #fff;
+}
+
+.eventAlarmItem:nth-child(3) .top .left .sort {
+  color: #fff;
+  background: rgba(50, 142, 255, 0.2);
+  border: 1px solid #2989FF;
+}
+</style>

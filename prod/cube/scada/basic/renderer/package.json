@@ -1,0 +1,17 @@
+{
+  "name": "@cube-scada/renderer",
+  "version": "0.1.2",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cube-scada/core": "workspace:*",
+    "@cube-scada/engine": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  }
+}

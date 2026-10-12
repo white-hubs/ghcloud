@@ -1,0 +1,161 @@
+.gas-archive-root {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  background: #f1f4f8;
+}
+
+.gas-archive-panel {
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(18, 31, 56, 0.05);
+}
+
+.gas-archive-panel-head,
+.gas-archive-record-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.gas-archive-panel-head h2,
+.gas-archive-record-title {
+  margin: 0;
+  color: #202631;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.gas-archive-warehouse-select {
+  width: 160px;
+}
+
+.gas-archive-date-picker {
+  width: 140px;
+}
+
+.gas-archive-basic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 20px;
+}
+
+.gas-archive-info-card {
+  min-height: 76px;
+  padding: 16px;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.gas-archive-info-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #969da8;
+  font-size: 13px;
+}
+
+.gas-archive-info-card strong {
+  color: #353941;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.gas-archive-info-card strong.is-alarm,
+.gas-archive-value.is-alarm {
+  color: #ff6268;
+}
+
+.gas-archive-info-card em {
+  margin-left: 6px;
+  color: #8c96a8;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.gas-archive-chart {
+  height: 470px;
+  margin: 0 20px;
+}
+
+.gas-archive-record-panel {
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+
+.gas-archive-record-head {
+  height: 52px;
+  padding: 0 20px;
+}
+
+.gas-archive-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 58px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #edf0f5;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.gas-archive-filter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gas-archive-filter-item > span {
+  color: #4e5969;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.gas-archive-range-picker {
+  width: 270px;
+}
+
+.gas-archive-query-button,
+.gas-archive-export-button {
+  min-width: 64px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.gas-archive-query-button,
+.gas-archive-export-button {
+  border-color: #1677ff;
+  background: #1677ff;
+  color: #fff;
+}
+
+.gas-archive-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 20px 0;
+}
+
+.gas-archive-empty {
+  padding: 40px 20px;
+  color: #969da8;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .gas-archive-basic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gas-archive-filter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,950 @@
+.page {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  color: #ffffff;
+  background: #0d1420;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+:global(html.drone-monitor-scroll-locked),
+:global(body.drone-monitor-scroll-locked) {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+:global(body.drone-monitor-scroll-locked #app),
+:global(body.drone-monitor-scroll-locked #__qiankun_microapp_wrapper_for_drone__),
+:global(body.drone-monitor-scroll-locked #DroneApp) {
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.topBar {
+  position: relative;
+  z-index: 20;
+  height: 46px;
+  flex: 0 0 46px;
+  flex-shrink: 0;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(13, 20, 32, 0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #dce8f7;
+  overflow: hidden;
+
+  strong {
+    flex: 0 0 auto;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  > span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+.takeoverControls {
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusPill,
+.takeoverButton {
+  height: 30px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statusPill {
+  min-width: 108px;
+  padding: 0 13px;
+  color: #06132a;
+}
+
+.manualStatus {
+  background: #ff6a00;
+  color: #ffffff;
+}
+
+.autoStatus {
+  background: #139545;
+}
+
+.takeoverButton {
+  min-width: 124px;
+  padding: 0 15px;
+  border: 0;
+  gap: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.applyButton {
+  background: #ff6a00;
+}
+
+.releaseButton {
+  background: #22bd57;
+}
+
+.lockIcon {
+  position: relative;
+  width: 14px;
+  height: 11px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transform: translateY(2px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 7px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid currentColor;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+  }
+}
+
+.unlockIcon::before {
+  left: 2px;
+  transform: translateX(0) rotate(-10deg);
+}
+
+.droneSwitch {
+  flex: 0 0 150px;
+  width: 150px;
+
+  :global(.ant-select-selector) {
+    height: 30px !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff;
+    box-shadow: none !important;
+  }
+
+  :global(.ant-select-selection-item) {
+    line-height: 28px !important;
+    color: #ffffff;
+  }
+
+  :global(.ant-select-selection-placeholder),
+  :global(.ant-select-arrow) {
+    color: #aebbd0;
+  }
+}
+
+.stage {
+  min-height: 0;
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.leftPanel,
+.rightPanel {
+  position: relative;
+  width: 300px;
+  min-height: 0;
+  padding: 16px;
+  overflow: hidden;
+  background: rgba(10, 18, 30, 0.68);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.rightPanel {
+  border-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.collapsed {
+  width: 22px;
+  min-width: 22px;
+  padding: 0;
+}
+
+.collapseButton {
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  width: 18px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px 0 0 8px;
+  background: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.collapsed .collapseButton {
+  left: 2px;
+  right: auto;
+  width: 18px;
+  background: rgba(36, 81, 214, 0.88);
+  color: #ffffff;
+}
+
+.rightPanel .collapseButton {
+  left: -1px;
+  right: auto;
+  border-radius: 0 8px 8px 0;
+}
+
+.rightPanel.collapsed .collapseButton {
+  left: 2px;
+  right: auto;
+}
+
+.dataList {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  span {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 10px;
+    border: 1px solid rgba(89, 156, 255, 0.16);
+    border-radius: 6px;
+    background: rgba(21, 33, 51, 0.78);
+    color: #d7e4f5;
+    font-size: 13px;
+  }
+
+  strong {
+    color: #6db3ff;
+    font-weight: 700;
+  }
+}
+
+.taskProgress {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+
+  > div {
+    height: 6px;
+    margin: 12px 0 6px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.18);
+
+    span {
+      display: block;
+      height: 100%;
+      background: #1684fc;
+    }
+  }
+
+  p {
+    margin: 0 0 10px;
+    color: #aebbd0;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 18px;
+    color: #76859b;
+  }
+
+  li {
+    margin: 6px 0;
+  }
+}
+
+.done {
+  color: #34c759;
+}
+
+.current {
+  color: #ffb020;
+  font-weight: 700;
+}
+
+.mainView {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  contain: layout paint;
+}
+
+.emptyState {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(220, 232, 247, 0.72);
+  background: #111827;
+  font-size: 16px;
+}
+
+.videoView,
+.mapView {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #111827;
+  contain: layout paint;
+}
+
+.miniVideoView {
+  position: absolute;
+  inset: 38px 0 0;
+
+  .recording {
+    right: 10px;
+    top: 8px;
+    font-size: 12px;
+  }
+
+  .crosshair {
+    width: 38px;
+    height: 38px;
+  }
+
+  .osd {
+    left: 8px;
+    bottom: 8px;
+    max-width: 210px;
+    padding: 6px;
+    gap: 4px 8px;
+    font-size: 10px;
+  }
+
+  .cameraMode {
+    display: none;
+  }
+}
+
+.videoNoise {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 52% 44%, rgba(22, 132, 252, 0.32), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 30%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 4px);
+}
+
+.recording {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  color: #f53f3f;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #f53f3f;
+  }
+}
+
+.crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 68px;
+  height: 68px;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f53f3f;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.osd {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  max-width: 620px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+.cameraMode {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.mapView,
+.smallMap {
+  background: #f3f7fb;
+  color: #1f2a3d;
+}
+
+.mapGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(22, 132, 252, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 132, 252, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.mapView svg,
+.smallMap svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  polyline {
+    fill: none;
+    stroke: #1684fc;
+    stroke-width: 1;
+    stroke-dasharray: 4 3;
+  }
+}
+
+.mapWaypoint,
+.smallWaypoint {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #1684fc;
+  color: #1684fc;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.mapNest,
+.mapDrone,
+.smallDrone {
+  position: absolute;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #1684fc;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.mapNest {
+  left: 12%;
+  top: 72%;
+}
+
+.mapDrone {
+  left: 48%;
+  top: 48%;
+  background: #00a870;
+}
+
+.smallDrone {
+  left: 48%;
+  top: 42%;
+  font-size: 12px;
+  background: #00a870;
+}
+
+.miniWindow {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 288px;
+  height: 208px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  z-index: 4;
+
+  .videoView,
+  .mapView {
+    inset: 38px 0 0;
+  }
+}
+
+.miniHeader {
+  height: 38px;
+  padding: 0 8px 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1f2a3d;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.smallMap {
+  position: absolute;
+  inset: 38px 0 0;
+}
+
+.controlTab {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+
+  :global(.drone-btn) {
+    width: 100%;
+  }
+}
+
+.controlPanelBody {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-right: 2px;
+
+  :global(.drone-tabs) {
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(.drone-tabs-content),
+  :global(.drone-tabs-tabpane) {
+    min-height: 0;
+  }
+
+  :global(.drone-tabs-content-holder) {
+    min-height: 0;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  :global(.drone-tabs-nav) {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+
+    &::before {
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  :global(.drone-tabs-tab) {
+    color: #8b96a8;
+    font-size: 13px;
+
+    &:hover {
+      color: #dce8f7;
+    }
+  }
+
+  :global(.drone-tabs-tab-active .drone-tabs-tab-btn),
+  :global(.drone-tabs-tab-btn:focus),
+  :global(.drone-tabs-tab-btn:active) {
+    color: #4b8cff;
+    text-shadow: none;
+  }
+
+  :global(.drone-tabs-ink-bar) {
+    background: #4b8cff;
+  }
+}
+
+.controlSection {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
+.permissionBar {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.allow {
+  background: rgba(0, 180, 42, 0.16);
+  color: #34c759;
+}
+
+.deny {
+  background: rgba(255, 255, 255, 0.08);
+  color: #8b96a8;
+}
+
+.actionGrid,
+.modeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.directionPad {
+  width: 132px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    ". forward ."
+    "left hover right"
+    ". backward .";
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(3, 44px);
+  gap: 7px;
+  justify-content: center;
+
+  button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #172231;
+    color: #dce8f7;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #4b8cff;
+      color: #ffffff;
+    }
+  }
+}
+
+.forward {
+  grid-area: forward;
+}
+
+.left {
+  grid-area: left;
+}
+
+.hover {
+  grid-area: hover;
+  border-color: #ef4444 !important;
+  background: rgba(127, 29, 29, 0.36) !important;
+  color: #ff6b6b !important;
+}
+
+.right {
+  grid-area: right;
+}
+
+.backward {
+  grid-area: backward;
+}
+
+.assistControls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.inlineControlSection {
+  h3 {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
+.iconPairGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  button {
+    height: 40px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #172231;
+    color: #dce8f7;
+    font-size: 17px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #4b8cff;
+      color: #ffffff;
+    }
+  }
+}
+
+.panelActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.panelActionButton {
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #172231;
+  color: #dce8f7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  :global(.anticon) {
+    font-size: 15px;
+  }
+
+  &:hover {
+    border-color: #4b8cff;
+    color: #ffffff;
+  }
+}
+
+.flightActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.flightActionButton {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+
+  :global(.anticon) {
+    font-size: 15px;
+  }
+}
+
+.takeoffAction {
+  background: #178f43;
+  color: #ffffff;
+}
+
+.returnAction {
+  background: #2451d6;
+  color: #ffffff;
+}
+
+.pointAction {
+  border-color: #d8dee8;
+  background: #ffffff;
+  color: #c4ccd8;
+}
+
+.landAction {
+  border-color: #ef4444;
+  background: #ffffff;
+  color: #ff5b5b;
+}
+
+.sliderBlock {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sliderTitle {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #8b96a8;
+  font-size: 12px;
+
+  strong,
+  :global(.anticon) {
+    color: #dce8f7;
+  }
+}
+
+.shouter {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  :global(.drone-input),
+  :global(.drone-textarea) {
+    font-size: 12px;
+  }
+
+  :global(textarea.drone-input) {
+    min-height: 52px;
+    border-color: #334155;
+    border-radius: 7px;
+    background: #172231;
+    color: #dce8f7;
+    font-size: 12px;
+
+    &::placeholder {
+      color: #69758a;
+    }
+  }
+}
+
+.shouterOpen {
+  padding: 10px 0 0;
+}
+
+.shouterMainButton {
+  width: 100%;
+  height: 38px;
+  border: 0;
+  border-radius: 7px;
+  background: #2451d6;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  :global(.anticon) {
+    font-size: 17px;
+  }
+}
+
+.shouterHeader {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #aebbd0;
+  font-size: 13px;
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #8b96a8;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.shouterActions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px;
+  gap: 6px;
+}
+
+.shouterPlayButton,
+.shouterSettingButton {
+  height: 34px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+
+  :global(.anticon) {
+    font-size: 15px;
+  }
+}
+
+.shouterPlayButton {
+  border: 0;
+  background: #2451d6;
+  color: #ffffff;
+}
+
+.shouterSettingButton {
+  border: 1px solid #d8dee8;
+  background: #ffffff;
+  color: #c4ccd8;
+}

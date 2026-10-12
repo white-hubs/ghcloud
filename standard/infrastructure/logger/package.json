@@ -1,0 +1,42 @@
+{
+  "name": "@ghcloud/logger",
+  "version": "1.1.5",
+  "description": "ghcloud logger",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.es.js",
+    "main": "./lib/main.cjs.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/",
+    "directory": "./",
+    "linkDirectory": true
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "log",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

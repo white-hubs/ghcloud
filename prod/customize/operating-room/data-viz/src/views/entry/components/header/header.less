@@ -1,0 +1,77 @@
+.entry-header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #010c2d 2%, #010d32 31%, #021c65 97%);
+  box-sizing: border-box;
+  padding: 0 24px;
+
+  .title {
+    height: 22px;
+    background: linear-gradient(180deg,#ffffff, #1578ff);
+    font-size: 22px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+    font-weight: Bold;
+    text-align: left;
+    color: #ffffff;
+    line-height: 22px;
+    letter-spacing: 0.05px;
+    -webkit-background-clip: text; /* Safari/Chrome需要添加此属性才能正常显示背景渐变效果 */
+    color: transparent;
+  }
+
+  .time-area {
+    display: flex;
+    flex-flow: column;
+    color: #ffffff;
+    margin-right: 20px;
+    align-items: center;
+
+    :first-child {
+      font-size: 14px;
+    }
+
+    :last-child {
+      font-size: 22px;
+    }
+  }
+
+  .right-bar {
+    display: flex;
+    align-items: center;
+    .select-box {
+      min-width: 80px;
+      height: 32px;
+      background: rgba(21, 120, 255, 0.20);
+      border-radius: 22px;
+      box-sizing: border-box;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: Regular;
+      color: #ffffff;
+      cursor: pointer;
+      margin-left: 20px;
+      .label{
+        margin-right: 10px;
+      }
+      .operating-room-dropdown-trigger{
+        font-size: 16px;
+        font-weight: Regular;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        .anticon{
+          margin-left: 10px;
+        }
+        svg{
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,289 @@
+@import "../_shared/energy-v2-shared.less";
+
+:global {
+  .energy-overview-v2-panel .sub-panel-content {
+    overflow: visible;
+  }
+
+  .energy-v2-type-filter-arrow {
+    pointer-events: none;
+    font-size: 10px;
+  }
+
+  .energy-overview-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  /* 纵向列表：三项各占一行，避免三列挤在一起截断文案 */
+  .energy-overview-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &.is-zoom {
+      gap: 12px;
+
+      .energy-overview-card {
+        min-height: 72px;
+        padding: 14px 16px;
+      }
+
+      .energy-overview-icon img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .energy-overview-value {
+        font-size: calc(var(--font-size-scale, 1) * 28px);
+      }
+    }
+  }
+
+  .energy-overview-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 64px;
+    padding: 10px 12px;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.03)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.06));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.26));
+    border-radius: 8px;
+    box-shadow: inset 0 0 12px rgba(46, 148, 255, 0.08);
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+
+    &::before,
+    &::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    &:hover {
+      border-color: rgba(72, 186, 255, 0.46);
+      box-shadow: inset 0 0 14px rgba(46, 148, 255, 0.12);
+    }
+
+    &.is-energy {
+      background:
+        linear-gradient(135deg, rgba(38, 194, 188, 0.12), rgba(12, 230, 255, 0.03)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.06));
+      border-color: rgba(38, 194, 188, 0.28);
+    }
+
+    &.is-carbon {
+      background:
+        linear-gradient(135deg, rgba(255, 171, 16, 0.12), rgba(255, 110, 35, 0.03)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.06));
+      border-color: rgba(255, 171, 16, 0.26);
+    }
+  }
+
+  .energy-overview-icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    img {
+      display: block;
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+
+  .energy-overview-content {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .energy-overview-meta {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .energy-overview-label-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 6px;
+    min-width: 0;
+  }
+
+  .energy-overview-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+
+  .energy-overview-unit {
+    flex: 0 0 auto;
+    color: var(--visual-muted-color, rgba(176, 206, 240, 0.78));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .energy-overview-main {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    min-width: 72px;
+  }
+
+  .energy-overview-value {
+    color: #00f6ff;
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 24px);
+    font-weight: 700;
+    line-height: 1;
+    text-align: right;
+    text-shadow: 0 0 12px rgba(0, 246, 255, 0.28);
+    white-space: nowrap;
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .energy-overview-card.is-energy .energy-overview-value {
+    color: #3de8d8;
+    text-shadow: 0 0 12px rgba(38, 194, 188, 0.28);
+  }
+
+  .energy-overview-card.is-carbon .energy-overview-value {
+    color: #ffc36a;
+    text-shadow: 0 0 12px rgba(255, 171, 16, 0.24);
+  }
+
+  .energy-overview-ratio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .energy-overview-ratio-label {
+    color: var(--visual-muted-color, rgba(176, 206, 240, 0.78));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.2;
+  }
+
+  .energy-overview-ratio-arrow {
+    width: 0;
+    height: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  .energy-overview-ratio.is-up .energy-overview-ratio-arrow {
+    border-bottom: 5px solid #f14545;
+  }
+
+  .energy-overview-ratio.is-down .energy-overview-ratio-arrow {
+    border-top: 5px solid #2ae8bd;
+  }
+
+  .energy-overview-ratio-value {
+    color: var(--visual-text-color, #eff6ff);
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .energy-overview-ratio.is-up .energy-overview-ratio-value {
+    color: #f14545;
+  }
+
+  .energy-overview-ratio.is-down .energy-overview-ratio-value {
+    color: #2ae8bd;
+  }
+
+  .energy-overview-ratio.is-flat .energy-overview-ratio-value {
+    color: var(--visual-muted-color, rgba(176, 206, 240, 0.78));
+  }
+
+  :root[data-visual-theme="minimal-white"] .energy-overview-v2-panel {
+    .energy-overview-card {
+      background: rgba(244, 249, 255, 0.86);
+      border: 1px solid rgba(116, 158, 210, 0.16);
+      box-shadow: none;
+
+      &:hover {
+        background: rgba(236, 245, 255, 0.96);
+        border-color: rgba(91, 155, 226, 0.28);
+      }
+
+      &.is-energy {
+        background: linear-gradient(90deg, rgba(232, 250, 249, 0.96), rgba(244, 249, 255, 0.9));
+        border-color: rgba(56, 178, 172, 0.18);
+      }
+
+      &.is-carbon {
+        background: linear-gradient(90deg, rgba(255, 248, 236, 0.96), rgba(244, 249, 255, 0.9));
+        border-color: rgba(224, 150, 40, 0.18);
+      }
+    }
+
+    .energy-overview-label {
+      color: #17366d;
+    }
+
+    .energy-overview-unit,
+    .energy-overview-ratio-label {
+      color: #6b84ad;
+    }
+
+    .energy-overview-value,
+    .energy-overview-card.is-energy .energy-overview-value,
+    .energy-overview-card.is-carbon .energy-overview-value {
+      text-shadow: none;
+    }
+
+    .energy-overview-value {
+      color: #1455b3;
+    }
+
+    .energy-overview-card.is-energy .energy-overview-value {
+      color: #0f9b95;
+    }
+
+    .energy-overview-card.is-carbon .energy-overview-value {
+      color: #c47a12;
+    }
+  }
+}
+
+.v2-minimal-white-panel(energy-overview-v2-panel);

@@ -1,0 +1,141 @@
+.avatar {
+  color: white; 
+  background-color: var(--cube-theme-var--primary-color);
+  cursor: pointer;
+  outline: 1px solid var(--cube-theme-var--primary-color);
+  outline-width: 0;
+  transition: all .2s ease;
+  &:hover {
+    background-color: var(--cube-theme-var--primary-color-hover);
+    outline-width: 1px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popover{
+  :global {
+    [class*="-popover-inner-content"] { 
+      padding: 0;
+    }
+  }
+}
+
+.popoverContent {
+  width: 200px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  .userInfo {
+    margin-bottom: 12px;
+  }
+  
+  .userName {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .department {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #e8e8e8;
+    margin: 8px 0;
+  }
+  
+  .actionButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .actionButton {
+    height: 32px;
+    padding: 0 12px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+
+:global{
+  .desktop-client-card {
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 12px;
+  
+    .desktop-client-card-body {
+      width: 100%;
+      padding: 0 !important;
+      position: relative;
+  
+      .desktop-client-card-meta {
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+  
+        .desktop-client-card-meta-title {
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+        }
+  
+        .desktop-client-card-meta-description {
+          .setMainTenant {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+          }
+  
+          span {
+            width: 58px;
+            height: 24px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+          }
+  
+        }
+      }
+    }
+  }
+  .tenant-selected{
+    border-color:var(--cube-theme-var--primary-color) !important
+  }
+  .tenant-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    span:first-child{
+      max-width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    span:last-child{
+      &.normalRow {
+        color:var(--cube-theme-var--primary-color) !important
+      }
+    }
+  }
+}

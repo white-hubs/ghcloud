@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  padding: 0 24px;
+  padding-top: 0;
+}
+
+.taskItem {
+  margin-bottom: 24px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.taskTitle {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.removeBtn {
+  padding: 0;
+}
+
+.taskContent {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.formRow {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: flex-start;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.formLabel {
+  width: 120px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.85);
+  margin-right: 8px;
+  line-height: 32px;
+}
+
+.formControl {
+  flex: 1;
+  max-width: 300px;
+}
+
+.personnelSelectors {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personnelSelect {
+  width: 150px;
+}
+
+.addTaskBtn {
+  margin-bottom: 16px;
+  display: flex;
+}
+.detail-view {
+  .detail-item {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    
+    .detail-label {
+      font-weight: 500;
+      color: #333;
+      min-width: 120px;
+    }
+    
+    .detail-value {
+      color: #666;
+    }
+  }
+}
+
+.detailRow {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  
+  .detailLabel {
+    font-weight: 500;
+    color: #333;
+    min-width: 100px;
+  }
+  
+  .detailValue {
+    color: #666;
+  }
+}

@@ -1,0 +1,175 @@
+.alarm-record-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.alarm-record-detail > .ant-spin-nested-loading {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+.alarm-record-detail > .ant-spin-nested-loading::-webkit-scrollbar {
+  width: 8px;
+}
+
+.alarm-record-detail > .ant-spin-nested-loading::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+.alarm-record-detail > .ant-spin-nested-loading::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.alarm-record-detail > .ant-spin-nested-loading > .ant-spin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.alarm-record-detail__actions {
+  flex-shrink: 0;
+}
+
+.alarm-record-detail__action-row {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alarm-record-detail__action-row--bottom {
+  background: #fff;
+  border-top: 1px solid #eef2f7;
+  box-shadow: 0 -6px 16px rgba(15, 23, 42, 0.06);
+  flex: 0 0 auto;
+  margin: 0 -1px -1px;
+  padding: 12px 14px;
+  z-index: 2;
+}
+
+.alarm-record-detail__section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.alarm-record-detail__legacy-title {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.alarm-record-detail__legacy-title--between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.alarm-record-detail__grid {
+  display: grid;
+  gap: 12px 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.alarm-record-detail__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.alarm-record-detail__item span {
+  color: #7a8495;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.alarm-record-detail__item b {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  overflow-wrap: anywhere;
+}
+
+.alarm-record-detail__item--wide {
+  grid-column: span 2;
+}
+
+.alarm-record-detail__tabs {
+  margin-top: 14px;
+}
+
+.alarm-record-detail .ant-tabs-bar {
+  border-bottom: 0;
+}
+
+.alarm-detail-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.alarm-record-detail__legacy-block {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.alarm-record-detail__legacy-content {
+  margin-bottom: 16px;
+  padding: 0 32px;
+}
+
+.alarm-record-detail__legacy-row-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.alarm-record-detail__legacy-row-group:last-child {
+  margin-bottom: 0;
+}
+
+.alarm-record-detail__legacy-line {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.alarm-record-detail__legacy-line--media {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.alarm-record-detail__legacy-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.alarm-record-detail__page {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1280px) {
+  .alarm-record-detail__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

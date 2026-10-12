@@ -1,0 +1,90 @@
+.container {
+  padding: 24px;
+  background-color: #fff;
+  min-height: 100%;
+
+  .form-item {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+
+    .label {
+      width: 100px;
+      text-align: right;
+      margin-right: 12px;
+      padding-top: 5px;
+      color: #ff4d4f;
+      
+      &::before {
+        content: '*';
+        color: #ff4d4f;
+        margin-right: 4px;
+      }
+
+      span {
+        color: rgba(0, 0, 0, 0.85);
+      }
+    }
+
+    .content {
+      flex: 1;
+
+      .cycle-group {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+        
+        .custom-input {
+          width: 100px !important;
+          margin: 0 8px;
+          margin-left: -30px;
+        }
+      }
+
+      .rule-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .rule-item {
+          display: flex;
+          align-items: baseline;
+          gap: 12px;
+
+          .select-field {
+            width: 150px;
+          }
+          
+          .select-operator {
+            width: 100px;
+          }
+
+          .select-value {
+            width: 200px;
+          }
+
+          .input-score {
+            width: 150px;
+          }
+          
+          .action-btn {
+            padding: 0 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0; // Adjust if sidebar
+    padding: 10px 24px;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    text-align: right;
+    z-index: 10;
+    // Assuming it's inside a layout that handles width, otherwise might need adjustment
+  }
+}

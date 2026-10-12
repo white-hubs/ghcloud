@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-repair-detail.html",
+  "meta": {
+    "title": "故障报修 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "故障报修单以“实现无纸质化办公”为目标，提供操作简便，定制上手容易满足用户故障报修流程，便于园区内故障处处留痕，线上提高跨部门合作效率，助力企业实现数字化转型。",
+    "keywords": "故障报修,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/故障报修/main.png",
+        "productName": "故障报修",
+        "productDescription": "故障报修单以“实现无纸质化办公”为目标，提供操作简便，定制上手容易满足用户故障报修流程，便于园区内故障处处留痕，线上提高跨部门合作效率，助力企业实现数字化转型。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "故障报修"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障报修单用于生产运营过程中对实际发生的故障进行上报登记，并提交到维修工作的完整闭环管理。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障报修单记录故障的设备、故障时间、故障的现象、上报人、上报时间等信息。设备管理人员在接收并审核故障报修单后，根据实际运营状况，安排维修计划、并派发工单到相关专业运维人员。运维人员在维修过程中对故障进行分析，记录实际故障发生的原因、和实际解决措施。维修完成后，故障报修单完成闭环并关闭。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障单</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障报修单用于生产运营过程中对实际发生的故障进行上报登记，并提交到维修工作的完整闭环管理。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障案例</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障案例页面提供针对所有故障报修设备的故障原因的积累和沉淀，通过记录故障的类型、故障现象、故障原因以及故障处理措施。形成设备故障处理的专家库。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965251537775112194.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965251791786356737.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障报告</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障报告提供给用户手动生成指定日期范围的故障分析日报、周报和月报，以处理状态、设备类型、所属区域以及故障原因等维度进行故障分析。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965251255586533377.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965259204228820994.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">故障类型页面提供对故障的分类管理，用户可以创建不同的故障类型对系统内故障报修进行分类管理。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965250940833378306.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408936304641",
+            "name": "风险源管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "id": "1811344411666796546",
+            "name": "人事管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/人事管理/main.png",
+            "version": "1.0.1",
+            "description": "对入离职人员进行流程申请审批操作，实现工作流自动化，工作流程自定义设置，规范人员的入离职操作，提高工作效率；支持对人员类别、人员信息进行统一管理，通过信息集中有效管理，可以获得整体的信息，了解人员情况。",
+            "href": "/product-center/app-hr-detail.html"
+          },
+          {
+            "id": "1811344411398361090",
+            "name": "委外维修",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

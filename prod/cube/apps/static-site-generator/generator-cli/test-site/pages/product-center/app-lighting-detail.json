@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-lighting-detail.html",
+  "meta": {
+    "title": "智能照明 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "智能照明能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。",
+    "keywords": "智能照明,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/智能照明/main.png",
+        "productName": "智能照明",
+        "productDescription": "智能照明能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "智能照明"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">智能照明是一套集实时监测、远程控制与策略化管理于一体的高效照明管理平台。系统能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过与子系统设备对接，平台能够获取设备数据并取得控制权，进而实现灵活的照明策略执行，包括群组开关控制、定时任务计划及自定义策略下发。用户可便捷地制定时控方案，定时启闭特定回路或照明组，同时所有操作均有详细日志可追溯。该系统显著提升了照明管理的精细化水平和运维效率，适用于楼宇、园区、工厂等需要智能化照明控制的多种场景。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965606273141452802.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>照明监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">监测照明设备的运行状态，及时发现并报警异常情况，如灯泡损坏、电路故障等。系统将通过消息通知或警报声等方式及时向运维人员发送故障报警信息，以便及时维修和处理。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965608248897712130.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; <img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965608470289854465.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>照明监控</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对照明回路原理组态图管理，支持单个照明回路状态实时监测。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>照明设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实现本系统与子系统设备对接，通过提供的接口实现获取相关设备参数与控制权。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>照明群控</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过接口提供策略，实现照明策略控制如回路开关控制等，支持对创建好的照明回路控制组快捷实现开关操作控制，支持日志查看。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>照明时控</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对自定义制定时控计划，定时开启照明组或者回路组。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410567888897",
+            "name": "医用气体",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/医用气体/main.png",
+            "version": "1.0.1",
+            "description": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+            "href": "/product-center/app-medical-gas-detail.html"
+          },
+          {
+            "id": "1811344408781115393",
+            "name": "入侵报警",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+            "version": "1.0.1",
+            "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。",
+            "href": "/product-center/app-intrusion-detail.html"
+          },
+          {
+            "id": "1811344411255754753",
+            "name": "隐患整改",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/隐患排查/main.png",
+            "version": "1.0.0",
+            "description": "隐患整改业务主要针对园区内消防、设备类等各类隐患，管理人员根据隐患性质，确认隐患的级别同时，给出整改限时，并通过工单流程通知相关运维人员进行隐患整改工作，工作完成之后由设备管理人员确认隐患整改完成，关闭隐患单。",
+            "href": "/product-center/app-hidden-danger-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

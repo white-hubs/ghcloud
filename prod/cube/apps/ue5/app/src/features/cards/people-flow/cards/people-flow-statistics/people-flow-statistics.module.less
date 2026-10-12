@@ -1,0 +1,183 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .people-flow-statistics-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+    height: 100%;
+
+    &.is-zoom {
+      gap: 14px;
+      padding: 4px 0 0;
+    }
+  }
+
+  .people-flow-statistics-v2-panel .metric-banner {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    min-height: 56px;
+    padding: 10px 14px;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.24), rgba(12, 230, 255, 0.08)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid rgba(70, 166, 255, 0.36);
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 20px rgba(46, 148, 255, 0.14),
+      0 8px 20px rgba(0, 27, 66, 0.14);
+
+    &.is-zoom {
+      min-height: 72px;
+      padding: 14px 18px;
+
+      .metric-icon {
+        flex-basis: 52px;
+        width: 52px;
+        height: 52px;
+      }
+
+      .metric-icon-svg {
+        width: 52px;
+        height: 52px;
+      }
+
+      .metric-label {
+        font-size: calc(var(--font-size-scale, 1) * 14px);
+      }
+
+      .is-zoom-value {
+        font-size: calc(var(--font-size-scale, 1) * 36px);
+      }
+    }
+  }
+
+  .people-flow-statistics-v2-panel .metric-banner-glow {
+    position: absolute;
+    top: -42%;
+    right: -8%;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(0, 246, 255, 0.28) 0%, rgba(0, 246, 255, 0) 70%);
+    pointer-events: none;
+    animation: people-flow-metric-glow 3.6s ease-in-out infinite;
+  }
+
+  @keyframes people-flow-metric-glow {
+    0%,
+    100% {
+      opacity: 0.55;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+  }
+
+  .people-flow-statistics-v2-panel .metric-banner-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .people-flow-statistics-v2-panel .metric-icon {
+    display: flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .people-flow-statistics-v2-panel .metric-icon-svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .people-flow-statistics-v2-panel .metric-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .people-flow-statistics-v2-panel .metric-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .people-flow-statistics-v2-panel .metric-value-row {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .people-flow-statistics-v2-panel .metric-value {
+    font-size: calc(var(--font-size-scale, 1) * 28px);
+    line-height: 1;
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  .people-flow-statistics-v2-panel .metric-unit {
+    color: var(--visual-muted-color, rgba(186, 217, 255, 0.92));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 500;
+    line-height: 1.4;
+
+    &.is-zoom-unit {
+      font-size: calc(var(--font-size-scale, 1) * 14px);
+    }
+  }
+
+  .people-flow-statistics-v2-panel .chart-panel {
+    flex: 1 1 auto;
+    min-height: 168px;
+    margin: 0;
+  }
+
+  :root[data-visual-theme="minimal-white"] .people-flow-statistics-v2-panel .metric-banner {
+    background: linear-gradient(135deg, rgba(232, 243, 255, 0.98), rgba(255, 255, 255, 0.98));
+    border-color: rgba(116, 158, 210, 0.18);
+    box-shadow: 0 4px 14px rgba(63, 132, 216, 0.08);
+  }
+
+  :root[data-visual-theme="minimal-white"] .people-flow-statistics-v2-panel .metric-banner-glow {
+    background: radial-gradient(circle, rgba(86, 142, 255, 0.16) 0%, rgba(86, 142, 255, 0) 70%);
+    animation: none;
+    opacity: 0.7;
+  }
+
+  :root[data-visual-theme="minimal-white"] .people-flow-statistics-v2-panel .metric-label {
+    color: #49628f;
+  }
+
+  :root[data-visual-theme="minimal-white"] .people-flow-statistics-v2-panel .metric-value {
+    color: #0d2f75;
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .people-flow-statistics-v2-panel .metric-unit {
+    color: #6b84ad;
+  }
+}
+
+.v2-minimal-white-panel(people-flow-statistics-v2-panel);

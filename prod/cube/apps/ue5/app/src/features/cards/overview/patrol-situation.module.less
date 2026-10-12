@@ -1,0 +1,237 @@
+
+:global {
+  .patrol-situation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+    color: var(--access-control-text-primary, #fff);
+    font-size: var(--access-control-font-caption, 11px);
+
+    .patrol-summary-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      min-height: 76px;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 16% 46%, rgba(47, 141, 255, 0.28), transparent 48%),
+        linear-gradient(135deg, rgba(41, 100, 161, 0.22), rgba(7, 32, 70, 0.12));
+      border: 1px solid rgba(99, 169, 255, 0.16);
+      border-radius: var(--access-control-surface-radius, 10px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+      &::after {
+        position: absolute;
+        right: 14px;
+        bottom: 8px;
+        width: 92px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(76, 155, 255, 0.46));
+        content: "";
+      }
+    }
+
+    .patrol-orb {
+      position: relative;
+      display: flex;
+      width: 108px;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        position: relative;
+        z-index: 1;
+        width: 96px;
+        height: 56px;
+        object-fit: contain;
+        opacity: 0.92;
+        filter: drop-shadow(0 8px 16px rgba(38, 128, 255, 0.32));
+      }
+    }
+
+    .patrol-orb-halo {
+      position: absolute;
+      inset: 10px 8px 2px;
+      background: radial-gradient(circle, rgba(47, 141, 255, 0.24), rgba(47, 141, 255, 0));
+      border-radius: 50%;
+      filter: blur(2px);
+    }
+
+    .patrol-total-content {
+      min-width: 0;
+      text-align: right;
+    }
+
+    .patrol-total-label {
+      overflow: hidden;
+      color: var(--access-control-text-label, rgba(220, 238, 255, 0.86));
+      font-size: var(--access-control-font-caption, 11px);
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .patrol-total-row {
+      display: flex;
+      min-width: 0;
+      align-items: baseline;
+      justify-content: flex-end;
+      gap: 4px;
+      margin-top: 7px;
+    }
+
+    .patrol-total-value {
+      max-width: 100%;
+      overflow: hidden;
+      color: var(--access-control-value-color, #eff6ff);
+      font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1;
+      text-shadow: var(--access-control-value-shadow, 0 0 10px rgba(47, 141, 255, 0.3));
+      white-space: nowrap;
+    }
+
+    .patrol-total-unit {
+      color: var(--access-control-text-secondary, rgba(217, 231, 255, 0.72));
+      font-size: 11px;
+    }
+
+    .patrol-status-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .patrol-status-card {
+      min-width: 0;
+      min-height: 48px;
+      padding: 8px 10px;
+      background: linear-gradient(135deg, rgba(41, 100, 161, 0.18), rgba(7, 32, 70, 0.12));
+      border: 1px solid rgba(99, 169, 255, 0.14);
+      border-radius: 8px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .patrol-status-label {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 6px;
+      color: var(--access-control-text-secondary, rgba(217, 231, 255, 0.78));
+      line-height: 1.2;
+
+      span {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .patrol-status-dot {
+      flex: 0 0 auto;
+      width: 7px;
+      height: 7px;
+      background: var(--patrol-color, #2f8dff);
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--patrol-color, #2f8dff);
+    }
+
+    .patrol-status-value-row {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+      margin-top: 7px;
+      padding-left: 13px;
+    }
+
+    .patrol-status-value {
+      max-width: 100%;
+      overflow: hidden;
+      color: var(--patrol-color, var(--access-control-value-color, #eff6ff));
+      font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .patrol-status-unit {
+      color: var(--access-control-text-secondary, rgba(217, 231, 255, 0.62));
+      font-size: 10px;
+    }
+
+    &.is-zoom {
+      gap: 14px;
+
+      .patrol-summary-card {
+        grid-template-columns: 170px minmax(0, 1fr);
+        min-height: 116px;
+        padding: 18px 22px;
+      }
+
+      .patrol-orb {
+        width: 150px;
+        height: 82px;
+
+        img {
+          width: 138px;
+          height: 78px;
+        }
+      }
+
+      .patrol-total-value {
+        font-size: 42px;
+      }
+
+      .patrol-total-label,
+      .patrol-total-unit,
+      .patrol-status-label {
+        font-size: 13px;
+      }
+
+      .patrol-status-grid {
+        gap: 12px;
+      }
+
+      .patrol-status-card {
+        min-height: 70px;
+        padding: 13px 14px;
+        border-radius: 10px;
+      }
+
+      .patrol-status-value-row {
+        margin-top: 11px;
+      }
+
+      .patrol-status-value {
+        font-size: 24px;
+      }
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .patrol-situation {
+    .patrol-summary-card {
+      background:
+        radial-gradient(circle at 18% 45%, rgba(47, 141, 255, 0.14), transparent 50%),
+        linear-gradient(135deg, rgba(248, 251, 255, 0.94), rgba(239, 246, 255, 0.72));
+      border-color: rgba(116, 158, 210, 0.18);
+      box-shadow: 0 6px 14px rgba(35, 77, 130, 0.05);
+    }
+
+    .patrol-status-card {
+      background: linear-gradient(135deg, rgba(248, 251, 255, 0.9), rgba(239, 246, 255, 0.68));
+      border-color: rgba(116, 158, 210, 0.18);
+      box-shadow: 0 6px 14px rgba(35, 77, 130, 0.05);
+    }
+  }
+}

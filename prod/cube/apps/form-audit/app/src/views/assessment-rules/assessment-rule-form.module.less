@@ -1,0 +1,221 @@
+.edit-content {
+  padding: 16px 24px;
+}
+
+.section-title {
+  margin: 16px 0 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.info-top {
+  background: #fff;
+  border: 1px solid #ebeef5;
+  padding: 16px 16px 0;
+}
+
+.condition-card {
+  border: 1px solid #ebeef5;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  margin-right: 48px;
+  background: #fff;
+  position: relative;
+}
+
+.condition-delete {
+  position: absolute;
+  right: -48px;
+  top: 88px;
+}
+
+.two-col {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.two-col > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.formula-box {
+  height: 122px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-box::before,
+.formula-box::after {
+  content: '';
+  position: absolute;
+  left: -18%;
+  top: 50%;
+  width: 136%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.formula-box::before {
+  transform: rotate(-25deg);
+}
+
+.formula-box::after {
+  transform: rotate(25deg);
+}
+
+.formula-placeholder {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.formula-textarea {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  padding: 12px 16px;
+}
+
+.formula-textarea :global(textarea) {
+  height: 100%;
+  resize: none;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+}
+.button-flex{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-right: 48px;
+}
+
+.condition-card-body {
+  padding: 0;
+}
+
+.source-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+/* 仅「抽查来源 / 检查来源」一行：两个 Select 同宽、加宽 */
+.form-grid .source-row :global(.ant-space-item) {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-grid .source-select,
+.form-grid .draft-select {
+  width: 100%;
+  min-width: 260px;
+}
+
+.form-grid .source-draft-spin {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.rule-items-wrap {
+  /* 与 Form label 宽 100px 对齐，使计分规则区与上方控件列左缘对齐 */
+  margin-left: 30px;
+  margin-right: 48px;
+  margin-top: 8px;
+  width: 60%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.rule-item-block {
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.rule-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px 8px;
+}
+
+.rule-item-title {
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.rule-item-controls-row {
+  padding: 0 12px 8px;
+}
+
+.rule-item-controls-row .source-row {
+  width: 100%;
+}
+
+.rule-item-controls-row .source-row :global(.ant-space-item:first-child) {
+  flex: 1;
+  min-width: 200px;
+}
+
+.rule-item-controls-row .field-select {
+  width: 100%;
+  min-width: 200px;
+  max-width: none;
+}
+
+.rule-item-controls-row .method-select {
+  min-width: 120px;
+}
+
+.range-table {
+  padding: 0 12px;
+}
+
+.range-header,
+.range-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.range-header {
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.range-input {
+  width: 100%;
+}
+
+.range-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  min-width: 72px;
+}
+
+.add-rule-btn {
+  margin-top: 4px;
+}

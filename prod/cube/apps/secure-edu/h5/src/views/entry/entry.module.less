@@ -1,0 +1,189 @@
+.container {
+  height: 94vh;
+  background: #F3F7FA;
+  padding: 12px;
+
+  .app-group {
+    width: 351px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    :global {
+      .van-cell__title {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 400;
+        font-size: 15px;
+        color: #1F3140;
+        line-height: 21px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        text-align: left;
+        flex: unset
+      }
+
+      .van-cell__value {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .van-cell {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    .app-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      width: 158px;
+      height: 56px;
+      background: #F8FCFF;
+      border-radius: 6px 6px 6px 6px;
+      padding: 8px 12px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #1F3140;
+        user-select: none;
+        margin-left: 10px;
+      }
+    }
+
+    .time-picker {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      div {
+        width: 52px;
+        height: 24px;
+        text-align: center;
+        transition: all 0.2s;
+
+        &.time-picker-selected {
+          background: var(--van-primary-color);
+          border-radius: 4px 4px 4px 4px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .stat-top {
+    display: flex;
+    justify-content: space-between;
+
+    .stat-top-item {
+      width: 158px;
+      height: 80px;
+      border-radius: 6px 6px 6px 6px;
+      box-sizing: border-box;
+      padding: 12px;
+
+      .stat-top-item-title {
+        display: flex;
+        align-items: center;
+
+        img {
+          border-radius: 50%;
+          width: 19px;
+          height: 19px;
+          margin-right: 6px;
+        }
+
+        font-family: Source Han Sans CN,
+        Source Han Sans CN;
+        font-weight: 400;
+        font-size: 13px;
+        color: #999999;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+        text-transform: none;
+      }
+
+      .stat-top-item-value {
+        display: inline-block;
+        font-family: Roboto, Roboto;
+        font-weight: 500;
+        font-size: 26px;
+        color: #1F3140;
+        line-height: 35px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        position: relative;
+
+        &::after {
+          content: '个';
+          height: 17px;
+          font-family: Source Han Sans CN, Source Han Sans CN;
+          font-weight: 400;
+          font-size: 12px;
+          color: #1F3140;
+          line-height: 17px;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+          position: absolute;
+          bottom: 5px;
+          right: -15px;
+        }
+      }
+    }
+  }
+
+  .stat-bottom {
+    width: 100%;
+    display: flex;
+    margin-top: 18px;
+
+    .stat-bottom-item {
+      width: 33.33%;
+      text-align: center;
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 12px;
+      color: #888888;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+
+      .stat-bottom-item-value {
+        position: relative;
+        font-family: Roboto, Roboto;
+        font-weight: 400;
+        color: #1F3140;
+        font-style: normal;
+        text-transform: none;
+        font-size: 20px;
+        display: inline-block;
+        &::after {
+          content: '个';
+          height: 17px;
+          font-family: Source Han Sans CN, Source Han Sans CN;
+          font-weight: 400;
+          font-size: 12px;
+          color: #1F3140;
+          line-height: 17px;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+          position: absolute;
+          bottom: 2px;
+          right: -15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@ghcloud/event-bus",
+  "version": "0.0.2",
+  "description": "事件总线 SDK",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://192.168.0.213:8082/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "event-bus",
+    "event",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

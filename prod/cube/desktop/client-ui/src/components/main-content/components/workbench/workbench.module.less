@@ -1,0 +1,94 @@
+.tab-container {
+  width: 100%;
+  height: 100%;
+  // 将容器设置为 Flex 布局
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: none;
+  background-color: #f8f9fa;
+  padding-top: 4px;
+  // 确保头部不会收缩或拉伸
+  flex-shrink: 0; 
+  user-select: none;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border-top: none;
+  // 让内容区域自动填充剩余空间
+  flex-grow: 1; 
+  overflow: auto; // 当内容超出时显示滚动条
+}
+
+.tab-item {
+  padding: 3px 15px;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background-color: #f1f3f4;
+  transition: background-color 0.2s ease, border 0.2s ease;
+  position: relative;
+
+  &.active {
+    background-color: #fff !important;
+    border-color: #dadce0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: #e8eaed;
+  }
+}
+.tab-item:first-child {
+  border-top-left-radius: 0;
+  border-left: none;
+}
+
+.tab-close {
+  margin-left: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #5f6368;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  &:hover {
+    color: #fff;
+    background-color: #dadce0;
+  }
+}
+
+.add-tab {
+  padding: 10px 15px;
+  border: none;
+  background-color: #f1f3f4;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-left: 4px;
+
+  &:hover {
+    background-color: #e8eaed;
+  }
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border-top: none;
+}

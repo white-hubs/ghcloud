@@ -1,0 +1,60 @@
+{
+  "name": "@ghcloud-legacy/work-report-migrate",
+  "private": false,
+  "version": "1.2.9",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode dev",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "ant-design-vue": "catalog:",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-mf-root": "workspace:^",
+    "@ghcloud-legacy/bimops-fe-web-migrate-lib": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "@ghcloud/ghcloud-business-request": "workspace:^",
+    "@ghcloud/cube-safety-management-service": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "axios": "^0.27.2",
+    "dayjs": "catalog:",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vue/runtime-core": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "unplugin-vue-macros": "^1.10.0",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:",
+    "vite-plugin-html": "catalog:"
+  }
+}

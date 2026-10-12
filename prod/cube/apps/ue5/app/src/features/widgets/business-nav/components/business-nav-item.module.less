@@ -1,0 +1,90 @@
+.nav-item {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  z-index: 100;
+  width: 120px;
+  height: 30px;
+  background-image: var(--visual-nav-item-bg, url('/resource/v1/ue5-migrate/assets/images/nav/nav-item.png'));
+  background-size: 100% 100%;
+  position: relative;
+  transition: all 0.3s ease-in;
+
+  img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+    object-fit: contain;
+  }
+
+  .item-name {
+    width: calc(100% - 44px);
+    font-size: 18px;
+    font-family: "YouSheBiaoTiHei";
+    font-weight: 400;
+    line-height: 30px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--visual-nav-text-gradient, -webkit-linear-gradient(bottom, #E7F2FF, #AFCEF4));
+    position: absolute;
+    left: 33px;
+    top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &.actived {
+    background-image: var(--visual-nav-item-active-bg, url('/resource/v1/ue5-migrate/assets/images/nav/nav-item-actived.png'));
+
+    .item-name {
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+      background-image: var(--visual-nav-active-text-gradient, -webkit-linear-gradient(bottom, #fff, #fff));
+    }
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.business-nav-dropdown {
+  min-width: unset !important;
+
+  ul {
+    background: var(--visual-header-dropdown-bg, linear-gradient(180deg, rgba(9, 21, 35, 0.3) 0%, rgba(9, 21, 35, 0.6) 100%));
+    border: 1px solid var(--visual-header-dropdown-border, transparent);
+    border-radius: 8px;
+  }
+
+  :global(.ant-dropdown-menu-title-content) {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      text-shadow: 0px 0px 3px #3D92FA;
+      color: var(--visual-muted-color, #D9E7FF);
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  :global(.ant-dropdown-menu-item:hover),
+  :global(.ant-dropdown-menu-submenu-title:hover) {
+    background-color: var(--visual-header-dropdown-hover-bg, rgba(0, 0, 0, 0.2));
+  }
+}

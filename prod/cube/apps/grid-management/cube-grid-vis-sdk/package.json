@@ -1,0 +1,31 @@
+{
+  "name": "@ghcloud/cube-grid-vis-sdk",
+  "private": false,
+  "version": "0.0.13",
+  "type": "module",
+  "module": "sdk/index.ts",
+  "main": "sdk/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "module": "./dist/cube-grid-vis-sdk.js",
+    "main": "./dist/cube-grid-vis-sdk.umd.cjs",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@babylonjs/core": "catalog:",
+    "@babylonjs/gui": "catalog:",
+    "@babylonjs/loaders": "catalog:",
+    "gsap": "^3.14.2"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

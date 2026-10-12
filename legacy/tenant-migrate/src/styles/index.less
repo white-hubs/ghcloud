@@ -1,0 +1,91 @@
+@import "./theme/color.less";
+@import "~basscss/css/basscss.css";
+
+.tableDotNormal {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tableDotDelete {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tableDotAudit {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.view_sider {
+  width: 200px;
+  margin-right: 10px;
+  padding: 20px 10px;
+  text-align: left;
+}
+.form_header {
+  padding: 20px 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.info_content {
+  border-radius: 4px;
+}
+.edit_form {
+  height: 100%;
+  border-radius: 4px;
+  padding: 0 10px;
+  &_header {
+    border-bottom: solid 1px #ebf0fb;
+    font-weight: 500;
+    text-align: left;
+    font-size: 16px;
+    padding: 16px;
+  }
+  &_content {
+    padding: 20px 30px;
+  }
+  &_footer {
+    border-top: solid 1px #ebf0fb;
+    padding: 10px 20px;
+    text-align: right;
+  }
+}
+
+.textArea {
+  position: relative;
+  &::after {
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    right: 8px;
+    bottom: 25px;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.verticalLine {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}

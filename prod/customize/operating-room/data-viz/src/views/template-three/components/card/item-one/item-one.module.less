@@ -1,0 +1,105 @@
+.item-one-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  overflow: hidden;
+
+  .item-content {
+    height: 100%;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 2px solid #DDF1FA;
+    text-align: center;
+
+    .item-title {
+      font-family: HONORSansCN-Medium;
+      font-weight: 500;
+      font-size: 16px;
+      color: #024789;
+      margin-top: 20px;
+    }
+
+    .item-icon {
+      height: 38px;
+      width: auto;
+      margin: 10px 0 5px;
+    }
+
+    .item-value {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      margin-top: 5px;
+      min-height: 35px;
+      .item-num {
+        font-family: Roboto, Roboto-Bold, Arial;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 32px;
+        color: #191919;
+      }
+
+      .item-unit {
+        font-family: HONORSansCN-Medium;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0CD1FF;
+      }
+    }
+
+    .item-desc {
+      margin: 10px;
+      min-height: 60px;
+      background: #1478FF;
+      border-radius: 6px;
+
+      .desc-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: HONORSansCN-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: #9EFF99;
+        padding-top: 8px;
+      }
+
+      .desc-value {
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        font-size: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 22px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        word-break: break-all;
+      }
+    }
+  }
+}
+.LOWER_LIMIT {
+  color:#db850d !important;
+}
+
+.UPPER_LIMIT {
+  color:#d30202 !important;
+}
+
+.NORMAL {
+  color:#099c2f !important;
+}
+
+.CLOSE {
+  color:#191919 !important;
+}
+
+.air{
+  font-size: 20px !important;
+}

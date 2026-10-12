@@ -1,0 +1,59 @@
+
+
+  .content {
+    min-height: 100%;
+    :global(.van-cell__title){
+      min-width: 67.733333vw;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    :global(.van-cell__label){
+      margin: 0;
+    }
+    :global(.van-cell__value){
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #0f181f;
+    }
+    .card-content {
+      white-space: nowrap;
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      text-align: left;
+      color: #666666;
+      transform: translateY(0.9vw);
+      span{
+        display: inline-block;
+        min-width: 1px;
+      }
+    }
+
+    .card-footer-time,
+    .card-footer-detail-entry {
+      font-size: 12px;
+      font-family: Roboto, Roboto-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #cccccc;
+    }
+    .img-content{
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }

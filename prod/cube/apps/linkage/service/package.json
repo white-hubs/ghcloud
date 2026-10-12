@@ -1,0 +1,45 @@
+{
+  "name": "@ghcloud/cube-linkage-service",
+  "version": "1.0.2",
+  "description": "auth service",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "ouaa",
+    "service",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/epp": "workspace:^"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

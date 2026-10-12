@@ -1,0 +1,368 @@
+/* 使用 :global(.x) 逐条声明，避免 CSS Modules 嵌套导致选择器被 hash */
+:global(.sub-panel) {
+  /* 图片槽位 32px；矢量图标（白标+蓝底）整体 24px，对齐 PNG 实际可视大小 */
+  --card-title-icon-size: 32px;
+  --card-title-icon-glyph-size: 14px;
+  --card-title-vector-icon-size: 24px;
+  --card-title-vector-icon-glyph-size: 14px;
+  --card-title-gap: 8px;
+
+  width: 100%;
+  font-family: sourceMedium;
+  color: var(--visual-text-color, #ffffff);
+  background: var(--visual-card-glass-bg, var(--visual-card-bg, transparent));
+  border: 1px solid var(--visual-card-glass-border, var(--visual-card-border, transparent));
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0 10px 10px;
+}
+
+:global(:root:not([data-visual-theme="minimal-white"]) .sub-panel) {
+  backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+  -webkit-backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+}
+
+:global(:root[data-visual-theme="minimal-white"] .sub-panel) {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+:global(.sub-panel-header) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  padding: 0 !important;
+  /* 分隔线由下方 .lineBox 承担，避免与装饰线叠成双线 */
+  border-bottom: none;
+  background: transparent !important;
+  background-image: none !important;
+  overflow: visible;
+}
+
+:global(.sub-panel-header .title) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 1 1 auto;
+  align-self: center !important;
+  min-width: 0;
+  height: auto !important;
+  min-height: var(--card-title-icon-size, 32px);
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: var(--card-title-gap, 8px);
+  overflow: visible;
+  color: var(--visual-title-color, #ffffff);
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-family: sourceMedium;
+  line-height: 1 !important;
+  background: transparent;
+}
+
+:global(.sub-panel-header .title-icon-slot) {
+  display: inline-flex !important;
+  flex: 0 0 var(--card-title-icon-size, 32px) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: center !important;
+  box-sizing: border-box;
+  width: var(--card-title-icon-size, 32px) !important;
+  height: var(--card-title-icon-size, 32px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  line-height: 0 !important;
+  vertical-align: middle;
+}
+
+:global(.sub-panel-header .title-icon-slot > img),
+:global(.sub-panel-header .title-icon-slot > .title-card-icon),
+:global(.sub-panel-header .title-icon-slot > .title-icon-img),
+:global(.sub-panel-header .title-icon-slot > .title-icon-default),
+:global(.sub-panel-header .title-icon-slot > .energy-v2-title-icon) {
+  display: block !important;
+  flex: none !important;
+  box-sizing: border-box;
+  width: var(--card-title-icon-size, 32px) !important;
+  height: var(--card-title-icon-size, 32px) !important;
+  max-width: var(--card-title-icon-size, 32px) !important;
+  max-height: var(--card-title-icon-size, 32px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  vertical-align: middle;
+}
+
+:global(.sub-panel-header .title-icon-slot > .panel-card-title-icon),
+:global(.sub-panel-header .title-icon-slot > .v2-title-icon),
+:global(.sub-panel-header .title-icon-slot > .title-park-icon),
+:global(.sub-panel-header .title-icon-slot > .title-car-icon),
+:global(.sub-panel-header .title-icon-slot > .title-record-icon) {
+  display: inline-flex !important;
+  flex: none !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: var(--card-title-vector-icon-size, 24px) !important;
+  height: var(--card-title-vector-icon-size, 24px) !important;
+  max-width: var(--card-title-vector-icon-size, 24px) !important;
+  max-height: var(--card-title-vector-icon-size, 24px) !important;
+  margin: auto !important;
+  padding: 0 !important;
+  color: #ffffff;
+  background: linear-gradient(145deg, #3f8dff, #1f6fe5);
+  border: 0 !important;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+:global(.sub-panel-header .title-icon-slot > svg) {
+  width: var(--card-title-vector-icon-glyph-size, 14px) !important;
+  height: var(--card-title-vector-icon-glyph-size, 14px) !important;
+}
+
+:global(.sub-panel-header .mark) {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid var(--visual-primary, #2989ff);
+}
+
+:global(.sub-panel-header .mark .box) {
+  width: 8px;
+  height: 8px;
+  background: var(--visual-title-color, #ffffff);
+}
+
+:global(.sub-panel-header .sub-title) {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  align-self: center !important;
+  box-sizing: border-box;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  text-overflow: clip !important;
+}
+
+:global(.sub-panel-content) {
+  padding: 10px 0 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+:global(.lineBox) {
+  display: flex;
+  align-items: center;
+}
+
+:global(.lineBox div) {
+  height: 0;
+  opacity: 1;
+}
+
+:global(.lineBox div:nth-child(1)) {
+  width: 24px;
+  border-top: 1px solid var(--visual-line-strong, #ffffff);
+}
+
+:global(.lineBox div:nth-child(2)) {
+  width: 329px;
+  border-top: 1px solid var(--visual-line-weak, rgba(255, 255, 255, 0.3));
+}
+
+:global(.lineBox div:nth-child(3)) {
+  width: 12px;
+  height: 2px;
+  margin-left: 3px;
+  background: var(--visual-primary, #2989ff);
+}
+
+:global(.sub-panel-header .header-extra) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  align-self: center !important;
+  gap: 6px;
+  height: 24px;
+  margin-left: 8px;
+  line-height: 24px;
+}
+
+:global(.zoomable-title) {
+  /* 可放大卡片标题容器本身保持 grab，由外壳控制；文本见 .sub-title */
+  cursor: grab;
+  user-select: none;
+}
+
+:global(.zoomable-title:hover) {
+  opacity: 0.85;
+}
+
+:global(.zoomable-title .sub-title) {
+  cursor: pointer;
+}
+
+:global(.visual-v2-sub-panel) {
+  --card-title-icon-size: 32px;
+  --card-title-icon-glyph-size: 14px;
+  --card-title-vector-icon-size: 24px;
+  --card-title-vector-icon-glyph-size: 14px;
+}
+
+/* 改造卡片最外层壳：统一外边框/底色（明文选择器，避免依赖各卡片 CSS Modules 导出） */
+:global(:root:not([data-visual-theme="minimal-white"]) .visual-v2-sub-panel .sub-panel) {
+  --card-title-icon-size: 32px;
+  --card-title-icon-glyph-size: 14px;
+  --card-title-vector-icon-size: 24px;
+  --card-title-vector-icon-glyph-size: 14px;
+
+  padding: 0 10px 10px;
+  overflow: hidden;
+  background: var(--visual-card-glass-bg);
+  border: 1px solid var(--visual-card-glass-border, rgba(54, 164, 255, 0.38));
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 18px rgba(44, 151, 255, 0.16),
+    0 0 18px rgba(31, 127, 255, 0.16);
+  backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+  -webkit-backdrop-filter: var(--visual-card-backdrop-filter, blur(16px) saturate(150%));
+}
+
+:global(:root[data-visual-theme="minimal-white"] .visual-v2-sub-panel .sub-panel) {
+  --card-title-icon-size: 32px;
+  --card-title-icon-glyph-size: 14px;
+  --card-title-vector-icon-size: 24px;
+  --card-title-vector-icon-glyph-size: 14px;
+
+  padding: 0 10px 10px;
+  overflow: hidden;
+  background: var(--visual-card-glass-bg, #ffffff);
+  border: 1px solid var(--visual-card-glass-border, rgba(116, 158, 210, 0.28));
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(50, 102, 166, 0.08);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* V2 卡片把高度传到内容区，空态才能在剩余块里垂直居中 */
+:global(.visual-v2-sub-panel.sub-panel-wrapper),
+:global(.v2-panel-card.sub-panel-wrapper) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+:global(.visual-v2-sub-panel .sub-panel),
+:global(.v2-panel-card .sub-panel) {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+}
+
+/* 改造卡片壳：内容区不再套内边框，仅保留外壳边框 */
+:global(.visual-v2-sub-panel .sub-panel-content),
+:global(.v2-panel-card .sub-panel-content) {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  border: none !important;
+  box-shadow: none;
+}
+
+:global(.visual-v2-sub-panel .sub-panel-header .mark) {
+  display: none !important;
+}
+
+:global(.sub-panel-header .title-icon-slot > :not(img):not(svg):not(.panel-card-title-icon)) {
+  display: flex !important;
+  box-sizing: border-box;
+  align-items: center !important;
+  justify-content: center !important;
+  width: var(--card-title-vector-icon-size, 24px) !important;
+  height: var(--card-title-vector-icon-size, 24px) !important;
+  max-width: var(--card-title-vector-icon-size, 24px) !important;
+  max-height: var(--card-title-vector-icon-size, 24px) !important;
+  color: #ffffff;
+  background: linear-gradient(145deg, #3f98ff, #1d74ef);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+:global(.sub-panel-header .title-icon-slot > :not(img):not(svg):not(.panel-card-title-icon) > svg) {
+  display: block;
+  width: var(--card-title-vector-icon-glyph-size, 14px) !important;
+  height: var(--card-title-vector-icon-glyph-size, 14px) !important;
+}
+
+/* 覆盖各卡片里写死的标题图标尺寸；图片 / 字体图标容器统一走 CSS 变量 */
+:global(.sub-panel-header .panel-card-title-icon),
+:global(.sub-panel-header .title-card-icon),
+:global(.sub-panel-header .title-icon-img),
+:global(.sub-panel-header .title-icon-default),
+:global(.sub-panel-header .v2-title-icon),
+:global(.sub-panel-header .title-park-icon),
+:global(.sub-panel-header .title-car-icon),
+:global(.sub-panel-header .title-record-icon),
+:global(.sub-panel-header .title-icon-slot > i),
+:global(.sub-panel-header .title-icon-slot > .anticon) {
+  margin: 0 !important;
+  object-fit: contain !important;
+}
+
+:global(.sub-panel-header .title-card-icon),
+:global(.sub-panel-header .title-icon-img),
+:global(.sub-panel-header .title-icon-default),
+:global(.sub-panel-header .energy-v2-title-icon) {
+  width: var(--card-title-icon-size, 32px) !important;
+  height: var(--card-title-icon-size, 32px) !important;
+}
+
+:global(.sub-panel-header .panel-card-title-icon),
+:global(.sub-panel-header .v2-title-icon),
+:global(.sub-panel-header .title-park-icon),
+:global(.sub-panel-header .title-car-icon),
+:global(.sub-panel-header .title-record-icon),
+:global(.sub-panel-header .title-icon-slot > i),
+:global(.sub-panel-header .title-icon-slot > .anticon) {
+  box-sizing: border-box !important;
+  width: var(--card-title-vector-icon-size, 24px) !important;
+  height: var(--card-title-vector-icon-size, 24px) !important;
+  max-width: var(--card-title-vector-icon-size, 24px) !important;
+  max-height: var(--card-title-vector-icon-size, 24px) !important;
+  border: 0 !important;
+  font-size: var(--card-title-vector-icon-glyph-size, 14px) !important;
+}
+
+:global(.sub-panel-header .panel-card-title-icon > .panel-card-title-icon__glyph),
+:global(.sub-panel-header .v2-title-icon .v2-title-icon-svg),
+:global(.sub-panel-header .title-icon-slot > .anticon > svg) {
+  width: var(--card-title-vector-icon-glyph-size, 14px) !important;
+  height: var(--card-title-vector-icon-glyph-size, 14px) !important;
+}

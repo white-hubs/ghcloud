@@ -1,0 +1,58 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listSurface {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 0;
+  padding: 0;
+  overflow-y: auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.rankItem {
+  min-width: 0;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .emptySurface {
+    min-height: 360px;
+  }
+}
+
+:global(.abnormal-event-top5-v2-panel .sub-panel-content) {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.v2-minimal-white-panel(abnormal-event-top5-v2-panel);

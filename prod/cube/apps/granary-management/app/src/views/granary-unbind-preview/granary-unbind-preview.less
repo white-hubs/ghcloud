@@ -1,0 +1,133 @@
+.granary-unbind-root {
+  box-sizing: border-box;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+
+  :global(#cube-layout-content) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+.granary-unbind-preview {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0;
+  min-height: 0;
+  width: 100%;
+}
+
+.granary-unbind-preview__body {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  gap: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.granary-unbind-preview__col {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 20px 24px 0;
+}
+
+.granary-unbind-preview__col--right {
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.granary-unbind-preview__divider {
+  align-self: stretch;
+  background: #e8e8e8;
+  flex: 0 0 1px;
+  margin: 0 4px;
+  min-height: 200px;
+}
+
+.granary-unbind-preview__block-title {
+  align-items: center;
+  color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 8px;
+  line-height: 24px;
+  margin: 0 0 12px;
+}
+
+.granary-unbind-preview__block-title-bar {
+  background: #1677ff;
+  border-radius: 1px;
+  flex-shrink: 0;
+  height: 16px;
+  width: 3px;
+}
+
+.granary-unbind-preview__sub {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 13px;
+  line-height: 22px;
+  margin: 0 0 20px;
+}
+
+.granary-unbind-preview__dl {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+}
+
+.granary-unbind-preview__row {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  gap: 8px;
+  line-height: 22px;
+}
+
+.granary-unbind-preview__label {
+  color: rgba(0, 0, 0, 0.65);
+  flex: 0 0 88px;
+}
+
+.granary-unbind-preview__value {
+  color: rgba(0, 0, 0, 0.88);
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}
+
+.granary-unbind-preview__empty {
+  color: rgba(0, 0, 0, 0.45);
+  padding: 40px 0;
+}
+
+.granary-unbind-preview__footer {
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 16px 0 8px;
+}
+
+.granary-unbind-preview__table {
+  :global(.ant-table-wrapper) {
+    max-width: 100%;
+  }
+}
+
+.granary-unbind-preview__table-page {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}

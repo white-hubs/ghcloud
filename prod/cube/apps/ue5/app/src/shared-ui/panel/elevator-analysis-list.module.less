@@ -1,0 +1,72 @@
+@import "./v2-ring-legend.less";
+
+:global {
+  .alarm-analysis {
+    z-index: 9;
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    overflow-y: auto;
+    color: #fff;
+    font-size: calc(var(--font-size-scale, 1) * 14px);
+    cursor: pointer;
+    .v2-ring-legend-list();
+  }
+
+  .alarm-analysis-right {
+    .v2-ring-legend-value();
+    margin-right: 0;
+  }
+
+  .alarm-analysisBox,
+  .alarm-analysis-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .alarm-analysis-name {
+      width: auto;
+      overflow: hidden;
+      color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .alarm-analysis-color {
+      .v2-ring-legend-dot();
+      margin-right: 0;
+      background: #306cca;
+    }
+  }
+
+  .alarm-analysisBox {
+    .v2-ring-legend-item();
+    overflow: hidden;
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+  }
+
+  .alarm-analysis-left {
+    min-width: 0;
+    height: auto;
+    gap: 7px;
+  }
+
+  :root[data-visual-theme="minimal-white"] .alarm-analysisBox {
+    .v2-ring-legend-item-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .alarm-analysis-name,
+  :root[data-visual-theme="minimal-white"] .alarm-analysis {
+    color: #49628f;
+  }
+
+  :root[data-visual-theme="minimal-white"] .alarm-analysis-right {
+    .v2-ring-legend-value-minimal-white();
+  }
+}

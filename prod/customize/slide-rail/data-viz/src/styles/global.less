@@ -1,0 +1,22 @@
+body{
+  min-width: 1920px;
+  min-height: 1080px;
+  background: #050e19;
+}
+
+.ellipsis(@lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.row-2 {
+  .ellipsis(2); // 使用 mixin 显示两行
+}
+
+.row-3 {
+  .ellipsis(3); // 显示三行
+}

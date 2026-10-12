@@ -1,0 +1,229 @@
+.container {
+  height: 100vh;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    height: 100%;
+    flex: 1;
+    padding-bottom: 80px;
+  }
+
+  :global(.van-cell-group--inset) {
+    margin: 16px;
+  }
+
+  .selectedItems {
+    background: #fff;
+    margin: 0 16px 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    // max-height: 190px;
+    // overflow-y: auto;
+
+    .selectedItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #ebedf0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .itemInfo {
+        .itemName {
+          font-size: 14px;
+          color: #323233;
+          margin: 0 0 4px;
+        }
+
+        .itemTags {
+          .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 10px;
+            border-radius: 3px;
+            margin-right: 4px;
+            color: #1989fa;
+            background-color: #eef6ff;
+          }
+
+          .urgent {
+            color: #ee0a24;
+            background-color: #fdeeee;
+          }
+          .extraUrgent {
+            color: #ff976a;
+            background-color: #fff6f1;
+          }
+          .normal {
+            color: #07c160;
+            background-color: #e7f8f0;
+          }
+        }
+      }
+
+      .removeItem {
+        font-size: 20px;
+        color: #969799;
+        cursor: pointer;
+      }
+    }
+  }
+
+  :global(.van-uploader) {
+    padding: 16px;
+  }
+
+  .form {
+    background: #fff;
+    flex: 1;
+    margin-top: 12px;
+    overflow-y: auto;
+    max-height: calc(100vh - 140px);
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  }
+  .itemCount {
+    color: var(--van-cell-value-color);
+    font-size: var(--van-cell-value-font-size);
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+  :global {
+    .van-field:nth-child(3),.van-field:nth-child(4),.van-field:nth-child(5) {
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    textarea {
+      padding: 6px;
+      border-radius: 2px;
+      background: #f8f9f9;
+    }
+  }
+}
+
+
+.details-file {
+  margin-top: 10px;
+  padding: 18px;
+  background: #ffffff;
+  color: #0F181F;
+  font-size: 16px;
+
+  .details-file-item {
+    height: 68px;
+    background: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .details-file-img {
+      width: 46px;
+      height: 46px;
+      margin-right: 5px;
+    }
+
+    .details-file-name {
+      color: #0b161e;
+      font-size: 15px;
+    }
+  }
+}
+.img-list{
+  display: block;
+  width: 100%;
+  .value{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.img-warp{
+  display: inline-block;
+}
+.img-item{
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.status-level {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  .status {
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: center;
+    margin-right: 8px;
+  }
+  .ALARM_UN_CONFIRMED,
+  .ALARM_PROGRESS_CONFIRMED {
+    color: #f69703;
+    background: rgba(246, 151, 3, 0.10);
+  }
+
+  .ALARM_SUSPEND {
+    background: rgba(21, 120, 255, 0.10);
+    color: var(--van-primary-color);;
+  }
+
+  .ALARM_HANDLER {
+    background: rgba(106, 181, 57, 0.10);
+    color: #6AB539;
+  }
+
+  .level {
+    padding: 5px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: center;
+  }
+
+  .one_level {
+    color: #f01c1c;
+    background: rgba(240, 28, 28, 0.10);
+  }
+
+  .two_level {
+    color: #F69703;
+    background: rgba(246, 151, 3, 0.10);
+  }
+
+  .three_level {
+    color: #F4CF00;
+    background: rgba(244, 207, 0, 0.10)
+  }
+
+  .four_level {
+    color: var(--van-primary-color);;
+    background: rgba(21, 120, 255, 0.10);
+  }
+}

@@ -1,0 +1,90 @@
+.entry-header {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 40px ;
+  padding-bottom: 0;
+
+  .title {
+    // background: linear-gradient(180deg,#ffffff, #1578ff);
+    // -webkit-background-clip: text; /* Safari/Chrome需要添加此属性才能正常显示背景渐变效果 */
+    // color: transparent;
+    font-size: 28px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #ffffff;
+    line-height: 28px;
+  }
+
+  .time-area {
+    display: flex;
+    color: #ffffff;
+    align-items: flex-end;
+    flex-direction: column;
+    .mr-5{
+      margin-right: 3px;
+    }
+    .m1{
+      font-size: 24px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #ffffff;
+      line-height: 24px;
+    }
+    .m2{
+      min-width: 105px;
+      margin-bottom: 6px;
+      .label{
+        font-size: 40px;
+        color: #ffffff;
+        line-height: 40px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+        font-weight: Bold;
+        display: block;
+      }
+    }
+  }
+
+  .right-bar {
+    display: flex;
+    align-items: center;
+    .select-box {
+      min-width: 80px;
+      height: 32px;
+      background: rgba(21, 120, 255, 0.20);
+      border-radius: 22px;
+      box-sizing: border-box;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: Regular;
+      color: #ffffff;
+      cursor: pointer;
+      margin-left: 20px;
+      .label{
+        margin-right: 10px;
+      }
+      .operating-room-dropdown-trigger{
+        font-size: 16px;
+        font-weight: Regular;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        .anticon{
+          margin-left: 10px;
+        }
+        svg{
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}

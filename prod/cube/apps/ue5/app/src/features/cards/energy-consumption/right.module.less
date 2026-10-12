@@ -1,0 +1,61 @@
+
+.chart {
+  height: 260px;
+}
+
+.stateBox {
+  color: #fff;
+  background-color: rgba(108, 128, 151, 0.3);
+  margin-top: 10px;
+  padding: 0 10px;
+  font-size: 12px;
+
+  .state-name {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 18px;
+      color: #30a55b;
+    }
+  }
+
+  .stateContent {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 18px;
+      color: #e7131e;
+    }
+  }
+
+  .Proportion {
+    font-size: 18px;
+  }
+}
+
+.radioBar {
+  text-align: right;
+  margin: 6px 0;
+
+  :deep(.ant-radio-button-wrapper) {
+    height: 28px;
+    line-height: 28px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    font-size: 12px;
+    color: #ABB8CB;
+    margin-left: 6px;
+  }
+
+  :deep(.ant-radio-button-wrapper-checked) {
+    color: #fff;
+    background: rgba(41, 137, 255, 0.302);
+  }
+}
+
+.stateList {
+  height: 200px;
+  overflow-y: scroll;
+}

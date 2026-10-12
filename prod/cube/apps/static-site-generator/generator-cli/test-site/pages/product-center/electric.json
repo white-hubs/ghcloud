@@ -1,0 +1,99 @@
+{
+  "path": "/product-center/electric.html",
+  "meta": {
+    "title": "电气管理 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "硬件产品",
+        "subtitle": "古河云科技持续打磨产品，深耕技术，探索智慧新空间，以创新驱动未来。",
+        "placeholder": "搜索你感兴趣的产品",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/search-banner-bg-1.webp",
+        "searchAllHref": "/product-center/hardware"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "video",
+            "name": "视频安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-video.svg",
+            "href": "/product-center/video.html"
+          },
+          {
+            "id": "fire",
+            "name": "消防安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-fire.svg",
+            "href": "/product-center/fire.html"
+          },
+          {
+            "id": "electric",
+            "name": "电气管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-electric.svg",
+            "href": "/product-center/electric.html"
+          },
+          {
+            "id": "attendance",
+            "name": "考勤管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-attendance.svg",
+            "href": "/product-center/attendance.html"
+          },
+          {
+            "id": "env",
+            "name": "机房动环",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-env.svg",
+            "href": "/product-center/env.html"
+          },
+          {
+            "id": "patrol",
+            "name": "电子巡更",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-patrol.svg",
+            "href": "/product-center/patrol.html"
+          },
+          {
+            "id": "meat",
+            "name": "肉类滑轨",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-meat.svg",
+            "href": "/product-center/meat-track.html"
+          }
+        ],
+        "activeId": "electric",
+        "allHref": "/product-center/hardware.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能电气监测设备",
+            "description": "设备支持电气火灾监测、漏电保护、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "电气火灾监控探测器",
+            "description": "设备支持剩余电流监测、温度监测、故障报警等功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能断路器",
+            "description": "设备支持远程控制、过载保护、短路保护等功能…",
+            "href": "#"
+          }
+        ],
+        "pageSize": 9,
+        "currentPage": 1
+      }
+    }
+  ],
+  "layout": "default"
+}

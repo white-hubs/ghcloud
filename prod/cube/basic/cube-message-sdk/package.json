@@ -1,0 +1,36 @@
+{
+  "name": "@ghcloud/cube-message-sdk",
+  "version": "0.0.2",
+  "description": "古河云开河平台 消息中心 SDK",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "build:lib": "vite build -c vite.lib.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "message-sdk",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

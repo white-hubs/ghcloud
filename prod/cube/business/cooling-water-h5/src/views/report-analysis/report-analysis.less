@@ -1,0 +1,346 @@
+.report-analysis {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 12px;
+  min-height: 100vh;
+  background-color: #F3F7FA;
+  overflow-y: scroll;
+
+  .van-skeleton {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+.title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  font-size: 14px;
+  font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+  font-weight: 400;
+  color: #1F3140;
+}
+
+.data-picker {
+  min-width: 84px;
+  height: 28px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid rgba(26, 38, 59, 0.1);
+  position: relative;
+  color: #6C7482;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 22px;
+
+  .van-icon {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+    color: #6C7482;
+  }
+
+  .content {
+    height: 100%;
+    line-height: 28px;
+    padding-right: 10px;
+  }
+}
+
+.double-date-picker {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .split {
+    color: rgba(26, 38, 59, 0.1)
+  }
+}
+
+// 基础数据
+.base-data {
+  margin-top: 4px;
+  margin-bottom: 12px;
+
+  .items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      width: 110px;
+      height: 110px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      display: flex;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        left: 8px;
+        top: 10px;
+      }
+
+      .data-title {
+        width: 100%;
+        height: 22px;
+        font-size: 12px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: #767D8A;
+        line-height: 22px;
+        position: absolute;
+        left: 12px;
+        top: 44px;
+      }
+
+      span {
+        position: absolute;
+        left: 12px;
+        top: 74px;
+        font-size: 20px;
+        font-family: Roboto-Medium, Roboto;
+        font-weight: 500;
+        color: #475163;
+        font-family: 'Roboto-Medium';
+      }
+    }
+  }
+}
+
+// 卡片
+.card {
+  width: 100%;
+  min-height: 336px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  padding-bottom: 12px;
+
+  .card-title {
+    position: relative;
+    width: 100%;
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &::after {
+      position: absolute;
+      width: 327px;
+      height: 1px;
+      background: #F8F9F9;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0px;
+      content: '';
+    }
+
+    .left {
+      font-size: 14px;
+      font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+      font-weight: 600;
+      color: #1F3140;
+      position: relative;
+    }
+
+    .merchants-title-left::after {
+      position: absolute;
+      content: '月使用时长超过24小时商户';
+      font-size: 10px;
+      font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+      font-weight: 400;
+      color: #AFB7C4;
+      bottom: 0;
+      right: -37vw;
+      width: 36vw;
+    }
+
+  }
+
+  .chart {
+    min-height: 220px;
+  }
+
+  .merchants-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item {
+      width: 163px;
+      height: 74px;
+      background: #F9FAFC;
+      border-radius: 6px;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 12px;
+        right: 12px;
+      }
+
+
+      .merchants-card-title {
+        height: 22px;
+        font-size: 12px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: #767D8A;
+        line-height: 22px;
+        position: absolute;
+        top: 14px;
+        left: 12px;
+      }
+
+      .merchants-card-value {
+        font-size: 20px;
+        font-family: Roboto-Medium;
+        font-weight: 500;
+        color: #475163;
+        position: absolute;
+        top: 40px;
+        left: 12px;
+      }
+    }
+  }
+
+  .use-data-title-right {
+    display: flex;
+    align-items: center;
+
+    .picker-mode-select {
+      margin-right: 12px;
+
+      span {
+        width: 32px;
+        height: 28px;
+        border-radius: 4px;
+        color: #6C7482;
+        display: inline-block;
+        text-align: center;
+        line-height: 28px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+      }
+
+      .active {
+        background: #1D66FF;
+        color: white;
+      }
+    }
+  }
+}
+
+// 冷冻水使用数据
+.use-data-list-item {
+  width: 100%;
+  height: 66px;
+  background: #F9FAFC;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .icon-container {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 6px;
+    margin-left: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .list-text {
+    position: absolute;
+    display: block;
+    height: 20px;
+    font-size: 12px;
+    font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+    font-weight: 400;
+    color: #767D8A;
+    line-height: 20px;
+    top: 12px;
+    left: 58px;
+  }
+
+  .list-value {
+    position: absolute;
+    top: 36px;
+    left: 58px;
+    display: inline-flex;
+
+    .value {
+      display: inline-block;
+      height: 18px;
+      font-size: 20px;
+      font-family: Roboto-Medium;
+      font-weight: 500;
+      color: #475163;
+      line-height: 18px;
+    }
+
+    .rate {
+      display: inline-flex;
+
+      .rate-chain,
+      .rate-year {
+        display: inline-flex;
+        align-items: center;
+
+        .rate-text {
+          display: inline-block;
+          font-size: 11px;
+          font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+          font-weight: 400;
+          color: #606060;
+          margin-left: 5px;
+        }
+
+        .rate-value {
+          height: 12px;
+          line-height: 12px;
+          display: inline-flex;
+          align-items: center;
+
+          img {
+            max-height: 12px;
+            margin: 0 5px;
+            transform: rotateX(180deg);
+          }
+        }
+
+        .rate-number {
+          height: 12px;
+          font-size: 11px;
+          font-family: Roboto-Medium;
+          font-weight: 400;
+          line-height: 12px;
+        }
+
+        .rate-green {
+          color: #16C098;
+        }
+
+        .rate-red {
+          color: #FF4158;
+        }
+      }
+    }
+  }
+}

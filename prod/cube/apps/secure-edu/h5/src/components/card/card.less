@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  // margin: 1vh;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: white;
+  margin-bottom: 12px;
+
+  .card-left {
+    text-align: center;
+    display: flex;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-right {
+    flex:1;
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 15px;
+      margin-bottom: 6px;
+
+      .title-name {
+
+        color: #1F3140;
+      }
+
+      .title-status {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 13px;
+      color: #666666;
+
+      .content-item {
+        width: 50%;
+        margin-bottom: 5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+}

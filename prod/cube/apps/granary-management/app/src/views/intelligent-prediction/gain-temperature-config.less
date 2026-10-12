@@ -1,0 +1,217 @@
+.gain-temperature-config-page {
+  min-height: 100%;
+  color: #1d2129;
+}
+
+.gain-temperature-config-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 48px;
+  padding: 4px 16px 8px;
+  background: #fff;
+}
+
+.gain-temperature-config-title {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gain-temperature-config-granary-select {
+  width: 200px;
+}
+
+.gain-temperature-config-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.gain-temperature-config-section {
+  margin: 12px;
+  padding: 16px 0;
+  background: #fff;
+}
+
+.temperature-field-label,
+.layer-config-label,
+.threshold-row span {
+  color: #4e5969;
+  font-size: 14px;
+}
+
+.total-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.layer-config-card.is-total {
+  border-left-color: #00b42a;
+}
+
+.layer-config-card.is-total .layer-config-header span {
+  background: #e8ffea;
+  color: #00b42a;
+}
+
+.layer-config-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 8px 16px;
+}
+
+.layer-config-card {
+  padding: 20px 22px 18px;
+  border-left: 4px solid #b8c2cc;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.layer-config-card.is-blue {
+  border-left-color: #2491ff;
+}
+
+.layer-config-card.is-orange {
+  border-left-color: #ff8a1f;
+}
+
+.layer-config-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.layer-config-header strong {
+  color: #1d2129;
+  font-size: 18px;
+}
+
+.layer-config-header span {
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: #eef6ff;
+  color: #2491ff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.layer-config-card.is-orange .layer-config-header strong {
+  color: #ff8a1f;
+}
+
+.layer-config-card.is-orange .layer-config-header span {
+  background: #fff4e6;
+  color: #ff8a1f;
+}
+
+.layer-config-row {
+  margin-top: 12px;
+}
+
+.cable-line-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cable-line-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 62px;
+  height: 30px;
+  border: 1px solid #d9dfe8;
+  border-radius: 4px;
+  background: #fff;
+  color: #4e5969;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cable-line-button.is-selected {
+  border-color: #2491ff;
+  background: #eaf4ff;
+  color: #1684f9;
+}
+
+.cable-line-button.is-disabled,
+.cable-line-button:disabled {
+  border-color: #e5e6eb;
+  background: #f2f3f5;
+  color: #86909c;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.cable-line-button i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff5b62;
+  color: #fff;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.threshold-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #e5e6eb;
+}
+
+.threshold-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.threshold-row input {
+  width: 92px;
+  height: 30px;
+  border: 1px solid #d9dfe8;
+  border-radius: 4px;
+  color: #1d2129;
+  font-weight: 600;
+  text-align: center;
+}
+
+.threshold-row em {
+  color: #86909c;
+  font-style: normal;
+}
+
+.layer-config-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.layer-temperature-select {
+  width: 112px;
+}
+
+@media screen and (max-width: 900px) {
+  .gain-temperature-config-toolbar,
+  .total-section,
+  .layer-config-summary-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gain-temperature-config-actions {
+    margin-left: 0;
+  }
+}

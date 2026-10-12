@@ -1,0 +1,124 @@
+
+.stat-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.list-item {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  height: 82px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, rgba(0, 34, 61, 0.00), #002a56 50%, #002a56 51%, rgba(9, 49, 114, 0.00));
+
+  img {
+    width: 62px;
+    height: 62px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+
+  .item-content {
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-left: 10px;
+
+    .alarm-name {
+      display: flex;
+      align-items: center;
+      gap: 4px
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      width: 100px;
+      color: #d9e5ff;
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      white-space: nowrap;
+    }
+
+    .one_level {
+      background: rgba(255, 0, 0, 0.15);
+      border: 0.5px solid rgba(255, 187, 187, 0.50);
+      box-shadow: 0px 0px 9px 0px rgba(255, 114, 114, 0.50) inset;
+      color: #ffcece;
+    }
+
+    .two_level {
+      background: rgba(247, 160, 59, 0.15);
+      border: 0.5px solid rgba(255, 224, 188, 0.50);
+      box-shadow: 0px 0px 9px 0px rgba(247, 160, 59, 0.50) inset;
+      color: #f7a03b;
+    }
+
+    .three_level {
+      background: rgba(250, 234, 78, 0.15);
+      border: 0.5px solid rgba(255, 249, 192, 0.50);
+      box-shadow: 0px 0px 9px 0px rgba(250, 234, 78, 0.50) inset;
+      color: #e1d244;
+    }
+
+    .four_level {
+      background: rgba(75, 134, 255, 0.15);
+      border: 0.5px solid rgba(188, 210, 255, 0.50);
+      box-shadow: 0px 0px 9px 0px rgba(75, 134, 255, 0.50) inset;
+      color: #4c9aff;
+    }
+
+    .alarm-item-left-content-desc {
+      margin-left: 6px;
+      padding: 2px;
+      font-size: 12px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .time {
+      font-size: 14px;
+      color: #8fa0c5;
+      margin-top: 10px;
+    }
+  }
+
+  .alarm-item-right {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 56px;
+  }
+
+  .ALARM_UN_CONFIRMED {
+    background: rgba(204, 159, 91, 0.20);
+    box-shadow: 0px 0px 6px 0px rgba(204, 159, 91, 0.50) inset;
+    color: #d69833;
+  }
+
+  .ALARM_PROGRESS_CONFIRMED {
+    background: rgba(204, 159, 91, 0.20);
+    box-shadow: 0px 0px 6px 0px rgba(204, 159, 91, 0.50) inset;
+    color: #d69833;
+  }
+
+  .ALARM_SUSPEND {
+    background: rgba(75, 134, 255, 0.20);
+    box-shadow: 0px 0px 6px 0px rgba(75, 134, 255, 0.50) inset;
+    color: #4b86ff;
+  }
+
+  .ALARM_HANDLER {
+    background: rgba(91, 204, 98, 0.20);
+    box-shadow: 0px 0px 6px 0px rgba(62, 200, 53, 0.50) inset;
+    color: #3ec835;
+  }
+}

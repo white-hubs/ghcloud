@@ -1,0 +1,15 @@
+{
+  "id": 16,
+  "title": "BIM运维系统，如何解决行业痛点",
+  "date": "2023-02-21",
+  "summary": "BIM运维系统?究竟能做些什么?BIM是一种能将设计、规划、施工及运营维护等不同工程阶段的工序，利用计算机绘图软件绘出的各工项三维模型，并输入各对象属性后，建立出一个如同实物的虚拟三维环境，可再加入其他信息(如：时间、成本等)做整合，成为一个新的四维、五维甚至更多维的模型信息，使其可作为工程项目过程的仿真分析(如：施工排程模拟、成本分析、冲突检查等功能)，以建立最有效率、最省成本的工程项目。",
+  "abstract": null,
+  "category": "公司动态",
+  "href": "/information/detail-16.html",
+  "image": "https://qiniu.guhecloud.com/legacy-site/Uploadfiles/Picture/2022-3-25/2022325943381806.png",
+  "author": "古河云科技",
+  "content": "<p style=\"padding:0px;font-stretch:normal;font-size:16px;line-height:28px;font-family:微软雅黑, \"helvetica neue\", helvetica, arial, 宋体, sans-serif;color:#333333;text-indent:2em;margin-top:0px;margin-bottom:0px;\"><a href=\"http://www.guhecloud.com\" target=\"_self\">BIM运维系统</a>究竟能做些什么?BIM是一种能将设计、规划、施工及运营维护等不同工程阶段的工序，利用计算机绘图软件绘出的各工项三维模型，并输入各对象属性后，建立出一个如同实物的虚拟三维环境，可再加入其他信息(如：时间、成本等)做整合，成为一个新的四维、五维甚至更多维的模型信息，使其可作为工程项目过程的仿真分析(如：施工排程模拟、成本分析、冲突检查等功能)，以建立最有效率、最省成本的工程项目。</p><p style=\"padding:0px;font-stretch:normal;font-size:16px;line-height:28px;font-family:微软雅黑, \"helvetica neue\", helvetica, arial, 宋体, sans-serif;color:#333333;text-indent:2em;margin-top:0px;margin-bottom:0px;\">传统工程项目通常是由各项目团队间彼此分工合作进行的，而各项目团队往往是使用自己觉得较好用或熟悉的软件工具，因此各团队建立出的文件格式不尽相同，常有信息传递上的问题产生，因此需要建立一套完整的信息交换标准。为增进各软件间的协作能力，国际协作联盟(International Alliance of Interoperability，IAI) 订定了建造产业的信息交换标准「工业基础级别」(Industry Fundation Classes，IFC)。依据Eastman， C.， Teicholz， P.， Sacks， R.， and Liston， K.(2008)指出，信息交换标准不仅可增进不同软件间的数据转换传输效率，应用参数化数据库和面向对象技术，使得三维对象能通过参数化的设定，让三维对象有了彼此牵连的相互关系，只要更改其中一个对象的参数，而使其他相互关联的对象参数也能随着改变。</p><p style=\"padding:0px;font-stretch:normal;font-size:16px;line-height:28px;font-family:微软雅黑, \"helvetica neue\", helvetica, arial, 宋体, sans-serif;color:#333333;text-indent:2em;margin-top:0px;margin-bottom:0px;\">国内的建筑工程习惯将设计、施工、运营、维护等各阶段分开执行，造成各阶段协同作业进行时是在各自的信息模式进行，导致有重复转制现象，而产生了错误与差异，而利用BIM可使工程团队将不同阶段的信息串连起来，可有效减少个阶段的信息转换误差、工作设计变更及重工状况的发生。从设计、施工到运营及维护阶段，中间的信息交付常常不尽完善，因此产生设施运营及维护时需要的设施信息不足，如果能将设计施工过程的施工图都完整的交付运营维护单位，则能避免运营维护时诸多的困扰。</p><p style=\"padding:0px;font-stretch:normal;font-size:16px;line-height:28px;font-family:微软雅黑, \"helvetica neue\", helvetica, arial, 宋体, sans-serif;color:#333333;text-indent:2em;margin-top:0px;margin-bottom:0px;\"><a href=\"http://www.guhecloud.com\" target=\"_self\">BIM运维系统</a>除了拥有三维模型外，每个模型都拥有各别的属性、性质、数量等信息，通过BIM的参数化、数值化特性，以「参数设变引擎」 (Parametric Change Engine)让项目设计、成本、明细表等信息可立即的被修改，并能维持高质量、协调一致的能力。BIM的三维模型除了能够显示众多的数值信息外，对于未有经验的业主或一般人来说，也能通过可视化的三维模型展示，使其对于工程设计能够一眼望之，能让工程人员更透彻的了解工程内容。因此BIM从设计者手中传到各参与的团队时，各团队能依据三维模型所提供的信息进行作业，而不是像传统的靠着大量图纸数据做整合来理解工程内容，使各团队对于工程内容的认知具有一致性，也能预先提防工地现场可能发生问题，事先更改为适用的施工路径与施工设计等。</p><p><span class=\"editor_copyright\" style=\"display:block;float:left;width:880px;color:#999999;font-size:14px;padding:10px 0px;font-family:微软雅黑, \"helvetica neue\", helvetica, arial, 宋体, sans-serif;\">版权申明：本文章内容来自()，作者()。版权归原作者所有，如涉及作品版权问题，请与我们联系，我们将及时处理！</span></p><p><br /></p>",
+  "click": 235615,
+  "create_time": "2023-02-21 17:18:22",
+  "update_time": "2026-04-14 01:07:56"
+}

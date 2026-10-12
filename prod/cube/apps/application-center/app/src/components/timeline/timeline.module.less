@@ -1,0 +1,122 @@
+.timeline-wrapper {
+  width: 100%;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: stretch; // 改为 stretch，让所有子元素高度一致
+  margin-bottom: 40px;
+  min-height: 60px; // 设置最小高度
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start; // 移动端恢复默认对齐
+  }
+}
+
+// 最后一项的特殊样式
+.timeline-item-last {
+  // 最后一项可以有特殊的样式处理
+}
+
+// 左侧内容区域
+.timeline-left {
+  width: 120px;
+  padding-right: 16px;
+  text-align: right;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; // 内容顶部对齐
+  
+  @media (max-width: 1200px) {
+    width: 100px;
+    padding-right: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+    text-align: left;
+    margin-bottom: 12px;
+    padding-left: 48px;
+  }
+}
+
+// 时间线段容器
+.timeline-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  position: relative; // 使用相对定位
+  
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 16px;
+    height: 100%; // 移动端占满整个高度
+  }
+}
+
+// 时间线节点包装器
+.timeline-node-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 2;
+  margin-bottom: 8px; // 小圆圈与线条的间距
+  
+  @media (max-width: 768px) {
+    margin-bottom: 6px;
+  }
+}
+
+// 时间线节点（小圆圈）
+.timeline-node {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #E4E2E2;
+  border-radius: 50%;
+  
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// 连接线（填充剩余高度）
+.timeline-line {
+  width: 2px;
+  background-color: #E4E2E2;
+  flex: 1; // 填充剩余空间
+  min-height: 20px; // 最小高度
+  
+  @media (max-width: 768px) {
+    min-height: 16px;
+  }
+}
+
+// 右侧内容区域
+.timeline-right {
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; // 内容顶部对齐
+  
+  @media (max-width: 768px) {
+    padding-left: 48px;
+    width: 100%;
+  }
+}

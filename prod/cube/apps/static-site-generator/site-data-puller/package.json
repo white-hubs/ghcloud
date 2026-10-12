@@ -1,0 +1,17 @@
+{
+  "name": "@ghcloud/cube-site-data-puller",
+  "version": "1.0.0",
+  "description": "Pull static site business data from generator-config APIs and pack into ZIP",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "pull": "bun src/main.ts",
+    "pull:dry": "SSG_DRY_RUN=1 bun src/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

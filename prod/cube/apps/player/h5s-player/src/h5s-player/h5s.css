@@ -1,0 +1,78 @@
+.live {
+  margin: -5px 0 auto;
+  padding: 0 8px;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  background-size: 11.875rem 11.25rem;
+  bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  color: #fff;
+  font-size: 13px;
+}
+
+.live .left {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.zoom1,
+.zoom2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.zoom2 .full-screen {
+  border: 1px solid;
+  padding: 0 3px;
+}
+
+#zoom1Reduce,
+#zoom2Reduce,
+#zoom1Plus,
+#zoom2Plus,
+#shot,
+#videotape {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#zoom1Reduce,
+#zoom2Reduce {
+  background: url(../assets/img/reduce.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+#zoom1Plus,
+#zoom2Plus {
+  background: url(../assets/img/plus.svg) no-repeat center;
+  margin-left: 4px;
+}
+
+.live .right {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shotCtr,
+.videotapeCtr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+#shot {
+  background: url(../assets/img/cut.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+#videotape {
+  background: url(../assets/img/video.svg) no-repeat center;
+  margin-right: 4px;
+}

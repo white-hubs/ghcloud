@@ -1,0 +1,495 @@
+.container {
+  display: flex;
+  height: calc(100vh - var(--van-nav-bar-height, 46px));
+  flex-direction: column;
+  overflow: hidden;
+  background: #f3f7fa;
+}
+.mainContent{
+  flex: 1 1 auto;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom)) 12px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.descLabel {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #646566;
+}
+
+.voiceButton {
+  flex: 0 0 auto;
+  font-size: 12px;
+  border: none;
+}
+
+.voiceComposer {
+  width: 100%;
+  padding: 4px 0 2px;
+}
+
+.voiceComposerHeader {
+  display: flex;
+  min-height: 22px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.voiceComposerHeader > span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.keyboardButton {
+  flex: 0 0 auto;
+  border: 0;
+  padding: 2px 0;
+  color: var(--van-primary-color);
+  background: transparent;
+  font-size: 12px;
+}
+
+.keyboardButton:disabled {
+  color: #c8c9cc;
+}
+
+.holdToTalkButton {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #dcdee0;
+  border-radius: 8px;
+  color: #323233;
+  background: linear-gradient(180deg, #fff, #f7f8fa);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  font-size: 15px;
+  font-weight: 600;
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.holdToTalkButton:active,
+.voiceStarting,
+.voiceRecording {
+  transform: scale(0.985);
+}
+
+.voiceStarting {
+  border-color: #91caff;
+  color: var(--van-primary-color);
+  background: #e6f4ff;
+}
+
+.voiceRecording {
+  border-color: #07c160;
+  color: #fff;
+  background: linear-gradient(135deg, #07c160, #05a94f);
+  box-shadow: 0 8px 20px rgb(7 193 96 / 24%);
+  animation: voicePulse 1.25s ease-in-out infinite;
+}
+
+.voiceTranscribing {
+  border-color: #91caff;
+  color: var(--van-primary-color);
+  background: linear-gradient(110deg, #e6f4ff 20%, #f5faff 45%, #e6f4ff 70%);
+  background-size: 220% 100%;
+  animation: voiceScanning 1.2s linear infinite;
+}
+
+.voiceComposerHint {
+  margin-top: 8px;
+  color: #969799;
+  font-size: 12px;
+  text-align: center;
+}
+
+.voiceWave {
+  display: inline-flex;
+  height: 20px;
+  align-items: center;
+  gap: 3px;
+}
+
+.voiceWave i {
+  width: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  animation: voiceWave 0.75s ease-in-out infinite;
+}
+
+.voiceWave i:nth-child(1),
+.voiceWave i:nth-child(5) {
+  height: 7px;
+}
+
+.voiceWave i:nth-child(2),
+.voiceWave i:nth-child(4) {
+  height: 13px;
+  animation-delay: 0.12s;
+}
+
+.voiceWave i:nth-child(3) {
+  height: 19px;
+  animation-delay: 0.24s;
+}
+
+:global(.voice-input-enter-active),
+:global(.voice-input-leave-active) {
+  transition:
+    opacity 0.2s ease,
+    transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:global(.voice-input-enter-from) {
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+}
+
+:global(.voice-input-leave-to) {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.99);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.bottomActions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid #ebedf0;
+  background: #fff;
+  box-shadow: 0 -6px 18px rgb(0 0 0 / 6%);
+}
+
+.splitActions > :global(.van-button) {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.recognizing {
+  margin-top: 14px;
+}
+
+.recognizingPanel {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #c6e2ff;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 12% 20%, rgb(22 119 255 / 12%), transparent 32%),
+    linear-gradient(135deg, #f7fbff 0%, #eef7ff 52%, #f8fbff 100%);
+  box-shadow: 0 6px 16px rgb(22 119 255 / 8%);
+}
+
+.aiThinkingIcon {
+  position: relative;
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, var(--van-primary-color), #18b7ff);
+  box-shadow: 0 8px 18px rgb(22 119 255 / 24%);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.aiThinkingIcon::after {
+  position: absolute;
+  inset: -40% auto -40% -65%;
+  width: 44%;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 70%), transparent);
+  content: "";
+  transform: rotate(18deg);
+  animation: aiIconShine 1.8s ease-in-out infinite;
+}
+
+.recognizingInfo {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.recognizingText {
+  color: #1f4e79;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.recognizingSubText {
+  margin-top: 2px;
+  color: #5f7d95;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.aiThinkingDots {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 4px;
+}
+
+.aiThinkingDots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--van-primary-color);
+  animation: aiDotPulse 1s ease-in-out infinite;
+}
+
+.aiThinkingDots span:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.aiThinkingDots span:nth-child(3) {
+  animation-delay: 0.28s;
+}
+
+.progressTrack {
+  position: relative;
+  height: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #dbeafe, #eef7ff 48%, #dbeafe);
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -48%;
+  width: 48%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgb(22 119 255 / 22%), #18b7ff 52%, rgb(22 119 255 / 22%), transparent);
+  filter: drop-shadow(0 0 4px rgb(24 183 255 / 28%));
+  animation: scan 1.65s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+.progressBar::after {
+  position: absolute;
+  top: 0;
+  right: 18%;
+  bottom: 0;
+  width: 28%;
+  border-radius: inherit;
+  background: rgb(255 255 255 / 78%);
+  content: "";
+  opacity: 0.82;
+}
+
+.aiResultHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--van-primary-color);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.aiResultDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--van-primary-color);
+  box-shadow: 0 0 0 4px rgba(22, 119, 255, 0.12);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.result {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid rgba(22, 119, 255, 0.18);
+  box-shadow: 0 8px 20px rgba(22, 119, 255, 0.06);
+}
+
+.result::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -55%;
+  width: 42%;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(22, 119, 255, 0.14), transparent);
+  transform: skewX(-16deg);
+  animation: resultShine 1.1s ease-out 0.18s both;
+}
+
+:global(.ai-result-enter-active),
+:global(.ai-result-leave-active),
+:global(.ai-result-move) {
+  transition:
+    opacity 0.32s ease,
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:global(.ai-result-enter-from) {
+  opacity: 0;
+  transform: translateX(-22px);
+}
+
+:global(.ai-result-leave-to) {
+  opacity: 0;
+  transform: translateX(16px);
+}
+
+:global(.ai-result-leave-active) {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.resultCell :global(.van-cell__value) {
+  text-align: left;
+}
+
+.resultTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.deleteResultButton {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-color: #ffccc7;
+  border-radius: 50%;
+  background: #fff2f0;
+}
+
+.deleteResultButton :global(.van-button__icon) {
+  margin: 0;
+  font-size: 17px;
+}
+
+@keyframes aiIconShine {
+  0% {
+    transform: translateX(0) rotate(18deg);
+  }
+
+  48%,
+  100% {
+    transform: translateX(360%) rotate(18deg);
+  }
+}
+
+@keyframes aiDotPulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(310%, 0, 0);
+  }
+}
+
+@keyframes resultShine {
+  0% {
+    left: -55%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.28);
+    opacity: 0.72;
+  }
+}
+
+@keyframes voicePulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgb(7 193 96 / 18%);
+  }
+
+  50% {
+    box-shadow: 0 8px 28px rgb(7 193 96 / 34%);
+  }
+}
+
+@keyframes voiceScanning {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@keyframes voiceWave {
+  0%,
+  100% {
+    transform: scaleY(0.55);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,84 @@
+.infoContent {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .infoImg {
+    width: 150px;
+    text-align: center;
+    max-height: 100%;
+  }
+
+  .infoName {
+    margin-top: 15px;
+    color: #b7c5d3;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    > span {
+      margin-left: 10px;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .state {
+    height: 400px;
+    overflow-y: auto;
+  }
+
+  .fireControlMsg {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: 200px;
+
+    .fireControlMsgItem {
+      width: 30%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 20px;
+      margin-left: 20px;
+      font-size: 15px;
+
+      .fireControlMsgItemLeft {
+        font-weight: 400;
+        color: #b7c5d3;
+      }
+
+      .fireControlMsgItemRight {
+        margin-left: 10px;
+        color: #fff;
+      }
+    }
+
+    .bg {
+      width: 82px;
+      height: 82px;
+      background: #f8f8f8;
+      border-radius: 4px;
+      opacity: 1;
+      border: 1px solid #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

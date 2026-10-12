@@ -1,0 +1,28 @@
+.content-search {
+  :global {
+    .cooling-water-form-item {
+      margin-bottom: 10px;
+    }
+
+
+  }
+}
+
+.content-table {
+  :global {
+    .cooling-water-table-thead>tr>th {
+      white-space: nowrap; // 防止IE等浏览器不支持'max-content'属性 导致内容换行
+    }
+
+    .cooling-water-table-thead>tr>td {
+      white-space: nowrap; // 防止IE等浏览器不支持'max-content'属性 导致内容换行
+    }
+  }
+
+}
+
+.footer-page{
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 250px);
+}

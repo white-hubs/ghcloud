@@ -1,0 +1,129 @@
+// antd更新后覆盖了部分样式，逐步排查，后续遇到需要全局设置的都可以在此添加
+// 科技蓝下拉选项白字；极简白由 visual-theme.less 统一覆盖
+:root:not([data-visual-theme="minimal-white"]) .ant-select-dropdown .ant-select-item {
+  color: #fff !important;
+}
+
+/*
+ * Ant Design Vue 4 的 cssinjs 在运行时写入物理 px，不会走 postcss-pxtorem。
+ * 这里只覆盖字号/行高/分页格子（设计稿 px → rem），随 html font-size 缩放。
+ * 不要在这里写默认控件 height：卡片标题栏 .panel-filter-select / .date-inline-form 是 24px 紧凑态。
+ */
+:root {
+  --ue5-control-font-size: 14px;
+  --ue5-control-font-size-sm: 12px;
+  --ue5-control-line-height: 30px;
+  --ue5-pagination-item-size: 32px;
+}
+
+.ant-select,
+.ant-cascader,
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-number,
+.ant-picker,
+.ant-btn,
+.ant-pagination,
+.ant-form-item-label > label {
+  font-size: var(--ue5-control-font-size) !important;
+}
+
+.ant-select-selection-item,
+.ant-select-selection-placeholder,
+.ant-picker-input > input {
+  font-size: inherit !important;
+  line-height: var(--ue5-control-line-height) !important;
+}
+
+.ant-select-selection-search-input,
+.ant-input-number-input {
+  font-size: inherit !important;
+}
+
+.ant-select-arrow,
+.ant-picker-suffix,
+.ant-picker-separator,
+.ant-input-clear-icon,
+.ant-pagination-prev .anticon,
+.ant-pagination-next .anticon {
+  font-size: var(--ue5-control-font-size-sm) !important;
+}
+
+.ant-btn-sm {
+  font-size: var(--ue5-control-font-size-sm) !important;
+}
+
+.ant-btn-lg {
+  font-size: 16px !important;
+}
+
+.ant-pagination {
+  flex-wrap: wrap;
+  row-gap: 8px;
+  font-size: var(--ue5-control-font-size) !important;
+}
+
+.ant-pagination-total-text {
+  height: var(--ue5-pagination-item-size) !important;
+  margin-inline-end: 8px !important;
+  font-size: var(--ue5-control-font-size) !important;
+  line-height: var(--ue5-pagination-item-size) !important;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next,
+.ant-pagination-item {
+  min-width: var(--ue5-pagination-item-size) !important;
+  height: var(--ue5-pagination-item-size) !important;
+  font-size: var(--ue5-control-font-size) !important;
+  line-height: calc(var(--ue5-pagination-item-size) - 2px) !important;
+}
+
+.ant-pagination-item a,
+.ant-pagination-item-link,
+.ant-pagination-item-ellipsis,
+.ant-pagination-item-link-icon {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.ant-pagination-options,
+.ant-pagination-options .ant-select,
+.ant-pagination-options .ant-select-selector,
+.ant-pagination-options .ant-select-selection-item {
+  height: var(--ue5-pagination-item-size) !important;
+  min-height: var(--ue5-pagination-item-size) !important;
+  font-size: var(--ue5-control-font-size) !important;
+  line-height: calc(var(--ue5-pagination-item-size) - 2px) !important;
+}
+
+.ant-select-dropdown,
+.ant-cascader-dropdown,
+.ant-picker-dropdown,
+.ant-dropdown,
+.ant-select-item,
+.ant-cascader-menu-item {
+  font-size: var(--ue5-control-font-size) !important;
+}
+
+.ant-select-dropdown:not(.date-inline-dropdown) .ant-select-item {
+  min-height: 32px !important;
+  line-height: var(--ue5-control-line-height) !important;
+}
+
+.ant-picker-panel,
+.ant-picker-header,
+.ant-picker-content th,
+.ant-picker-cell,
+.ant-picker-header button,
+.ant-picker-cell-inner {
+  font-size: var(--ue5-control-font-size) !important;
+}
+
+.ant-picker-cell-inner {
+  min-width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}

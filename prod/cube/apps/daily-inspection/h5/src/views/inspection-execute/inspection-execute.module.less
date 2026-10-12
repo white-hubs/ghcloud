@@ -1,0 +1,121 @@
+.wrapper{
+  background: #f3f7fa; 
+  height: calc(100vh - 108px);
+  padding: 2vw 0;overflow:auto;
+  .cell-group-copy{
+     margin: 0 auto;
+    width: 351px;
+    padding:10px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+     color: #8f8f8f;
+     font-size: 14px;
+    .copyRadio{
+        display: flex;
+        gap: 10px;
+      }
+      .copyData{
+        display: flex;
+        flex:1;
+        div{
+          flex:1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .copyObj{
+        margin-top: 5px;
+      }
+  }
+  .cell-group {
+    margin: 0 auto;
+    width: 351px;
+    min-height: 134px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    .title {
+      font-size: 16px;
+      padding: 14px 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: 600;
+      text-align: left;
+      color: #0e161d;
+      line-height: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span:nth-of-type(2){
+        font-weight: 400;
+      }
+    }
+    .content {
+      font-size: 14px;
+      padding: 0px 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      line-height: 22px;
+      font-weight: Regular;
+      text-align: left;
+      color: #8f8f8f;
+      margin-top: 8px;
+      margin-bottom: 15px;
+
+    }
+    .result-content{
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      line-height: 22px;
+      font-weight: Regular;
+      text-align: left;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      .title-second{
+        background-color: #f5fbff;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 35px;
+        padding:0px 12px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .item{
+        padding: 12px;
+        
+      }
+      .result-item{
+        margin-top: 10px;
+        display: flex;
+      }
+      .upload{
+        border-radius: 5%;
+        width: 50px;
+        height: 50px;
+        border: 2px dashed #cacbcc;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+    
+   
+  }
+ 
+  .copy-group { 
+    margin: 0 auto;
+    width: 351px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+}
+
+.footer {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #ffffff;
+  box-sizing: border-box;
+}

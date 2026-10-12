@@ -1,0 +1,248 @@
+.inspection-login {
+  position: relative;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(1200px 560px at 15% -10%, rgba(58, 123, 255, 0.4), transparent 60%),
+    radial-gradient(980px 480px at 90% 110%, rgba(45, 212, 191, 0.2), transparent 65%),
+    linear-gradient(155deg, #071022 0%, #0c1b37 55%, #071022 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(160, 200, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(160, 200, 255, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  }
+
+  .login-card {
+    position: relative;
+    z-index: 1;
+    width: 420px;
+    max-width: 100%;
+    padding: 26px 24px 22px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(11, 29, 62, 0.92), rgba(8, 18, 40, 0.84));
+    border: 1px solid rgba(111, 178, 255, 0.36);
+    box-shadow:
+      0 24px 70px rgba(2, 8, 20, 0.55),
+      inset 0 1px 0 rgba(180, 215, 255, 0.14);
+
+    h1 {
+      margin: 0 0 18px;
+      text-align: center;
+      color: #e2f1ff;
+      letter-spacing: 3px;
+      font-size: 28px;
+      font-weight: 700;
+      text-shadow: 0 0 24px rgba(103, 174, 255, 0.35);
+    }
+
+    .inspection-command-screen-form-item .inspection-command-screen-form-item-label > label,
+    .inspection-command-screen-form-vertical .inspection-command-screen-form-item-label > label {
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      line-height: 1.3;
+    }
+
+    .inspection-command-screen-form-item .inspection-command-screen-form-item-label > label::after,
+    .inspection-command-screen-form-vertical .inspection-command-screen-form-item-label > label::after {
+      color: #ffffff !important;
+      font-size: 16px !important;
+    }
+
+    :global(.ant-input),
+    :global(.ant-input-affix-wrapper) {
+      height: 38px;
+      border-color: rgba(111, 178, 255, 0.28);
+      background: rgba(8, 18, 40, 0.64);
+      color: #d9edff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    :global(.ant-input::placeholder) {
+      color: rgba(177, 209, 245, 0.56);
+    }
+
+    :global(.ant-input-affix-wrapper .ant-input) {
+      height: auto;
+      background: transparent;
+    }
+
+    :global(.ant-input:focus),
+    :global(.ant-input-affix-wrapper-focused) {
+      border-color: rgba(96, 173, 255, 0.78);
+      box-shadow: 0 0 0 2px rgba(65, 133, 255, 0.2);
+    }
+
+    :global(.ant-btn-primary) {
+      height: 40px;
+      border: 0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #2f7bff, #2dd4bf);
+      box-shadow: 0 10px 26px rgba(47, 123, 255, 0.32);
+    }
+
+    :global(.ant-btn-primary:hover),
+    :global(.ant-btn-primary:focus) {
+      filter: brightness(1.06);
+    }
+
+    :global(.ant-form-item) {
+      margin-bottom: 14px;
+    }
+
+    .code-row {
+      display: flex;
+      gap: 8px;
+
+      .code-box {
+        width: 120px;
+        min-width: 120px;
+        height: 38px;
+        border: 1px solid rgba(111, 178, 255, 0.34);
+        border-radius: 6px;
+        background: rgba(10, 26, 55, 0.94);
+        color: #a8c9ff;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: rgba(111, 178, 255, 0.65);
+        }
+
+        &:disabled {
+          opacity: 0.55;
+          cursor: not-allowed;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+
+}
+
+.inspection-login-tenant-modal {
+  .inspection-command-screen-modal-mask {
+    background: rgba(1, 8, 18, 0.68);
+    backdrop-filter: blur(3px);
+  }
+
+  .inspection-command-screen-modal {
+    max-width: calc(100vw - 32px);
+  }
+
+  .inspection-command-screen-modal-content {
+    padding: 20px 0;
+    border: 1px solid #2989ff;
+    border-radius: 4px;
+    background: rgba(4, 17, 32, 0.86);
+    box-shadow: 0 22px 70px rgba(0, 8, 20, 0.58);
+  }
+
+  .inspection-command-screen-modal-header {
+    padding: 0 24px 20px;
+    border-bottom: 1px solid #2989ff;
+    background: transparent;
+  }
+
+  .inspection-command-screen-modal-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .inspection-command-screen-modal-close {
+    color: #ffffff;
+
+    &:hover {
+      color: #7fbcff;
+    }
+  }
+
+  .inspection-command-screen-modal-body {
+    padding: 20px 24px 4px;
+  }
+
+  .inspection-command-screen-spin-text {
+    color: #d7eaff;
+    text-shadow: none;
+  }
+
+  .tenant-list {
+    max-height: 500px;
+    overflow-y: auto;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .tenant-item {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #2989ff;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inspection-login {
+    padding: 18px;
+
+    .login-card {
+      width: 100%;
+      padding: 22px 16px 18px;
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .code-row .code-box {
+        width: 110px;
+        min-width: 110px;
+      }
+    }
+  }
+
+  .inspection-login-tenant-modal {
+    .inspection-command-screen-modal {
+      width: calc(100vw - 32px) !important;
+    }
+
+    .inspection-command-screen-modal-body {
+      padding: 16px 12px 4px;
+    }
+
+    .tenant-item {
+      width: calc(50% - 20px);
+      min-width: 128px;
+    }
+  }
+}

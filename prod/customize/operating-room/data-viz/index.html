@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据大屏</title>
+  <meta version="<%- version %>" />
+  <script src="/config.js"></script>
+  <script src="/data.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @font-face {
+      font-family: "YouSheBiaoTiHei";
+      src: url("/resource/v1/fonts/you-she-biao-ti-hei.ttf");
+    }
+    @font-face {
+      font-family: "HONORSansCN-Medium";
+      src: url("/resource/v1/fonts/honor-sans-medium.ttf");
+    }
+    @font-face {
+      font-family: "HONORSansCN-Regular";
+      src: url("/resource/v1/fonts/honor-sans-regular.ttf");
+    }
+
+    .monitor-modal .operating-room-modal-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .svg-loading{
+      fill: #4096ff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 7vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="OperatingRoomDataViz" style="height: 100%; width: 100%;">
+    <svg class="svg-loading"  viewBox="0 0 135 140" xmlns="http://www.w3.org/2000/svg">
+      <rect y="10" width="15" height="120" rx="6">
+        <animate attributeName="height" begin="0.5s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+          calcMode="linear" repeatCount="indefinite" />
+        <animate attributeName="y" begin="0.5s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+          repeatCount="indefinite" />
+      </rect>
+      <rect x="30" y="10" width="15" height="120" rx="6">
+        <animate attributeName="height" begin="0.25s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+          calcMode="linear" repeatCount="indefinite" />
+        <animate attributeName="y" begin="0.25s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+          repeatCount="indefinite" />
+      </rect>
+      <rect x="60" width="15" height="140" rx="6">
+        <animate attributeName="height" begin="0s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+          calcMode="linear" repeatCount="indefinite" />
+        <animate attributeName="y" begin="0s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+          repeatCount="indefinite" />
+      </rect>
+      <rect x="90" y="10" width="15" height="120" rx="6">
+        <animate attributeName="height" begin="0.25s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+          calcMode="linear" repeatCount="indefinite" />
+        <animate attributeName="y" begin="0.25s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+          repeatCount="indefinite" />
+      </rect>
+      <rect x="120" y="10" width="15" height="120" rx="6">
+        <animate attributeName="height" begin="0.5s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+          calcMode="linear" repeatCount="indefinite" />
+        <animate attributeName="y" begin="0.5s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+          repeatCount="indefinite" />
+      </rect>
+    </svg>
+
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

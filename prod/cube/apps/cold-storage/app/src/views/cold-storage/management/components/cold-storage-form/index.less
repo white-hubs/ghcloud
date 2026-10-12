@@ -1,0 +1,269 @@
+.cold-storage-form {
+  min-width: 0;
+  padding: 20px 24px 22px;
+  color: var(--text-primary, #1f2937);
+}
+
+.storage-form-section {
+  min-width: 0;
+}
+
+.storage-form-section + .storage-form-section {
+  margin-top: 18px;
+}
+
+.storage-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--border-color, #edf0f5);
+}
+
+.storage-section-title h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.storage-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  padding-top: 14px;
+}
+
+.storage-form-item {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.storage-form-label {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.storage-form-label i {
+  margin-right: 3px;
+  color: #e11d48;
+  font-style: normal;
+}
+
+.storage-form-item .ant-input,
+.storage-form-item .ant-select-selector,
+.storage-form-item .ant-picker {
+  min-height: 32px;
+  border-radius: 5px;
+}
+
+.storage-main-device-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.storage-main-device-picker__input {
+  flex: 1;
+  min-width: 0;
+}
+
+.storage-main-device-picker .storage-main-device-picker__input.ant-input,
+.storage-main-device-picker .storage-main-device-picker__input.ant-input-disabled {
+  height: 32px;
+  min-height: 32px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+.storage-main-device-picker .ant-btn {
+  height: 32px;
+  min-height: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 30px;
+  flex-shrink: 0;
+}
+
+.storage-device-panel {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  margin-top: 12px;
+  border: 1px solid var(--border-color, #edf0f5);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.storage-device-types {
+  min-height: 268px;
+  border-right: 1px solid var(--border-color, #edf0f5);
+  background: #f8fafc;
+}
+
+.storage-device-types .ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 43px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 0;
+  color: #4b5563;
+  font-weight: 500;
+  text-align: left;
+}
+
+.storage-device-types .ant-btn.active {
+  position: relative;
+  background: #eaf1ff;
+  color: #2563eb;
+}
+
+.storage-device-types .ant-btn.active::after {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 3px;
+  height: 100%;
+  background: #2563eb;
+  content: "";
+}
+
+.device-type-name {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  gap: 8px;
+}
+
+.device-type-name i {
+  width: 18px;
+  color: #64748b;
+  font-style: normal;
+  text-align: center;
+}
+
+.storage-device-types .ant-btn.active .device-type-name i {
+  color: #2563eb;
+}
+
+.storage-device-types b {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.storage-device-main {
+  min-width: 0;
+  background: #fff;
+}
+
+.storage-device-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color, #edf0f5);
+}
+
+.storage-device-search {
+  width: 180px;
+}
+
+.storage-device-toolbar .ant-btn-primary {
+  margin-left: auto;
+}
+
+.storage-form-section--devices .ant-table-thead > tr > th,
+.storage-device-main .ant-table-thead > tr > th {
+  background: #f8fafc;
+  color: #374151;
+  font-weight: 700;
+}
+
+.storage-form-section--devices .ant-table-tbody > tr > td,
+.storage-device-main .ant-table-tbody > tr > td,
+.storage-form-section--cameras .ant-table-tbody > tr > td {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.storage-tip {
+  margin-top: 10px;
+  color: #8b95a7;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.storage-tip::before,
+.storage-camera-footer span::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #fef3c7;
+  color: #d97706;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.storage-form-section--cameras .ant-table {
+  border: 1px solid var(--border-color, #edf0f5);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+}
+
+.storage-form-section--cameras .ant-table-thead > tr > th {
+  background: #f8fafc;
+  color: #374151;
+  font-weight: 700;
+}
+
+.storage-camera-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.storage-camera-footer span {
+  color: #8b95a7;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .storage-form-grid,
+  .storage-device-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .storage-device-types {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-color, #edf0f5);
+  }
+
+  .storage-device-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .storage-device-search {
+    width: 100%;
+  }
+
+  .storage-device-toolbar .ant-btn-primary {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "path": "/product-center/river.html",
+  "meta": {
+    "title": "开河平台 - 开河中枢 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-banner.webp",
+            "title": "开河智能中枢",
+            "subtitle": "以中台化思想，云架构理念为核心，以强大灵活的自研设计理念，打造出一套满足动态业务扩展和高效业务融合的综合智能管理平台。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "title": "平台特点",
+        "bgColor": "#f5f8ff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-1.webp",
+            "title": "系统孤岛与架构僵化",
+            "description": "传统烟囱式建设模式导致功能模块重复开发、数据割裂，阻碍业务的动态扩展与融合。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-2.webp",
+            "title": "数据资产沉淀低效",
+            "description": "多源数据缺乏统一治理与标准化支撑，数据价值挖掘不足，无法形成闭环分析。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-3.webp",
+            "title": "业务协作机制缺位",
+            "description": "系统复杂，异常排查落后，无法精准定位异常点，且操作过程存在忙点，无法溯源。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-4.webp",
+            "title": "智能化场景闭环缺失",
+            "description": "业务流与数据流脱节，缺乏从感知到决策的端到端智能化支撑，影响价值转化。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoreTechStack",
+      "props": {
+        "title": "核心技术",
+        "subtitle": "5大核心技术，为上层业务提供标准化、模块化的技术支撑",
+        "technologies": [
+          {
+            "name": "AI引擎",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/tech-top-1.webp",
+            "description": "围绕安全监测等关键场景，实现快速预警建立。",
+            "href": "/engines/ai.html",
+            "bgColor": "#f3f6ff",
+            "iconBgColor": "#f3f6ff"
+          },
+          {
+            "name": "孪生引擎",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/tech-top-2.webp",
+            "description": "工具化能力封装，场景化构建，高仿真还原，通用与信创环境同时支持。",
+            "href": "/engines/twin.html",
+            "bgColor": "linear-gradient(232deg, #EEFDFF 0%, #F3F6FF 71%)",
+            "iconBgColor": "#d8d8d8"
+          },
+          {
+            "name": "物联引擎",
+            "icon": "",
+            "description": "自研物联接入管理，实现物模型高效联动处理。",
+            "href": "/engines/iot.html",
+            "bgColor": "#f3f6ff",
+            "iconBgColor": "#f3f6ff"
+          },
+          {
+            "name": "数据引擎",
+            "icon": "",
+            "description": "整合多源异构数据，提供高效的数据存储和服务化能力。",
+            "href": "/engines/data.html",
+            "bgColor": "#f3fdff",
+            "iconBgColor": "#f3fdff"
+          },
+          {
+            "name": "业务引擎",
+            "icon": "",
+            "description": "提供统一的API管理和调用方式，支持业务功能的复用和灵活组合。",
+            "href": "/engines/business.html",
+            "bgColor": "#f3fff6",
+            "iconBgColor": "#f3fff6"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "title": "平台优势",
+        "subtitle": "深耕空间智能安全管理，实现业务与空间安全管理诉求的深度融合",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/business-value-1.webp",
+            "title": "自主知识产权，核心技术自研",
+            "description": "拥有自主知识产权并集多种技术能力为一体，物联、分析、孪生等核心关键技术自研。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/business-value-2.webp",
+            "title": "跨行业应用，项目落地可控",
+            "description": "底座能力与业务应用分离，支持可选应用。可不依赖三方实现采集、应用、分析闭环，一体化交付能力，不受三方限制。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/business-value-3.webp",
+            "title": "深耕智能场景，行业经验丰富",
+            "description": "深耕设备、安全、能源场景，在历史项目中积累专业行业经验，为客户带来更有针对性的场景方案。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/business-value-4.webp",
+            "title": "开放模块架构，灵活扩展合作",
+            "description": "能力工具具备高解耦能力，合作需求，可独立拆分场景合作，开放支持项目整合落地。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IntelligentHub",
+      "props": {
+        "title": "开河智能中枢",
+        "subtitle": "具备海量、轻量功能开发、延展能力，加速业务应用的创新速度，提升组织智能化管理效率，降低企业数字化转型成本。",
+        "description": "基于底层架构，中管成本，高层决策等问题，为客户提供一套围绕空间闭环的安全智能管理服务。",
+        "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/hub-center.webp",
+        "stats": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/hub-icon-1.webp",
+            "label": "百万级物联感知单元实时接入"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/hub-icon-2.webp",
+            "label": "100+场景应用构建灵活组合满足需求"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/hub-icon-3.webp",
+            "label": "50+子系统集成快速连接管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DerivativeProductGrid",
+      "props": {
+        "title": "衍生产品",
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/ai-intelligent-management.webp",
+            "name": "AI智能体管理系统",
+            "description": "支持多个主流大模型无缝集成，帮助企业快速构建、部署和监控AI应用，降低技术门槛与运维成本。",
+            "href": "/programme/ai-agent.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/fire-safety.webp",
+            "name": "消防安全管理系统",
+            "description": "运用IoT、云计算、大数据、人工智能等先进技术，以智能化+数字化为核心规划理念，建立一体化智慧消防安全管理平台。",
+            "href": "/programme/fire-safety.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/electrical-safety-management.webp",
+            "name": "电气安全管理系统",
+            "description": "基于物联网技术，通过实时监测、数据分析及远程控制，实现对电气线路的全方位安全管理。",
+            "href": "/programme/electric-safety.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/intelligent-patrol-management.webp",
+            "name": "智能巡检管理系统",
+            "description": "融合人工巡检、无人机巡检与机器人巡检的综合智能巡检管理，通过GPS定位、物联网传感器及AI分析技术构建多维巡检网络。",
+            "href": "/programme/smart-patrol.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/comprehensive-monitoring-early-warning.webp",
+            "name": "综合监测预警系统",
+            "description": "实时采集多维数据，实现从被动响应到主动预防的转变，为企业提供数字化、智能化的风险管理中枢。",
+            "href": "/programme/monitoring-early-warning.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/emergency-dispatch-command.webp",
+            "name": "应急调度管理系统",
+            "description": "通过数据汇聚、可视化呈现及智能算法，提升突发事件响应效率，保障应急资源的科学调配。",
+            "href": "/programme/emergency-dispatch.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/video-security.webp",
+            "name": "视频安全监测系统",
+            "description": "通过AI算法对视频监控进行智能识别分析，结合AI大模型能力对告警事件进行二次研判，构建一体化安防监控管理体系。",
+            "href": "/programme/video-safety.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/safety-training-drill.webp",
+            "name": "安全培训演练系统",
+            "description": "基于物联感知与智能分析技术，实时采集多维数据，实现从被动响应到主动预防的转变，为企业提供数字化、智能化的风险管理中枢。",
+            "href": "/programme/safety-training.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/meat-track-transaction.webp",
+            "name": "肉类滑轨交易系统",
+            "description": "专业的肉类滑轨交易与管理系统",
+            "href": "/programme/agriculture.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

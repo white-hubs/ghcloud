@@ -1,0 +1,248 @@
+.cable-management-root {
+  height: 100%;
+}
+
+.cable-management-header-actions {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.cable-management-warehouse-select {
+  width: 240px;
+}
+
+.cable-management-page {
+  flex-direction: column;
+  display: flex;
+  gap: 12px;
+  height: 100%;
+  min-height: 560px;
+}
+
+.cable-management-main {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  min-height: 0;
+}
+
+.cable-management-left {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 280px;
+  width: 280px;
+}
+
+.cable-management-left-title {
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 16px;
+}
+
+.cable-management-cable-list {
+  flex: 1;
+  overflow: auto;
+  padding: 10px;
+}
+
+.cable-management-cable-item {
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.cable-management-cable-item.is-active {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 1px rgb(22 119 255 / 15%);
+}
+
+.cable-management-cable-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cable-management-cable-name {
+  color: #1f1f1f;
+  font-weight: 600;
+}
+
+.cable-management-cable-status {
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.cable-management-cable-status.status-mapped {
+  background: rgb(82 196 26 / 16%);
+  color: #389e0d;
+}
+
+.cable-management-cable-status.status-partial {
+  background: rgb(250 173 20 / 16%);
+  color: #d48806;
+}
+
+.cable-management-cable-status.status-unmapped {
+  background: rgb(255 77 79 / 16%);
+  color: #cf1322;
+}
+
+.cable-management-cable-desc {
+  align-items: center;
+  color: #8c8c8c;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.cable-management-cable-actions {
+  flex-shrink: 0;
+}
+
+.cable-management-right {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cable-management-right-header {
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.cable-management-right-title {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cable-management-table-wrap {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 16px 16px;
+}
+
+.cable-management-page-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cable-management-modal-form {
+  padding: 16px 0;
+
+  .ant-form-vertical .ant-form-item .ant-form-item-label {
+    width: 140px !important;
+  }
+}
+
+.cable-management-mapping-modal {
+  display: flex;
+  gap: 12px;
+  height: 460px;
+}
+
+.cable-management-mapping-left,
+.cable-management-mapping-right {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 10px;
+}
+
+.cable-management-mapping-toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+.cable-management-mapping-only-unmapped {
+  margin: 10px 0;
+}
+
+.cable-management-device-list,
+.cable-management-selected-list {
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+.cable-management-device-item {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+}
+
+.cable-management-device-item.is-disabled {
+  opacity: 0.6;
+}
+
+.cable-management-device-item .device-code,
+.cable-management-selected-item .device-code {
+  color: #262626;
+  min-width: 120px;
+}
+
+.cable-management-device-item .device-name {
+  color: #8c8c8c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cable-management-device-page {
+  margin-top: 8px;
+}
+
+.cable-management-mapping-right-title {
+  margin-bottom: 10px;
+}
+
+.cable-management-selected-item {
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.cable-management-selected-item .device-order {
+  color: #8c8c8c;
+  width: 20px;
+}
+
+.cable-management-selected-item .point-text {
+  color: #595959;
+  flex: 1;
+}
+
+.cable-management-empty {
+  color: #8c8c8c;
+  padding: 16px;
+  text-align: center;
+}

@@ -1,0 +1,93 @@
+#load-chart,
+.power-factor {
+  position: relative;
+  width: 154px;
+  height: 154px;
+  max-height: 100%;
+}
+
+.responsive {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+/* 外圈光晕：科技蓝 / 极简白共用结构，色相由 tone 决定 */
+.enhanced {
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::before {
+    inset: -5px;
+    z-index: 0;
+    background: radial-gradient(circle, var(--water-polo-glow, rgba(47, 141, 255, 0.35)) 0%, transparent 70%);
+    opacity: 0.9;
+    animation: water-polo-halo 2.8s ease-in-out infinite;
+  }
+
+  &::after {
+    z-index: 0;
+    border: 1px dashed var(--water-polo-ring, rgba(125, 198, 255, 0.45));
+    opacity: 0.85;
+  }
+
+  :global(canvas) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.primary {
+  --water-polo-glow: rgba(77, 166, 255, 0.32);
+  --water-polo-ring: rgba(143, 208, 255, 0.48);
+}
+
+.warning {
+  --water-polo-glow: rgba(250, 173, 20, 0.38);
+  --water-polo-ring: rgba(255, 213, 102, 0.55);
+}
+
+:global(:root[data-visual-theme="minimal-white"]) {
+  .primary {
+    --water-polo-glow: rgba(91, 168, 255, 0.18);
+    --water-polo-ring: rgba(91, 168, 255, 0.28);
+  }
+
+  .warning {
+    --water-polo-glow: rgba(250, 173, 20, 0.22);
+    --water-polo-ring: rgba(250, 173, 20, 0.36);
+  }
+
+  .enhanced::before {
+    opacity: 0.55;
+  }
+}
+
+@keyframes water-polo-halo {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enhanced::before {
+    animation: none;
+  }
+}

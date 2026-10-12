@@ -1,0 +1,359 @@
+{
+  "path": "/programme/fire-safety.html",
+  "meta": {
+    "title": "智慧消防_消防安全管理系统_古河云科技",
+    "keywords": "智慧消防,消防安全,管网监测,火灾报警,无线探测,供水监测",
+    "description": "古河云消防安全管理系统充分运用IoT、云计算、大数据、人工智能等先进技术，以“智能化+数字化”为核心规划理念，建立一体化智慧消防安全管理解决方案。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-fire-safety-banner.webp",
+            "title": "消防安全管理系统",
+            "subtitle": "充分运用IoT、云计算、大数据、人工智能等先进技术，以“智能化+数字化”为核心规划理念，建立一体化智慧消防安全管理平台。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "产品试用",
+              "link": "#"
+            },
+            "secondaryButton": {
+              "text": "联系我们",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "巡查效率低",
+            "description": "传统巡查效率低且难覆盖全，存在漏检、假检风险。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "效率滞后",
+            "description": "隐患无法实时预警，依赖事后处置，导致损失扩大。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "资源分配难",
+            "description": "消防管理资源分配依赖经验，难以针对性优化。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "系统易瘫痪",
+            "description": "传统消防系统火灾时极易瘫痪，导致供水系统失效，出现无水可灭的危急情况。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-policy-1.webp",
+            "title": "《关于推进安全城市发展的意见》",
+            "description": "从“传统消防”向“现代消防”转变，能提前预知安全隐患，能证明消防工作已尽职尽责。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-policy-2.webp",
+            "title": "《“十四五”国家消防工作规划》",
+            "description": "加强远程监控、物联网监测、电气监控等信息化手段运用，加快轻型化、集成化、智能化消防监督检查、火灾调查装备配备，提高火灾防控效能。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-policy-3.webp",
+            "title": "《消防安全重大风险隐患专项排查整治2023行动工作方案》",
+            "description": "推动消防安全治理模式向事前预防转变，坚决守牢安全发展底线，以高水平安全保障高质量发展。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-policy-4.webp",
+            "title": "《安全生产治本攻坚三年行动方案2024-2026年》",
+            "description": "推进小型生产经营场所、经营性自建房、老旧住宅小区安装早期火灾报警和灭火装置。深入开展老旧场所消防设施升级改造。"
+          }
+        ],
+        "subtitle": "在国家政策强力驱动下，智慧消防管理系统建设已成为提升火灾防控效能、保障人民生命财产安全的必然选择，其平台化构建是落实政策要求、实现消防安全智能化转型的核心抓手。"
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-1.webp",
+            "title": "远程监控",
+            "subtitle": "通过物联网技术实时采集联网单位火灾自动报警、消防水监测等系统前端感知设备的报警信息和设备运行状态信息，并与其他物联网系统的感知设备，提前发现前端消防设施存在的各种故障隐患，督促相关部门整改，防患于未然，降低火灾风险。",
+            "features": [
+              {
+                "label": "实时监控：",
+                "value": "24小时不间断监控消防设施运行状态"
+              },
+              {
+                "label": "异常预警：",
+                "value": "智能识别异常情况，第一时间推送告警信息"
+              },
+              {
+                "label": "数据可视化：",
+                "value": "直观的图表展示设备状态和趋势分析"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-2.webp",
+            "title": "无线探测",
+            "subtitle": "利用物联网、云计算、大数据等技术，实现针对各种“小微场所”的24小时全程监控。当发生火情时，探测器可及时报警，以4G/NB/LoRa等多种传输方式将报警信号上传至智慧消防管理平台，以便于早发现、早控制，避免和减少火灾损失，降低火灾风险。",
+            "features": [
+              {
+                "label": "无线部署：",
+                "value": "无需布线，快速部署，降低安装成本"
+              },
+              {
+                "label": "多协议支持：",
+                "value": "支持4G/NB/LoRa等多种传输方式"
+              },
+              {
+                "label": "低功耗设计：",
+                "value": "设备续航时间长，维护成本低"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-3.webp",
+            "title": "火灾报警",
+            "subtitle": "通过安装无线手动火灾报警按钮、无线火灾声光报警器，发现火情后立即按下按钮即时报警，通过高分贝声响和强光闪烁结合的方式传递报警信息，确保人员快速感知，紧急疏散。",
+            "features": [
+              {
+                "label": "快速响应：",
+                "value": "一键报警，秒级响应，确保人员安全"
+              },
+              {
+                "label": "声光提示：",
+                "value": "高分贝声响和强光闪烁结合传递报警信息"
+              },
+              {
+                "label": "联动控制：",
+                "value": "与其他消防设备联动，自动启动应急预案"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-4.webp",
+            "title": "供水监测",
+            "subtitle": "利用物联网、云计算、大数据等技术，实现针对各种“小微场所”的24小时全程监控。当发生火情时，探测器可及时报警，以4G/NB/LoRa等多种传输方式将报警信号上传至智慧消防管理平台，以便于早发现、早控制，避免和减少火灾损失，降低火灾风险。",
+            "features": [
+              {
+                "label": "水位监测：",
+                "value": "实时监测水池水位，低水位自动报警"
+              },
+              {
+                "label": "压力监测：",
+                "value": "管网压力实时监控，确保供水压力达标"
+              },
+              {
+                "label": "水泵控制：",
+                "value": "远程控制消防水泵启停，保障供水可靠"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-5.webp",
+            "title": "管网监测",
+            "subtitle": "通过消防管网压力探测器持续采集管道压力数据及其变化，压力异常波动可触发报警进行及时排查。",
+            "features": [
+              {
+                "label": "漏水检测：",
+                "value": "智能检测管道漏水，及时定位故障点"
+              },
+              {
+                "label": "温度监测：",
+                "value": "监测管道温度，防止冻裂或高温损坏"
+              },
+              {
+                "label": "阀门状态：",
+                "value": "实时监控阀门开关状态，确保系统正常"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-scene-6.webp",
+            "title": "末端监测",
+            "subtitle": "通过消防管网压力探测器、消防栓监测终端、智能闷盖，持续监控水压情况，监测到水压异常、私用、损坏，非火警开启即报警，并进行报警推送，避免火势蔓延。",
+            "features": [
+              {
+                "label": "末端试水：",
+                "value": "定期自动末端试水，检测系统完好性"
+              },
+              {
+                "label": "设备巡检：",
+                "value": "智能巡检末端设备，发现异常及时报警"
+              },
+              {
+                "label": "维护保养：",
+                "value": "自动生成维护保养计划，提醒定期维护"
+              }
+            ]
+          }
+        ],
+        "theme": "dark"
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "安全效益显著提升",
+            "description": "实时监控火灾隐患，快速定位火源位置，实现早期预警，降低火灾发生概率，减少人员伤亡和财产损失。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "运营成本大幅优化",
+            "description": "减少消防值守人员需求，人力成本节省约30%-50%；延长设备寿命避免设备突发故障，运营成本降低20%。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "管理效率与合规性增强",
+            "description": "自动化巡检记录与报告生成，满足监管要求；数据可视化支持科学决策，提升管理水平。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "提升形象与社会价值",
+            "description": "通过建设智慧消防安全系统，有利于增强公众安全感，提升企业社会责任形象。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用中心",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "安全管理",
+                "href": "/product-center/safe.html"
+              },
+              {
+                "name": "内部管理",
+                "href": "/product-center/internal.html"
+              },
+              {
+                "name": "农批运营",
+                "href": "/product-center/agriculture.html"
+              },
+              {
+                "name": "集成管理",
+                "href": "/product-center/integration.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-case-1.webp",
+            "title": "光明海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-case-2.webp",
+            "title": "平湖海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-case-3.webp",
+            "title": "南昌海吉星",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

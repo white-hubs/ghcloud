@@ -1,0 +1,459 @@
+.left-panel {
+  --ue5-panel-top: 64px;
+  --ue5-panel-bottom: 76px;
+  --ue5-panel-width: calc(400 / 192 * 1rem);
+
+  position: absolute;
+  top: 0;
+  z-index: 96;
+  display: flex;
+  width: var(--ue5-panel-width);
+  height: 100vh;
+  flex-direction: column;
+  /* 勿用 overflow:hidden：会把 backdrop-filter 限制在侧栏内，毛玻璃透不出模型 */
+  overflow: visible;
+  transition: left 0.28s ease;
+  box-sizing: border-box;
+  padding: var(--ue5-panel-top) 10px var(--ue5-panel-bottom) 20px;
+  background: var(--visual-panel-bg-left, transparent);
+  color: var(--visual-text-color, #ffffff);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--visual-panel-mask-bg, transparent);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.right-panel {
+  --ue5-panel-top: 64px;
+  --ue5-panel-bottom: 76px;
+  --ue5-panel-width: calc(400 / 192 * 1rem);
+
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  width: var(--ue5-panel-width);
+  height: 100vh;
+  flex-direction: column;
+  overflow: visible;
+  transition: right 0.28s ease;
+  box-sizing: border-box;
+  padding: var(--ue5-panel-top) 10px var(--ue5-panel-bottom) 20px;
+  background: var(--visual-panel-bg-right, transparent);
+  color: var(--visual-text-color, #ffffff);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--visual-panel-mask-bg, transparent);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.scroll-y-auto {
+  overflow-y: overlay;
+
+  &::after {
+    display: none;
+  }
+
+  // 默认隐藏滚动条
+  &::-webkit-scrollbar {
+    width: 8px;
+    /* 设置滚动条宽度 */
+    height: 8px;
+    /* 设置滚动条高度 */
+    background-color: transparent;
+    /* 设置滚动条背景为透明 */
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 设置滚动条滑块颜色 */
+    border-radius: 4px;
+    /* 设置滚动条滑块圆角 */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 鼠标悬停时滚动条滑块颜色 */
+  }
+
+  // 鼠标移入时显示滚动条
+  &:hover::-webkit-scrollbar {
+    display: block;
+  }
+}
+
+.panel-layout-box {
+  --panel-card-gap: 12px;
+  /* 与侧栏 padding 同源，避免 height:100% 在部分嵌套下回落到内容高 */
+  --panel-content-height: calc(100vh - var(--ue5-panel-top) - var(--ue5-panel-bottom));
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 0;
+}
+
+.panel-card-slot {
+  --card-content-padding: 10px;
+  --card-stat-gap: 8px;
+  --card-section-gap: 10px;
+  --card-stat-padding: 6px 6px 6px 4px;
+  --card-stat-icon-size: 28px;
+  --card-pie-size: 132px;
+  --card-legend-row-height: 30px;
+  --card-legend-row-gap: 6px;
+  --card-legend-name-size: 12px;
+  --card-legend-value-size: 15px;
+  --card-no-data-img-max: 80px;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  margin-bottom: 0;
+  overflow: hidden;
+  container-type: size;
+  container-name: card-slot;
+
+  > :first-child {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  > :not(:first-child) {
+    flex: none;
+    width: 0;
+    height: 0;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+  }
+
+  > :global(.modal-container) {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  :global(.sub-panel-wrapper),
+  :global(.sub-panel),
+  :global(.sub-panel-content) {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  :global(.v2-chart-panel),
+  :global(.chart-panel),
+  :global(.trend-chart-panel) {
+    min-height: 180px;
+  }
+
+  :global(.sub-panel-content) {
+    overflow-x: hidden;
+  }
+
+  :global(.v2-panel-card .sub-panel) {
+    overflow: hidden;
+  }
+
+  :global(.v2-panel-card .sub-panel-content) {
+    padding: var(--card-content-padding);
+  }
+
+  :global(.sub-panel-content) > * {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  :global(.gh-line-chart.chart),
+  :global(.chart.gh-line-chart) {
+    min-height: 180px;
+  }
+
+  :global(.ue5-no-data) {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-height: 0;
+    max-height: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  :global(.ue5-no-data-inner img) {
+    width: clamp(40px, 24%, 80px);
+    max-height: min(72px, 48%);
+  }
+}
+
+.panel-card-slot[data-card-fill-mode="center"] {
+  :global(.sub-panel-content) {
+    justify-content: center;
+  }
+
+  :global(.sub-panel-content) > * {
+    flex: 0 1 auto;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+.panel-card-slot[data-card-fill-mode="rows"] {
+  :global(.sub-panel-content) {
+    justify-content: stretch;
+  }
+
+  :global(.air-conditioning-card-body),
+  :global(.cardBody) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  :global(.metrics),
+  :global(.metricsHost) {
+    flex: 0 0 auto;
+    max-height: 42%;
+    overflow: hidden;
+  }
+
+  :global(.stats-row),
+  :global(.safe-risk-source-stats) {
+    flex: 0 0 auto;
+  }
+
+  :global(.tableSurface),
+  :global(.table-panel) {
+    flex: 1 1 0 !important;
+    min-height: 140px;
+  }
+}
+
+.panel-card-slot[data-card-fill-mode="stretch"],
+.panel-card-slot[data-card-fill-mode="scroll"] {
+  :global(.sub-panel-content) {
+    justify-content: stretch;
+  }
+
+  :global(.overview-v2-body),
+  :global(.safe-risk-source-body),
+  :global(.safe-manage-trend-body),
+  :global(.safe-market-body),
+  :global(.security-monitor-device-count-v2) {
+    flex: 1 1 0;
+    height: 100%;
+    min-height: 0;
+  }
+
+  :global(.gh-line-chart.chart),
+  :global(.chart.gh-line-chart),
+  :global(.v2-chart-panel),
+  :global(.chart-panel),
+  :global(.trend-chart-panel) {
+    flex: 1 1 0;
+    min-height: 180px;
+    height: 100%;
+  }
+}
+
+.panel-card-slot[data-card-fill-mode="scroll"] {
+  :global(.sub-panel-content) {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--visual-scrollbar-thumb, rgba(70, 166, 255, 0.35)) transparent;
+  }
+
+  :global(.sub-panel-content) > * {
+    flex: 0 1 auto;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  :global(.sub-panel-content)::-webkit-scrollbar {
+    width: var(--visual-scrollbar-size, 6px);
+  }
+
+  :global(.sub-panel-content)::-webkit-scrollbar-thumb {
+    background-color: var(--visual-scrollbar-thumb, rgba(70, 166, 255, 0.35));
+    border-radius: 3px;
+  }
+}
+
+.panel-card-slot[data-card-density="compact"] {
+  --card-content-padding: 6px;
+  --card-stat-gap: 4px;
+  --card-section-gap: 6px;
+  --card-stat-padding: 5px 5px 5px 4px;
+  --card-stat-icon-size: 26px;
+  --card-pie-size: 100px;
+  --card-legend-row-height: 28px;
+  --card-legend-row-gap: 5px;
+  --card-legend-name-size: 12px;
+  --card-legend-value-size: 14px;
+  --card-no-data-img-max: 48px;
+
+  &:not([data-card-fill-mode="rows"]) :global(.sub-panel-content) {
+    overflow-y: auto;
+  }
+}
+
+.panel-card-slot[data-card-density="compact"] {
+  :global(.stats-row) {
+    gap: var(--card-stat-gap);
+    margin-bottom: var(--card-section-gap);
+  }
+
+  :global(.stat-card) {
+    min-height: 0;
+    padding: var(--card-stat-padding);
+  }
+
+  :global(.stat-icon),
+  :global(.stat-icon.stat-icon-image) {
+    flex: 0 0 var(--card-stat-icon-size);
+    width: var(--card-stat-icon-size);
+    height: var(--card-stat-icon-size);
+  }
+
+  :global(.metrics) {
+    gap: var(--card-section-gap);
+  }
+
+  :global(.flatGrid),
+  :global(.statusGrid) {
+    gap: var(--card-stat-gap);
+  }
+
+  :global(.ue5-no-data) {
+    min-height: 0;
+  }
+
+  :global(.ue5-no-data-inner img) {
+    width: clamp(32px, 22%, var(--card-no-data-img-max));
+    max-height: min(56px, 42%);
+  }
+
+  :global(.fire-device-distribution .chart-pie-wrap),
+  :global(.chart-pie-wrap),
+  :global(.safe-risk-pie-wrap),
+  :global(.safe-device-pie-wrap) {
+    flex: 0 0 var(--card-pie-size);
+    width: var(--card-pie-size);
+    height: var(--card-pie-size);
+    min-width: var(--card-pie-size);
+    max-width: var(--card-pie-size);
+    min-height: var(--card-pie-size);
+  }
+
+  :global(.fire-device-distribution .stats-row) {
+    margin-bottom: 6px;
+    gap: var(--card-stat-gap);
+  }
+
+  :global(.fire-device-distribution .stat-card) {
+    padding: 4px 3px;
+  }
+}
+
+.panel-pack-box {
+  display: grid;
+  grid-template-rows: var(--panel-slot-rows);
+  gap: var(--panel-slot-gap, 12px);
+  align-content: start;
+  align-items: stretch;
+  box-sizing: border-box;
+  height: var(--panel-content-height);
+  max-height: var(--panel-content-height);
+  min-height: 0;
+  padding-top: var(--panel-pack-padding-top, 0);
+  padding-bottom: var(--panel-pack-padding-bottom, 0);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--visual-scrollbar-thumb, rgba(70, 166, 255, 0.35)) transparent;
+
+  &::-webkit-scrollbar {
+    width: var(--visual-scrollbar-size, 6px);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--visual-scrollbar-track, transparent);
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--visual-scrollbar-thumb, rgba(70, 166, 255, 0.35));
+    border-radius: 3px;
+  }
+
+  > .panel-card-slot {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    align-self: stretch;
+    overflow: hidden;
+  }
+}
+
+.views-gis {
+  --ue5-panel-top: 100px;
+
+  padding-top: var(--ue5-panel-top);
+
+  &.left-panel {
+    background: transparent;
+    padding-right: 48px;
+    &::after {
+      background: linear-gradient(to right, rgba(1, 12, 24, 0.92) 9%, rgba(2, 15, 30, 0.88) 89%, rgba(4, 20, 39, 0) 100%);
+    }
+  }
+
+  &.right-panel {
+    background: transparent;
+    padding-left: 48px;
+    &::after {
+      background: linear-gradient(to left, rgba(1, 12, 24, 0.92) 9%, rgba(2, 15, 30, 0.88) 89%, rgba(4, 20, 39, 0) 100%);
+    }
+  }
+}
+
+.panel-menu-hidden {
+  --ue5-panel-bottom: 0px;
+}

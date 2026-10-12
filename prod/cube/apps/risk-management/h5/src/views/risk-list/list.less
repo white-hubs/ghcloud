@@ -1,0 +1,77 @@
+.alarm-list-pull-refresh {
+  background: #F3F7FA;
+  height: calc(100vh - 160px);
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 12px 0;
+
+  .alarm-cell-group {
+    margin-bottom: 3vw;
+    position: relative;
+
+
+    .alarm-cell-title {
+      font-size: 15px;
+      color: #1F3140;
+      font-weight: 550;
+
+      .alarm-status-tag {
+        width: 51px;
+        height: 24px;
+        border-radius: 10px 10px 10px 0px;
+        background: #FFAA26;
+        font-size: 13px;
+        color: white;
+        padding: 3px 6px;
+        margin-right: 6px;
+
+        &.ALARM_PROGRESS_CONFIRMED {
+          background: #7232dd;
+        }
+
+        &.ALARM_SUSPEND {
+          background: #1989fa;
+        }
+
+        &.ALARM_HANDLER {
+          background: #07c160;
+        }
+      }
+    }
+
+    .alarm-cell-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .time-out-pic {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      top: 16px;
+      right: 13px;
+    }
+  }
+}
+.add-icon {
+  width: 54px;
+  height: 54px;
+  background: #1d66ff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  bottom: 20vw;
+  right: 5vw;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #599ed6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}

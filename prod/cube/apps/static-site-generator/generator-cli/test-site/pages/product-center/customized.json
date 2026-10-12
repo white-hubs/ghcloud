@@ -1,0 +1,97 @@
+{
+  "path": "/product-center/customized.html",
+  "meta": {
+    "title": "个性化定制服务_专业定制多领域AI+安全应急平台_古河云科技",
+    "keywords": "个性化定制服务,AI+安全应急平台定制服务,平台定制服务",
+    "description": "古河云专注于AI+安全应急平台定制解决方案，为您提供一站式数字化定制服务，包括数字孪生技术、系统、app和小程序定制开发，服务全国多地区，赶快联系我们，打造您独特的安全平台项目！"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-customized-banner.webp",
+            "title": "为您打造个性化的数字化解决方案",
+            "subtitle": "我们提供全方位的专业定制服务，从战略规划到落地执行，为企业提供值得信赖的技术保障。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<section id='customization' class='w-full'><div class='w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]'><div style='position: relative; margin-bottom: 3vw; text-align: center;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin: 0;'>个性定制化</h2><div style='position: absolute; bottom: -1vw; left: 50%; transform: translateX(-50%); width: 3.125vw; height: 0.3125vw; background: #1578ff; border-radius: 9999px;'></div></div><p style='text-align: center; color: #585c60; margin: 0 0 2.0833vw; font-size: 0.8333vw; line-height: 1.6;'>基于强大灵活的“开河”智能中枢，在现有标准产品上，快速应用化拓展，高效响应个性化定制服务。</p><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/customization-main.webp' alt='个性定制化' style='display: block; width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);'></div></section>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<section id='services' class='w-full'><div class='w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]'><div style='position: relative; margin-bottom: 3vw; text-align: center;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin: 0;'>服务内容</h2><div style='position: absolute; bottom: -1vw; left: 50%; transform: translateX(-50%); width: 3.125vw; height: 0.3125vw; background: #1578ff; border-radius: 9999px;'></div></div><p style='text-align: center; color: #585c60; margin: 0 0 2.0833vw; font-size: 0.8333vw; line-height: 1.6;'>为企业用户提供产品全方位定制服务，满足客户多维需求，助力企业降本增效，赋能行业蓬勃发展</p><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/services-main.webp' alt='服务内容' style='display: block; width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);'></div></section>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<section id='advantages' class='w-full' style='background: linear-gradient(180deg, rgba(223,239,255,0.60) 0%, rgba(245,250,255,0.60) 100%);'><div class='w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]'><div style='position: relative; margin-bottom: 3vw; text-align: center;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin: 0;'>服务优势</h2><div style='position: absolute; bottom: -1vw; left: 50%; transform: translateX(-50%); width: 3.125vw; height: 0.3125vw; background: #1578ff; border-radius: 9999px;'></div></div><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/advantages-main-x2.webp' alt='优势' style='display: block; width: 100%; height: auto; border-radius: 0.5rem;'></div></section>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "ProcessFlow",
+      "props": {
+        "title": "服务流程",
+        "subtitle": "围绕实际需求快速协同开发，高效交付上线，流畅验收",
+        "steps": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/12.png",
+            "label": "提交需求"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/8.png",
+            "label": "沟通方案"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/6.png",
+            "label": "报价签约"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/10.png",
+            "label": "开发定制"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/11.png",
+            "label": "交付验收"
+          }
+        ],
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<section id='team' class='w-full'><div class='w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]'><div style='position: relative; margin-bottom: 3vw; text-align: center;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin: 0;'>服务团队</h2><div style='position: absolute; bottom: -1vw; left: 50%; transform: translateX(-50%); width: 3.125vw; height: 0.3125vw; background: #1578ff; border-radius: 9999px;'></div></div><div style='display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.0417vw;'><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/team-1.webp' alt='专业' style='display: block; width: 100%; height: 10.4167vw; object-fit: cover;'><div style='padding: 1.5625vw; text-align: center;'><h3 style='font-size: 0.9375vw; font-weight: 500; color: #182b44; margin: 0 0 0.7813vw;'>专业</h3><p style='font-size: 0.7292vw; color: #67717d; line-height: 1.6; margin: 0; font-weight: 300;'>始终以用户体验为先，力争为每一位客户提供个性化的设计及交互体验。</p></div></div><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/team-2.webp' alt='责任' style='display: block; width: 100%; height: 10.4167vw; object-fit: cover;'><div style='padding: 1.5625vw; text-align: center;'><h3 style='font-size: 0.9375vw; font-weight: 500; color: #182b44; margin: 0 0 0.7813vw;'>责任</h3><p style='font-size: 0.7292vw; color: #67717d; line-height: 1.6; margin: 0; font-weight: 300;'>高品质交付是我们始终恪守的责任，对项目进行全周期把控，确保成功交付。</p></div></div><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/team-3.webp' alt='理解' style='display: block; width: 100%; height: 10.4167vw; object-fit: cover;'><div style='padding: 1.5625vw; text-align: center;'><h3 style='font-size: 0.9375vw; font-weight: 500; color: #182b44; margin: 0 0 0.7813vw;'>理解</h3><p style='font-size: 0.7292vw; color: #67717d; line-height: 1.6; margin: 0; font-weight: 300;'>深刻理解客户需求及痛点，始终关注利于客户的最大价值及时调整方案。</p></div></div><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/customized/team-4.webp' alt='倾听' style='display: block; width: 100%; height: 10.4167vw; object-fit: cover;'><div style='padding: 1.5625vw; text-align: center;'><h3 style='font-size: 0.9375vw; font-weight: 500; color: #182b44; margin: 0 0 0.7813vw;'>倾听</h3><p style='font-size: 0.7292vw; color: #67717d; line-height: 1.6; margin: 0; font-weight: 300;'>有效组织客户和工程师团队，协同工作，高效创造价值，确保客户的售后服务体验。</p></div></div></div></div></section>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style='background-image:url(\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-booking-bg.webp\");background-size:cover;background-position:center;padding:3.6458vw 0;text-align:center;'><div style='display:inline-block;'><h3 style='font-size:1.5625vw;color:#fff;font-weight:500;margin-bottom:0.5208vw;'>古河云科技</h3><p style='font-size:1.0417vw;color:#fff;margin-bottom:1.5625vw;'>为客户提供AI+安全管理产品及解决方案，重塑安全应急管理新范式</p><a href='/consultation.html' style='display:inline-block;padding:0.8333vw 2.0833vw;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:0.8333vw;text-decoration:none;border-radius:0.2083vw;backdrop-filter:blur(4px);'>预约演示</a></div></div>"
+      }
+    }
+  ],
+  "layout": "default"
+}

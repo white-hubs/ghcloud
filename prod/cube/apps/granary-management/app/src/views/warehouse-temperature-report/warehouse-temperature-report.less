@@ -1,0 +1,129 @@
+.warehouse-temperature-report-page {
+  box-sizing: border-box;
+  min-height: calc(100vh - 160px);
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+.warehouse-temperature-report-panel {
+  border-radius: 8px;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.warehouse-temperature-report-panel h3 {
+  color: #1d2129;
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+.warehouse-temperature-report-filters {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.warehouse-temperature-report-filters label {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.warehouse-temperature-report-filters label > span,
+.warehouse-temperature-report-thresholds > span {
+  color: #1d2129;
+  font-size: 14px;
+}
+
+.warehouse-temperature-report-select {
+  width: 200px;
+}
+
+.warehouse-temperature-report-threshold-row {
+  align-items: center;
+  border-top: 1px solid #e5e6eb;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.warehouse-temperature-report-table-wrap {
+  margin-top: 14px;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.warehouse-temperature-report-point-cell {
+  color: #1d2129;
+}
+
+.warehouse-temperature-report-temperature {
+  color: #1d2129;
+}
+
+.warehouse-temperature-report-temperature.is-full-cell {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.warehouse-temperature-report-table-wrap .ant-table-tbody > tr > td {
+  padding: 0;
+}
+
+.warehouse-temperature-report-table-wrap .warehouse-temperature-report-temperature.is-low {
+  color: #389e0d;
+  font-weight: 700;
+}
+
+.warehouse-temperature-report-table-wrap .warehouse-temperature-report-temperature.is-normal {
+  color: #d46b08;
+  font-weight: 700;
+}
+
+.warehouse-temperature-report-table-wrap .warehouse-temperature-report-temperature.is-high {
+  color: #cf1322;
+  font-weight: 700;
+}
+
+.warehouse-temperature-report-temperature.is-empty {
+  color: #86909c;
+}
+
+.warehouse-temperature-report-table-wrap .warehouse-temperature-report-layer-gap-row > td {
+  background: #fafafa;
+  border-color: #f0f0f0;
+  color: #1d2129;
+  font-weight: 600;
+}
+
+.warehouse-temperature-report-table-wrap .warehouse-temperature-report-cable-group-header-row > td {
+  background: #f7f8fa;
+  border-color: #e5e6eb;
+  color: #1d2129;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.warehouse-temperature-report-layer-header-cell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .warehouse-temperature-report-threshold-row {
+    justify-content: flex-end;
+  }
+}

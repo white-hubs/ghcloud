@@ -1,0 +1,398 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/shared-ui/panel/v2-ring-legend.less";
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 250px;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+/* 与左侧「报警记录」汇总三卡同构：一排三列 */
+.statsRow {
+  display: flex;
+  min-width: 0;
+  gap: 6px;
+  padding-top: 8px;
+}
+
+.statCard {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 6px 6px 4px;
+  overflow: hidden;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 12px rgba(46, 148, 255, 0.1),
+    0 4px 10px rgba(0, 27, 66, 0.06);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(90deg, transparent, rgba(150, 214, 255, 0.45), transparent);
+    opacity: 0.7;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(72, 186, 255, 0.55);
+    box-shadow:
+      inset 0 0 16px rgba(46, 148, 255, 0.18),
+      0 8px 18px rgba(0, 27, 66, 0.12);
+    transform: translateY(-1px);
+    outline: none;
+  }
+}
+
+.isTotal {
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+}
+
+.statIcon {
+  display: flex;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.35));
+  }
+}
+
+.statContent {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.statLabel {
+  margin-bottom: 1px;
+  overflow: visible;
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.statValue {
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 16px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.34);
+}
+
+.isUnresolved {
+  background:
+    linear-gradient(135deg, rgba(255, 171, 16, 0.16), rgba(255, 77, 79, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+}
+
+.isUnhandledValue,
+.isUnresolvedValue {
+  color: #ffab10;
+  text-shadow: 0 0 10px rgba(255, 171, 16, 0.28);
+}
+
+.isHandled {
+  background:
+    linear-gradient(135deg, rgba(0, 242, 123, 0.14), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+}
+
+.isHandledValue {
+  color: #00f27b;
+  text-shadow: 0 0 10px rgba(0, 242, 123, 0.28);
+}
+
+/* 去掉图表区背景块，贴合卡片本体；列表贴顶，圆环相对列表垂直居中 */
+.analysisSurface {
+  --legend-row-height: 30px;
+  --legend-row-gap: 6px;
+  --alarm-level-pie-size: 118px;
+  --alarm-level-list-height: calc(var(--legend-row-height) * 4 + var(--legend-row-gap) * 3);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-height: 148px;
+  flex: 1 1 auto;
+  padding: 4px 0 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.isEmpty {
+  align-items: stretch;
+  justify-content: center;
+  min-height: 0;
+}
+
+.chartWrap {
+  display: flex;
+  flex: 0 0 var(--alarm-level-pie-size);
+  width: var(--alarm-level-pie-size);
+  height: var(--alarm-level-pie-size);
+  min-width: var(--alarm-level-pie-size);
+  min-height: var(--alarm-level-pie-size);
+  /* 列表贴顶不变；圆环相对 4 行图例高度垂直居中 */
+  margin-top: max(0px, calc((var(--alarm-level-list-height) - var(--alarm-level-pie-size)) / 2));
+  align-items: center;
+  justify-content: center;
+}
+
+.levelList {
+  .v2-ring-legend-list();
+  flex: 1 1 0;
+  min-width: 0;
+  height: var(--alarm-level-list-height);
+  max-height: var(--alarm-level-list-height);
+  justify-content: flex-start;
+}
+
+.levelItem {
+  .v2-ring-legend-item();
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+
+  &:hover,
+  &:focus-visible {
+    .v2-ring-legend-item-hover();
+    outline: none;
+  }
+}
+
+.levelName {
+  .v2-ring-legend-name();
+}
+
+.levelColor {
+  .v2-ring-legend-dot();
+}
+
+.levelNameText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.levelCount {
+  .v2-ring-legend-value();
+}
+
+.levelUnit {
+  .v2-ring-legend-unit();
+}
+
+.pieCenterValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.pieCenterLabel {
+  color: var(--visual-chart-label-color, rgba(220, 238, 255, 0.86));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  line-height: 1.3;
+  text-align: center;
+}
+
+.zoomBody {
+  gap: 14px;
+
+  .statsRow {
+    gap: 10px;
+    padding-top: 12px;
+  }
+
+  .statCard {
+    min-height: 64px;
+    padding: 10px 14px 10px 10px;
+    gap: 10px;
+  }
+
+  .statIcon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .statValue {
+    font-size: calc(var(--font-size-scale, 1) * 24px);
+  }
+
+  .analysisSurface {
+    --legend-row-height: 40px;
+    --legend-row-gap: 8px;
+    --alarm-level-pie-size: 220px;
+    min-height: 360px;
+    padding-top: 8px;
+  }
+
+  .chartWrap {
+    flex-basis: var(--alarm-level-pie-size);
+    width: var(--alarm-level-pie-size);
+    height: var(--alarm-level-pie-size);
+    min-width: var(--alarm-level-pie-size);
+    min-height: var(--alarm-level-pie-size);
+  }
+
+  .levelList {
+    .v2-ring-legend-list-zoom();
+    height: var(--alarm-level-list-height);
+    max-height: var(--alarm-level-list-height);
+  }
+
+  .levelCount {
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+  }
+
+  .pieCenterValue {
+    font-size: calc(var(--font-size-scale, 1) * 22px);
+  }
+}
+
+:global {
+  .cmd-alarm-level-v2-panel .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+}
+
+/* 极简白：对齐设备总览三色 pastel 子卡 */
+:global(:root[data-visual-theme="minimal-white"] .cmd-alarm-level-v2-panel) {
+  .statsRow {
+    gap: 8px;
+  }
+
+  .statCard {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.78));
+    border-color: rgba(116, 158, 210, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(61, 111, 175, 0.06);
+
+    &::before,
+    &::after {
+      display: none;
+      content: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: rgba(72, 186, 255, 0.52);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 8px 18px rgba(61, 111, 175, 0.1);
+      transform: none;
+    }
+  }
+
+  .isTotal {
+    background: linear-gradient(180deg, rgba(232, 243, 255, 0.98), rgba(246, 250, 255, 0.94));
+  }
+
+  .isUnresolved {
+    background: linear-gradient(180deg, rgba(255, 250, 240, 0.98), rgba(255, 252, 248, 0.94));
+  }
+
+  .isHandled {
+    background: linear-gradient(180deg, rgba(236, 252, 246, 0.98), rgba(246, 252, 250, 0.94));
+  }
+
+  .statLabel,
+  .levelName,
+  .levelUnit,
+  .pieCenterLabel {
+    overflow: visible;
+    color: var(--visual-muted-color, #49628f);
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  .statValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .isUnresolvedValue {
+    color: #d48806;
+  }
+
+  .isHandledValue {
+    color: #0f9b5f;
+  }
+
+  .statIcon img {
+    filter: none;
+  }
+
+  .levelItem {
+    .v2-ring-legend-item-minimal-white();
+  }
+
+  .levelName,
+  .levelUnit {
+    .v2-ring-legend-text-minimal-white();
+  }
+
+  .pieCenterValue,
+  .levelCount {
+    .v2-ring-legend-value-minimal-white();
+    text-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(cmd-alarm-level-v2-panel);

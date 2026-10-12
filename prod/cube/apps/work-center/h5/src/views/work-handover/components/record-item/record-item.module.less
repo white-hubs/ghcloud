@@ -1,0 +1,197 @@
+.handover-cell-group {
+  margin: 0 12px 12px;
+  .handover-cell-title {
+    font-size: 15px;
+    color: #1F3140;
+    font-weight: 550;
+    display: flex;
+    // justify-content: space-between;
+    .handover-cell-text {
+      flex: 1;
+      margin-left: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      white-space: nowrap;
+    }
+    .handover-cell-time {
+      font-size: 12px;
+      color: #999;
+      white-space: nowrap;
+    }
+  }
+  .handover-cell-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+  }
+  .handover-status-tag {
+    border-radius: 4px;
+    background: #FFAA26;
+    font-size: 13px;
+    color: white;
+    padding: 2px 6px;
+    &.WAIT_HANDOVER {
+      background: #1989fa;
+    }
+    &.HAND_OVERED {
+      background: #07c160;
+    }
+    &.CANCEL {
+      background: #7F7F7F;
+    }
+  }
+}
+
+
+.status-level {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  .status {
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: center;
+    margin-right: 8px;
+  }
+  .level {
+    padding: 5px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: center;
+  }
+}
+
+.record-item-title {
+  display: flex;
+
+  .text {
+    flex: 1;
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+  }
+
+  .timeout {
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 98px;
+    right: 14px;
+  }
+
+  .status-level {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+
+    .status {
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+      margin-right: 8px;
+    }
+    .ALARM_UN_CONFIRMED,
+    .ALARM_PROGRESS_CONFIRMED {
+      color: #f69703;
+      background: rgba(246, 151, 3, 0.10);
+    }
+
+    .ALARM_SUSPEND {
+      background: rgba(21, 120, 255, 0.10);
+      color: var(--van-primary-color);;
+    }
+
+    .ALARM_HANDLER {
+      background: rgba(106, 181, 57, 0.10);
+      color: #6AB539;
+    }
+
+    .level {
+      padding: 5px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+    }
+
+    .one_level {
+      color: #f01c1c;
+      background: rgba(240, 28, 28, 0.10);
+    }
+
+    .two_level {
+      color: #F69703;
+      background: rgba(246, 151, 3, 0.10);
+    }
+
+    .three_level {
+      color: #F4CF00;
+      background: rgba(244, 207, 0, 0.10)
+    }
+
+    .four_level {
+      color: var(--van-primary-color);;
+      background: rgba(21, 120, 255, 0.10);
+    }
+  }
+}
+
+.record-item-content {
+  padding-bottom: 10px;
+  margin: 0 10px;
+  font-size: 13px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #666666;
+
+  .alarm-cell-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    .label {
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .value {
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+
+      .address {
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.handover-cell-button{
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,149 @@
+@import "./v2-ring-legend.less";
+
+:global {
+  .policeList {
+    .v2-ring-legend-list();
+    width: 100%;
+    height: auto;
+    align-items: stretch;
+  }
+
+  .thePolice {
+    .v2-ring-legend-item();
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+
+    div {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+
+      .thePoliceLeft {
+        display: inline-block;
+        max-width: 96px;
+        margin-left: 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .thePoliceColor {
+        .v2-ring-legend-dot();
+        display: inline-block;
+        background: #328bf7;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    > span {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    > .pie-list-metrics {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: baseline;
+      justify-content: flex-end;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .pie-list-value {
+      .v2-ring-legend-value();
+    }
+
+    .pie-list-unit,
+    .pie-list-ratio {
+      .v2-ring-legend-unit();
+    }
+  }
+
+  .policeList .thePolice:last-child {
+    margin-bottom: 0;
+  }
+
+  .access-control-card-theme .policeList {
+    .v2-ring-legend-list();
+    align-items: stretch;
+    height: auto;
+    padding: 0;
+  }
+
+  .access-control-card-theme .thePolice {
+    .v2-ring-legend-item();
+    color: var(--access-control-text-primary, #fff);
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+
+    > div {
+      min-width: 0;
+
+      .thePoliceLeft {
+        max-width: 92px;
+        margin-left: 7px;
+      }
+
+      .thePoliceColor {
+        .v2-ring-legend-dot();
+      }
+
+      span {
+        font-size: var(--access-control-font-label, 12px);
+      }
+    }
+
+    > .pie-list-metrics {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: baseline;
+      justify-content: flex-end;
+      gap: var(--access-control-space-md, 10px);
+      min-width: 76px;
+    }
+
+    .pie-list-value {
+      .v2-ring-legend-value();
+    }
+
+    .pie-list-unit,
+    .pie-list-ratio {
+      .v2-ring-legend-unit();
+    }
+  }
+
+  .access-control-card-theme.is-zoom .policeList {
+    .v2-ring-legend-list-zoom();
+  }
+
+  .access-control-card-theme.is-zoom .thePolice {
+    > div .thePoliceLeft {
+      max-width: 180px;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .thePolice,
+  :root[data-visual-theme="minimal-white"] .access-control-card-theme .thePolice {
+    .v2-ring-legend-item-minimal-white();
+    color: var(--access-control-text-primary, #17366d);
+  }
+
+  :root[data-visual-theme="minimal-white"] .thePolice .pie-list-value,
+  :root[data-visual-theme="minimal-white"] .access-control-card-theme .thePolice .pie-list-value {
+    .v2-ring-legend-value-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .thePolice .pie-list-unit,
+  :root[data-visual-theme="minimal-white"] .thePolice .pie-list-ratio,
+  :root[data-visual-theme="minimal-white"] .access-control-card-theme .thePolice .pie-list-unit,
+  :root[data-visual-theme="minimal-white"] .access-control-card-theme .thePolice .pie-list-ratio {
+    .v2-ring-legend-text-minimal-white();
+  }
+}

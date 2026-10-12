@@ -1,0 +1,39 @@
+
+.preview-group{
+  border-top: 1px solid #f0f0f0;
+  overflow: hidden;
+  :global {
+    .cube-docs-tabs-nav{
+      padding: 0 10px;
+      justify-content: flex-end !important;
+      margin-bottom: 0;
+    }
+    .cube-docs-tabs-content-holder{
+      box-sizing: border-box;
+    }
+    .vp-adaptive-theme{
+      margin: 0 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  .close-icon{
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.hide{
+  :global {
+    .cube-docs-tabs-nav-wrap{
+      display: none !important;
+    }
+    .cube-docs-tabs-content-holder{
+      display: none !important;
+    }
+  }
+}

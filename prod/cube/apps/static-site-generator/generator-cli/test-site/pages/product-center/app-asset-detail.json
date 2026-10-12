@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-asset-detail.html",
+  "meta": {
+    "title": "资产管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "资产信息化管理，包含固定资产管理、耗材管理，从资产入库、派发、调拨、报废实现资产全生命周期管理，提供资产盘点的能力，辅助内部半自动化盘点，减少现场人力投入。",
+    "keywords": "资产管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/资产管理/main.png",
+        "productName": "资产管理",
+        "productDescription": "资产信息化管理，包含固定资产管理、耗材管理，从资产入库、派发、调拨、报废实现资产全生命周期管理，提供资产盘点的能力，辅助内部半自动化盘点，减少现场人力投入。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "资产管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">资产信息化管理，包含固定资产管理、耗材管理，从资产入库、派发、调拨、报废实现资产全生命周期管理，提供资产盘点的能力，辅助内部半自动化盘点，减少现场人力投入。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>资产管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">从资产入库到派发、调拨、报废等流程，系统自动记录资产的流程数据。同时，系统支持建立资产盘点单，定期对资产进行盘点，并自动生成盘点报告，协助资产管理员进行日常维护工作。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965335618290462722.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965339806915375106.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>耗材管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实时记录耗材的入库和出库情况，支持创建耗材盘点单，定期进行耗材盘点，并自动生成盘点结果，以确保库存数据的准确性和及时性。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965340309510434817.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965340750000435201.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>数据报表</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">根据业务需求，统计资产相关数据并生成规范的报表，包括资产履历表、维保到期资产、逾龄资产、部门资产等，以协助资产管理员进行日常管理和维护。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>系统配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">统计耗材的出入库情况以及部门领用情况等数据，为管理决策提供支持。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>流程配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对资产进行基础配置，包括资产分类、仓库配置、耗材档案、资产来源、报废原因、部门资产管理员等，以支撑上层业务的正常流转和管理。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411469664258",
+            "name": "停车管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/停车管理/main.png",
+            "version": "1.0.2",
+            "description": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+            "href": "/product-center/app-parking-detail.html"
+          },
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          },
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,9 @@
+<view class="bottom-swiper">
+	<swiper bindchange="handleSwiperChange" current="{{$state.currentPointIndex}}" circular previous-margin="30rpx" next-margin="30rpx" class="swiper" active-class="active-swiper">
+		<swiper-item wx:for="{{$state.pointList}}" wx:key="id">
+			<view class="swiper-item" data-index="{{index}}" bindtap="handleClickSwiper">
+				<point-item background="#fff" pointItem="{{item}}"></point-item>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>

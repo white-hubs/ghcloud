@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>接口调用示例</title>
+</head>
+
+<body>
+  <button id="getLineBtn">获取线路</button>
+  <button id="heartBeatBtn" disabled>发送心跳</button>
+  <div id="result"></div>
+
+  <script>
+    // 假设服务器运行在本地的 3000 端口，你可以根据实际情况修改
+    const apiBaseUrl = 'http://localhost:3000'; 
+    let currentAddress = null;
+    let authorization = 'your_auth_token'; // 替换为实际的授权令牌
+
+    const getLineBtn = document.getElementById('getLineBtn');
+    const heartBeatBtn = document.getElementById('heartBeatBtn');
+    const resultDiv = document.getElementById('result');
+
+    getLineBtn.addEventListener('click', async () => {
+      try {
+        const response = await fetch(`${apiBaseUrl}/getModelLine`, {
+          headers: {
+            'authorization': authorization
+          }
+        });
+        const data = await response.json();
+        resultDiv.textContent = JSON.stringify(data, null, 2);
+        if (data.code === 200 && data.data) {
+          currentAddress = data.data;
+          heartBeatBtn.disabled = false;
+        }
+      } catch (error) {
+        resultDiv.textContent = `请求出错: ${error.message}`;
+      }
+    });
+
+    heartBeatBtn.addEventListener('click', async () => {
+      if (!currentAddress) {
+        resultDiv.textContent = '请先获取线路';
+        return;
+      }
+      try {
+        const response = await fetch(`${apiBaseUrl}/lineHeartBeat`, {
+          method: 'POST',
+          headers: {
+            'authorization': authorization,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            address: currentAddress
+          })
+        });
+        if (response.ok) {
+          resultDiv.textContent = '心跳发送成功';
+        } else {
+          resultDiv.textContent = '心跳发送失败';
+        }
+      } catch (error) {
+        resultDiv.textContent = `请求出错: ${error.message}`;
+      }
+    });
+  </script>
+</body>
+
+</html>

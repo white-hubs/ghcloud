@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-electric-detail.html",
+  "meta": {
+    "title": "电气管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "电气管理系统通过AIoT技术实现电气隐患实时监测→智能预警→自动处置→能效优化全流程闭环管理，支持查看电气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在电气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+    "keywords": "电气管理,用电安全,电气火灾,能耗管理,智慧用电"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/电气管理/main.png",
+        "productName": "电气管理",
+        "productDescription": "电气管理系统通过AIoT技术实现电气隐患实时监测→智能预警→自动处置→能效优化全流程闭环管理，支持查看电气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在电气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "电气管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">电气管理系统通过AIoT技术实现电气隐患实时监测→智能预警→自动处置→能效优化全流程闭环管理，支持查看电气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在电气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965002800557469697.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电气中心</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">基于电气业务产生的事件，生成统计数据，以可视化形式呈现，满足管理及业务需求。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965000802898554881.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电气监测</strong></span></h4><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1964997585351487489.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>电气GIS地图</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">在GIS地图上展示园区电器设备的位置，点击设备图标可查看设备属性信息及实时运行参数。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>设备监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">将物联网接入的电气传感器设备数据，在业务平台以图文加列表的形式进行呈现，支持按照设备区域、设备状态、产品品类等进行筛选查询。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>电气报警</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示电气设备报警记录，包括报警事件、报警级别、报警区域、详细位置、报警时间、报警设备、状态等，点击报警记录可查看详情并进行指派处理。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></h4><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965009267419262977.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965009286327185410.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>电气报警统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示电气报警统计数据，包括报警事件、报警总数、待接收、处理中、已处理、已挂起报警数等，支持按照时间、事件进行筛选查询。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警处理统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示报警处理统计数据，包括人员姓名、所属部门、部门报警数、个人报警数、报警处理率、报警响应率等，支持按照时间、所属部门进行查询。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>电气分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">以可视化形式展示电气报警相关数据分析结果，包括基本信息、报警事件分析、区域分析、处理效率分析等。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>业务配置</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持配置报警规则，可指派处理人员和设置消息推送，当电气数据有异常情况时，触发规则，系统自动推送报警数据至相关人员进行处理。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>电气设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立电气设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现电气设备的在线管理。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>采集配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持配置数据采集规则，包括配电采集周期、用电抄表时间等，可关联变压器设备、高压进线设备，按照业务需求进行电气监测。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>消息配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持自定义配置消息通知，可设置通知条件、通知方式、通知人员、通知模板等。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411331252226",
+            "name": "日常巡检",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "id": "1811344408781115393",
+            "name": "入侵报警",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+            "version": "1.0.1",
+            "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。",
+            "href": "/product-center/app-intrusion-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

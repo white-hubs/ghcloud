@@ -1,0 +1,195 @@
+.datactr {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.infoTitle {
+  text-align: left;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  padding-left: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+.dataTitle {
+  text-align: left;
+  width: 100%;
+  height: calc(100% - 70px);
+  background-color: #fff;
+  overflow-y: auto;
+}
+.dataTitle .name {
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-family: "SourceHanSansCN-Medium-2";
+  font-size: 16px;
+}
+.dataDetails {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: grid;
+  grid-row-gap: 16px;
+  text-align: left;
+  padding: 24px 50px;
+  background-color: #fff;
+  font-family: "SourceHanSansCN-normal-2";
+}
+@media (max-width: 1920px) {
+  .dataDetails {
+    grid-template-columns: repeat(2, 45%);
+  }
+}
+@media (min-width: 1920px) {
+  .dataDetails {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+.dataDetails .metter {
+  color: #8d8d8d;
+}
+@media (max-width: 1920px) {
+  .dataDetails .categoryCtr {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (min-width: 1920px) {
+  .dataDetails .categoryCtr {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+.dataDetails .tickets {
+  height: 40px;
+  display: grid;
+  padding-left: 40px;
+  align-items: center;
+}
+@media (max-width: 1920px) {
+  .dataDetails .tickets {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-columns: 35% 20px 35% 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .dataDetails .tickets {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-template-columns: 25% 20px 25% 60px;
+  }
+}
+.dataDetails .remark {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.dataDetails :deep(.ant-input-number) {
+  width: 150px;
+}
+.dataDetails :deep(.ant-input-number-input) {
+  width: 150px;
+}
+.dataDetails :deep(.ant-form-item-label) {
+  width: 7rem;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+}
+:deep(.ant-form-item textarea.ant-input) {
+  position: relative;
+}
+:deep(.ant-form-item .ant-input-textarea-show-count:after) {
+  height: 22px;
+  line-height: 22px;
+  position: absolute;
+  margin-bottom: -15px;
+  bottom: 25px;
+  right: 10px;
+  color: #535b6c;
+}
+@media (max-width: 1920px) {
+  .quarantine {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (min-width: 1920px) {
+  .quarantine {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+.itemName {
+  display: inline-block;
+  width: 7rem;
+  text-align: right;
+  vertical-align: top;
+}
+.itemContent {
+  display: inline-block;
+  width: calc(100% - 7rem);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.failReason {
+  white-space: normal;
+}
+.varieties {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  background-color: #eee;
+}
+.category {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 30px);
+  align-items: center;
+  text-overflow: clip;
+  white-space: normal;
+}
+@media (max-width: 1920px) {
+  .category {
+    grid-template-columns: repeat(6, 15%);
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+  }
+}
+@media (min-width: 1920px) {
+  .category {
+    grid-template-columns: repeat(10, 9%);
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+  }
+}
+.btnctr {
+  width: 100%;
+  height: 70px;
+  line-height: 69px;
+  border-top: 1px solid #eeeeee;
+  background-color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+:deep(.ant-table-tbody tr td) {
+  font-family: "SourceHanSansCN-Regular-2";
+  color: #535b6c;
+}
+:deep(.ant-table-thead tr th) {
+  font-family: "SourceHanSansCN-Medium-2";
+  color: #535b6c;
+}
+:deep(.ant-image img) {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,13 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "overrides": [
+        {
+            "files": ["*.tsx"],
+            "rules": {
+                "max-lines-per-function": "off",
+                "no-magic-numbers": "off",
+                "no-nested-ternary": "off"
+            }
+        }
+    ]
+}

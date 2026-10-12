@@ -1,0 +1,183 @@
+
+.point_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .point_item {
+    margin: 0 6px 16px 0;
+    background: rgba(0, 0, 0, 0.05) linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.35) 100%);
+    display: flex;
+    width: 108px;
+    height: 48px;
+    justify-content: space-around;
+    padding: 5px 0;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .point_item_right {
+      .point_item_name {
+        font-size: 12px;
+        color: #cad9ee;
+      }
+
+      .point_item_conte {
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+
+        .unit {
+          font-size: 12px;
+          font-weight: 500;
+          color: #cad9ee;
+        }
+      }
+    }
+  }
+}
+
+.chart {
+  height: calc(150px / var(--font-size-scale));
+  display: flex;
+  align-items: center;
+}
+
+.monitorCard {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+
+  .cardItem {
+    display: flex;
+    padding: 6px;
+    min-width: 158px;
+    background: rgba(0, 0, 0, 0.05) linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.35) 100%);
+
+    img {
+      margin-right: 5px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .label {
+      width: calc(var(--font-size-scale) * 88px);
+      height: 20px;
+      font-size: calc(var(--font-size-scale) * 12px);
+      font-weight: 500;
+      color: #cad9ee;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .value {
+      font-size: calc(var(--font-size-scale) * 14px);
+      font-family:
+        DIN Alternate,
+        DIN Alternate;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .unit {
+      font-size: 12px;
+      font-family:
+        DIN Alternate,
+        DIN Alternate;
+      font-weight: 500;
+      color: #cad9ee;
+    }
+  }
+}
+.alarm-analysis {
+  height: 150px;
+}
+
+.zoom-monitor-panel {
+  padding: 20px;
+}
+
+.zoom-monitorCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  margin-top: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+
+  .zoom-cardItem {
+    display: flex;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.05) linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.35) 100%);
+    cursor: pointer;
+
+    img {
+      margin-right: 8px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #cad9ee;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .value {
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .unit {
+      font-size: 12px;
+      color: #cad9ee;
+    }
+  }
+}
+
+.zoom-device-content {
+  padding: 20px;
+
+  .zoom-device-chart {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 280px;
+
+    .zoom-chart {
+      width: 50%;
+      height: 100%;
+    }
+
+    .zoom-elevator-analysis {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto;
+    }
+
+    .zoom-analysis-list {
+      font-size: 16px;
+    }
+  }
+}
+
+.zoom-alarm-list {
+  padding: 20px;
+  min-height: 400px;
+
+  .zoom-footer {
+    margin-top: 20px;
+
+    .zoom-roll-table {
+      font-size: 16px;
+    }
+  }
+}

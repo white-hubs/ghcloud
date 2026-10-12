@@ -1,0 +1,1257 @@
+/* Skill Management - Reference to agent-management.module.less */
+
+/* ===== Page Layout ===== */
+.skillHubPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.skillHubMain {
+  flex: 1 1 0%;
+  min-height: 0;
+  overflow: auto;
+}
+
+.skillHubStatsRow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 13px 16px 16px;
+  border-top: 1px solid #eef2f7;
+  background: #fff;
+  min-height: 52px;
+  box-sizing: border-box;
+}
+
+.skillHubStatsText {
+  flex-shrink: 0;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+
+  strong {
+    color: #374151;
+    font-weight: 600;
+  }
+}
+
+.skillHubContent {
+  flex: 1 1 0%;
+  overflow: auto;
+  padding: 16px;
+}
+
+/* ===== Header Actions ===== */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchInput {
+  width: 240px;
+}
+
+.categorySelect {
+  width: 160px;
+}
+
+.queryButton {
+  margin-left: 8px;
+}
+
+.createButton {
+  margin-left: auto;
+}
+
+/* ===== Tabs ===== */
+.skillTabs {
+  margin-bottom: 16px;
+  
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+/* ===== Card Grid ===== */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  padding: 0 16px 16px;
+}
+
+/* ===== Skill Card ===== */
+.skillCard {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e7ebf3;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #93c5fd;
+  }
+
+  // Has update state
+  &.hasUpdate {
+    border-color: #f59e0b;
+  }
+}
+
+.skillCardEditable {
+  cursor: pointer;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.skillIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+
+  &.blue {
+    background: #e6f4ff;
+    color: #1677ff;
+  }
+
+  &.pink {
+    background: #fff0f6;
+    color: #eb2f96;
+  }
+
+  &.indigo {
+    background: #f0f5ff;
+    color: #2f54eb;
+  }
+
+  &.orange {
+    background: #fff7e6;
+    color: #fa8c16;
+  }
+
+  &.teal {
+    background: #e6fffb;
+    color: #13c2c2;
+  }
+}
+
+.cardTopRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusTag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  line-height: 1.5;
+
+  &.statusBuiltin {
+    background: #f6ffed;
+    color: #52c41a;
+    border: 1px solid #b7eb8f;
+  }
+
+  &.statusPublished {
+    background: #e6f4ff;
+    color: #1677ff;
+    border: 1px solid #91caff;
+  }
+
+  &.statusDraft {
+    background: #fff7e6;
+    color: #fa8c16;
+    border: 1px solid #ffd591;
+  }
+
+  &.statusHasUpdate {
+    background: #fffbe6;
+    color: #d48806;
+    border: 1px solid #ffe58f;
+  }
+
+  &.statusAdded {
+    background: #f6ffed;
+    color: #52c41a;
+    border: 1px solid #b7eb8f;
+  }
+}
+
+.categoryTag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #f6ffed;
+  color: #52c41a;
+  border: 1px solid #b7eb8f;
+}
+
+.updateBadge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #fffbe6;
+  color: #d48806;
+  border: 1px solid #ffe58f;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 36px;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  gap: 8px;
+}
+
+.cardAction {
+  flex: 1;
+}
+
+.cardActionInstalled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cardListButtonListed {
+  flex: 1;
+  height: 32px;
+  border-radius: 4px;
+  color: #4e5969;
+  border-color: #dce2eb;
+  background: #fff;
+}
+
+.cardListButtonListed:hover {
+  color: #1677ff;
+  border-color: #1677ff;
+}
+
+.moreWrap {
+  position: relative;
+  z-index: 2;
+}
+
+.moreWrapOpen {
+  z-index: 30;
+}
+
+.moreButton {
+  width: 24px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  color: #c7cbd3;
+  background: transparent;
+  cursor: pointer;
+}
+
+.moreButton:hover {
+  color: #7b8494;
+}
+
+.cardMenu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 40;
+  min-width: 72px;
+  padding: 6px 0;
+  background: #fff;
+  border: 1px solid #e7ebf2;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 0.12);
+}
+
+.cardMenu button {
+  width: 100%;
+  height: 26px;
+  border: 0;
+  background: transparent;
+  color: #4e5969;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cardMenu button:hover {
+  color: #1677ff;
+  background: #f5f8ff;
+}
+
+/* ===== Modal Styles ===== */
+.modalContent {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.detailModal {
+  :global(.ant-modal-body) {
+    height: 620px;
+    overflow: hidden;
+  }
+}
+
+.detailModalSpin {
+  height: 100%;
+
+  :global(.ant-spin-nested-loading),
+  :global(.ant-spin-container) {
+    height: 100%;
+  }
+}
+
+.detailModalBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.detailHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detailIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+
+  &.blue {
+    background: #e6f4ff;
+    color: #1677ff;
+  }
+
+  &.pink {
+    background: #fff0f6;
+    color: #eb2f96;
+  }
+
+  &.indigo {
+    background: #f0f5ff;
+    color: #2f54eb;
+  }
+
+  &.orange {
+    background: #fff7e6;
+    color: #fa8c16;
+  }
+
+  &.teal {
+    background: #e6fffb;
+    color: #13c2c2;
+  }
+}
+
+.detailInfo {
+  flex: 1;
+}
+
+.detailName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px;
+}
+
+.detailMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.detailSection {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.detailSectionFixed {
+  flex-shrink: 0;
+}
+
+.detailSectionTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0 0 8px;
+}
+
+.detailSectionSubtitle {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: normal;
+}
+
+.detailContent {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.detailScrollBox {
+  height: 96px;
+  overflow-y: auto;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border: 1px solid #eef0f3;
+  border-radius: 6px;
+}
+
+.detailScrollBoxTall {
+  height: 180px;
+  overflow-y: auto;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border: 1px solid #eef0f3;
+  border-radius: 6px;
+}
+
+.detailCollapseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 0 0 8px;
+  user-select: none;
+
+  .detailSectionTitle {
+    margin-bottom: 0;
+  }
+}
+
+.detailCollapseAction {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ===== Six Config Section ===== */
+.sixConfigHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.sixConfigSection {
+  overflow-y: auto;
+}
+
+.configItem {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.configItemTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0 0 6px;
+}
+
+.configItemContent {
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.configItemEmpty {
+  font-size: 12px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* ===== Create Modal (Dialog Style) ===== */
+.createDialog {
+  display: flex;
+  height: 60vh;
+  min-height: 400px;
+}
+
+.createDialogLeft {
+  width: 300px;
+  border-right: 1px solid #f0f0f0;
+  background: #fafafa;
+  padding: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.editDialogBasic {
+  flex-shrink: 0;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editDialogBasicRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.editDialogBasicLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.createDialogRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.createDialogHeader {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.createDialogChat {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px;
+  background: #fff;
+}
+
+.createDialogInput {
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+/* ===== Chat Messages ===== */
+.chatMessage {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.chatMessageUser {
+  flex-direction: row-reverse;
+}
+
+.chatAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.chatAvatarAi {
+  background: #1677ff;
+  color: #fff;
+}
+
+.chatAvatarUser {
+  background: #9ca3af;
+  color: #fff;
+}
+
+.chatBubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chatBubbleAi {
+  background: #e6f4ff;
+  color: #1f2937;
+  border-top-left-radius: 2px;
+}
+
+.chatBubbleUser {
+  background: #1677ff;
+  color: #fff;
+  border-top-right-radius: 2px;
+}
+
+/* ===== Config List (Left Panel) ===== */
+.configListTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.configList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  max-height: 42%;
+  overflow-y: auto;
+}
+
+.configListItemHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.requiredMark {
+  color: #ef4444;
+}
+
+.optionalMark {
+  color: #9ca3af;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.configStatusBadge {
+  flex-shrink: 0;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.configStatusDone {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+.configStatusWarn {
+  background: #fff7e6;
+  color: #fa8c16;
+}
+
+.configEditorPanel {
+  flex: 1;
+  min-height: 0;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.configEditorPlaceholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  padding: 12px;
+  line-height: 1.6;
+}
+
+.configEditorTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.configEditorHint {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.configEditorReference {
+  flex: 1;
+  min-height: 120px;
+  overflow: auto;
+}
+
+.configEditorTextarea {
+  flex: 1;
+  min-height: 120px;
+
+  :global(textarea.ant-input) {
+    min-height: 120px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+.createDialogHeaderLabel {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.createDialogHeaderHint {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.createDialogInputRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.createChatTextarea {
+  flex: 1;
+}
+
+.configMentionWrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.configMentionTextarea {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5715;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #4096ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(5 145 255 / 10%);
+  }
+
+  &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+}
+
+.configMentionMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 6px);
+  z-index: 20;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 12%);
+}
+
+.configMentionItem {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  color: #374151;
+
+  &:hover,
+  &.configMentionItemActive {
+    background: #eff6ff;
+    color: #1d4ed8;
+  }
+}
+
+.configMentionLabel {
+  font-weight: 500;
+}
+
+.createDialogFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createDialogFooterHint {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.createDialogFooterActions {
+  display: flex;
+  gap: 8px;
+}
+
+.configListItem {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #fff;
+
+  &:hover {
+    background: #f0f7ff;
+    border-color: #bae0ff;
+  }
+
+  &.active {
+    background: #e6f4ff;
+    border-color: #1677ff;
+  }
+
+  &.optional {
+    border-style: dashed;
+  }
+}
+
+.configListItemTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0 0 2px;
+}
+
+.configListItemDesc {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ===== Empty State ===== */
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  color: #9ca3af;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyText {
+  font-size: 14px;
+}
+
+/* ===== Loading State ===== */
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  color: #9ca3af;
+}
+
+/* ===== Edit Form ===== */
+.editForm {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.editFormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.editFormItem {
+  margin-bottom: 16px;
+}
+
+.editFormLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+
+  .required {
+    color: #ef4444;
+    margin-left: 2px;
+  }
+}
+
+.editFormHint {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.editFormSection {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.editFormSectionTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 12px;
+}
+
+.referenceEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.referenceNoteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.referenceNoteLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.referenceDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referenceFileList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referenceFileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.referenceImageLink {
+  flex-shrink: 0;
+}
+
+.referenceImageThumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+.referenceFileLink {
+  color: #2563eb;
+  font-size: 13px;
+  word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.referenceSummary {
+  font-size: 13px;
+  color: #374151;
+}
+
+.referenceNoteDisplay {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+/* ===== Edit Skill Dialog ===== */
+.editSkillModal {
+  :global(.ant-modal-body) {
+    overflow: hidden;
+  }
+}
+
+.editDialog {
+  display: flex;
+  flex-direction: column;
+  height: min(82vh, calc(100vh - 140px));
+  min-height: 520px;
+  max-height: calc(100vh - 140px);
+  overflow: hidden;
+}
+
+.editDialogMeta {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.editDialogMetaGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 12px 16px;
+}
+
+.editDialogMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.editDialogMetaWide {
+  grid-column: 1 / -1;
+}
+
+.editDialogMetaLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.editDialogMetaTextarea {
+  width: 100%;
+
+  :global(textarea.ant-input) {
+    resize: vertical;
+    min-height: 56px;
+    max-height: 148px;
+    overflow-y: auto !important;
+    line-height: 1.6;
+  }
+}
+
+.editDialogBody {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.editDialogLeftScroll {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+}
+
+.editDialogConfigSection {
+  padding: 16px 20px 20px;
+  background: #fff;
+}
+
+.editDialogConfigTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px;
+}
+
+.editConfigBlock {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    border-color: #cbd5e1;
+  }
+}
+
+.editConfigBlockActive {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.08);
+  background: #f8fbff;
+}
+
+.editConfigBlockHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.editConfigBlockTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.editConfigBlockDesc {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.editConfigEditor {
+  background: #fff;
+  border-radius: 6px;
+}
+
+.editConfigTextarea {
+  width: 100%;
+
+  :global(textarea.ant-input) {
+    min-height: 140px;
+    font-size: 13px;
+    line-height: 1.6;
+    background: #fff;
+  }
+}
+
+.editDialogChatColumn {
+  width: 520px;
+  flex-shrink: 0;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #fff;
+
+  .chatBubble {
+    max-width: 88%;
+  }
+
+  .createChatTextarea {
+    :global(textarea.ant-input) {
+      min-height: 72px;
+    }
+  }
+}
+
+.editDialogChatInput {
+  flex-shrink: 0;
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.editDialogFooter {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.editDialogFooterSplit {
+  justify-content: space-between;
+}
+
+.createDialogPlaceholder {
+  padding: 16px 20px;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.editConfigBlockPending {
+  cursor: default;
+
+  &:hover {
+    border-color: #e5e7eb;
+  }
+}
+
+.editConfigBlockPendingBody {
+  padding: 12px;
+  font-size: 12px;
+  color: #9ca3af;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px dashed #e5e7eb;
+}

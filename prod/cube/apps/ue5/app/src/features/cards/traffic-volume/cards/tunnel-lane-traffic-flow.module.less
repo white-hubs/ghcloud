@@ -1,0 +1,68 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/features/cards/parking-car/_shared/parking-v2-shared.less";
+
+:global {
+  .tunnel-lane-v2-root {
+    position: relative;
+  }
+
+  .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .header-toolbar {
+    .parking-v2-header-toolbar();
+  }
+
+  .tunnel-lane-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .chart-panel {
+    .parking-v2-chart-surface();
+    height: 220px;
+    margin-bottom: 8px;
+  }
+
+  .table-footer {
+    flex: 0 0 auto;
+    height: 180px;
+    overflow: hidden;
+    border: 1px solid var(--visual-roll-table-row-border, transparent);
+    border-radius: 6px;
+
+    &.is-zoom {
+      height: 240px;
+    }
+  }
+
+  .panel-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 380px;
+    color: var(--visual-muted-color, rgba(255, 255, 255, 0.72));
+
+    &.is-zoom {
+      min-height: 520px;
+    }
+
+    :deep(.ant-spin-text) {
+      color: var(--visual-muted-color, rgba(255, 255, 255, 0.72));
+    }
+  }
+
+  .tunnel-lane-body.is-zoom {
+    .chart-panel.is-zoom {
+      height: 320px;
+    }
+  }
+}
+
+.v2-minimal-white-panel(tunnel-lane-v2-panel);

@@ -1,0 +1,157 @@
+{
+  "path": "/product-center/safe.html",
+  "meta": {
+    "title": "安全管理 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp",
+        "searchAllHref": "/product-center/app"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "safe",
+        "allHref": "/product-center/app.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安防监控/main.png",
+            "name": "安防监控",
+            "version": "1.0.0",
+            "description": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-security-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消防管理/main.png",
+            "name": "消防管理",
+            "version": "1.0.0",
+            "description": "﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿消防安全管理系统以\"物联感知+数据智能+场景联动\"为核心，构建全域覆盖的消防安全防护网。依托边缘计算与AI算法，对设备状态、环境参数进行实时分析，精准识别温度异常、烟雾浓度超标等风险征兆并自动触发预警。",
+            "href": "/product-center/app-fire-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "name": "预案管理",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发...",
+            "href": "/product-center/app-plan-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "name": "动环监控",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决...",
+            "href": "/product-center/app-env-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电气管理/main.png",
+            "name": "电气管理",
+            "version": "1.0.1",
+            "description": "电气管理系统通过AIoT技术实现电气隐患实时监测→智能预警→自动处置→能效优化全流程闭环管理，支持查看电气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在电气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计...",
+            "href": "/product-center/app-electric-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+            "name": "广播中心",
+            "version": "1.0.0",
+            "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+            "href": "/product-center/app-broadcast-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+            "name": "入侵报警",
+            "version": "1.0.1",
+            "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求...",
+            "href": "/product-center/app-intrusion-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/用气管理/main.png",
+            "name": "用气管理",
+            "version": "1.0.0",
+            "description": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-gas-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "name": "指挥调度",
+            "version": "1.0.2",
+            "description": "运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进 技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企 业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+            "href": "/product-center/app-command-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "name": "风险源管理",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全教育/main.png",
+            "name": "安全教育",
+            "version": "1.0.0",
+            "description": "安全教育管理统一管理园区内的培训、考试场景，通过建立培训任务、考试任务并下发给相关人员，实现线上无纸质化培训、考试，并在事后建立相关统计报表，协助建立内部的培训学习机制。",
+            "href": "/product-center/app-safety-edu-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全园区/main.png",
+            "name": "安全管理",
+            "version": "1.0.0",
+            "description": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+            "href": "/product-center/app-safety-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

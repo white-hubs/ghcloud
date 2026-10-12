@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f0f6fb;
+}
+
+.navbar {
+  background: transparent;
+  
+  :global {
+    .van-nav-bar__title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #142c44;
+    }
+    
+    .van-icon {
+      color: #142c44;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+.formItem {
+  margin-bottom: 20px;
+  // background: #fff;
+  // border-radius: 8px;
+  // overflow: hidden;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nameInput {
+  background: #f3f9ff;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, rgba(255,255,255,0.54), rgba(255,255,255,0.52)) 1 1;
+  border-radius: 8px;
+  box-shadow: 0px 3px 16px 0px rgba(194,208,221,0.60), -3px -3px 6px 0px #f0f6fb; 
+  :global {
+    .van-field__label {
+      width: 30px;
+      color: #142c44;
+      font-weight: 500;
+    }
+    .van-field__input {
+      color: #95a1ac;
+      :placeholder {
+        color: red;
+      }
+    }
+  }
+}
+
+.cell {
+  :global {
+    .van-cell__title {
+      color: #142c44;
+    }
+  }
+}
+
+.sectionTitle {
+  padding: 12px 16px;
+  padding-left:0 ;
+  font-size: 14px;
+  font-weight: 500;
+  color: #142c44;
+}
+
+.footer {
+  padding: 16px;
+  // background: #fff;
+  // box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.submitBtn {
+  width: 343px;
+  height: 40px;
+  background: #1578ff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 6px rgba(74,118,189,0.16); 
+}
+.cancelBtn {
+  width: 343px;
+  height: 40px;
+  // background: #f0f6fb;
+  // color: black;
+  border-radius: 8px;
+  // box-shadow: 0px 2px 8px 6px rgba(220, 229, 244, 0.16); 
+}
+.submitBtnGroup{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}

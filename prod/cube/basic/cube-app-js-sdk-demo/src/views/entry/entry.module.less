@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  background: #F3F7FA;
+  padding: 12px;
+
+  :global(.van-skeleton) {
+    width: 100%;
+  }
+  :global(.van-cell-group){
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .block-cell {
+    :global(.van-cell__value) {
+      display: none;
+    }
+  }
+
+  p {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,98 @@
+
+.monitorPanel {
+    display: flex;
+    align-items: center;
+
+    .monitorPanel-left {
+        .bg {
+            position: relative;
+            width: 100px;
+            height: 80px;
+            perspective: 200;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .rotate {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                left: 35px;
+                top: 8px;
+                transform: rotateY(45deg);
+            }
+        }
+    }
+
+    .monitorPanel-right {
+        width: 100%;
+        height: 48px;
+        background-image: url("/resource/v1/ue5-migrate/assets/images/overView6.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: #d0deee;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+
+        .monitorPanel_title {
+            font-size: 12px;
+            font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-right: 5px;
+        }
+
+        .count {
+            font-size: 22px;
+            color: #EFF7FF;
+            font-weight: bold;
+        }
+    }
+}
+
+.ringRatio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-left: 6px;
+
+    .downtriangle {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #d2fff3;
+        margin: 0 3px;
+        transform: rotate(180deg);
+    }
+
+    .uptriangle {
+        border-bottom: 8px solid #ffcece;
+        transform: rotate(0deg);
+    }
+
+    .down {
+        color: #2ae8bd;
+        font-family: Roboto-Regular, Roboto;
+    }
+
+    .up {
+        color: #f14545;
+        font-family: Roboto-Regular, Roboto;
+    }
+}
+
+.elevator-analysis {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.char {
+    height: 157px;
+}

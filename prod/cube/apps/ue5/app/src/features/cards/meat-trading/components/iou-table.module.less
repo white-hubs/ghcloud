@@ -1,0 +1,212 @@
+:global {
+  .meat-transaction-detail-modal {
+    .ant-modal.modal-width,
+    .ant-modal {
+      width: 980px !important;
+      max-width: calc(100vw - 48px);
+    }
+
+    .ant-modal-body {
+      min-height: 430px;
+      padding: 12px !important;
+    }
+  }
+
+  .meat-transaction-detail {
+    display: flex;
+    min-height: 406px;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--visual-data-modal-text-color, #ffffff);
+  }
+
+  .meat-transaction-detail__summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr) minmax(0, 0.75fr);
+    gap: 10px;
+  }
+
+  .meat-transaction-detail__summary-main,
+  .meat-transaction-detail__summary-card {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 72px;
+    padding: 12px 16px;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.18), rgba(255, 191, 69, 0.07)),
+      rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(76, 160, 255, 0.24);
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 14px rgba(41, 137, 255, 0.08),
+      0 6px 16px rgba(0, 21, 48, 0.12);
+  }
+
+  .meat-transaction-detail__summary-main {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .meat-transaction-detail__summary-main::after {
+    position: absolute;
+    right: -30px;
+    bottom: -42px;
+    width: 118px;
+    height: 118px;
+    pointer-events: none;
+    content: "";
+    background: rgba(255, 191, 69, 0.1);
+    border-radius: 50%;
+  }
+
+  .meat-transaction-detail__label {
+    display: block;
+    overflow: hidden;
+    color: var(--visual-data-modal-muted-color, rgba(220, 238, 255, 0.78));
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .meat-transaction-detail__value,
+  .meat-transaction-detail__sub-value {
+    display: flex;
+    min-width: 0;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-weight: 700;
+    line-height: 1.05;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 10px rgba(41, 137, 255, 0.24);
+    white-space: nowrap;
+  }
+
+  .meat-transaction-detail__value {
+    position: relative;
+    z-index: 1;
+    color: #ffbf45;
+    font-size: calc(var(--font-size-scale, 1) * 28px);
+  }
+
+  .meat-transaction-detail__sub-value {
+    font-size: calc(var(--font-size-scale, 1) * 20px);
+  }
+
+  .meat-transaction-detail__unit {
+    color: var(--visual-data-modal-muted-color, rgba(220, 238, 255, 0.72));
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    font-weight: 400;
+  }
+
+  .meat-transaction-detail__qoq.is-up .meat-transaction-detail__sub-value {
+    color: #ff6a7a;
+  }
+
+  .meat-transaction-detail__qoq.is-down .meat-transaction-detail__sub-value {
+    color: #45e8b2;
+  }
+
+  .meat-transaction-detail__qoq-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid currentColor;
+    border-left: 5px solid transparent;
+  }
+
+  .meat-transaction-detail__qoq.is-down .meat-transaction-detail__qoq-arrow {
+    transform: rotate(180deg);
+  }
+
+  .meat-transaction-detail__tables {
+    position: relative;
+    display: grid;
+    flex: 1;
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 312px;
+  }
+
+  .meat-transaction-detail__table-panel {
+    display: flex;
+    min-width: 0;
+    min-height: 312px;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(76, 160, 255, 0.22);
+    border-radius: 10px;
+  }
+
+  .meat-transaction-detail__table-title {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    color: var(--visual-data-modal-text-color, #ffffff);
+    font-size: calc(var(--font-size-scale, 1) * 14px);
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(41, 137, 255, 0.18), rgba(41, 137, 255, 0));
+    border-bottom: 1px solid rgba(76, 160, 255, 0.16);
+  }
+
+  .meat-transaction-detail__dot {
+    display: inline-flex;
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    background: #ffbf45;
+    border-radius: 999px;
+    box-shadow: 0 0 8px rgba(255, 191, 69, 0.42);
+  }
+
+  .meat-transaction-detail__dot.is-compare {
+    background: #4debdc;
+    box-shadow: 0 0 8px rgba(77, 235, 220, 0.42);
+  }
+
+  .meat-transaction-detail__vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffbf45;
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 24px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(255, 191, 69, 0.35);
+  }
+
+  :root[data-visual-theme="minimal-white"] .meat-transaction-detail-modal {
+    .meat-transaction-detail__summary-main,
+    .meat-transaction-detail__summary-card,
+    .meat-transaction-detail__table-panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94));
+      border-color: rgba(116, 158, 210, 0.22);
+      box-shadow: 0 4px 12px rgba(61, 111, 175, 0.06);
+    }
+
+    .meat-transaction-detail__label,
+    .meat-transaction-detail__unit {
+      color: rgba(29, 61, 108, 0.72);
+    }
+
+    .meat-transaction-detail__sub-value {
+      color: #0d2f75;
+      text-shadow: none;
+    }
+
+    .meat-transaction-detail__table-title {
+      color: #0d2f75;
+      background: linear-gradient(90deg, rgba(232, 243, 255, 0.95), rgba(255, 255, 255, 0));
+      border-bottom-color: rgba(116, 158, 210, 0.18);
+    }
+  }
+}

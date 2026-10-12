@@ -1,0 +1,58 @@
+.container {
+  padding: 12px 0;
+
+  .item-title {
+    height: auto !important;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000000d9;
+  }
+
+  .item-content {
+    display: flex;
+
+    label {
+      font-size: 14px;
+      min-width: 105px;
+      text-align: right;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 14px;
+      color: #000000d9;
+    }
+  }
+}
+
+.person-select-wrap {
+  width: min(760px, 100%);
+
+  > div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  > div > div:last-child {
+    flex: 1;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  > div > div:last-child > div {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  > div > div:last-child > div :global(.ant-select),
+  > div > div:last-child > div :global(.ant-picker) {
+    width: 100%;
+  }
+}

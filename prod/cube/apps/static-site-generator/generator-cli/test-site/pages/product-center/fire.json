@@ -1,0 +1,117 @@
+{
+  "path": "/product-center/fire.html",
+  "meta": {
+    "title": "消防安全 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "硬件产品",
+        "subtitle": "古河云科技持续打磨产品，深耕技术，探索智慧新空间，以创新驱动未来。",
+        "placeholder": "搜索你感兴趣的产品",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/search-banner-bg-1.webp",
+        "searchAllHref": "/product-center/hardware"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "video",
+            "name": "视频安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-video.svg",
+            "href": "/product-center/video.html"
+          },
+          {
+            "id": "fire",
+            "name": "消防安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-fire.svg",
+            "href": "/product-center/fire.html"
+          },
+          {
+            "id": "electric",
+            "name": "电气管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-electric.svg",
+            "href": "/product-center/electric.html"
+          },
+          {
+            "id": "attendance",
+            "name": "考勤管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-attendance.svg",
+            "href": "/product-center/attendance.html"
+          },
+          {
+            "id": "env",
+            "name": "机房动环",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-env.svg",
+            "href": "/product-center/env.html"
+          },
+          {
+            "id": "patrol",
+            "name": "电子巡更",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-patrol.svg",
+            "href": "/product-center/patrol.html"
+          },
+          {
+            "id": "meat",
+            "name": "肉类滑轨",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-meat.svg",
+            "href": "/product-center/meat-track.html"
+          }
+        ],
+        "activeId": "fire",
+        "allHref": "/product-center/hardware.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/product-fire-camera.webp",
+            "name": "轻防火筒型感温摄像机",
+            "description": "热成像双光谱筒型摄像机是一款近距离精确测温防火设备。设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "/product-center/fire-camera-detail.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "无线手动火灾报警按钮",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "无线火灾声光警报器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "独立式光电感烟火灾探测报警器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "边缘智算中枢（300路）",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "烟火检测摄像机",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          }
+        ],
+        "pageSize": 9,
+        "currentPage": 1
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,61 @@
+
+.monitorPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 8px 10px;
+  background: var(--up-surface-bg, rgba(42, 137, 255, 0.06));
+  border: var(--up-surface-border, 1px solid rgba(70, 166, 255, 0.24));
+  border-radius: var(--up-surface-radius, 10px);
+  box-shadow: var(--up-surface-shadow, inset 0 0 12px rgba(46, 148, 255, 0.1));
+
+  .monitorPanel-left {
+    .bg {
+      position: relative;
+      width: 100px;
+      height: 80px;
+      perspective: 200;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .rotate {
+        position: absolute;
+        top: 8px;
+        left: 35px;
+        width: 35px;
+        height: 35px;
+        transform: rotateY(45deg);
+      }
+    }
+  }
+
+  .monitorPanel-right {
+    .monitorPanel-data {
+      color: var(--up-value-color, #fff);
+      font-size: var(--up-font-emphasis, 16px);
+
+      .count {
+        cursor: pointer;
+      }
+    }
+
+    .monitorPanel-line {
+      width: 63px;
+      height: 2px;
+      background: linear-gradient(100deg, #2989ff 0%, rgba(41, 137, 255, 0) 100%);
+    }
+
+    .monitorPanel-name {
+      margin-top: 10px;
+      color: var(--up-text-label, #abb8cb);
+      font-size: var(--up-font-caption, 11px);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}

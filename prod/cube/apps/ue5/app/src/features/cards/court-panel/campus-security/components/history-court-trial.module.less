@@ -1,0 +1,52 @@
+
+.court-trial-list {
+  .item {
+    background: linear-gradient(to right, rgba(21, 108, 220, 0.30), rgba(21, 108, 220, 0.30));
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 12px;
+
+    .title {
+      padding: 0 20px 0 0;
+      display: flex;
+      background: linear-gradient(to right, rgba(41, 135, 255, 0), rgba(41, 135, 255, 0.98), rgba(41, 135, 255, 0.90), rgba(28, 118, 233, 0.58), rgba(21, 108, 220, 0));
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #f4f9ff;
+
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+      }
+    }
+
+    .content {
+      .row-item {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: justify;
+        color: #d9e7ff;
+
+        .label {
+          text-align: justify;
+          text-align-last: justify;
+          width: 60px;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

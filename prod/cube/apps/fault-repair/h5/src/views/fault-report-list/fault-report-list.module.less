@@ -1,0 +1,83 @@
+.type-cell-group {
+  margin: 3vw;
+}
+
+.type-cell-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .name-status {
+    display: flex;
+    align-items: center;
+
+    .fault-status {
+      padding: 1px 6px 0px;
+      font-size: 12px;
+      color: #FFFFFF;
+      background: #FE8704;
+      border-radius: 10px 10px 10px 0px;
+      margin-right: 6px;
+    }
+
+    .name {
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 15px;
+      color: #1F3140;
+    }
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+}
+
+.type-cell-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+  & span:nth-of-type(2) {
+    color: #666666;
+    margin-top: 0;
+    font-size: 12px;
+  }
+  & span:nth-of-type(1) {
+    color: #141414ea;
+    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 190px;
+  }
+}
+.addCase{
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  border-radius: 50%;
+}
+.filter{
+  margin-left: 12px;
+  margin-top: 20px;
+  p{
+    margin: 10px 0px;
+  }
+ 
+  .checkbox{
+    margin-top: 10px;
+    margin-right: 12px;
+    border-radius: 4px 4px 4px 4px;
+    width: 90px;
+    height: 32px;
+    color: #1F3140;  
+    background-color: #F8F9F9;
+    vertical-align:middle;
+    text-align: center;
+  }
+}

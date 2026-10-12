@@ -1,0 +1,16 @@
+<view class="floor-select">
+	<scroll-view class="floor-select-list" scroll-x="true">
+		<view id="floor-{{index}}" class="list-item {{$state.thirdRegionActive===item.id?'active':''}}" wx:for="{{$state.thirdRegionList}}" data-index="{{index}}" wx:key="id" bindtap="handleClick">{{item.name}}</view>
+	</scroll-view>
+	<view class="triangle-container" bindtap="handleMore">
+		<view class="triangle">
+		</view>
+	</view>
+	<view class="bg-container" hidden="{{!showMore}}">
+		<view class="floor-list">
+			<view bindtap="handleClick" class="floor-item" data-index="{{index}}" wx:for="{{$state.thirdRegionList}}" wx:key="id">
+				{{item.name}}
+			</view>
+		</view>
+	</view>
+</view>

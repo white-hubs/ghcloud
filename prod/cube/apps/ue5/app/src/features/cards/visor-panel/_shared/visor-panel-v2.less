@@ -1,0 +1,64 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+// Shared title-icon / header helpers for visor-panel V2 cards
+.visor-v2-panel-chrome(@panel-class) {
+  :global {
+    .@{panel-class} {
+      --card-title-icon-size: 32px;
+    }
+
+    .@{panel-class} .sub-panel-header {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .@{panel-class} .sub-panel-header .title {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px;
+      line-height: 1 !important;
+    }
+
+    .@{panel-class} .title-icon-slot {
+      display: inline-flex !important;
+      flex: 0 0 var(--card-title-icon-size, 32px) !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: var(--card-title-icon-size, 32px) !important;
+      height: var(--card-title-icon-size, 32px) !important;
+      overflow: hidden;
+      line-height: 0 !important;
+    }
+
+    .@{panel-class} .title-icon-img {
+      display: block !important;
+      width: var(--card-title-icon-size, 32px) !important;
+      height: var(--card-title-icon-size, 32px) !important;
+      margin: 0 !important;
+      object-fit: contain !important;
+    }
+
+    .@{panel-class} .header-toolbar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 24px;
+    }
+
+    .@{panel-class} .header-toolbar .date-inline-form {
+      height: 24px;
+      margin: 0;
+    }
+
+    .@{panel-class} .sub-panel-content {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      margin-top: 2px;
+      padding: 8px;
+      overflow: visible;
+    }
+  }
+
+  .v2-minimal-white-panel(@panel-class);
+}

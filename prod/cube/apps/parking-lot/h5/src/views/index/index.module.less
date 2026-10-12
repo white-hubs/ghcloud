@@ -1,0 +1,199 @@
+.container {
+  height: calc(100vh - 12.6667vw);
+  background: #F3F7FA;
+  padding: 12px;
+  overflow-y: auto;
+
+  .app-group {
+    width: 351px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: transparent !important;
+
+    :global {
+      .van-cell__title {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 400;
+        font-size: 15px;
+        color: #1F3140;
+        line-height: 21px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        text-align: left;
+        flex: unset
+      }
+
+      .van-cell__value {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .van-cell {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+
+    .card-group {
+      margin-bottom: 12px;
+      background-color: #fff;
+      border-radius: var(--van-cell-group-inset-radius);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+
+      .card-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1F3140;
+        display: flex;
+        align-items: center;
+      }
+
+      .time-pills {
+        display: flex;
+        background: #F3F4F5;
+        border-radius: 14px;
+        padding: 2px;
+
+        .time-pill {
+          padding: 2px 8px;
+          font-size: 12px;
+          color: #86909C;
+          border-radius: 12px;
+          cursor: pointer;
+
+          &.active {
+            background: #fff;
+            color: #1D2129;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .card-body {
+      padding: 12px;
+      padding-top: 0;
+    }
+
+    .task-over-view {
+      .task-over-view-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        background: #f3f6ff;
+        border-radius: 8px;
+  
+        .task-title-icon-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 13px;
+          color: #1F3140;
+        }
+  
+        .task-title-icon {
+          width: 34px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 34px;
+          background: #1578FF;
+          border-radius: 6px;
+          color: #fff;
+          font-size: 20px;
+        }
+  
+        .task-total {
+          font-size: 13px;
+          color: #1F3140;
+          span {
+            font-size: 26px;
+            font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+            font-weight: Regular;
+            text-align: center;
+            color: #1d66ff;
+            margin-right: 4px;
+          }
+        }
+      }
+  
+      .task-over-view-stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        display: grid;
+        margin-top: 10px;
+        grid-gap: 10px;
+        &.two {
+          grid-template-columns: repeat(2, 1fr);
+          .task-over-view-stat-item {
+            &:nth-child(2n+1){
+              &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                content: '';
+                display: block;
+                width: 0;
+                height: 40px;
+                border-right: 1px dashed #dedede;
+              }
+            }
+          }
+        }
+  
+        .task-over-view-stat-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          flex: 1;
+          padding-top: 8px;
+
+          .task-over-view-stat-item-title {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #646d81;
+            line-height: 18px;
+          }
+  
+          .task-over-view-stat-item-value {
+            color: #1f3140;
+            font-size: 24px;
+            display: flex;
+            align-items: baseline;
+            margin-top: 8px;
+  
+            span {
+              font-size: 10px;
+              color: #888888;
+            }
+          }
+        }
+      }
+    }
+
+    .chart-container {
+        height: 240px;
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-top: 12px;
+    }
+  }
+}

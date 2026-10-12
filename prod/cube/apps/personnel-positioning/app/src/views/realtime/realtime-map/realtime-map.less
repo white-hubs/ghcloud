@@ -1,0 +1,112 @@
+.pp-realtime-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--cube-theme-surface-muted, #f4f6f8);
+  > svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+  > svg:active {
+    cursor: grabbing;
+  }
+  &__person,
+  &__region {
+    cursor: pointer;
+    outline: none;
+  }
+  &__person text {
+    font-size: 14px;
+  }
+  &__region text,
+  &__event text {
+    font-size: 16px;
+    font-weight: 600;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 4px;
+  }
+  &__person:focus-visible > circle,
+  &__region:focus-visible > polygon {
+    stroke: #262626;
+    stroke-width: 4px;
+  }
+  .has-critical-alarm .pp-realtime-map__halo {
+    animation: pp-alarm-pulse 2s ease-in-out infinite;
+  }
+  &__controls {
+    position: absolute;
+    right: 16px;
+    bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cube-theme-surface, white);
+    border: 1px solid var(--cube-theme-border, #e8e8e8);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px #0000000d;
+    padding: 4px;
+    gap: 4px;
+    > span {
+      font-size: 12px;
+      color: var(--cube-theme-text-secondary, #8c8c8c);
+    }
+  }
+  &__legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 14px;
+    background: var(--cube-theme-surface, white);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    border-top: 1px solid var(--cube-theme-divider, #f0f0f0);
+    > span:not(.pp-muted) {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-left: 6px;
+    }
+    .is-online {
+      background: #1890ff;
+    }
+    .is-terminal {
+      background: #1890ff;
+    }
+    > svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+      margin-left: 6px;
+    }
+    .is-offline {
+      background: #8c8c8c;
+    }
+    .is-alarm {
+      background: #f5222d;
+    }
+    .pp-muted {
+      margin-left: auto;
+    }
+  }
+}
+@keyframes pp-alarm-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pp-realtime-map .has-critical-alarm .pp-realtime-map__halo {
+    animation: none;
+  }
+}

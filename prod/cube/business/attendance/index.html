@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta version="<%- version %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>考勤管理</title>
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .attendance-picker {
+      width: 100% !important;
+    }
+
+    .attendance-input-number {
+      width: 100% !important;
+    }
+    .attendance-picker-calendar-date-content{
+      height: 30px !important;
+    }
+    .attendance-picker-calendar-header .attendance-picker-calendar-mode-switch{
+      display: none;
+    }
+    .scheduling-table .attendance-table-cell{
+      padding: 0 !important;
+      height: 1px;
+    }
+
+    .ledger-table .attendance-table-cell{
+      padding: 0 !important;
+      height: 1px;
+    }
+    .readonly .attendance-input-number-out-of-range input{
+      color:unset
+    }
+    .month-day-picker .attendance-picker-header-super-prev-btn{
+      display: none;
+    }
+    .month-day-picker .attendance-picker-year-btn{
+      display: none;
+    }
+    .month-day-picker .attendance-picker-year-btn{
+      display: none;
+    }
+    .month-day-picker .attendance-picker-header-super-next-btn{
+      display: none;
+    }
+    .month-day-picker .attendance-picker-footer{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="AttendanceApp" style="height: 100%; width: 100%;"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

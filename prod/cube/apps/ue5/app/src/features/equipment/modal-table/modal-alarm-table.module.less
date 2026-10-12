@@ -1,0 +1,321 @@
+/* 报警记录弹窗：对齐 legacy filter-toolbar + 双主题 */
+:global {
+  .modal-alarm-table-root {
+    .alarm-records-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .filter-toolbar {
+      padding: 10px 12px;
+      background: var(--visual-data-modal-toolbar-bg, rgba(7, 28, 56, 0.54));
+      border: 1px solid var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+      border-radius: 8px;
+    }
+
+    .filter-fields {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px 14px;
+      min-width: 0;
+    }
+
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .filter-item-keyword {
+      grid-column: span 2;
+    }
+
+    .filter-label {
+      flex: 0 0 56px;
+      width: 56px;
+      color: var(--visual-data-modal-muted-color, var(--visual-data-modal-text-color));
+      font-size: 13px;
+      line-height: 32px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .filter-item .filter-control-select {
+      flex: 1;
+      min-width: 0;
+      width: auto !important;
+    }
+
+    .filter-item-time .alarm-time-picker {
+      flex: 1;
+      min-width: 0;
+      width: 100% !important;
+    }
+
+    .filter-item-keyword .filter-keyword,
+    .filter-item-keyword .ant-input-affix-wrapper {
+      display: flex !important;
+      flex: 1;
+      min-width: 0;
+      max-width: 280px;
+      width: auto !important;
+    }
+
+    .filter-actions {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 8px;
+
+      .ant-btn {
+        min-width: 64px;
+        height: 32px !important;
+        padding: 0 12px !important;
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+      }
+
+      .reset-btn {
+        color: var(--visual-data-modal-btn-default-color, #ffffff);
+        background: var(--visual-data-modal-btn-default-bg, rgba(41, 137, 255, 0.1));
+        border-color: var(--visual-data-modal-btn-default-border, #2989ff);
+      }
+    }
+
+    .filter-toolbar .filter-control-select.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .filter-toolbar .filter-control-picker.ant-picker {
+      min-height: 32px;
+      height: 32px;
+      color: var(--visual-data-modal-text-color);
+      background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54)) !important;
+      border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34)) !important;
+      border-radius: 6px;
+      box-shadow: var(--visual-date-control-shadow, none);
+    }
+
+    .filter-toolbar .filter-control-select.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      display: flex;
+      align-items: center;
+      padding: 0 11px;
+    }
+
+    .filter-toolbar .filter-control-picker.ant-picker {
+      padding: 4px 11px;
+    }
+
+    .filter-toolbar .ant-input-affix-wrapper.filter-control-input,
+    .filter-toolbar .ant-input-affix-wrapper.filter-keyword,
+    .filter-toolbar span.ant-input-affix-wrapper {
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      height: 32px;
+      padding: 0 11px;
+      background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54)) !important;
+      border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34)) !important;
+      border-radius: 6px !important;
+      box-shadow: none !important;
+    }
+
+    .filter-toolbar .ant-input-affix-wrapper .ant-input,
+    .filter-toolbar .filter-control-input.ant-input {
+      min-height: 30px !important;
+      height: 30px !important;
+      padding: 0 !important;
+      color: var(--visual-data-modal-text-color) !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-selection-item,
+    .filter-toolbar .filter-control-select .ant-select-selection-placeholder,
+    .filter-toolbar .filter-control-picker input {
+      color: var(--visual-data-modal-text-color) !important;
+      font-size: 14px !important;
+      line-height: 30px !important;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-arrow,
+    .filter-toolbar .filter-control-picker .ant-picker-suffix,
+    .filter-toolbar .ant-input-affix-wrapper .ant-input-clear-icon {
+      color: var(--visual-data-modal-muted-color, rgba(220, 236, 255, 0.72));
+    }
+
+    .filter-toolbar .filter-control-select.ant-select-focused:not(.ant-select-disabled) .ant-select-selector,
+    .filter-toolbar .filter-control-picker.ant-picker-focused,
+    .filter-toolbar .ant-input-affix-wrapper-focused {
+      border-color: var(--visual-primary, #2989ff) !important;
+      box-shadow: var(--visual-date-control-focus-shadow, 0 0 0 1px rgba(41, 137, 255, 0.32));
+    }
+
+    .table-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .table-wrapper {
+      overflow: hidden;
+      background: var(--visual-data-modal-table-body-bg, rgba(16, 40, 68, 0.8));
+      border: 1px solid var(--data-list-table-outer-border, rgba(82, 168, 255, 0.18));
+      border-radius: 8px;
+    }
+
+    .table-pagination {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .alarm-records-table {
+      .ant-table,
+      .ant-table-container,
+      .ant-table-content {
+        width: 100% !important;
+        background: transparent !important;
+      }
+
+      /* 横向滚动只放在表体，避免表头下方出现独立滚动条 */
+      .ant-table-container,
+      .ant-table-content {
+        overflow-x: auto !important;
+      }
+
+      .ant-table-header {
+        overflow: hidden !important;
+      }
+
+      .ant-table-thead > tr > th {
+        height: 40px;
+        padding: 0 12px;
+        color: var(--visual-data-modal-text-color, #fff) !important;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        background: var(--visual-data-modal-table-header-bg, rgba(16, 40, 68, 0.8)) !important;
+        border-bottom: 1px solid var(--data-list-table-header-border, rgba(91, 177, 255, 0.16)) !important;
+
+        &::before {
+          display: none !important;
+        }
+
+        &:last-child:not(.ant-table-cell-scrollbar) {
+          min-width: 96px;
+          padding-right: 20px;
+        }
+      }
+
+      .ant-table-tbody > tr > td {
+        height: 42px;
+        padding: 3px 12px;
+        color: var(--visual-data-modal-text-color, #fff) !important;
+        text-align: center;
+        vertical-align: middle;
+        background: var(--visual-data-modal-table-body-bg, rgba(16, 40, 68, 0.8)) !important;
+        border-bottom: 1px solid var(--data-list-table-row-border, rgba(105, 180, 241, 0.11)) !important;
+
+        &:last-child {
+          min-width: 96px;
+          padding-right: 20px;
+        }
+      }
+
+      .ant-table-tbody > tr:hover > td {
+        background: var(--visual-data-modal-table-row-hover-bg, rgba(41, 137, 255, 0.12)) !important;
+      }
+
+      .ant-table-placeholder {
+        background: var(--visual-data-modal-table-body-bg, rgba(16, 40, 68, 0.8)) !important;
+      }
+
+      .ant-empty-description {
+        color: var(--visual-data-modal-muted-color, #d0deee) !important;
+      }
+
+      .ant-table-body {
+        overflow-x: auto !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+      }
+    }
+
+    .row-actions a {
+      margin: 0 6px;
+      color: var(--visual-data-modal-link-color, #4db3ff);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .modal-alarm-table-root {
+    .filter-toolbar {
+      background: var(--visual-data-modal-toolbar-bg, rgba(244, 249, 255, 0.86));
+      border-color: var(--visual-data-modal-toolbar-border, rgba(66, 126, 207, 0.2));
+    }
+
+    .filter-label {
+      color: var(--visual-data-modal-muted-color, #49628f);
+    }
+
+    .filter-toolbar .filter-control-select.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .filter-toolbar .filter-control-picker.ant-picker,
+    .filter-toolbar .ant-input-affix-wrapper {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-color: rgba(67, 124, 204, 0.28) !important;
+    }
+
+    .filter-toolbar .filter-control-select .ant-select-selection-item,
+    .filter-toolbar .filter-control-select .ant-select-selection-placeholder,
+    .filter-toolbar .filter-control-picker input,
+    .filter-toolbar .ant-input-affix-wrapper .ant-input {
+      color: #17366d !important;
+      background: transparent !important;
+    }
+
+    .filter-actions .reset-btn {
+      color: #17366d;
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(76, 137, 220, 0.28);
+    }
+
+    .table-wrapper {
+      background: rgba(255, 255, 255, 0.99);
+      border-color: rgba(78, 132, 207, 0.18);
+    }
+
+    .alarm-records-table {
+      .ant-table-thead > tr > th {
+        color: #17366d !important;
+        background: rgba(236, 245, 255, 0.98) !important;
+        border-bottom-color: rgba(78, 132, 207, 0.16) !important;
+      }
+
+      .ant-table-tbody > tr > td {
+        color: #17366d !important;
+        background: rgba(255, 255, 255, 0.99) !important;
+        border-bottom-color: rgba(78, 132, 207, 0.12) !important;
+      }
+
+      .ant-table-tbody > tr:nth-child(even) > td {
+        background: rgba(244, 249, 255, 0.88) !important;
+      }
+
+      .ant-table-tbody > tr:hover > td {
+        background: rgba(36, 118, 238, 0.07) !important;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .modal-alarm-table-root .filter-fields {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .modal-alarm-table-root .filter-item-keyword {
+      grid-column: 1 / -1;
+    }
+  }
+}

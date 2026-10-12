@@ -1,0 +1,35 @@
+{
+  "name": "@ghcloud/vite-utils",
+  "version": "0.0.11",
+  "description": "vite 工具集",
+  "type": "module",
+  "module": "./lib/main.js",
+  "main": "./lib/main.js",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "utils",
+    "vite",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

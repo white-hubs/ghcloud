@@ -1,0 +1,240 @@
+<template>
+  <g-table
+    ref="tableRef"
+    title="企业走访"
+    :columns="columns"
+    :search="search"
+    :api="api"
+    :btns="btns"
+    :editMode="'page'"
+    :rowSelection="true"
+  >
+    <!-- <template v-slot:behind-item="{ record }">
+      <a-date-picker
+        show-time
+        format="YYYY-MM-DD HH:mm"
+        placeholder="请选择"
+        v-model:value="record.time"
+      />
+    </template> -->
+    <template v-slot:batch="{ record }">
+      <a-popconfirm
+        title="删除当前选中？"
+        @confirm="deleteBatch(record)"
+        :disabled="!record.length"
+      >
+        <a-button :disabled="!record.length" type="primary" danger>
+          批量删除
+        </a-button>
+      </a-popconfirm>
+    </template>
+  </g-table>
+</template>
+
+<script lang="jsx">
+import {
+  defineComponent,
+  reactive,
+  toRefs,
+  onMounted,
+  getCurrentInstance,
+  ref,
+} from "vue";
+import moment from "moment";
+
+export default defineComponent({
+  setup() {
+    const state = reactive({
+      columns: [
+        {
+          title: "走访时间",
+          dataIndex: "time",
+          key: "time",
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver
+                position="topLeft"
+                content={text ? moment(text).format("YYYY-MM-DD HH:mm:ss") : ""}
+              >
+                {text ? moment(text).format("YYYY-MM-DD HH:mm:ss") : "--"}
+              </PopOver>
+            );
+          },
+        },
+        {
+          dataIndex: "enterpriseName",
+          title: "企业名称",
+        },
+        {
+          dataIndex: "person",
+          title: "走访人员",
+        },
+        {
+          dataIndex: "action",
+          title: "操作",
+          slots: {
+            customRender: "action",
+          },
+        },
+      ],
+      api: {
+        list: "getVisitPaging", //实时出入记录
+        deleteSingle: "getVisitDel", //单个删除
+        delete: "", //批量删除
+        path: "/enterpriseVisitAdd", //企业走访-新增
+      },
+      btns: ["add", "detail", "edit", "deleteSingle"],
+      search: [
+        {
+          label: "",
+          value: "keyword",
+          placeholder: "请输入企业名称搜索",
+        },
+        {
+          label: "走访时间",
+          value: "date",
+          component: "a-range-picker",
+          defaultDate: "period",
+          placeholder: ["开始日期", "结束日期"],
+        },
+      ],
+    });
+    const { proxy } = getCurrentInstance();
+    const tableRef = ref();
+    const deleteBatch = record => {
+      proxy.$api.getVisitBatchDel(record).then(() => {
+        proxy.$message.success("操作成功");
+        tableRef.value.getData();
+      });
+    };
+    const beforeGet = form => {
+      return { ...form };
+    };
+
+    onMounted(function(){});
+    return {
+      ...toRefs(state),
+      deleteBatch,
+      tableRef,
+      moment,
+      beforeGet,
+    };
+  },
+});
+</script>
+
+<style lang="less" scoped>
+.access-record-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  .act-left {
+    position: relative;
+    width: 390px;
+    // height: 280px;
+    // background-color: aquamarine;
+    box-sizing: border-box;
+    margin-right: 16px;
+    li {
+      display: flex;
+      align-items: center;
+      height: 140px;
+      background-color: #fff;
+      &:first-child {
+        margin-bottom: 16px;
+      }
+      .car-num {
+        font-size: 32px;
+        font-family: DIN Alternate-Bold, DIN Alternate;
+        font-weight: bold;
+        color: #333333;
+        line-height: 28px;
+      }
+      .enter-bg {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        background: #fff7e6;
+        border-radius: 12px;
+        opacity: 1;
+        margin: 0 16px;
+      }
+      .out-bg {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        background: #e9fff9;
+        border-radius: 12px;
+        opacity: 1;
+        margin: 0 16px;
+      }
+      .icon-ruchangcheliang {
+        font-size: 36px;
+        color: #fa8c16;
+      }
+      .icon-chuchangcheliang {
+        font-size: 36px;
+        color: #00ba8b;
+      }
+      .enter-big {
+        position: absolute;
+        top: 3px;
+        right: -8px;
+        font-size: 120px;
+        color: rgba(250, 140, 22, 0.05);
+      }
+      .out-big {
+        position: absolute;
+        bottom: -52px;
+        right: -8px;
+        font-size: 120px;
+        color: rgba(0, 186, 139, 0.05);
+      }
+    }
+  }
+  .act-right {
+    flex: 1;
+    height: 296px;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding-top: 10px;
+  }
+}
+h2 {
+  margin: 0;
+  margin-top: 16px;
+  padding: 10px 0 10px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  color: #333333;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+// 面包屑
+:deep(.layout-header) {
+  padding: 0 15px;
+  background-color: #fff;
+}
+// 搜索
+:deep(.content-search) {
+  padding-left: 16px;
+  background-color: #fff;
+}
+// 表格
+:deep(.content-table) {
+  padding: 0 16px;
+  background-color: #fff;
+}
+// 分页
+:deep(.layout-footer) {
+  height: 56px !important;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+</style>

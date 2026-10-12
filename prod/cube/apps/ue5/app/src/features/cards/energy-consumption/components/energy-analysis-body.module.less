@@ -1,0 +1,429 @@
+:global {
+  .energy-analysis-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &.is-zoom {
+        gap: 14px;
+        padding: 8px 0;
+
+        .analysis-summary-banner {
+          padding: 16px 18px;
+        }
+
+        .analysis-summary-value {
+          font-size: calc(var(--font-size-scale, 1) * 34px);
+        }
+
+        .analysis-metric-row {
+          gap: 12px;
+          padding: 12px 4px;
+        }
+
+        .analysis-row-value {
+          font-size: calc(var(--font-size-scale, 1) * 22px);
+        }
+
+        .analysis-row-track {
+          height: 6px;
+        }
+      }
+
+      &.is-expand-all {
+        gap: 12px;
+      }
+
+    .analysis-expand-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      &:not(:last-child) {
+        padding-bottom: 14px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid rgba(70, 166, 255, 0.12);
+      }
+    }
+  }
+
+
+
+  .analysis-type-tabs {
+    display: flex;
+    gap: 8px;
+  }
+
+  .analysis-type-tab {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 8px;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    appearance: none;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.1), rgba(12, 230, 255, 0.03)), var(--visual-card-inner-bg, rgba(255, 255, 255, 0.06));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.22));
+    border-radius: 8px;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+
+    &.is-active {
+      border-color: rgba(72, 186, 255, 0.52);
+      box-shadow:
+        inset 0 0 14px rgba(46, 148, 255, 0.14),
+        0 4px 12px rgba(0, 27, 66, 0.1);
+    }
+
+    &.is-electric.is-active {
+      background: linear-gradient(135deg, rgba(38, 194, 188, 0.18), rgba(12, 230, 255, 0.06));
+      border-color: rgba(38, 194, 188, 0.42);
+    }
+
+    &.is-water.is-active {
+      background: linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06));
+      border-color: rgba(63, 132, 216, 0.45);
+    }
+
+    &.is-gas.is-active {
+      background: linear-gradient(135deg, rgba(255, 171, 16, 0.18), rgba(255, 200, 115, 0.06));
+      border-color: rgba(255, 159, 24, 0.42);
+    }
+
+    &.is-electric .analysis-type-icon {
+      background: linear-gradient(145deg, #5ee8e4, #1aa8a3);
+    }
+
+    &.is-water .analysis-type-icon {
+      background: linear-gradient(145deg, #3f98ff, #1d74ef);
+    }
+
+    &.is-gas .analysis-type-icon {
+      background: linear-gradient(145deg, #ff9f18, #e87800);
+    }
+
+    &.is-other .analysis-type-icon {
+      background: linear-gradient(145deg, #7c61ff, #5a45d8);
+    }
+  }
+
+  .analysis-type-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #ffffff;
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 700;
+    border-radius: 6px;
+  }
+
+  .analysis-type-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+  }
+
+  .analysis-summary-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 14px;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06)), var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid rgba(70, 166, 255, 0.32);
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 18px rgba(46, 148, 255, 0.12),
+      0 6px 16px rgba(0, 27, 66, 0.1);
+
+    /* 类型色写在 banner 上，避免 .is-electric & 被 CSS Modules hash 导致内容区图标失色 */
+    &.is-electric {
+      background: linear-gradient(135deg, rgba(38, 194, 188, 0.2), rgba(12, 230, 255, 0.06));
+      border-color: rgba(38, 194, 188, 0.34);
+
+      .analysis-summary-icon {
+        background: linear-gradient(145deg, #5ee8e4, #1aa8a3);
+        border-color: rgba(38, 194, 188, 0.45);
+        box-shadow: 0 0 14px rgba(38, 194, 188, 0.28);
+      }
+    }
+
+    &.is-water {
+      background: linear-gradient(135deg, rgba(41, 137, 255, 0.22), rgba(12, 230, 255, 0.08));
+      border-color: rgba(70, 166, 255, 0.36);
+
+      .analysis-summary-icon {
+        background: linear-gradient(145deg, #3f98ff, #1d74ef);
+        border-color: rgba(125, 215, 255, 0.45);
+        box-shadow: 0 0 14px rgba(41, 137, 255, 0.28);
+      }
+    }
+
+    &.is-gas {
+      background: linear-gradient(135deg, rgba(255, 159, 24, 0.2), rgba(255, 200, 115, 0.06));
+      border-color: rgba(255, 159, 24, 0.34);
+
+      .analysis-summary-icon {
+        background: linear-gradient(145deg, #ff9f18, #e87800);
+        border-color: rgba(255, 200, 115, 0.45);
+        box-shadow: 0 0 14px rgba(255, 159, 24, 0.28);
+      }
+    }
+  }
+
+  .analysis-summary-glow {
+    position: absolute;
+    top: -40%;
+    right: -8%;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(0, 246, 255, 0.22) 0%, rgba(0, 246, 255, 0) 70%);
+    pointer-events: none;
+  }
+
+  .analysis-summary-banner.is-electric .analysis-summary-glow {
+    background: radial-gradient(circle, rgba(38, 194, 188, 0.28) 0%, rgba(38, 194, 188, 0) 70%);
+  }
+
+  .analysis-summary-banner.is-water .analysis-summary-glow {
+    background: radial-gradient(circle, rgba(41, 137, 255, 0.28) 0%, rgba(41, 137, 255, 0) 70%);
+  }
+
+  .analysis-summary-banner.is-gas .analysis-summary-glow {
+    background: radial-gradient(circle, rgba(255, 171, 16, 0.28) 0%, rgba(255, 171, 16, 0) 70%);
+  }
+
+  .analysis-summary-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .analysis-summary-icon {
+    display: flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 700;
+    background: linear-gradient(145deg, #7c61ff, #5a45d8);
+    border: 1px solid rgba(124, 97, 255, 0.45);
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(124, 97, 255, 0.28);
+  }
+
+  .analysis-summary-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+  }
+
+  .analysis-summary-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .analysis-summary-value {
+    color: #eff6ff;
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 26px);
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 0 14px rgba(0, 246, 255, 0.3);
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  .analysis-summary-unit {
+    color: var(--visual-muted-color, rgba(176, 206, 240, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    font-weight: 600;
+  }
+
+  .analysis-metric-panel {
+    padding: 4px 6px;
+    background: linear-gradient(180deg, rgba(8, 20, 42, 0.1), rgba(4, 12, 28, 0.04)), var(--visual-card-inner-bg, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.16));
+    border-radius: 10px;
+  }
+
+  .analysis-empty {
+    display: flex;
+    min-height: 120px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .analysis-metric-row {
+    padding: 8px 4px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(70, 166, 255, 0.1);
+    }
+
+    &.is-electric .analysis-row-value {
+      color: #26c2bc;
+      text-shadow: 0 0 10px rgba(38, 194, 188, 0.24);
+    }
+
+    &.is-water .analysis-row-value {
+      color: #2f8dff;
+      text-shadow: 0 0 10px rgba(47, 141, 255, 0.24);
+    }
+
+    &.is-gas .analysis-row-value {
+      color: #ffab10;
+      text-shadow: 0 0 10px rgba(255, 171, 16, 0.24);
+    }
+
+    &.is-electric .analysis-row-track {
+      background: rgba(38, 194, 188, 0.14);
+    }
+
+    &.is-water .analysis-row-track {
+      background: rgba(47, 141, 255, 0.14);
+    }
+
+    &.is-gas .analysis-row-track {
+      background: rgba(255, 171, 16, 0.14);
+    }
+  }
+
+  .analysis-row-body {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .analysis-row-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  .analysis-row-label {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .analysis-row-value {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 4px;
+    color: var(--visual-number-color, #35a9ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 0 10px rgba(43, 147, 255, 0.28);
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  .analysis-row-unit {
+    color: var(--visual-muted-color, rgba(176, 206, 240, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    font-weight: 600;
+  }
+
+  .analysis-row-track {
+    height: 5px;
+    overflow: hidden;
+    background: rgba(70, 166, 255, 0.12);
+    border-radius: 999px;
+  }
+
+  .analysis-row-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.8s ease;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel.is-zoom .analysis-expand-block:not(:last-child)) {
+  border-bottom-color: rgba(116, 158, 210, 0.16);
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-type-tab) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94));
+  border-color: rgba(116, 158, 210, 0.18);
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-type-label) {
+  color: #49628f;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-summary-banner) {
+  background: linear-gradient(135deg, rgba(232, 243, 255, 0.98), rgba(255, 255, 255, 0.98));
+  border-color: rgba(91, 155, 226, 0.28);
+  box-shadow: 0 4px 14px rgba(63, 132, 216, 0.08);
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-summary-label) {
+  color: #49628f;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-summary-value) {
+  color: #0d2f75;
+  text-shadow: none;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-summary-unit),
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-row-unit) {
+  color: #6b84a8;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-metric-panel) {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(116, 158, 210, 0.16);
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-row-label) {
+  color: #2f4f7f;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-metric-row.is-electric .analysis-row-value) {
+  color: #0f9b8f;
+  text-shadow: none;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-metric-row.is-water .analysis-row-value) {
+  color: #1455b3;
+  text-shadow: none;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel .analysis-metric-row.is-gas .analysis-row-value) {
+  color: #d48806;
+  text-shadow: none;
+}
+:global(:root[data-visual-theme="minimal-white"] .energy-analysis-panel.is-zoom .analysis-metric-panel) {
+  background: transparent;
+  border: none;
+}

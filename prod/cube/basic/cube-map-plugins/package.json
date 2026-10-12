@@ -1,0 +1,56 @@
+{
+  "name": "@ghcloud/cube-map-plugins",
+  "version": "1.1.10",
+  "description": "古河云开河平台 第三方地图服务汇总",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "build:lib": "vite build -c vite.lib.config.ts",
+    "build:esm": "vite build -c vite.esm.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "map",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "1.0.1",
+    "axios": "1.7.2",
+    "@isvend/coord-transform": "0.0.11",
+    "leaflet": "1.9.4",
+    "leaflet.chinatmsproviders": "3.0.6",
+    "leaflet-polylinedecorator": "1.6.0",
+    "leaflet.vectorgrid": "1.3.0",
+    "leaflet.heat": "catalog:",
+    "leaflet-rotate": "0.2.8",
+    "leaflet.tilelayer.colorfilter": "1.2.5",
+    "@types/leaflet.heat": "catalog:",
+    "@types/leaflet.markercluster": "^1.5.6",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@amap/amap-jsapi-types": "0.0.15",
+    "@types/node": "20.9.0",
+    "@types/leaflet-rotate": "0.1.4",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "@types/leaflet": "1.9.20"
+  }
+}

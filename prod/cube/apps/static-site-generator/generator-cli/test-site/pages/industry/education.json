@@ -1,0 +1,82 @@
+{
+  "path": "/industry/education.html",
+  "meta": {
+    "title": "教育案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "education",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%B9%8F%E7%A8%8B%E5%B0%8F%E5%AD%A6.png",
+            "title": "鹏程小学",
+            "category": "教育",
+            "description": "将环境信息、资源信息和应用信息全部转化为数字化信息，为学校管理决策和服务提供强有力的支持。智慧系统集智能化感知、智能化控制、智能化管理、智能化互动反馈、智能化数据分析、智能化视窗等功能于一体，旨在实现校园信息服务的全面提升。",
+            "video": "https://qiniu.guhecloud.com/video/%E9%B9%8F%E7%A8%8B%E5%B0%8F%E5%AD%A6.mp4",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

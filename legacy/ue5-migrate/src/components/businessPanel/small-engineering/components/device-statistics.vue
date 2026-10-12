@@ -1,0 +1,157 @@
+<template>
+  <div class="situation-analysis flex-between">
+    <div class="left">
+      <div class="bg">
+        <img :src="getAssetsImage('overView4.png')" alt="" />
+        <img class="rotate aniamtion-electric-fan" :src="getAssetsImage(imgPath)" alt="" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="total flex-between" @click="handelClick">
+        <div class="title">{{ statistic.title }}</div>
+        <div class="count">
+          <span>
+            {{ statistic.total }}
+          </span>
+          <div class="ringRatio" v-if="showRatio">
+            <span>环比</span>
+            <div :class="['downtriangle', statistic.ratio > 0 && 'uptriangle']"></div>
+            <div :class="[ statistic.ratio > 0 ? 'up' : 'down']">{{
+              statistic.ratio || 0 + "%" }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { getAssetsImage } from "@/utils/getImage";
+
+interface Props {
+  imgPath: string;
+  showRatio:boolean;
+  statistic: {
+    title: string;
+    total: number;
+    ratio?: number;
+  };
+}
+const emit = defineEmits(["handelClickItemize"]);
+const props = withDefaults(defineProps<Props>(), {
+  showRatio: true,
+});
+
+const handelClick = (item) => {
+  emit("handelClickItemize", item);
+};
+</script>
+<style lang="less" scoped>
+.situation-analysis {
+  font-size: 12px;
+
+  .left {
+    .bg {
+      position: relative;
+      width: 114px;
+      height: 96px;
+      perspective: 200;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .rotate {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        left: 35px;
+        top: 8px;
+        transform: rotateY(45deg);
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .total {
+      width: 100%;
+      height: 52px;
+      background-image: url("/resource/v1/ue5-migrate/assets/images/overView6.png");
+      color: #d0deee;
+      cursor: pointer;
+
+      .count {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 4px;
+
+        .ringRatio {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          font-size: 12px;
+          margin-left: 10px;
+
+          .downtriangle {
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid #d2fff3;
+            margin-right: 3px;
+            transform: rotate(180deg);
+          }
+
+          .uptriangle {
+            border-bottom: 8px solid #ffcece;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .list-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #D0DEEE;
+        margin-top: 8px;
+        font-size: 12px;
+
+        .label {
+          color: "#ABB8CB"
+        }
+
+        .value {
+          display: flex;
+          align-items: center;
+
+          .ant-progress {
+            height: 14px;
+            display: flex;
+          }
+        }
+
+        .rate {
+          box-sizing: border-box;
+          padding-left: 14px;
+          padding-right: 5px;
+          border-left: 1px dashed rgba(255, 255, 255, 0.2);
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+</style>

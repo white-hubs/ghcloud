@@ -1,0 +1,94 @@
+
+.videoBox {
+  width: 332px;
+  height: 187px;
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.equipmentStatus {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+
+  .left-radar {
+    width: 118px;
+    height: 118px;
+
+    .checkQuery {
+      width: 59px;
+      height: 21px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 85, 254, 0) 0%,
+        rgba(0, 85, 254, 0.47) 77%,
+        #0055fe 100%
+      );
+      border-radius: 13px;
+      border: 1px solid;
+      color: #ffffff;
+      font-size: 12px;
+      text-align: center;
+      line-height: 21px;
+      margin: 10px auto;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .status-list {
+    width: 210px;
+  }
+}
+
+.camera {
+  width: 164px;
+  // height: 90px;
+  margin-top: 10px;
+}
+
+.equipmentAlarm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .content {
+    font-size: 16px;
+  }
+  .thePolice {
+    width: 155px;
+    height: 24px;
+    background: rgba(108, 128, 151, 0.5);
+    border-radius: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 16px 0 8px;
+    margin-bottom: 18px;
+
+    div {
+      font-size: 14px;
+
+      span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #328bf7;
+        border-radius: 50%;
+      }
+    }
+
+    span {
+      font-size: 14px;
+
+      font-weight: bold;
+    }
+  }
+
+  .policeList .thePolice:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  margin-bottom: 36px;
+
+  .item {
+    height: 90px;
+    background: linear-gradient(180deg, #20334c, #0c1428);
+    border-radius: 4px;
+    color: #BFDFFF;
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+
+    .label {
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      color: #bfdfff;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        margin-right: 4px;
+      }
+    }
+
+    .value {
+      font-size: 26px;
+      font-family: D-DIN-PRO;
+      font-weight: Regular;
+      text-align: left;
+      color: #81afff;
+      line-height: 31px;
+      letter-spacing: 0.03px;
+      position: relative;
+      text-align: center;
+
+      .unit {
+        font-size: 14px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        text-align: left;
+        color: #bfdfff;
+      }
+    }
+  }
+}

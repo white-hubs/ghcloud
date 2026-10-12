@@ -1,0 +1,88 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  background: #f5f5f5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section {
+  margin: 12px;
+}
+
+.sectionTitle {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.infoCard,
+.objectCard,
+.emptyCard {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.unitName {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.unitCode {
+  margin-top: 4px;
+  color: #999;
+  font-size: 12px;
+}
+
+.objectCard {
+  margin-bottom: 12px;
+}
+
+.objectTitle {
+  padding: 12px 16px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.empty,
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: #999;
+  font-size: 14px;
+}
+
+.emptyCard {
+  padding: 32px 12px;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.bottomBar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -2px 8px rgb(0 0 0 / 6%);
+}

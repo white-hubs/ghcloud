@@ -1,0 +1,38 @@
+{
+  "name": "@ghcloud/cube-qrcode",
+  "private": false,
+  "version": "1.0.2",
+  "type": "module",
+  "main": "src/main.ts",
+  "module": "src/main.ts",
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "tsc": "vue-tsc",
+    "build:lib": "vue-tsc && vite build -c vite.lib.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "dependencies": {
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@ghcloud/cube-risk-management-service": "workspace:^",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

@@ -1,0 +1,144 @@
+.container {
+  padding: 10px 0;
+  &.sz {
+    height: 300px;
+  }
+  &.sub-area {
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+.scroll {
+  overflow-y: auto;
+  height: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth;
+  
+  /* 隐藏滚动条 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #a5b6da;
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.indexBox {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+  font-size: 16px;
+  color: #ffffff;
+  
+  &:nth-child(1) {
+    background: linear-gradient(135deg, #FF4D4F 0%, #A30D0F 100%);
+  }
+  
+  &:nth-child(2) {
+    background: linear-gradient(135deg, #FF9C27 0%, #A35A00 100%);
+  }
+  
+  &:nth-child(3) {
+    background: linear-gradient(135deg, #2F54EB 0%, #061178 100%);
+  }
+  
+  span {
+    display: inline-block;
+  }
+}
+
+.companyName {
+  flex: 1;
+  font-size: 15px;
+  color: #a5b6da;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60%;
+}
+
+.companyValue {
+  font-size: 22px;
+  font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+  color: #d2e0fd;
+  white-space: nowrap;
+  
+  .unit {
+    font-size: 14px;
+    color: #a5b6da;
+  }
+}
+
+.progressWrapper {
+  width: 94%;
+  height: 6px;
+  background: rgba(217, 231, 255, 0.10);
+  margin: 6px auto;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(63deg, rgba(97, 148, 247, 0.14) 2%, #94baf9 83%);
+  position: relative;
+  overflow: visible;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: #edf4ff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    background: rgba(97, 148, 247, 0.60);
+    border-radius: 50%;
+  }
+}

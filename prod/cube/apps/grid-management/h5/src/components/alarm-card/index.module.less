@@ -1,0 +1,119 @@
+.alarm-card {
+  .alarm-stat {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    .alarm-stat-item {
+      padding: 12px;
+      flex: 1;
+      border-radius: 6px;
+      background: #f5f8ff;
+
+      &.alarm-count {
+        .item-value {
+          color: #2152B3;
+        }
+      }
+
+      &.alarm-doing {
+        .item-value {
+          color: #FF7132;
+        }
+      }
+
+      &.alarm-done {
+        .item-value {
+          color: #29BC9F;
+        }
+      }
+
+      &.alarm-count {
+        background: #e4eefc;
+      }
+
+      &.alarm-doing {
+        background: #fff2ec;
+
+        .item-value {
+          color: #FF7132;
+        }
+      }
+
+      &.alarm-done {
+        background: #e3fbfd;
+
+        .item-value {
+          color: #29BC9F;
+        }
+      }
+
+      .item-label {
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #373840;
+      }
+
+      .item-value {
+        font-size: 19px;
+        font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+        font-weight: Regular;
+        color: #2152b3;
+      }
+    }
+  }
+
+  .alarm-table {
+    margin-top: 12px;
+
+    .alarm-table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      background: #f6f7fb;
+      border-radius: 4px;
+
+      .alarm-table-header-item {
+        flex: 1;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #373840;
+        font-size: 14px;
+      }
+    }
+
+    .alarm-table-body {
+      max-height: 320px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+
+      .alarm-table-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+
+        .alarm-table-row-item {
+          flex: 1;
+          font-size: 13px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: center;
+          color: #666878;
+        }
+      }
+
+      .load-status {
+        padding: 8px 0;
+        color: #969799;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+}

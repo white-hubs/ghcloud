@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7f8fa;
+  
+  :global {
+    .van-nav-bar {
+      background-color: #fff;
+      
+      .van-nav-bar__title {
+        color: #323233;
+        font-weight: 500;
+      }
+    }
+    
+    .van-field {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(100, 101, 102, 0.08);
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #323233;
+  margin-bottom: 20px;
+  padding-left: 4px;
+}
+
+.form {
+  margin-bottom: 24px;
+}
+
+.submitBtnWrap {
+  margin-top: 32px;
+  padding: 0 16px;
+}
+
+.submitBtn {
+  height: 44px;
+  border-radius: 8px;
+  font-size: 16px;
+  background: linear-gradient(to right, #1989fa, #0570db);
+  border: none;
+  box-shadow: 0 4px 8px rgba(25, 137, 250, 0.2);
+}

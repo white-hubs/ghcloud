@@ -1,0 +1,494 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .security-monitor-device-count-v2 {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .stats-row {
+    display: flex;
+    flex: 0 0 auto;
+    gap: var(--card-stat-gap, 6px);
+    margin-bottom: var(--card-section-gap, 10px);
+  }
+
+  .security-monitor-device-count-v2 .stat-card,
+  .security-monitor-device-count-v2-panel .stat-card {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--card-stat-gap, 6px);
+    margin: 0;
+    padding: var(--card-stat-padding, 6px 6px 6px 4px);
+    overflow: visible;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.04)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+    border-radius: 8px;
+    box-shadow:
+      inset 0 0 12px rgba(46, 148, 255, 0.1),
+      0 4px 10px rgba(0, 27, 66, 0.06);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: rgba(72, 186, 255, 0.52);
+      box-shadow:
+        inset 0 0 16px rgba(46, 148, 255, 0.18),
+        0 8px 18px rgba(0, 27, 66, 0.12);
+      outline: none;
+    }
+
+    &.is-total {
+      background:
+        linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+
+    &.is-online {
+      background:
+        linear-gradient(135deg, rgba(38, 194, 188, 0.16), rgba(12, 230, 255, 0.04)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+
+    &.is-offline {
+      background:
+        linear-gradient(135deg, rgba(255, 77, 79, 0.14), rgba(255, 171, 16, 0.04)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+  }
+
+  .security-monitor-device-count-v2 .stat-icon,
+  .security-monitor-device-count-v2-panel .stat-icon {
+    position: relative;
+    display: flex;
+    flex: 0 0 var(--card-stat-icon-size, 28px);
+    width: var(--card-stat-icon-size, 28px);
+    height: var(--card-stat-icon-size, 28px);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 8px;
+
+    &.stat-icon-image {
+      flex: 0 0 var(--card-stat-icon-size, 28px);
+      width: var(--card-stat-icon-size, 28px);
+      height: var(--card-stat-icon-size, 28px);
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  .security-monitor-device-count-v2 .stat-icon-img,
+  .security-monitor-device-count-v2-panel .stat-icon-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .security-monitor-device-count-v2 .stat-content,
+  .security-monitor-device-count-v2-panel .stat-content {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: visible;
+    text-align: left;
+  }
+
+  .security-monitor-device-count-v2 .stat-value,
+  .security-monitor-device-count-v2-panel .stat-value {
+    color: var(--visual-number-color, #35a9ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: left;
+    text-shadow: 0 0 10px rgba(43, 147, 255, 0.34);
+
+    .gh-count-to {
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+
+    &.is-online-value {
+      color: #26c2bc;
+      text-shadow: 0 0 10px rgba(38, 194, 188, 0.34);
+    }
+
+    &.is-offline-value {
+      color: #ff4d4f;
+      text-shadow: 0 0 10px rgba(255, 77, 79, 0.28);
+    }
+  }
+
+  /* 覆盖全局泄漏的 .stat-label 省略号，保证「设备总数/在线设备/离线设备」完整展示 */
+  .security-monitor-device-count-v2 .stat-label,
+  .security-monitor-device-count-v2-panel .stat-label {
+    margin-bottom: 1px;
+    overflow: visible;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.2;
+    white-space: nowrap;
+    word-break: keep-all;
+    text-align: left;
+    text-overflow: clip;
+  }
+
+  .device-chart-row {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    gap: var(--card-section-gap, 12px);
+    min-width: 0;
+    min-height: 0;
+    padding: 4px 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    &.is-zoom {
+      min-height: calc(40px * 4 + 8px * 3);
+      margin-top: 12px;
+      gap: 16px;
+      padding: 10px 8px;
+    }
+  }
+
+  .chart-pie-wrap {
+    position: relative;
+    flex: 0 0 var(--card-pie-size, 132px);
+    width: var(--card-pie-size, 132px);
+    height: var(--card-pie-size, 132px);
+    min-width: var(--card-pie-size, 132px);
+    max-width: var(--card-pie-size, 132px);
+    min-height: var(--card-pie-size, 132px);
+    overflow: hidden;
+    isolation: isolate;
+
+    .elevator-analysis-pie-box,
+    .pie-box,
+    .elevator-analysis-left {
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &.is-zoom {
+      flex: 0 0 220px;
+      width: 220px;
+      height: 220px;
+      min-width: 220px;
+      max-width: 220px;
+      min-height: 220px;
+    }
+  }
+
+  .elevator-analysis-left {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pie-center-value,
+  .pie-center-label {
+    color: var(--visual-chart-label-color, #fff);
+    text-align: center;
+  }
+
+  .pie-center-value {
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  .pie-center-label {
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.3;
+  }
+
+  /* 对齐安全总览设备统计：横向胶囊行，剩余高度吃满，超出滚动 */
+  .security-monitor-device-count-v2 .legend-list,
+  .security-monitor-device-count-v2-panel .legend-list {
+    --legend-row-height: var(--card-legend-row-height, 30px);
+    --legend-row-gap: var(--card-legend-row-gap, 6px);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: var(--legend-row-gap);
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    max-height: 100%;
+    margin-left: 4px;
+    padding-right: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.is-zoom {
+      --legend-row-height: 40px;
+      --legend-row-gap: 8px;
+      height: calc(var(--legend-row-height) * 4 + var(--legend-row-gap) * 3);
+      max-height: calc(var(--legend-row-height) * 4 + var(--legend-row-gap) * 3);
+      overflow-y: auto;
+    }
+  }
+
+  .security-monitor-device-count-v2 .legend-item,
+  .security-monitor-device-count-v2-panel .legend-item {
+    appearance: none;
+    display: flex;
+    flex: 0 0 var(--legend-row-height);
+    box-sizing: border-box;
+    min-width: 0;
+    height: var(--legend-row-height);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0;
+    padding: 0 10px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.12), rgba(12, 230, 255, 0.03)),
+      rgba(8, 28, 58, 0.28);
+    border: 1px solid rgba(113, 178, 255, 0.2);
+    border-radius: 8px;
+
+    &:hover {
+      border-color: rgba(73, 151, 255, 0.45);
+      background:
+        linear-gradient(135deg, rgba(47, 141, 255, 0.2), rgba(19, 58, 110, 0.22)),
+        rgba(8, 28, 58, 0.35);
+    }
+  }
+
+  .security-monitor-device-count-v2 .legend-left,
+  .security-monitor-device-count-v2-panel .legend-left {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .security-monitor-device-count-v2 .legend-color,
+  .security-monitor-device-count-v2-panel .legend-color {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border-radius: 2px;
+  }
+
+  .security-monitor-device-count-v2 .legend-name,
+  .security-monitor-device-count-v2-panel .legend-name {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: var(--card-legend-name-size, 12px);
+    line-height: 1.3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .security-monitor-device-count-v2 .legend-value,
+  .security-monitor-device-count-v2-panel .legend-value {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 2px;
+    padding-left: 0;
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: var(--card-legend-value-size, 15px);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .security-monitor-device-count-v2 .legend-unit,
+  .security-monitor-device-count-v2-panel .legend-unit {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.72));
+    font-family: Source Han Sans CN, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .security-monitor-device-count-v2.is-zoom {
+    .stat-value {
+      font-size: calc(var(--font-size-scale, 1) * 20px);
+      line-height: calc(var(--font-size-scale, 1) * 24px);
+    }
+
+    .stat-label {
+      font-size: calc(var(--font-size-scale, 1) * 12px);
+    }
+
+    .pie-center-value {
+      font-size: calc(var(--font-size-scale, 1) * 22px);
+    }
+  }
+:root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .sub-panel {
+    backdrop-filter: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .sub-panel-content {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-card {
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.78));
+    border-color: rgba(116, 158, 210, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(61, 111, 175, 0.06);
+
+    /* 极简白：去掉左侧色条与顶部高光 */
+    &::before,
+    &::after {
+      display: none;
+      content: none;
+    }
+
+    &:hover {
+      border-color: rgba(72, 186, 255, 0.52);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 8px 18px rgba(61, 111, 175, 0.1);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-card.is-total {
+    background: linear-gradient(180deg, rgba(232, 243, 255, 0.98), rgba(246, 250, 255, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-card.is-online {
+    background: linear-gradient(180deg, rgba(232, 250, 249, 0.98), rgba(246, 252, 252, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-card.is-offline {
+    background: linear-gradient(180deg, rgba(255, 241, 240, 0.98), rgba(255, 248, 248, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-value {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-value.is-online-value {
+    color: #0f9b95;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-value.is-offline-value {
+    color: #e84749;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .stat-label {
+    overflow: visible;
+    color: var(--visual-muted-color, #49628f);
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .legend-name,
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .legend-unit {
+    color: #49628f;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .legend-item {
+    background: linear-gradient(145deg, rgba(232, 244, 255, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.08);
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .legend-value,
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .pie-center-value {
+    color: var(--visual-number-color, #0f49a3);
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .security-monitor-device-count-v2-panel .pie-center-label {
+    color: var(--visual-muted-color, #49628f);
+  }
+}
+
+.v2-minimal-white-panel(security-monitor-device-count-v2-panel);
+
+:global {
+  .panel-card-slot[data-card-density="compact"] .security-monitor-device-count-v2,
+  .panel-card-slot[data-card-density="rearrange"] .security-monitor-device-count-v2,
+  .panel-card-slot[data-card-density="scroll"] .security-monitor-device-count-v2 {
+    gap: 0;
+  }
+
+  .panel-card-slot[data-card-density="compact"] .security-monitor-device-count-v2 .device-chart-row,
+  .panel-card-slot[data-card-density="rearrange"] .security-monitor-device-count-v2 .device-chart-row,
+  .panel-card-slot[data-card-density="scroll"] .security-monitor-device-count-v2 .device-chart-row {
+    gap: var(--card-section-gap, 8px);
+    padding: 2px 0;
+  }
+
+  .panel-card-slot[data-card-density="compact"] .security-monitor-device-count-v2 .legend-list,
+  .panel-card-slot[data-card-density="rearrange"] .security-monitor-device-count-v2 .legend-list,
+  .panel-card-slot[data-card-density="scroll"] .security-monitor-device-count-v2 .legend-list {
+    --legend-row-height: var(--card-legend-row-height, 28px);
+    --legend-row-gap: var(--card-legend-row-gap, 5px);
+  }
+}

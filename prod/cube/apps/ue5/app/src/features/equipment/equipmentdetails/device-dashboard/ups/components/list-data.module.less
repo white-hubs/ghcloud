@@ -1,0 +1,79 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .title {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &.list-data {
+    .wrap {
+      margin: 10px 0;
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-content: space-around;
+
+        .item {
+          width: 24%;
+          flex-shrink: 0;
+          display: inline-block;
+          color: #F9FAFC;
+          border: 1px solid #2989FF;
+          border-radius: 8px;
+          padding: 10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 20px;
+          }
+
+          .wrap {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+          }
+
+          .info {
+            margin-left: 15px;
+          }
+
+          .tit {
+            font-size: 12px;
+            font-family: Source Han Sans, Source Han Sans;
+            font-weight: 400;
+            color: #F9FAFC;
+            line-height: 20px;
+          }
+
+          .text {
+            font-size: 14px;
+            font-family: Source Han Sans, Source Han Sans;
+            font-weight: 500;
+            color: #F9FAFC;
+            line-height: 20px;
+          }
+
+          .icon {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,219 @@
+.report-analysis {
+  width: 100%;
+  height: 100%;
+
+  &>div {
+    background: #f0f2f5 !important;
+
+
+  }
+
+
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 0;
+    gap: 20px;
+  }
+
+  .active-merchant {
+    background: #fff;
+    padding: 20px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f3f3f3;
+
+      .title {
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+
+        .name {
+          color: #545B66;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .tips {
+          color: #86909C;
+          font-size: 12px;
+          font-weight: 400px;
+        }
+      }
+    }
+
+    .middle {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+
+      .card {
+        padding: 13px 28px 13px 20px;
+        background: linear-gradient(50deg, #F7FAFF 0%, rgba(245, 249, 255, 0.22) 37%, #F7FAFF 100%);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card-info {
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          gap: 12px;
+
+          span {
+            font-size: 14px;
+            color: #000000;
+          }
+
+          .count {
+            font-size: 24px;
+            font-weight: 500;
+            color: #3B4047;
+          }
+        }
+
+        img {
+          width: 140px;
+          height: 38px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+
+      .search-bar {
+        margin-left: auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: flex-end;
+
+        .input-item {
+          width: 15%;
+          flex-shrink: 0;
+        }
+
+        .radio-item {
+          width: 15%;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: row-reverse;
+        }
+
+        .picker-item {
+          width: 18% !important;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .content {
+      margin-top: 16px;
+      background: #F9FBFF;
+      border-radius: 6px 6px 6px 6px;
+      padding: 30px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .content-item {
+        width: 30%;
+        font-size: 14px;
+        font-weight: 400;
+        border-right: 1px dashed #D8D8D8;
+        color: #6C7482;
+
+        &:last-child {
+          border: none;
+        }
+
+
+        .content-value {
+          display: flex;
+          align-items: center;
+
+          .content-count {
+            font-size: 28px;
+            font-family: Roboto-Bold, Roboto;
+            font-weight: 700;
+            color: #3B4047;
+          }
+
+          .ratio {
+            display: flex;
+            align-items: center;
+          }
+
+          .ratio-value {
+            display: flex;
+            margin-left: 12px;
+            align-items: center;
+            font-size: 12px;
+            font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+            font-weight: 400;
+            color: #9198A3;
+            gap: 4px;
+
+            .up {
+              color: #FF5454 !important;
+            }
+
+            .down {
+              color: #2CC966 !important;
+            }
+
+            .value {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+            }
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .trend-charts {
+      margin-top: 16px;
+
+      .chart-title {
+        padding: 14px 16px;
+        background: #FAFAFA;
+        border-radius: 6px 6px 6px 6px;
+        font-size: 16px;
+        font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+        font-weight: 500;
+        color: #545B66;
+      }
+    }
+
+  }
+}
+
+:global {
+  .layout-table {
+    overflow-y: auto !important;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@ghcloud/cube-inspection-command-screen-service",
+  "version": "1.0.3",
+  "description": "inspection-command-screen service",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "bun run --cwd ../../../../../standard/infrastructure/helper/vite-utils build",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "workspace:^",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

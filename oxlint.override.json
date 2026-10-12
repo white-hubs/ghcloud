@@ -1,0 +1,135 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "rules": {
+        "no-magic-numbers": [
+            "warn",
+            {
+                "ignore": [
+                    0,
+                    0.0
+                ]
+            }
+        ],
+        "no-plusplus": [
+            "warn",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "max-lines-per-function": [
+            "warn",
+            {
+                "max": 100,
+                "skipBlankLines": true,
+                "skipComments": true
+            }
+        ],
+        "max-lines": [
+            "warn",
+            {
+                // 当前项目中存在多个超过 500 行的文件，后续清理后再逐步调小该配置
+                "max": 1000,
+                "skipBlankLines": true,
+                "skipComments": true
+            }
+        ],
+        "no-empty-function": [
+            "warn",
+            {
+                "allow": [
+                    "arrowFunctions",
+                    "methods",
+                    "generatorMethods",
+                    "getters",
+                    "setters",
+                    "constructors",
+                    "privateConstructors",
+                    "protectedConstructors",
+                    "overrideMethods"
+                ]
+            }
+        ],
+        "no-empty": [
+            "warn",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "no-unused-expressions": [
+            "warn",
+            {
+                "allowShortCircuit": true,
+                "allowTaggedTemplates": true
+            }
+        ],
+        "typescript/explicit-function-return-type": [
+            "warn",
+            {
+                "allowConciseArrowFunctionExpressionsStartingWithVoid": true,
+                "allowDirectConstAssertionInArrowFunctions": true,
+                "allowExpressions": true,
+                "allowFunctionsWithoutTypeParameters": true
+            }
+        ],
+        "max-params": [
+            "warn",
+            {
+                "max": 8
+            }
+        ],
+        "no-unused-vars": [
+            // 当前项目存在大量 unused, 后续清理后再提级
+            "warn",
+            {
+                "argsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_ignore",
+                "destructuredArrayIgnorePattern": "^_",
+                "ignoreClassWithStaticInitBlock": true,
+                "ignoreUsingDeclarations": true,
+                "varsIgnorePattern": "^_ignore"
+            }
+        ],
+        "preserve-caught-error": [
+            "warn",
+            {
+                "requireCatchParameter": true
+            }
+        ],
+        "explicit-module-boundary-types": [
+            "warn",
+            {
+                "allowDirectConstAssertionInArrowFunctions": true,
+                "allowTypedFunctionExpressions": true,
+                "allowOverloadFunctions": true,
+                "allowArgumentsExplicitlyTypedAsAny": true
+            }
+        ],
+        "explicit-function-return-type": [
+            "warn",
+            {
+                "allowExpressions": true,
+                "allowTypedFunctionExpressions": true,
+                "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+            }
+        ],
+        "prefer-destructuring": [
+            "warn",
+            {
+                "enforceForRenamedProperties": true,
+                "AssignmentExpression": {
+                    "array": false,
+                    "object": true
+                },
+                "VariableDeclarator": {
+                    "array": false,
+                    "object": true
+                }
+            }
+        ],
+        "no-unused-private-class-members": "warn",
+        "no-useless-concat": "warn",
+        "no-new": "warn",
+        "no-cond-assign": "warn",
+        "no-useless-catch": "warn"
+    }
+}

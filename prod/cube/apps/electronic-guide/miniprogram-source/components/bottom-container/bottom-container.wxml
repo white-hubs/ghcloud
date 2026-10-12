@@ -1,0 +1,21 @@
+<!--components/bottom/bottom-container/bottom-container.wxml-->
+<view class="bottom-container" catchtouchmove="true">
+	<view class="handle">
+		<view class="handle-current-location" bindtap="handleBackMapCenter">
+			<image class="location-icon" src="../static/images/current-location.png"></image>
+		</view>
+		<view class="handle-bootom" bindtap="handleFullMap">
+			<image wx:if="{{fullMap}}" src="../static/images/botton-list.png"></image>
+			<image wx:else src="../static/images/botton-enlarge.png"></image>
+			<view>
+				{{!$state.isSearch?'回列表':'大地图'}}
+			</view>
+		</view>
+	</view>
+	<view hidden="{{$state.isSearch}}">
+		<bottom-swiper bindcheckedPoint="handleCheckedPoint"></bottom-swiper>
+	</view>
+	<view hidden="{{!$state.isSearch}}">
+		<bottom-list bindcheckedPoint="handleCheckedPoint" bindchangeRegion="handleChangeRegion"></bottom-list>
+	</view>
+</view>

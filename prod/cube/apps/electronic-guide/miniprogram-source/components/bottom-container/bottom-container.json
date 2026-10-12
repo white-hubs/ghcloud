@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-swiper":"./bottom-swiper/bottom-swiper",
+    "bottom-list":"./bottom-list/bottom-list"
+  }
+}

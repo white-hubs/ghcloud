@@ -1,0 +1,68 @@
+{
+  "name": "@ghcloud-legacy/streamengine-pc-migrate",
+  "version": "2.12.36",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite --mode localized",
+    "dev:dev": "vite --mode dev",
+    "dev:test": "vite --mode test",
+    "build:dev": "vite build --mode dev",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "@ghcloud/cube-access-control-service": "workspace:^",
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-hotel-management-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-maintain-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-parking-lot-service": "workspace:^",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-personnel-management-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-security-management-service": "workspace:^",
+    "@ghcloud/cube-stream-engine-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-visitor-management-service": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "axios": "^0.27.2",
+    "dayjs": "catalog:",
+    "js-base64": "^3.7.5",
+    "leaflet": "catalog:",
+    "lodash": "4.17.21",
+    "mitt": "3.0.1",
+    "pinia": "catalog:",
+    "print-js": "1.6.0",
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "vue-signature-pad": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.202",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

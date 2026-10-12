@@ -1,0 +1,47 @@
+.zd-project-cycle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.right-list {
+  width: 60% !important;
+
+  :global {
+    .ant-empty-normal {
+      color: #D9E7FF;
+    }
+    .ant-select-dropdown, .ant-select-item-empty {
+      color: #D9E7FF;
+      text-align: center;
+    }
+    .ant-select-clear{
+      background: transparent;
+    }
+    .alarm-analysisBox {
+      width: 100% !important;
+      height: 36px !important;
+      background: linear-gradient(0deg, rgba(104, 123, 164, 0.16) 1%, rgba(110, 143, 214, 0.00) 65%);
+      flex-shrink: 0;
+      box-sizing: border-box;
+      padding: 0 10px;
+      font-size: 20px;
+      font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #CEE0FF;
+
+      .alarm-analysis-name {
+        height: auto !important;
+        width: auto !important;
+        font-size: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #a5b6da;
+        line-height: 20px;
+      }
+    }
+  }
+}

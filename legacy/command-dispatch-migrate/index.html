@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta version="<%- version %>" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/animate-4.1.1.css" />
+  <link rel="stylesheet" href="/static/basscss.min.css" />
+  <script src="/config.js"></script>
+  <script src="/static/iconfont/iconfont.js"></script>
+  <script src="/webrtc-plugin/thirdlib/Ice.js"></script>
+  <script src="/webrtc-plugin/main.js"></script>
+  <title></title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      background: #020d29;
+    }
+
+    @font-face {
+      font-family: YouSheBiaoTiHei;
+      src: url("/static/family/you-she-biao-ti-hei.ttf");
+      font-display: swap;
+    }
+
+    #app-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 2147483647;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 58% 48% at 50% 44%, rgba(14, 58, 120, 0.55) 0%, transparent 70%),
+        radial-gradient(ellipse 70% 55% at 50% 42%, #0a2a5c 0%, #06183a 42%, #020d29 100%);
+      opacity: 1;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+      contain: strict;
+    }
+
+    #app-splash.app-splash--leave {
+      opacity: 0;
+    }
+
+    .app-splash__grid {
+      position: absolute;
+      inset: -20%;
+      background-image:
+        linear-gradient(rgba(56, 142, 243, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 142, 243, 0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 55% 48% at 50% 46%, #000 20%, transparent 72%);
+      animation: app-splash-grid 18s linear infinite;
+    }
+
+    .app-splash__glow {
+      position: absolute;
+      width: 720px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(56, 142, 243, 0.36) 0%, rgba(56, 142, 243, 0.08) 42%, transparent 70%);
+      transform: translate3d(0, -12px, 0);
+      animation: app-splash-glow 3.2s ease-in-out infinite;
+      will-change: opacity, transform;
+    }
+
+    .app-splash__core {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: app-splash-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .app-splash__hud {
+      position: relative;
+      width: 228px;
+      height: 228px;
+      margin-bottom: 22px;
+    }
+
+    .app-splash__orbit {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(110, 180, 255, 0.18);
+      box-shadow: 0 0 24px rgba(56, 142, 243, 0.12) inset;
+    }
+
+    .app-splash__orbit::before,
+    .app-splash__orbit::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px dashed rgba(110, 180, 255, 0.28);
+    }
+
+    .app-splash__orbit::before {
+      inset: 10px;
+      animation: app-splash-spin 18s linear infinite;
+    }
+
+    .app-splash__orbit::after {
+      inset: -12px;
+      border-style: solid;
+      border-color: transparent rgba(56, 142, 243, 0.45) transparent transparent;
+      animation: app-splash-spin 7s linear infinite reverse;
+    }
+
+    .app-splash__gauge {
+      position: relative;
+      z-index: 1;
+      width: 228px;
+      height: 228px;
+      transform: rotate(-90deg);
+    }
+
+    .app-splash__track {
+      fill: none;
+      stroke: rgba(56, 142, 243, 0.16);
+      stroke-width: 6;
+    }
+
+    .app-splash__ring {
+      fill: none;
+      stroke: url(#app-splash-grad);
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-dasharray: 540.353;
+      stroke-dashoffset: 540.353;
+      filter: drop-shadow(0 0 8px rgba(56, 142, 243, 0.85));
+      transition: stroke-dashoffset 0.28s ease-out;
+    }
+
+    .app-splash__readout {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-splash__pct {
+      font-family: YouSheBiaoTiHei, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 52px;
+      line-height: 1;
+      color: #fff;
+      text-shadow: 0 0 12px #388ef3, 0 4px 8px #215a9d;
+    }
+
+    .app-splash__pct-wrap {
+      display: flex;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .app-splash__pct-unit {
+      margin: 8px 0 0 2px;
+      font-size: 16px;
+      letter-spacing: 0;
+      color: rgba(190, 218, 255, 0.85);
+    }
+
+    .app-splash__pct-label {
+      margin-top: 8px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: rgba(190, 218, 255, 0.62);
+    }
+
+    .app-splash__ornament {
+      display: flex;
+      align-items: center;
+      width: min(520px, 78vw);
+      margin-bottom: 16px;
+    }
+
+    .app-splash__ornament i {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 142, 243, 0.85));
+    }
+
+    .app-splash__ornament i:last-child {
+      background: linear-gradient(90deg, rgba(56, 142, 243, 0.85), transparent);
+    }
+
+    .app-splash__ornament span {
+      width: 8px;
+      height: 8px;
+      margin: 0 12px;
+      border: 1px solid #6eb4ff;
+      transform: rotate(45deg);
+      box-shadow: 0 0 8px rgba(56, 142, 243, 0.7);
+    }
+
+    .app-splash__title {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      font-family: YouSheBiaoTiHei, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      line-height: 1.2;
+      color: #ffffff;
+      text-indent: 0.22em;
+      text-shadow:
+        0 0 8px #388ef3,
+        0 4px 4px #215a9d,
+        0 0 18px rgba(56, 142, 243, 0.45);
+    }
+
+    .app-splash__title::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+      transform: translate3d(-140%, 0, 0);
+      animation: app-splash-shine 2.4s ease-in-out 0.5s infinite;
+      will-change: transform;
+    }
+
+    .app-splash__bar {
+      position: relative;
+      width: min(320px, 62vw);
+      height: 4px;
+      margin-top: 22px;
+      overflow: hidden;
+      background: rgba(56, 142, 243, 0.18);
+      border-radius: 2px;
+      box-shadow: 0 0 12px rgba(56, 142, 243, 0.18) inset;
+    }
+
+    .app-splash__bar-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #1a5cb8, #388ef3 45%, #c5e4ff);
+      box-shadow: 0 0 10px rgba(56, 142, 243, 0.75);
+      transition: width 0.28s ease-out;
+    }
+
+    @keyframes app-splash-glow {
+      0%,
+      100% {
+        opacity: 0.7;
+        transform: translate3d(0, -12px, 0) scale(0.96);
+      }
+      50% {
+        opacity: 1;
+        transform: translate3d(0, -12px, 0) scale(1.06);
+      }
+    }
+
+    @keyframes app-splash-in {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes app-splash-shine {
+      0% {
+        transform: translate3d(-140%, 0, 0);
+      }
+      55%,
+      100% {
+        transform: translate3d(420%, 0, 0);
+      }
+    }
+
+    @keyframes app-splash-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes app-splash-grid {
+      to {
+        transform: translate3d(48px, 48px, 0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .app-splash__glow,
+      .app-splash__core,
+      .app-splash__title::after,
+      .app-splash__orbit::before,
+      .app-splash__orbit::after,
+      .app-splash__grid,
+      .app-splash__ring {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>
+      We're sorry but doesn't work
+      properly without JavaScript enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div id="app-splash" aria-busy="true" aria-live="polite">
+    <div class="app-splash__grid" aria-hidden="true"></div>
+    <div class="app-splash__glow"></div>
+    <div class="app-splash__core">
+      <div class="app-splash__hud" aria-hidden="true">
+        <div class="app-splash__orbit"></div>
+        <svg class="app-splash__gauge" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="app-splash-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1a5cb8" />
+              <stop offset="52%" stop-color="#388ef3" />
+              <stop offset="100%" stop-color="#c5e4ff" />
+            </linearGradient>
+          </defs>
+          <circle class="app-splash__track" cx="100" cy="100" r="86"></circle>
+          <circle id="app-splash-ring" class="app-splash__ring" cx="100" cy="100" r="86"></circle>
+        </svg>
+        <div class="app-splash__readout">
+          <div class="app-splash__pct-wrap">
+            <span id="app-splash-pct" class="app-splash__pct">0</span>
+            <span class="app-splash__pct-unit">%</span>
+          </div>
+          <span class="app-splash__pct-label">当前进度</span>
+        </div>
+      </div>
+      <div class="app-splash__ornament" aria-hidden="true"><i></i><span></span><i></i></div>
+      <h1 class="app-splash__title">指挥调度平台</h1>
+      <div class="app-splash__bar" aria-hidden="true">
+        <div id="app-splash-fill" class="app-splash__bar-inner"></div>
+      </div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script>
+    (function () {
+      var RING = 540.353;
+      var STEP_ORDER = ["boot", "app", "data", "map"];
+      var ring = document.getElementById("app-splash-ring");
+      var pctEl = document.getElementById("app-splash-pct");
+      var fill = document.getElementById("app-splash-fill");
+      var ignore = {};
+      var pending = {};
+      var shown = 0;
+      var target = 0;
+      var finished = false;
+      var raf = 0;
+      var currentStep = "boot";
+      var origFetch = window.fetch;
+      var xhrOpen = XMLHttpRequest.prototype.open;
+      var xhrSend = XMLHttpRequest.prototype.send;
+
+      performance.getEntriesByType("resource").forEach(function (entry) {
+        ignore[entry.name] = true;
+      });
+
+      function paint(n) {
+        var p = Math.max(0, Math.min(100, n));
+        if (pctEl) pctEl.textContent = String(Math.round(p));
+        if (fill) fill.style.width = p + "%";
+        if (ring) ring.style.strokeDashoffset = String(RING * (1 - p / 100));
+      }
+
+      function tick() {
+        shown += (target - shown) * 0.12;
+        if (Math.abs(target - shown) < 0.08) shown = target;
+        paint(shown);
+        if (shown < target - 0.05 || (finished && shown < 99.6)) {
+          raf = requestAnimationFrame(tick);
+        } else {
+          raf = 0;
+          if (finished) paint(100);
+        }
+      }
+
+      function setStep(step) {
+        if (!step || STEP_ORDER.indexOf(step) < 0) return;
+        if (STEP_ORDER.indexOf(step) < STEP_ORDER.indexOf(currentStep)) return;
+        currentStep = step;
+      }
+
+      function setProgress(p, hint, step) {
+        if (finished && p < 100) return;
+        var next = Math.max(target, Math.min(finished ? 100 : 99, p));
+        target = next;
+        setStep(step);
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      function bootPercent() {
+        var keys = Object.keys(pending);
+        var total = keys.length;
+        var done = 0;
+        for (var i = 0; i < total; i++) {
+          if (pending[keys[i]]) done++;
+        }
+        if (!total) return 0;
+        return Math.min(18, (done / Math.max(total, 4)) * 18);
+      }
+
+      function noteResource(name, done) {
+        if (finished || !name || ignore[name]) return;
+        if (!(name in pending)) pending[name] = false;
+        if (done) pending[name] = true;
+        if (currentStep !== "boot") return;
+        setProgress(bootPercent(), "正在加载系统资源（脚本、样式与插件）", "boot");
+      }
+
+      try {
+        var observer = new PerformanceObserver(function (list) {
+          list.getEntries().forEach(function (entry) {
+            noteResource(entry.name, true);
+          });
+        });
+        observer.observe({ type: "resource", buffered: false });
+      } catch (e) {}
+
+      if (origFetch) {
+        window.fetch = function () {
+          var input = arguments[0];
+          var name = typeof input === "string" ? input : (input && input.url) || "fetch";
+          noteResource(name, false);
+          return origFetch.apply(this, arguments).finally(function () {
+            noteResource(name, true);
+          });
+        };
+      }
+
+      XMLHttpRequest.prototype.open = function (method, url) {
+        this.__appSplashUrl = url;
+        return xhrOpen.apply(this, arguments);
+      };
+      XMLHttpRequest.prototype.send = function () {
+        var name = this.__appSplashUrl || "xhr";
+        noteResource(name, false);
+        this.addEventListener("loadend", function () {
+          noteResource(name, true);
+        });
+        return xhrSend.apply(this, arguments);
+      };
+
+      window.updateAppSplashProgress = function (p, hint, step) {
+        setProgress(p, hint, step);
+      };
+
+      window.finishAppSplashProgress = function () {
+        finished = true;
+        target = 100;
+        setStep("map");
+        if (origFetch) window.fetch = origFetch;
+        XMLHttpRequest.prototype.open = xhrOpen;
+        XMLHttpRequest.prototype.send = xhrSend;
+        if (!raf) raf = requestAnimationFrame(tick);
+      };
+
+      paint(0);
+      setProgress(1, "正在准备加载系统资源", "boot");
+    })();
+  </script>
+  <script type="module" src="/src/main.js"></script>
+  <!-- built files will be auto injected -->
+  <link rel="stylesheet/less" type="text/css" href="/color.less" />
+  <script>
+    window.less = {
+      async: true,
+      env: "production",
+    };
+    document.title = '指挥调度平台'
+  </script>
+  <script type="text/javascript" src="/less.min.js"></script>
+</body>
+
+</html>

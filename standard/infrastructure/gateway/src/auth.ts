@@ -1,0 +1,1 @@
+export type { CubeAuth } from '@ghcloud/cube-protocol'

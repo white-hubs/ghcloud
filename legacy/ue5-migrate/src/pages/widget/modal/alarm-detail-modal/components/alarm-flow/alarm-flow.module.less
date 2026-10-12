@@ -1,0 +1,68 @@
+.flowBox {
+  height: 100%;
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+
+.alarmDetailFlow {
+  height: 100%;
+  overflow-y: auto;
+
+  .alarmDetailFlowItem {
+    position: relative;
+    padding-bottom: 40px;
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      top: 15px;
+      left: 5px;
+    }
+
+    .flowTime {
+      height: 22px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 22px;
+      text-align: left;
+
+      > div {
+        display: inline-block;
+
+        &.flowIcon {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 10px;
+          background: #0e407b;
+        }
+      }
+    }
+
+    .flowContent {
+      padding-left: 20px;
+      padding-top: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 6px;
+
+      > div {
+        width: 33.33%;
+        font-size: 14px;
+        font-weight: 400;
+        color: #e4e4e4;
+      }
+    }
+  }
+}

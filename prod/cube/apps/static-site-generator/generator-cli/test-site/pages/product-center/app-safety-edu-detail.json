@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-safety-edu-detail.html",
+  "meta": {
+    "title": "安全教育 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "安全教育管理统一管理园区内的培训、考试场景，通过建立培训任务、考试任务并下发给相关人员，实现线上无纸质化培训、考试，并在事后建立相关统计报表，协助建立内部的培训学习机制。",
+    "keywords": "安全教育,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/安全教育/main.png",
+        "productName": "安全教育",
+        "productDescription": "安全教育管理统一管理园区内的培训、考试场景，通过建立培训任务、考试任务并下发给相关人员，实现线上无纸质化培训、考试，并在事后建立相关统计报表，协助建立内部的培训学习机制。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "安全教育"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">统一管理园区内的培训、考试场景，通过建立培训任务、考试任务并下发给相关人员，实现线上无纸质化培训、考试，并在事后建立相关统计报表，协助建立内部的培训学习机制。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>数据总览</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于园区安全教育数据汇总统计数据查看,掌握安全培训、安全考试的执行情况。可以切换统计时间维度（今日、本周、本月、本年、自定义时间），可查看培训基础卡片统计、考试培训类型占比、考试培训主题占比、考勤出勤情况统计、培训考试专题数趋势等。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965239059490025474.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>安全培训</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过自行维护考试题库，辅助园区通过线上考试的形式，检验员工培学习成果，加深培训重点内容记忆，为园区安全管理做好支撑。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>培训任务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">录入培训任务名称、录入培训开始时间、结束时间，选择培训形式，选择需要参加培训的人员即可创建成功。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965239378479427586.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965243326217072642.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>培训记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">培训结束后，当前培训任务会直接计入统计，可查看当前培训任务应到人数、实到人数、缺勤人数、迟到人数，支持导出。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965239166025347073.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>安全考试</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>考试任务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于园区实现教育培训，通过线上任务发布线上培训签到的形式，实现培训留痕提高员工参与度，做好事前安全工作。 </span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965240258364715009.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>系统配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>课件库</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">课件库管理维护，可自定义上传课件，可用于建立培训任务时调用；支持编辑删除。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>考题库</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">考题库管理维护，可自定义考题，可用于在建立试卷时进行调用（支持单选、多选、判断题）；支持编辑删除。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965240998818754562.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408630120449",
+            "name": "动环监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+            "href": "/product-center/app-env-detail.html"
+          },
+          {
+            "id": "1811344408936304641",
+            "name": "风险源管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "id": "1910581563802828802",
+            "name": "电动车管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电动车管理/main.png",
+            "version": "1.0.1",
+            "description": "电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。",
+            "href": "/product-center/app-ev-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

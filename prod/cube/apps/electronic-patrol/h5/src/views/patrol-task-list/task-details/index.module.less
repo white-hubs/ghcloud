@@ -1,0 +1,72 @@
+.container {
+  height: calc(100vh - 52px);
+  background: #f3f7fa;
+  padding: 12px;
+
+  .header-card {
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  .title-status {
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F3F7FA;
+
+    .title {
+      font-weight: 400;
+    }
+
+    .status {
+      font-size: 13px;
+      color: var(--van-primary-color);
+    }
+  }
+
+  .card-content {
+    padding: 6px 12px;
+
+    .card-row {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-top: 8px;
+      color: var(--van-gray-7);
+
+
+      .card-label {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .tabsContainer {
+    margin: 12px 0;
+
+    :global {
+      .van-tabs__wrap {
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .footer-btn {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    left: 0;
+    padding: 12px 20px;
+    right: 0;
+    :global{
+      .van-button{
+        padding: 12px 20px;
+      }
+    }
+  }
+
+
+}

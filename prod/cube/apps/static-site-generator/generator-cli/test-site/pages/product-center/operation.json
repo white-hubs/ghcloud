@@ -1,0 +1,129 @@
+{
+  "path": "/product-center/operation.html",
+  "meta": {
+    "title": "运维作业 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp",
+        "searchAllHref": "/product-center/app"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "operation",
+        "allHref": "/product-center/app.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/隐患排查/main.png",
+            "name": "隐患整改",
+            "version": "1.0.0",
+            "description": "隐患整改业务主要针对园区内消防、设备类等各类隐患，管理人员根据隐患性质，确认隐患的级别同时，给出整改限时，并通过工单流程通知相关运维人员进行隐患整改工作，工作完成之后由设备管理人员确认隐患整改完成，关闭隐患单。",
+            "href": "/product-center/app-hidden-danger-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/故障报修/main.png",
+            "name": "故障报修",
+            "version": "1.0.1",
+            "description": "故障报修单以“实现无纸质化办公”为目标，提供操作简便，定制上手容易满足用户故障报修流程，便于园区内故障处处留痕，线上提高跨部门合作效率，助力企业实现数字化转型。",
+            "href": "/product-center/app-repair-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "name": "日常巡检",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "name": "维保作业",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "name": "委外维修",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/更新改造/main.png",
+            "name": "更新改造",
+            "version": "1.0.0",
+            "description": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+            "href": "/product-center/app-upgrade-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/停车管理/main.png",
+            "name": "停车管理",
+            "version": "1.0.2",
+            "description": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+            "href": "/product-center/app-parking-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电子巡更/main.png",
+            "name": "电子巡更",
+            "version": "1.0.1",
+            "description": "适用于安全保卫、设备设施管理、生产流程监控等多个场景，有效提升巡更工作的效率和规范性，并为管理者提供实时、准确的数据支持，以实现对安全隐患的及时发现和处理。",
+            "href": "/product-center/app-patrol-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

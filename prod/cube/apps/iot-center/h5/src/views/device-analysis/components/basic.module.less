@@ -1,0 +1,102 @@
+.cell-title {
+  text-align: left;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1F3140;
+}
+
+.basic {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .card {
+    height: 110px;
+    border-radius: 6px;
+    text-align: left;
+    padding: 10px;
+    flex: 1;
+
+
+    .num {
+      color: #1F3140;
+      font-size: 24px;
+      text-align: center;
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .status {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+  }
+
+  .card:nth-of-type(1) {
+    background-color: #e5eefd;
+    margin-right: 10px;
+
+    img {
+      background: #2e6af2;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      padding: 4px;
+      margin-right: 5px;
+    }
+  }
+
+  .card:nth-of-type(2) {
+    background-color: #fbecec;
+
+    img {
+      background: #eb383e;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      padding: 4px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.echart {
+  display: flex;
+  width: 100%;
+
+  .pie {
+    width: 50%;
+    height: 130px;
+  }
+
+  .legend {
+    width: 50%;
+   
+
+    .item {
+      margin: 6px 10px;
+      padding: 0px 10px;
+      display: flex;
+      justify-content: space-between;
+      background-color: #e5eefd;
+      border-radius: 5px;
+
+      div:nth-of-type(1) {
+        color: #969799;
+
+        div {
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+      }
+
+      div:nth-of-type(2) {
+        color: #1F3140;
+      }
+    }
+  }
+}

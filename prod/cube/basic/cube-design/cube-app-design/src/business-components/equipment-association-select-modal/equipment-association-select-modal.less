@@ -1,0 +1,143 @@
+.equipment-association-select-modal {
+  .ant-modal {
+    max-width: calc(100vw - 64px);
+  }
+}
+
+.equipment-association-select-modal__content {
+  height: min(720px, calc(100vh - 180px));
+  padding: 0;
+  overflow: hidden;
+}
+
+.equipment-association-select-modal__footer {
+  padding: 14px 24px;
+  border-top: 1px solid var(--border-color, #edf0f5);
+  background: #fff;
+}
+
+.equipment-association-select-modal__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  min-height: 0;
+  padding: 16px;
+}
+
+.equipment-association-select-modal__header,
+.equipment-association-select-modal__pagination {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.equipment-association-select-modal__filter {
+  flex: 0 0 auto;
+  max-height: 230px;
+  padding: 12px;
+  overflow: auto;
+  border: 1px solid var(--border-color, #edf0f5);
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.equipment-association-select-modal__filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.equipment-association-select-modal__filter-title b {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.equipment-association-select-modal__condition-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.equipment-association-select-modal__condition-group {
+  padding: 8px 10px;
+  border: 1px solid #e7ebf2;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.equipment-association-select-modal__condition-group .ant-divider {
+  margin: 0 0 8px;
+  color: #8a94a6;
+}
+
+.equipment-association-select-modal__condition-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  margin-bottom: 8px;
+}
+
+.equipment-association-select-modal__condition-remove {
+  flex: 0 0 auto;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.equipment-association-select-modal__condition-remove:hover {
+  color: #d93026;
+}
+
+.equipment-association-select-modal__condition-prefix {
+  flex: 0 0 24px;
+  color: #4b5563;
+}
+
+.equipment-association-select-modal__condition-field,
+.equipment-association-select-modal__condition-operator {
+  flex: 0 0 128px;
+}
+
+.equipment-association-select-modal__condition-value {
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+
+.equipment-association-select-modal__add-rule {
+  padding-left: 0;
+}
+
+.equipment-association-select-modal__pagination {
+  justify-content: flex-end;
+}
+
+.equipment-association-select-modal__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.equipment-association-select-modal__selected {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color, #edf0f5);
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.equipment-association-select-modal__tag {
+  border-color: #dbeafe;
+  background: #eff6ff;
+  color: #2563eb;
+}

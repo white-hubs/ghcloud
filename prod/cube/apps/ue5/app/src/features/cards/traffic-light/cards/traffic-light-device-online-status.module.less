@@ -1,0 +1,36 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .traffic-light-online-status-v2-panel .sub-panel-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 8px;
+  }
+
+  .traffic-light-online-status-v2 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .traffic-light-online-status-v2-panel .v2-chart-panel {
+    min-height: 230px;
+
+    &.is-zoom {
+      min-height: 380px;
+      height: 400px;
+    }
+  }
+}
+
+.v2-minimal-white-panel(traffic-light-online-status-v2-panel);

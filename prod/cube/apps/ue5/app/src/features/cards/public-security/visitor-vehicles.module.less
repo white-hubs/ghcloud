@@ -1,0 +1,59 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.titleIcon {
+  display: block;
+  width: var(--card-title-icon-size, 32px);
+  height: var(--card-title-icon-size, 32px);
+  object-fit: contain;
+}
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.chartPanel {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 220px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  :global(.power-factor) {
+    width: 100% !important;
+    min-height: 200px !important;
+    height: 100% !important;
+  }
+}
+
+.isZoom {
+  min-height: 380px;
+
+  .chartPanel {
+    height: 360px;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .visitor-vehicles-v2-panel) {
+  .chartPanel {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(visitor-vehicles-v2-panel);

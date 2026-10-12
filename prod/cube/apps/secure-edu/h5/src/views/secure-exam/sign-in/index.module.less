@@ -1,0 +1,106 @@
+.container {
+  min-height: 100vh;
+  background: #edf3fa;
+  padding: 34px 24px 48px;
+}
+
+.identityCard,
+.examCard {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgb(31 41 55 / 4%);
+}
+
+.identityCard {
+  padding: 34px 25px 30px;
+}
+
+.identityTitle {
+  margin-bottom: 32px;
+  color: #111827;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+}
+
+.identityPrimary,
+.identitySecondary,
+.submitButton,
+.backButton {
+  height: 56px;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+.identityPrimary {
+  margin-bottom: 17px;
+}
+
+.examCard {
+  padding: 24px 25px 30px;
+
+  :global {
+    .van-form {
+      background: #fff;
+    }
+
+    .van-cell {
+      display: block;
+      padding: 0;
+      background: transparent;
+    }
+
+    .van-cell + .van-cell {
+      margin-top: 20px;
+    }
+
+    .van-field__label {
+      width: 100%;
+      margin: 0 0 8px;
+      color: #111827;
+      font-size: 15px;
+      line-height: 21px;
+    }
+
+    .van-field__body {
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+
+    .van-field__control {
+      color: #1f2937;
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .van-field__control::placeholder {
+      color: #8793a3;
+    }
+
+    .van-field__error-message {
+      padding-top: 4px;
+      font-size: 12px;
+    }
+  }
+}
+
+.tip {
+  margin: 8px 0 28px;
+  color: #7b8794;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.submitButton {
+  margin-top: 0;
+}
+
+.backButton {
+  margin-top: 12px;
+}

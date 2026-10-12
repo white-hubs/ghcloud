@@ -1,0 +1,51 @@
+
+.device-data-list {
+  height: 250px;
+  overflow-y: scroll;
+
+  .device-data-box {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    color: #fff;
+    font-size: 12px;
+
+    .device-left {
+      width: 80px;
+      text-align: left;
+      border-right: 1px solid #fff;
+    }
+
+    .device-centre {
+      padding: 0 40px 0 20px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 4px;
+      }
+    }
+
+    .device-right {
+      width: 50px;
+      color: #58fab6;
+      cursor: pointer;
+    }
+  }
+}
+
+.bgColor {
+  background: rgba(171, 177, 189, 0.12);
+}

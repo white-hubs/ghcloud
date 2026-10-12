@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-space-detail.html",
+  "meta": {
+    "title": "空间管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "空间是指组织或企业所拥有、管理或使用的物理空间资源。这些资源通常具有明确的空间位置和边界，可以包括建筑物、楼层、房间。空间管理主要给园区管理者、园区设备设施维护人员、实验室管理员、物业服务管理员、公共服务管理员等使用。",
+    "keywords": "空间管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com /resource/app-icons/日常巡检/main.png",
+        "productName": "空间管理",
+        "productDescription": "空间是指组织或企业所拥有、管理或使用的物理空间资源。这些资源通常具有明确的空间位置和边界，可以包括建筑物、楼层、房间。空间管理主要给园区管理者、园区设备设施维护人员、实验室管理员、物业服务管理员、公共服务管理员等使用。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "空间管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">空间是指组织或企业所拥有、管理或使用的物理空间资源。这些资源通常具有明确的空间位置和边界，可以包括建筑物、楼层、房间。空间管理主要给园区管理者（董事长、园长、总经理、部门经理等）、园区设备设施维护人员、实验室管理员、物业服务管理员、公共服务管理员等使用。实现资源的高效利用、成本控制和业务支持。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965344472009027586.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>空间列表</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对组织内的物理空间资源进行全面、高效的管理和优化。通过空间管理，用户可以实现对建筑物、楼层、房间等空间资源的统一管理。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965344837110607873.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>标签管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">标签管理功能用于对空间进行分类、标记，如仅对员工开放。通过标签管理，用户可以灵活地为资源添加多维度属性，从而提升资源管理的效率和准确性，在数字孪生场景中为特定空间打上特殊标签，更有利于提升场景的使用体验。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>特征管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">特征管理功能用于定义空间的功能和环境属性，如用于药品研发，西晒。通过特征管理，用户可以全面了解空间资源的特性，提升环境舒适度和运营效率。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>状态管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">状态管理是指对物理空间资产（如楼栋、房间）的使用状态或业务状态的标签化描述，用于清晰标识空间的当前用途和可用性。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "id": "1811344411431915522",
+            "name": "更新改造",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/更新改造/main.png",
+            "version": "1.0.0",
+            "description": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+            "href": "/product-center/app-upgrade-detail.html"
+          },
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

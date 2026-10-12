@@ -1,0 +1,165 @@
+.nurse-station {
+  background: linear-gradient(180deg, #010c2d 2%, #010d32 10%, #021856 97%);
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  .inline-form {
+    margin: 31px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 27px;;
+
+    .operating-room-select {
+      width: auto;
+    }
+
+    .label {
+      width: 69px;
+      height: 16px;
+      font-size: 16px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #c8dbff;
+      line-height: 16px;
+      margin-right: 9px;
+    }
+
+    .operating-room-select-selector {
+      min-width: 238px;
+      height: 40px;
+      background: #18347d;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      border: 0;
+
+      input {
+        height: 100% !important;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .operating-room-select-selection-placeholder,
+      .operating-room-select-selection-item {
+        height: 100% !important;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .operating-room-select-selection-item {
+        color: #c8dbff;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .card-list {
+    width: 100%;
+    padding: 0 27px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-rows: max-content;
+    height: calc(100vh - 270px);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+
+    .operating-room-pagination {
+      padding-right: 20px;
+    }
+
+    .operating-room-pagination-item-ellipsis {
+      color: #c8dbff !important;
+    }
+
+    .operating-room-pagination-item,
+    .operating-room-pagination-prev,
+    .operating-room-pagination-next {
+      width: 42px;
+      height: 42px;
+      background: #31457f;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      font-size: 18px;
+      font-family: Roboto, Roboto-Regular;
+      font-weight: Regular;
+      border: 0;
+      overflow: hidden;
+
+      a {
+        color: #c8dbff;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .operating-room-pagination-item-active {
+      background: #ffffff;
+
+      a {
+        color: #1578ff;
+      }
+    }
+
+    .operating-room-pagination-item-link {
+      background: transparent;
+      border: 0;
+      color: #c8dbff;
+    }
+
+    .operating-room-pagination-options {
+      color: #c8dbff;
+      margin: 0;
+      transform: translateX(15px);
+
+      .operating-room-pagination-options-quick-jumper {
+        height: auto;
+
+        input {
+          width: 42px;
+          height: 42px;
+          background: #31457f;
+          border-radius: 8px;
+          backdrop-filter: blur(4px);
+          color: #c8dbff;
+          border: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.monitor-modal{
+  border: 0;
+  .operating-room-modal-content,.operating-room-modal-header{
+    background-color: #021856;
+    color:#C4DDFF
+  }
+  .operating-room-modal-close svg{
+    fill: #7E8BB7 !important;
+  }
+  .operating-room-modal-title{
+    color:#C4DDFF;
+  }
+  .operating-room-modal-footer{
+    display: none;
+  }
+  .operating-room-modal-body{
+    padding: 0;
+    height: 545px;
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@ghcloud/cube-safety-credit-h5",
+  "version": "1.0.4",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts --mode dev",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-app-generic-component": "workspace:^",
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/cube-auth-utils": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-h5-auth": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-safety-credit-service": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@vant/auto-import-resolver": "catalog:",
+    "pinia": "catalog:",
+    "pinia-plugin-persistedstate": "catalog:",
+    "vant": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-legacy": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "postcss-px-to-viewport": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vconsole": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-vconsole": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

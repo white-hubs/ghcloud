@@ -1,0 +1,92 @@
+.rank-wrapper {
+  overflow: auto;
+  margin-top: 21px;
+
+  .rank-box {
+    display: flex;
+    margin-bottom: 23px;
+  }
+
+  .rank-index {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+
+    .index-content {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      font-size: 14px;
+      text-align: center;
+      color: #ffff;
+
+      .index-title {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 6px);
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        display: inline-block;
+        font-size: 13px;
+        font-family: Roboto, Roboto-Medium;
+      }
+    }
+  }
+}
+
+.rank-content {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.rank-line {
+  background: #f0f2f1;
+  border-radius: 2px;
+  overflow: hidden;
+
+  .van-progress {
+    height: 1.8vw;
+  }
+
+  .van-progress__pivot {
+    display: none;
+  }
+}
+
+.current-line {
+  background: #1d66ff;
+
+  .line-item {
+    padding-left: 10px;
+    height: 8px;
+  }
+
+}
+
+.rank-value {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  color: #1f3140;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: Medium;
+  text-align: left;
+
+  span :nth-of-type(1) {
+    font-weight: 500;
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #a7a8aa;
+}

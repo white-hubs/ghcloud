@@ -1,0 +1,182 @@
+.page {
+  background-color: #F3F7FA;
+  .card {
+    width: 351px;
+    background: #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    margin: auto;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    .head {
+      height: 40px;
+      line-height: 40px;
+      font-weight: 500;
+      font-size: 15px;
+      color: #1F3140;
+      border-bottom: 1px solid #F8F9F9;
+      margin: auto;
+      width: 327px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .date-selection {
+        display: flex;
+        margin-left: 10px;
+        .date-selection-item {
+          width: 36px;
+          height: 24px;
+          background: #fff;
+          border-radius: 4px 4px 4px 4px;
+          text-align: center;
+          line-height: 24px;
+          color: #000;
+        }
+
+        .activation {
+          width: 36px;
+          height: 24px;
+          background: #1D66FF;
+          border-radius: 4px 4px 4px 4px;
+          text-align: center;
+          line-height: 24px;
+          color: #fff;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 12px;
+
+      .content-item {
+        width: 158px;
+        height: 56px;
+        background: #FFF9F9;
+        border-radius: 6px 6px 6px 6px;
+        margin-top: 8px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+
+    .energy-box {
+      padding: 0 12px;
+
+      .energy-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        background: #F1F8FF;
+        margin-top: 10px;
+        padding: 0 12px;
+        height: 50px;
+
+        .energy-value {
+          display: flex;
+
+          .ratio {
+            display: flex;
+            align-items: center;
+            margin-left: 3px;
+            font-size: 11px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            gap: 2px;
+            margin-right: 4px;
+            text-align: left;
+            color: #707579;
+
+
+            .ratio_num {
+              color: #01b377;
+            }
+
+            .ratio_up {
+              color: red;
+            }
+
+            .img_down {
+              transform: rotateX(180deg);
+            }
+
+            img {
+              width: 6px;
+              height: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .alarmBox {
+    width: 351px;
+    height: 58px;
+    background: #FDF4F4;
+    margin: 10px auto;
+    border-radius: 8px 8px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .alarmBox-left {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+
+    .alarmBox-right {
+      font-size: 12px;
+
+      span {
+        font-size: 20px;
+        color: #EA5260;
+      }
+    }
+  }
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-wrap{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #F3F7FA;
+}
+.areTitle{
+  width: 50px;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.loading{
+  position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

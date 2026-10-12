@@ -1,0 +1,14 @@
+[
+  {
+    "address": "wss://cube-ue.guhecloud.com:3000/97/2/",
+    "maxConnection": 1
+  },
+  {
+    "address": "wss://cube-ue.guhecloud.com:3000/97/3/",
+    "maxConnection": 1
+  },
+  {
+    "address": "wss://cube-ue.guhecloud.com:3000/97/4/",
+    "maxConnection": 1
+  }
+]   

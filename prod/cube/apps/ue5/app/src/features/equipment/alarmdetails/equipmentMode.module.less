@@ -1,0 +1,136 @@
+/* 报警详情弹窗：适配科技蓝 / 极简白（主题变量） */
+:global {
+  .modal-alarm-detail {
+    .alarmDetail-wrap {
+      width: 100%;
+    }
+
+    .xf {
+      top: -120% !important;
+    }
+
+    .alarmDetail-modal {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 480px;
+      color: var(--visual-data-modal-text-color);
+
+      &.full {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .alarmDetail-modal-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 680px;
+      overflow: hidden;
+    }
+
+    .content-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 48px;
+      margin-bottom: 8px;
+      color: var(--visual-data-modal-text-color);
+      font-size: var(--visual-data-modal-cell-font-size, 14px);
+      font-weight: 400;
+
+      > div {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 96px;
+        height: 32px;
+        padding: 0 12px;
+        margin-right: 12px;
+        color: var(--visual-data-modal-muted-color);
+        font-size: var(--visual-data-modal-cell-font-size, 14px);
+        line-height: var(--visual-data-modal-cell-line-height, 22px);
+        border: 1px solid var(--visual-data-modal-toolbar-border);
+        border-radius: 6px;
+        box-shadow: var(--visual-date-control-shadow);
+        cursor: pointer;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+
+        > span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 14px;
+          height: 14px;
+          margin-left: 4px;
+          color: var(--visual-data-modal-muted-color);
+          font-size: 12px;
+          border-radius: 2px;
+        }
+
+        &.active {
+          color: #fff;
+          background: var(--visual-primary, #2989ff);
+          border-color: var(--visual-primary, #2989ff);
+
+          > span {
+            color: var(--visual-primary, #2989ff);
+            background: #fff;
+          }
+        }
+      }
+    }
+
+    .conent-body {
+      flex: 1;
+      min-height: 0;
+      padding-bottom: 10px;
+      padding-right: 2px;
+      overflow: hidden;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--visual-scrollbar-thumb) var(--visual-scrollbar-track);
+
+      &::-webkit-scrollbar {
+        width: var(--visual-scrollbar-size, 6px);
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--visual-scrollbar-track);
+        border-radius: 999px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--visual-scrollbar-thumb);
+        border-radius: 999px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--visual-scrollbar-thumb-hover);
+      }
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .modal-alarm-detail {
+    .content-tabs > div:not(.active) {
+      color: #49628f;
+      background: rgba(255, 255, 255, 0.96);
+      border-color: rgba(67, 124, 204, 0.28);
+    }
+
+    .content-tabs > div.active {
+      color: #fff;
+      background: #2476ee;
+      border-color: #2476ee;
+
+      > span {
+        color: #2476ee;
+        background: #fff;
+      }
+    }
+  }
+}

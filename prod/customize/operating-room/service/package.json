@@ -1,0 +1,53 @@
+{
+  "name": "@ghcloud/cube-operating-room-service",
+  "version": "1.0.3",
+  "description": "operating-room service",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "iot",
+    "center",
+    "service",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-iot-socket": "workspace:^",
+    "@ghcloud/cube-security-management-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/epp": "workspace:^",
+    "mitt": "3.0.1",
+    "mqtt": "5.7.0",
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

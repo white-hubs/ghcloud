@@ -1,0 +1,483 @@
+// 网格化管理公示栏页面样式
+.page {
+  height: 100vh;         // 领充整个视口
+  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;      // 页面整体禁止滚动
+}
+
+// ==================== 顶部Header ====================
+.header {
+  background: linear-gradient(135deg, #1a3a8f 0%, #1565c0 100%);
+  padding: 10px 16px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+
+  .header-logo {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+
+    .logo-img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+  }
+
+  .header-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-setting-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+// ==================== 主体内容 ====================
+.content {
+  flex: 1;
+  min-height: 0;            // flex 子项必须，防止内容撑展父容器
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;         // 禁止整体滚动，确保内层 max-height 约束生效
+}
+
+// ==================== 区块通用样式 ====================
+.section {
+  flex-shrink: 0;           // 禁止 section 被压缩
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  isolation: isolate;
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px 10px;
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a2e;
+
+      .title-bar {
+        width: 4px;
+        height: 18px;
+        background: #1565c0;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+// ==================== 网格负责人 ====================
+.manager-grid {
+  padding: 0 12px 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; // 两列等分
+  gap: 8px;
+  // 固定三行高度，确保首屏完整展示 6 人信息
+  max-height: 264px;
+  min-height: 264px;
+  height: 264px;
+  align-content: start;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; // 移动端弹性滚动
+  // 增强滚动兼容性
+  touch-action: pan-y; // 明确允许垂直触摸滚动
+  overscroll-behavior: contain; // 防止滚动穿透
+  transform: translateZ(0); // 开启硬件加速
+
+  // 滚动条隐藏（兼容所有浏览器）
+  &::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none; // IE/Edge 滚动条隐藏
+}
+
+.section--managers {
+  .section-header {
+    padding: 12px 16px 10px;
+
+    .section-title {
+      font-size: 16px;
+
+      .title-bar {
+        height: 18px;
+      }
+    }
+  }
+}
+
+.manager-card {
+  background: #f8faff;
+  border-radius: 10px;
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #e8edf5;
+  min-width: 0;
+  flex-shrink: 0; // 关键！防止网格布局下卡片被压缩
+  // 确保卡片高度自适应内容，不被网格拉伸
+  height: fit-content;
+  min-height: 80px; // 收紧留白，保证三行完整展示
+
+  .manager-avatar {
+    flex-shrink: 0;
+    // 使用相对单位，让头像随容器自适应
+    width: 46px;
+    height: 58px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #dde4f0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, #c8d4e8 0%, #a8b8d0 100%);
+    }
+  }
+
+  .manager-info {
+    flex: 1;
+    min-width: 0; // 确保 flex 子项可以收缩到 0
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .manager-role {
+      font-size: 12px;
+      color: #8e97a4;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .manager-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .manager-mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #1565c0;
+      cursor: pointer;
+      line-height: 1.3;
+      width: 100%;
+
+      span {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+// ==================== 通知公告 section 布局 ====================
+// 通知公告 section 填满剩余内容区域，避免被网格负责人 section 占用后被裁切
+
+
+.section--announcements {
+  flex: 1;               // 填满 .content 剩余高度
+  min-height: 0;         // flex 子项必须，允许收缩
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; // 隔离滚动区域，避免影响外层
+}
+
+// ==================== 通知公告 ====================
+.announcement-list {
+  flex: 1;
+  min-height: 0;
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  // 列表不滚动，仅内容区滚动
+}
+
+.announcement-card {
+  flex: 1;              // 填满列表剩余高度
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8edf5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+
+  .announcement-header {
+    flex-shrink: 0;     // 禁止头部被压缩
+    padding: 10px 12px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .announcement-type-tag {
+      flex-shrink: 0;
+      align-self: stretch;
+      background: #1565c0;
+      color: #fff;
+      border-radius: 6px;
+      padding: 6px 4px;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: center;
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+    }
+
+    .announcement-header-right {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+
+      .announcement-title-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+
+        .announcement-title {
+          flex: 1;
+          min-width: 0;
+          font-size: 16px;
+          font-weight: 600;
+          color: #1a1a2e;
+          line-height: 1.45;
+          word-break: break-all;
+          overflow-wrap: break-word;
+        }
+
+        .level-tag {
+          flex-shrink: 0;
+          margin-top: 2px;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 500;
+          white-space: nowrap;
+
+          &--level_1 {
+            border: 1px solid #f56c6c;
+            color: #f56c6c;
+          }
+          &--level_2 {
+            border: 1px solid #e6a23c;
+            color: #e6a23c;
+          }
+          &--level_3 {
+            border: 1px solid #67c23a;
+            color: #67c23a;
+          }
+        }
+      }
+    }
+  }
+
+  .announcement-content {
+    flex: 1;            // 填满卡片剩余高度
+    min-height: 0;
+    padding: 12px;
+    font-size: 14px;
+    color: #5a6570;
+    line-height: 1.8;
+    background: #f5f7fa;
+    border-top: 1px solid #f0f4f8;
+    overflow-y: auto;   // 支持 scrollTop 自动滚动
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    word-break: break-all;
+    overflow-wrap: break-word;
+
+    // 富文本内容基础样式重置
+    :deep(p) { margin: 0 0 8px; }
+    :deep(img) { max-width: 100%; height: auto; border-radius: 4px; }
+    :deep(a) { color: #1565c0; text-decoration: underline; }
+    :deep(ul), :deep(ol) { padding-left: 18px; margin: 6px 0; }
+    :deep(li) { margin-bottom: 6px; }
+    :deep(strong), :deep(b) { font-weight: 600; color: #1a1a2e; }
+    :deep(h1), :deep(h2), :deep(h3) { font-size: 15px; font-weight: 600; margin: 8px 0 6px; }
+    :deep(table) { width: 100%; border-collapse: collapse; font-size: 13px; }
+    :deep(td), :deep(th) { border: 1px solid #e0e0e0; padding: 4px 6px; }
+
+    // 隐藏滚动条
+    &::-webkit-scrollbar { width: 0; height: 0; }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .announcement-footer {
+    flex-shrink: 0;     // 禁止底部被压缩
+    padding: 8px 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+
+    .announcement-publisher {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: #8e97a4;
+    }
+
+    .announcement-time {
+      font-size: 11px;
+      color: #8e97a4;
+    }
+  }
+}
+
+
+// ==================== 底部投诉电话 ====================
+.footer {
+  flex-shrink: 0;        // 禁止压缩
+  background: linear-gradient(135deg, #1a3a8f 0%, #1565c0 100%);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+// ==================== 加载状态 ====================
+.loading-text {
+  padding: 20px;
+  text-align: center;
+  color: #8e97a4;
+  font-size: 14px;
+}
+
+// ==================== 设置面板 ====================
+.settings-panel {
+  padding: 0 0 32px;
+
+  .settings-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a2e;
+    padding: 18px 16px 14px;
+    border-bottom: 1px solid #f0f4f8;
+  }
+
+  .settings-group-label {
+    font-size: 13px;
+    color: #8e97a4;
+    padding: 14px 16px 8px;
+  }
+
+  .settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1px solid #e8edf3;
+    border-radius: 6px;
+    margin: 0 16px 8px;
+    background: #fff;
+
+    .settings-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+      margin-right: 12px;
+    }
+
+    .settings-item-label {
+      font-size: 14px;
+      color: #1a1a2e;
+    }
+
+    .settings-item-value {
+      font-size: 12px;
+      color: #8e97a4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .settings-btn {
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid currentColor;
+
+      &--remove {
+        color: #f56c6c;
+        border-color: #f56c6c;
+        background: #fff5f5;
+      }
+
+      &--add {
+        color: #1565c0;
+        border-color: #1565c0;
+        background: #f0f6ff;
+      }
+
+      &--primary {
+        color: #1565c0;
+        border-color: #1565c0;
+        background: #f0f6ff;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.person {
+  width: 100%;
+  // height: 70px;
+  display: flex;
+  align-items: center;
+
+  &.can-be-click{
+    cursor: pointer;
+  }
+
+  .avatar {
+    width: 66px;
+    height: 70px;
+    margin-right: 10px;
+    background: #81afff;
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 70px;
+    }
+
+    :global {
+      .ant-avatar-lg {
+        width: 100%;
+        height: 70px;
+        border-radius: 0;
+        background: #81afff;
+      }
+      .ant-empty-normal {
+        color: #D9E7FF;
+      }
+      .ant-select-dropdown, .ant-select-item-empty {
+        color: #D9E7FF;
+        text-align: center;
+      }
+
+      .ant-select-clear{
+        background: transparent;
+      }
+      .ant-avatar-string {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .info {
+    height: 70px;
+    width: calc(100% - 76px);
+    background: linear-gradient(90deg, #20334c, #0c1428);
+    border: 1px solid;
+    border-image: linear-gradient(270deg, rgba(76, 87, 111, 0.00), rgba(76, 87, 111, 0.70) 100%) 1 1;
+    box-sizing: border-box;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .name {
+      width: calc(100% - 76px);
+      .name-value {
+        font-size: 20px;
+        line-height: 22px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        text-align: left;
+        color: #c6e2ff;
+        display: flex;
+        align-items: baseline;
+
+        .online-status {
+          width: 42px;
+          height: 22px;
+          background: rgba(255, 151, 55, 0.30);
+          border: 1px solid #ff9737;
+          border-radius: 4px;
+          backdrop-filter: blur(3.68px);
+          text-align: center;
+          line-height: 20px;
+          font-size: 16px;
+          font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          color: #ff9737;
+          margin-left: 6px;
+
+          &.online {
+            background: rgba(71, 214, 177, 0.30);
+            border: 1px solid #47d6b1;
+            color: #47d6b1
+          }
+        }
+      }
+
+      .post {
+        font-size: 18px;
+        font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #bfdfff;
+        margin-top: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .media {
+      width: 64px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .item {
+        width: 28px;
+        height: 28px;
+        background: #0d172b;
+        border: 1px solid #4c576f;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.1s ease;
+
+        &:hover {
+          background: #416ab1;
+
+          svg g {
+            fill: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

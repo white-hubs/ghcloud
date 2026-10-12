@@ -1,0 +1,195 @@
+.access-record-list {
+  height: 100vh;
+  background-color: #f3f7fa;
+  display: flex;
+  flex-direction: column;
+
+  .pull-refresh {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+.record-cell-group {
+  margin: 12px;
+  background: transparent;
+}
+
+.record-card {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left-content {
+    flex: 1;
+    margin-right: 12px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+
+      .plate {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 600;
+        font-size: 16px;
+        color: #1F3140;
+      }
+
+      .time {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+
+    .info-item {
+      display: flex;
+      font-size: 14px;
+      margin-top: 8px;
+      color: #1F3140;
+      
+      label {
+        color: #999999;
+        margin-right: 4px;
+        min-width: 70px;
+      }
+      
+      span {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .right-content {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .status-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #999999;
+      
+      &.in {
+        border-color: #FE8704;
+        color: #FE8704;
+      }
+
+      &.out {
+        border-color: #00C853;
+        color: #00C853;
+      }
+    }
+  }
+}
+
+
+
+.violation-cell-group {
+  margin: 12px;
+  background: transparent;
+}
+
+.violation-card {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.violation-cell-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .name-status {
+    display: flex;
+    align-items: center;
+
+    .status-tag {
+      padding: 1px 6px;
+      font-size: 12px;
+      color: #FFFFFF;
+      border-radius: 10px 10px 10px 0px;
+      margin-right: 6px;
+      white-space: nowrap;
+    }
+
+    .name {
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 500;
+      font-size: 15px;
+      color: #1F3140;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.violation-cell-content {
+  padding: 10px 16px;
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #1F3140;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+
+    label {
+      color: #666666;
+      min-width: 70px;
+    }
+    
+    span {
+      text-align: right;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+.img-list{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  .value{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.img-warp{
+  display: inline-block;
+}
+.img-item{
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-left: 10px;
+}

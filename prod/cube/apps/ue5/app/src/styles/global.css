@@ -1,0 +1,39 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000 !important;
+}
+
+body,
+#Ue5 {
+  /* html rem root is ~192px; keep inherited text/line boxes on a readable size */
+  font-size: 16px;
+  line-height: 1.15;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 授权校验挂在 body 上，不能参与文档流，否则可视化页底部会多出一截白底 */
+#cube-license-check {
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#cube-license-check * {
+  pointer-events: auto;
+}

@@ -1,0 +1,320 @@
+{
+  "path": "/programme/video-safety.html",
+  "meta": {
+    "title": "AI智能识别_大模型二次研判_视频安全监测系统_古河云科技",
+    "keywords": "AI大模型,图像识别,智能分析,二次研判,视频安全监测",
+    "description": "古河云视频安全监测系统通过AI算法对视频监控进行智能识别分析，结合AI大模型能力对告警事件进行二次研判，构建一体化安防监控管理体系。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-video-safety-banner.webp",
+            "title": "视频安全监测系统",
+            "subtitle": "古河云视频安全监测系统通过AI算法对视频监控进行智能识别分析，结合AI大模型能力对告警事件进行二次研判，构建一体化安防监控管理体系。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-pain-points-icon-1.webp",
+            "title": "识别无能",
+            "description": "只监不控，缺少智能识别分析，摄像头成了“事后取证工具”。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-pain-points-icon-2.webp",
+            "title": "响应滞后",
+            "description": "事件处置靠线下流转，权责不清，响应滞后。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-pain-points-icon-3.webp",
+            "title": "误报泛滥",
+            "description": "传统识别误报泛滥，人工复核成本居高不下。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-pain-points-icon-4.webp",
+            "title": "人工盯防",
+            "description": "依赖人工盯防，安全事件难以及时发现，风险管理停留在“拍脑袋”阶段。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-policy-1.webp",
+            "title": "《“十四五”应急管理体系规划》",
+            "description": "“深化人工智能在危险源辨识、风险监测预警等领域的应用，提升多灾种耦合灾害链风险识别能力”。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-policy-2.webp",
+            "title": "《“十四五”国家安全生产规划》",
+            "description": "提出到 2025年公共安全视频图像智能识别、风险预警覆盖率达到 80% 以上。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-policy-3.webp",
+            "title": "《“十四五”危险化学品安全生产规划方案》",
+            "description": "推进化工园区、企业安全风险智能化管控平台建设，利用智能视频分析识别技术对危险化学品生产、储存、运输等环节进行实时监控和风险预警。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-policy-4.webp",
+            "title": "《新一代人工智能产业发展三年行动计划》",
+            "description": "推动AI大模型在工业安全管理中的落地，发展多模态风险理解、智能诊断决策等能力”。"
+          }
+        ],
+        "subtitle": "近年来，国务院及相关部门发布了一系列政策文件，要求企业及单位利用智能视频分析系统，提升安全监控的智能化与自动化水平，以增强安全管控能力。同时，也为安防监控管理系统的发展指明了方向。"
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "产品功能",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/remote-monitor.webp",
+            "title": "AI大模型赋能",
+            "subtitle": "系统内置面向智慧空间的场景化AI算法，配合AI大模型智能分析实现AI事件管理、人员布控等场景的业务闭环。",
+            "features": [
+              {
+                "label": "场景化AI算法：",
+                "value": "覆盖火灾烟雾识别、人员异常行为检测、区域入侵、人员聚集等90%通用安全场景。"
+              },
+              {
+                "label": "AI大模型智能分析：",
+                "value": "实现多路实时监测，关键人员动向全程可控，从\"事后取证\"变为\"事前预警\"。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/wireless-detect.webp",
+            "title": "二次研判",
+            "subtitle": "系统通过边缘智算中枢与AI大模型研判深度分析，利用大模型对告警信息进行二次研判，针对真实业务场景深度优化。",
+            "features": [
+              {
+                "label": "多模态融合：",
+                "value": "卓越的多模态信息融合能力，有效融合视频、音频、传感器等数据。"
+              },
+              {
+                "label": "泛化能力：",
+                "value": "出色的泛化能力，适应复杂多变场景，有效过滤动态干扰因素。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-alarm.webp",
+            "title": "统一管理",
+            "subtitle": "系统兼容多品牌、多协议统一接入、统一管控，助力提升设备效率和减少运营成本。",
+            "features": [
+              {
+                "label": "标准协议接入：",
+                "value": "支持RTSP/RTMP和GB/T 28181等标准协议的接入。"
+              },
+              {
+                "label": "主流品牌接入：",
+                "value": "支持智能摄像机、边缘盒子、算力服务器等多个主流品牌的接入。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/water-supply.webp",
+            "title": "开放联动",
+            "subtitle": "深度融合AI算法与物联感知能力，从预警触发到闭环处置，实现\"秒级联动、全局闭环\"。",
+            "features": [
+              {
+                "label": "物联感知：",
+                "value": "接入烟感、门禁、道闸、消防等感知设备，实现统一管理与场景联动。"
+              },
+              {
+                "label": "业务联动：",
+                "value": "可与工单系统、广播系统等多系统联动，快速形成业务闭环。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/pipe-monitor.webp",
+            "title": "多终端协同管控",
+            "subtitle": "提供PC端、IOC大屏、移动端多种终端协同，全方位支持企业集团以及项目打造AI+视频安全解决方案。",
+            "features": [
+              {
+                "label": "IOC大屏：",
+                "value": "支持视频、设备、事件数据可视化多维展示，多宫格实时查看，满足统一指挥调度需求。"
+              },
+              {
+                "label": "协同管控：",
+                "value": "视频安全、事件管理、图片巡更随身掌控，管理层与一线实时同频。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-value-icon-1.webp",
+            "title": "提升效能",
+            "description": "通过二次研判过滤误报，使复杂报警准确率提升至95%，实现“有警必应、无警不扰”。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-value-icon-2.webp",
+            "title": "降本增效",
+            "description": "AI代替人工，人防转向技防，减少70%人力，提升效率，释放人力从事高价值工作。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-value-icon-3.webp",
+            "title": "数据决策",
+            "description": "从 “数据孤岛” 到 “价值洞察”，数据转化为业务能力，构建决策提供支撑，驱动业务升级。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/video-value-icon-4.webp",
+            "title": "安全升级",
+            "description": "从 “事后追溯” 到 “事前预防”，将隐患扼杀于萌芽，极大降低事故发生率，实现本质安全。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "安防监控",
+                "href": "/product-center/app-security-detail.html"
+              },
+              {
+                "name": "入侵报警",
+                "href": "/product-center/app-intrusion-detail.html"
+              },
+              {
+                "name": "指挥调度",
+                "href": "/product-center/app-command-detail.html"
+              },
+              {
+                "name": "园区管理",
+                "href": "/product-center/app-park-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-case-1.webp",
+            "title": "彭州中药创新港",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-case-2.webp",
+            "title": "常德高铁站",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/video-case-3.webp",
+            "title": "鹏程小学",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,84 @@
+{
+  "name": "@ghcloud/cube-app-design",
+  "version": "1.0.45",
+  "description": "古河云开河平台通用 UI 组件库",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "build": "vite build -c vite.dev.config.ts",
+    "dev": "vite -c vite.dev.config.ts",
+    "tsc": "vue-tsc",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "vite": {
+    "alias": {
+      "@": "./src"
+    }
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vue/compiler-sfc": "^3.2.45",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-macros": "^2.0.0",
+    "vite": "catalog:",
+    "vue-router": "catalog:",
+    "vue-tsc": "catalog:",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "@ghcloud/ghcloud-business-request": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-alarm-center-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-daily-inspection-service": "workspace:^",
+    "@ghcloud/cube-risk-management-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-stream-engine-service": "workspace:^",
+    "@ghcloud/cube-business-alias-manage-plugin": "workspace:^",
+    "@ghcloud/cube-asset-management-service": "workspace:^",
+    "@ghcloud/cube-maintain-service": "workspace:^",
+    "@ghcloud/cube-small-engineering-service": "workspace:^",
+    "@ghcloud/cube-business-tag-service": "workspace:^",
+    "@ghcloud/cube-daily-task-service": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "dayjs": "catalog:",
+    "dayjs-calendar": "1.0.1",
+    "@wangeditor/core": "^1.0.1",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-vue": "^5.1.11",
+    "js-base64": "3.7.7",
+    "echarts": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

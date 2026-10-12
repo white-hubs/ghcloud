@@ -1,0 +1,218 @@
+
+.alarmDetail-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+
+.alarmDetail-modal {
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border-bottom: 2px solid rgba(41, 137, 255, 1);
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .alarmDetail-modal-header {
+    height: 30px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(41, 137, 255, 1);
+    background-image: url("/resource/v1/ue5-migrate/assets/images/modal-title.png");
+    background-size: 100%95%;
+    background-repeat: no-repeat;
+
+    .header-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .header-close {
+      width: 24px;
+      height: 24px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .alarmDetail-modal-content {
+    max-height: 515px;
+    width: 100%;
+    padding: 0 16px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    background: rgba(1, 11, 23, 0.78);
+    margin-top: 2px;
+
+    .content-tabs {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      font-family: PingFang SC-Regular;
+      font-weight: 400;
+      color: #ffffff;
+
+      > div {
+        width: 68px;
+        height: 26px;
+        opacity: 1;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+          background: linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.5) 100%);
+        }
+      }
+    }
+
+    .conent-body {
+      min-height: 340px;
+
+      width: 100%;
+
+      .info-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+
+        .info-img {
+          width: 150px;
+          text-align: center;
+          // line-height: 10px;
+          height: 110px;
+        }
+
+        :deep(.box .content) {
+          margin-top: 15%;
+        }
+
+        .info-name {
+          margin-top: 15px;
+          color: #b7c5d3;
+          text-align: left;
+
+          img {
+          }
+        }
+
+        .info-name > span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.content-tabs {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: PingFang SC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+
+  > div {
+    width: 68px;
+    height: 26px;
+    opacity: 1;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      background: linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.5) 100%);
+    }
+  }
+}
+
+.page {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  :deep(.ant-pagination-total-text) {
+    color: white;
+  }
+}
+
+:deep(.ant-table) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-container) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-content) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-thead) {
+  th {
+    background-color: rgba(16, 40, 68, 0.4x);
+  }
+}
+
+:deep(.ant-table-tbody) {
+  td {
+    background-color: transparent;
+    border-bottom: thin solid rgba(105, 116, 140, 0.5);
+  }
+
+  tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+    //自定义table行hover上去的背景颜色
+    background: transparent;
+    cursor: default;
+  }
+}
+
+.ant-form-item {
+  .ant-picker,
+  .ant-input-affix-wrapper {
+    color: #ffffff;
+    background: rgba(96, 112, 128, 0.6);
+    border: 1px solid rgba(96, 112, 128, 0.6);
+  }
+}
+
+:deep(.ant-empty) {
+  color: #d0deee;
+}

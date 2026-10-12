@@ -1,0 +1,163 @@
+.layer-panel {
+  position: absolute;
+  right: 27%;
+  top: 80px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+
+  > .inspection-command-screen-btn {
+    justify-content: flex-start;
+    height: 32px;
+    border-radius: 9px;
+    border-color: rgba(143, 171, 224, 0.32);
+    background: rgba(64, 86, 127, 0.75);
+    color: #d7e4ff;
+    font-size: 14px;
+    transition: all 0.25s;
+  }
+
+  > .inspection-command-screen-btn .anticon {
+    margin-right: 4px;
+  }
+
+  > .inspection-command-screen-btn:hover {
+    background: rgba(20, 32, 62, 0.89);
+    border-color: rgba(75, 139, 255, 0.3);
+    transform: translateX(-2px);
+    color: #fff;
+  }
+
+  > .inspection-command-screen-btn-primary {
+    border-color: #1677ff !important;
+    background: #1677ff !important;
+    color: #fff !important;
+  }
+
+  > .return-global-btn {
+    width: 132px;
+  }
+}
+
+.submenu {
+  border-radius: 9px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .inspection-command-screen-tag {
+    border: 0;
+    margin-inline-end: 0;
+    background: rgba(56, 95, 165, 0.5);
+    color: #cfe2ff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .inspection-command-screen-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #fff;
+    background:rgba(56, 95, 165, 0.5);
+    border-color: rgba(143, 171, 224, 0.32);
+    &:hover{
+      background-color: rgba(20, 32, 62, 0.89) !important;
+      border-color: rgba(75, 139, 255, 0.3);
+      color: #fff;
+    }
+  }
+
+  .inspection-command-screen-btn-primary {
+    border-color: #1677ff !important;
+    background: #1677ff !important;
+    color: #fff !important;
+  }
+  .inspection-command-screen-btn-primary{
+    background:#1677ff;
+  }
+
+  .inspection-command-screen-btn .anticon {
+    flex: 0 0 14px;
+    width: 14px;
+    margin-right: 4px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .inspection-command-screen-btn .layer-btn-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+  }
+}
+
+.mode-switch-bar {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  background: rgba(10, 14, 30, 0.75);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+
+  .mode-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 28px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .mode-btn:hover {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  .mode-btn.active {
+    background: rgba(75, 139, 255, 0.15);
+    color: #7aaaff;
+    box-shadow: 0 0 20px rgba(75, 139, 255, 0.1);
+  }
+
+  .mode-btn .anticon,
+  .mode-btn .inspection-command-screenicon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .layer-panel {
+    right: 29%;
+  }
+  .mode-switch-bar .mode-btn {
+    height: 36px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
+}

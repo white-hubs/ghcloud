@@ -1,0 +1,302 @@
+.container {
+  min-height: 100vh;
+  background: #F6F7FB;
+  padding-bottom: 12px;
+
+  .user-info {
+    padding: 0 14px;
+    background: linear-gradient(180deg, #d0e4ff, #f8fbff 72%, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .avatar {
+      margin-top: 30px;
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      position: relative;
+
+      img {
+        width: 68px;
+        height: 68px;
+        border-radius: 16px;
+      }
+
+      .user-status {
+        position: absolute;
+        padding: 3px 4px;
+        bottom: 0;
+        right: 0;
+        background: #ddfbe6;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #269360;
+
+        &.status-rest {
+          background: #fdeaea;
+          color: #f56c6c;
+        }
+      }
+
+    }
+
+    .user-name {
+      font-size: 18px;
+      margin-top: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: justify;
+      color: #182b44;
+    }
+
+    .user-task {
+      width: 100%;
+      margin-top: 22px;
+      padding-bottom: 16px;
+
+      .task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .task-title {
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          color: #182b44;
+
+          span {
+            color: #1578ff;
+            margin-left: 4px;
+          }
+        }
+
+        .task-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .handover {
+          background: rgba(21, 120, 255, 0.10);
+          border-radius: 4px;
+          padding: 5px 9px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: justify;
+          color: #1578ff;
+        }
+      }
+
+      .grid-table {
+        margin-top: 12px;
+        border: 1px solid #e8ebf0;
+        border-radius: 4px;
+        overflow: visible;
+
+        .grid-header-row,
+        .grid-row {
+          display: flex;
+          min-height: 40px;
+          border-bottom: 1px solid #e8ebf0;
+        }
+
+        .grid-body {
+          .grid-row:last-child {
+            border-bottom: none;
+          }
+        }
+
+        .grid-header-row {
+          background: #f5f6f8;
+          font-size: 14px;
+          color: #1f3140;
+          font-weight: 500;
+        }
+
+        .grid-col-name,
+        .grid-col-member {
+          display: flex;
+          align-items: center;
+          padding: 0 12px;
+          box-sizing: border-box;
+          font-size: 14px;
+          color: #303133;
+        }
+
+        .grid-col-name {
+          width: 42%;
+          border-right: 1px solid #e8ebf0;
+        }
+
+        .grid-col-member {
+          flex: 1;
+          justify-content: space-between;
+          gap: 8px;
+          min-width: 0;
+        }
+
+        .name-content {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .clear-checkbox {
+          flex-shrink: 0;
+          margin-right: 8px;
+        }
+
+        .expand-icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
+          color: #222;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.2s ease;
+        }
+
+        .expand-icon-open {
+          transform: rotate(90deg);
+        }
+
+        .expand-icon-placeholder {
+          color: transparent;
+        }
+
+        .member-text-wrap {
+          width: calc(100% - 20px);
+          min-width: 0;
+          overflow: hidden;
+          position: relative;
+          outline: none;
+
+          &:hover,
+          &:focus-within {
+            overflow: visible;
+
+            .member-tooltip {
+              display: block;
+            }
+          }
+        }
+
+        .member-text {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #5f6775;
+        }
+
+        .member-tooltip {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: calc(100% + 4px);
+          z-index: 10;
+          max-width: 240px;
+          padding: 6px 8px;
+          border-radius: 4px;
+          background: rgba(31, 49, 64, 0.95);
+          color: #fff;
+          font-size: 12px;
+          line-height: 18px;
+          white-space: normal;
+          word-break: break-all;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .edit-icon {
+          color: #1578ff;
+          flex-shrink: 0;
+          font-size: 14px;
+        }
+      }
+
+      .clear-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+
+
+  .mt-12 {
+    margin-top: 12px;
+  }
+}
+
+.my-container {
+  .handover-popup {
+    padding: 30px 24px 25px;
+    background: linear-gradient(171deg, #dfeafa 0%, #f9fbff 43%, #ffffff 94%);
+    border-radius: 17px;
+
+    .title {
+      font-size: 16px;
+      font-family: Source Han Sans CN,
+        Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: center;
+      color: #1f3140;
+    }
+
+    .avatar {
+      margin-top: 30px;
+      text-align: center;
+
+      img {
+        vertical-align: middle;
+        width: 54px;
+        height: 54px;
+        border-radius: 11px;
+      }
+    }
+
+    .content {
+      margin-top: 32px;
+      font-size: 15px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+      color: #86909c;
+
+      span {
+        font-weight: bolder;
+        color: #000;
+      }
+    }
+
+    .buttons {
+      margin-top: 36px;
+    }
+
+
+  }
+
+  :global {
+    .van-nav-bar {
+      background: #d0e4ff !important;
+
+      &::after {
+        border-bottom-color: #d0e4ff !important;
+      }
+    }
+  }
+}

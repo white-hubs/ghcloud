@@ -1,0 +1,15 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["typescript"],
+    "rules": {
+        "typescript/no-extraneous-class": [
+            "warn",
+            {
+                "allowConstructorOnly": true,
+                "allowWithDecorator": true
+            }
+        ],
+        "typescript/no-duplicate-enum-values": "warn",
+    },
+    "ignorePatterns": ["*.js", "**/dist/**", "**/node_modules/**"]
+}

@@ -1,0 +1,81 @@
+{
+  "path": "/industry/other.html",
+  "meta": {
+    "title": "其他案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "other",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%AE%89%E5%BE%BD%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E5%AE%A1%E5%88%A4%E5%BA%AD.png",
+            "title": "安徽省高级人民审判庭",
+            "category": "其他",
+            "description": "通过云计算、云存储、云安全、数据库等，建立上下联动、部门合作、职责分明的标准化工作机制。消除数据孤岛，打破部门壁垒，完备虚实融合、标准统一、运行规范、数据共享、协同联动、监管有效的一体化服务体系。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

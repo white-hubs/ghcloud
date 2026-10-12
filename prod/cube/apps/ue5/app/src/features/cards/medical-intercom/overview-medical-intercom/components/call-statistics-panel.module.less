@@ -1,0 +1,147 @@
+
+.call-statistics {
+  :deep(.sub-panel-content) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .total-num {
+    position: relative;
+    width: 159px;
+    height: 153px;
+
+    img,
+    .value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .img1 {
+      width: 159px;
+      height: 153px;
+    }
+
+    .img2 {
+      width: 142px;
+      height: 142px;
+    }
+
+    .img3 {
+      width: 80px;
+      height: 80px;
+    }
+
+    :deep(.ant-progress) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-25deg);
+
+      .ant-progress-text {
+        display: none;
+      }
+    }
+
+    .value {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      :deep(.gh-count-to) {
+        font-size: 20px;
+        font-family: "YouSheBiaoTiHei";
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: -8px;
+      }
+
+      &:last-child {
+        font-size: 12px;
+        font-weight: 400;
+        color: #D0DEEE;
+      }
+    }
+  }
+
+  .list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+    .item {
+      width: 154px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.06);
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      padding-left: 12px;
+      position: relative;
+      margin-right: 10px;
+      padding-top: 4px;
+
+      .time {
+        font-size: 14px;
+        font-weight: 400;
+        color: #D0DEEE;
+        margin-right: 10px;
+      }
+
+      .datas {
+        display: flex;
+        justify-content:space-between;
+
+        .value {
+          :deep(.gh-count-to) {
+            font-size: 20px;
+            font-family: "YouSheBiaoTiHei";
+            font-weight: 400;
+            color: #FFFFFF;
+          }
+        }
+
+        .rate {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 30px;
+
+          .text {
+            color: #D0DEEE !important;
+            margin-right: 2px;
+          }
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 17px;
+        height: 1px;
+        background: #2970FF;
+        content: '';
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 15s infinite linear;
+}
+
+.reverse {
+  animation-direction: reverse;
+}

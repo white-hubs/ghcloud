@@ -1,0 +1,47 @@
+.record-card {
+  margin: 0 12px 12px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.name {
+  flex: 1;
+  margin-left: 8px;
+  overflow: hidden;
+  color: #1f3140;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  position: relative;
+  padding: 0 12px 12px;
+  color: #666;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.line {
+  margin-top: 8px;
+  word-break: break-all;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  :global {
+    .van-button {
+      min-width: 60px;
+    }
+  }
+}

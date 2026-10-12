@@ -1,0 +1,408 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/shared-ui/panel/v2-ring-legend.less";
+
+:global {
+  .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .public-security-device-count {
+    padding: 0;
+  }
+
+  .public-security-device-count.is-zoom {
+    .stats-row {
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .stat-card {
+      padding: 12px 10px;
+    }
+
+    .device-chart-row.is-zoom {
+      min-height: 248px;
+      gap: 20px;
+      padding: 16px 18px;
+      overflow: hidden;
+    }
+
+    .chart-pie-wrap.is-zoom {
+      flex: 0 0 220px;
+      width: 220px;
+      height: 220px;
+      max-width: 220px;
+      overflow: hidden;
+    }
+
+    .legend-list.is-zoom {
+      .v2-ring-legend-list-zoom();
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .public-security-device-count .stat-card {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 5px;
+    overflow: visible;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.04)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+    border-radius: 8px;
+    box-shadow:
+      inset 0 0 14px rgba(46, 148, 255, 0.12),
+      0 6px 14px rgba(0, 27, 66, 0.08);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: rgba(72, 186, 255, 0.52);
+      box-shadow:
+        inset 0 0 16px rgba(46, 148, 255, 0.18),
+        0 8px 18px rgba(0, 27, 66, 0.12);
+    }
+
+    &.is-total {
+      background:
+        linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+
+    &.is-online {
+      background:
+        linear-gradient(135deg, rgba(38, 194, 188, 0.16), rgba(12, 230, 255, 0.04)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+
+    &.is-offline {
+      background:
+        linear-gradient(135deg, rgba(255, 77, 79, 0.14), rgba(255, 171, 16, 0.04)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    }
+  }
+
+  .public-security-device-count .stat-icon {
+    position: relative;
+    display: flex;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    border-radius: 8px;
+
+    &.stat-icon-image {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border-radius: 0;
+    }
+  }
+
+  .public-security-device-count .stat-icon-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .public-security-device-count .stat-content {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .public-security-device-count .stat-value-row {
+    display: flex;
+    align-items: baseline;
+    min-width: 0;
+  }
+
+  .public-security-device-count .stat-value {
+    color: var(--visual-number-color, #35a9ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(43, 147, 255, 0.34);
+
+    .gh-count-to {
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+
+    &.is-online-value {
+      color: #26c2bc;
+      text-shadow: 0 0 10px rgba(38, 194, 188, 0.34);
+    }
+
+    &.is-offline-value {
+      color: #ff4d4f;
+      text-shadow: 0 0 10px rgba(255, 77, 79, 0.28);
+    }
+  }
+
+  /* 覆盖其他面板泄漏的全局 .stat-label 省略号样式 */
+  .public-security-device-count .stat-label {
+    margin-bottom: 2px;
+    overflow: visible;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.25;
+    white-space: nowrap;
+    word-break: keep-all;
+    text-overflow: clip;
+  }
+
+  .device-chart-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 148px;
+    padding: 6px 4px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    &.is-clean-ring {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .chart-pie-wrap {
+    position: relative;
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
+    min-width: 132px;
+    max-width: 132px;
+    overflow: hidden;
+    isolation: isolate;
+
+    .elevator-analysis-pie-box,
+    .pie-box,
+    .elevator-analysis-left {
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .elevator-analysis-left {
+    width: 100%;
+    height: 100%;
+  }
+
+  .legend-list {
+    position: relative;
+    z-index: 1;
+    .v2-ring-legend-list();
+    margin-left: 4px;
+  }
+
+  .legend-item {
+    .v2-ring-legend-item();
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+  }
+
+  .legend-left {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .legend-color {
+    .v2-ring-legend-dot();
+    margin-right: 0;
+  }
+
+  .legend-name {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .legend-value {
+    .v2-ring-legend-value();
+  }
+
+  .legend-unit {
+    .v2-ring-legend-unit();
+  }
+
+  .pie-center-value,
+  .pie-center-label {
+    color: var(--visual-chart-label-color, #fff);
+    text-align: center;
+  }
+
+  .pie-center-value {
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    .gh-count-to {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  .pie-center-label {
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: 1.3;
+  }
+
+  .device-chart-row.is-clean-ring .pie-center-value {
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+  }
+
+  .modal-panel-zoom-content .public-security-device-count {
+    .stat-value {
+      font-size: calc(var(--font-size-scale, 1) * 20px);
+      line-height: calc(var(--font-size-scale, 1) * 24px);
+    }
+
+    .stat-label {
+      overflow: visible;
+      font-size: calc(var(--font-size-scale, 1) * 12px);
+      white-space: nowrap;
+      text-overflow: clip;
+    }
+
+    .pie-center-value {
+      font-size: calc(var(--font-size-scale, 1) * 17px);
+      line-height: calc(var(--font-size-scale, 1) * 20px);
+    }
+
+    .pie-center-label {
+      font-size: calc(var(--font-size-scale, 1) * 11px);
+    }
+
+    .legend-name,
+    .legend-value {
+      font-size: calc(var(--font-size-scale, 1) * 13px);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-card {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.78));
+    border-color: rgba(116, 158, 210, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(61, 111, 175, 0.06);
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-card.is-total {
+    background: linear-gradient(180deg, rgba(232, 243, 255, 0.98), rgba(246, 250, 255, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-card.is-online {
+    background: linear-gradient(180deg, rgba(232, 250, 249, 0.98), rgba(246, 252, 252, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-card.is-offline {
+    background: linear-gradient(180deg, rgba(255, 241, 240, 0.98), rgba(255, 248, 248, 0.94));
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-value {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-value.is-online-value {
+    color: #0f9b95;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-value.is-offline-value {
+    color: #e84749;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .stat-label {
+    overflow: visible;
+    color: var(--visual-muted-color, #49628f);
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .legend-item {
+    .v2-ring-legend-item-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .legend-name,
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .legend-unit {
+    .v2-ring-legend-text-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .legend-value {
+    .v2-ring-legend-value-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .legend-name {
+    color: var(--visual-muted-color, #49628f);
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .device-chart-row.is-clean-ring .legend-name {
+    color: #2f4f7f;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .device-chart-row.is-clean-ring .legend-value,
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .pie-center-value {
+    color: var(--visual-number-color, #0f49a3);
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .public-security-device-count-panel .pie-center-label {
+    color: var(--visual-muted-color, #49628f);
+  }
+}
+
+.v2-minimal-white-panel(public-security-device-count-panel);

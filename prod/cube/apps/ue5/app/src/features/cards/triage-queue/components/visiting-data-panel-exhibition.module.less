@@ -1,0 +1,39 @@
+
+.visiting-data {
+  :deep(.sub-panel-content) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 49%;
+      height: 60px;
+      margin-bottom: 5px;
+      display: inline-flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 23px;
+
+      .ant-statistic {
+        display: inline-flex;
+        flex-flow: column-reverse;
+
+        .ant-statistic-content {
+          height: 29px;
+
+          .ant-statistic-content-value {
+            color: #5EA6FF;
+            font-size: 22px;
+            font-weight: 400;
+          }
+        }
+
+        .ant-statistic-title {
+          color: #D0DEEE;
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

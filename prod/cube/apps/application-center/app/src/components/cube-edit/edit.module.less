@@ -1,0 +1,261 @@
+#editorcontent{
+  width: 100%;
+}
+
+.toolbar {
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.editor {
+  border: 1px solid #ccc;
+  height: 350px;
+}
+
+.quillContainer {
+  :global(.ql-container) {
+    height: calc(100% - 42px);
+  }
+  
+  :global(.ql-toolbar) {
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+  
+  :global(.ql-container) {
+    border: 1px solid #ccc;
+  }
+}
+.editorContainer {
+    flex: 1;
+    overflow: auto;
+    background-color: #f5f5f5; /* 更改背景色，突出A4纸张效果 */
+    position: relative;
+    padding: 20px; /* 添加内边距，使A4纸张居中显示 */
+    
+    /* 优化A4纸张样式模拟 */
+    :global(.w-e-text-container) {
+      :global(.w-e-text) {
+        padding: 40px 60px;
+        max-width: 794px; /* A4宽度 (210mm) */
+        min-height: 1123px; /* A4高度 (297mm) */
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        /* 添加页面标记 */
+        position: relative;
+        font-size: 14px;
+        line-height: 1.5;
+        
+        /* 中国认可 国际互认 检测 CNAS L13137 样式 */
+        p:first-of-type {
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        
+        /* 优化标题样式 */
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 24px;
+        }
+        
+        /* 优化报告编号样式 */
+        div[style*="border: 1px solid #000"] {
+          border: 1px solid #000;
+          padding: 10px;
+          margin: 0 auto;
+          width: 60%;
+          text-align: center;
+          
+          p {
+            margin: 5px 0;
+            
+            span[style*="border-bottom"] {
+              display: inline-block;
+              min-width: 200px;
+              border-bottom: 1px solid #000;
+            }
+          }
+        }
+        
+        /* 优化基础信息表格样式 */
+        table:first-of-type {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 20px 0;
+          
+          td, th {
+            border: 1px solid #000;
+            padding: 8px;
+            line-height: 1.5;
+          }
+          
+          /* 左侧标签单元格 */
+          td:nth-child(odd) {
+            background-color: #f9f9f9;
+            width: 15%;
+            text-align: right;
+            font-weight: bold;
+          }
+          
+          /* 右侧内容单元格 */
+          td:nth-child(even) {
+            width: 35%;
+          }
+        }
+        
+        /* 优化表格样式 */
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 10px 0;
+          
+          td, th {
+            border: 1px solid #000;
+            padding: 8px;
+            line-height: 1.5;
+          }
+          
+          th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: center;
+          }
+          
+          /* 特殊表格样式 - 无边框表格 */
+          &[border="0"] {
+            td, th {
+              border: none;
+              
+              &[style*="border-bottom"] {
+                border-bottom: 1px solid #000 !important;
+              }
+              
+              &[style*="border: 1px solid"], &[style*="border:1px solid"] {
+                border: 1px solid #000 !important;
+              }
+            }
+          }
+        }
+        
+        /* 优化检测结果表格样式 */
+        table:nth-of-type(3) {
+          th {
+            background-color: #f0f0f0;
+          }
+          
+          /* 序号列 */
+          td:first-child, th:first-child {
+            width: 8%;
+            text-align: center;
+          }
+          
+          /* 检测项目列 */
+          td:nth-child(2), th:nth-child(2) {
+            width: 25%;
+          }
+          
+          /* 检测标准列 */
+          td:nth-child(3), th:nth-child(3) {
+            width: 25%;
+          }
+          
+          /* 检测结果列 */
+          td:nth-child(4), th:nth-child(4) {
+            width: 25%;
+          }
+          
+          /* 技术要求列 */
+          td:nth-child(5), th:nth-child(5) {
+            width: 17%;
+          }
+        }
+        
+        /* 优化页码样式 */
+        div[style*="text-align: right"][style*="margin-top: 20px"] {
+          text-align: right;
+          margin-top: 20px;
+          font-size: 12px;
+          color: #666;
+          
+          span {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+          }
+        }
+        
+        /* 优化页面分隔样式 */
+        div[style*="page-break-before: always"] {
+          margin-top: 40px;
+          padding-top: 40px;
+          border-top: 1px dashed #ccc;
+          position: relative;
+          
+          &:before {
+            content: "新页面";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 0 10px;
+            color: #999;
+            font-size: 12px;
+          }
+        }
+        
+        /* 优化图片和标志样式 */
+        div[style*="display: flex"][style*="justify-content: center"] {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          
+          img {
+            height: 80px;
+            margin-right: 15px;
+          }
+          
+          div[style*="text-align: left"] {
+            text-align: left;
+            
+            p {
+              margin: 2px 0;
+              font-size: 12px;
+            }
+          }
+        }
+        
+        /* 优化声明部分样式 */
+        ol {
+          margin-top: 10px;
+          padding-left: 25px;
+          
+          li {
+            margin-bottom: 5px;
+          }
+        }
+        
+        /* 优化变量显示样式 */
+        span[style*="color: red"] {
+          color: #f56c6c !important;
+          background-color: #fef0f0;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+        
+        /* 优化报告底部信息 */
+        div:last-of-type {
+          margin-top: 30px;
+          
+          p {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }

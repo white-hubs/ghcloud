@@ -1,0 +1,288 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  --inspect-row-height: 68px;
+  --inspect-visible-rows: 5;
+  display: flex;
+  min-width: 0;
+  min-height: 250px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statsRow {
+  display: flex;
+  min-width: 0;
+  gap: 6px;
+}
+
+.statCard {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px 8px 8px;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.16), rgba(12, 230, 255, 0.05)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.3));
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 12px rgba(46, 148, 255, 0.12),
+    0 4px 12px rgba(0, 27, 66, 0.08);
+}
+
+.isTotal {
+  flex: 1.15 1 0;
+}
+
+.isPending {
+  background:
+    linear-gradient(135deg, rgba(255, 171, 16, 0.2), rgba(255, 77, 79, 0.05)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border-color: rgba(255, 171, 16, 0.38);
+}
+
+.isProgress {
+  background:
+    linear-gradient(135deg, rgba(0, 242, 123, 0.16), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border-color: rgba(0, 242, 123, 0.32);
+}
+
+.statIcon {
+  display: flex;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.35));
+  }
+}
+
+.statContent {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+}
+
+.statLabel {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.statValue {
+  align-self: flex-start;
+  margin: 0;
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.34);
+}
+
+.isPendingValue {
+  color: #ffab10;
+  text-shadow: 0 0 10px rgba(255, 171, 16, 0.28);
+}
+
+.isProgressValue {
+  color: #00f27b;
+  text-shadow: 0 0 10px rgba(0, 242, 123, 0.28);
+}
+
+.isTotalValue {
+  display: inline-block;
+  min-width: 0;
+  margin-right: auto;
+}
+
+.switchRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.switchBtn {
+  min-width: 56px;
+  padding: 2px 10px;
+  color: rgba(230, 247, 255, 0.78);
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  line-height: 1.5;
+  cursor: pointer;
+  background: rgba(41, 137, 255, 0.08);
+  border: 1px solid rgba(83, 164, 255, 0.22);
+  border-radius: 4px;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+    border-color: rgba(92, 192, 255, 0.5);
+    outline: none;
+  }
+}
+
+.isActive {
+  color: #fff;
+  background: linear-gradient(180deg, rgba(41, 137, 255, 0.15) 0%, rgba(41, 137, 255, 0.55) 100%);
+  border-color: rgba(92, 192, 255, 0.55);
+}
+
+.listSurface {
+  display: block;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 100%;
+  height: calc(var(--inspect-row-height) * var(--inspect-visible-rows));
+  max-height: calc(var(--inspect-row-height) * var(--inspect-visible-rows));
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.rankItem {
+  display: block;
+  box-sizing: border-box;
+  flex: 0 0 var(--inspect-row-height);
+  width: 100%;
+  height: var(--inspect-row-height);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+
+  :global(.eventAlarmItem) {
+    box-sizing: border-box;
+    height: 100%;
+  }
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 188px;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+  gap: 12px;
+
+  .statCard {
+    min-height: 68px;
+    padding: 12px 10px;
+  }
+
+  .statIcon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .statValue {
+    font-size: calc(var(--font-size-scale, 1) * 22px);
+  }
+
+  .listSurface {
+    height: auto;
+    max-height: 480px;
+    overflow-y: auto;
+  }
+
+  .isZoomList {
+    height: auto;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .safety-inspection-statistics-v2-panel) {
+  .statCard {
+    background:
+      linear-gradient(145deg, rgba(232, 244, 255, 0.98), rgba(255, 255, 255, 0.96)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.9));
+    border-color: rgba(82, 142, 222, 0.3);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.1);
+  }
+
+  .isPending {
+    background:
+      linear-gradient(145deg, rgba(255, 244, 230, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(230, 162, 60, 0.36);
+  }
+
+  .isProgress {
+    background:
+      linear-gradient(145deg, rgba(230, 252, 244, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(61, 184, 146, 0.34);
+  }
+
+  .statLabel {
+    color: #49628f;
+  }
+
+  .statValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .isPendingValue {
+    color: #d48806;
+  }
+
+  .isProgressValue {
+    color: #0f9f5a;
+  }
+
+  .statIcon img {
+    filter: none;
+  }
+
+  .switchBtn {
+    color: #49628f;
+    background: rgba(116, 158, 210, 0.1);
+    border-color: rgba(116, 158, 210, 0.26);
+  }
+
+  .isActive {
+    color: #1455b3;
+    background: linear-gradient(180deg, rgba(41, 137, 255, 0.12), rgba(41, 137, 255, 0.2));
+    border-color: rgba(41, 137, 255, 0.38);
+  }
+}
+
+.v2-minimal-white-panel(safety-inspection-statistics-v2-panel);

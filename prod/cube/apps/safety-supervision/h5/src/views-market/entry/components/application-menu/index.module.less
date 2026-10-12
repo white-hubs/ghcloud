@@ -1,0 +1,40 @@
+
+.card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 12px;
+  >.title{
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 300;
+    font-size: 15px;
+    color: #1F3140;
+    line-height: 21px;
+    margin-bottom: 12px;
+  }
+  .nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3列，每列等宽 */
+    gap: 10px; /* 项目之间的间距 */
+    .item{
+      width: 100%;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      margin-right: 10px;
+    }
+    .title{
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 14px;
+      color: #1F3140;
+      line-height: 20px;
+    }
+
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-patrol-detail.html",
+  "meta": {
+    "title": "电子巡更 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "适用于安全保卫、设备设施管理、生产流程监控等多个场景，有效提升巡更工作的效率和规范性，并为管理者提供实时、准确的数据支持，以实现对安全隐患的及时发现和处理。",
+    "keywords": "电子巡更,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/电子巡更/main.png",
+        "productName": "电子巡更",
+        "productDescription": "适用于安全保卫、设备设施管理、生产流程监控等多个场景，有效提升巡更工作的效率和规范性，并为管理者提供实时、准确的数据支持，以实现对安全隐患的及时发现和处理。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "电子巡更"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对园区内的设备监管存在漏洞的地方，采用电子巡更的方式建立巡更计划，定期生成巡更任务，相关人员收到任务后线下巡逻视察，提交巡更结果后生成巡更报表，以此保证园区安全全方面监管，补齐安全最后一道防线。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>巡更计划</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于人员排查风险隐患的场景，通过制定巡查计划，设置责任人，下发巡查计划；相关人员收到巡查任务后，按设置的巡查标准进行巡查上报。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">稽查人员会针对巡检任务进行二次检查，系统自动计算两次检查结果的匹配率。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965311577315880962.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> &nbsp; &nbsp; &nbsp; &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965311037735448578.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>巡更任务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持查询巡更计划系统生成巡更任务；支持临时新建巡更任务，临时新增的任务填写任务基础信息，录入巡更时段时间、巡更路线、巡更人员等数据即可。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965313111822970881.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>巡更记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">巡更记录，是所有巡更任务的巡更记录，可查看所有的任务情况，追溯查询各巡更点巡更结果。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965305286858125313.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>巡更配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">巡更点配置，用于创建巡更路线、创建巡更计划时调用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">若巡更点标识使用的是NFC/蓝牙，则点击新增/编辑按钮，除了录入巡更点名称、所属区域外、还需要一对一关联的对于巡更点设备等相关信息。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965313566359695362.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>巡更统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>巡更点统计 </strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">巡更点统计，针对现场巡更点的巡更情况统计，可查看所有巡更点的巡更情况，支持导出</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>巡更人员统计 </strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">人员巡更统计，针对人员的巡更情况统计，可查看每个人的任务执行情况，支持导出</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411331252226",
+            "name": "日常巡检",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "id": "1811344410899238913",
+            "name": "空调管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+            "version": "1.0.2",
+            "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+            "href": "/product-center/app-ac-detail.html"
+          },
+          {
+            "id": "1811344411633242113",
+            "name": "园区管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/园区管理/main.png",
+            "version": "1.0.1",
+            "description": "该系统聚焦于客户管理、房间管理、走访诉求、租赁管理及运营监管等关键运营数据的查询与分析功能，旨在帮助管理者快速了解当前园区的运营状况，为决策提供坚实的数据支撑。",
+            "href": "/product-center/app-park-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

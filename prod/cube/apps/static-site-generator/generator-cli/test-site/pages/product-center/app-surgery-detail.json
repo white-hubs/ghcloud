@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-surgery-detail.html",
+  "meta": {
+    "title": "手术示教 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+    "keywords": "手术示教,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+        "productName": "手术示教",
+        "productDescription": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "手术示教"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965591855171121153.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>实时状态展示</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>用户交互控制</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持用户通过交互界面进行远程的手术室操作和控制，用户可以实现远程调整手术床、无影灯等设备，以及实时切换摄像头的视角和焦距。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障报警定位</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">当手术示教设备发生故障或异常情况时，系统能够立即生成告警信息，并在模型中进行突出显示，这些告警信息会直观呈现，提醒医护人员及时关注和处理。同时，系统还可以采用多种方式通知相关人员，确保告警信息的及时传递。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>可视化分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用户可以通过业务面板查看手术设备的运行统计、示教情况总览、设备报警明细等。这些数据可以帮助用户更好地了解手术室的运行情况，为手术示教提供数据支持。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411331252226",
+            "name": "日常巡检",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "id": "1811344411285114881",
+            "name": "故障报修",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/故障报修/main.png",
+            "version": "1.0.1",
+            "description": "故障报修单以“实现无纸质化办公”为目标，提供操作简便，定制上手容易满足用户故障报修流程，便于园区内故障处处留痕，线上提高跨部门合作效率，助力企业实现数字化转型。",
+            "href": "/product-center/app-repair-detail.html"
+          },
+          {
+            "id": "1811344409699667969",
+            "name": "安全管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全园区/main.png",
+            "version": "1.0.0",
+            "description": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+            "href": "/product-center/app-safety-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

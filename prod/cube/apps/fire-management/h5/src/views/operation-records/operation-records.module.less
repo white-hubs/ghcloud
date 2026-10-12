@@ -1,0 +1,233 @@
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f4f6f8;
+  color: #262a30;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  box-shadow: 0 1px 0 rgba(31, 41, 55, 0.06);
+}
+
+.filterPanel {
+  padding: 12px 12px 6px;
+}
+
+.dropdownMenu {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__bar) {
+  height: 40px;
+  gap: 8px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__item) {
+  overflow: hidden;
+  border: 1px solid #d8dbe0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__title) {
+  width: 100%;
+  padding: 0 28px 0 12px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__title)::after {
+  right: 12px;
+  border-color: transparent transparent #8d96a3 #8d96a3;
+}
+
+.secondaryFilters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.hostDropdown {
+  min-width: 0;
+}
+
+.operatorSearch {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.operatorSearch :global(.van-search__content) {
+  height: 40px;
+  align-items: center;
+  padding: 0 11px;
+  border: 1px solid #d8dbe0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.operatorSearch :global(.van-field) {
+  align-items: center;
+  padding: 0;
+}
+
+.operatorSearch :global(.van-field__control) {
+  font-size: 13px;
+}
+
+.resultSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 14px 9px;
+  color: #7c8490;
+  font-size: 12px;
+}
+
+.resultCount {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.resultCount strong {
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.sortHint {
+  color: #9aa1aa;
+}
+
+.listViewport {
+  min-height: calc(100vh - 328px);
+  padding: 0 12px 18px;
+}
+
+.loadMore,
+.finishedText {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 4px;
+  color: #9aa1aa;
+  font-size: 12px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card {
+  padding: 12px;
+  border: 1px solid #edf0f3;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(31, 41, 55, 0.035);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cardHeader strong {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardHeader time {
+  flex: none;
+  color: #9097a1;
+  font-size: 11px;
+}
+
+.operationMeta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  color: #747c87;
+  font-size: 12px;
+}
+
+.dot {
+  color: #b0b5bc;
+}
+
+.resultTag {
+  margin-left: 2px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.resultSuccess {
+  background: #e9f8ed;
+  color: #2e9a4d;
+}
+
+.resultFailed {
+  background: #fff3df;
+  color: #e78418;
+}
+
+.resultProcessing {
+  background: #e7f1ff;
+  color: #2874da;
+}
+
+.hostLine {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  color: #858c96;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.detailIcon {
+  flex: none;
+  color: #9aa1aa;
+  font-size: 13px;
+}
+
+.hostLine span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.failureReason {
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px dashed #edf0f3;
+  color: #d56b16;
+  font-size: 11px;
+}
+
+.empty {
+  padding-top: 54px;
+}
+
+.listViewport :global(.van-list__finished-text) {
+  height: 40px;
+  line-height: 40px;
+}

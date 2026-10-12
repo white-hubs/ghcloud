@@ -1,0 +1,120 @@
+.proPanel {
+  width: 927px;
+  height: 500px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px 1px rgba(0, 0, 0, 0.05000000074505806);
+  border-radius: 0px 0px 0px 0px;
+  opacity: 1;
+  border: 1px solid #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .proPanel-icon {
+    width: 408px;
+    height: 100%;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 100%;
+    }
+  }
+
+  .proPanel-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .form-title {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 500;
+      color: #262626;
+      font-family: "PingFang SC-Medium";
+      text-align: center;
+    }
+
+    .login-btn{
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+.proName {
+  font-family: "PingFang SC-Medium";
+  font-size: 36px;
+  font-weight: 500;
+  color: #000000;
+  position: fixed;
+  top: calc(50% - 350px);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+.loginCtr {
+  width: 100%;
+  height: 100%;
+  background: url("/resource/v1/operating-room/login-background.png") rgba(24, 143, 255, 0.76) no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  form {
+    width: 355px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 20px 38px;
+
+    >div {
+      width: 100%;
+    }
+    .operating-room-form-item{
+      padding: 0 !important;
+      margin-bottom: 10px;
+    }
+    .operating-room-form-item-control-input {
+      min-height: 40px;
+    }
+
+    .operating-room-row.operating-room-form-item {
+      height: 40px;
+      margin-bottom: 25px;
+
+      div {
+        height: 100%;
+        text-align: left;
+
+        >.operating-room-input-affix-wrapper {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.identify {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialogContent {
+  max-height: 500px;
+  overflow-y: scroll;
+  >div {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}

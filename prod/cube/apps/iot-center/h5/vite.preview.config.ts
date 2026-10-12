@@ -1,0 +1,33 @@
+import { getBaseConfig } from "./vite.config";
+import { defineConfig, loadEnv } from "vite";
+
+/** 与 vite.dev.config 组态代理对齐，便于 `vite preview` 联调 */
+export default defineConfig(async (configEnv) => {
+  const baseConfig = await getBaseConfig(configEnv);
+  const env = loadEnv(configEnv.mode, process.cwd(), "");
+  const scadaStudioStaticTarget = env.VITE_DEV_SCADA_STUDIO_STATIC_TARGET ?? "http://localhost:8899";
+  const scadaApiTarget = env.VITE_DEV_SCADA_API_PROXY ?? "http://192.168.0.243:40201";
+  return {
+    ...baseConfig,
+    preview: {
+      port: 9999,
+      proxy: {
+        "/resource/v1/scada-studio": {
+          target: scadaStudioStaticTarget,
+          changeOrigin: true,
+          rewrite: (path: string) => path.replace(/^\/resource\/v1\/scada-studio/, ""),
+        },
+        "^/api": {
+          target: "http://192.168.0.243:40201/api",
+          changeOrigin: true,
+          rewrite: (path: string) => path.replace(/^\/api/, ""),
+        },
+        "/resource": "http://192.168.0.133:40201",
+        "/scada/api": {
+          target: scadaApiTarget,
+          changeOrigin: true,
+        },
+      },
+    },
+  };
+});

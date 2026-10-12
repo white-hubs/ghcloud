@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-safety-detail.html",
+  "meta": {
+    "title": "安全管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+    "keywords": "安全管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/安全园区/main.png",
+        "productName": "安全管理",
+        "productDescription": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "安全管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。形成企业级安全态势动态分析报表，应用AI安防算法对报表数据进行分析后给出优化建议，实现从数据感知到智能分析、再到闭环处置的安防管理全链路升级。 </span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>安全报告</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>安全分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示安全分析的入口和近期报告记录，用户选择分析时间段系统开始按照预设的规则进行分析，结合AI对分析的数据结果给出优化建议，最终形成一个安全分析报告</span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965606290979827714.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965606460131913730.jpg\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报告记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示安全分析报告的历史报告数据列表，通记录入口，可以查看之前分析的报告详情。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965606567216689153.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>规则库</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实现配置安全分析报告要展示的数据的计算公式，比如：安防监控一级报警处理率=安防监控一级报警已处理数量/安防监控一级报警总数</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965014283098009601.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>业务分类</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实现将系统安全有关的业务应用，如消防安全、视频监控等，进行统一的业务应用归集，为最终呈现安全分析报告提供最顶层的分析维度，支持给业务分类添加子类，如在消防安全下新增一级报警数量、消防手报报警数量等，以多维全面的呈现园区的安全态势。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408881778690",
+            "name": "指挥调度",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "version": "1.0.2",
+            "description": "运用AI人工智能、大数据、云计算、智慧消防、融合通信等先进技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+            "href": "/product-center/app-command-detail.html"
+          },
+          {
+            "id": "1811344410744049666",
+            "name": "门禁管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          },
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

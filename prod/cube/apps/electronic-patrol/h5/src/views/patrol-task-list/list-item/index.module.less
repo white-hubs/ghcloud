@@ -1,0 +1,128 @@
+.cardItem {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 12px;
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--van-gray-3);
+
+    .card-status {
+      background: var(--van-primary-color);
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 12px;
+      flex-shrink: 0;
+      color: #fff;
+      margin-right: 8px;
+
+    }
+
+    .card-title {
+      flex: 1;
+      word-break: break-all;
+    }
+
+    .TO_BE_RECEIVED {
+      background: var(--van-danger-color);
+    }
+
+    .FINISHED {
+      background: var(--van-gray-7);
+    }
+
+    .card-time {
+      flex-shrink: 0;
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--van-gray-7);
+    }
+  }
+
+  .card-content {
+    position: relative;
+
+    .abnormalIcon {
+      position: absolute;
+      right: 40px;
+      top: -10px;
+      width: 44px;
+      height: 44px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+
+      .content-item-last {
+        width: 100%;
+        font-size: 13px;
+        color: var(--van-gray-7);
+        display: flex;
+        align-items: flex-start;
+
+        .item-title {
+          flex-shrink: 0;
+        }
+
+        .item-value {
+          flex: 1;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+        }
+      }
+
+      .content-item {
+        width: 50%;
+        font-size: 13px;
+        color: var(--van-gray-7);
+        display: flex;
+        align-items: flex-start;
+
+        .item-title {
+          flex-shrink: 0;
+        }
+
+        .item-value {
+          flex: 1;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    padding: 8px 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+
+    .footer-item {
+      width: 80px;
+      line-height: 28px;
+      margin-left: 12px;
+      color: #fff;
+      border-radius: 6px;
+      background: var(--van-primary-color);
+      text-align: center;
+
+      &.transfer {
+        background: #fff;
+        border: 1px solid var(--van-primary-color);
+        color: var(--van-primary-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+<template>
+  <div class="basic-info">
+    <div class="img-info">
+      <img
+        src="./images/court2.png"
+        alt="" srcset="">
+      <div class="info">
+        <div class="title">
+          <div class="label">
+            <div class="label-text">空间名称</div>
+            <div class="status">使用中</div>
+          </div>
+          <div class="value">大法庭</div>
+        </div>
+        <div class="area">
+          <div class="label">
+            <div class="label-text">所在区域</div>
+          </div>
+          <div class="value">办公1区</div>
+        </div>
+      </div>
+    </div>
+    <div class="address">
+      <div class="label">
+        <div class="label-text">详细位置</div>
+      </div>
+      <div class="value">办公大楼-2楼-大法庭</div>
+    </div>
+  </div>
+</template>
+
+<script setup lang='ts'>
+import { reactive, toRefs, onMounted } from 'vue';
+/**
+* 数据部分
+*/
+const state = reactive({})
+onMounted(() => {
+})
+// 使用toRefs解构
+// let { } = { ...toRefs(state) } 
+defineExpose({
+  ...toRefs(state)
+})
+
+</script>
+<style scoped lang='less'>
+.basic-info {
+  .img-info {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+
+    img {
+      width: 176px;
+      height: 146px;
+    }
+
+    .info {
+      flex: 1;
+      margin-left: 10px;
+      padding-right: 4px;
+
+      .title {
+        .label {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .label-text {
+            padding: 2px 22.5px 2px 7.5px;
+            font-size: 12px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            text-align: center;
+            color: #d0deee;
+            background: linear-gradient(270deg, rgba(41, 137, 255, 0.00), #2989ff);
+          }
+
+          .status {
+            padding: 3px 7px;
+            background: rgba(42, 232, 189, 0.20);
+            border: 1px solid #2ae8bd;
+            border-radius: 2px;
+            font-size: 14px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            text-align: center;
+            color: #2ae8bd;
+          }
+        }
+
+        .value {
+          padding: 10px 8px;
+          margin-top: 4px;
+          background: linear-gradient(to right, rgba(10, 50, 99, 0.70), rgba(10, 50, 99, 0));
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: center;
+          color: #f8fbff;
+        }
+      }
+
+      .area {
+        margin-top: 8px;
+
+        .label {
+          display: flex;
+          align-items: center;
+
+          .label-text {
+            padding: 2px 22.5px 2px 7.5px;
+            font-size: 12px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            text-align: center;
+            color: #d0deee;
+            background: linear-gradient(270deg, rgba(41, 137, 255, 0.00), #2989ff);
+          }
+        }
+
+        .value {
+          padding: 3px 5px;
+          margin-top: 4px;
+          background: linear-gradient(to right, rgba(10, 50, 99, 0.70), rgba(10, 50, 99, 0));
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: center;
+          color: #f8fbff;
+        }
+      }
+
+    }
+
+
+  }
+
+  .address {
+    margin-top: 12px;
+
+    .label {
+      display: flex;
+      align-items: center;
+
+      .label-text {
+        padding: 2px 22.5px 2px 7.5px;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #d0deee;
+        background: linear-gradient(270deg, rgba(41, 137, 255, 0.00), #2989ff);
+      }
+    }
+
+    .value {
+      padding: 8px 21.5px 8px 13.5px;
+      margin-top: 4px;
+      background: linear-gradient(to right, rgba(10, 50, 99, 0.70), rgba(10, 50, 99, 0));
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      color: #f8fbff;
+    }
+  }
+}
+</style>

@@ -1,0 +1,46 @@
+{
+  "path": "/information.html",
+  "meta": {
+    "title": "资讯中心 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "与您一起连接数字世界",
+            "subtitle": "垂直于数字孪生、物联、建模领域的资讯整合、同步传导，将企业动态、行业热点相结合，全方位解读行业最新变化、了解企业成长等。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": {
+          "$ref": "./articles/news-categories.json"
+        },
+        "activeId": "all",
+        "allHref": "/information.html#category-filter",
+        "urlAware": true,
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "NewsSection",
+      "props": {
+        "news": {
+          "$ref": "./articles/index.json"
+        },
+        "limit": 0,
+        "enableCategoryFilter": true,
+        "layout": "list"
+      }
+    }
+  ],
+  "layout": "default"
+}

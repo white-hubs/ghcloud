@@ -1,0 +1,113 @@
+.work-order-library {
+  padding: 16px;
+  min-height: calc(100vh - 200px);
+
+  .group-section {
+    margin-bottom: 20px;
+
+    .flow-grid {
+      margin-top: 20px;
+
+      .flow-card {
+        aspect-ratio: 1 / 1; // 保持正方形
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          border-color: #1890ff;
+          box-shadow: 0 1px 4px rgba(24, 144, 255, 0.12);
+          transform: translateY(-1px);
+        }
+
+        .flow-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          padding: 10px;
+
+          .flow-icon {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 2px;
+            transition: color 0.3s ease;
+            flex-shrink: 0;
+          }
+
+          .flow-name {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.1;
+            word-break: break-all;
+            transition: color 0.3s ease;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        &:hover .flow-content {
+          .flow-icon {
+            color: #1890ff;
+          }
+
+          .flow-name {
+            color: #1890ff;
+          }
+        }
+      }
+    }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 0;
+    color: #999;
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .work-order-library {
+    padding: 10px;
+
+    .group-section {
+      margin-bottom: 16px;
+
+      .group-title {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .flow-grid {
+        .flow-card {
+          .flow-content {
+            padding: 2px;
+
+            .flow-icon {
+              font-size: 10px;
+              margin-bottom: 1px;
+            }
+
+            .flow-name {
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

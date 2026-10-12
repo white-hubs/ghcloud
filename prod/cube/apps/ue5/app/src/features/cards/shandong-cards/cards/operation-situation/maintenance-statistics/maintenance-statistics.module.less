@@ -1,0 +1,42 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.chartSurface {
+  display: flex;
+  min-width: 0;
+  min-height: 200px;
+  flex: 1;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 200px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomBody {
+  min-height: 420px;
+
+  .chartSurface {
+    min-height: 380px;
+  }
+
+  .emptySurface {
+    min-height: 380px;
+  }
+}
+
+.v2-minimal-white-panel(maintenance-statistics-v2-panel);

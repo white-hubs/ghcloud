@@ -1,0 +1,42 @@
+@import "./theme/color.less";
+@import "~basscss/css/basscss.css";
+
+.ant-layout {
+  height: 100%;
+
+  &-header {
+    height: auto;
+    padding: 0;
+    line-height: 100%;
+  }
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-nav-container,
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+  height: 40px;
+  line-height: 40px;
+}
+
+.ant-table {
+  .ant-table-thead>tr>th {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  table {
+    text-align: center;
+  }
+}
+
+.ant-pagination {
+  padding: 20px 10px;
+  text-align: right;
+}
+
+.ant-form-item-control-input-content {
+  text-align: left;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background-color: transparent;
+}

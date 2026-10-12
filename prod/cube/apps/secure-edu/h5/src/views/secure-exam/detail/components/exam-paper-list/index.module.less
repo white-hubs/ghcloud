@@ -1,0 +1,59 @@
+.paperList {
+  margin-top: 12px;
+  display: flex;
+  margin-left: 1px;
+  flex-direction: column;
+  gap: 12px;
+
+  .paperItem {
+    padding: 12px;
+
+    background: #fff;
+    border-radius: 6px;
+
+    .infoItem {
+      display: flex;
+      align-items: center;
+
+      .itemContent {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-weight: 400;
+          font-size: 15px;
+          color: #1F3140;
+          margin-bottom: 5px;
+        }
+
+        .info {
+          display: flex;
+          align-items: center;
+          font-weight: 400;
+          font-size: 13px;
+          color: #666666;
+
+          span {
+            margin-left: 10px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+    .operate {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+      font-size: 14px;
+      color: var(--van-primary-color);
+      padding-top: 10px;
+    }
+
+  }
+}

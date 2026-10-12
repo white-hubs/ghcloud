@@ -1,0 +1,218 @@
+.task-content-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  .task-detail-tabs {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #fff;
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 16px;
+      background-color: #1890ff;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 16px 0;
+    color: #D9E7FF;
+  }
+
+  .task-info,
+  .task-result {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+  }
+
+  .info-item {
+    display: flex;
+    line-height: 24px;
+    align-items: baseline;
+
+    .label {
+      width: 140px;
+      color: #D9E7FF;
+      flex-shrink: 0;
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: right;
+    }
+
+    .value {
+      color: #D9E7FF;
+      word-break: break-all;
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+    }
+  }
+
+  .result-images {
+    grid-column: span 3;
+  }
+
+  .attachment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .attachment-item {
+    color: #1890ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .image-item {
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(105, 116, 140, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(24, 144, 255, 0.3);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+:global {
+
+  .ant-pagination, .ant-select, .ant-select-item-option-content {
+    font-size: 18px;
+  }
+  .ant-select-dropdown, .ant-select-item-empty {
+    color: #D9E7FF;
+    text-align: center;
+  }
+  .ant-select-clear{
+    background: transparent;
+  }
+  .ant-tabs-content {
+    height: 100%;
+    padding: 16px;
+  }
+  .ant-tabs{
+    font-size: 20px;
+    color: #dee9ff;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before, .ant-tabs-bottom > .ant-tabs-nav::before, .ant-tabs-top > div > .ant-tabs-nav::before, .ant-tabs-bottom > div > .ant-tabs-nav::before{
+    border-color: rgba(73,97,150,0.20);
+  }
+  .ant-tabs-tab{
+    padding: 10px 16px;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    font-size: 20px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    color: #fff;
+    text-shadow: none;
+  }
+  .ant-tabs-tab-active{
+    background: linear-gradient(180deg,rgba(90,124,183,0.20) 0%, rgba(86,125,212,0.60));
+  }
+
+  .table-container {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .task-table {
+    width: 100%;
+  }
+  
+    .ant-table {
+      background: transparent;
+    }
+    .ant-table-cell-scrollbar{
+      box-shadow: none;
+    }
+    .ant-pagination-total-text{
+      color: #fff;
+    }
+    
+    .ant-table-thead > tr > th {
+      background: rgba(21,120,255,0.20);
+      border-bottom: none;
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      color: #dee9ff;
+    }
+    
+    .ant-table-tbody > tr > td {
+      border-bottom: 1px solid rgba(105,116,140,0.50);
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      color: #d9e7ff;
+      background: transparent;
+      .ant-image{
+        margin: 5px;
+        .ant-image-mask{
+          white-space: nowrap;
+        }
+      }
+    }
+    
+    .ant-table-tbody > tr:hover > td {
+      background: rgba(21,120,255,0.10) !important;
+    }
+    .ant-empty-normal {
+      color: #D9E7FF;
+    }
+    .ant-pagination-item {
+      background: rgba(255, 255, 255, 0.1);
+      
+      a {
+        color: #fff;
+      }
+    }
+    
+    .ant-pagination-item-active {
+      background: #567DE5;
+      
+      a {
+        color: #fff;
+      }
+    }
+}

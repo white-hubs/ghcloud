@@ -1,0 +1,78 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 220px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tableSurface {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 232px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  :global(.roll-table) {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  :global(.scroll_warp) {
+    height: 200px;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .tableSurface {
+    height: 380px;
+
+    :global(.scroll_warp) {
+      height: 348px;
+    }
+  }
+}
+
+:global(.today-patrol-personnel-v2-panel .sub-panel-content) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .today-patrol-personnel-v2-panel) {
+  .tableSurface,
+  .emptySurface {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(today-patrol-personnel-v2-panel);

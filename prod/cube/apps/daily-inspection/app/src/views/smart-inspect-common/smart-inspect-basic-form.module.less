@@ -1,0 +1,68 @@
+.container {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+}
+
+.form :global(.ant-form-item) {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.form :global(.ant-form-item-control) {
+  min-width: 0;
+  flex: 1;
+}
+
+.form :global(.ant-picker),
+.form :global(.ant-select),
+.form :global(.ant-input),
+.form :global(.ant-input-number),
+.form :global(.ant-input-number-group-wrapper) {
+  width: 100%;
+}
+
+.field-control-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.field-control-wrap :global(.ant-form),
+.field-control-wrap :global(.ant-row) {
+  width: 100%;
+}
+
+.person-select-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.readonly-grid {
+  width: 100%;
+  padding: 4px 0;
+}
+
+.readonly-item {
+  display: flex;
+  min-height: 32px;
+  line-height: 22px;
+  color: #1f2633;
+}
+
+.readonly-label {
+  flex: 0 0 120px;
+  color: #646a73;
+  text-align: right;
+}
+
+.readonly-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: #1f2633;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

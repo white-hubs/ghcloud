@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "YouSheBiaoTiHei";
+    src: url("./common/YouSheBiaoTiHei-2.ttf");
+}
+
+@font-face {
+    font-family: "robotoMedium";
+    src: url("./common/Roboto-Medium-12.ttf");
+}
+
+@font-face {
+    font-family: "robotoRegular";
+    src: url("./common/Roboto-Regular-14.ttf");
+}
+
+@font-face {
+    font-family: "sourceMedium";
+    src: url("./common/SourceHanSansCN-Medium-2.otf");
+}
+
+@font-face {
+    font-family: "sourceRegular";
+    src: url("./common/SourceHanSansCN-Regular-2.otf");
+}
+
+@font-face {
+    font-family: "dsdigitalbold";
+    src: url("./common/DS-Digital-Bold.ttf");
+}
+@font-face{
+  font-family: "pnzd";
+  src: url("./common/pmzd.ttf");
+}
+
+@font-face {
+    font-family: "PangMenZhengDao";
+    src: url("./common/庞门正道标题体2.0增强版.ttf");
+}
+
+@font-face {
+  font-family: "D-DIN-Bold";
+  src: url("./common/D-DIN-PRO-600-SemiBold.otf")
+}
+
+@font-face {
+  font-family: "D-DIN-Regular";
+  src: url("./common/D-DIN-PRO-500-Medium.otf")
+}

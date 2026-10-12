@@ -1,0 +1,59 @@
+.form_item{
+  padding: 10px 0; 
+  border-radius: 5px;
+}
+.task_standard_page{
+  // padding: 10px;
+  height: 100%;
+  background-color: #f3f7fa;
+  .form_name{
+    padding:  10px ;
+  }
+  .title{
+    font-size: 16px;
+    color: #59ACDB;
+    padding: 10px;
+
+  }
+  .form_body{
+    height: calc(100vh - 145px);
+    overflow-y: auto;
+    background-color: #f3f7fa;
+  }
+  .check_body{
+    height: 38vh;
+    width: 100%;
+    // background-color: red;
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #5BA4F7;
+      .cancel{
+        color:#909193;
+      }
+    }
+    .check_box{
+      height: calc(100% - 80px);
+      overflow-y: auto;
+      display: flex;
+      align-items: center;
+      .check_box_item{
+        height: 38px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+.button_group{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    // po
+}

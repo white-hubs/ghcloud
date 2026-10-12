@@ -1,0 +1,53 @@
+:global {
+  .ant-modal-content {
+    background: rgba(4, 17, 32, 0.8) !important;
+  }
+
+  :root {
+    box-sizing: border-box;
+  }
+
+  .view,
+  #player {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #041428;
+    background-image: url("/resource/v1/ue5-migrate/assets/images/sky-texture2.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  :root[data-visual-theme="minimal-white"] .view,
+  :root[data-visual-theme="minimal-white"] #player {
+    background-color: #e8f1fb;
+  }
+
+  .view {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #modelContainer {
+    overflow: hidden;
+  }
+}
+
+.player {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* HoveringMouse 使用系统指针；隐藏后中间区域会看不到手势 */
+  cursor: default;
+}
+
+
+.roaming-tag {
+  position: absolute;
+  top: 15%;
+  left: 6%;
+  z-index: 98;
+  min-width: 60px;
+  height: auto;
+  transition: all 1s ease;
+}

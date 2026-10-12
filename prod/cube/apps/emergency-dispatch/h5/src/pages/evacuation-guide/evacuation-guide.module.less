@@ -1,0 +1,317 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  background: #f3f4f6;
+}
+
+.loadingWrap {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.appContainer {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: calc(100vh - 46px);
+  background: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.emergencyHeader {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  padding: 16px 20px 24px;
+  color: #fff;
+  position: relative;
+  overflow: visible;
+  z-index: 50;
+}
+
+.emergencyHeader::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.alertIcon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.emergencyHeader h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sub {
+  font-size: 12px;
+  opacity: 0.85;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locWrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 51;
+}
+
+.locSelector {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.locArrow {
+  font-size: 8px;
+}
+
+.locPanel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 200;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  max-width: min(280px, calc(100vw - 40px));
+  color: #374151;
+  max-height: 240px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.locPanelTitle {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.locTreeItem {
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.locTreeItem:active {
+  background: #f3f4f6;
+}
+
+.locTreeChild {
+  padding-left: 20px;
+}
+
+.locTreeSelected {
+  background: #eff6ff;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.locPanelLoading,
+.locPanelEmpty {
+  font-size: 11px;
+  color: #9ca3af;
+  padding: 4px 8px 8px;
+}
+
+.locPanelReset {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+
+  button {
+    border: none;
+    background: none;
+    font-size: 12px;
+    color: #3b82f6;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+.mapSection {
+  margin: 12px 12px 0;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.sectionHead {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.sectionHeadRow {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.legend {
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 400;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.routeListWrap {
+  padding: 12px 16px 16px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.routeInfoCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.routeDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.routeMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.routeName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.routeCapacity {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.statusBadge {
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.clear {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.crowded {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.blocked {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.bottomSpacer {
+  height: 100px;
+}
+
+.sosBar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 380px;
+  width: calc(100% - 32px);
+  z-index: 100;
+}
+
+.btnRefresh {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.btnRefresh:active {
+  transform: scale(0.96);
+}

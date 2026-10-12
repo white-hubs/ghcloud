@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-small-project-detail.html",
+  "meta": {
+    "title": "小散工程 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "小散工程系统，通过无纸化工单，全流程监管小散工程的立项、施工、验收，保证工程实施 保质保量；通过工程数据统计辅助管理层掌握园区的工程情况。",
+    "keywords": "小散工程,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+        "productName": "小散工程",
+        "productDescription": "小散工程系统，通过无纸化工单，全流程监管小散工程的立项、施工、验收，保证工程实施 保质保量；通过工程数据统计辅助管理层掌握园区的工程情况。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "小散工程"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">小散工程系统，统一管理园区小散工程类项目，从项目立项到项目的施工验收，全流程监管，实现项目透明化，给管理者决策提供数据支撑。区别于一般的工程管理系统，该功能应用主要侧重于工程的安全监管。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965374451954495489.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>工程请示</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">园区需要走线上立项审批时使用。主要通过无纸化工单线上发起项目立项审批。</span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965341801252401153.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965342903519686658.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>工程审批</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">园区需要走线上工程审批流程时使用。当项目成功立项后，园区人员线下确认了该项目施工方、施工时间、后续工程监督方等信息，通过发起工程审批工单的方式上报施工方案。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>工程监管</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于项目施工时，监管部门跟进向上反馈、验收留痕；工程监管同时和日常巡检、隐患整改功能应用打通，用于相关领导在查看工程进度的同时，了解工程的安全巡查、隐患整改情况。 </span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "id": "1811344411729711105",
+            "name": "行政管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/行政管理/main.png",
+            "version": "1.0.1",
+            "description": "行政管理主要是用于公司内部无纸化办公场景。支持员工线上发起审批，线上处理、线上通知、线上数据存档。简化日常工作流程，解决员工日常行政办公反复跑审批时长无法预估，纸质文档不易留存的问题。",
+            "href": "/product-center/app-admin-detail.html"
+          },
+          {
+            "id": "1811344411398361090",
+            "name": "委外维修",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

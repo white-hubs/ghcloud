@@ -1,0 +1,21 @@
+{
+  "name": "@ghcloud/cube-generator-service",
+  "version": "1.0.0",
+  "description": "Cube Generator Service",
+  "type": "module",
+  "dependencies": {
+    "qiniu": "^7.10.0",
+    "basic-ftp": "^5.0.0",
+    "ssh2-sftp-client": "^10.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "DATA_DIR=$(pwd)/data GENERATOR_CLI_DIR=$(pwd)/../generator-cli bun src/index.ts",
+    "build": "echo 'Bun runs TypeScript directly, no build needed'",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}

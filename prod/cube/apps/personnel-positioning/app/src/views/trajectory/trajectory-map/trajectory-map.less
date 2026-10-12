@@ -1,0 +1,64 @@
+.pp-trajectory-map {
+  &__line,
+  &__line-shadow {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+  &__line {
+    stroke: #1890ff;
+    stroke-width: 3px;
+  }
+  &__line-shadow {
+    stroke: white;
+    stroke-width: 6px;
+  }
+  &__point,
+  &__alarm {
+    cursor: pointer;
+    outline: none;
+    &:focus-visible > circle:last-of-type,
+    &:focus-visible > path {
+      stroke: #262626;
+      stroke-width: 3px;
+    }
+  }
+  &__point text {
+    font-size: 12px;
+    fill: #262626;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 4px;
+  }
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    > span {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+    i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .is-start {
+      background: #52c41a;
+    }
+    .is-end,
+    .is-alarm {
+      background: #ff4d4f;
+    }
+    .is-track {
+      background: #1890ff;
+    }
+    .pp-muted {
+      margin-left: auto;
+    }
+  }
+}

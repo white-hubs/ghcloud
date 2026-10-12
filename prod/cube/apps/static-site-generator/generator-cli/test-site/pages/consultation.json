@@ -1,0 +1,32 @@
+{
+  "path": "/consultation.html",
+  "meta": {
+    "title": "咨询服务 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ConsultationForm",
+      "props": {
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/consultation-jump-bg.webp",
+        "formTitle": "为您提供专属服务",
+        "formSubtitle": "表单将在提交后24小时内与您联系，敬请留意接听",
+        "nameLabel": "*姓名",
+        "contactLabel": "*联系方式",
+        "companyLabel": "企业名称",
+        "sceneLabel": "应用场景",
+        "namePlaceholder": "您的姓名",
+        "contactPlaceholder": "联系方式",
+        "companyPlaceholder": "企业名称",
+        "scenePlaceholder": "应用场景",
+        "submitText": "提交",
+        "submitApi": "https://cube-dev.guhecloud.com:30000/api/guhecloudWebsite/website/feedback",
+        "submitMethod": "POST",
+        "successMessage": "提交成功，我们将尽快与您联系！",
+        "errorMessage": "提交失败，请稍后重试",
+        "tenant": "58197260"
+      }
+    }
+  ],
+  "layout": "default"
+}

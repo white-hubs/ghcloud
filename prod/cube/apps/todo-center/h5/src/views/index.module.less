@@ -1,0 +1,214 @@
+.container {
+  height: calc(100vh - 12.6667vw);
+  background: #F3F7FA;
+  padding: 12px;
+  overflow-y: auto;
+
+  .app-group {
+    width: 351px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    :global {
+      .van-cell__title {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 400;
+        font-size: 15px;
+        color: #1F3140;
+        line-height: 21px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        text-align: left;
+        flex: unset
+      }
+
+      .van-cell__value {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .van-cell {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    .app-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      width: 158px;
+      height: 56px;
+      background: #F8FCFF;
+      border-radius: 6px 6px 6px 6px;
+      padding: 8px 12px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #1F3140;
+        user-select: none;
+        margin-left: 10px;
+      }
+    }
+
+    .time-picker {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      div {
+        width: 52px;
+        height: 24px;
+        text-align: center;
+        transition: all 0.2s;
+
+        &.time-picker-selected {
+          background: var(--van-primary-color);
+          border-radius: 4px 4px 4px 4px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .todo-stat {
+    width: 100%;
+
+    .todo-stat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6px 6px 6px 6px;
+      box-sizing: border-box;
+      padding: 12px;
+
+      .todo-stat-item-title {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          background: #ff6600;
+          padding: 6px;
+          padding-bottom: 1px;
+          border-radius: 6px;
+          margin-right: 4px;
+
+        }
+
+
+
+        font-family: Source Han Sans CN,
+        Source Han Sans CN;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999999;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+        text-transform: none;
+      }
+
+      .todo-stat-item-value {
+        display: inline-block;
+        font-family: Roboto, Roboto;
+        font-weight: 500;
+        font-size: 26px;
+        color: #ff6600;
+        line-height: 35px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        position: relative;
+        margin-right: 18px;
+
+        &::after {
+          content: '个';
+          height: 17px;
+          font-family: Source Han Sans CN, Source Han Sans CN;
+          font-weight: 400;
+          font-size: 12px;
+          color: #1F3140;
+          line-height: 17px;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+          position: absolute;
+          bottom: 6px;
+          right: -15px;
+        }
+      }
+    }
+
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .stat-item {
+        display: flex;
+        margin-top: 12px;
+        align-items: center;
+        justify-content: space-between;
+        background: #F8FCFF;
+        padding: 12px 8px;
+        border-radius: 6px 6px 6px 6px;
+        width: 49%;
+
+        .item-label {
+          font-family: Source Han Sans CN,
+            Source Han Sans CN;
+          font-weight: 400;
+          font-size: 13px;
+          color: #999999;
+          line-height: 20px;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+        }
+
+        .item-value {
+          display: inline-block;
+          font-family: Roboto, Roboto;
+          font-weight: 500;
+          font-size: 22px;
+          color: #1F3140;
+          line-height: 35px;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+          position: relative;
+          margin-right: 18px;
+
+          &::after {
+            content: '个';
+            height: 17px;
+            font-family: Source Han Sans CN, Source Han Sans CN;
+            font-weight: 400;
+            font-size: 12px;
+            color: #1F3140;
+            line-height: 17px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+            position: absolute;
+            bottom: 7px;
+            right: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  .todo-trend-chart {
+    width: 100%;
+  }
+}

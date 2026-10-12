@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-iot-detail.html",
+  "meta": {
+    "title": "物联中心 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "物联中心是一个集成了设备管理，数据安全通讯、消息订阅、设备台账、健康分析等能力的设备一体化设备管理中心，针对所有需要接入的设备进行统一管理，为上层提供物联数据采集与反控能力。",
+    "keywords": "物联中心,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com /resource/app-icons/设备中心/main.png",
+        "productName": "物联中心",
+        "productDescription": "物联中心是一个集成了设备管理，数据安全通讯、消息订阅、设备台账、健康分析等能力的设备一体化设备管理中心，针对所有需要接入的设备进行统一管理，为上层提供物联数据采集与反控能力。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "物联中心"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">物联中心是一个集成了设备管理，数据安全通讯、消息订阅、设备台账、健康分析等能力的设备一体化设备管理中心；向下支持连接设备，采集设备数据上云，向上提供云端API，服务端可通过调用云端API指令下发至设备端，实现远程控制，针对所有需要接入的设备进行统一管理，为上层提供物联数据采集与反控能力。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>产品管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>产品列表</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">产品是设备的集合，通常是一组具有相同功能定义（物模型）的设备集合；针对使用主体创建对应的产品，品类模版关联了标准物模型模版，在创建完产品后将标准物模型复制到创建的产品</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965376871887548417.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>产品品类</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对产品品类进行维护管理</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>产品品牌</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">产品品牌是指这个产品对应的公司名称或服务标识，用于对产品信息进行补充</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备管理</strong></span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965376663392890881.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965376737715957762.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>设备列表</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">产品是设备的集合，通常指一组具有相同功能的设备。创建产品完成，并启用产品后，需在产品下添加设备。可以同时创建一个或多个设备</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>设备台账</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">管理当前系统所有的设备业务台账信息，设备的来源是基础模块中的设备管理。设备台账用于跟踪和查看设备的前期管理、设备日常运行、设备检修、的全生命周期管理过程</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>操作日志</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于查看针对设备的操作管理日志，以明确在什么时间，什么人，操作了设备的什么参数，导致什么结果</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>健康分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统固定时间周期（默认每天）对设备进行健康度检测，保留检测结果和检测历史信息提供用户对设备健康的查看</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>状态分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统通过选择指定的设备进行实时的状态分析，显示该设备基于状态的分析结果</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>可靠性分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统通过选择指定的设备（单个设备或某一类型设备）时间段内生成可靠性分析报告</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>运行统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对设备的运行情况进行统计，包含如在线时长、离线时长、离线总次数、报警总次数、故障总次数，故障率等</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>维护统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">整合设备巡检、维保相关数据，显示设备维护的总体情况</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备通知</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>通知列表</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统通过配置设备健康阈值产生健康报警，在该页面展示系统中所有健康报警记录以及报警的确认信息</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>通知配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对设备报警通知进行配置管理，可选择性进行报警通知开启与关闭</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344409062133761",
+            "name": "肉类交易",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/肉类交易/main.png",
+            "version": "1.0.2",
+            "description": "肉类白条交易溯源系统依托开河智能中枢为基础，围绕肉类白条交易全链条搭建数字化交易溯源平台，提升肉类白条理货、交易等经营效率和管理水平，助推肉类滑轨理货交易智能化转型。",
+            "href": "/product-center/app-meat-detail.html"
+          },
+          {
+            "id": "1811344410500780033",
+            "name": "手术示教",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          },
+          {
+            "id": "1811344408588177410",
+            "name": "预案管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+            "href": "/product-center/app-plan-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

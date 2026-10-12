@@ -1,0 +1,82 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+.chartShell {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 260px;
+  align-items: stretch;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  :global(.line-and-pillar),
+  :global(.power-factor) {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    background: transparent !important;
+  }
+}
+
+.loading,
+.emptySurface {
+  display: flex;
+  width: 100%;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  :global(.ant-spin-text) {
+    margin-top: 10px;
+    color: var(--visual-muted-color, #d0deee);
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+  }
+
+  :global(.ant-spin-dot-item) {
+    background-color: var(--visual-primary, #2989ff);
+  }
+}
+
+.isZoom {
+  height: auto;
+  min-height: 0;
+}
+
+.isZoomChart,
+.isZoomLoading {
+  flex: 0 0 auto;
+  height: 560px;
+  min-height: 560px;
+
+  :global(.line-and-pillar),
+  :global(.power-factor) {
+    min-height: 560px;
+  }
+}
+
+.v2-minimal-white-panel(stranded-vehicles-analysis-v2-panel);
+
+:global(:root[data-visual-theme="minimal-white"] .stranded-vehicles-analysis-v2-panel) {
+  .chartShell {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .loading :global(.ant-spin-text) {
+    color: #49628f;
+  }
+}

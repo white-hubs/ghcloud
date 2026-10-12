@@ -1,0 +1,87 @@
+{
+  "path": "/product-center/hospital.html",
+  "meta": {
+    "title": "医院运营 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp",
+        "searchAllHref": "/product-center/app"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "hospital",
+        "allHref": "/product-center/app.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "name": "手术示教",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/医用气体/main.png",
+            "name": "医用气体",
+            "version": "1.0.1",
+            "description": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+            "href": "/product-center/app-medical-gas-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,44 @@
+import { CubeDeviceCenterService } from '@ghcloud/cube-iot-center-service'
+import { CubeMdataService } from '@ghcloud/cube-mdata-service'
+import { CubeFileService } from '@ghcloud/cube-file-service'
+import { CubeVisitorManagementService } from '@ghcloud/cube-visitor-management-service'
+import {CubeBooksManagementService} from "@ghcloud/cube-books-management-service"
+import { CubeAnnouncementService } from '@ghcloud/cube-bulletin-service'
+import { authStore } from './auth-store'
+import { CubeSecurityManagementService } from '@ghcloud/cube-security-management-service'
+import { CubeOuaaService } from '@ghcloud/cube-ouaa-service'
+import { CubeMeattradeService } from '@ghcloud/cube-slide-rail-service'
+import { CubeSmallEngineeringService } from '@ghcloud/cube-small-engineering-service'
+import { CubeDailyInspectionService } from '@ghcloud/cube-daily-inspection-service'
+import { CubeElectricVehicleService } from '@ghcloud/cube-electric-vehicle-service'
+import { CubeMaintainStatisticsService } from '@ghcloud/cube-maintain-service'
+import { CubeVisualizationService } from '@ghcloud/cube-visualization-service'
+import { CubeThirdConnectionService } from '@ghcloud/cube-third-connection-service'
+import { CubeCommunicateService } from '@ghcloud/cube-rtc'
+import { CubeZDDataVizService } from '@ghcloud/cube-zhongda-heshun-service'
+import { CubeTrafficStatisticsService } from '@ghcloud/cube-traffic-detection-service'
+import { CubeParkingLotService } from '@ghcloud/cube-parking-lot-service'
+import { CubeAlarmStatService } from '@ghcloud/cube-alarm-center-service'
+import { CubeDictionaryService } from '@ghcloud/cube-dictionary-service'
+
+export const cubeDeviceCenterService = new CubeDeviceCenterService(authStore)
+export const cubeMdataService = new CubeMdataService(authStore)
+export const cubeFileService = new CubeFileService(authStore)
+export const cubeVisitorManagementService = new CubeVisitorManagementService(authStore)
+export const cubeBooksManagementService =new CubeBooksManagementService(authStore)
+export const cubeAnnouncementService = new CubeAnnouncementService(authStore)
+export const cubeSecurityManagementService = new CubeSecurityManagementService(authStore)
+export const cubeOuaaService = new CubeOuaaService(authStore)
+export const cubeMeattradeService = new CubeMeattradeService(authStore)
+export const cubeSmallEngineeringService = new CubeSmallEngineeringService(authStore)
+export const cubeDailyInspectionService = new CubeDailyInspectionService(authStore)
+export const cubeElectricVehicleService = new CubeElectricVehicleService(authStore)
+export const cubeMaintainStatisticsService = new CubeMaintainStatisticsService(authStore)
+export const cubeVisualizationService = new CubeVisualizationService(authStore)
+export const cubeThirdConnectionService = new CubeThirdConnectionService(authStore)
+export const cubeCommunicateService = new CubeCommunicateService(authStore)
+export const cubeZDDataVizService = new CubeZDDataVizService(authStore)
+export const cubeTrafficStatisticsService = new CubeTrafficStatisticsService(authStore)
+export const cubeParkingLotService = new CubeParkingLotService(authStore)
+export const cubeAlarmStatService = new CubeAlarmStatService(authStore)
+export const cubeDictionaryService = new CubeDictionaryService(authStore)

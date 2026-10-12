@@ -1,0 +1,94 @@
+{
+  "path": "/programme/railway.html",
+  "meta": {
+    "title": "智慧高铁站解决方案 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-railway-banner.png",
+            "title": "智慧高铁站解决方案",
+            "subtitle": "致力于依托数字孪生技术，打造智能高铁解决方案，通过三维可视化与数据场景融合，实现对高铁站的逐级可视，包括站台层、候车层、连廊层和底层。同时，集成物联网设备数据，结合大数据分析算法，构建一个综合的智慧高铁平台，实现高铁站监管、预警、分析、决策、执行一体化。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "产品试用",
+              "link": "#"
+            },
+            "secondaryButton": {
+              "text": "联系我们",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"background: linear-gradient(0deg, rgba(51, 153, 255, 0) 0%, rgba(166, 210, 255, 0.2) 100%); padding-top: clamp(60px, 4.1667vw, 80px); padding-bottom: clamp(60px, 4.1667vw, 80px);\"><h2 style=\"text-align: center; font-size: clamp(24px, 1.5625vw, 30px); font-weight: bold; color: #182B44; line-height: 1; margin: 0; font-family: system-ui, -apple-system, sans-serif;\">方案背景</h2><p style=\"max-width: min(90vw, 62.5vw); margin: clamp(30px, 2.0833vw, 40px) auto 0; font-size: clamp(14px, 0.8333vw, 16px); color: #585C60; line-height: 2; text-align: center; font-family: system-ui, -apple-system, sans-serif;\">源于现代科技的迅速发展和交通运输行业的不断进步。随着人们生活水平的提高和出行需求的增加，高铁成为了人们首选的出行方式之一。为了满足日益增长的高铁运营需求，通过引入先进的信息技术手段，提高高铁站的运营效率、乘客体验和安全管理，为乘客提供更便利、舒适、安全的出行环境，智慧高铁站的建设成为了当今交通领域的热点。</p></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"background: #FFFFFF; padding-top: 80px; padding-bottom: 80px;\"><h2 style=\"text-align: center; height: 32px; font-size: 30px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: bold; color: #182B44; line-height: 32px; margin: 0;\">痛点问题</h2><p style=\"text-align: center; height: 20px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; color: #666; margin-top: 26px; margin-bottom: 0;\">全面洞察行业痛点，以技术创新驱动高效运维与安全管理</p><div style=\"display: flex; flex-wrap: nowrap; justify-content: center; margin-top: 50px; padding: 0 24px; gap: 24px;\"><div style=\"width: 296px; height: 264px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 2px solid #FFFFFF; padding-top: 40px; box-sizing: border-box; flex-shrink: 0; text-align: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/45.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; display: block; margin: 0 auto;\"><div style=\"text-align: center; height: 32px; font-size: 18px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 12px;\">设备运维管理困难</div><div style=\"width: 256px; margin: 8px auto 0; font-size: 13px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; text-align: center;\">车站内拥有众多设备，数量多，种类杂，传统的运维方式管理成本高，效率低。</div></div><div style=\"width: 296px; height: 264px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 2px solid #FFFFFF; padding-top: 40px; box-sizing: border-box; flex-shrink: 0; text-align: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/42.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; display: block; margin: 0 auto;\"><div style=\"text-align: center; height: 32px; font-size: 18px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 12px;\">客流信息监控滞后</div><div style=\"width: 256px; margin: 8px auto 0; font-size: 13px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; text-align: center;\">车站内客流量大，对客流信息监控方式如果还停留在过去，极易导致拥堵，无法及时限流进行客流疏导。</div></div><div style=\"width: 296px; height: 264px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 2px solid #FFFFFF; padding-top: 40px; box-sizing: border-box; flex-shrink: 0; text-align: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/44.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; display: block; margin: 0 auto;\"><div style=\"text-align: center; height: 32px; font-size: 18px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 12px;\">监控系统孤岛化</div><div style=\"width: 256px; margin: 8px auto 0; font-size: 13px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; text-align: center;\">车站内设备设施系统众多，告警方式不统一，告警信息分散，难以快速定位故障告警位置，导致运维效率低下。</div></div><div style=\"width: 296px; height: 264px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 2px solid #FFFFFF; padding-top: 40px; box-sizing: border-box; flex-shrink: 0; text-align: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/43.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; display: block; margin: 0 auto;\"><div style=\"text-align: center; height: 32px; font-size: 18px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 12px;\">信息数据利用不充分</div><div style=\"width: 256px; margin: 8px auto 0; font-size: 13px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; text-align: center;\">车站内各系统所产生的大量数据，没有一个统一的平台分析展示，信息数据难以得到有效利用。</div></div></div></div>"
+      }
+    },
+    {
+      "name": "ApplicationScene",
+      "props": {
+        "title": "应用场景",
+        "items": [
+          {
+            "label": "列车信息可视化",
+            "content": "智慧高铁站可视化管理系统对当天的班次/乘客数量统计、当天高速铁路迁出/嵌入式排名、高速铁路时刻表等信息进行实时统计。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/8.png?imageView2/0/format/webp/q/74"
+          },
+          {
+            "label": "客流信息可视化",
+            "content": "系统实时监测客流量，并在3D模型中以热力图的形式直观地展示客流分布情况，监控公共场所人口的安全，帮助管理者掌握正确的人口密度数据和变化趋势，从而进行合理的服务管理。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/5.png?imageView2/0/format/webp/q/74"
+          },
+          {
+            "label": "一体化空间管理",
+            "content": "基于三维模型，可以直观的对高铁站空间进行查看与管理，精准化管理每个房间，查看每个房间的数据（类型、面积、状态、装修、关联视频等数据）。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/6.png?imageView2/0/format/webp/q/74"
+          },
+          {
+            "label": "设备信息可视化",
+            "content": "基于三维模型，融合物联网实时数据，动态展现设备实时运行状态。分析设备运行状态，利用数据分析汇总评估设备健康度。从而协助管理人员做出对设备下一步的维保、采购计划。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/7.png?imageView2/0/format/webp/q/74"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div style=\"height: 582px; background: #F9FCFF; padding-top: 80px; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD, system-ui, -apple-system, sans-serif; font-weight: bold; color: #182B44; line-height: 32px; text-align: center; margin: 0;\">方案优势</h2><p style=\"text-align: center; margin-top: 26px; height: 20px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #585C60; line-height: 20px;\">具有强大的优势，为用户打造极致服务体验</p><div style=\"display: flex; flex-wrap: wrap; justify-content: flex-start; align-content: center; margin-top: 20px; padding-left: 16%; padding-right: 16%; gap: 30px;\"><div style=\"width: 636px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 1px solid #FFFFFF; box-sizing: border-box; padding: 30px;\"><div style=\"display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/37.png?imageView2/0/format/webp/q/74\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px;\">数据全景的孪生基础服务</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; margin-top: 14px; margin-left: 44px;\">数据中台辅助建设数字孪生多尺度场景，通过数据清洗、数据治理，提升数据质量、数据共享能力。</div></div><div style=\"width: 636px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 1px solid #FFFFFF; box-sizing: border-box; padding: 30px;\"><div style=\"display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/35.png?imageView2/0/format/webp/q/74\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px;\">全感可视的孪生数据中台</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; margin-top: 14px; margin-left: 44px;\">多年业务沉淀，铸就行业真实口碑，继续打造行业标杆。</div></div><div style=\"width: 636px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 1px solid #FFFFFF; box-sizing: border-box; padding: 30px;\"><div style=\"display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/function/9.png?imageView2/0/format/webp/q/74\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px;\">轻量便捷的矩阵实施应用</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; margin-top: 14px; margin-left: 44px;\">轻量化模型搭建、数据采集实时渲染、精细化管理等功能实现和应用实施。</div></div><div style=\"width: 636px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86, 118, 162, 0.1); border-radius: 4px; border: 1px solid #FFFFFF; box-sizing: border-box; padding: 30px;\"><div style=\"display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/36.png?imageView2/0/format/webp/q/74\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182B44; line-height: 32px;\">领先前沿的行业经验沉淀</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR, system-ui, -apple-system, sans-serif; font-weight: 400; color: #999EA2; line-height: 22px; margin-top: 14px; margin-left: 44px;\">团队具备多年智慧园区项目经验，并集中各领域优秀人才。不仅关注软件开发本身，更关注行业未来发展。</div></div></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"padding-top: 80px; height: 556px; background: #ffffff; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD, system-ui, -apple-system, sans-serif; font-weight: bold; color: #182b44; line-height: 32px; text-align: center; margin: 0;\">应用产品</h2><div style=\"display: flex; justify-content: center; align-items: center; margin-top: 50px; gap: 30px; padding: 0 30px;\"><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/9.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">集成管理系统</div></div><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/8.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">能耗管理系统</div></div><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/7.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">孪生可视基础平台</div></div></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"padding-top: 80px; height: 646px; background: #ffffff; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD, system-ui, -apple-system, sans-serif; font-weight: bold; color: #182b44; line-height: 32px; text-align: center; margin: 0;\">客户案例</h2><div style=\"display: flex; justify-content: center; align-items: center; margin-top: 50px; gap: 30px; padding: 0 30px;\"><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/3.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">深农集团</div></div><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/1.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">成都市第六人民医院</div></div><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/5.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2, system-ui, -apple-system, sans-serif; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">凤凰山体育馆</div></div></div></div>"
+      }
+    }
+  ],
+  "layout": "default"
+}

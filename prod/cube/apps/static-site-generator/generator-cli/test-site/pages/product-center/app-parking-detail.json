@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-parking-detail.html",
+  "meta": {
+    "title": "停车管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+    "keywords": "停车管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/停车管理/main.png",
+        "productName": "停车管理",
+        "productDescription": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "停车管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: center;\"><span style=\"color: rgb(15, 17, 21); background-color: rgb(255, 255, 255); font-size: 15px;\">停车管理集成实时监控与智能引导，通过高精度可视化模型动态展示停车场全貌，包括车位状态、车道布局、充电桩及出入口位置。系统支持车牌识别自动管理车辆进出，并实时更新停放记录与费用信息。同时，具备故障检测功能，可快速定位设备异常并发出报警。依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965328805780271105.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"> &nbsp;</p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>实时车位状态展示</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">可视化模型清晰展示停车场内的各个车位，包括空闲车位和已占用车位。通过模型构建，用户可以清晰地看到停车场布局，包括停车位、出入口、车道、充电桩等的位置，便于快速识别空闲车位并引导车辆停放。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965331356131012609.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965330760820862978.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>车辆出入管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统能够实时监控车辆的出入情况，通过车牌识别技术自动记录车辆信息。管理员可以在模型中查看车辆的进出场记录，了解车辆的停放时长和费用情况。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>故障报警定位</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">停车管理系统结合设备监控数据，具备故障检测和报警功能。当设备（如闸机、指示灯、摄像头等）出现故障或异常情况时，系统会立即发出警报，并在可视化模型中标记出故障位置，管理员可以快速响应并修复故障，确保停车场正常运行。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>数据统计分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">停车管理系统通过业务面板提供数据可视化展示和分析功能，用户可以查看停车场的使用情况统计、车辆进出记录、停车费用统计等。这些数据可以帮助用户更好地了解停车场的运营情况，为停车管理提供数据支持。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965331356131012609.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>停车效果模拟</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">停车管理可视化模型通过模拟真实场景，将停车场的运作状态、车辆流动情况、设备配置等以直观、动态的形式展现出来。模型根据真实停车场布局，准确展示车位的位置和状态。模拟车辆的进出和停放过程，实时更新车辆位置信息，为用户提供直观的停车体验。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>智能引导与提示</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统利用先进的导航技术和传感器数据，为车主提供智能的停车引导服务。当车辆接近停车场时，系统通过模拟显示引导标识、指示箭头或语音提示，获取最优停车路径和空闲车位信息，帮助车主快速找到空闲车位。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410744049666",
+            "name": "门禁管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          },
+          {
+            "id": "1811344408936304641",
+            "name": "风险源管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "id": "1811344411398361090",
+            "name": "委外维修",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

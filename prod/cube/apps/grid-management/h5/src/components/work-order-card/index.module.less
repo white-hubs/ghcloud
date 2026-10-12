@@ -1,0 +1,158 @@
+.work-order-card {
+  padding: 14px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 12px;
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .period-filter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+
+    .period-filter-item {
+      min-width: 34px;
+      height: 26px;
+      padding: 0 8px;
+      border: 0;
+      border-radius: 13px;
+      background: #f3f6fb;
+      color: #6f7a88;
+      font-size: 12px;
+
+      &.active {
+        background: #1578ff;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    .stat-item {
+      padding: 12px;
+      flex: 1;
+      border-radius: 6px;
+      background: #f5f8ff;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &.total {
+        background: #e4eefc;
+      }
+
+      &.doing {
+        background: #fff2ec;
+
+        .value {
+          color: #ff7132;
+        }
+      }
+
+      &.done {
+        background: #e3fbfd;
+
+        .value {
+          color: #29bc9f;
+        }
+      }
+
+      .label {
+        font-size: 13px;
+        color: #373840;
+      }
+
+      .value {
+        font-size: 19px;
+        font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+        color: #2152b3;
+      }
+    }
+  }
+
+  .list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 360px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    .load-status {
+      padding: 8px 0;
+      color: #969799;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .item {
+      padding: 16px 12px;
+      background: #f9fbff;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:active {
+        background: #f3f7ff;
+      }
+
+      .item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        .title {
+          min-width: 0;
+          font-size: 15px;
+          color: #172433;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .status {
+          flex-shrink: 0;
+          padding: 4px;
+          background: rgba(246, 151, 3, 0.16);
+          border-radius: 4px;
+          font-size: 12px;
+          color: #f69703;
+
+          &.DONE {
+            color: #fff;
+            background: #29bc9f;
+          }
+        }
+      }
+
+      .content {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .content-item {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 14px;
+          color: #8e97a4;
+        }
+      }
+    }
+  }
+}

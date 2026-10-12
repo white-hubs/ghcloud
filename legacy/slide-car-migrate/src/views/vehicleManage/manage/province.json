@@ -1,0 +1,126 @@
+[
+  {
+    "label": "浙",
+    "value": "浙江"
+  },
+  {
+    "label": "鲁",
+    "value": "山东"
+  },
+  {
+    "label": "苏",
+    "value": "江苏"
+  },
+  {
+    "label": "沪",
+    "value": "上海"
+  },
+  {
+    "label": "闽",
+    "value": "福建"
+  },
+  {
+    "label": "皖",
+    "value": "安徽"
+  },
+  {
+    "label": "赣",
+    "value": "江西"
+  },
+  {
+    "label": "粤",
+    "value": "广东"
+  },
+  {
+    "label": "桂",
+    "value": "广西"
+  },
+  {
+    "label": "琼",
+    "value": "海南"
+  },
+  {
+    "label": "鄂",
+    "value": "湖北"
+  },
+  {
+    "label": "湘",
+    "value": "湖南"
+  },
+  {
+    "label": "豫",
+    "value": "河南"
+  },
+  {
+    "label": "京",
+    "value": "北京"
+  },
+  {
+    "label": "津",
+    "value": "天津"
+  },
+  {
+    "label": "冀",
+    "value": "河北"
+  },
+  {
+    "label": "晋",
+    "value": "山西"
+  },
+  {
+    "label": "蒙",
+    "value": "内蒙古"
+  },
+  {
+    "label": "宁",
+    "value": "宁夏"
+  },
+  {
+    "label": "新",
+    "value": "新疆"
+  },
+  {
+    "label": "清",
+    "value": "青海"
+  },
+  {
+    "label": "陕",
+    "value": "陕西"
+  },
+  {
+    "label": "甘",
+    "value": "甘肃"
+  },
+  {
+    "label": "川",
+    "value": "四川"
+  },
+  {
+    "label": "云",
+    "value": "云南"
+  },
+  {
+    "label": "贵",
+    "value": "贵州"
+  },
+  {
+    "label": "藏",
+    "value": "西藏"
+  },
+  {
+    "label": "渝",
+    "value": "重庆"
+  },
+  {
+    "label": "辽",
+    "value": "辽宁"
+  },
+  {
+    "label": "吉",
+    "value": "吉林"
+  },
+  {
+    "label": "黑",
+    "value": "黑龙江"
+  }
+]

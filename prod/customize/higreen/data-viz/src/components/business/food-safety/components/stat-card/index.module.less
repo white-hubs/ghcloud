@@ -1,0 +1,73 @@
+.container {
+  background: rgba(41, 137, 255, 0.10);
+  border: 0.5px solid;
+  padding: 4.5px 6px;
+  display: flex;
+  align-items: center;
+  border-image: linear-gradient(90deg, rgba(79, 138, 255, 0.13), rgba(179, 213, 255, 0.60) 55%, rgba(79, 138, 255, 0.10)) 1 1;
+
+  .statItem {
+    display: flex;
+    align-items: center;
+
+    .statTitle {
+      display: flex;
+      align-items: center;
+      font-size: 8px;
+
+      span {
+        font-size: 8px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #d0deee;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      img {
+        width: 7px;
+        height: 6px;
+        margin-right: 3px;
+      }
+
+    }
+
+    .statValue {
+      text-indent: 10px;
+      font-size: 12px;
+      font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #ffffff;
+      text-shadow: 0px 0px 3px 0px rgba(41, 137, 255, 0.60);
+
+      .unit {
+        font-size: 7px;
+        font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0.5px;
+      height: 18.5px;
+      border: 0.5px dashed rgba(208, 222, 238, 0.40);
+      // margin: 0 10px;
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+
+}

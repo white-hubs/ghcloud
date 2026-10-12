@@ -1,0 +1,353 @@
+<template>
+  <g-table title="数据审核" tableCode="DATA_AUDIT" :columns="columns" :search="search" :btns="btns" :editMode="editMode" :api="api" ref="tableRef">
+    <template v-slot:btn="item">
+      <a-button @click.stop="audit(item.record)" :disabled="item.record.status !== 'AUDIT'" type="link">
+        审核
+      </a-button>
+    </template>
+  </g-table>
+</template>
+<script lang="jsx">
+import { flattenTree } from "@/utils/common.js";
+import {
+  defineComponent,
+  reactive,
+  toRefs,
+  getCurrentInstance,
+  onMounted,
+  ref,
+} from "vue";
+
+import { useRouter } from "vue-router";
+import { timeFormat, millennial } from "@/utils/common";
+
+export default defineComponent({
+  setup() {
+    const dateFormat = "YYYY/MM/DD";
+    const { proxy } = getCurrentInstance();
+    const router = useRouter();
+    const state = reactive({
+      columnList: [
+        "supplierName",
+        "supplierCode",
+        "code",
+        "vehiclePlate",
+        "reportSlices",
+        "reportWeight",
+        "abattoirName",
+        "arrivedTime",
+        "stallName",
+        "pratiqueCode",
+        "reportStatus",
+        "action",
+      ],
+      // columnList: [
+      //   "merchantName",
+      //   "merchantCode",
+      //   "code",
+      //   "vehiclePlate",
+      //   "reportSlices",
+      //   "reportWeight",
+      //   "abattoirName",
+      //   "arrivedTime",
+      //   "stallName",
+      //   "pratiqueCode",
+      //   "reportStatus",
+      //   "action",
+      // ],
+      columns: [
+        {
+          mark: "supplierName",
+          dataIndex: "supplierName",
+          key: "supplierName",
+          title: "商家名称",
+          slots: {
+            customRender: "supplierName",
+          },
+          width: 200,
+          fixed: "left",
+          ellipsis: true,
+          customRender: ({ text, record }) => {
+            if (record.riskLevel === "MEDIUM") {
+              return (
+                <PopOver position="topLeft" content={text ? text : "--"}>
+                  <a-tag color="orange">中风险</a-tag>
+                  {text ? text : "--"}
+                </PopOver>
+              );
+            } else if (record.riskLevel === "HIGH") {
+              return (
+                <PopOver position="topLeft" content={text ? text : "--"}>
+                  <a-tag color="red">高风险</a-tag>
+                  {text ? text : "--"}
+                </PopOver>
+              );
+            } else {
+              return (
+                <PopOver position="topLeft" content={text ? text : "--"}>
+                  <a-tag color="green">低风险</a-tag>
+                  {text ? text : "--"}
+                </PopOver>
+              );
+            }
+          },
+        }, {
+          mark: "supplierCode",
+          dataIndex: "supplierCode",
+          key: "supplierCode",
+          title: "商家编号",
+          slots: {
+            customRender: "supplierCode",
+          },
+          fixed: "left",
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        }, {
+          mark: "code",
+          dataIndex: "code",
+          key: "code",
+          title: "报备单号",
+          slots: {
+            customRender: "code",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        }, {
+          mark: "vehiclePlate",
+          dataIndex: "vehiclePlate",
+          key: "vehiclePlate",
+          title: "来货车辆",
+          slots: {
+            customRender: "vehiclePlate",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        }, {
+          mark: "reportSlices",
+          dataIndex: "reportSlices",
+          key: "reportSlices",
+          title: "报备片数（片）",
+          slots: {
+            customRender: "reportSlices",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver
+                position="topLeft"
+                content={text ? `${millennial(text, false)}` : ""}
+              >
+                {text || text === 0 ? `${millennial(text, false)}` : "--"}
+              </PopOver>
+            );
+          },
+        }, {
+          mark: "reportWeight",
+          dataIndex: "reportWeight",
+          key: "reportWeight",
+          title: "报备重量（kg）",
+          slots: {
+            customRender: "reportWeight",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text ? `${millennial(text)}` : ""}>
+                {text || text === 0 ? `${millennial(text)}` : "--"}
+              </PopOver>
+            );
+          },
+        },
+        {
+          mark: "abattoirName",
+          dataIndex: "abattoirName",
+          key: "abattoirName",
+          title: "屠宰场",
+          slots: {
+            customRender: "abattoirName",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        },
+
+        {
+          mark: "arrivedTime",
+          dataIndex: "arrivedTime",
+          key: "arrivedTime",
+          title: "到达时间",
+          slots: {
+            customRender: "arrivedTime",
+          },
+
+          customRender: ({ text }) => {
+            return (
+              <PopOver
+                position="topLeft"
+                content={text ? timeFormat(text, true) : ""}
+              >
+                {text ? `${timeFormat(text, true)}` : "--"}
+              </PopOver>
+            );
+          },
+          ellipsis: true,
+        }, {
+          mark: "stallName",
+          dataIndex: "stallName",
+          key: "stallName",
+          title: "档位号",
+          slots: {
+            customRender: "stallName",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text ? text : "--"}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        },
+        {
+          mark: "pratiqueCode",
+          dataIndex: "pratiqueCode",
+          key: "pratiqueCode",
+          title: "检疫证号",
+          slots: {
+            customRender: "pratiqueCode",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            return (
+              <PopOver position="topLeft" content={text ? text.split(",") : "--"}>
+                {text ? text : "--"}
+              </PopOver>
+            );
+          },
+        }, {
+          mark: "reportStatus",
+          dataIndex: "status",
+          key: "status",
+          title: "审核状态",
+          slots: {
+            customRender: "status",
+          },
+
+          ellipsis: true,
+          customRender: ({ text }) => {
+            if (text === "PASSED") {
+              text = "已通过";
+            } else if (text === "FAILED") {
+              text = "不通过";
+            } else {
+              text = "待审核";
+            }
+            return (
+              <PopOver position="topLeft" content={text}>
+                <span>
+                  <span
+                    class={
+                      text === "已通过"
+                        ? "tableDotNormal"
+                        : text === "不通过"
+                          ? "tableDotDelete"
+                          : "tableDotAudit"
+                    }
+                  ></span>
+                  <span class="tableStatus pl1">{text ? text : "--"}</span>
+                </span>
+              </PopOver>
+            );
+          },
+        },
+        {
+          title: "操作",
+          mark: "action",
+          dataIndex: "action",
+          key: "action",
+          slots: {
+            customRender: "action",
+          },
+          width: 100,
+          fixed: "right",
+        }
+      ],
+      api: {
+        list: "getPorkReport",
+        path: "/auditData",
+        detail: "porkReportId",
+        pathParams: [{ value: "reportStatus" }],
+      },
+      btns: [],
+      search: [
+        {
+          label: "报备时间",
+          value: "date",
+          defaultDate: "period",
+          component: "a-range-picker",
+        },
+        {
+          label: "",
+          value: "keyword",
+          placeholder: "商家名称/商家编号",
+        },
+        {
+          label: "",
+          // value: "porkReportStatus",
+          value: "status",
+          // defaultValue: "AUDIT",
+          defaultValue: "AUDIT",
+          component: "span",
+        },
+      ],
+      editMode: "page",
+    });
+
+    const audit = (record) => {
+      const dataId = record?.id ? record.id : "";
+      history.pushState({ current: location.pathname + location.search }, "", `/portal/meatSlider/auditData?id=${dataId}&type=detail`)
+    };
+
+    onMounted(() => {
+    });
+
+    return {
+      ...toRefs(state),
+      dateFormat,
+      timeFormat,
+      audit,
+    };
+  },
+});
+</script>

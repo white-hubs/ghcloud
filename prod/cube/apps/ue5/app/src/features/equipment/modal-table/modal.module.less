@@ -1,0 +1,349 @@
+/* 业务数据弹窗外壳：与 legacy modal.vue 对齐，使用 :global 避免 CSS Modules hash */
+:global {
+  .ant-modal-wrap,
+  .ant-modal-mask {
+    z-index: 3100 !important;
+  }
+
+  .ant-modal-wrap[style*="display: none"],
+  .ant-modal-wrap.ant-modal-wrap-hidden {
+    pointer-events: none !important;
+  }
+
+  .ant-modal.modal-width {
+    .ant-modal-content {
+      display: flex;
+      max-height: calc(100vh - 32px);
+      flex-direction: column;
+      /* AntDV4 默认 content padding 会让 header 底边缩进，铺不满弹窗 */
+      padding: 0 !important;
+      overflow: hidden;
+      color: var(--visual-data-modal-text-color, #ffffff);
+      background: var(--visual-data-modal-content-bg, var(--visual-data-modal-bg, rgba(4, 23, 56, 0.18))) !important;
+      border: 1px solid var(--visual-data-modal-border, #2989ff) !important;
+      border-radius: 8px;
+      box-shadow: var(--visual-data-modal-shadow, 0 10px 28px rgba(0, 0, 0, 0.32));
+      backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+      -webkit-backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+    }
+
+    .ant-modal-body {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      /* 收紧左右留白，筛选/列表更贴弹窗边缘 */
+      padding: 10px 12px 12px !important;
+      color: var(--visual-data-modal-text-color, #ffffff);
+      background: var(--visual-data-modal-body-bg, rgba(4, 20, 42, 0.42)) !important;
+    }
+  }
+
+  .modal-table-alarm,
+  .modal-table-device,
+  .vehicle-traffic-records-modal,
+  .traffic-records-modal {
+    .ant-modal.modal-width,
+    .ant-modal {
+      width: 1250px !important;
+      max-width: calc(100vw - 48px);
+    }
+
+    .ant-modal-content {
+      padding: 0 !important;
+    }
+
+    .ant-modal-body {
+      padding: 10px 12px 12px !important;
+    }
+
+    .table_header {
+      display: flex !important;
+      align-items: center;
+      box-sizing: border-box;
+      min-height: 42px !important;
+      height: 42px !important;
+      color: var(--visual-data-modal-text-color) !important;
+      line-height: 42px !important;
+      background: var(--visual-data-modal-table-header-bg) !important;
+      border: none !important;
+      border-bottom: 1px solid var(--data-list-table-header-border, rgba(91, 177, 255, 0.16)) !important;
+      border-radius: 0;
+
+      > div {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 0 12px;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .filter-toolbar,
+    .table-top {
+      padding: 9px 12px !important;
+      background: var(--visual-data-modal-toolbar-bg) !important;
+      border: 1px solid var(--visual-data-modal-toolbar-border) !important;
+      border-radius: 8px;
+    }
+
+    .table_content {
+      color: var(--visual-data-modal-text-color) !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0;
+
+      .content {
+        display: flex !important;
+        align-items: stretch;
+
+        > div {
+          display: flex !important;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          min-width: 0;
+          min-height: 42px !important;
+          height: 42px !important;
+          padding: 4px 12px !important;
+          overflow: hidden;
+          line-height: 1.4 !important;
+          white-space: nowrap;
+          text-align: center;
+          text-overflow: ellipsis;
+          border-bottom: 1px solid var(--data-list-table-row-border, rgba(105, 180, 241, 0.11)) !important;
+
+          a {
+            margin: 0 6px;
+            color: var(--visual-data-modal-link-color, #4db3ff);
+          }
+        }
+      }
+    }
+
+    .ant-form-item-label > label {
+      color: var(--visual-data-modal-text-color, #fff) !important;
+    }
+
+    .ant-select-selector,
+    .ant-input,
+    .ant-picker {
+      color: var(--visual-data-modal-text-color, #fff) !important;
+      background: var(--visual-data-modal-toolbar-bg, rgba(7, 28, 56, 0.54)) !important;
+      border-color: var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34)) !important;
+    }
+
+    .ant-select-selection-item,
+    .ant-picker-input > input {
+      color: var(--visual-data-modal-text-color, #fff) !important;
+      font-size: 14px !important;
+    }
+
+    .ant-select-selection-placeholder {
+      color: var(--visual-data-modal-muted-color, #9fb6d1) !important;
+      opacity: 1 !important;
+    }
+
+    .ant-picker-input > input::placeholder,
+    .ant-input::placeholder,
+    .ant-input-affix-wrapper .ant-input::placeholder {
+      color: var(--visual-data-modal-muted-color, #9fb6d1) !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: var(--visual-data-modal-muted-color, #9fb6d1) !important;
+    }
+
+    .ant-btn {
+      height: 32px;
+      padding: 0 12px;
+      font-size: 14px !important;
+      color: var(--visual-data-modal-btn-default-color, #fff);
+      background: var(--visual-data-modal-btn-default-bg, rgba(41, 137, 255, 0.1));
+      border-color: var(--visual-data-modal-btn-default-border, #2989ff);
+    }
+
+    .ant-btn-primary {
+      color: #fff !important;
+      background: var(--visual-primary, #1890ff) !important;
+      border-color: var(--visual-primary, #1890ff) !important;
+    }
+
+    .ant-pagination {
+      color: var(--visual-data-modal-text-color, #fff);
+    }
+
+    .ant-pagination-item {
+      background: var(--visual-data-modal-pagination-bg, rgba(255, 255, 255, 0.1));
+      border-color: var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+
+      a {
+        color: var(--visual-data-modal-text-color, #fff);
+      }
+    }
+
+    .ant-pagination-item-active {
+      background: var(--visual-primary, #1890ff);
+      border-color: var(--visual-primary, #1890ff);
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .ant-pagination-prev .ant-pagination-item-link,
+    .ant-pagination-next .ant-pagination-item-link {
+      color: var(--visual-data-modal-text-color, #fff);
+      background: var(--visual-data-modal-pagination-bg, rgba(255, 255, 255, 0.1));
+      border-color: var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+    }
+
+    .ant-pagination-item-ellipsis,
+    .ant-pagination-total-text {
+      color: var(--visual-data-modal-muted-color, #d0deee) !important;
+    }
+
+    .online {
+      color: #52c41a;
+    }
+
+    .offline {
+      color: #ff4d4f;
+    }
+
+    /* Ant Design Table（设备 / 报警等业务弹窗） */
+    .device-records-table,
+    .alarm-records-table,
+    .ant-table-wrapper {
+      .ant-table,
+      .ant-table-container,
+      .ant-table-content {
+        background: transparent !important;
+      }
+
+      .ant-table-thead > tr > th {
+        color: var(--visual-data-modal-text-color, #fff) !important;
+        font-weight: 600;
+        background: var(--visual-data-modal-table-header-bg, rgba(16, 40, 68, 0.8)) !important;
+        border-bottom-color: var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34)) !important;
+      }
+
+      .ant-table-tbody > tr > td {
+        color: var(--visual-data-modal-text-color, #fff) !important;
+        background: var(--visual-data-modal-table-body-bg, rgba(16, 40, 68, 0.8)) !important;
+        border-bottom-color: var(--data-list-table-row-border, rgba(105, 180, 241, 0.11)) !important;
+      }
+
+      .ant-table-tbody > tr:hover > td {
+        background: var(--visual-data-modal-table-row-hover-bg, rgba(41, 137, 255, 0.12)) !important;
+      }
+
+      .ant-table-placeholder {
+        background: var(--visual-data-modal-table-body-bg, rgba(16, 40, 68, 0.8)) !important;
+      }
+
+      .ant-empty-description {
+        color: var(--visual-data-modal-muted-color, #d0deee) !important;
+      }
+    }
+
+    .row-actions a {
+      margin: 0 6px;
+      color: var(--visual-data-modal-link-color, #4db3ff);
+    }
+
+    .table-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 0;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .table-pagination,
+    .table-pagination.ant-pagination,
+    .ant-pagination {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .alarm-records-content,
+    .device-records-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  /* 设备/报警列表专用紧凑内容区，避免全局业务弹窗样式叠加出过大的左右留白。 */
+  .equipment-data-list-modal {
+    .ant-modal.modal-width .ant-modal-content,
+    .ant-modal .ant-modal-content {
+      padding: 0 !important;
+    }
+
+    .ant-modal.modal-width .ant-modal-body,
+    .ant-modal .ant-modal-body {
+      padding: 8px 12px 12px !important;
+    }
+  }
+
+  :root:not([data-visual-theme="minimal-white"]) {
+    .modal-table-alarm,
+    .modal-table-device,
+    .vehicle-traffic-records-modal,
+    .traffic-records-modal {
+      --data-list-modal-header-border: rgba(91, 177, 255, 0.18);
+      --data-list-table-outer-border: rgba(82, 168, 255, 0.18);
+      --data-list-table-header-border: rgba(91, 177, 255, 0.16);
+      --data-list-table-row-border: rgba(105, 180, 241, 0.11);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] {
+    .modal-table-alarm,
+    .modal-table-device,
+    .vehicle-traffic-records-modal,
+    .traffic-records-modal {
+      --data-list-modal-header-border: rgba(78, 132, 207, 0.18);
+      --data-list-table-outer-border: rgba(78, 132, 207, 0.18);
+      --data-list-table-header-border: rgba(78, 132, 207, 0.16);
+      --data-list-table-row-border: rgba(78, 132, 207, 0.12);
+    }
+
+    .ant-modal.modal-width {
+      .ant-modal-title {
+        color: #0d2f75 !important;
+      }
+
+      .ant-modal-close {
+        color: #31598f !important;
+        background: rgba(255, 255, 255, 0.96) !important;
+        border-color: rgba(61, 125, 211, 0.34) !important;
+      }
+    }
+
+    .device-records-table,
+    .alarm-records-table,
+    .ant-table-wrapper {
+      .ant-table-thead > tr > th {
+        color: #17366d !important;
+        background: rgba(236, 245, 255, 0.95) !important;
+      }
+
+      .ant-table-tbody > tr > td {
+        color: #17366d !important;
+        background: transparent !important;
+      }
+
+      .ant-table-placeholder {
+        background: transparent !important;
+      }
+    }
+  }
+}

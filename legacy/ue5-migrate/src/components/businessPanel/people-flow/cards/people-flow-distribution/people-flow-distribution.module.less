@@ -1,0 +1,251 @@
+.timeSwitch {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  background: rgba(17, 23, 31, 0.78);
+  border: 1px solid rgba(116, 130, 148, 0.28);
+  border-radius: 3px;
+}
+
+.timeButton {
+  height: 22px;
+  min-width: 42px;
+  padding: 0 8px;
+  font-size: calc(var(--font-size-scale) * 11px);
+  line-height: 20px;
+  color: rgba(221, 231, 246, 0.72);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+}
+
+.active {
+  color: #f4f8ff;
+  background: rgba(44, 58, 78, 0.9);
+  box-shadow: inset 0 -1px 0 rgba(41, 137, 255, 0.58);
+}
+
+.rankTable {
+  margin: 0 2px 4px;
+  overflow: hidden;
+  background: rgba(8, 13, 20, 0.54);
+  border: 1px solid rgba(156, 176, 204, 0.12);
+  border-radius: 2px;
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1.2fr) minmax(62px, 0.8fr) minmax(58px, 0.75fr) minmax(58px, 0.75fr);
+  column-gap: 8px;
+  align-items: center;
+  padding: 0 9px;
+  box-sizing: border-box;
+}
+
+.tableHead {
+  height: 36px;
+  font-size: calc(var(--font-size-scale) * 12px);
+  font-weight: 700;
+  color: rgba(230, 240, 252, 0.92);
+  background: linear-gradient(90deg, rgba(47, 61, 82, 0.78), rgba(25, 36, 52, 0.82));
+}
+
+.tableHead > span:nth-child(n + 3),
+.tableRow > span:nth-child(n + 3) {
+  text-align: right;
+}
+
+.scroll {
+  min-height: 285px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tableBody {
+  min-height: 96px;
+}
+
+.tableRow {
+  height: 36px;
+  font-size: calc(var(--font-size-scale) * 12px);
+  font-weight: 600;
+  color: rgba(220, 233, 251, 0.9);
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tableRow:nth-child(odd) {
+  background: rgba(9, 15, 24, 0.66);
+}
+
+.tableRow:nth-child(even) {
+  background: rgba(24, 32, 43, 0.62);
+}
+
+.tableRow:hover {
+  color: #f6fbff;
+  background: rgba(39, 50, 66, 0.9);
+}
+
+.tableRow > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 18px;
+  font-family: DIN, sourceMedium, Arial, sans-serif;
+  color: rgba(221, 231, 246, 0.78);
+  background: rgba(86, 98, 116, 0.28);
+  border-radius: 2px;
+}
+
+.topRank {
+  color: #082040;
+  background: linear-gradient(180deg, #ffd98a, #ff9f18);
+}
+
+.areaName {
+  display: inline-flex;
+  align-items: center;
+}
+
+.areaName i {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+
+.empty {
+  height: 100%;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 放大弹窗内的样式
+.zoomRankTable {
+  margin: 20px;
+  overflow: hidden;
+  background: rgba(8, 13, 20, 0.54);
+  border: 1px solid rgba(156, 176, 204, 0.12);
+  border-radius: 2px;
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoomTableHead,
+.zoomTableRow {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1.2fr) minmax(100px, 0.8fr) minmax(100px, 0.75fr) minmax(100px, 0.75fr);
+  column-gap: 12px;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.zoomTableHead {
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(230, 240, 252, 0.92);
+  background: linear-gradient(90deg, rgba(47, 61, 82, 0.78), rgba(25, 36, 52, 0.82));
+}
+
+.zoomTableHead > span:nth-child(n + 3),
+.zoomTableRow > span:nth-child(n + 3) {
+  text-align: right;
+}
+
+.zoomScroll {
+  min-height: 400px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.zoomTableBody {
+  min-height: 96px;
+}
+
+.zoomTableRow {
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(220, 233, 251, 0.9);
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.zoomTableRow:nth-child(odd) {
+  background: rgba(9, 15, 24, 0.66);
+}
+
+.zoomTableRow:nth-child(even) {
+  background: rgba(24, 32, 43, 0.62);
+}
+
+.zoomTableRow:hover {
+  color: #f6fbff;
+  background: rgba(39, 50, 66, 0.9);
+}
+
+.zoomTableRow > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zoomRank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 24px;
+  font-family: DIN, sourceMedium, Arial, sans-serif;
+  font-size: 16px;
+  color: rgba(221, 231, 246, 0.78);
+  background: rgba(86, 98, 116, 0.28);
+  border-radius: 2px;
+}
+
+.zoomAreaName {
+  display: inline-flex;
+  align-items: center;
+}
+
+.zoomAreaName i {
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.zoomEmpty {
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

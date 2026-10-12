@@ -1,0 +1,309 @@
+.iteration-records {
+  width: 100%;
+  background-color: #F6F9FF;
+  padding: 60px 300px; // 统一的内边距
+  border-radius: 12px;
+  
+  @media (max-width: 1200px) {
+    padding: 30px 100px; // 中等屏幕
+  }
+  
+  @media (max-width: 768px) {
+    padding: 20px; // 移动端
+    border-radius: 8px;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 32px;
+  text-align: left;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.scroll-container {
+  height: 500px; // 固定高度，大约显示3条记录
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  padding-right: 20px;
+  
+  // 自定义滚动条样式
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+    
+    &:hover {
+      background: #a8a8a8;
+    }
+  }
+}
+
+// 版本号内容样式
+.version-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.version-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 4px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.version-type {
+  font-size: 12px;
+  color: #8c8c8c;
+  
+  @media (max-width: 768px) {
+    font-size: 11px;
+    display: inline-block;
+  }
+}
+
+// 迭代卡片样式
+.iteration-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.iteration-time {
+  font-size: 16px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 16px;
+  text-align: left; // 明确设置左对齐
+  padding: 0; // 移除可能的内边距
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+.iteration-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left; // 明确设置左对齐
+  padding: 0; // 移除可能的内边距
+}
+
+.content-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+  text-align: left; // 确保内容项左对齐
+}
+
+.content-number {
+  color: #8c8c8c;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  text-align: left; // 序号左对齐
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+.content-text {
+  color: #595959;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left; // 文本内容左对齐
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+// 移动端特殊处理
+@media (max-width: 768px) {
+  .timeline-container {
+    .timeline-item {
+      .iteration-card {
+        border-left: 3px solid #E4E2E2;
+        border-radius: 0 8px 8px 0;
+      }
+    }
+  }
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 8px;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #1890ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.load-more-btn {
+  min-width: 120px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 14px;
+  
+  &:hover {
+    border-color: #1890ff;
+    color: #1890ff;
+  }
+}
+
+.no-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.no-more-text {
+  font-size: 14px;
+  color: #999;
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background-color: #e8e8e8;
+  }
+  
+  &::before {
+    right: 100%;
+    margin-right: 16px;
+  }
+  
+  &::after {
+    left: 100%;
+    margin-left: 16px;
+  }
+}
+
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px; // 减少padding，不需要占用太多高度
+  min-height: 120px; // 设置最小高度，避免过于紧凑
+  border-radius: 8px;
+}
+
+.empty-text {
+  font-size: 14px;
+  color: #999;
+}
+
+// 加载状态容器样式
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 120px;
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .load-more-btn {
+    min-width: 100px;
+    height: 32px;
+    font-size: 13px;
+  }
+  
+  .loading-container,
+  .load-more-container,
+  .no-more-container {
+    padding: 16px;
+  }
+  
+  .no-more-text {
+    font-size: 13px;
+    
+    &::before,
+    &::after {
+      width: 40px;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}

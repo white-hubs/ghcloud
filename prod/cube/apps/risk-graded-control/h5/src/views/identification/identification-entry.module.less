@@ -1,0 +1,164 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  background: #f5f5f5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.steps {
+  padding: 12px 16px;
+  background: #fff;
+}
+
+.section {
+  margin: 12px;
+}
+
+.sectionTitle {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.infoCard {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
+}
+
+.emptyCard {
+  padding: 32px 12px;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.loadingWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.objectCard {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.objectCardWrap {
+  margin: 0 12px 12px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.objectCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.objectCardTitle {
+  flex-shrink: 0;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.objectCardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.aiPhotoBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 8px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, #f8fbff 0%, #f3f8ff 100%);
+  border-bottom: 1px solid #eef4ff;
+}
+
+.aiPhotoButton {
+  height: 34px;
+  border-radius: 17px;
+  font-weight: 500;
+}
+
+.objectTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.confirmItem {
+  padding: 12px 16px;
+  margin: 8px 12px 12px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.confirmName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.confirmDesc {
+  padding: 12px 16px 0;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.confirmMeta {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #969799;
+}
+
+.bottomBar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -2px 8px rgb(0 0 0 / 6%);
+}
+
+.bottomBtn {
+  flex: 1;
+}
+
+.successWrap {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.successTitle {
+  margin: 16px 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.successDesc {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}

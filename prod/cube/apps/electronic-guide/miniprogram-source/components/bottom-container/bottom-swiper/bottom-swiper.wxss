@@ -1,0 +1,7 @@
+.swiper {
+	height: 220rpx;
+}
+
+.swiper-item {
+	margin: 0 10rpx;
+}

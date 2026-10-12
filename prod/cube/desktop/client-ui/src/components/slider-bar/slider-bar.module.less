@@ -1,0 +1,61 @@
+.slider-bar {
+  height: calc(100% - 50px);
+  width: 72px;
+  background-color: #FCFDFF;
+  box-sizing: border-box;
+  padding-top: 17px;
+  position: relative;
+  text-align: center;
+  float: left;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ebeff2;
+    ;
+  }
+
+  .item {
+    width: 100%;
+    height: 66px;
+    color: #808AA0;
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    .label {
+      margin-top: 8px;
+    }
+
+    &:hover {
+      background: rgba(21, 120, 255, 0.05);
+    }
+
+    &.active {
+      background: rgba(21, 120, 255, 0.10);
+      color: var(--cube-theme-var--primary-color);
+    }
+
+  }
+
+  .user-avatar {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

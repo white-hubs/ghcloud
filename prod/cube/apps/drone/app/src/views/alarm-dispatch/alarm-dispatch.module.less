@@ -1,0 +1,165 @@
+.container {
+  height: 100vh;
+  overflow: hidden;
+  background: #eef3f8;
+  padding: 12px 0;
+}
+
+.content {
+  height: calc(100vh - 96px);
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 18px 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+
+  span {
+    color: #4e5969;
+    font-size: 14px;
+  }
+}
+
+.requiredField > span::before,
+.requiredTitle::after {
+  color: #f53f3f;
+  content: "*";
+}
+
+.requiredField > span::before {
+  margin-right: 4px;
+}
+
+.requiredTitle::after {
+  margin-left: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.bottomActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 0 4px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d2129;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionTitle::before {
+  content: "";
+  width: 3px;
+  height: 16px;
+  background: #0f8fff;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.status {
+  font-weight: 700;
+
+  &.success {
+    color: #00a870;
+  }
+
+  &.fail {
+    color: #f53f3f;
+  }
+}
+
+.detailGrid {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 14px 24px;
+}
+
+.detailItem {
+  min-width: 0;
+  display: flex;
+  gap: 8px;
+
+  span {
+    flex: 0 0 120px;
+    color: #86909c;
+  }
+
+  strong {
+    min-width: 0;
+    color: #1d2129;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+}
+
+.rawBlock {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+  }
+
+  pre {
+    margin: 0;
+    min-height: 80px;
+    max-height: 240px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: #f7f8fa;
+    border-radius: 6px;
+    padding: 12px;
+    color: #1d2129;
+  }
+}
+
+.detailButton {
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .formGrid,
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+}

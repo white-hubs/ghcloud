@@ -1,0 +1,43 @@
+import { createElement } from "react";
+import ReactDOM from "react-dom/client";
+
+import { getAuthInfo, setAuthInfo } from "@ghcloud/cube-auth-utils";
+import { CubeTerminalEnum, type CubeAuth } from "@ghcloud/cube-protocol";
+
+import { initAuthStore } from "./api/auth-store";
+import { mockData } from "./api/dictionary-config";
+import App from "./app";
+
+import "./index.css";
+const projectName = "cube-ai-assistant";
+
+async function bootstrap(): Promise<void> {
+  const env = (import.meta as unknown as { env: { MODE: string } }).env.MODE;
+  let authInfo: CubeAuth = {
+    token: "",
+    tenant: "",
+    terminal: CubeTerminalEnum.BUSINESS,
+  };
+  // 方便开发时自定义token
+  if (env === "development") {
+    authInfo.token =
+      "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnRfMiIsInRlbmFudHMiOlsiNTgxOTcyNjAiLCI1OTk5NjA1MiIsIjE4MzIxNjAyIiwiODI5NzAxNDAiLCI2MjIyMDg5NyIsIjQ2MjQyNzI4IiwiNDc1NzgxNjEiLCI2MDUxNjI2OCIsIjU1NzY0MzUiLCIzNTM3OTgyOSIsIjcyNzM0MjExIiwiNDM5NTAyNDIiLCI5MjUzNDQwMyIsIjUxMjU5NzM1IiwiOTkxNzQxMTMiLCI1Njk1MDg5NiIsIjEwMTYyNjUyIiwiNTc2MDg0NTAiXSwicGFzc3dvcmRfZXhwaXJlZCI6dHJ1ZSwidXNlcl9uYW1lIjoiMTczMTEzNjk3ODIiLCJpc3MiOiJodHRwOi8vMTkyLjE2OC4wLjEzMzo0MDA5IiwiYWRtaW4iOmZhbHNlLCJwYXNzd29yZF9mb3JjZWQiOmZhbHNlLCJhdWQiOiJjbGllbnRfMiIsInBhc3N3b3JkX2V4cGlyYXRpb25fcmVtaW5kZWQiOnRydWUsIm5iZiI6MTc3MzczMTg2MCwiYWRtaW5pc3RyYXRlZF90ZW5hbnRzIjpbIjU4MTk3MjYwIiwiNTk5OTYwNTIiLCIxODMyMTYwMiIsIjgyOTcwMTQwIiwiNjIyMjA4OTciLCI0NjI0MjcyOCIsIjQ3NTc4MTYxIiwiNjA1MTYyNjgiLCI1NTc2NDM1IiwiMzUzNzk4MjkiLCI3MjczNDIxMSIsIjQzOTUwMjQyIiwiOTI1MzQ0MDMiLCI1MTI1OTczNSIsIjk5MTc0MTEzIiwiNTY5NTA4OTYiLCIxMDE2MjY1MiIsIjU3NjA4NDUwIl0sInNjb3BlIjpbInNlbGVjdCJdLCJuYW1lIjoi6LaF57qn566h55CG5ZGYIiwicGFzc3dvcmRfZXhwaXJhdGlvbl9kYXRlIjp7ImRhdGUiOnsieWVhciI6MjAyNiwibW9udGgiOjIsImRheSI6MjF9LCJ0aW1lIjp7ImhvdXIiOjE0LCJtaW51dGUiOjUwLCJzZWNvbmQiOjIyLCJuYW5vIjowfX0sImlkIjoiMTQ3ODYzNjg4Njk4NDUyMzc3NyIsImV4cCI6MTg3MzczMTg2MCwiaWF0IjoxNzczNzMxODYwLCJqdGkiOiJjOTVlYjNkNS1hNjhiLTRkM2QtODQyYi1hNmI0ZGZlYjBjMzEifQ.mcNGxxs3T0F0dFcQ58rWmdRPX6BE5ckVOAJXk2lAghXoN5PipY7k0b3U7_DKYxW7xtjdz4v6j5wPHzJV_tJ2NMHqON-K4ss8zrbaagzAaM7Ad7O6XeBWcQl7nAOSoTmcB45R3mCHlm15ogPbvSk5loA6PoBfhz_o1Q10lXTrmSTuAqQjQlLgQrKia9k8tOAtsX1VwVrcRfZiueuCMnh0AUuniCLoqEsA_FIYz7rMRQ1OCUoBQUNmpPYGqYhYT0i8mODtLxf0socbBCWW4YrwKkyLj4B-gsUGtOXRyiXAU7J0xPnr_lpdq0rIZXsOaBDwzYC47K497SErV2kQc6qZZQ";
+    authInfo.tenant = "58197260";
+
+    // authInfo.token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRzIjpbIjU4MTk3MjYwIiwiNTk5OTYwNTIiLCIxODMyMTYwMiIsIjgyOTcwMTQwIiwiNjIyMjA4OTciLCI0NjI0MjcyOCIsIjQ3NTc4MTYxIiwiNjA1MTYyNjgiLCI1NTc2NDM1IiwiMzUzNzk4MjkiLCI3MjczNDIxMSIsIjQzOTUwMjQyIiwiOTI1MzQ0MDMiLCI1MTI1OTczNSIsIjk5MTc0MTEzIiwiNTY5NTA4OTYiXSwicGFzc3dvcmRfZXhwaXJlZCI6ZmFsc2UsInVzZXJfbmFtZSI6IjE3MzExMzY5NzgyIiwiYWRtaW4iOmZhbHNlLCJwYXNzd29yZF9mb3JjZWQiOnRydWUsImF1dGhvcml0aWVzIjpbIjE3NzI4MzE1OTA4NzYwMDAyNTgiLCJST0xFX0FDVElWSVRJX1VTRVIiXSwiY2xpZW50X2lkIjoiY2xpZW50XzIiLCJwYXNzd29yZF9leHBpcmF0aW9uX3JlbWluZGVkIjpmYWxzZSwiYWRtaW5pc3RyYXRlZF90ZW5hbnRzIjpbIjU4MTk3MjYwIiwiNTk5OTYwNTIiLCIxODMyMTYwMiIsIjgyOTcwMTQwIiwiNjIyMjA4OTciLCI0NjI0MjcyOCIsIjQ3NTc4MTYxIiwiNjA1MTYyNjgiLCI1NTc2NDM1IiwiMzUzNzk4MjkiLCI3MjczNDIxMSIsIjQzOTUwMjQyIiwiOTI1MzQ0MDMiLCI1MTI1OTczNSIsIjk5MTc0MTEzIiwiNTY5NTA4OTYiXSwic2NvcGUiOlsic2VsZWN0Il0sIm5hbWUiOiLotoXnuqfnrqHnkIblkZgyIiwicGFzc3dvcmRfZXhwaXJhdGlvbl9kYXRlIjoxNzcxNjU2NjIyMDAwLCJpZCI6MTQ3ODYzNjg4Njk4NDUyMzc3NywiZXhwIjoxODUwNzMwMjU5LCJqdGkiOiI5YTkzMDk4Ni1hN2U5LTRlNDMtOTg3OC0yYTRlN2Q1MzEzZjUifQ.cs_GFomCcjVQfbiqKuvxF7j8W_Z-eAnJLDbq79Qto0I5jKu00fpCq4eViAt8dFQBfKZBtgrf8ejI5Mc-eqLPOAwgWm69Cl__Z6-y5Cm_OWTu-rk5JjbgetDGhJ35yLSmHaEVbsnbNCtgVWwLRiRXdhSCGYgpy8Mv5p2obi-Ct6BKWfwLBWvpUlZxEdHA3px_8UL5ZfZ7SEYHYdUeKOmzUB2JNHLaXHQZLp8KGjNq9wLbe123H64S1vUKGl4RVAV78wYnl9pvAWBo37Lfb7-rjyGN6nM-fbsrj1cZxXeAbw54ksEY9UtGszFxwPUWCbXTdeBZl7VGjdiULbgEvxf44A'
+    // authInfo.tenant = '62220897'
+  } else {
+    authInfo = (await getAuthInfo()) as CubeAuth;
+  }
+  initAuthStore(authInfo);
+  setAuthInfo(authInfo);
+  await mockData();
+
+  const container = document.getElementById(projectName);
+  if (!container) {
+    throw new ReferenceError("Unexpected container is null!");
+  }
+  const root = ReactDOM.createRoot(container);
+  root.render(createElement(App));
+}
+bootstrap();

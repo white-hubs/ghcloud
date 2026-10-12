@@ -1,0 +1,66 @@
+
+.monitorPanelBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 20px;
+
+  :deep(.monitorPanel-left) {
+    .bg {
+      width: 90px;
+
+      .rotate {
+        left: 30px;
+      }
+    }
+  }
+}
+
+.chart {
+  height: 150px;
+}
+
+.line-chart {
+  height: 180px;
+}
+
+.elevator-analysis {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+
+  .pie_list {
+    width: 180px;
+    height: 180px;
+
+    // margin-left: 10px;
+    :deep(.alarm-analysis-name) {
+      width: 90px;
+    }
+
+    :deep(.alarm-analysisBox) {
+      width: auto;
+    }
+  }
+
+  .chart {
+    flex: 1;
+    height: 140px;
+  }
+}
+
+.child-level {
+  :deep(.time-type) {
+    width: 50px !important;
+  }
+}
+
+:deep(.sub-panel-content) {
+  padding: 0 !important;
+}
+
+.bar-chart {
+  height: 200px;
+}

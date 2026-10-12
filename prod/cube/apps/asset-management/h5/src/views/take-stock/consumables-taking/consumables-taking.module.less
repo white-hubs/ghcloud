@@ -1,0 +1,153 @@
+.cell-group {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+  overflow: hidden;
+}
+
+.cell-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1F3140;
+  }
+
+  .status {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px 5px 5px 0px;
+    color: #ffffff;
+    margin-right: 5px;
+  }
+
+}
+
+.cell {
+
+  .cell-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+
+    label {
+      color: #969799;
+    }
+
+    span {
+      display: inline-block;
+      width: 230px;
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #323233;
+    }
+  }
+  .header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    justify-content: flex-start;
+    height: 80px;
+    div {
+      color: #969799;
+      margin-right: 10px;
+    }
+  }
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 3.733333vw;
+    color: #646566;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    label {
+      color: #969799;
+    }
+
+    span {
+      margin-left: 6px;
+      text-align: right;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #969799;
+      font-size: 12px;
+      padding-right: 4px;
+    }
+  }
+  .content::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--van-primary-color);
+    opacity: .1;
+    border-radius: 6px;
+  }
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    div{
+      text-align: center;
+    }
+  }
+}
+
+.detail-tabs {
+  overflow: hidden;
+
+  .list {
+    margin-top: 12px;
+    background: #f4f7fa;
+    .title {
+      padding: 10px 0px 10px 16px;
+    }
+    .operate{
+      display: flex;
+      justify-content: space-around;
+      & div:nth-of-type(1){
+        color: rgb(113, 29, 196);
+      }
+      & div:nth-of-type(2){
+        color: #ee0a24;
+      }
+    }
+   
+   
+  }
+
+
+}
+.button{
+  position: absolute;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #FFFFFF;
+  bottom: 0;
+  box-shadow:0px 0px 6px 2px rgba(10, 24, 10, 0.04);
+}

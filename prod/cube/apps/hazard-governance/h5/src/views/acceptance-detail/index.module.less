@@ -1,0 +1,274 @@
+.container {
+  height: calc(100vh - var(--van-nav-bar-height, 46px));
+  background: #f3f7fa;
+  position: relative;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  height: calc(100% - 66px);
+  overflow-y: auto;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom)) 12px;
+}
+
+.block {
+  margin-bottom: 14px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 4px;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sectionBar {
+  width: 4px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--van-primary-color);
+}
+
+.aiPanel {
+  margin-bottom: 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0;
+  color: #1d4ed8;
+  background: #eff6ff;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.aiHeader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  padding: 12px;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+}
+
+.aiHeader strong {
+  display: block;
+  color: #1e40af;
+  font-size: 14px;
+}
+
+.aiHeader small {
+  display: block;
+  margin-top: 2px;
+  color: #60a5fa;
+  font-size: 12px;
+}
+
+.aiToggleIcon {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #2563eb;
+  border-bottom: 2px solid #2563eb;
+  transform: rotate(45deg);
+  transition: transform 0.22s ease;
+}
+
+.aiToggleIconExpanded {
+  transform: rotate(225deg);
+}
+
+.aiBodyWrap {
+  border-top: 1px solid rgba(59, 130, 246, 0.18);
+  overflow: hidden;
+  transition: max-height 0.24s ease, opacity 0.18s ease;
+}
+
+.aiBodyExpanded {
+  max-height: 720px;
+  opacity: 1;
+}
+
+.aiBodyCollapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.aiRichText {
+  padding: 10px 12px 12px;
+  color: #1f3f83;
+  word-break: break-word;
+}
+
+.aiRichTextTyping::after {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  background: #2563eb;
+  content: '';
+  vertical-align: -2px;
+  animation: aiCaretBlink 0.8s steps(1) infinite;
+}
+
+@keyframes aiCaretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.aiRichText p,
+.aiRichText ul,
+.aiRichText ol {
+  margin: 6px 0;
+}
+
+.aiRichText ul,
+.aiRichText ol {
+  padding-left: 18px;
+}
+
+.aiRichText img,
+.aiRichText video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.aiRichText table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.aiRichText th,
+.aiRichText td {
+  border: 1px solid rgb(22 155 98 / 24%);
+  padding: 6px;
+}
+
+.aiHint {
+  border-top: 1px solid rgba(59, 130, 246, 0.14);
+  padding: 8px 12px 10px;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.measureList {
+  margin: 0;
+  padding-left: 18px;
+  color: #646566;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.mediaSection {
+  padding: 10px 16px 14px;
+}
+
+.mediaSection + .mediaSection {
+  padding-top: 0;
+}
+
+.mediaTitle {
+  margin-bottom: 8px;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.fileGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fileItem {
+  display: flex;
+  width: 72px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.filePlaceholder {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #7b8794;
+  background: #eef2f6;
+}
+
+.emptyText {
+  padding: 8px 0;
+  color: #969799;
+  font-size: 13px;
+}
+
+.progressList {
+  padding: 0 16px 14px;
+}
+
+.progressItem {
+  padding: 12px 0;
+  border-top: 1px solid #f1f3f5;
+}
+
+.progressItem:first-child {
+  border-top: 0;
+}
+
+.progressHead,
+.progressMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.progressHead {
+  margin-bottom: 6px;
+  color: #1f2937;
+  font-size: 13px;
+}
+
+.progressMeta {
+  margin-bottom: 10px;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.progressContent {
+  margin: 0 0 10px;
+  color: #646566;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(31, 41, 55, 0.08);
+}

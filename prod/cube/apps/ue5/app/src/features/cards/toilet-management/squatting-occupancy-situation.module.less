@@ -1,0 +1,355 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 240px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.statsRow {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.statCard {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 5px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.16), rgba(12, 230, 255, 0.05)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.3));
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 12px rgba(46, 148, 255, 0.12),
+    0 4px 12px rgba(0, 27, 66, 0.08);
+}
+
+.isTotal {
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.22), rgba(12, 230, 255, 0.06)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+}
+
+.isFree {
+  background:
+    linear-gradient(135deg, rgba(0, 242, 123, 0.16), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border-color: rgba(0, 242, 123, 0.32);
+}
+
+.isOccupied {
+  background:
+    linear-gradient(135deg, rgba(255, 171, 16, 0.18), rgba(255, 77, 79, 0.05)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+  border-color: rgba(255, 171, 16, 0.38);
+}
+
+.statIcon {
+  display: flex;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.35));
+  }
+}
+
+.statContent {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statLabel {
+  margin-bottom: 1px;
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.statValue {
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 15px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.34);
+}
+
+.isFreeValue {
+  color: #00f27b;
+  text-shadow: 0 0 10px rgba(0, 242, 123, 0.28);
+}
+
+.isOccupiedValue {
+  color: #ffab10;
+  text-shadow: 0 0 10px rgba(255, 171, 16, 0.28);
+}
+
+.analysisSurface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 132px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 188px;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartWrap {
+  display: flex;
+  flex: 0 0 112px;
+  width: 112px;
+  height: 112px;
+  min-width: 112px;
+  min-height: 112px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.levelList {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.levelItem {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: 6px 10px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.1), rgba(12, 230, 255, 0.03)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(83, 164, 255, 0.22);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(46, 148, 255, 0.06);
+}
+
+.levelColor {
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 2px;
+}
+
+.levelTop,
+.levelBottom,
+.levelBarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.levelTop,
+.levelBottom {
+  justify-content: space-between;
+}
+
+.levelName {
+  overflow: hidden;
+  color: var(--visual-text-color, #e6f7ff);
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.levelCount {
+  flex: 0 0 auto;
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 0 8px rgba(43, 147, 255, 0.28);
+}
+
+.levelBarTrack {
+  display: block;
+  min-width: 0;
+  flex: 1;
+  height: 4px;
+  overflow: hidden;
+  background: rgba(125, 198, 255, 0.12);
+  border-radius: 999px;
+}
+
+.levelBarFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  box-shadow: 0 0 8px currentColor;
+  transition: width 320ms ease;
+}
+
+.levelShare {
+  color: var(--visual-muted-color, rgba(217, 231, 255, 0.78));
+  font-size: calc(var(--font-size-scale, 1) * 10px);
+  line-height: 1.2;
+}
+
+.pieCenterValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 16px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.pieCenterLabel {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  line-height: 1.3;
+  text-align: center;
+}
+
+.isZoom {
+  min-height: 380px;
+  gap: 14px;
+
+  .statCard {
+    min-height: 64px;
+    padding: 12px 10px;
+  }
+
+  .statIcon {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .statValue {
+    font-size: calc(var(--font-size-scale, 1) * 20px);
+  }
+
+  .analysisSurface {
+    gap: 20px;
+    min-height: 220px;
+  }
+
+  .chartWrap {
+    flex-basis: 180px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+  }
+
+  .levelItem {
+    min-height: 64px;
+    padding: 10px 14px;
+  }
+
+  .pieCenterValue {
+    font-size: calc(var(--font-size-scale, 1) * 28px);
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .squatting-occupancy-v2-panel) {
+  .statCard,
+  .levelItem {
+    background: linear-gradient(145deg, rgba(214, 233, 255, 0.98), rgba(240, 247, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.38);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.1);
+  }
+
+  .isTotal {
+    background: linear-gradient(145deg, rgba(214, 233, 255, 0.98), rgba(240, 247, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.38);
+  }
+
+  .isFree {
+    background: linear-gradient(145deg, rgba(230, 252, 244, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(61, 184, 146, 0.34);
+  }
+
+  .isOccupied {
+    background: linear-gradient(145deg, rgba(255, 244, 230, 0.98), rgba(255, 250, 244, 0.96));
+    border-color: rgba(230, 162, 60, 0.4);
+  }
+
+  .statLabel,
+  .levelName,
+  .levelShare,
+  .pieCenterLabel {
+    color: #49628f;
+  }
+
+  .statValue,
+  .levelCount,
+  .pieCenterValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .isFreeValue {
+    color: #0f9f5a;
+  }
+
+  .isOccupiedValue {
+    color: #d48806;
+  }
+
+  .statIcon img {
+    filter: none;
+  }
+
+  .levelBarTrack {
+    background: rgba(116, 158, 210, 0.18);
+  }
+}
+
+:global(.squatting-occupancy-v2-panel .sub-panel-content) {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.v2-minimal-white-panel(squatting-occupancy-v2-panel);

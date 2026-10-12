@@ -1,0 +1,324 @@
+.todayStatistics {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 2px 4px;
+  box-sizing: border-box;
+}
+
+.timeSwitch {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  background: rgba(17, 23, 31, 0.78);
+  border: 1px solid rgba(116, 130, 148, 0.28);
+  border-radius: 3px;
+}
+
+.timeButton {
+  height: 22px;
+  min-width: 42px;
+  padding: 0 8px;
+  font-size: calc(var(--font-size-scale) * 11px);
+  line-height: 20px;
+  color: rgba(221, 231, 246, 0.72);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+}
+
+.active {
+  color: #f4f8ff;
+  background: rgba(44, 58, 78, 0.9);
+  box-shadow: inset 0 -1px 0 rgba(41, 137, 255, 0.58);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  padding: 9px 12px 9px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(20, 29, 42, 0.82), rgba(12, 18, 28, 0.78));
+  border: 1px solid rgba(156, 176, 204, 0.14);
+  border-left: 3px solid rgba(41, 137, 255, 0.72);
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: rgba(231, 239, 250, 0.9);
+  background: rgba(44, 58, 78, 0.72);
+  border: 1px solid rgba(156, 176, 204, 0.18);
+  border-radius: 2px;
+}
+
+.icon > svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.content {
+  min-width: 0;
+  flex: 1;
+}
+
+.labelRow,
+.valueRow,
+.meta {
+  display: flex;
+  align-items: center;
+}
+
+.labelRow {
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-size: calc(var(--font-size-scale) * 12px);
+  font-weight: 600;
+  color: rgba(213, 226, 242, 0.82);
+}
+
+.badge {
+  padding: 2px 8px;
+  font-size: calc(var(--font-size-scale) * 10px);
+  line-height: 1.2;
+  color: #f4c873;
+  background: rgba(181, 116, 34, 0.22);
+  border: 1px solid rgba(244, 200, 115, 0.18);
+  border-radius: 2px;
+}
+
+.valueRow {
+  gap: 7px;
+}
+
+.value {
+  font-family: DIN, sourceMedium, Arial, sans-serif;
+  font-size: calc(var(--font-size-scale) * 27px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #f3f7ff;
+  text-shadow: 0 0 8px rgba(41, 137, 255, 0.18);
+}
+
+.unit {
+  margin-top: 9px;
+  font-size: calc(var(--font-size-scale) * 13px);
+  font-weight: 600;
+  color: rgba(187, 209, 236, 0.82);
+}
+
+.meta {
+  gap: 12px;
+  margin-top: 4px;
+  font-size: calc(var(--font-size-scale) * 10px);
+  white-space: nowrap;
+}
+
+.up {
+  color: #ff5f64;
+}
+
+.down {
+  color: #31de9b;
+}
+
+.note {
+  margin-top: 5px;
+  font-size: calc(var(--font-size-scale) * 10px);
+  color: rgba(166, 190, 220, 0.82);
+}
+
+.detailTable {
+  margin: 2px 4px 0;
+  overflow: hidden;
+  background: rgba(5, 28, 62, 0.62);
+  border: 1px solid rgba(0, 156, 255, 0.22);
+  border-radius: 4px;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 58px;
+  column-gap: 8px;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.tableHead {
+  height: 28px;
+  font-size: calc(var(--font-size-scale) * 11px);
+  font-weight: 600;
+  color: rgba(172, 219, 247, 0.78);
+  background: rgba(0, 136, 255, 0.12);
+}
+
+.tableBody {
+  min-height: 96px;
+}
+
+.tableRow {
+  height: 24px;
+  font-size: calc(var(--font-size-scale) * 11px);
+  color: rgba(221, 241, 255, 0.86);
+  border-top: 1px solid rgba(101, 184, 255, 0.12);
+}
+
+.tableRow > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableRow > span:last-child {
+  color: #42cfff;
+  text-align: right;
+}
+
+.empty {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--font-size-scale) * 12px);
+  color: rgba(176, 215, 240, 0.58);
+}
+
+.tableFooter {
+  height: 24px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: calc(var(--font-size-scale) * 11px);
+  line-height: 24px;
+  text-align: right;
+  color: rgba(172, 219, 247, 0.72);
+  border-top: 1px solid rgba(101, 184, 255, 0.12);
+}
+
+// 放大弹窗内的样式
+.zoomTodayStatistics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.zoomStatItem {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(20, 29, 42, 0.82), rgba(12, 18, 28, 0.78));
+  border: 1px solid rgba(156, 176, 204, 0.14);
+  border-left: 3px solid rgba(41, 137, 255, 0.72);
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.zoomIcon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  color: rgba(231, 239, 250, 0.9);
+  background: rgba(44, 58, 78, 0.72);
+  border: 1px solid rgba(156, 176, 204, 0.18);
+  border-radius: 2px;
+
+  > svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+}
+
+.zoomContent {
+  min-width: 0;
+  flex: 1;
+}
+
+.zoomLabelRow,
+.zoomValueRow,
+.zoomMeta {
+  display: flex;
+  align-items: center;
+}
+
+.zoomLabelRow {
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.zoomLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(213, 226, 242, 0.82);
+}
+
+.zoomBadge {
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #f4c873;
+  background: rgba(181, 116, 34, 0.22);
+  border: 1px solid rgba(244, 200, 115, 0.18);
+  border-radius: 2px;
+}
+
+.zoomValueRow {
+  gap: 10px;
+}
+
+.zoomValue {
+  font-family: DIN, sourceMedium, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #f3f7ff;
+  text-shadow: 0 0 8px rgba(41, 137, 255, 0.18);
+}
+
+.zoomUnit {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(187, 209, 236, 0.82);
+}
+
+.zoomMeta {
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.zoomNote {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(166, 190, 220, 0.82);
+}

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "PangMenZhengDaoBiao";
+  src: url('/resource/v1/fonts/PangMenZhengDaoBiao.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PangMenZhengDaoBiaoEnhance";
+  src: url('/resource/v1/fonts/PangMenZhengDaoBiaoenhance.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCN-Medium-2";
+  src: url('/resource/v1/tenant-migrate/fonts/chinese/SourceHanSansCN-Medium-2.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCN-Regular-2";
+  src: url('/resource/v1/tenant-migrate/fonts/chinese/SourceHanSansCN-Regular-2.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Black-1";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Black-1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-BlackItalic-2";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-BlackItalic-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold-3";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Bold-3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-BoldItalic-6";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-BoldItalic-6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Italic-9";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Italic-9.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light (1)";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light-10";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Light-10.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-LightItalic-11";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-LightItalic-11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium-12";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Medium-12.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-MediumItalic-13";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-MediumItalic-13.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular-14";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Regular-14.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Thin-15";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-Thin-15.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-ThinItalic-16";
+  src: url('/resource/v1/tenant-migrate/fonts/number/Roboto-ThinItalic-16.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

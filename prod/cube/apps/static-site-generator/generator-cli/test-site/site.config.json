@@ -1,0 +1,18 @@
+{
+  "site": {
+    "name": "古河云科技",
+    "url": "https://kaihe.guhecloud.com",
+    "ogImage": "https://qiniu.guhecloud.com/imgs/icons/13.png?imageView2/0/format/webp/q_74",
+    "favicon": "https://cube-test.guhecloud.com:30000/favicon.ico",
+    "primaryColor": "#1578FF",
+    "navStyle": "light"
+  },
+  "seo": {
+    "defaultTitle": "AI安全风险管理解决方案_AI+安全应急管理产品_古河云科技",
+    "defaultDescription": "古河云科技以自研“开河智能中枢”为核心，深耕“AI+安全应急”领域，深度融合人工智能、大模型与数字孪生技术，为批发市场、物流仓储、能源行业、园区、交通、医疗、场馆等场景提供AI安全风险管理解决方案，助力企业重塑安全应急管理新范式。",
+    "defaultKeywords": "安全风险监测,监测预警,AI智能体,消防安全,视频监测,节能降耗,应急调度,电气安全,智能巡检,智慧园区,AI引擎,边缘计算,数字孪生,IBMS"
+  },
+  "trackingScripts": [
+    "<script>var _hmt = _hmt || []; (function() { var hm = document.createElement('script'); hm.src = 'https://hm.baidu.com/hm.js?你的统计代码'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s); })();<\/script>"
+  ]
+}

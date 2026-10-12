@@ -1,0 +1,339 @@
+{
+  "path": "/programme/energy-saving.html",
+  "meta": {
+    "title": "能碳分析_能源管理_节能降耗管理系统_古河云科技",
+    "keywords": "能碳分析,碳排放管理平台,能耗管理,能源管理,物联网",
+    "description": "古河云节能降耗管理系统利用物联接入，实时采集各维度的设备运行与用能数据，通过系统数据参数优化、调控等手段，对能源消耗情况进行数字化、精细化管理。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-energy-saving-banner.webp",
+            "title": "节能降耗管理系统",
+            "subtitle": "利用物联接入，实时采集各维度的设备运行与用能数据，通过系统数据参数优化、调控等手段，对能源消耗情况进行数字化，精细化管理。对产生的数据进行能碳计算转化，实时反映园区降碳数据，持续提升能效，显现节能效益。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "能耗黑洞难定位",
+            "description": "传统抄表无法实时发现跑冒滴漏，异常损耗（如线损、管网泄漏）长期存在。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "成本控制粗放",
+            "description": "依赖经验调度，无法结合峰谷电价优化用能，导致电费支出居高不下。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "管理效率低下",
+            "description": "能源数据分散，缺乏统一分析工具，难以建立能源绩效考评体系。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "信息孤岛严重",
+            "description": "各种有用数据信息分散在不同的业务系统中，各系统间缺乏联系，各自为政。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《2030年前碳达峰行动方案》",
+            "description": "明确提出推动工业、建筑、交通等重点领域节能降碳，提升能源利用效率。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《重点用能单位节能管理办法》",
+            "description": "要求重点用能单位建立能源消费计量和统计制度，开展能源审计，实施节能改造。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《高耗能行业重点领域能效标杆水平和基准水平》",
+            "description": "明确各高耗能行业能效标准，推动企业对标达标，限期达不到标准的要淘汰。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《碳排放权交易管理办法》",
+            "description": "建立碳排放权交易市场，要求重点排放单位准确核算碳排放数据，履行履约义务。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-scene-1.webp",
+            "title": "深度能碳分析",
+            "subtitle": "系统对收集的数据进行深度分析，识别能耗高峰、低谷和异常情况，生成详细的能耗报告。这可以为企业决策者提供有关能源消耗和碳排放的依据，制定节能减排策略。",
+            "features": [
+              {
+                "label": "深度分析：",
+                "value": "识别能耗高峰、低谷和异常情况"
+              },
+              {
+                "label": "能耗报告：",
+                "value": "生成详细的能耗与碳排放报告"
+              },
+              {
+                "label": "策略制定：",
+                "value": "为节能减排策略提供数据依据"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-scene-2.webp",
+            "title": "科学碳排放管理",
+            "subtitle": "系统计算设备的碳排放量，帮助企业监测碳排放情况，制定减排策略。这有助于企业实现低碳发展，满足政府和行业的节能减排要求。",
+            "features": [
+              {
+                "label": "碳核算：",
+                "value": "自动计算设备碳排放量"
+              },
+              {
+                "label": "减排策略：",
+                "value": "帮助企业制定科学减排策略"
+              },
+              {
+                "label": "合规达标：",
+                "value": "满足政府和行业节能减排要求"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-scene-3.webp",
+            "title": "精细计量设备",
+            "subtitle": "通过安装在设备上的传感器收集能源消耗数据，实时监测设备的运行状态、能耗情况和环境参数。这有助于及时发现设备故障、能源浪费等问题。",
+            "features": [
+              {
+                "label": "实时监测：",
+                "value": "传感器实时采集设备能耗数据"
+              },
+              {
+                "label": "状态感知：",
+                "value": "监测设备运行状态和环境参数"
+              },
+              {
+                "label": "问题发现：",
+                "value": "及时发现设备故障与能源浪费"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-scene-4.webp",
+            "title": "全面能耗管理",
+            "subtitle": "系统设定阈值，当能耗或碳排放超过预设值时，自动发出报警和预警，提示相关人员采取措施。这有助于及时处理能源异常和设备故障，减少损失。",
+            "features": [
+              {
+                "label": "阈值预警：",
+                "value": "能耗或碳排放超限时自动告警"
+              },
+              {
+                "label": "及时响应：",
+                "value": "提示相关人员快速采取措施"
+              },
+              {
+                "label": "损失降低：",
+                "value": "及时处理异常，减少能源损失"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-scene-5.webp",
+            "title": "高效能耗预测",
+            "subtitle": "系统支持对能耗数据进行建模，从而检测出能耗数据的异常值，以及预测未来一段时间内的能耗值。这有助于提高能源利用效率，降低能源成本。",
+            "features": [
+              {
+                "label": "数据建模：",
+                "value": "对能耗数据建立预测模型"
+              },
+              {
+                "label": "异常检测：",
+                "value": "自动识别能耗数据异常值"
+              },
+              {
+                "label": "趋势预测：",
+                "value": "预测未来能耗走势，辅助决策"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "节能降耗",
+            "description": "能耗全面监测，精准定位损耗点，减少碳排放，能耗数据可视化展示。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "降本增效",
+            "description": "自动采集减少人工成本。实时能耗监测与动态优化，减少电费、水费等费用支出。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "高效用能",
+            "description": "实时监控和分析用能数据，发现能源浪费和设备效率低下等问题，采取有效措施提高能源利用效率。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "辅助决策",
+            "description": "提供的能源消耗和碳排放报告，为相关部门制定节能减排策略和措施提供数据支持和决策依据。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "能碳管理",
+                "href": "/product-center/app-energy-detail.html"
+              },
+              {
+                "name": "空调管理",
+                "href": "/product-center/app-ac-detail.html"
+              },
+              {
+                "name": "智能照明",
+                "href": "/product-center/app-lighting-detail.html"
+              },
+              {
+                "name": "冷热源",
+                "href": "/product-center/app-hvac-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-case-1.webp",
+            "title": "彭州中医药城",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-case-2.webp",
+            "title": "深圳光明海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/energy-case-3.webp",
+            "title": "眉山CBD",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

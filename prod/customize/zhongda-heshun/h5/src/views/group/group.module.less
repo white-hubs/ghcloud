@@ -1,0 +1,127 @@
+.container {
+  height: 100vh;
+  background-color: #EBF1F6;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-pull-refresh {
+  height: 100vh;
+  background-color: #EBF1F6;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+}
+
+.skeleton-container {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 16px;
+}
+
+.skeleton-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.list-wrap {
+  margin: 10px 0;
+}
+.cell-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+// .empty {
+//   background-color: #fff;
+//   margin: 16px;
+//   height: calc(100vh - 200px);
+//   background: linear-gradient(180deg,#f5f9ff, #ffffff);
+//   border-radius: 36px 36px 0 0;
+// }
+.bottom {
+  position: fixed;
+  bottom: 30px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .bottom-add {
+    width: 128px;
+    height: 46px;
+    background: #f3f9ff;
+    border-radius: 8px;
+    box-shadow: 0px 3px 16px 0px rgba(194,208,221,0.60), -3px -3px 6px 0px #f0f6fb; 
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #121d2f;
+    line-height: 14px;
+    margin-bottom: 30px;
+  }
+  .bottom-enter {
+    width: 323px;
+    height: 46px;
+    background: #1a66ff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    color: #ffffff;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+}
+.form {
+  min-height: 240px;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .add-title {
+    padding: 26px;
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    color: #000000;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .bottom-wrap {
+    padding: 26px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .bottom-btn {
+    width: 323px;
+    height: 46px;
+    background: #1a66ff;
+    border-radius: 8px;
+  }
+}
+
+:global {
+
+  .van-form,
+  .van-field {
+    background: #fff;
+  }
+  .van-swipe-cell, .van-swipe-cell__wrapper, .van-checkbox-group {
+    min-height: 50px;
+  }
+  .van-swipe-cell {
+    box-sizing: border-box;
+    background: #f3f9ff;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 16px 0px rgba(194,208,221,0.40), -3px -3px 6px 0px #f0f6fb; 
+  }
+  .van-cell {
+    background: transparent;
+    font-size: 16px;
+  }
+}

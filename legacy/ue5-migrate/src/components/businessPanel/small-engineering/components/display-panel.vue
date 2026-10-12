@@ -1,0 +1,154 @@
+<template>
+  <div class="showPanel">
+    <div class="bg">
+      <img width="180" height="132" :src="getAssetsImage('overView4.png')" alt="" />
+    </div>
+    <div class="blister" :class="classList[index]" v-for="(item, index) in props.contentList" @click="emitEvent(item)">
+      <div class="ball">
+        <img style="width: 100%" :src="getAssetsImage('overView15.png')" alt="" />
+        <count-to :startVal="0" :endVal="item.value" :duration="2000" separator=""></count-to>
+        <div class="blisterTitle">{{ item.name }}</div>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { getAssetsImage } from "@/utils/getImage";
+import CountTo from "@/components/businessPanel/public/count-to/count-to.vue";
+const classList = ["topLeft", "topRight", "bottomLeft", "bottomRight", "mid"];
+
+interface list {
+  name: string;
+  value: number;
+}
+interface Props {
+  contentList: list[];
+  bgImg: string;
+}
+const emit = defineEmits(["itemClick"]);
+const props = withDefaults(defineProps<Props>(), {});
+const emitEvent = (item)=>{
+  emit("itemClick",item);
+}
+</script>
+<style lang="less" scoped>
+.showPanel {
+  position: relative;
+  height: 250px;
+
+  .bg {
+    position: absolute;
+    height: 132px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .blister {
+    position: absolute;
+    cursor: pointer;
+    width: 70px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    .ball {
+      width: 100%;
+      height: 70px;
+      position: relative;
+
+      :deep(.gh-count-to) {
+        font-size: 20px;
+        font-family: "YouSheBiaoTiHei";
+        font-weight: 400;
+        color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .blisterTitle {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        color: #d0deee;
+      }
+    }
+
+  }
+
+  @keyframes floating {
+    from {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+.topLeft {
+  top: 20px;
+  left: 10px;
+  width: 90px !important;
+
+  .ball {
+    height: 90px;
+  }
+}
+
+.topRight {
+  right: 30px;
+  top: 10px;
+  width: 100px !important;
+
+  .ball {
+    height: 100px;
+  }
+}
+
+.bottomLeft {
+  bottom: 20px;
+  left: 30px;
+  width: 90px !important;
+
+  .ball {
+    height: 90px;
+  }
+}
+
+.bottomRight {
+  right: 30px;
+  bottom: 30px;
+  width: 90px !important;
+
+  .ball {
+    height: 90px;
+  }
+}
+
+.mid {
+  top: 20%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 120px !important;
+
+  .ball {
+    height: 120px;
+    .blisterTitle{
+      font-size: 14px !important;
+      top: 110% !important;
+    }
+  }
+}
+</style>

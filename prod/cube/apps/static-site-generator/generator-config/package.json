@@ -1,0 +1,65 @@
+{
+  "name": "@ghcloud/cube-static-site-generator-app",
+  "version": "1.0.7",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts --mode dev",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-static-site-generator-components": "workspace:*",
+    "@ghcloud/cube-static-site-generator-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify/vue": "^5.0.0",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-vue": "^5.1.11",
+    "ant-design-vue": "catalog:",
+    "dayjs": "catalog:",
+    "echarts": "catalog:",
+    "jsoneditor": "^10.4.3",
+    "lodash": "4.17.21",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "vuedraggable-es": "^4.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "@types/lodash": "4.17.0",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "autoprefixer": "^10.4.27",
+    "less": "catalog:",
+    "postcss": "^8.5.9",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

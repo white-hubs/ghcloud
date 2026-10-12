@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-access-detail.html",
+  "meta": {
+    "title": "门禁管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+    "keywords": "门禁管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+        "productName": "门禁管理",
+        "productDescription": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "门禁管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持接入门禁系统，同步门禁系统门锁等设备的状态，监控门禁进出事件，刷卡信息等事件。支持接入控制，实现远程开关控制，对于重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面，保障关键区域安全。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h3 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>孪生分析</strong></span></h3><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过可视化界面展示接入的门禁设备，结合分析面板展示设备状态、门禁进出情况、刷卡信息等。支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。</span></p><p style=\"text-align: center;\"><img src=\"/minio/ouaa/1967507362198675458.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>门禁总览</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示门禁的今日通行数据总计；今日的通行趋势；近30天的通行趋势图；近一年的通行趋势图展示；门禁使用排名top；门禁记录数据。</span></p><p style=\"text-align: center;\"><img src=\"/minio/ouaa/1967507499792818177.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>门禁设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对需要监管的门禁设备的关联导入管理。</span></p><p style=\"text-align: center;\"><img src=\"/minio/ouaa/1967507576154316802.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>通行记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对今日通行数据统计、今日通行趋势图分析；不同时段通行记录自定义查询。</span></p><p style=\"text-align: center;\"><img src=\"/minio/ouaa/1967507718857121793.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>异常事件</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持对不同时段的异常通行事件的查询展示。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411369000962",
+            "name": "维保作业",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          },
+          {
+            "id": "1811344409624170497",
+            "name": "商品采价",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/商品采价/main.png",
+            "version": "1.0.0",
+            "description": "商品采价功能用于农批场景下，主要是辅助管理方对场内的商品价格进行采价，了解各类商品价格趋势，动态掌握商品市场行情，给市场经营管理决策提供数据支撑。",
+            "href": "/product-center/app-price-detail.html"
+          },
+          {
+            "id": "1811344408630120449",
+            "name": "动环监控",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+            "href": "/product-center/app-env-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

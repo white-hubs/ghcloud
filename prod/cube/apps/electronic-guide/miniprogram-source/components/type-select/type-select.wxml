@@ -1,0 +1,15 @@
+<view class="type-select-container">
+	<view class="scroll-container">
+		<scroll-view class="select-list" scroll-y>
+			<view wx:for="{{$state.typeList}}" wx:key="id" data-id="{{item.id}}" bindtap="checkType" class="select-item {{$state.typeId===item.id ? 'active':''}}">
+				<image class="icon" src="{{item.filePath}}"></image>
+				<text>{{item.name}}</text>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="triangle-container">
+		<view class="triangle">
+
+		</view>
+	</view>
+</view>

@@ -1,0 +1,75 @@
+
+.panel {
+  .fatalism {
+    margin-left: 6px;
+    margin-top: 30px;
+  }
+
+  .equipmentAlarm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .content {
+      font-size: 16px;
+    }
+    .thePolice {
+      width: 155px;
+      height: 24px;
+      background: rgba(108, 128, 151, 0.5);
+      border-radius: 0px 0px 0px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      padding: 0 16px 0 8px;
+      margin-bottom: 18px;
+
+      div {
+        span {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: #328bf7;
+          border-radius: 50%;
+        }
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .policeList .thePolice:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.attributeList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .attributeBox {
+    margin: 10px 0 0 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+
+    .attributeBox-left {
+      width: 85px;
+      height: 40px;
+      background: rgba(86, 142, 255, 0.3);
+    }
+
+    .attributeBox-right {
+      width: 77px;
+      height: 40px;
+      background: #1e3053;
+    }
+  }
+}

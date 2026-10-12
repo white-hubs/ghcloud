@@ -1,0 +1,5 @@
+# 此目录
+交通控制 左右面板已拆分（对应`cards、components`卡片）。
+
+# TODO
+原`left.vue、right.vue`暂时保留，待卡片拆分完成后 & 现场配置成新的卡片后再删除。

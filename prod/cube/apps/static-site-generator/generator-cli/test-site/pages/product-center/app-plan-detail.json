@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-plan-detail.html",
+  "meta": {
+    "title": "预案管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+    "keywords": "预案管理,应急预案,安全管理,园区安全,应急响应"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+        "productName": "预案管理",
+        "productDescription": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "预案管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965004812992917505.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>预案效果模拟</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过可视化界面，直观展现预案的状态和进度，当预案启动时，相关设备会根据预案设置进行相应的动作，如门禁开启、摄像头转动等，用户可以在界面中实时看到这些动态效果。提供预设的预案模板，用户可以在在可视化界面中编辑和设置预案，根据预案设置，模拟人员的疏散路线、进出时间等。同时，用户可结合实际需求对预案进行选择和修改，提高预案编辑的效率和准确性。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965015831966396417.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> &nbsp; &nbsp; &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965015872894414849.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>预案文件</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于上传各类园区安全文件，方便园区内人员查看。利于后续人员指挥调度时调用查看并依据关规定进行处理，建立规范标准化处理机制。支持上传配置应急预案文件，包括文件名称、文件类型、文件级别、事件分类，到期日期、文件描述等，支持预案附件和处理流程附件上传。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>预案规则</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于园区内安全报警事件的规则制订。制订完成系统将按照规则执行全天候安全监管，一旦触发规则，将按照设定进行报警、消息通知、设备联动等一系列操作。用户可以根据实际情况灵活配置报警规则，建立内部的隐患机制，包括报警级别、触发条件、处理人、消息通知人、设备联动等，以及触发报警的条件和流程。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>事件分类</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">事件分类功能用于将不同的报警事件归类，支持自定义创建事件分类，包括分类名称、事件说明等，便于业务后续按照分类的维度进行统计分析。AI 可对事件分类进行智能优化，通过对大量报警事件的学习和分析，自动识别潜在的事件类别和特征，提出分类调整建议，使事件分类更加科学合理，提高统计分析的准确性。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>预案制定</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">提供定制化的预案模板，用户可自定义设置应急预案事件及详细流程，使用户能够根据自身情况快速制定适用的预案，涵盖各类突发状况，满足不同场景需求。在预案流程设定后，平台引入先进的 AI 技术，能对应急预案流程进行深度剖析。AI 基于历史数据、事件特性以及行业最佳实践，智能识别流程中可能存在的薄弱环节与不合理之处，并给出针对性的优化建议。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>预案版本管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持预案版本的管理，包括历史版本的查阅和比较，确保预案的更新和修改符合规范，且能够追溯到历史记录，方便审查和复盘。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344409989074946",
+            "name": "报警中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          },
+          {
+            "id": "1811344410706300930",
+            "name": "能碳管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。",
+            "href": "/product-center/app-energy-detail.html"
+          },
+          {
+            "id": "1811344409062133761",
+            "name": "肉类交易",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/肉类交易/main.png",
+            "version": "1.0.2",
+            "description": "肉类白条交易溯源系统依托开河智能中枢为基础，围绕肉类白条交易全链条搭建数字化交易溯源平台，提升肉类白条理货、交易等经营效率和管理水平，助推肉类滑轨理货交易智能化转型。",
+            "href": "/product-center/app-meat-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

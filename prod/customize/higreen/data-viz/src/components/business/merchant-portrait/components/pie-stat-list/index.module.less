@@ -1,0 +1,44 @@
+.pie-stat-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-top: 5px;
+
+  .pie-stat-item {
+    padding: 2px 4px;
+    background: rgba(108, 128, 151, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4px;
+
+    span {
+      display: inline-block;
+    }
+
+    .pie-stat-item-icon {
+      width: 5px;
+      height: 6px;
+      background: #2989ff;
+      border-radius: 1px;
+      transform: skewX(-10deg);
+    }
+
+    .pie-stat-item-title {
+      font-size: 6px;
+      color: #85aad3;
+      overflow: hidden;
+      /* 隐藏超出容器的内容 */
+      white-space: nowrap;
+      /* 保持文本在一行内显示 */
+      text-overflow: ellipsis;
+      /* 超出部分显示省略号 */
+      margin-left: 2px;
+    }
+
+    .pie-stat-item-value {
+      font-size: 6px;
+      color: #d1e2ff;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f4f6f8;
+  color: #262a30;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  box-shadow: 0 1px 0 rgba(31, 41, 55, 0.06);
+}
+
+.filterPanel {
+  padding: 12px 12px 6px;
+}
+
+.dropdownMenu {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__bar) {
+  height: 40px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__item) {
+  overflow: hidden;
+  border: 1px solid #d8dbe0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__title) {
+  width: 100%;
+  padding: 0 28px 0 12px;
+  color: #3f444b;
+  font-size: 13px;
+  text-align: left;
+}
+
+.dropdownMenu :global(.van-dropdown-menu__title)::after {
+  right: 12px;
+  border-color: transparent transparent #8d96a3 #8d96a3;
+}
+
+.search {
+  padding: 8px 0;
+  background: transparent;
+}
+
+.search :global(.van-search__content) {
+  height: 42px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #d8dbe0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.search :global(.van-field) {
+  align-items: center;
+  padding: 0;
+}
+
+.search :global(.van-field__control) {
+  font-size: 14px;
+}
+
+.search :global(.van-field__left-icon) {
+  margin-right: 6px;
+}
+
+.resultSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 14px 9px;
+  color: #7c8490;
+  font-size: 12px;
+}
+
+.resultCount {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.resultCount strong {
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.sortHint {
+  color: #9aa1aa;
+}
+
+.listViewport {
+  min-height: calc(100vh - 282px);
+  padding: 0 12px 18px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card {
+  padding: 12px 12px 11px;
+  border: 1px solid #edf0f3;
+  border-left: 3px solid #ff9f2f;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(31, 41, 55, 0.035);
+}
+
+.cardHeader {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cardHeader strong {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardHeader time {
+  flex: none;
+  color: #9097a1;
+  font-size: 11px;
+}
+
+.detailLine {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  color: #737b86;
+  font-size: 12px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.detailIcon {
+  flex: none;
+  color: #9aa1aa;
+  font-size: 13px;
+}
+
+.detailLine span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.counts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 13px;
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px dashed #edf0f3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.countItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.alarmCount {
+  color: #ef4b51;
+}
+
+.faultCount {
+  color: #ed8b2d;
+}
+
+.totalCount {
+  margin-left: auto;
+  color: #6f7782;
+}
+
+.empty {
+  padding-top: 54px;
+}
+
+.listViewport :global(.van-list__finished-text) {
+  height: 40px;
+  line-height: 40px;
+}

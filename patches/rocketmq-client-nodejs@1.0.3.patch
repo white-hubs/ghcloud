@@ -1,0 +1,13 @@
+diff --git a/dist/client/UserAgent.js b/dist/client/UserAgent.js
+index 3cf642ef9a1f7fff188a1514810a676e4e01ee94..6b9fce31508a024046e8f5bb848b46510535f402 100644
+--- a/dist/client/UserAgent.js
++++ b/dist/client/UserAgent.js
+@@ -24,7 +24,7 @@ const node_os_1 = __importDefault(require("node:os"));
+ const node_path_1 = __importDefault(require("node:path"));
+ const node_fs_1 = require("node:fs");
+ const definition_pb_1 = require("../../proto/apache/rocketmq/v2/definition_pb");
+-const VERSION = JSON.parse((0, node_fs_1.readFileSync)(node_path_1.default.join(__dirname, '../../package.json'), 'utf-8')).version;
++const VERSION = '1.0.3';
+ class UserAgent {
+     static INSTANCE = new UserAgent(VERSION, node_os_1.default.platform(), node_os_1.default.hostname());
+     version;

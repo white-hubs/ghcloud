@@ -1,0 +1,102 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.tableSurface {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 232px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+
+  :global(.roll-table) {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  :global(.scroll_warp) {
+    height: 200px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  :global(.ant-image) {
+    margin-right: 4px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+}
+
+.emptySurface {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: transparent;
+  border: 0;
+
+  :global(.ue5-no-data) {
+    min-height: 0;
+    padding: 4px;
+  }
+
+  :global(.ue5-no-data-inner img) {
+    width: 56px;
+    max-height: 56px;
+  }
+
+  :global(.ue5-no-data-text) {
+    margin-top: 6px;
+    font-size: 13px;
+  }
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .tableSurface {
+    height: 380px;
+
+    :global(.scroll_warp) {
+      height: 348px;
+    }
+  }
+
+  .emptySurface {
+    min-height: 300px;
+
+    :global(.ue5-no-data-inner img) {
+      width: 72px;
+      max-height: 72px;
+    }
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .patrol-abnormal-stats-v2-panel) {
+  .tableSurface,
+  .emptySurface {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(patrol-abnormal-stats-v2-panel);

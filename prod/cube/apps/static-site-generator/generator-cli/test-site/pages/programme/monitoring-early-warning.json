@@ -1,0 +1,320 @@
+{
+  "path": "/programme/monitoring-early-warning.html",
+  "meta": {
+    "title": "智能分析_综合监测预警系统_古河云科技",
+    "keywords": "监测预警系统,物联感知,智能分析,安全风险监测平台",
+    "description": "古河云综合监测预警系统基于物联感知与智能分析技术，实时采集多维数据，实现从被动响应到主动预防的转变，为企业提供数字化、智能化的风险管理中枢。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-emergency-dispatch-banner.webp",
+            "title": "综合监测预警系统",
+            "subtitle": "基于物联感知与智能分析技术，实时采集多维数据，实现从被动响应到主动预防的转变，为企业提供数字化、智能化的风险管理中枢。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "风险感知滞后",
+            "description": "依赖人工巡检或孤立监测设备，难以及时发现动态风险。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "分析能力不足",
+            "description": "传统手段缺乏多维度关联分析，无法精准定位根本原因。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "响应效率低下",
+            "description": "各类系统孤立，预警与处置脱节，导致风险升级或扩散。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "业务闭环断裂",
+            "description": "业务环节脱节，未能形成一个完整的管理闭环，使预警效能大打折扣。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《关于推进安全生产领域改革发展的意见》",
+            "description": "要求构建风险分级管控和隐患排查治理双重预防机制，提升安全监测预警能力。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《全国安全生产专项整治三年行动计划》",
+            "description": "明确要求建设安全生产监测预警系统，实现对重大危险源的实时监测和预警。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《应急管理信息化发展规划》",
+            "description": "推动监测预警系统建设，实现多灾种、多部门、跨层级的信息共享和协同联动。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《危险化学品重大危险源监督管理暂行规定》",
+            "description": "要求重大危险源单位建立监测预警系统，实现温度、压力、液位等参数的实时监测。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/remote-monitor.webp",
+            "title": "全域数据融合",
+            "subtitle": "通过传感器、设备监测、视频分析等，实现7*24小时对环境、设备、人员的无盲区监测。打破部门壁垒，将对源、多维度数据进行融合治理，为后续分析提供全面、一致的数据基础。",
+            "features": [
+              {
+                "label": "无盲区监测：",
+                "value": "7×24小时实时采集环境、设备、人员数据"
+              },
+              {
+                "label": "数据融合：",
+                "value": "打破部门壁垒，实现多源异构数据融合治理"
+              },
+              {
+                "label": "一致基础：",
+                "value": "为智能分析提供全面、统一的数据底座"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/wireless-detect.webp",
+            "title": "智能研判预警",
+            "subtitle": "运用大数据和人工智能技术，对海量融合数据进行分析。自动识别复杂风险模式，形成分级预警，实现趋势预测、根因分析和影响评估，大幅提升预警的准确性。",
+            "features": [
+              {
+                "label": "AI深度分析：",
+                "value": "大数据与人工智能融合，自动识别复杂风险模式"
+              },
+              {
+                "label": "分级预警：",
+                "value": "形成多级预警机制，精准推送至责任人"
+              },
+              {
+                "label": "多维评估：",
+                "value": "实现趋势预测、根因分析和影响评估"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-alarm.webp",
+            "title": "协同闭环处置",
+            "subtitle": "一旦生产预警，系统会按风险等级触发语音、短信、电话等多模式告警，秒级直达相关负责人，形成\"监测-预警-处置\"的管理闭环，确保每一条预警都落到实处。",
+            "features": [
+              {
+                "label": "多模告警：",
+                "value": "语音、短信、电话等多模式秒级触达"
+              },
+              {
+                "label": "闭环管理：",
+                "value": "形成\"监测-预警-处置\"完整管理闭环"
+              },
+              {
+                "label": "责任到人：",
+                "value": "确保每一条预警都落到实处"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/water-supply.webp",
+            "title": "联动指挥决策",
+            "subtitle": "当发生应急事件时，指挥中心可以在\"一张图\"上直观查看事件位置、周边资源、处置力量等，一键发起协同会商，并直接调度所需的救援队伍、物资装备。系统还能智能匹配并启动应急预案，提供全面的决策信息支持，实现高效联动。",
+            "features": [
+              {
+                "label": "一张图指挥：",
+                "value": "直观查看事件位置、周边资源与处置力量"
+              },
+              {
+                "label": "智能调度：",
+                "value": "一键会商并直接调度救援队伍与物资装备"
+              },
+              {
+                "label": "预案联动：",
+                "value": "智能匹配并启动应急预案，提供决策支持"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "主动防控",
+            "description": "通过实时监测与预测分析，实现对风险隐患的早期识别与趋势预判，将处置动作从被动响应转变为主动干预。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "效率提升",
+            "description": "系统自动执行巡检、报警与报告生成，大幅减少人工巡检工作量，保障运营效率与稳定性。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "成本优化",
+            "description": "避免重大经济损失，同时确保合规运行，规避监管处罚，实现显著的成本节约与风险对冲。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "体系整合",
+            "description": "打破数据孤岛，实现数据、流程与指挥的标准化联动，将分散的管理能力整合为协同作战的整体。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "#",
+            "items": [
+              {
+                "name": "安防监控",
+                "href": "#"
+              },
+              {
+                "name": "广播中心",
+                "href": "#"
+              },
+              {
+                "name": "安全管理",
+                "href": "#"
+              },
+              {
+                "name": "报警中心",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "#",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/monitoring-case-1.webp",
+            "title": "长沙湘雅路过江隧道",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/monitoring-case-2.webp",
+            "title": "深圳广电金融中心",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/monitoring-case-3.webp",
+            "title": "都江堰领川中学",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

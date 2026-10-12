@@ -1,0 +1,41 @@
+
+.monitor-log-container {
+    padding: 24px;
+    background-color: #fff !important; /* Force white background */
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .search-bar {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .status-counting-down {
+        color: #faad14;
+        font-weight: bold;
+    }
+
+    .level-tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #fff;
+
+        &.level-debug {
+            background-color: #1890ff;
+        }
+        &.level-info {
+            background-color: #52c41a;
+        }
+        &.level-warn {
+            background-color: #faad14;
+        }
+        &.level-error {
+            background-color: #f5222d;
+        }
+    }
+}

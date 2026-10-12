@@ -1,0 +1,314 @@
+:global {
+  .meeting-manage-v2-root {
+    position: relative;
+  }
+
+  .meeting-manage-v2-panel .sub-panel-content {
+    margin-top: 0;
+  }
+
+  .meeting-manage-v2-body {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--access-control-text-primary, #fff);
+    font-size: var(--access-control-font-body, 13px);
+  }
+
+  .meeting-manage-v2-body.is-zoom {
+    width: 100%;
+    min-height: 420px;
+    gap: var(--access-control-space-lg, 16px);
+    padding: var(--access-control-space-lg, 16px);
+  }
+
+  .meeting-manage-chart-surface {
+    min-height: 208px;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .meeting-manage-chart {
+    width: 100%;
+    height: 198px;
+    min-height: 198px;
+  }
+
+  .meeting-manage-stacked-chart {
+    overflow: visible;
+  }
+
+  .meeting-manage-chart .power-factor,
+  .meeting-manage-chart #load-chart {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+  }
+
+  .meeting-manage-availability {
+    height: 286px;
+    min-height: 286px;
+  }
+
+  .meeting-manage-empty {
+    display: flex;
+    min-height: 198px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meeting-manage-empty.is-heatmap {
+    min-height: 286px;
+  }
+
+  .meeting-manage-v2-body.is-zoom .meeting-manage-chart-surface {
+    min-height: 430px;
+    padding: 0;
+  }
+
+  .meeting-manage-v2-body.is-zoom .meeting-manage-chart {
+    height: 410px;
+    min-height: 410px;
+  }
+
+  .meeting-manage-v2-body.is-zoom .meeting-manage-availability {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .meeting-availability-layout {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .meeting-availability-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .meeting-availability-summary-item {
+    display: flex;
+    min-width: 0;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 9px;
+    background: rgba(43, 120, 205, 0.18);
+    border: 1px solid rgba(113, 178, 255, 0.2);
+    border-radius: 8px;
+  }
+
+  .meeting-availability-summary-item .summary-label {
+    overflow: hidden;
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.82));
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .meeting-availability-summary-item .summary-value {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 2px;
+    color: var(--access-control-value-color, #fff);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+
+    small {
+      color: var(--access-control-text-label, rgba(220, 238, 255, 0.78));
+      font-size: 11px;
+      font-weight: 500;
+    }
+  }
+
+  .meeting-hour-range-select {
+    min-width: 108px;
+    height: 24px !important;
+  }
+
+  .meeting-hour-range-select .ant-select-selector {
+    height: 24px !important;
+    border-radius: 4px !important;
+  }
+
+  .meeting-availability-summary-item.is-reservable .summary-value {
+    color: #6cf0b2;
+  }
+
+  .meeting-availability-summary-item.is-reserved .summary-value {
+    color: #62a8ff;
+  }
+
+  .meeting-availability-summary-item.is-unavailable .summary-value {
+    color: rgba(220, 231, 245, 0.82);
+  }
+
+  .meeting-availability-grid {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 8px;
+    background: rgba(20, 65, 112, 0.24);
+    border: 1px solid rgba(113, 178, 255, 0.18);
+    border-radius: 8px;
+  }
+
+  .meeting-availability-grid-head,
+  .meeting-availability-grid-row {
+    display: grid;
+    grid-template-columns: 42px repeat(var(--meeting-room-count), minmax(12px, 1fr));
+    gap: 5px;
+    align-items: center;
+  }
+
+  .meeting-availability-grid-head {
+    flex: 0 0 auto;
+    margin-bottom: 5px;
+  }
+
+  .meeting-availability-time-head,
+  .meeting-availability-room-head {
+    overflow: hidden;
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.78));
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .meeting-availability-grid-body {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    overflow: auto;
+    padding-right: 2px;
+  }
+
+  .meeting-availability-grid-body::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .meeting-availability-grid-body::-webkit-scrollbar-thumb {
+    background: rgba(91, 163, 255, 0.36);
+    border-radius: 999px;
+  }
+
+  .meeting-availability-time {
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.72));
+    font-size: 11px;
+    line-height: 18px;
+    text-align: right;
+  }
+
+  .meeting-availability-cell {
+    min-width: 0;
+    height: 14px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .meeting-availability-cell.is-reservable {
+    color: #e8fff5;
+    background: linear-gradient(90deg, rgba(33, 211, 132, 0.72), rgba(56, 238, 171, 0.4));
+  }
+
+  .meeting-availability-cell.is-reserved {
+    color: #eef7ff;
+    background: linear-gradient(90deg, rgba(45, 135, 255, 0.72), rgba(87, 170, 255, 0.42));
+  }
+
+  .meeting-availability-cell.is-unavailable {
+    color: rgba(222, 233, 248, 0.76);
+    background: rgba(190, 205, 222, 0.22);
+  }
+
+  .meeting-availability-legend {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 6px;
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.76));
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .meeting-availability-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .meeting-availability-legend-item i {
+    width: 10px;
+    height: 6px;
+    border-radius: 999px;
+  }
+
+  .meeting-availability-legend-item.is-reservable i {
+    background: #38eeab;
+  }
+
+  .meeting-availability-legend-item.is-reserved i {
+    background: #57aaff;
+  }
+
+  .meeting-availability-legend-item.is-unavailable i {
+    background: rgba(190, 205, 222, 0.55);
+  }
+
+  .meeting-manage-empty.is-zoom {
+    min-height: 410px;
+  }
+
+  .meeting-manage-header-toolbar {
+    display: flex;
+    align-items: center;
+    height: 24px;
+  }
+
+  .meeting-manage-header-toolbar .date-inline-form {
+    height: 24px;
+    margin: 0;
+  }
+
+  .meeting-manage-header-toolbar .ant-select-selector,
+  .meeting-manage-header-toolbar .ant-picker,
+  .meeting-manage-header-toolbar .ant-btn {
+    height: 24px !important;
+    border-radius: 4px !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .meeting-manage-chart-surface {
+    color: var(--access-control-text-primary, #16345c);
+  }
+
+  :root[data-visual-theme="minimal-white"] .meeting-availability-summary-item,
+  :root[data-visual-theme="minimal-white"] .meeting-availability-grid {
+    background: rgba(246, 250, 255, 0.64);
+    border-color: rgba(116, 158, 210, 0.16);
+  }
+
+  :root[data-visual-theme="minimal-white"] .meeting-availability-cell.is-unavailable {
+    color: rgba(79, 105, 139, 0.72);
+    background: rgba(126, 148, 176, 0.16);
+  }
+}

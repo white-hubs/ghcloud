@@ -1,0 +1,82 @@
+// 区域树选择器样式
+.area_tree_select {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+
+  .area_tree_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #ebedf0;
+
+    .area_tree_title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #323233;
+    }
+
+    .area_tree_selected_count {
+      font-size: 14px;
+      color: #969799;
+    }
+  }
+
+  .area_tree_search {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ebedf0;
+  }
+
+  .area_tree_content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+
+    .tree_node {
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f7f8fa;
+      }
+
+      .tree_node_content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .tree_arrow {
+          font-size: 14px;
+          color: #969799;
+          transition: transform 0.2s;
+        }
+
+        .tree_label {
+          flex: 1;
+          font-size: 14px;
+          color: #323233;
+        }
+      }
+    }
+
+    .area_tree_empty {
+      text-align: center;
+      padding: 40px 0;
+      color: #969799;
+      font-size: 14px;
+    }
+  }
+
+  .area_tree_footer {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    border-top: 1px solid #ebedf0;
+    background: #fff;
+  }
+}
+
+

@@ -1,0 +1,804 @@
+/**
+ * 配色与层级参照 `statistical-panel.less`（stage 底色、卡片渐变、描边、正文/弱化/强调字色）
+ */
+
+.pallet-position-card-root {
+  /* 与 .statistical-panel-stage 一致 */
+  --sp-stage-bg: #212f40;
+  --sp-base: #d9e8ff;
+  --sp-title: #f7fbff;
+  --sp-card-title: #e6f2ff;
+  --sp-card-title-bar: #56a5ff;
+  --sp-muted: rgb(190 214 246 / 78%);
+  --sp-muted-mid: rgb(190 214 246 / 62%);
+  --sp-muted-weak: rgb(190 214 246 / 58%);
+  --sp-header-bright: rgb(214 232 255 / 92%);
+  --sp-row: rgb(244 248 255 / 96%);
+  --sp-value: rgb(244 250 255 / 98%);
+  --sp-border: rgb(138 186 255 / 18%);
+  --sp-border-soft: rgb(121 177 255 / 20%);
+  --sp-divider: rgb(121 177 255 / 14%);
+  --sp-inner:rgb(255 255 255 / 7%);
+  --sp-inset: inset 0 0 24px rgb(61 131 255 / 8%);
+  --sp-card-grad: linear-gradient(to right, rgb(16 35 53) 0%, rgb(23 60 105 / 60%) 58%, rgb(8 31 55 / 62%) 100%);
+  --sp-ring-hole: rgb(8 28 52 / 98%);
+  --sp-bar-track: rgb(120 170 255 / 22%);
+  --sp-bar-fill: linear-gradient(90deg, #4a9dff 0%, #7ee8ff 100%);
+  --sp-accent-soft: rgb(200 228 255 / 96%);
+  --sp-link: #fff;
+  --sp-warn-strong: #ffb24a;
+  --sp-ok-strong: #79e6a6;
+  --sp-danger-bg: rgb(255 104 104 / 12%);
+  --sp-danger-border: rgb(255 132 132 / 28%);
+  --sp-danger-text: #ff9f9f;
+  --sp-danger-muted: rgb(255 190 190 / 80%);
+
+  background-color: var(--sp-stage-bg);
+  background-image: linear-gradient(180deg, rgb(12 42 74 / 35%) 0%, var(--sp-stage-bg) 42%, rgb(4 12 22) 100%);
+  box-sizing: border-box;
+  color: var(--sp-base);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  font-size: 13px;
+  height: 100%;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ppc-scroll {
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px 14px 16px;
+  width: 100%;
+}
+
+/* 与 .statistical-panel-card 一致 */
+.ppc-card {
+  background: var(--sp-card-grad);
+  border: 1px solid var(--sp-border);
+  border-radius: 10px;
+  box-shadow: var(--sp-inset);
+  box-sizing: border-box;
+  color: var(--sp-row);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+}
+
+.ppc-card--clickable {
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ppc-card--clickable:hover {
+  border-color: rgb(162 214 255 / 62%);
+  box-shadow: var(--sp-inset), 0 0 0 1px rgb(88 156 240 / 18%);
+}
+
+.ppc-card--clickable:focus-visible {
+  box-shadow: var(--sp-inset), 0 0 0 2px rgb(130 186 255 / 45%);
+}
+
+.ppc-header {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.ppc-title-row {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ppc-title-icon {
+  color: rgb(210 228 255 / 88%);
+  flex-shrink: 0;
+  font-size: 22px;
+}
+
+.ppc-title {
+  color: var(--sp-title);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+  min-width: 0;
+}
+
+.ppc-title__link {
+  background: none;
+  border: none;
+  color: var(--sp-link);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.ppc-title__link:hover {
+  color: #f5fbff;
+}
+
+.ppc-title__link:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--sp-card-title-bar);
+  outline-offset: 2px;
+}
+
+/* 参照 .statistical-panel-platform-menu-item */
+.ppc-clock {
+  background: linear-gradient(
+    to right,
+    rgb(10 34 60 / 80%) 0%,
+    rgb(40 103 180 / 60%) 58%,
+    rgb(12 42 74 / 62%) 100%
+  );
+  border: 1px solid rgb(130 186 255 / 34%);
+  border-radius: 4px;
+  box-shadow: inset 0 0 12px rgb(88 156 240 / 12%);
+  color: rgb(220 236 255 / 95%);
+  flex-shrink: 0;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  padding: 6px 10px;
+}
+
+.ppc-layout {
+  display: grid;
+  flex: 1 1 auto;
+  gap: 14px;
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr) minmax(260px, 300px);
+  grid-template-rows: 1fr;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.ppc-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  min-width: 0;
+}
+
+.ppc-column--side {
+  align-self: stretch;
+  min-height: 0;
+}
+
+.ppc-column--side > .ppc-card {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.ppc-column--side:not(.ppc-right-stack) > .ppc-card .ppc-basic-photo {
+  aspect-ratio: unset;
+  flex: 0 1 auto;
+  max-height: none;
+  min-height: 0;
+}
+
+.ppc-column--center {
+  justify-content: flex-start;
+}
+
+.ppc-column--center > .ppc-card {
+  flex: 0 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .ppc-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .ppc-column--side > .ppc-card {
+    flex: 0 1 auto;
+  }
+
+  .ppc-column--side:not(.ppc-right-stack) > .ppc-card .ppc-basic-photo--img {
+    max-height: 220px;
+  }
+}
+
+.ppc-card-head {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.ppc-card-head__left {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* 与 .statistical-panel-card-title 一致 */
+.ppc-card-title {
+  border-left: 3px solid var(--sp-card-title-bar);
+  color: var(--sp-card-title);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.ppc-status {
+  color: var(--sp-muted);
+  flex-shrink: 0;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ppc-status--warn {
+  color: #ffd37a;
+}
+
+.ppc-status--ok {
+  color: var(--sp-ok-strong);
+}
+
+.ppc-info-grid {
+  display: grid;
+  gap: 8px 12px;
+  grid-template-columns: auto 1fr;
+}
+
+.ppc-k {
+  color: var(--sp-muted);
+  font-size: 13px;
+}
+
+.ppc-v {
+  color: var(--sp-value);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* 仓位基本信息：与统计页卡片同一套，仅布局与照片位样式 */
+.ppc-card.ppc-basic-card {
+  gap: 14px;
+  padding: 14px;
+}
+
+.ppc-basic-card__head {
+  border-bottom: 1px solid var(--sp-divider);
+  flex-shrink: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.ppc-basic-card__head-icon {
+  color: rgb(168 206 255 / 96%);
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.ppc-basic-card__grid {
+  column-gap: 20px;
+  flex-shrink: 0;
+  grid-template-columns: max-content 1fr;
+  row-gap: 10px;
+}
+
+.ppc-basic-photo {
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 0;
+  max-height: 140px;
+  position: relative;
+  width: 100%;
+}
+
+/* 展位图：无资源时占位线 */
+.ppc-basic-photo:not(.ppc-basic-photo--img)::before,
+.ppc-basic-photo:not(.ppc-basic-photo--img)::after {
+  background: rgb(190 214 246 / 42%);
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ppc-basic-photo:not(.ppc-basic-photo--img)::before {
+  height: 2px;
+  width: 62%;
+}
+
+.ppc-basic-photo:not(.ppc-basic-photo--img)::after {
+  height: 62%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 2px;
+}
+
+.ppc-basic-photo--img {
+  aspect-ratio: unset;
+  background: transparent;
+  display: block;
+  flex: 0 1 auto;
+  margin: 18px 0;
+  max-height: 200px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  width: 100%;
+}
+
+.ppc-basic-footer {
+  border-top: 1px solid var(--sp-divider);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 10px;
+  margin-top: 0;
+  padding-top: 12px;
+}
+
+.ppc-basic-footer-row {
+  align-items: start;
+  column-gap: 16px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  row-gap: 2px;
+}
+
+.ppc-basic-footer-row .ppc-k {
+  padding-top: 1px;
+}
+
+.ppc-basic-footer-val--wrap {
+  hyphens: auto;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-align: right;
+  word-break: normal;
+}
+
+.ppc-storage-card {
+  /* 储量监测 / 质量指标：大数字统一强调色 */
+  --ppc-stat-accent: #7ee8ff;
+
+  padding-top: 10px;
+}
+
+.ppc-center-top {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.ppc-hero-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ppc-hero-block--variety .ppc-hero-value {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ppc-hero-block--weight .ppc-hero-label {
+  margin-bottom: 0;
+}
+
+.ppc-hero-weight-line {
+  align-items: baseline;
+  column-gap: 8px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.ppc-hero-weight__num {
+  color: var(--ppc-stat-accent);
+  font-size: 36px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+  text-shadow: 0 0 18px rgb(100 210 255 / 35%);
+}
+
+.ppc-hero-weight__unit {
+  color: rgb(190 214 246 / 78%);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ppc-hero-label {
+  color: var(--sp-muted);
+  display: block;
+  font-size: 13px;
+}
+
+.ppc-hero-value {
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.ppc-hero-value--accent {
+  color: var(--sp-accent-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.ppc-cap-row {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ppc-echarts {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+.ppc-echarts--usage-gauge {
+  flex-shrink: 0;
+  height: 104px;
+  width: 104px;
+}
+
+.ppc-cap-bar-wrap {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  min-height: 0;
+  min-width: 160px;
+}
+
+.ppc-cap-usage-title {
+  color: rgb(190 214 246 / 78%);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.ppc-echarts--capacity-bar {
+  height: 22px;
+  width: 100%;
+}
+
+.ppc-cap-stats {
+  column-gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4px;
+  row-gap: 6px;
+}
+
+.ppc-cap-stat {
+  align-items: baseline;
+  column-gap: 5px;
+  display: inline-flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+}
+
+.ppc-cap-stat__lbl {
+  color: rgb(190 214 246 / 78%);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.ppc-cap-stat__num {
+  color: var(--ppc-stat-accent);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.ppc-storage-card .ppc-cap-stat__num {
+  text-shadow: 0 0 12px rgb(100 210 255 / 22%);
+}
+
+.ppc-cap-stat__unit {
+  color: rgb(190 214 246 / 72%);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.ppc-metric-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 16px;
+}
+
+@media (min-width: 900px) {
+  .ppc-metric-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ppc-metric-cell {
+  background: var(--sp-inner);
+  border: 1px solid var(--sp-border-soft);
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-height: 96px;
+  padding: 14px 12px 16px;
+}
+
+.ppc-metric-cell--stack {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.ppc-metric-cell__k {
+  color: var(--sp-muted);
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+  margin-top: 0;
+  order: 2;
+}
+
+.ppc-metric-cell__v {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 0;
+  order: 1;
+}
+
+/* 储量监测 / 质量指标：有值数字同一强调色；占位/无数据略淡 */
+.ppc-metric-cell__v--stat {
+  color: var(--ppc-stat-accent);
+  text-shadow: 0 0 14px rgb(100 210 255 / 28%);
+}
+
+.ppc-metric-cell__v--empty {
+  color: rgb(126 220 255 / 48%);
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+.ppc-two-col {
+  display: grid;
+  gap: 8px 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 16px;
+}
+
+.ppc-two-col__full {
+  grid-column: 1 / -1;
+}
+
+.ppc-subhead {
+  border-left: 3px solid var(--sp-card-title-bar);
+  color: var(--sp-card-title);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 14px 0 0;
+  padding-left: 10px;
+}
+
+.ppc-subhead--detection {
+  margin-top: 6px;
+}
+
+.ppc-table-scroll {
+  -webkit-overflow-scrolling: touch;
+  flex: 0 1 auto;
+  margin-top: 4px;
+  max-height: min(40vh, 320px);
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  width: 100%;
+}
+
+.ppc-table {
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.ppc-table th,
+.ppc-table td {
+  border: 1px solid var(--sp-divider);
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.ppc-table th {
+  background: rgb(12 32 52 / 96%);
+  box-shadow: 0 1px 0 var(--sp-divider);
+  color: var(--sp-header-bright);
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ppc-table td {
+  color: rgb(230 244 255 / 92%);
+  font-variant-numeric: tabular-nums;
+}
+
+.ppc-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  min-width: 0;
+}
+
+.ppc-alert {
+  background: var(--sp-danger-bg);
+  border: 1px solid var(--sp-danger-border);
+  border-radius: 6px;
+  color: var(--sp-danger-text);
+  font-size: 12px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.ppc-temp-gauges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-around;
+  margin: 8px 0;
+}
+
+.ppc-temp-gauge-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ppc-echarts--temp {
+  height: 80px;
+  width: 80px;
+}
+
+.ppc-mini-ring__lbl {
+  color: var(--sp-muted);
+  font-size: 11px;
+  margin-top: 6px;
+  text-align: center;
+  width: 80px;
+}
+
+.ppc-gas-row {
+  margin-bottom: 10px;
+}
+
+.ppc-gas-row:last-child {
+  margin-bottom: 0;
+}
+
+.ppc-gas-head {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.ppc-gas-name {
+  color: var(--sp-muted);
+  font-size: 12px;
+}
+
+.ppc-gas-val {
+  color: var(--sp-value);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ppc-gas-bar {
+  width: 100%;
+}
+
+.ppc-bar-track {
+  background: var(--sp-bar-track);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ppc-bar-fill {
+  background: var(--sp-bar-fill);
+  border-radius: 999px;
+  box-shadow: 0 0 8px rgb(120 210 255 / 35%);
+  height: 100%;
+  min-width: 2px;
+  transition: width 0.2s ease;
+}
+
+.ppc-gas-bar .ppc-bar-fill--co2,
+.ppc-gas-bar .ppc-bar-fill--ph3 {
+  background: linear-gradient(90deg, #52c41a 0%, #95de64 100%);
+  box-shadow: 0 0 8px rgb(120 200 140 / 28%);
+}
+
+.ppc-gas-bar .ppc-bar-fill--o2 {
+  background: linear-gradient(90deg, #ff6464 0%, #ff9f9f 100%);
+  box-shadow: 0 0 8px rgb(255 120 120 / 32%);
+}
+
+.ppc-echarts--humidity-gauge {
+  height: 148px;
+  width: 100%;
+}
+
+.ppc-echarts--humidity-bar {
+  height: 22px;
+  width: 100%;
+}
+
+.ppc-foot-note {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* 与 statistical-panel-alarm-detail-item.is-safe 同系 */
+.ppc-foot-note__badge {
+  background: rgb(63 180 103 / 11%);
+  border: 1px solid rgb(91 232 142 / 26%);
+  border-radius: 6px;
+  color: rgb(175 241 203 / 92%);
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.45;
+  padding: 6px 14px;
+}

@@ -1,0 +1,44 @@
+
+.panel {
+  height: 100%;
+  overflow: hidden;
+}
+
+.statistic-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  :deep(.ant-statistic) {
+    &-title {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.equipmentAlarmList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // margin: 5px 0;
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+.equipmentAlarm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+.line-chart {
+  height: 220px;
+}

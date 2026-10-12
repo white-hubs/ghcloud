@@ -1,0 +1,43 @@
+.a_primary {
+  color: #1890FF;
+}
+.a_danger {
+  color: #FF493F;
+}
+.view_sider {
+  width: 200px;
+  margin-right: 10px;
+  padding: 20px 10px;
+  text-align: left;
+}
+.form_header {
+  padding: 20px 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.info_content {
+  background-color: #fff;
+  border-radius: 4px;
+}
+.edit_form {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.edit_form_header {
+  border-bottom: solid 1px #EBF0FB;
+  font-weight: 500;
+  text-align: left;
+  font-size: 16px;
+  padding: 16px;
+}
+.edit_form_content {
+  padding: 20px 30px;
+}
+.edit_form_footer {
+  border-top: solid 1px #EBF0FB;
+  padding: 10px 20px;
+  background-color: #fff;
+  text-align: right;
+}

@@ -1,0 +1,17 @@
+.designTabs {
+  :global(.ant-tabs) {
+    height: calc(100vh - 180px);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(.ant-tabs-content) {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  :global(.ant-tabs-tabpane) {
+    height: 100%;
+  }
+}

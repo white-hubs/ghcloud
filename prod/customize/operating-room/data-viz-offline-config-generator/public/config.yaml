@@ -1,0 +1,6 @@
+products-center-api: 'http://182.150.63.62:8082/service/extdirect'
+cloud-api: 'http://192.168.0.243:40201'
+nginx-port: '80'
+username: '13888888881'
+password: 'gy123456'
+tenant: '29454808'

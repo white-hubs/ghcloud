@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta version="<%- version %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待办中心</title>
+    <style>
+      #todo-center-app{
+        height: 100%;
+      }
+      .todo-center-app-btn-link{
+        color: var(--todo-center-app-primary-color);
+      }
+    </style>
+  </head>
+  <body style="margin: 0;">
+    <div id="todo-center-app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      // 如果在iframe中，则宽度和高度为100%
+      if (window.self !== window.top || !window.__POWERED_BY_QIANKUN__) {
+        document.getElementById('todo-center-app').style.width = '100vw';
+        document.getElementById('todo-center-app').style.height = '100vh';
+      }
+    </script>
+  </body>
+</html>

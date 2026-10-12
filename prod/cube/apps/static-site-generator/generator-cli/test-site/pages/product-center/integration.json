@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/integration.html",
+  "meta": {
+    "title": "集成管理 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp",
+        "searchAllHref": "/product-center/app"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "integration",
+        "allHref": "/product-center/app.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "name": "能碳管理",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。 ",
+            "href": "/product-center/app-energy-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "name": "门禁管理",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+            "name": "空调管理",
+            "version": "1.0.2",
+            "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+            "href": "/product-center/app-ac-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/智能照明/main.png",
+            "name": "智能照明",
+            "version": "1.0.1",
+            "description": "智能照明能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。",
+            "href": "/product-center/app-lighting-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电梯管理/main.png",
+            "name": "电梯管理",
+            "version": "1.0.0",
+            "description": "电梯管理系统实现了对电梯运行状态的实时采集与监控。通过先进的技术手段，系统能够实时捕捉电梯的运行数据，包括但不限于速度、楼层停靠、运行时长等关键指标。",
+            "href": "/product-center/app-elevator-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "name": "冷热源",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电动车管理/main.png",
+            "name": "电动车管理",
+            "version": "1.0.1",
+            "description": "电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。",
+            "href": "/product-center/app-ev-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

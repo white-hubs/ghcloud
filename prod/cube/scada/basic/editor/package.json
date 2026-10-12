@@ -1,0 +1,24 @@
+{
+  "name": "@cube-scada/editor",
+  "version": "0.1.2",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cube-scada/core": "workspace:*",
+    "@cube-scada/elements": "workspace:*",
+    "@cube-scada/engine": "workspace:*",
+    "@cube-scada/renderer": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "catalog:",
+    "@antv/x6": "catalog:",
+    "@antv/x6-vue-shape": "catalog:",
+    "ant-design-vue": "catalog:",
+    "@ant-design/icons-vue": "catalog:",
+    "pinia": "catalog:"
+  }
+}

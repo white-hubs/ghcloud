@@ -1,0 +1,280 @@
+.toolbar {
+  padding: 12px;
+  background: #fff;
+}
+
+.navAction {
+  border: 0;
+  background: transparent;
+  color: #1677ff;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.filterMenu {
+  margin-top: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  :global(.van-dropdown-menu__bar) {
+    height: 40px;
+    box-shadow: none;
+  }
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 12px;
+  overflow-x: auto;
+}
+
+.chip {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border: 1px solid #d9e2ef;
+  border-radius: 999px;
+  color: #566275;
+  font-size: 13px;
+  line-height: 18px;
+  background: #fff;
+}
+
+.chipActive {
+  border-color: #1677ff;
+  color: #1677ff;
+  background: #eef6ff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+}
+
+.personCard,
+.certCard {
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+
+  > div:first-child {
+    min-width: 0;
+  }
+}
+
+.name {
+  color: #111827;
+  font-size: 17px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.phone {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin-top: 12px;
+  color: #5d6675;
+  font-size: 13px;
+
+  span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+
+  :global(.van-button) {
+    min-width: 72px;
+  }
+}
+
+.poolPopup {
+  max-height: 84vh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.popupTitle {
+  padding: 16px 16px 6px;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.poolList {
+  max-height: 52vh;
+  padding: 6px 12px calc(80px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+}
+
+.poolItem {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.poolName {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.poolMeta {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.popupActions {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 12px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.detailPage {
+  min-height: 100vh;
+  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 12px 0;
+}
+
+.detailSection {
+  padding: 12px;
+
+  :global(.van-cell-group--inset) {
+    margin: 0;
+    background: transparent;
+  }
+
+  :global(.van-cell) {
+    padding-right: 0;
+    padding-left: 0;
+    background: transparent;
+  }
+}
+
+.detailBottomActions {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 12px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.resumeFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.filterTrigger,
+.filterClear {
+  border: 0;
+  background: transparent;
+  color: #1677ff;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.filterTrigger {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.filterClear {
+  flex: 0 0 auto;
+}
+
+.timelineDate {
+  margin-bottom: 8px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timelineGroup {
+  position: relative;
+  padding-left: 12px;
+  border-left: 2px solid #dbeafe;
+}
+
+.resumeItem {
+  margin-bottom: 8px;
+  padding: 8px 0;
+  color: #374151;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+
+  span {
+    display: block;
+    margin-top: 4px;
+    color: #8b95a5;
+    font-size: 12px;
+  }
+}
+
+.certCard {
+  padding: 12px 0;
+  background: transparent;
+  box-shadow: none;
+}

@@ -1,0 +1,41 @@
+
+.hospitalInfo {
+  padding: 10px;
+
+  img {
+    width: 336px;
+    height: 128px;
+  }
+
+  .hospitalInfo-text {
+    color: #fff;
+    text-align: center;
+
+    .hospitalInfo-title {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .scroll_box {
+      text-align: left;
+      overflow: hidden;
+      height: 100px;
+
+      .scroll-text {
+        animation: scroll 10s linear infinite;
+        color: #d9e7ff;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}

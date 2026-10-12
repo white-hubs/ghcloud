@@ -1,0 +1,92 @@
+// 仅保留全局最小公共样式；业务样式请写在组件同目录的 *.less / *.module.less 中。
+
+// 与 Ant Design token `colorPrimary` / 开河蓝一致，供非 token 场景引用
+:root {
+  --template-color-primary: rgb(24, 144, 255);
+}
+
+// 全局 border-box：padding/border 计入元素尺寸；含 Teleport 到 `body` 的浮层（与仅 `#FireManagement` 后代相比不会漏掉）
+// 微前端同域嵌入主应用时，`*` 会影响主应用 DOM；若必须隔离请改为 `#FireManagement` 后代选择器并单独处理 Teleport 节点
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.fire-management-placeholder() {
+  .ant-input,
+  .ant-input-affix-wrapper input,
+  .ant-input-number-input,
+  .ant-picker-input > input,
+  .ant-select-selection-search-input,
+  .fire-management-input,
+  .fire-management-input-affix-wrapper input,
+  .fire-management-input-number-input,
+  .fire-management-picker-input > input,
+  .fire-management-select-selection-search-input {
+    &::placeholder {
+      color: #86909c !important;
+      opacity: 1;
+    }
+  }
+
+  .ant-select-selection-placeholder,
+  .ant-select-selection__placeholder,
+  .fire-management-select-selection-placeholder,
+  .fire-management-select-selection__placeholder {
+    color: #86909c !important;
+  }
+}
+
+// 主应用的全局样式会覆盖 Ant 控件的占位色；在页面根节点内恢复统一的可读灰色。
+#FireManagement {
+  .fire-management-placeholder();
+}
+
+// 弹窗挂载到 body；仅在本子应用挂载期间限制其高度，避免影响主应用及其他子应用。
+body.fire-management-modal-scope {
+  .fire-management-placeholder();
+
+  .ant-modal {
+    max-width: calc(100vw - 32px);
+    max-height: 90vh !important;
+    padding-bottom: 0;
+  }
+
+  .ant-modal-content {
+    display: flex;
+    max-height: 90vh !important;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .ant-modal-header,
+  .ant-modal-footer {
+    flex: 0 0 auto;
+  }
+
+  .ant-modal-body {
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow: auto;
+    overscroll-behavior: contain;
+
+    .ant-table-body {
+      max-height: clamp(160px, calc(90vh - 300px), 436px) !important;
+    }
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.ml-10 { margin-left: 10px; }
+.mr-10 { margin-right: 10px; }
+.pd-10 { padding: 10px; }
+.pd-20 { padding: 20px; }

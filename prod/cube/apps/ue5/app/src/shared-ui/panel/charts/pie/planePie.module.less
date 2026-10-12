@@ -1,0 +1,136 @@
+:global {
+  #load-chart,
+  .power-factor {
+    width: 100%;
+    height: 100%;
+  }
+
+  .plane-pie-chart--empty {
+    visibility: hidden;
+  }
+
+  .plane-pie-empty-ring {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--access-control-empty-ring-color, rgba(125, 166, 212, 0.28));
+    pointer-events: none;
+  }
+
+  /* Scoped to PlanePie only — do not use bare .pie-box (conflicts with ElevatorAnalysisPie). */
+  .plane-pie-box {
+    position: relative;
+    width: 154px;
+    height: 154px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 32.5%;
+      height: 32.5%;
+      transform: translate(-50%, -50%);
+      content: "";
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.445);
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 61.7%;
+      height: 61.7%;
+      transform: translate(-50%, -50%);
+      content: " ";
+      border-radius: 50%;
+      border: 1px dashed rgba(203, 226, 255, 0.5);
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .access-control-card-theme .plane-pie-box {
+    &::after {
+      background-color: rgba(255, 255, 255, 0.88);
+    }
+
+    &::before {
+      border-color: rgba(61, 111, 175, 0.3);
+    }
+
+    .content {
+      color: var(--visual-text-color, #17366d);
+    }
+  }
+
+  .access-control-card-theme .plane-pie-box {
+    isolation: isolate;
+    box-sizing: border-box;
+    flex: 0 0 var(--access-control-pie-size, 108px);
+    width: var(--access-control-pie-size, 108px);
+    height: var(--access-control-pie-size, 108px);
+
+    &::after {
+      width: 42%;
+      height: 42%;
+      z-index: 0;
+      background-color: var(--access-control-chart-hole-background, rgba(3, 11, 27, 0.72));
+    }
+
+    &::before {
+      width: 68%;
+      height: 68%;
+      z-index: 0;
+      border-color: var(--access-control-chart-guide-color, rgba(125, 198, 255, 0.28));
+    }
+
+    .power-factor {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      z-index: 2;
+      width: 62%;
+      color: var(--access-control-text-label, #fff);
+      font-size: var(--access-control-font-caption, 11px);
+      line-height: 1.35;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        color: var(--access-control-value-color, #eff6ff);
+        font-family: DIN Alternate, Roboto, Source Han Sans CN, sans-serif;
+        font-size: var(--access-control-font-emphasis, 16px);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  .access-control-card-theme.is-zoom .plane-pie-box {
+    flex-basis: var(--access-control-pie-size-zoom, 200px);
+    width: var(--access-control-pie-size-zoom, 200px);
+    height: var(--access-control-pie-size-zoom, 200px);
+
+    .content {
+      font-size: var(--access-control-font-label, 12px);
+
+      span {
+        font-size: var(--access-control-font-zoom-value, 24px);
+      }
+    }
+  }
+}

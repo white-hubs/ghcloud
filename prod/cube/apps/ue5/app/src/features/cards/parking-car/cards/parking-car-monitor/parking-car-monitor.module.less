@@ -1,0 +1,18 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/features/cards/parking-car/_shared/parking-v2-shared.less";
+
+:global {
+  .title-card-icon {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .parking-car-monitor-v2 {
+    padding: 0;
+  }
+}
+
+.v2-minimal-white-panel(parking-car-monitor-v2-panel);
+.parking-v2-minimal-white-children(parking-car-monitor-v2-panel);

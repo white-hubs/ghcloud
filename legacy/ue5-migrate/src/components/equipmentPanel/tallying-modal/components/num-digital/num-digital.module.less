@@ -1,0 +1,79 @@
+.digitalDisplay {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(11,42,73,0.50);
+
+  .title {
+    width: 207px;
+    height: 36px;
+    background: url('../../../public/images/num-title-bg.png') no-repeat;
+    background-size: 100% 100%;
+    color: #C4D8E4;
+    padding: 5px 20px;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+    font-weight: Medium;
+  }
+
+  .content {
+    display: flex;
+    align-items: baseline;
+
+    .unit {
+      color: #C4D8E4;
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+    }
+    .prefix {
+      font-size: 15px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      color: #c4d8e4;
+      line-height: 15px;
+      margin: 8px;
+    }
+
+    .numberContainer {
+      display: flex;
+      align-items: center;
+      margin: 2px;
+      padding: 0 8px;
+      .digit {
+        width: 44px;
+        height: 64px;
+        background: linear-gradient(180deg,rgba(41,137,255,0.50) 3%, rgba(41,137,255,0.00));
+        border: 0.5px solid #2989ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 9px;
+        font-size: 49px;
+        font-family: D-DIN, D-DIN-Regular;
+        font-weight: Regular;
+        line-height: 49px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.leading {
+          color: #0066cc;
+        }
+
+        &.active {
+          color: #FFAB10;
+        }
+      }
+
+      .decimal {
+        color: #FFAB10;
+        font-size: 36px;
+        font-weight: bold;
+        padding-right: 3px;
+      }
+    }
+  }
+}

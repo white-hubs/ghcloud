@@ -1,0 +1,55 @@
+{
+  "name": "@ghcloud/cube-business-alias-manage-plugin",
+  "version": "1.0.5",
+  "description": "别名管理插件",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "dictionary",
+    "service",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/epp": "workspace:^",
+    "vue": "catalog:",
+    "@ant-design/icons-vue": "catalog:",
+    "sortablejs": "1.15.3"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@types/sortablejs": "1.15.8"
+  }
+}

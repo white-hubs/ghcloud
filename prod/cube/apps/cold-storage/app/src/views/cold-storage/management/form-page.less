@@ -1,0 +1,44 @@
+.cold-storage-management-form-page {
+  height: 100%;
+  min-height: 0;
+
+  :deep([class*="layout-header"]) {
+    min-height: 57px;
+    padding: 22px 8px 14px;
+    border-bottom: 1px solid #edf0f5;
+  }
+
+  :deep([class*="verticalLine"]) {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  :deep(#cube-layout-content) {
+    background: #fff;
+  }
+
+  :deep([class*="layout-footer"]) {
+    height: 64px;
+    padding: 0 24px;
+    border-top: 1px solid #edf0f5;
+    background: #fff;
+  }
+
+  :deep([class*="footer-page"]) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    .ant-btn-primary {
+      min-width: 108px;
+      font-weight: 600;
+    }
+  }
+}
+
+.cold-storage-form-page {
+  min-width: 0;
+  min-height: 100%;
+  background: #fff;
+}

@@ -1,0 +1,49 @@
+@import '~ant-design-vue/es/style/themes/default.less';  //引入默认less样式文件
+:root {
+  --PC: @primary-color; //color.less中加入css原生变量：--PC
+}
+@primary-color:#00BA8B;
+@btn-primary-bg:#00BA8B;
+.primary-color {
+  color:white;
+  background-color: @primary-color !important;  //后期换肤修改基础色就是在这里
+  
+}
+.primary-color-before{
+  &::before{
+    background-color: @primary-color !important;
+  }
+}
+.primary-color-1{
+  background-color:@primary-1 !important;
+}
+.primary-color-1-hover{
+  &:hover{
+    background-color:@primary-1 !important;
+    color:@primary-color !important ; 
+  }
+}
+.primary-color-2{
+  background-color:@primary-2 !important;
+}
+.primary-color-3{
+  background-color:@primary-3 !important;
+}
+.primary-color-4{
+  background-color:@primary-4 !important;
+}
+.primary-color-5{
+  background-color:@primary-5 !important;
+}
+.primary-color-7{
+  background-color:@primary-7 !important;
+}
+.primary-color-8{
+  background-color:@primary-8 !important;
+}
+.primary-color-9{
+  background-color:@primary-9 !important;
+}
+.primary-color-10{
+  background-color:@primary-10 !important;
+}

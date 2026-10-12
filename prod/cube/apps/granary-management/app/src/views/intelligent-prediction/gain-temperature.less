@@ -1,0 +1,192 @@
+.gain-temperature-page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+  padding: 0 8px 12px;
+  color: #1d2129;
+}
+
+.gain-temperature-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.gain-temperature-granary-select {
+  width: 136px;
+}
+
+.gain-temperature-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #86909c;
+  font-size: 12px;
+}
+
+.gain-temperature-summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 8px 8px 14px;
+  background: #fff;
+}
+
+.gain-temperature-card {
+  position: relative;
+  display: block;
+  min-height: 132px;
+  padding: 16px 16px 12px;
+  overflow: hidden;
+  border: 1px solid #e5e6eb;
+  border-left: 3px solid #52c41a;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gain-temperature-card.is-active {
+  box-shadow: 0 0 0 2px rgba(22, 132, 255, 0.08);
+}
+
+.gain-temperature-card.is-warning {
+  border-left-color: #faad14;
+}
+
+.gain-temperature-card.is-danger {
+  border-left-color: #ff4d4f;
+}
+
+.gain-temperature-card-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 22px;
+  color: #1d2129;
+  font-size: 13px;
+}
+
+.gain-temperature-card-label-row em {
+  padding: 2px 7px;
+  border: 1px solid #ffccc7;
+  border-radius: 3px;
+  color: #ff4d4f;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.gain-temperature-card-value {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  color: #52c41a;
+  line-height: 1;
+}
+
+.gain-temperature-card.is-warning .gain-temperature-card-value,
+.gain-temperature-card.is-warning .gain-temperature-card-status {
+  color: #faad14;
+}
+
+.gain-temperature-card.is-danger .gain-temperature-card-value,
+.gain-temperature-card.is-danger .gain-temperature-card-status {
+  color: #ff4d4f;
+}
+
+.gain-temperature-card-value strong {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.gain-temperature-card-value span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.gain-temperature-card-value small {
+  margin-left: 2px;
+  font-size: 14px;
+}
+
+.gain-temperature-card-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  color: #52c41a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gain-temperature-card-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.gain-temperature-card-threshold {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #edf0f3;
+  color: #86909c;
+  font-size: 12px;
+}
+
+.gain-temperature-chart-section {
+  padding: 16px 16px 0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.gain-temperature-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gain-temperature-chart-header h3 {
+  margin: 0;
+  color: #1d2129;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.gain-temperature-chart-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gain-temperature-chart {
+  width: 100%;
+  height: 374px;
+}
+
+@media screen and (max-width: 1200px) {
+  .gain-temperature-summary-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .gain-temperature-toolbar,
+  .gain-temperature-chart-header,
+  .gain-temperature-chart-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gain-temperature-summary-row {
+    grid-template-columns: 1fr;
+  }
+}

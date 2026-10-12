@@ -1,0 +1,275 @@
+<template>
+  <Teleport to="body">
+
+  <div id="inspectDetail" >
+    <div class="alarmDetail-modal">
+      <div class="alarmDetail-modal-header">
+        <div class="header-title">
+          <IconFont type="icon-offline" :style="{ fontSize: '24px', color: 'rgba(41, 137, 255, 1)' }" />
+          <span>{{ props?.title}}</span>
+        </div>
+        <div style="display: flex;">
+          <div class="header-close">
+            <CloseOutlined @click="closeModal" />
+          </div>
+        </div>
+      </div>
+      <div class="alarmDetail-modal-content flex-column">
+        <div class="conent-body" style="padding-bottom: 10px;overflow-y: auto;">
+          <a-spin :spinning="authLoading">
+            <info :parameter="datainfo"></info>
+          </a-spin>
+        </div>
+      </div>
+    </div>
+  </div>
+</Teleport>
+
+</template>
+<script setup lang="ts">
+import { onMounted, reactive, watch, onUnmounted, ref } from "vue";
+import { CloseOutlined, RollbackOutlined } from "@ant-design/icons-vue";
+import info from "./info.vue";
+
+const emit = defineEmits(["close"]);
+
+interface Props {
+  title?: string;
+  parameter: Record<string, any>;
+}
+const props = defineProps<Props>();
+const datainfo = reactive<Record<string, any>>({
+  id: props.parameter.id,
+  marketTenant: props.parameter.marketTenant,
+  marketName: props.parameter.marketName || props.parameter.name,
+  authInfo: null
+});
+
+const authLoading = ref(false)
+
+watch(
+  () => props.parameter,
+  async () => {
+    datainfo.marketTenant = props.parameter.marketTenant;
+    datainfo.id = props.parameter.id;
+    datainfo.businessType = props.parameter.businessType;
+    Object.assign(datainfo, props.parameter);
+  },
+  { deep: true, immediate: true }
+);
+const closeModal = () => {
+  emit("close")
+};
+
+onMounted(() => {
+  // const el = document.getElementById('inspectDetail')
+  // document.body.appendChild(el)
+});
+</script>
+
+<style lang="less" scoped>
+.videInfo {
+  width: 1439px !important;
+  padding: 0 10px !important;
+  overflow-y: hidden !important;
+}
+
+.alarmDetail-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9009;
+}
+
+.alarmDetail-modal {
+  width: 800px;
+  height: 760px;
+  position: fixed;
+  z-index: 1011;
+  top: .52083rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(11, 21, 33, 0.9);
+  border: 1px solid rgba(41, 137, 255, 1);
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .alarmDetail-modal-header {
+    height: 50px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      >span {
+        font-size: 16px;
+        font-family: PingFang SC-Medium;
+        font-weight: 500;
+        color: #ffffff;
+        margin-left: 4px;
+      }
+    }
+
+    .header-close {
+      width: 30px;
+      height: 30px;
+      background: #101010;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .header-back {
+      margin-right: 10px;
+    }
+  }
+
+  .alarmDetail-modal-content {
+    height: 650px;
+    width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
+
+    .content-tabs {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      font-family: PingFang SC-Regular;
+      font-weight: 400;
+      color: #ffffff;
+
+      >div {
+        width: 84px;
+        height: 26px;
+        opacity: 1;
+        border: 1px solid rgba(183, 197, 211, 0.3);
+        margin-right: 12px;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 2px 0px rgba(56, 142, 243, 0.45);
+        cursor: pointer;
+
+        >span {
+          display: inline-block;
+          color: white;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+          margin-left: 2px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.active {
+          background: #2989ff;
+
+          >span {
+            color: rgba(4, 14, 38, 0.96);
+            background: white;
+          }
+        }
+      }
+    }
+
+    .conent-body {
+      // height: calc(100% - 55px);
+      flex: 1;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+  }
+
+  .vidiconcontent {
+    height: 670px;
+  }
+}
+
+.vidicon {
+  height: 725px;
+}
+
+.bottom-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 380px;
+  display: flex;
+  z-index: 10;
+
+  &.stow {
+    left: 25px;
+    transition: all 1s ease-in;
+  }
+
+  &.open {
+    left: 380px;
+    transition: all 1s ease-in;
+  }
+
+  .btn-box {
+    height: 56px;
+    display: flex;
+    background: linear-gradient(180deg, #134297 0%, #12316a 100%);
+    margin-right: 16px;
+    border-radius: 6px 6px 6px 6px;
+
+    .line {
+      width: 2px;
+      height: 34px;
+      background: linear-gradient(90deg, #09204a 50%, #13387f 100%);
+      margin-top: 11px;
+    }
+
+    .btn-item {
+      width: 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        p {
+          color: #2bac7e;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: #bcd2ed;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.not-data {
+  text-align: center;
+  margin-top: 16px;
+}
+
+
+</style>

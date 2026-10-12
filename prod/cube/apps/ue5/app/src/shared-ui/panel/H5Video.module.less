@@ -1,0 +1,67 @@
+
+.h5s_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: inherit;
+  }
+
+  .bottomBtn {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+
+    &.showFooter {
+      bottom: 0;
+    }
+
+    &.hideFooter {
+      bottom: -40px;
+    }
+
+    .hideFooter {}
+
+    .videoPlay {
+      width: 15%;
+    }
+
+    .videoControl {
+      width: 60%;
+      text-align: center;
+    }
+
+    .videoOperate {
+      border: 1px solid transparent;
+      height: calc(100% - 2px);
+    }
+  }
+}
+:deep(svg){
+  // width: 100% !important;
+//  svg{
+  width: 15px !important;
+  height: 15px !important;
+//  }
+}
+:deep(.cube-player){
+  div[class^=_error-tex]{
+    background-color: #fff;
+    img{
+      width: 0.3rem;
+    }
+    font-size: 0.072rem;
+  }
+}

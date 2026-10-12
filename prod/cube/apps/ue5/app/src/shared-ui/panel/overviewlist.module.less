@@ -1,0 +1,47 @@
+
+  .thePolice {
+    width: 200px;
+    height: 24px;
+    background: rgba(108, 128, 151, 0.5);
+    border-radius: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  
+    div {
+      display: flex;
+      align-items: center;
+      .thePoliceLeft {
+        margin-left: 5px;
+        display: inline-block;
+        max-width: 76px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+  
+      .thePoliceColor {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #328bf7;
+        border-radius: 50%;
+      }
+  
+      span {
+        font-size: 12px;
+      }
+    }
+    span {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  
+  .policeList .thePolice:last-child {
+    margin-bottom: 0;
+  }
+  

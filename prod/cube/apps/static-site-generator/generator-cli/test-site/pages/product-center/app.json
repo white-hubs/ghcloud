@@ -1,0 +1,358 @@
+{
+  "path": "/product-center/app.html",
+  "meta": {
+    "title": "全部应用 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "all",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安防监控/main.png",
+            "name": "安防监控",
+            "version": "1.0.0",
+            "description": "安防监控系统结合AI算法分析识别安全风险，可实时查看园区视频监控，结合在线巡逻功能，实现全局风险感知预警。提供报警相关能力，若园区较大，可在安防监控设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-security-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消防管理/main.png",
+            "name": "消防管理",
+            "version": "1.0.0",
+            "description": "﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿消防安全管理系统以\"物联感知+数据智能+场景联动\"为核心，构建全域覆盖的消防安全防护网。依托边缘计算与AI算法，对设备状态、环境参数进行实时分析，精准识别温度异常、烟雾浓度超标等风险征兆并自动触发预警。",
+            "href": "/product-center/app-fire-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "name": "预案管理",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发...",
+            "href": "/product-center/app-plan-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+            "name": "动环监控",
+            "version": "1.0.0",
+            "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决...",
+            "href": "/product-center/app-env-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电气管理/main.png",
+            "name": "电气管理",
+            "version": "1.0.1",
+            "description": "电气管理系统通过AIoT技术实现电气隐患实时监测→智能预警→自动处置→能效优化全流程闭环管理，支持查看电气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在电气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计...",
+            "href": "/product-center/app-electric-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+            "name": "广播中心",
+            "version": "1.0.0",
+            "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+            "href": "/product-center/app-broadcast-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+            "name": "入侵报警",
+            "version": "1.0.1",
+            "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求...",
+            "href": "/product-center/app-intrusion-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/用气管理/main.png",
+            "name": "用气管理",
+            "version": "1.0.0",
+            "description": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-gas-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "name": "指挥调度",
+            "version": "1.0.2",
+            "description": "运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+            "href": "/product-center/app-command-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "name": "风险源管理",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全教育/main.png",
+            "name": "安全教育",
+            "version": "1.0.0",
+            "description": "安全教育管理统一管理园区内的培训、考试场景，通过建立培训任务、考试任务并下发给相关人员，实现线上无纸质化培训、考试，并在事后建立相关统计报表，协助建立内部的培训学习机制。",
+            "href": "/product-center/app-safety-edu-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/安全园区/main.png",
+            "name": "安全管理",
+            "version": "1.0.0",
+            "description": "各企业安全管理的管理视角，归集各企业内部安全管理数据，以记录、报表、图表、报告的形式做整体数据呈现，可整体查看内部安全运行、安全管理情况。",
+            "href": "/product-center/app-safety-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/园区管理/main.png",
+            "name": "园区管理",
+            "version": "1.0.1",
+            "description": "该系统聚焦于客户管理、房间管理、走访诉求、租赁管理及运营监管等关键运营数据的查询与分析功能，旨在帮助管理者快速了解当前园区的运营状况，为决策提供坚实的数据支撑。",
+            "href": "/product-center/app-park-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/人事管理/main.png",
+            "name": "人事管理",
+            "version": "1.0.1",
+            "description": "对入离职人员进行流程申请审批操作，实现工作流自动化，工作流程自定义设置，规范人员的入离职操作，提高工作效率；支持对人员类别、人员信息进行统一管理，通过信息集中有效管理，可以获得整体的信息，了解人员情况。",
+            "href": "/product-center/app-hr-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/行政管理/main.png",
+            "name": "行政管理",
+            "version": "1.0.1",
+            "description": "行政管理主要是用于公司内部无纸化办公场景。支持员工线上发起审批，线上处理、线上通知、线上数据存档。简化日常工作流程，解决员工日常行政办公反复跑审批时长无法预估，纸质文档不易留存的问题。",
+            "href": "/product-center/app-admin-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/会议室管理/main.png",
+            "name": "会议室管理",
+            "version": "1.0.1",
+            "description": "会议室管理主要是满足组织内部会议室线上预约使用和会议室智能设备监管控制；提高会议室管理、会议室预约、会议室预约审批、会议设备智能设备监管、会议室分析的能力。",
+            "href": "/product-center/app-meeting-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/资产管理/main.png",
+            "name": "资产管理",
+            "version": "1.0.0",
+            "description": "资产信息化管理，包含固定资产管理、耗材管理，从资产入库、派发、调拨、报废实现资产全生命周期管理，提供资产盘点的能力，辅助内部半自动化盘点，减少现场人力投入。",
+            "href": "/product-center/app-asset-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/考勤管理/main.png",
+            "name": "考勤管理",
+            "version": "1.0.1",
+            "description": "考勤管理主要是用于规范管理员工的工作日上下班、请假、加班、出差、外出等行为的应用工具，并为公司人事财务提供员工的考勤数据，包括迟到、请假、加班、早退、旷工等，以备主管对员工打绩效，财务对员工做薪资计算等。",
+            "href": "/product-center/app-attendance-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "name": "小散工程",
+            "version": "1.0.1",
+            "description": "小散工程系统，通过无纸化工单，全流程监管小散工程的立项、施工、验收，保证工程实施 保质保量；通过工程数据统计辅助管理层掌握园区的工程情况。",
+            "href": "/product-center/app-small-project-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/肉类交易/main.png",
+            "name": "肉类交易",
+            "version": "1.0.2",
+            "description": "肉类白条交易溯源系统依托开河智能中枢为基础，围绕肉类白条交易全链条搭建数字化交易溯源平台，提升肉类白条理货、交易等经营效率和管理水平，助推肉类滑轨理货交易智能化转型。",
+            "href": "/product-center/app-meat-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/商品采价/main.png",
+            "name": "商品采价",
+            "version": "1.0.0",
+            "description": "商品采价功能用于农批场景下，主要是辅助管理方对场内的商品价格进行采价，了解各类商品价格趋势，动态掌握商品市场行情，给市场经营管理决策提供数据支撑。",
+            "href": "/product-center/app-price-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/手术示教/main.png",
+            "name": "手术示教",
+            "version": "1.0.0",
+            "description": "通过先进的可视化模型技术，可以直观地查看手术示教各类医疗设备的位置、状态，包括手术器械、监护仪、呼吸机、输液泵等。系统能够实时更新这些设备的状态信息，确保医护人员对手术室内设备状态有全面的了解。",
+            "href": "/product-center/app-surgery-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/医用气体/main.png",
+            "name": "医用气体",
+            "version": "1.0.1",
+            "description": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+            "href": "/product-center/app-medical-gas-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/隐患排查/main.png",
+            "name": "隐患整改",
+            "version": "1.0.0",
+            "description": "隐患整改业务主要针对园区内消防、设备类等各类隐患，管理人员根据隐患性质，确认隐患的级别同时，给出整改限时，并通过工单流程通知相关运维人员进行隐患整改工作，工作完成之后由设备管理人员确认隐患整改完成，关闭隐患单。",
+            "href": "/product-center/app-hidden-danger-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/故障报修/main.png",
+            "name": "故障报修",
+            "version": "1.0.1",
+            "description": "故障报修单以\"实现无纸质化办公\"为目标，提供操作简便，定制上手容易满足用户故障报修流程，便于园区内故障处处留痕，线上提高跨部门合作效率，助力企业实现数字化转型。",
+            "href": "/product-center/app-repair-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "name": "日常巡检",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "name": "维保作业",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "name": "委外维修",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/更新改造/main.png",
+            "name": "更新改造",
+            "version": "1.0.0",
+            "description": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+            "href": "/product-center/app-upgrade-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/停车管理/main.png",
+            "name": "停车管理",
+            "version": "1.0.2",
+            "description": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+            "href": "/product-center/app-parking-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电子巡更/main.png",
+            "name": "电子巡更",
+            "version": "1.0.1",
+            "description": "适用于安全保卫、设备设施管理、生产流程监控等多个场景，有效提升巡更工作的效率和规范性，并为管理者提供实时、准确的数据支持，以实现对安全隐患的及时发现和处理。",
+            "href": "/product-center/app-patrol-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "name": "报警中心",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/设备中心/main.png",
+            "name": "物联中心",
+            "version": "1.0.0",
+            "description": "物联中心是一个集成了设备管理，数据安全通讯、消息订阅、设备台账、健康分析等能力的设备一体化设备管理中心，针对所有需要接入的设备进行统一管理，为上层提供物联数据采集与反控能力。",
+            "href": "/product-center/app-iot-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "name": "空间管理",
+            "version": "1.0.0",
+            "description": "空间是指组织或企业所拥有、管理或使用的物理空间资源。这些资源通常具有明确的空间位置和边界，可以包括建筑物、楼层、房间。空间管理主要给园区管理者、园区设备设施维护人员、实验室管理员、物业服务管理员、公共服务管理员等使用。",
+            "href": "/product-center/app-space-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "name": "能碳管理",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。",
+            "href": "/product-center/app-energy-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "name": "门禁管理",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+            "name": "空调管理",
+            "version": "1.0.2",
+            "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本。",
+            "href": "/product-center/app-ac-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/智能照明/main.png",
+            "name": "智能照明",
+            "version": "1.0.1",
+            "description": "智能照明能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。",
+            "href": "/product-center/app-lighting-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电梯管理/main.png",
+            "name": "电梯管理",
+            "version": "1.0.0",
+            "description": "电梯管理系统实现了对电梯运行状态的实时采集与监控。通过先进的技术手段，系统能够实时捕捉电梯的运行数据，包括但不限于速度、楼层停靠、运行时长等关键指标。",
+            "href": "/product-center/app-elevator-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "name": "冷热源",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电动车管理/main.png",
+            "name": "电动车管理",
+            "version": "1.0.1",
+            "description": "电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。",
+            "href": "/product-center/app-ev-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

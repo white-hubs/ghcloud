@@ -1,0 +1,343 @@
+{
+  "path": "/engines/iot.html",
+  "meta": {
+    "title": "物联引擎_全栈式物联引擎_古河云科技",
+    "keywords": "物联引擎,智能边缘网关,物联中心,云边协同",
+    "description": "古河云物联引擎以“全域链接、智能管控、数据赋能”为核心，实现设备全生命周期管理、数据实时治理与安全传输，构建企业物联设备与数字业务间的可靠桥梁。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/iot-banner.png",
+            "title": "物联引擎",
+            "subtitle": "以“全域链接、智能管控、数据赋能”为核心，实现设备全生命周期管理、数据实时治理与安全传输，构建企业物联设备与数字业务间的可靠桥梁。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "title": "引擎特点",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-1.webp",
+            "title": "全栈链接，畅享无缝体验",
+            "description": "涵盖了设备直连上云、软网关、边缘网关、云云对接等全栈连接能力。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-2.webp",
+            "title": "多云融合，强化智能互联",
+            "description": "支持主流第三方的IoT平台融合的接入能力，实现平台与平台之间的互联互通。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-3.webp",
+            "title": "部署灵活，支持多方扩展",
+            "description": "支持主流物联网协议及插件扩展，并配套若干款边缘硬件网关实现工业协议接入。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-4.webp",
+            "title": "高效便捷，构建标准模型",
+            "description": "提供标准物模型，支持用户设置复杂规则实时过滤海量数据，减少应用侧压力，使客户聚焦业务开发。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "title": "引擎能力",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/iot-capability-1.png",
+            "title": "智能边缘网关",
+            "subtitle": "位于OT与IT的边界，作为现场数据采集与标准化枢纽，承担多协议解析、数据清洗与离线自治任务。",
+            "features": [
+              {
+                "label": "现场总线支持：",
+                "value": "内置ModBus/BACnet/KNX等主流自控协议驱动，还可通过485总线或协议转换器直接对接各类现场总线协议。"
+              },
+              {
+                "label": "工业数据集成：",
+                "value": "支持通过 OPC UA 统一架构进行数据集成，打破工业设备黑盒，实现与 SCADA 或 MES 系统的高效互通。"
+              },
+              {
+                "label": "离线自治与缓存：",
+                "value": "具备边缘侧的“离线生存”机制。在地下矿井或车间断网等极端环境下，网关可独立完成设备认证、本地策略执行及数据缓存。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/iot-capability-2.png",
+            "title": "物联中心",
+            "subtitle": "电信级分布式消息枢纽，提供弹性可扩展的连接管理与安全保障。",
+            "features": [
+              {
+                "label": "泛在无线生态兼容：",
+                "value": "具备开放的生态适配能力，支持接入 Zigbee、LoRaWAN、NB-IoT、Bluetooth LE 等第三方无线传感网络网关。"
+              },
+              {
+                "label": "分布式集群与弹性伸缩：",
+                "value": "采用先进的分布式架构设计，支持读写分离与水平扩展。"
+              },
+              {
+                "label": "高并发数据吞吐：",
+                "value": "针对传感器高频上报场景优化，支持高可用模式协议接入，确保在海量消息并发下的低延迟处理与不间断服务。"
+              },
+              {
+                "label": "全场景协议适配：",
+                "value": "具备开放的生态适配能力，支持接入 Zigbee、LoRaWAN、NB-IoT、Bluetooth LE 等第三方无线传感网络网关。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/iot-capability-3.png",
+            "title": "高阶分析能力",
+            "subtitle": "业务编排与数据价值挖掘中心，实现从“数据连接”到“设备智能”的跨越。",
+            "features": [
+              {
+                "label": "实时流数据分析：",
+                "value": "内置ModBus/BACnet/KNX等主流自控协议驱动，还可通过485总线或协议转换器直接对接各类现场总线协议。"
+              },
+              {
+                "label": "工业数据集成：",
+                "value": "内置流处理能力，支持将海量时序数据清洗后流转至多种可选存储引擎（TSDB/RDS）进行存储。"
+              },
+              {
+                "label": "可视化规则引擎：",
+                "value": "深度集成流式编程理念，允许用户通过拖拽方式定义复杂的数据流转规则。"
+              },
+              {
+                "label": "北向生态集成：",
+                "value": "提供标准化的 API，支持设备元数据、实时数据、历史数据的访问。"
+              },
+              {
+                "label": "AI 原生与语义化智能：",
+                "value": "物模型语义抽象和Agentic AI 协同"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/iot-capability-4.png",
+            "title": "云边协同",
+            "subtitle": "基于轻量级数据链路，构建“云端定义、边缘执行”的敏捷协同体系。",
+            "features": [
+              {
+                "label": "断点续传与数据一致性：",
+                "value": "当边缘网络恢复时，网关与平台间自动执行历史数据补传与状态同步，确保云端与边缘端全局数据的一致性与完整性。"
+              },
+              {
+                "label": "动态规则下发：",
+                "value": "支持在云端可视化配置业务联动规则与数据清洗策略，通过 MQTT 控制通道 毫秒级下发至边缘网关。"
+              },
+              {
+                "label": "轻量级远程运维：",
+                "value": "内置轻量级 Edge Agent，支持云端对边缘网关进行远程状态监控、日志按需捞取及OTA 固件/驱动增量更新，以最小的资源开销实现对分散站点的统一管理。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProtocolTags",
+      "props": {
+        "title": "主流协议库",
+        "subtitle": "支持 Wi-Fi、Zigbee、Bluetooth LE、Bluetooth LE mesh、LTE、4G、NB-IoT、LoRa、RS485 等短中长跑、有无线通信连接协议，1100多个品类、410000多款设备。",
+        "tags": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-1.png",
+            "name": "SNMP"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-2.png",
+            "name": "BacNet"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-3.png",
+            "name": "Modbus"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-4.png",
+            "name": "MQTT"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-5.png",
+            "name": "NB-IoT"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-6.png",
+            "name": "oBIX"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-7.png",
+            "name": "KNX"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-8.png",
+            "name": "ZigBee"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-9.png",
+            "name": "OPC"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-10.png",
+            "name": "OPCUA"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-11.png",
+            "name": "DLT645"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/protocol-iot-12.png",
+            "name": "LoRa"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BrandLogos",
+      "props": {
+        "title": "主流品牌库",
+        "subtitle": "多品牌兼容生态助力高效接入<br>平台兼容多个主流品牌，实现多品牌统一接入，均已完成平台适配，提供教程和技术支持，助您高效上云。",
+        "backgroundColor": "#f9fcff",
+        "logos": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-1.png",
+            "name": "品牌1"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-2.png",
+            "name": "品牌2"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-3.png",
+            "name": "品牌3"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-4.png",
+            "name": "品牌4"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-5.png",
+            "name": "品牌5"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-6.png",
+            "name": "品牌6"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-7.png",
+            "name": "品牌7"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-8.png",
+            "name": "品牌8"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-9.png",
+            "name": "品牌9"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-10.png",
+            "name": "品牌10"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-11.png",
+            "name": "品牌11"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-12.png",
+            "name": "品牌12"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-13.png",
+            "name": "品牌13"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-14.png",
+            "name": "品牌14"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-15.png",
+            "name": "品牌15"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-16.png",
+            "name": "品牌16"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/brand-iot-17.png",
+            "name": "品牌17"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "title": "引擎价值",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/value-1.png",
+            "title": "提高管理效率",
+            "description": "盘活企业内各方角色的资源，获得高效、协同、互动、整体的效益。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/value-2.png",
+            "title": "降低运营成本",
+            "description": "通过实时数据监测和远程控制，减少设备故障和人工成本，降低企业的运营成本。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/value-3.png",
+            "title": "提升服务质量",
+            "description": "提升企业内部的政务管理能力和服务水平，同时推动企业创新的服务能力。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/value-4.png",
+            "title": "实现智能化和自动化",
+            "description": "可实现设备的智能监控和自动控制，提高企业的管理水平和运营效率。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "title": "相关硬件产品",
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/hardware-pc-1.png",
+            "name": "边缘智算中枢",
+            "description": "基于专业大模型的边缘智能设备，聚焦高精度告警核验与设备协同管理。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/hardware-pc-2.png",
+            "name": "感温探测器",
+            "description": "采用热敏电阻作为感温器件，具有强大的火警判断能力。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/hardware-pc-3.png",
+            "name": "无线手动火灾报警按钮",
+            "description": "火警信息通过物联网通信技术上传，由平台通过多形式即时推送。"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

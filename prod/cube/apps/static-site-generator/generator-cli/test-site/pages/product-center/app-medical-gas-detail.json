@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-medical-gas-detail.html",
+  "meta": {
+    "title": "医用气体 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+    "keywords": "医用气体,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/医用气体/main.png",
+        "productName": "医用气体",
+        "productDescription": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "医用气体"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965372060869865474.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>气体中心</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">提供医用气体设备数据统计与可视化展示，包括设备当前使用情况、设备预警信息统计分析、历史用时排名与统计分析等数据展示。</span></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备监测</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">实时监测展示医用其他设备的运行状态；ICU监测系统结合设备运行数据和患者生命体征数据，具备强大的故障检测和报警功能。当设备出现故障或患者生命体征出现异常时，系统会立即发出警报，并在可视化模型中标记出故障位置或异常患者，这有助于医护人员快速定位问题并采取相应措施。</span></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>气体报警</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示医用气体的报警记录；当系统出现异常情况时，如氧气纯度下降、真空压力异常等，模型将自动发出报警，提醒管理人员及时处理。</span><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp;</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965012779897204738.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>可视化分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过业务面板，医用气体管理系统可以对气体使用数据进行可视化展示和分析。用户可以查看气体供应设备的运行统计、气体使用量统计、报警信息统计等。这些数据可以帮助用户更好地了解医用气体的使用情况，为医用气体管理提供数据支持，优化资源配置，提高医疗效率。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411729711105",
+            "name": "行政管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/行政管理/main.png",
+            "version": "1.0.1",
+            "description": "行政管理主要是用于公司内部无纸化办公场景。支持员工线上发起审批，线上处理、线上通知、线上数据存档。简化日常工作流程，解决员工日常行政办公反复跑审批时长无法预估，纸质文档不易留存的问题。",
+            "href": "/product-center/app-admin-detail.html"
+          },
+          {
+            "id": "1811344408881778690",
+            "name": "指挥调度",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "version": "1.0.2",
+            "description": "运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进 技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企 业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+            "href": "/product-center/app-command-detail.html"
+          },
+          {
+            "id": "1811344411431915522",
+            "name": "更新改造",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/更新改造/main.png",
+            "version": "1.0.0",
+            "description": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+            "href": "/product-center/app-upgrade-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

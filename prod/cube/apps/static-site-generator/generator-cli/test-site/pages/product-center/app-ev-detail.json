@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-ev-detail.html",
+  "meta": {
+    "title": "电动车管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。",
+    "keywords": "电动车管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/电动车管理/main.png",
+        "productName": "电动车管理",
+        "productDescription": "电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "电动车管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">电动车管理是一款集台账管理、实时报警、数据统计与设备监控于一体的综合性数字化管理平台。系统通过建立完善的电动车电子台账，覆盖车辆编码、车牌号、型号、区域等核心信息，并支持一键生成专属二维码，便于现场扫码快速查看和更新车辆档案，实现高效、精准的车辆信息管理。</span></p><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统具备智能报警功能，用户可自定义配置报警规则，并指定处理人员和通知方式。一旦发生违规停车、违规充电等行为，系统自动触发报警机制，实时推送给相关人员，并完整记录事件详情、处理状态与时限，提升异常事件的响应与处置效率。同时，系统提供多维度统计分析与可视化展示，包括违停次数、违规充电频次等关键指标，助力管理者全面掌握车辆运行合规状况。此外，系统还支持对电动车相关设备（如充电桩、感知设备等）进行统一建档与在线管理，进一步强化了整个电动车管理生态的可靠性与协同性。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965373093243269121.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电动车台账</strong></span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立电动车台账，包括编码、名称、分类、规格型号、品牌、车牌号、所在区域等，点击可查看和编辑电动车详情，支持按照多种条件筛选查询，支持导入和新增电动车，对电动车生成唯一二维码，用于现场通过扫码查看建档信息。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965373842815725569.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965373940555591682.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电动车报警</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">报警记录：展示电动车违规报警记录，包括报警事件、报警级别、报警区域、详细位置、报警时间、报警设备、处理时限、超时状态、处理状态、处理人等，点击报警记录可查看详情，进行在线指派和处理<br>报警配置：支持配置报警规则，可指派处理人员和设置消息推送，当发生电动车违规时，触发规则，系统自动推送报警数据至相关人员进行处理</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电动车统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示电动车违规统计列表，包括名称、车牌号、违停次数、最近一次违停次数、操作、违规充电数、最近一次违规充电数等。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 16px;\"><strong>电动车设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立电动车相关设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现用气设备在线管理</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408588177410",
+            "name": "预案管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+            "href": "/product-center/app-plan-detail.html"
+          },
+          {
+            "id": "1811344411331252226",
+            "name": "日常巡检",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          },
+          {
+            "id": "1811344410899238913",
+            "name": "空调管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+            "version": "1.0.2",
+            "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+            "href": "/product-center/app-ac-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

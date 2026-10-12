@@ -1,0 +1,358 @@
+{
+  "path": "/programme/safety-training.html",
+  "meta": {
+    "title": "安全演练_场景化模拟演练_安全培训演练系统_古河云科技",
+    "keywords": "安全演练,场景化模拟演练,动态知识库,智能化管理,应急处置",
+    "description": "古河云安全培训演练系统通过模拟真实场景的互动演练、知识测试及案例学习，帮助企业员工提升安全意识和应急处理能力。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-safety-training-banner.webp",
+            "title": "安全培训演练系统",
+            "subtitle": "通过模拟真实场景的互动演练、知识测试及案例学习，帮助企业员工提升安全意识和应急处理能力。系统支持多角色参与（如员工、管理层、安全专员），覆盖火灾等常见突发事件场景，实现安全教育从理论到实践的闭环管理。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "培训效果差",
+            "description": "传统线下演练成本高、频次低，员工参与度不足，知识留存率低。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "风险不可控",
+            "description": "真实演练存在安全隐患（如闪爆风险），且受天气、场地限制。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "管理效率低",
+            "description": "培训进度跟踪依赖人工，缺乏数据化评估工具，难以量化效果。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "协同能力弱",
+            "description": "缺乏跨岗位的联动训练，导致真实事故中指挥混乱，难以形成有效的应急合力。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《安全生产法》",
+            "description": "明确规定企业应当建立健全安全生产教育和培训制度，保证从业人员具备必要的安全生产知识。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《生产经营单位安全培训规定》",
+            "description": "要求企业制定年度安全培训计划，建立培训档案，确保培训质量和效果。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《国务院安委会关于进一步加强安全培训工作的决定》",
+            "description": "鼓励采用虚拟现实、仿真模拟等新技术手段，提高安全培训的针对性和实效性。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《应急管理部关于推进安全生产宣传教育工作的指导意见》",
+            "description": "推动安全培训数字化转型，建设线上线下相结合的培训体系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/remote-monitor.webp",
+            "title": "场景化模拟演练",
+            "subtitle": "系统根据企业的实际生产环境，定制高仿真虚拟场景，支持如疏散指挥员、急救员角色扮演。实时操作反馈与纠错。",
+            "features": [
+              {
+                "label": "高仿真场景：",
+                "value": "基于真实环境构建3D虚拟场景"
+              },
+              {
+                "label": "角色扮演：",
+                "value": "支持疏散指挥员、急救员等多角色"
+              },
+              {
+                "label": "实时反馈：",
+                "value": "实时操作反馈与纠错"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-alarm.webp",
+            "title": "动态知识库",
+            "subtitle": "集成安全事故案例库，通过案例分析学习预防措施。定期推送安全知识测试，助力企业提高安全意识，掌握应急处理技能。",
+            "features": [
+              {
+                "label": "案例库：",
+                "value": "海量真实事故案例，深度剖析"
+              },
+              {
+                "label": "知识推送：",
+                "value": "定期推送安全知识和规范更新"
+              },
+              {
+                "label": "在线测试：",
+                "value": "智能组卷，检验学习效果"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/wireless-detect.webp",
+            "title": "智能化管理",
+            "subtitle": "系统内置评估模块，实时监控安全培训覆盖率与达标率。培训计划制定与进度跟踪，生成评估报告，帮助企业和学员优化应急响应流程。",
+            "features": [
+              {
+                "label": "培训计划：",
+                "value": "制定年度、月度培训计划"
+              },
+              {
+                "label": "进度跟踪：",
+                "value": "实时跟踪员工培训进度"
+              },
+              {
+                "label": "评估报告：",
+                "value": "自动生成考核报告和评估分析"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/water-supply.webp",
+            "title": "数据决策支持",
+            "subtitle": "通过演练数据的分析，系统可以帮助企业识别潜在的风险点和应急计划中的薄弱环节，从而优化应急预案。",
+            "features": [
+              {
+                "label": "风险识别：",
+                "value": "识别潜在风险点和薄弱环节"
+              },
+              {
+                "label": "预案优化：",
+                "value": "基于数据优化应急预案"
+              },
+              {
+                "label": "决策支持：",
+                "value": "为企业安全决策提供数据支撑"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/pipe-monitor.webp",
+            "title": "VR沉浸式培训",
+            "subtitle": "利用VR技术，让员工身临其境体验危险场景，增强安全意识和应急反应能力。",
+            "features": [
+              {
+                "label": "沉浸体验：",
+                "value": "VR头盔沉浸式体验"
+              },
+              {
+                "label": "交互操作：",
+                "value": "手柄交互，模拟真实操作"
+              },
+              {
+                "label": "多人协同：",
+                "value": "支持多人同时在线演练"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/end-monitor.webp",
+            "title": "移动学习平台",
+            "subtitle": "支持PC端、移动端多终端学习，员工可随时随地进行安全知识学习和考试。",
+            "features": [
+              {
+                "label": "随时学习：",
+                "value": "碎片化时间，随时随地学习"
+              },
+              {
+                "label": "离线学习：",
+                "value": "支持离线下载，无网络也能学习"
+              },
+              {
+                "label": "学习记录：",
+                "value": "自动同步学习进度和记录"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "降本增效",
+            "description": "减少线下演练的物资与人力投入，单次培训成本降低60%以上。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "风险规避",
+            "description": "在虚拟环境中进行演练可以避免真实训练中的危险和风险，保障人员的安全。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "能力提升",
+            "description": "员工应急响应速度提升40%，企业安全事故率显著下降。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "灵活性高",
+            "description": "虚拟演练可以重新进行，不断提高自身技能。可根据演练需求进行定制和修改，满足不同的演练要求。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "安全教育",
+                "href": "/product-center/app-safety-edu-detail.html"
+              },
+              {
+                "name": "安全管理",
+                "href": "/product-center/safe.html"
+              },
+              {
+                "name": "预案管理",
+                "href": "/product-center/app-plan-detail.html"
+              },
+              {
+                "name": "指挥调度",
+                "href": "/product-center/app-command-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "智能分析盒子",
+                "href": "#"
+              },
+              {
+                "name": "图像分析摄像机",
+                "href": "#"
+              },
+              {
+                "name": "火灾监控",
+                "href": "#"
+              },
+              {
+                "name": "智能插座",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/training-case-1.webp",
+            "title": "成都东部新区产业园",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/training-case-2.webp",
+            "title": "天津海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/training-case-3.webp",
+            "title": "彭州中医药创新港",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,201 @@
+{
+  "path": "/engines/twin.html",
+  "meta": {
+    "title": "孪生引擎_仿真技术_WebGL技术_古河云科技",
+    "keywords": "孪生引擎,WebGL,游戏引擎,场景化构建,仿真技术",
+    "description": "古河云孪生引擎通过WebGL与游戏引擎双技术路线，工具化能力封装，场景化构建，高仿真还原，助力企业快速完成项目的实施。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-banner.webp",
+            "title": "孪生引擎",
+            "subtitle": "WebGL与游戏引擎双技术路线，工具化能力封装，场景化构建，高仿真还原，助力企业快速完成项目的实施。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "title": "引擎特点",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-1.webp",
+            "title": "高效的渲染能力",
+            "description": "通过深层优化的场景贴图及特效事件，保障细节充分还原，系统运行流程。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-2.webp",
+            "title": "稳定的数据还原",
+            "description": "提供丰富的数据采集工具，通过高效规则引擎与消息推送，实时与三维场景进行交互。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-3.webp",
+            "title": "双渲染内核技术",
+            "description": "提供流渲染、端渲染两种渲染方式，可根据项目实际情况自定义选择渲染方式。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-feature-4.webp",
+            "title": "自主可控保障安全",
+            "description": "自主研发的核心渲染引擎，支持国产信创，充分保障系统建设安全可控。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "title": "引擎能力",
+        "subtitle": "WebGL与游戏引擎双技术路线，工具化能力封装，场景化构建，高仿真还原，助力企业快速完成项目的实施。",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-capability-webgl-full.png",
+            "title": "WebGL",
+            "subtitle": "WebGL（Web Graphics Library）是基于 OpenGL ES 的网页 3D 图形标准，能直接调用 GPU 在浏览器中渲染 2D/3D 图形，无需安装插件。",
+            "features": [
+              {
+                "label": "",
+                "value": "高精度模型"
+              },
+              {
+                "label": "",
+                "value": "简化模型面数"
+              },
+              {
+                "label": "",
+                "value": "压缩纹理"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-capability-ue5-full.png",
+            "title": "UE5引擎渲染",
+            "subtitle": "在数字孪生、可视化仿真、影视级内容生产等场景中，UE5 引擎渲染凭借 Nanite、Lumen、TSR 三大核心技术，实现了超高精度模型实时渲染与影视级光照效果的兼顾。",
+            "features": [
+              {
+                "label": "",
+                "value": "Nanite 虚拟微多边形几何体"
+              },
+              {
+                "label": "",
+                "value": "Lumen 动态全局光照"
+              },
+              {
+                "label": "",
+                "value": "TSR时间超级分辨率"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ModelTransform",
+      "props": {
+        "title": "模型转化",
+        "subtitle": "无损衔接设计端与引擎端，覆盖模型/材质/层级/元数据全链路转换，支持直接链接与文件导出两种工作流，适配 AEC、制造、数字孪生等场景，大幅降低实时可视化的资产准备成本。",
+        "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-model-transform.png"
+      }
+    },
+    {
+      "name": "SceneCase",
+      "props": {
+        "title": "场景还原案例",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/scene-restore-showcase.png",
+            "label": "场景还原案例"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/scene-restore-showcase-new.png",
+            "label": "场景还原案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AssetLibrary",
+      "props": {
+        "title": "海量数字构建库，随选随用",
+        "subtitle": "提供海量数字构建库进行挑选，不定期更新迭代，快速满足行业不断变化的需求",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-fire.png",
+            "label": "消防"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-effect.png",
+            "label": "特效"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-building.png",
+            "label": "建筑"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-medical.png",
+            "label": "医疗"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-home.png",
+            "label": "家居"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-goods.png",
+            "label": "商品"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-weather.png",
+            "label": "天气"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-asset-vegetation.png",
+            "label": "植被"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "title": "引擎价值",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-value-1.webp",
+            "title": "真实世界完美还原",
+            "description": "双渲染引擎，1:1还原真实世界，在模型运行流畅的基础上提供极佳的视觉效果。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-value-2.webp",
+            "title": "科学决策驱动业务",
+            "description": "利用丰富的业务数据和与实际场景相贴合的模型交互，有效推动业务的高效运转。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-value-3.webp",
+            "title": "快速落地孪生项目",
+            "description": "提供丰富的模型资源库和模型API，方便客户进行二次开发，快速落地孪生项目。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/twin-value-4.webp",
+            "title": "项目支撑广度无限制",
+            "description": "提供3D模型、二维组态、GIS地图、图片、视频等，便于应用于不同的行业项目。"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

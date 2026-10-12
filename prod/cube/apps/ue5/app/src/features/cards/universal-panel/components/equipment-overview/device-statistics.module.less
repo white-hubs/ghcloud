@@ -1,0 +1,84 @@
+
+.situation-analysis {
+  font-size: var(--up-font-caption, 12px);
+
+  .left {
+    .bg {
+      position: relative;
+      width: 114px;
+      height: 96px;
+      perspective: 200;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .rotate {
+        position: absolute;
+        top: 8px;
+        left: 35px;
+        width: 44px;
+        height: 44px;
+        transform: rotateY(45deg);
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .total {
+      box-sizing: border-box;
+      width: 100%;
+      height: 26px;
+      color: var(--up-text-label, #d0deee);
+      background-image: url("/resource/v1/ue5-migrate/assets/images/overView6.png");
+      cursor: pointer;
+
+      .count {
+        color: var(--up-value-color, #eff6ff);
+        font-size: var(--up-font-value, 24px);
+        cursor: pointer;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 8px;
+        color: var(--up-text-label, #d0deee);
+        font-size: var(--up-font-caption, 11px);
+
+        .label {
+          color: var(--up-text-label, #abb8cb);
+        }
+
+        .value {
+          display: flex;
+          align-items: center;
+
+          .ant-progress {
+            display: flex;
+            height: 14px;
+          }
+        }
+
+        .rate {
+          box-sizing: border-box;
+          margin-left: 12px;
+          padding-right: 5px;
+          padding-left: 14px;
+          border-left: 1px dashed var(--up-divider, rgba(255, 255, 255, 0.2));
+        }
+      }
+    }
+  }
+}

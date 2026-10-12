@@ -1,0 +1,63 @@
+@import './lib/ali_iot_font/iconfont.css'; // 图标字体
+
+@bpmn-font-size: 12px;
+
+@palette-default-color: #333;
+@palette-hover-color: rgb(68, 243, 255);
+
+@contextPad-default-color: #333;
+@contextPad-hover-color: rgb(68, 243, 255);
+
+.ghy-palette-icon{
+    color: @palette-default-color !important;
+}
+.ghy-palette-icon:hover{
+    color: @palette-hover-color !important;
+}
+.ghy-palette-icon{
+    &.ghy-start{
+        &::after{
+            display: block;
+            content: "start";
+            font-size: @bpmn-font-size;
+        }
+    }
+    &.ghy-end{
+        &::after{
+            display: block;
+            content: "end";
+            font-size: @bpmn-font-size;
+        }
+    }
+    &.ghy-task{
+        &::after{
+            display: block;
+            content: "task";
+            font-size: @bpmn-font-size;
+        }
+    }
+}
+
+.ghy-contextPad-icon{
+    color: @contextPad-default-color;
+}
+.ghy-contextPad-icon:hover{
+    color: @contextPad-hover-color;
+}
+.ghy-contextPad-icon{
+    // font-size: @bpmn-font-size !important;
+    &.ghy-start{
+        &::after{
+            display: block;
+            content: "start";
+            font-size: @bpmn-font-size;
+        }
+    }
+    &.ghy-end{
+        &::after{
+            display: block;
+            content: "end";
+            font-size: @bpmn-font-size;
+        }
+    }
+}

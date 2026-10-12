@@ -1,0 +1,206 @@
+.nav-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  perspective: 1100px;
+  height: 360px;
+  margin-left: 0; /* 移除左边距，确保居中 */
+  overflow: visible; // 修改为visible，避免背景图被裁剪
+  z-index: 9;
+  margin-top: -15px;
+}
+
+/* 横向硬裁剪：只露出 3 张，避免第 4 张在 coverflow + scale 下从两侧挤出（不裁竖直方向标题条） */
+.swiper-clip {
+  align-self: stretch;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  max-width: 1600px;
+  min-height: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  width: 92%;
+}
+
+.swiper-slide {
+  transition: all 0.8s ease; /* 不 transition transform，交给 Swiper coverflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  opacity: 0.8;
+  visibility: visible;
+  will-change: transform; /* 添加will-change提高性能 */
+  width: 100%; // 确保slide占满容器宽度
+  height: 100%; // 确保slide占满容器高度
+  margin-top: 15px;
+}
+
+.arrow-btn {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 20;
+  top: 0px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.arrow-btn:first-child {
+  left: 60px; /* 调整左按钮位置，从50px增加到100px */
+}
+
+.arrow-btn:last-child {
+  right: 80px; /* 调整右按钮位置，从50px增加到100px */
+}
+
+.arrow-left {
+  width: 100%;
+  height: auto;
+}
+
+.arrow-right {
+  width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.8s ease; /* 增加过渡时间 */
+  transform: scale(1.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 380px;
+  margin-bottom: 68px;
+  margin-left: 20px;
+  background-size: cover; // 确保背景图完全覆盖
+  background-position: center; // 居中背景图
+}
+
+/* 模板中有引用，避免 CSS Modules 导出为 undefined 污染 class */
+.nav-item-active {
+}
+
+.nav-card-bottom {
+  width: 380px;
+  position: absolute;
+  bottom: -62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .nav-title {
+    font-size: 22px;
+    font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+    font-weight: Regular;
+    text-align: center; /* 居中文本 */
+    color: #ffffff;
+    line-height: 28px;
+    position: absolute;
+    bottom: 16px;
+    width: 100%; /* 确保文本宽度与底部背景一致 */
+    z-index: 2; /* 确保文本在背景之上 */
+  }
+
+  .nav-title-bg {
+    width: 380px;
+    height: 34px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.nav-card {
+  object-fit: fill;
+  width: 380px;
+  height: 214px;
+  border: 4px solid;
+  border-image: linear-gradient(276deg, rgba(59, 141, 230, 0.15) 5%, #99caff 48%, rgba(59, 141, 230, 0.17) 96%) 4 4;
+  border-radius: 4px;
+}
+/* 移除冲突的样式定义 */
+/* 删除或注释掉以下部分：
+.swiper-slide:nth-child(1) {
+  transform: translateX(-150px) translateZ(-250px) rotateY(35deg) scale(0.8);
+  opacity: 0.7;
+}
+.swiper-slide:nth-child(2) {
+  transform: translateZ(0) scale(1.1);
+  z-index: 10;
+}
+.swiper-slide:nth-child(3) {
+  transform: translateX(-150px) translateZ(-250px) rotateY(35deg) scale(0.8);
+  z-index: 10;
+}
+*/
+
+:global(.swiper),
+:global(.swiper-container) {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0 auto;
+  /* 底部留空给梯形标题条，配合 horizontal overflow:hidden 仍可见 */
+  padding: 24px 0 88px;
+  transition: all 0.8s ease;
+  width: 100%;
+}
+
+:global(.swiper-wrapper) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition-timing-function: ease-out !important; /* 修改过渡函数 */
+}
+
+:global(.swiper-slide-active) {
+  opacity: 1 !important;
+  z-index: 10;
+  transition: opacity 0.8s ease !important; /* 勿改 transform，否则覆盖 coverflow 的 3D 矩阵导致首帧错位 */
+
+  .nav-item {
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.6);
+    transition: all 0.8s ease !important; /* 确保过渡效果 */
+  }
+  .nav-card {
+    border-image: linear-gradient(276deg, rgba(59, 141, 230, 0.71) 5%, #99caff 48%, rgba(59, 141, 230, 0.72) 96%) 2 2;
+    transition: all 0.8s ease !important; /* 确保过渡效果 */
+  }
+}
+
+/* 确保前一个和后一个卡片可见 */
+:global(.swiper-slide-prev),
+:global(.swiper-slide-next) {
+  opacity: 0.8 !important;
+  visibility: visible !important;
+  transition: opacity 0.8s ease !important;
+}
+
+/* 双保险：根节点隐藏溢出，只保留 3 张在视区内（依赖上节 padding-bottom 露出标题） */
+:global(.swiper.swiper-horizontal) {
+  overflow: hidden !important;
+}
+
+@keyframes borderGlow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 162, 255, 0.5), inset 0 0 10px rgba(0, 162, 255, 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 162, 255, 1), inset 0 0 20px rgba(0, 162, 255, 0.4);
+  }
+}

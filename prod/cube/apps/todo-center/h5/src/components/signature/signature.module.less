@@ -1,0 +1,40 @@
+.signatureDialog {
+  .signatureContainer {
+    padding: 16px;
+
+    .signatureLabel {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #646566;
+    }
+
+    .signaturePadWrapper {
+      position: relative;
+      border: 1px dashed #dcdfe6;
+      border-radius: 4px;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #signature-pad {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .signaturePlaceholder {
+        color: #c0c4cc;
+      }
+    }
+
+    .clearButton {
+      margin-top: 8px;
+    }
+  }
+
+  :global(.van-dialog__footer) {
+    padding: 8px 16px 16px;
+  }
+}

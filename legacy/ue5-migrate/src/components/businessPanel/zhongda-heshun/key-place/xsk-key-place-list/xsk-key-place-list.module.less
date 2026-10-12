@@ -1,0 +1,61 @@
+.table-box {
+  font-size: 18px;
+  :global {
+    .roll-table {
+      .header {
+        height: 36px;
+        background: linear-gradient(180deg, #20334c, #0c1428);
+      }
+
+      .table-th {
+        font-size: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #c7d9ff;
+        text-align: center;
+      }
+      .table-tr, .table-td {
+        font-size: 18px;
+        height: 40px;
+      }
+    }
+    .ant-empty-normal {
+      color: #D9E7FF;
+    }
+  }
+
+}
+.operate-item {
+  font-size: 18px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #7191ea;
+  cursor: pointer;
+  text-align: center;
+}
+.select {
+  width: 160px;
+  color: #fff;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:8px;
+  margin: 10px 0;
+  :global {
+    .ant-input{
+      &::placeholder{
+          color:#91afcd;
+      }
+      font-size: 16px;
+    }
+    .ant-btn-primary{
+      background: #567DE5 !important;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}

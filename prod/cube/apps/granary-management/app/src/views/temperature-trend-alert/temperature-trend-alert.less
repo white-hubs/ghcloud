@@ -1,0 +1,580 @@
+.temperature-alert-page {
+  min-height: 100%;
+}
+
+.temperature-alert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #edf0f3;
+  background: #fff;
+}
+
+.temperature-alert-header h2 {
+  margin: 0;
+  color: #1d2129;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.temperature-alert-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.temperature-alert-panel {
+  border-radius: 6px;
+  background: #fff;
+  padding: 16px;
+}
+
+.temperature-alert-single-panel {
+  margin-top: 12px;
+}
+
+.temperature-alert-record-panel {
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.temperature-alert-panel-title {
+  margin-bottom: 14px;
+  color: #1d2129;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.temperature-alert-sub-tabs {
+  display: flex;
+  gap: 22px;
+  margin: -4px 0 16px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.temperature-alert-sub-tabs button {
+  position: relative;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: #4e5969;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.temperature-alert-sub-tabs button.is-active {
+  color: #1677ff;
+  font-weight: 600;
+}
+
+.temperature-alert-sub-tabs button.is-active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #1677ff;
+  content: '';
+}
+
+.temperature-alert-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.temperature-alert-form.is-disabled {
+  opacity: 0.74;
+}
+
+.temperature-alert-form label {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+}
+
+.temperature-alert-form span,
+.temperature-alert-switch span,
+.temperature-alert-filter span {
+  color: #4e5969;
+  font-size: 13px;
+}
+
+.temperature-alert-form input,
+.temperature-alert-filter input {
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #d9e2ef;
+  border-radius: 4px;
+  background: #fff;
+  color: #1d2129;
+  font-size: 13px;
+  outline: none;
+}
+
+.temperature-alert-form input:disabled {
+  background: #f2f3f5;
+  color: #86909c;
+}
+
+.temperature-alert-form em {
+  color: #86909c;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.temperature-alert-select {
+  width: 240px;
+  margin-bottom: 14px;
+}
+
+.temperature-alert-warehouse-config {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.temperature-alert-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border: 1px solid #edf0f3;
+  border-radius: 4px;
+  background: #fafcff;
+}
+
+.temperature-alert-meta strong {
+  color: #1d2129;
+  font-size: 14px;
+}
+
+.temperature-alert-meta span {
+  color: #4e5969;
+  font-size: 13px;
+}
+
+.temperature-alert-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.temperature-alert-switch input {
+  width: 16px;
+  height: 16px;
+}
+
+.temperature-alert-actions,
+.temperature-alert-filter,
+.temperature-alert-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.temperature-alert-filter {
+  margin-bottom: 14px;
+}
+
+.temperature-alert-record-filter {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 70px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf0f3;
+  background: #fff;
+}
+
+.temperature-alert-filter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temperature-alert-filter-item--date {
+  gap: 12px;
+}
+
+.temperature-alert-filter-label,
+.temperature-alert-date-separator {
+  color: #4e5969;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.temperature-alert-record-filter input {
+  width: 128px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #d9e2ef;
+  border-radius: 4px;
+  background: #fff;
+  color: #1d2129;
+  font-size: 13px;
+  outline: none;
+}
+
+.temperature-alert-filter-select {
+  width: 160px;
+}
+
+.temperature-alert-record-filter .temperature-alert-filter-select {
+  width: 200px;
+}
+
+.temperature-alert-record-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.temperature-alert-export-button {
+  min-width: 78px;
+}
+
+.temperature-alert-export-button:hover,
+.temperature-alert-export-button:focus {
+  border-color: #73d13d !important;
+  background: #73d13d !important;
+  color: #fff !important;
+}
+
+.temperature-alert-table-wrap {
+  overflow-x: auto;
+}
+
+.temperature-alert-table-wrap table,
+.temperature-alert-sample-day table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.temperature-alert-table-wrap th,
+.temperature-alert-table-wrap td,
+.temperature-alert-sample-day td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf0f3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.temperature-alert-table-wrap th {
+  background: #f7f8fa;
+  color: #4e5969;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.temperature-alert-empty,
+.temperature-alert-empty-cell {
+  padding: 22px 0;
+  color: #86909c;
+  font-size: 13px;
+  text-align: center;
+}
+
+.temperature-alert-status {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.temperature-alert-status.is-active {
+  background: #fff1f0;
+  color: #f5222d;
+}
+
+.temperature-alert-status.is-cleared {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+.temperature-alert-pagination {
+  justify-content: flex-end;
+  margin-top: 12px;
+  color: #4e5969;
+  font-size: 13px;
+}
+
+.temperature-alert-trend-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.temperature-alert-trend-page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 12px;
+}
+
+.temperature-alert-trend-panel,
+.temperature-alert-sample-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.temperature-alert-trend-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  min-height: 70px;
+  padding: 16px 20px;
+}
+
+.temperature-alert-trend-warehouse-select {
+  width: 200px;
+}
+
+.temperature-alert-trend-range-item {
+  gap: 8px;
+}
+
+.temperature-alert-range-button {
+  min-width: 50px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #d9e2ef;
+  border-radius: 4px;
+  background: #fff;
+  color: #4e5969;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.temperature-alert-range-button.is-active {
+  border-color: #1677ff;
+  background: #e8f3ff;
+  color: #1677ff;
+}
+
+.temperature-alert-filter-item--date .cube-picker {
+  width: 128px;
+}
+
+.temperature-alert-chart-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 42px;
+  padding: 0 20px;
+  color: #1d2129;
+  font-size: 13px;
+}
+
+.temperature-alert-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-line {
+  display: inline-block;
+  width: 20px;
+  height: 0;
+  border-top: 2px solid;
+}
+
+.legend-line-blue {
+  border-color: #4096ff;
+}
+
+.legend-line-red-dashed {
+  border-color: #ff4d4f;
+  border-top-style: dashed;
+}
+
+.legend-area {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  border: 1px solid rgba(250, 173, 20, 0.45);
+  background: rgba(250, 173, 20, 0.18);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4d4f;
+}
+
+.temperature-alert-trend-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  color: #4e5969;
+  font-size: 13px;
+}
+
+.temperature-alert-trend-summary strong {
+  color: #1d2129;
+  font-size: 15px;
+}
+
+.temperature-alert-trend-panel .temperature-alert-trend-summary {
+  margin: 12px 20px 0;
+}
+
+.temperature-alert-notice {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid #ffccc7;
+  border-radius: 4px;
+  background: #fff1f0;
+  color: #cf1322;
+  font-size: 13px;
+}
+
+.temperature-alert-trend-panel .temperature-alert-notice {
+  margin: 12px 20px 0;
+}
+
+.temperature-alert-chart {
+  width: 100%;
+  height: 360px;
+}
+
+.temperature-alert-trend-panel .temperature-alert-chart {
+  height: 340px;
+  margin-top: 6px;
+}
+
+.temperature-alert-sample-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf0f3;
+  background: #fff;
+}
+
+.temperature-alert-sample-title {
+  margin-right: 18px;
+  color: #1d2129;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.temperature-alert-sample-subtitle {
+  color: #86909c;
+  font-size: 13px;
+}
+
+.temperature-alert-sample-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+.temperature-alert-sample-panel .temperature-alert-sample-list {
+  max-height: none;
+  padding: 14px 20px 16px;
+}
+
+.temperature-alert-sample-day {
+  border: 1px solid #edf0f3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.temperature-alert-sample-day-head {
+  display: grid;
+  grid-template-columns: 120px 90px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 0;
+  background: #fafafa;
+  color: #4e5969;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.temperature-alert-sample-day-head strong {
+  color: #1d2129;
+}
+
+.temperature-alert-sample-day-head span:nth-of-type(2) {
+  color: #1677ff;
+  font-weight: 600;
+}
+
+.temperature-alert-sample-day-head em {
+  justify-self: end;
+  color: #9aa1aa;
+  font-style: normal;
+  font-size: 12px;
+}
+
+
+@media (max-width: 1180px) {
+  .temperature-alert-grid,
+  .temperature-alert-trend-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .temperature-alert-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .temperature-alert-trend-filter,
+  .temperature-alert-sample-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .temperature-alert-filter-item,
+  .temperature-alert-filter-item--date {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .temperature-alert-trend-warehouse-select,
+  .temperature-alert-filter-item--date .cube-picker {
+    width: 100%;
+  }
+
+  .temperature-alert-sample-day-head {
+    grid-template-columns: 1fr 1fr 28px;
+  }
+
+  .temperature-alert-sample-day-head span:nth-of-type(2) {
+    grid-column: 1 / 3;
+  }
+}

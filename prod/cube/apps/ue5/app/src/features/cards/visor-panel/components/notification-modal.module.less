@@ -1,0 +1,19 @@
+:global {
+  .scroll-text {
+    max-height: 500px;
+    overflow-y: auto;
+    color: var(--visual-text-color, #fff);
+    font-size: 14px;
+    line-height: 1.6;
+    word-break: break-word;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .scroll-text {
+    color: #17366d;
+  }
+}

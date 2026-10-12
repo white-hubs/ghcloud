@@ -1,0 +1,144 @@
+
+.monitorPanelBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.hospitalInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+
+  img {
+    width: 152px;
+    height: 128px;
+  }
+
+  .hospitalInfo-text {
+    width: 169px;
+    color: #fff;
+    font-size: 12px;
+
+    .hospitalInfo-title {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .scroll_box {
+    height: 100px;
+    overflow: hidden;
+
+    .scroll-text {
+      animation: scroll 10s linear infinite;
+      color: #D9E7FF;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.line-chart {
+  height: 200px;
+}
+
+.case {
+  padding-left: 8px;
+  overflow: hidden;
+  height: 250px;
+
+  .row {
+    margin-top: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 7px;
+      height: 7px;
+      background: #2989ff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 4px 0px rgba(41, 137, 255, 0.50);
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 4px;
+      top: 13px;
+      width: 1px;
+      height: 100%;
+      background: rgba(10, 50, 99, 0.50);
+    }
+
+    .time {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: justify;
+      color: #d9e7ff;
+      line-height: 14px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 8px;
+      margin-left: 16px;
+      display: inline-block;
+
+      background: linear-gradient(270deg, #1b77ea 100%, rgba(10, 50, 99, 0.70) 100%);
+      border: 1px solid;
+      border-image: linear-gradient(315deg, #6fd0e7 25%, rgba(4, 78, 173, 0.00) 75%) 1 1;
+    }
+
+    .desc {
+      padding-left: 12px;
+      margin-top: 4px;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: justify;
+      color: #d9e7ff;
+      line-height: 17px;
+    }
+  }
+}
+
+.elevator-analysis {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+
+  .pie_list {
+    width: 180px;
+    height: 180px;
+
+    // margin-left: 10px;
+    :deep(.alarm-analysis-name) {
+      width: 90px;
+    }
+
+    :deep(.alarm-analysisBox) {
+      width: auto;
+    }
+  }
+
+  .chart {
+    flex: 1;
+    height: 140px;
+  }
+}

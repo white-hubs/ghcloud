@@ -1,0 +1,749 @@
+<template>
+      <Teleport to="body">
+  <div class="alarmDetail-wrap">
+    <div class="alarmDetail-modal" ref="modalRef">
+      <div class="alarmDetail-modal-header" @mousedown="startDrag">
+        <div class="header-title">{{ infoData.name }}</div>
+        <div class="flex-between">
+          <div class="header-close" @click="closeModal">
+            <CloseOutlined />
+          </div>
+        </div>
+      </div>
+      <div class="alarmDetail-modal-content flex-column">
+        <div class="content-tabs">
+          <div v-for="item in tabsList" :key="item" :class="item === activeTabs ? 'active' : ''"
+            @click="activeTabs = item">
+            <div>{{ item }}</div>
+          </div>
+        </div>
+        <div class="conent-body">
+          <DeviceBaseInfo :id="modalData.id" v-if="activeTabs === '基本信息'" />
+          <DeviceControl :readAndWritData="readAndWritData" :read-data="readData" :id="modalData.id"
+            :code="infoData['code']" v-if="activeTabs === '实时数据'" />
+          <div v-if="activeTabs === '监控画面'">
+            <div class="group" v-if="cameraList.length > 0">
+              <div class="camera" v-for="(item, index) in cameraList" :key="index">
+                <H5Video :control="true" :cameraItem="item" ></H5Video>
+              </div>
+            </div>
+            <NoData v-else />
+          </div>
+          <DeviceErrorRecord :code="infoData['code']" :id="modalData.id" v-if="activeTabs === '异常记录'" />
+          <broadcastPlay  :deviceDetail="deviceDetail" v-if="activeTabs === '广播播放'" />
+        </div>
+      </div>
+    </div>
+  </div>
+</Teleport>
+</template> 
+<script setup lang="ts">
+import { onMounted, reactive, ref } from "vue";
+import { CloseOutlined,FullscreenExitOutlined} from "@ant-design/icons-vue";
+import H5Video from "@/components/businessPanel/public/H5Video.vue";
+import { DeviceTypeIcon } from "@/utils/enumeratie";
+import DeviceBaseInfo from "./info.vue";
+import DeviceControl from "./control.vue";
+import DeviceErrorRecord from "./record.vue";
+import broadcastPlay from "./broadcastPlay.vue";
+import { associatedVideos } from "@/api/device";
+import { mediaConfig } from "@/api/mdata";
+import NoData from "@/components/businessPanel/public/noData.vue";
+import { cubeDeviceCenterService } from "@/api/service";
+import { getSecurityDevicePage } from "@/api/securitymanagement";
+import { storeMarket } from '@/piniaStore/other'
+import { useDragPosition } from "@/hooks/use-drag-position";
+
+const props = defineProps({
+  id: {
+    type: [String],
+    default: "",
+  },
+  activeData: {
+    type: [String],
+    default: "基本信息",
+  },
+});
+const emit = defineEmits(["close"]);
+const piniaStoreMarket = storeMarket();
+
+const tabsList = ref(["基本信息", "实时数据", "监控画面", "异常记录"]);
+const activeTabs = ref("基本信息");
+const modalData = reactive(props);
+const infoData = ref({
+  name:''
+});
+const deviceDetail = ref()
+const readData = ref([]);
+const readAndWritData = ref([]);
+const cameraList = ref([]);
+const deviceType = ref(0)
+const modalRef = ref<HTMLElement | null>(null);
+
+const { startDrag } = useDragPosition(modalRef);
+
+const closeModal = () => {
+ emit("close", true,deviceDetail.value);
+};
+const getData = async() => {
+  const data =await cubeDeviceCenterService.getDeviceInstanceDetail({deviceId:modalData.id})
+  infoData.value = data.baseArchivesInfo
+  deviceDetail.value = data
+  deviceType.value = DeviceTypeIcon[data.productInfo.name as keyof typeof DeviceTypeIcon];
+  const type = DeviceTypeIcon[data.productInfo.productCategory.name as keyof typeof DeviceTypeIcon];
+  
+  if (deviceType.value <= 3 || type<=3 || data.productInfo.name === "监控") {
+      mediaConfig().then((item) => {
+          cameraList.value = [
+            {
+              steamMediaIpAddress: item?.ipAddress,
+              steamMediaIntranetAddress: item?.ipAddress,
+              token: data.baseArchivesInfo.thirdPartyId,
+              deviceId: modalData.id,
+            },
+          ];
+    });
+    } else {
+      associatedVideos(modalData.id).then((res) => {
+        if (res.length == 0) {
+          tabsList.value = ["基本信息", "实时数据", "异常记录"];
+        }
+        cameraList.value = res.map(item=>{
+          return {
+            ...item,
+            token: item.thirdPartyId,
+          }
+        });
+      }).catch(()=>{
+        tabsList.value = ["基本信息", "实时数据", "异常记录"];
+      })
+    }
+};
+const getSecurityDevicePagData = async()=>{
+ const res = await getSecurityDevicePage('BROADCAST_CENTER',{
+    pageNumber:1,
+    pageSize:999
+  })
+  const ids = res.records.map(e=>e.deviceId)
+  if (ids.includes(modalData.id)) {
+    tabsList.value.push('广播播放')
+  }
+}
+onMounted(async() => {
+ await getData();
+ await getSecurityDevicePagData()
+ activeTabs.value =  piniaStoreMarket.deviceDetailsPanelActive || props.activeData
+});
+</script>
+
+<style lang="less" scoped>
+.group {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+
+  .camera {
+    margin: 0 6px;
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+  }
+}
+
+.videInfo {
+  width: 1439px !important;
+  padding: 0 10px !important;
+  overflow-y: hidden !important;
+}
+
+.alarmDetail-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+
+.alarmDetail-modal {
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border-bottom: 2px solid rgba(41, 137, 255, 1);
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .alarmDetail-modal-header {
+    height: 30px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(41, 137, 255, 1);
+    background-image: url('/resource/v1/ue5-migrate/assets/images/modal-title.png');
+    background-size: 100%95%;
+    background-repeat: no-repeat;
+
+    .header-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #FFFFFF
+    }
+
+    .header-close {
+      width: 24px;
+      height: 24px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        font-size: 13px;
+      }
+    }
+    
+    cursor: move;
+    &:active {
+      cursor: move;
+    }
+  }
+
+  .alarmDetail-modal-content {
+    max-height: 515px;
+    width: 100%;
+    padding: 0 16px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    background: rgba(1, 11, 23, 0.78);
+    margin-top: 2px;
+
+    .content-tabs {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      font-family: PingFang SC-Regular;
+      font-weight: 400;
+      color: #ffffff;
+
+      >div {
+        width: 68px;
+        height: 26px;
+        opacity: 1;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+          background: linear-gradient(180deg, rgba(41, 137, 255, 0) 0%, rgba(41, 137, 255, 0.5) 100%);
+        }
+      }
+    }
+
+    .conent-body {
+      min-height: 340px;
+
+      :deep(.box .content) {
+        margin-top: 15%;
+      }
+    }
+  }
+}
+
+.vidicon {
+  height: 725px;
+}
+
+.bottom-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 380px;
+  display: flex;
+  z-index: 10;
+
+  &.stow {
+    left: 25px;
+    transition: all 1s ease-in;
+  }
+
+  &.open {
+    left: 380px;
+    transition: all 1s ease-in;
+  }
+
+  .btn-box {
+    height: 56px;
+    display: flex;
+    background: linear-gradient(180deg, #134297 0%, #12316a 100%);
+    margin-right: 16px;
+    border-radius: 6px 6px 6px 6px;
+
+    .line {
+      width: 2px;
+      height: 34px;
+      background: linear-gradient(90deg, #09204a 50%, #13387f 100%);
+      margin-top: 11px;
+    }
+
+    .btn-item {
+      width: 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        p {
+          color: #2bac7e;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: #bcd2ed;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.not-data {
+  text-align: center;
+  margin-top: 16px;
+}
+
+@keyframes rightColorAnimation {
+  0% {
+    background: linear-gradient(90deg,
+        rgba(168, 24, 11, 0) 0%,
+        rgba(168, 24, 11, 0.62) 100%);
+  }
+
+  50% {
+    background: transparent;
+  }
+
+  100% {
+    background: linear-gradient(90deg,
+        rgba(168, 24, 11, 0) 0%,
+        rgba(168, 24, 11, 0.62) 100%);
+  }
+}
+
+@keyframes leftColorAnimation {
+  0% {
+    background: linear-gradient(90deg,
+        rgba(168, 24, 11, 0.62) 0%,
+        rgba(168, 24, 11, 0) 100%);
+  }
+
+  50% {
+    background: transparent;
+  }
+
+  100% {
+    background: linear-gradient(90deg,
+        rgba(168, 24, 11, 0.62) 0%,
+        rgba(168, 24, 11, 0) 100%);
+  }
+}
+</style>
+<style lang="less">
+.atabs {
+  .ant-tabs-tab {
+    color: #fff;
+  }
+}
+
+.amap-logo,
+.amap-copyright {
+  display: none !important;
+}
+
+.alarm-market {
+  width: 260px;
+  height: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  // position: fixed;
+  // top: 50px;
+  // left: 500px;
+  z-index: 100;
+
+  &.serious {
+    background: url("./images/alarmBg.svg");
+  }
+
+  &.normal {
+    background: url("./images/marketBg.svg");
+  }
+
+  .alarm-market-close {
+    top: 6px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .alarm-title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 18px;
+    font-family: PingFang SC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 0px 0px 4px #ff2e00;
+  }
+
+  .alarm-detail {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    width: 210px;
+    font-size: 14px;
+    font-family: PingFang SC-Regular;
+    font-weight: 400;
+    color: #e4e4e4;
+  }
+}
+
+.custom-info {
+  width: 300px;
+  height: 260px;
+  background: url("./images/marketBg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+
+  .custom-info-close {
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .custom-person {
+    position: absolute;
+    top: 40px;
+    left: 12px;
+    background: url("./images/customPerson.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 275px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .custom-person-icon {
+      width: 50px;
+      height: 50px;
+      opacity: 1;
+      border: 1px solid #388ef3;
+      border-radius: 50%;
+      margin-left: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-person-name {
+      margin-left: 12px;
+
+      .person-status {
+        font-size: 16px;
+        font-family: PingFang SC-Medium;
+        font-weight: 500;
+        color: #ffffff;
+
+        >span {
+          width: 36px;
+          height: 18px;
+          background: rgba(255, 151, 55, 0.3);
+          border-radius: 2px 2px 2px 2px;
+          font-size: 12px;
+          font-family: PingFang SC-Regular;
+          font-weight: 400;
+          color: #ff9737;
+          line-height: 18px;
+          text-align: center;
+        }
+      }
+
+      .person-device {
+        font-size: 14px;
+        font-family: PingFang SC-Regular;
+        font-weight: 400;
+        color: #a2b5d6;
+        text-align: left;
+      }
+    }
+
+    .custom-person-line {
+      width: 30px;
+      height: 30px;
+      background: #2c83ef;
+      border-radius: 50%;
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .custom-address {
+    position: absolute;
+    top: 100px;
+    left: 22px;
+    width: 255px;
+    font-size: 14px;
+    font-family: PingFang SC-Regular;
+    font-weight: 400;
+    color: #e4e4e4;
+
+    >div {
+      text-align: left;
+      line-height: 28px;
+    }
+  }
+
+  .custom-name {
+    position: absolute;
+    top: 40px;
+    left: 13px;
+    height: 62px;
+    line-height: 62px;
+    width: 274px;
+    background-image: url("./images/contentBg.png");
+    color: #fff;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 16px;
+  }
+
+  .custom-content {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #e4e4e4;
+    position: absolute;
+    top: 102px;
+    left: 0;
+    padding: 16px;
+  }
+
+  .custom-btn {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    >div {
+      padding: 0 12px;
+      height: 26px;
+      background: #1f4790;
+      border-radius: 4px 4px 4px 4px;
+      opacity: 1;
+      border: 1px solid #216cc3;
+      font-size: 12px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 26px;
+      text-align: center;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.personnel-search {
+  .ant-input-affix-wrapper {
+    background: transparent !important;
+    color: rgba(183, 197, 211, 0.3);
+    border-color: rgba(183, 197, 211, 0.3);
+
+    .ant-input-suffix {
+      color: rgba(183, 197, 211, 0.3);
+    }
+  }
+
+  .ant-input {
+    background: transparent;
+    color: rgba(183, 197, 211, 1);
+  }
+
+  .ant-input-search-icon {
+    color: rgba(183, 197, 211, 0.3);
+  }
+
+  .ant-select {
+    color: rgba(183, 197, 211, 1);
+  }
+
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background: transparent;
+    border: none;
+  }
+
+  .ant-select-arrow {
+    color: rgba(183, 197, 211, 1);
+  }
+}
+
+.site-conditions {
+  .ant-cascader-menus {
+    background: rgba(29, 57, 110, 0.96);
+    color: #e1e3e6;
+  }
+
+  .ant-cascader-menu {
+    border-right: 1px solid #141f35;
+  }
+
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+    background: rgba(5, 18, 31, 0.2);
+  }
+
+  .ant-cascader-menu-item:hover {
+    background: rgba(5, 18, 31, 0.2);
+  }
+
+  .ant-cascader-menu-item-expand .ant-cascader-menu-item-expand-icon,
+  .ant-cascader-menu-item-loading-icon {
+    color: #e1e3e6;
+  }
+}
+
+.container {
+  position: relative;
+  padding: 0;
+}
+
+/* 1. 声明过渡效果 */
+.fade-move,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+/* 2. 声明进入和离开的状态 */
+.fade-enter-from,
+.fade-leave-to {
+  // opacity: 0;
+  // transform: scaleY(0.01);
+  transform: translateX(300px);
+}
+
+/* 3. 确保离开的项目被移除出了布局流
+        以便正确地计算移动时的动画效果。 */
+.fade-leave-active {
+  position: absolute;
+}
+
+@keyframes move {
+  from {
+    transform: translate(300px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+}
+
+@keyframes movetop {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 100px);
+  }
+}
+
+// .alarm {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   width: 88px;
+//   color: #fff;
+//   border-radius: 0 0 0 30px;
+//   text-align: center;
+//   font-size: 12px;
+// }
+
+.one {
+  background: rgba(255, 61, 61, 0.7);
+}
+
+.two {
+  background: rgba(255, 102, 30, 0.7);
+}
+
+.three {
+  background: rgba(231, 166, 13, 0.7);
+}
+
+.four {
+  background: rgba(3, 9, 17, 0.3);
+}
+
+.gvideo-box {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .gvideo {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 504px;
+    height: 304px;
+  }
+
+  .gvideo-title {
+    font-size: 16px;
+    color: #3d3d3d;
+  }
+}
+</style>
+<style lang="less">
+.empty {
+  color: #fff;
+
+  :deep(.ant-empty-description) {
+    color: #fff !important;
+  }
+}
+</style>

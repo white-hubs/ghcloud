@@ -1,0 +1,89 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/features/cards/parking-car/_shared/parking-v2-shared.less";
+
+:global {
+  .parking-stay-v2-root {
+    position: relative;
+  }
+
+  .parking-stay-v2-panel .chart-panel,
+  .parking-stay-v2-panel .v2-chart-panel,
+  .parking-stay-v2-panel .stay-chart-shell {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .chart-panel {
+    .parking-v2-chart-surface();
+    height: 198px;
+  }
+
+  .stay-chart-shell {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 198px;
+
+    .power-factor,
+    .line-and-pillar {
+      width: 100%;
+      height: 100%;
+      min-height: 160px;
+      background: transparent !important;
+    }
+  }
+
+  .stay-loading {
+    display: flex;
+    width: 100%;
+    min-height: 198px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    &.is-zoom {
+      min-height: 430px;
+    }
+
+    .ant-spin-text {
+      margin-top: 10px;
+      color: var(--visual-muted-color, #d0deee);
+      font-size: calc(var(--font-size-scale, 1) * 13px);
+    }
+
+    .ant-spin-dot-item {
+      background-color: var(--visual-primary, #2989ff);
+    }
+  }
+
+  .stay-empty {
+    width: 100%;
+    min-height: 198px;
+  }
+
+  .v2-panel-body.is-zoom,
+  .parking-stay-v2-panel.is-zoom {
+    .v2-chart-panel.is-zoom,
+    .stay-chart-shell.is-zoom {
+      height: 430px;
+      min-height: 430px;
+    }
+  }
+}
+
+.v2-minimal-white-panel(parking-stay-v2-panel);
+.parking-v2-minimal-white-children(parking-stay-v2-panel);
+
+:global(:root[data-visual-theme="minimal-white"] .parking-stay-v2-panel .stay-loading .ant-spin-text) {
+  color: #49628f;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .parking-stay-v2-panel .chart-panel),
+:global(:root[data-visual-theme="minimal-white"] .parking-stay-v2-panel .stay-chart-shell),
+:global(:root[data-visual-theme="minimal-white"] .parking-stay-v2-panel .v2-chart-panel) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}

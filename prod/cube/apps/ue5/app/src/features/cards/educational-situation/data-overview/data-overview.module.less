@@ -1,0 +1,75 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 10px;
+  background: rgba(255,255,255,.06);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  &:before { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 1px;
+    background: #2970FF;
+    content: "";
+  }
+  // cursor: pointer;
+  &:hover {
+    background: rgba(41, 137, 255, 0.20);
+  }
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(41, 137, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 20px;
+  font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+  white-space: nowrap;
+  overflow: visible;
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 12px;
+  line-height: 12px;
+  color: #D0DEEE;
+  white-space: nowrap;
+  overflow: visible;
+  text-align: center;
+}

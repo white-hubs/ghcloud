@@ -1,0 +1,277 @@
+{
+  "path": "/industry.html",
+  "meta": {
+    "title": "行业案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "all",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%87%A4%E5%87%B0%E5%B1%B1.png",
+            "title": "成都大运会主场馆凤凰山体育馆",
+            "category": "场馆",
+            "description": "项目基于三维可视化技术，呈现各个建筑设备的位置、运行状态的真实映象，辅助于设备的业务管理，包含设备维修记录、设备巡检记录、设备告警等信息，完整呈现设备整个生命周期管理。同时基于强大的物联网支撑平台，实现多设备报警及联动，最终实现整个场馆的数字化智能管理。",
+            "video": "https://qiniu.guhecloud.com/video/%E5%9C%BA%E9%A6%86%E9%A6%96%E9%A1%B5.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/case/6.png",
+            "title": "成都西部设计产业园产业园",
+            "category": "园区",
+            "description": "基于BIM、数字孪生等技术，为产业园进行整体的孪生复刻，从设施设备管理到设备运维管理，为园区提供了一套直观的设备运维与业务管理的一体化解决方案，为客户提供可视分析、联动预警，孪生分析等能力，助力园区高效管理。",
+            "video": "https://qiniu.guhecloud.com/video/%E8%A5%BF%E9%83%A8%E8%AE%BE%E8%AE%A1%E4%BA%A7%E4%B8%9A%E5%9B%AD.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/5%E5%8C%BB%E9%99%A2.png",
+            "title": "成都市第五人民医院",
+            "category": "医疗",
+            "description": "古河云科技基于医院整体能耗高、缺乏整体能源信息窗口、运维管理效率低、智能化程度不高等问题。为成都市第五人民医院打造了一套能耗使用可预测、能耗数据价值挖掘、数据可视化展示、能耗实时监测诊断的数字医院节能降耗建设方案。",
+            "video": "https://qiniu.guhecloud.com/video/5%E5%8C%BB%E9%99%A2.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/6%E5%8C%BB%E9%99%A2.png",
+            "title": "成都市第六人民医院金牛院区",
+            "category": "医疗",
+            "description": "基于BIM、VR、数字孪生等技术，为院区进行了数字化集成升级与优化，建成了四川省内首个BIM运维+数字孪生可视化技术的医院智能化集成系统，实现了三维场景下医院的安全保障，减少了人力成本、降低了能耗成本、节约管理成本。",
+            "video": "https://qiniu.guhecloud.com/video/6%E5%8C%BB%E9%99%A2%E6%A1%88%E4%BE%8B%E9%A1%B5.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%86%85%E8%92%99%E5%8F%A4%E5%8C%BB%E9%99%A2.png",
+            "title": "内蒙古民族大学附属医院",
+            "category": "医疗",
+            "description": "内蒙古民族大学附属医院位于内蒙古自治区通辽市霍林河大街东段1742号。通过对医院的数字孪生，达到以虚预实的目的。提升场景数字化体验,实现能耗降低约15%,设备运行效率提升约20%，为医院实现精细化管理和降本增效助力。",
+            "video": "https://qiniu.guhecloud.com/video/%E5%86%85%E8%92%99%E5%8F%A4%E5%8C%BB%E9%99%A2%E6%94%B9.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%AB%98%E9%93%81%E7%AB%99.png",
+            "title": "高铁站",
+            "category": "交通",
+            "description": "对高铁站智慧运营模式进行总体设计，呈现三维高铁站可视化平台。BIM三维建模，使数据和文本集成在一体化平台，结合GIS将现实世界中对象的空间位置与相关属性有机结合起来，从而为空间决策提供技术支持，让决策变得及时、准确。",
+            "video": "https://qiniu.guhecloud.com/video/%E4%BD%9B%E5%B1%B1%E9%AB%98%E9%93%81.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%B9%8F%E7%A8%8B%E5%B0%8F%E5%AD%A6.png",
+            "title": "鹏程小学",
+            "category": "教育",
+            "description": "将环境信息、资源信息和应用信息全部转化为数字化信息，为学校管理决策和服务提供强有力的支持。智慧系统集智能化感知、智能化控制、智能化管理、智能化互动反馈、智能化数据分析、智能化视窗等功能于一体，旨在实现校园信息服务的全面提升。",
+            "video": "https://qiniu.guhecloud.com/video/%E9%B9%8F%E7%A8%8B%E5%B0%8F%E5%AD%A6.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%88%90%E9%83%BD%E7%9B%8A%E6%B0%91%E9%9B%86%E5%9B%A2.png",
+            "title": "成都益民集团",
+            "category": "园区",
+            "description": "为成都益民集团提供了农产品供应链产品名称标准信息库建设，通过企业中台化目标实现了企业应用软件集成管理，将原有分散的收银系统、OA办公、合约管理、配送管理系统整合一体化，最终形成多业务融合，将商品与经营数据深度关联，实现农产品企业产供销数字化管理。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%88%90%E9%83%BD%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E5%B8%82%E5%9C%BA.png",
+            "title": "成都农产品批发市场",
+            "category": "园区",
+            "description": "深农集团下属农产品批发市场，建成蔬菜、肉类、海水产、粮油副食四大批发交易区及集信息、检测、监控、结算客服和办公于一体的综合办公楼。通过物联网、数字化智慧园区管理系统解决方案，结合控制技术、云计算和大数据分析与服务等，助力该园区实现综合运维管理的智慧转型。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B7%B1%E5%9C%B3%E5%85%89%E6%98%8E%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E5%B8%82%E5%9C%BA.png",
+            "title": "深圳光明农产品批发市场",
+            "category": "园区",
+            "description": "深圳光明农产品批发市场围绕食品安全、市场安全管理，打造以食安质量管理为基础，以集配为核心的高效、安全、标准化新一代产业转型升级的城市食材集配中心。结合古河云科技的数字孪生技术，实现全市场的态势感知，高效运行。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B2%B3%E5%8D%97%E9%A9%BB%E9%A9%AC%E5%BA%97%E7%BA%AA%E5%BF%B5%E9%A6%86.png",
+            "title": "河南驻马店纪念馆",
+            "category": "场馆",
+            "description": "纪念馆的可视化系统，运用三维虚拟仿真技术，将场馆运行环境真实呈现。这个系统能够基于3D环境，对场馆内安保工作、人员、设备和赛事数据进行高效管理。让你体验到真正的立体式、可视化新一代纪念馆运行管理系统！",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%96%87%E4%BD%93%E4%B8%AD%E5%BF%83.jpg",
+            "title": "江苏泰州文体中心",
+            "category": "场馆",
+            "description": "文体中心作为服务于市民文体活动的基础设施，建筑面积大、流动人员广、现场情况多变，对人员疏散、暴力事件预警、应急方案的制定都有高要求。利用古河云科技数字孪生技术将监控系统与其他子系统（如报警、灯光、扩声等系统）联动可视，有效保证文体中心的安全运营。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%AE%89%E5%BE%BD%E7%9C%81%E5%85%AD%E5%AE%89%E5%B8%82%E6%A1%A3%E6%A1%88%E9%A6%86.jpeg",
+            "title": "安徽省六安市档案馆",
+            "category": "场馆",
+            "description": "通过1:1建模在线上孪生虚拟档案馆，档案馆内的数据驾驶舱看板能直观查看馆内各项活动的数据变化，如当天入馆的人员访问情况、工作人员的工作情况或者机械设备的管理情况等；智能查询能有效节省人力寻找时间，精准快速的找到需要的资料。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B1%9F%E8%8B%8F%E5%86%9C%E5%9E%A6%E9%9B%86%E5%9B%A2%E5%8A%9E%E5%85%AC%E6%A5%BC.png",
+            "title": "江苏农垦集团办公楼",
+            "category": "园区",
+            "description": "以开河平台为基础，实现楼宇智能系统的集成。将视频监控、入侵报警、门禁管理、停车管理、楼宇自控、能耗监测等系统有效融合，实现耦合效应。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%8D%97%E4%BA%AC%E5%B8%82%E8%BD%AF%E4%BB%B6%E8%B0%B7%E5%88%9B%E4%B8%9A%E5%9F%8E.jpg",
+            "title": "南京市软件谷创业城",
+            "category": "园区",
+            "description": "古河云科技将物联网、大数据、人工智能等技术应用于传统建筑和基础设施，以实现对南京市软件谷创业城的全面监控、管理和服务。通过将南京市软件谷创业城内设备、设施和系统联网，实现数据的传输、共享和响应，提高园区的管理效率和运营效益。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%8D%97%E4%BA%AC%E6%96%B0%E5%9F%8E%E6%80%BB%E9%83%A8%E5%A4%A7%E5%8E%A6.jpg",
+            "title": "南京新城总部大厦",
+            "category": "园区",
+            "description": "通过自研开河打造的南京新城总部大厦数字孪生系统，真实还原出大厦的三维场景，并细化展示安防、消防、照明、空调、电梯、给排水、电力等设备。辅以两侧数据看板，可直观展示楼宇的资产数据、环境数据、安防数据等。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%A4%A9%E6%B4%A5%E6%B5%B7%E5%90%89%E6%98%9F%E5%86%9C%E4%BA%A7%E5%93%81%E7%89%A9%E6%B5%81.jpg",
+            "title": "天津海吉星物流园区",
+            "category": "园区",
+            "description": "天津海吉星物流园区聚焦食品安全和市场安全管理，致力于打造以食安质量为基础、以集配为核心的高效、安全、标准化的新一代城市食材集配中心，推动产业转型升级。结合古河云科技的数字孪生技术，实现全市场的态势感知，确保高效运行。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%95%BF%E6%B2%99%E6%B5%B7%E5%90%89%E6%98%9F%E7%89%A9%E6%B5%81%E5%9B%AD%E5%8C%BA.jpg",
+            "title": "长沙海吉星物流园区",
+            "category": "园区",
+            "description": "长沙海吉星物流园区专注于食品安全和市场安全管理的提升，致力于打造以食安质量为基础、以集配为核心的先进、安全、标准化的城市食材集配中心，推动产业全面升级。通过与古河云科技的合作，引入数字孪生技术，实现全市场的精准掌控。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B7%B1%E5%9C%B3%E5%B9%B3%E6%B9%96%E6%B5%B7%E5%90%89%E6%98%9F.png",
+            "title": "深圳平湖海吉星物流园区",
+            "category": "园区",
+            "description": "深圳平湖海吉星物流园区为了提升食品管理和园区管理的效率，正在打造一个以食品安全质量为基础、以集中分配为核心的先进、安全、标准化的城市食材集中分配中心，以此推动整个产业的全面升级。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E4%B8%8A%E6%B5%B7%E5%86%9C%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83%E6%89%B9%E5%8F%91%E5%B8%82%E5%9C%BA.png",
+            "title": "上海农产品中心批发市场",
+            "category": "园区",
+            "description": "上海农产品中心批发市场致力于打造一个以食品安全质量为基础、以集中分配为核心的先进、安全、标准化的城市食材集中分配中心，推动整个产业的全面升级。借助古河云科技的力量，在数字化的世界里，市场每一个环节都变得清晰可见。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%8D%97%E6%98%8C%E6%B5%B7%E5%90%89%E6%98%9F.png",
+            "title": "南昌海吉星物流园区",
+            "category": "园区",
+            "description": "南昌海吉星物流园区已建成涵盖蔬菜、肉类、海水产、粮油副食等批发交易区的综合物流园区。通过应用物联网、数字化智慧园区管理系统解决方案，结合控制技术、云计算和大数据分析与服务等先进技术，该园区正实现综合运维管理的智慧转型。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%9F%B3%E5%B7%9E%E6%B5%B7%E5%90%89%E6%98%9F%E7%89%A9%E6%B5%81%E5%9B%AD%E5%8C%BA.png",
+            "title": "柳州海吉星物流园区",
+            "category": "园区",
+            "description": "柳州海吉星物流园区是一个综合性的物流园区，涵盖了蔬菜、肉类、海水产、粮油副食等批发交易区。借助物联网、数字化智慧园区管理系统解决方案，以及控制技术、云计算和大数据分析与服务等先进技术，该园区正实现综合运维管理的智慧转型。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%81%B5%E4%B9%89%E4%B8%AD%E5%8C%BB%E9%99%A2.png",
+            "title": "遵义市中医院",
+            "category": "医疗",
+            "description": "遵义市中医院智慧云医院综合运维管理系统，结合CAD图纸、BIM、GIS等进行3D模型的建立，1:1还原全院建筑和设备。基于空间的智能管理，提供完整解决方案，构建医院管理的智慧大脑，实现管理效率的大幅提升。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%A4%AA%E5%8E%9F%E5%8D%97.jpeg",
+            "title": "太原高铁站二期",
+            "category": "交通",
+            "description": "通过可视化、数字化、智能化手段的加持，让安检、票务、列车管理等系统数据有效融合。结合边缘计算、数据中台、语音识别、人工智能等技术实现智能安检、一键开关站、智能客服、智慧照明、风水联动等多种智慧功能，提高车站运维效率和乘客满意度。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/5%E5%8F%B7%E7%BA%BF.png",
+            "title": "成都地铁五号线一、二期",
+            "category": "交通",
+            "description": "依托 PC 端、移动端，达到信息的实时发布，减少信息传递层级，确保实效性，实现多部门之间的协同作业。通过大数据、人工智能和可视化技术的应用，实现大数据运营模式，进一步提升服务质量、管理水平以及旅客满意度，赋能高铁运营全面发展。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B8%A9%E6%B1%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E4%B8%AD%E5%BF%83.png",
+            "title": "温江大数据与电子政务中心",
+            "category": "城市",
+            "description": "古河云科技围绕提升城市治理能力智慧化水平提高数字政府服务能力。推行城市数据一网通用、城市运行一网统管、政务服务一网通办、公共服务一网通享，增强城市运行管理、决策辅助和应急处置能力。构建人、企、地、物、政五张城市基础要素全景图。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E5%9B%9B%E5%B7%9D%E5%A4%A9%E5%BA%9C%E6%96%B0%E5%8C%BAIDC%E4%B8%AD%E5%BF%83.jpeg",
+            "title": "中国联通四川天府新区IDC中心",
+            "category": "城市",
+            "description": "运用古河云科技数字孪生技术呈现别具风格的中国联通四川天府新区IDC中心，实现民生人口、商业消费、窗口效能、企业运营数据的一网统管，打造一体化一盘棋数字建设体系，推动在营商环境、生态文明、城市运营、民生保障、行政效能、公共支撑等领域的智慧管理。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%AE%89%E5%BE%BD%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E5%AE%A1%E5%88%A4%E5%BA%AD.png",
+            "title": "安徽省高级人民审判庭",
+            "category": "其他",
+            "description": "通过云计算、云存储、云安全、数据库等，建立上下联动、部门合作、职责分明的标准化工作机制。消除数据孤岛，打破部门壁垒，完备虚实融合、标准统一、运行规范、数据共享、协同联动、监管有效的一体化服务体系。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

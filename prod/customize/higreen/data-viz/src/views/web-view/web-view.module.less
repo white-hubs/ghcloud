@@ -1,0 +1,51 @@
+.iframe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(3,14,37,0.85);
+  
+  /* 添加以下样式确保iframe内容正常显示 */
+  iframe {
+    border: none;
+    overflow: hidden;
+  }
+}
+
+.back-btn {
+  position: absolute;
+  z-index: 1000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: Regular;
+  width: 300px;
+  height: 42px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

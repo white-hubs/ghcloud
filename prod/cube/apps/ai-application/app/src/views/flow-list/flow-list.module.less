@@ -1,0 +1,643 @@
+/* 与知识库文档列表等页面一致：填满内容区，白底卡片 + 筛选行 + 表格 + 底部分页 */
+
+.page {
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.pageBody {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  background: #fff;
+  border: 1px solid #e7ebf3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 72px;
+  padding: 20px 16px;
+  border-bottom: 1px solid #eef2f7;
+  box-sizing: border-box;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-width: 0;
+}
+
+.keywordInput {
+  width: 280px;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.keywordInput :global(.ant-input-affix-wrapper) {
+  height: 32px !important;
+  padding: 0 11px 0 12px;
+  border: 1px solid #d7dde7;
+  border-radius: 6px;
+  box-shadow: none !important;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.keywordInput :global(.ant-input-affix-wrapper:hover),
+.keywordInput :global(.ant-input-affix-wrapper-focused) {
+  border-color: #1677ff !important;
+  box-shadow: none !important;
+}
+
+.keywordInput :global(.ant-input) {
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.keywordInput :global(.ant-input::placeholder) {
+  color: #b3bac5;
+}
+
+.keywordInput :global(.ant-input-suffix) {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.searchIcon {
+  color: #98a2b3;
+  font-size: 14px;
+}
+
+.filterActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 32px;
+  flex-shrink: 0;
+}
+
+/* 新建工作流：#1578ff / 4px 圆角；左侧白色描边圆环「+」，右侧白字（与设计图一致） */
+.addFlowBtn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0 14px;
+  margin: 0;
+  border: none;
+  background: #1578ff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.addFlowBtn:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.addFlowBtn:focus-visible {
+  outline: 2px solid rgb(21 120 255 / 0.35);
+  outline-offset: 2px;
+}
+
+.addFlowBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.addFlowIconWrap {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.addFlowIconSvg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.addFlowIconCircle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.addFlowIconCross {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+}
+
+.addFlowLabel {
+  flex-shrink: 0;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.addFlowCreating {
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 13px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.tableSection {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 16px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.tableSection :global(.ant-spin-nested-loading),
+.tableSection :global(.ant-spin-container) {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-sizing: border-box;
+}
+
+/* 与效果图一致：名称约 25%、描述约 60%、操作约 15%，三列合计 100% */
+.colName {
+  width: 25%;
+}
+
+.colDesc {
+  width: 60%;
+}
+
+.colAction {
+  width: 15%;
+}
+
+.table th,
+.table td {
+  box-sizing: border-box;
+  height: 54px;
+  padding: 0 16px;
+  border-bottom: 1px solid #f0f2f5;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.table thead th {
+  box-sizing: border-box;
+  padding: 0 16px;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.table thead th.nameColumn {
+  min-width: 0;
+  background: #fafafa !important;
+}
+
+.table thead th.descColumn {
+  min-width: 0;
+  background: #fafafa !important;
+}
+
+.table thead th.actionColumn {
+  background: #fafafa !important;
+}
+
+.thText {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 70px;
+  min-height: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  color: #191c1e;
+}
+
+.table tbody td {
+  box-sizing: border-box;
+}
+
+.tdName {
+  min-width: 0;
+}
+
+.tdDesc {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cellText {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #36425b;
+}
+
+/* 描述列：与设计图一致为整段长文案单行展示，超出列宽时省略号，悬浮 title 见全文 */
+.cellTextDesc {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #36425b;
+}
+
+.tdAction {
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table tbody tr:not(.emptyRow) {
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:not(.emptyRow):hover {
+  background: #f8fbff;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.emptyRow,
+.emptyRow:hover {
+  cursor: default;
+  background: transparent;
+}
+
+.emptyRow td {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.actionLink {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 0;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #1677ff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.actionLink:hover {
+  color: #4096ff;
+}
+
+.actionLinkDanger {
+  color: #f53f3f !important;
+}
+
+.actionLinkDanger:hover {
+  color: #d92d20 !important;
+}
+
+.actionDivider {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 6px;
+  color: #d0d5dd;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.empty {
+  padding: 72px 0 64px;
+  text-align: center;
+  color: #98a2b3;
+}
+
+.paginationRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: -1px;
+  padding: 13px 16px 16px;
+  background: #fff;
+  min-width: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #eef2f7;
+}
+
+.paginationRow .totalText {
+  margin-right: auto;
+}
+
+.pageMeta {
+  margin-left: 0;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #667085;
+}
+
+.paginationRow :global(.ant-pagination) {
+  margin: 0;
+  border-top: none !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.paginationRow :global(.ant-pagination-item),
+.paginationRow :global(.ant-pagination-prev),
+.paginationRow :global(.ant-pagination-next),
+.paginationRow :global(.ant-pagination-jump-prev),
+.paginationRow :global(.ant-pagination-jump-next) {
+  min-height: 32px;
+  line-height: 30px;
+}
+
+.quickJumper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.quickJumperInput {
+  width: 44px;
+}
+
+.quickJumperInput :global(.ant-input) {
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #d7dde7;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: none !important;
+}
+
+.quickJumperInput :global(.ant-input:hover),
+.quickJumperInput :global(.ant-input:focus) {
+  border-color: #1677ff;
+  box-shadow: none !important;
+}
+
+.totalText {
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+/*
+ * 新建工作流弹窗：须使用与 App ConfigProvider prefixCls「ai-application」一致的类名；
+ * 若写 .ant-modal-* / .ant-form-*，样式不会命中（组件实际为 .ai-application-modal-*）。
+ */
+.createFlowModalWrap:global(.ai-application-modal-wrap) {
+  :global(.ai-application-modal-content) {
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgb(15 23 42 / 0.12);
+  }
+
+  :global(.ai-application-modal-header) {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-radius: 8px 8px 0 0 !important;
+    background: #fff !important;
+  }
+
+  :global(.ai-application-modal-title) {
+    font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #191c1e;
+  }
+
+  :global(.ai-application-modal-close) {
+    top: 16px;
+    right: 16px;
+    color: #98a2b3;
+  }
+
+  :global(.ai-application-modal-close:hover) {
+    color: #36425b;
+  }
+
+  :global(.ai-application-modal-body) {
+    padding: 20px 20px 8px !important;
+  }
+
+  :global(.ai-application-modal-footer) {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    padding: 12px 20px 16px !important;
+    border-top: 1px solid #e5e7eb !important;
+  }
+
+  :global(.ai-application-modal-footer .ai-application-btn + .ai-application-btn) {
+    margin-inline-start: 12px;
+  }
+
+  :global(.ai-application-modal-footer .ai-application-btn-default) {
+    min-width: 72px;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #36425b;
+    background: #fff;
+    border: 1px solid #d7dde7;
+    border-radius: 4px;
+    box-shadow: none;
+  }
+
+  :global(.ai-application-modal-footer .ai-application-btn-default:hover) {
+    color: #1578ff;
+    border-color: #1578ff;
+    background: #fff;
+  }
+
+  :global(.ai-application-modal-footer .ai-application-btn-primary) {
+    min-width: 72px;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    background: #1578ff;
+    border-color: #1578ff;
+    border-radius: 4px;
+    box-shadow: none;
+  }
+
+  :global(.ai-application-modal-footer .ai-application-btn-primary:hover:not(:disabled)) {
+    background: #3d92ff;
+    border-color: #3d92ff;
+  }
+}
+
+.createFlowForm {
+  :global(.ai-application-form-item) {
+    margin-bottom: 20px;
+    padding-right: 0 !important;
+  }
+
+  :global(.ai-application-form-item:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(.ai-application-form-item-label) {
+    padding-bottom: 0;
+  }
+
+  :global(.ai-application-form-item-label > label) {
+    font-family: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #36425b;
+  }
+
+  :global(
+      .ai-application-form-item-label
+        > label.ai-application-form-item-required:not(.ai-application-form-item-required-mark-optional)::before
+    ) {
+    margin-inline-end: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #f53f3f;
+  }
+
+  :global(.ai-application-input),
+  :global(textarea.ai-application-input) {
+    font-size: 14px;
+    color: #191c1e;
+    border: 1px solid #d7dde7;
+    border-radius: 6px;
+    box-shadow: none !important;
+  }
+
+  :global(.ai-application-input:hover),
+  :global(textarea.ai-application-input:hover) {
+    border-color: #b3bac5;
+  }
+
+  :global(.ai-application-input:focus),
+  :global(textarea.ai-application-input:focus),
+  :global(.ai-application-input-focused) {
+    border-color: #1578ff !important;
+    box-shadow: none !important;
+  }
+
+  :global(.ai-application-input::placeholder),
+  :global(textarea.ai-application-input::placeholder) {
+    color: #b3bac5;
+  }
+
+  :global(textarea.ai-application-input) {
+    min-height: 120px;
+    padding: 8px 12px;
+    line-height: 22px;
+    resize: vertical;
+  }
+}

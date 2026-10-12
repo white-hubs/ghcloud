@@ -1,0 +1,58 @@
+.black-list {
+  height: 100vh;
+  background-color: #f3f7fa;
+  display: flex;
+  flex-direction: column;
+
+  .pull-refresh {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+.black-list-cell-group {
+  margin: 12px;
+  background: transparent;
+}
+
+.black-list-card {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.black-list-cell-title {
+  display: flex;
+  
+  .text {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    color: #1F3140;
+  }
+}
+
+.black-list-cell-content {
+  padding-bottom: 10px;
+  margin: 0 10px;
+  font-size: 13px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #666666;
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+.delete-button {
+  height: 100%;
+}

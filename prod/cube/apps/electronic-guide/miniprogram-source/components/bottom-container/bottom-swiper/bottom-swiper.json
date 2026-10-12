@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "point-item":"../bottom-list/point-item/point-item"
+  }
+}

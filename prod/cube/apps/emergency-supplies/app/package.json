@@ -1,0 +1,50 @@
+{
+  "name": "@ghcloud/cube-emergency-supplies-app",
+  "private": false,
+  "version": "1.0.3",
+  "description": "应急物资 PC 应用。",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "NODE_ENV=dev vite build -c vite.build.config.ts --mode dev",
+    "build:test": "NODE_ENV=test vite build -c vite.build.config.ts --mode test",
+    "build:prod": "NODE_ENV=prod vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-services-client": "workspace:^",
+    "@ghcloud/cube-service-interface": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "leaflet": "catalog:",
+    "leaflet-rotate": "catalog:",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "@ghcloud/cube-map-plugins": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/leaflet": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

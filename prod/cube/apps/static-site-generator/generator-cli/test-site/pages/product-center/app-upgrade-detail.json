@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-upgrade-detail.html",
+  "meta": {
+    "title": "更新改造 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+    "keywords": "更新改造,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/更新改造/main.png",
+        "productName": "更新改造",
+        "productDescription": "用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "更新改造"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用户根据设备运行监测以及分析等可能影响运营的因素，形成建议需要进行更新改造设备清单。此外，还有政府下令进行整改的设备设施。对此类设备的维护，创建更新改造工单。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">设备管理人员针对需要更新改造的设备清单提交设备更新改造，启动整个更新改造的处理流程。更新改造的流程需要进行多级以及多部门审批，将审批任务自动发送至设备管理部门、设备监管部门等部门的设备更新改造负责人，各方负责人可参考设备的申报理由、使用年限，维修维护历史数据等信息并客观做出审批决策。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>更新改造单</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">更新改造单页面提供用户对系统内更新改造单进行管理，用户可以提交更新改造单，并在该页面处理与我有关的更新改造流程。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965324363525795842.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965324240590745601.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>流程配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">更新改造业务配置页面提供针对更新改造相关业务配置管理，可以配置并指定更新改造管理人员来处理改造单的确认和评估业务。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965324461836087297.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344409062133761",
+            "name": "肉类交易",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/肉类交易/main.png",
+            "version": "1.0.2",
+            "description": "肉类白条交易溯源系统依托开河智能中枢为基础，围绕肉类白条交易全链条搭建数字化交易溯源平台，提升肉类白条理货、交易等经营效率和管理水平，助推肉类滑轨理货交易智能化转型。",
+            "href": "/product-center/app-meat-detail.html"
+          },
+          {
+            "id": "1811344408835641346",
+            "name": "用气管理",
+            "icon": "https://cube.guhecloud.com /resource/app-icons/用气管理/main.png",
+            "version": "1.0.0",
+            "description": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-gas-detail.html"
+          },
+          {
+            "id": "1811344408730783745",
+            "name": "广播中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+            "version": "1.0.0",
+            "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+            "href": "/product-center/app-broadcast-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

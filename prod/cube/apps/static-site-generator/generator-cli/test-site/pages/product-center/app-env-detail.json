@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-env-detail.html",
+  "meta": {
+    "title": "动环监控 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+    "keywords": "动环监控,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/动环监控/main.png",
+        "productName": "动环监控",
+        "productDescription": "通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "动环监控"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过设备接入对园区内的所有机房进行监管，统一在平台管理园区机房动环安全，支持查看设备状态、设备相关参数；提供报警相关能力，若园区较大，可在动环安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力；提供统计分析报表、图表，给管理者决策提供数据支撑。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965006960283627522.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>动环中心</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">基于动环管理业务产生的事件，生成统计数据，以可视化形式呈现，满足管理及业务需求。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>动环监测</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">将物联网接入的动环传感器设备数据，在业务平台以图文加列表的形式进行呈现，支持按照设备区域、设备状态、产品品类等进行筛选查询；支持添加二维组态链接，构建可交互的消防动环监测界面。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965009229901213698.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965363323711008770.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>动环报警</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示动环设备报警记录，包括报警事件、报警级别、报警区域、详细位置、报警时间、报警设备、处理状态、处理人等，点击报警记录可查看详情、联动动作及处理记录。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965010037044686850.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持配置报警规则，可指派处理人员和设置消息推送，当动环监测数据有异常情况时，触发规则，系统自动推送报警数据至相关人员进行处理。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>动环设备</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立动环设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现动环设备在线管理。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示动环报警统计数据，包括报警事件、报警总数、待接收、处理中、已处理、已挂起报警数等，支持按照时间、事件进行筛选查询。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965010243861622786.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警处理统计</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示报警处理统计数据，包括人员姓名、所属部门、部门报警数、个人报警数、报警处理率、报警响应率等，支持按照时间、所属部门进行查询。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>动环分析</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">以可视化形式展示消动环警相关数据分析结果，包括基本信息、报警事件分析、区域分析、处理效率分析等。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965011176175710210.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411369000962",
+            "name": "维保作业",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          },
+          {
+            "id": "1811344409989074946",
+            "name": "报警中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          },
+          {
+            "id": "1811344411255754753",
+            "name": "隐患整改",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/隐患排查/main.png",
+            "version": "1.0.0",
+            "description": "隐患整改业务主要针对园区内消防、设备类等各类隐患，管理人员根据隐患性质，确认隐患的级别同时，给出整改限时，并通过工单流程通知相关运维人员进行隐患整改工作，工作完成之后由设备管理人员确认隐患整改完成，关闭隐患单。",
+            "href": "/product-center/app-hidden-danger-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

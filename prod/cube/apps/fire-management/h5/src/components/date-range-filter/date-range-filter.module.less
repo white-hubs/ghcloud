@@ -1,0 +1,64 @@
+.range {
+  position: relative;
+}
+
+.dateButton {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 0 11px 0 12px;
+  border: 1px solid #d8dbe0;
+  border-radius: 8px;
+  background: #fff;
+  color: #3f444b;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  text-align: left;
+}
+
+.dateButton:active {
+  border-color: #1989fa;
+  background: #f7fbff;
+}
+
+.dateButton :global(.van-icon) {
+  flex: none;
+  color: #6f7782;
+  font-size: 15px;
+}
+
+.clearButton {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 34px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #b1b7c0;
+  transform: translateY(-50%);
+}
+
+.clearButton :global(.van-icon) {
+  font-size: 15px;
+}
+
+.dateText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: #a0a5ad;
+}

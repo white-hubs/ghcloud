@@ -1,0 +1,124 @@
+.real-detail-page{
+  background: #F3F7FA;
+  height: 100vh;
+  padding-top: 12px;
+  .detail-top{
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 5px;
+    overflow: hidden;
+    margin: 0 12px 12px;
+    .bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 145px;
+      height: 92px;
+      &::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 20%;
+        height: 100%;
+        background: #6ab539;
+        border-radius: 8px;
+        z-index: 0;
+      }
+      &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 145px;
+        height: 100%;
+        background: #6ab539;
+        border-radius: 10px;
+        z-index: 0;
+        transform: skewX(-10deg);
+      }
+    }
+    .left{
+      width: 145px;
+      height: 92px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      .name{
+        font-size: 17px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        text-align: center;
+        color: #ffffff;
+        line-height: 24px;
+      }
+      .level{
+        margin-top: 12px;
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #ffffff;
+        line-height: 13px;
+      }
+    }
+    .um-info{
+      margin-right: 20px;
+      // height: 92px;
+      overflow-y: auto;
+      .um-item{
+        width: 160px;
+        height: 30px;
+        background: #f7f8fa;
+        border-radius: 4px;
+        padding: 0 14px;
+        font-size: 14px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #1f3140;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 8px 0;
+        .unit{
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: center;
+          color: #1f3140;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+  .list-pull-refresh{
+    height: calc(100vh - 12px);
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 0 12px 12px;
+  }
+  .item-box{
+    width: 100%;
+    font-size: 13px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    .item-box-title{
+      font-size: 16px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #1f3140;
+      line-height: 16px;
+    }
+  }
+
+}

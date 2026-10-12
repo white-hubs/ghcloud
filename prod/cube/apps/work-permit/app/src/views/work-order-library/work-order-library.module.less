@@ -1,0 +1,125 @@
+.library {
+  padding: 16px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.groupSection {
+  margin-bottom: 20px;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.groupTitle::before {
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  margin-right: 8px;
+  background: #1677ff;
+  border-radius: 2px;
+  content: '';
+}
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 120px));
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.flowCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flowCard:hover {
+  border-color: #1890ff;
+  box-shadow: 0 1px 4px rgb(24 144 255 / 12%);
+  transform: translateY(-1px);
+}
+
+.flowContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.flowIcon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 22px;
+  margin-bottom: 2px;
+  color: #666666;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.flowIcon::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.flowIcon::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 8px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 5px 0 currentColor;
+}
+
+.flowName {
+  width: 100%;
+  margin-top: 0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.1;
+  word-break: break-all;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.flowCard:hover .flowIcon,
+.flowCard:hover .flowName {
+  color: #1890ff;
+}
+
+.emptyState {
+  padding: 56px 0;
+  color: #9ca3af;
+  text-align: center;
+}

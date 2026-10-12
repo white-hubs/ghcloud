@@ -1,0 +1,65 @@
+// @import (less) '~basscss/css/basscss.css';
+// .abs-fit {
+//   .absolute;
+//   .top-0;
+//   .right-0;
+//   .bottom-0;
+//   .left-0;
+// }
+.abs-center {
+  // .absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-white {
+  background-color: #fff;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hover-cursor {
+  cursor: pointer;
+}
+
+.no-margim {
+  margin: 0 !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+// 闪烁动画
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.app-blink {
+  animation: blink 1s ease-in-out infinite;
+  &:hover {
+    animation: none;
+  }
+}
+.img-offline {
+  filter: grayscale(100%);
+}
+.align-center {
+  align-items: center;
+}

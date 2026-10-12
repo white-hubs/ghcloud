@@ -1,0 +1,41 @@
+
+.tab-container {
+  margin-top: 10px;
+  display: flex;
+  padding-right: 14px;
+  justify-self: flex-end;
+}
+
+.line-chart {
+  height: 200px;
+}
+
+.elevator-analysis {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+
+  .pie_list {
+    width: 180px;
+    height: 180px;
+
+    // margin-left: 10px;
+    :deep(.alarm-analysis-name) {
+      width: 90px;
+    }
+
+    :deep(.alarm-analysisBox) {
+      width: auto;
+    }
+  }
+
+  .chart {
+    flex: 1;
+    height: 140px;
+  }
+}
+
+.bar-chart {
+  height: 200px;
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["src/*"],
+      "@ghcloud/cube-ui": ["src/types/cube-ui-boundary.d.ts"],
+      "@ghcloud/cube-services-client/auth-request": ["src/types/auth-request-boundary.d.ts"],
+      "@ghcloud/logger": ["src/types/logger-boundary.d.ts"]
+    }
+  }
+}

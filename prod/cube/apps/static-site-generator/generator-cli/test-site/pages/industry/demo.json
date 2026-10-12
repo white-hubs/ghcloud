@@ -1,0 +1,95 @@
+{
+  "path": "/industry/demo.html",
+  "meta": {
+    "title": "成都凤凰山体育馆 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "成都凤凰山体育馆",
+            "subtitle": "",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "overview",
+            "name": "建设概况"
+          },
+          {
+            "id": "pain-points",
+            "name": "项目痛点"
+          },
+          {
+            "id": "value",
+            "name": "建设价值"
+          },
+          {
+            "id": "related-cases",
+            "name": "相关案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseDetail",
+      "props": {
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "行业案例",
+            "href": "/industry.html"
+          },
+          {
+            "name": "场馆",
+            "href": "/industry.html#category-venue"
+          },
+          {
+            "name": "成都凤凰山体育馆",
+            "href": "/industry/demo.html"
+          }
+        ],
+        "overviewTitle": "建设概况",
+        "overviewDescription": "随着数字经济的快速发展，企业面临着日益激烈的竞争，提高运营效率、优化资源配置、增强决策能力成为企业管理的关键。在如何通过系统自动化处理企业中的各类任务，减少了人工操作和时间消耗，提高了工作效率成为迫切要求。同时也对内部管理系统对企业内部的各类资源进行整合，实现资源的共享和最大化利用，避免了资源的闲置和浪费的能力提出了更高的要求。",
+        "overviewImage": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%87%A4%E5%87%B0%E5%B1%B1.png",
+        "overviewVideo": "https://qiniu.guhecloud.com/video/%E5%9C%BA%E9%A6%86%E9%A6%96%E9%A1%B5.mp4",
+        "painPointsTitle": "项目痛点",
+        "painPointsDescription": "随着数字经济的快速发展，企业面临着日益激烈的竞争，提高运营效率、优化资源配置、增强决策能力成为企业管理的关键。在如何通过系统自动化处理企业中的各类任务，减少了人工操作和时间消耗，提高了工作效率成为迫切要求。同时也对内部管理系统对企业内部的各类资源进行整合，实现资源的共享和最大化利用，避免了资源的闲置和浪费的能力提出了更高的要求。",
+        "valueTitle": "建设价值",
+        "valueDescription": "随着数字经济的快速发展，企业面临着日益激烈的竞争，提高运营效率、优化资源配置、增强决策能力成为企业管理的关键。在如何通过系统自动化处理企业中的各类任务，减少了人工操作和时间消耗，提高了工作效率成为迫切要求。同时也对内部管理系统对企业内部的各类资源进行整合，实现资源的共享和最大化利用，避免了资源的闲置和浪费的能力提出了更高的要求。",
+        "relatedCasesTitle": "相关案例",
+        "relatedCases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B2%B3%E5%8D%97%E9%A9%BB%E9%A9%AC%E5%BA%97%E7%BA%AA%E5%BF%B5%E9%A6%86.png",
+            "title": "河南驻马店纪念馆",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%96%87%E4%BD%93%E4%B8%AD%E5%BF%83.jpg",
+            "title": "江苏泰州文体中心",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%AE%89%E5%BE%BD%E7%9C%81%E5%85%AD%E5%AE%89%E5%B8%82%E6%A1%A3%E6%A1%88%E9%A6%86.jpeg",
+            "title": "安徽省六安市档案馆",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

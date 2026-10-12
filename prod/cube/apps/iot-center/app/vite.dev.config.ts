@@ -1,0 +1,20 @@
+import { defineConfig } from 'vite'
+import { getBaseConfig } from './vite.config'
+
+export default defineConfig(async (configEnv) => {
+  const baseConfig = await getBaseConfig(configEnv)
+  return {
+    ...baseConfig,
+    server: {
+      host: '0.0.0.0',
+      port: 8888,
+      proxy: {
+        '/api': {
+          target: 'http://192.168.0.233:40201/',
+          changeOrigin: true,
+        },
+        '/resource': 'https://bimops-dev-manage.guhecloud.com:30000/'
+      }
+    },
+  }
+})

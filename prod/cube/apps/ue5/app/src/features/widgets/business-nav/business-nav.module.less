@@ -1,0 +1,54 @@
+:global {
+  .ue5-business-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    width: auto;
+  }
+
+  .ue5-business-nav .outSwiperBox {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    &.is-compact .swiper-slide {
+      width: 120px !important;
+    }
+  }
+
+  .ue5-business-nav .swiper-left-btn {
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    left: -60px;
+    transform: translateY(-50%) rotate(-180deg);
+    cursor: pointer;
+  }
+
+  .ue5-business-nav .swiper-right-btn {
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    right: -60px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .ue5-business-nav .hide-sub-nav {
+    transform: translateX(-50%) translateY(200px);
+    opacity: 0;
+  }
+}

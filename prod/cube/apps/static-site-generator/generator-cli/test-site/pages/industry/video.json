@@ -1,0 +1,43 @@
+{
+  "path": "/cases/video.html",
+  "meta": {
+    "title": "案例视频 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "VideoPlayer",
+      "props": {
+        "videoUrl": "https://qiniu.guhecloud.com/video/case-demo.mp4",
+        "thumbnail": "https://qiniu.guhecloud.com/imgs/components/carousel/6.png",
+        "poster": "https://qiniu.guhecloud.com/kaihe-static/images/cases/video-poster.png"
+      }
+    },
+    {
+      "name": "CaseCard",
+      "props": {
+        "title": "相关案例",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/case/2.png",
+            "title": "智慧高铁站",
+            "subtitle": "全新定义智慧交通「新速度」",
+            "href": "/cases/railway.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/case/3.png",
+            "title": "智慧体育馆",
+            "subtitle": "加速迈进「虚实共生」的智慧场馆",
+            "href": "/cases/gym.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/case/5.png",
+            "title": "智慧产业园",
+            "subtitle": "建设「全维思考」的智慧园区",
+            "href": "/cases/park.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

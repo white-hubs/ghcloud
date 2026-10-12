@@ -1,0 +1,660 @@
+.root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  > :global(.cube-visualization-app-spin-nested-loading) {
+    flex: 1;
+    min-height: 0;
+  }
+
+  :global(.cube-visualization-app-spin-nested-loading),
+  :global(.cube-visualization-app-spin-container) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.entryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.entryLabel {
+  color: rgba(0, 0, 0, 0.42);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.entryDivider {
+  width: 1px;
+  height: 14px;
+  margin-right: 2px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.entryValue {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  color: #08979c;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  background: #e6fffb;
+  border: 1px solid #b5f5ec;
+  border-radius: 4px;
+}
+
+.renderSettings {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fafcff;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+}
+
+.settingsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background: #f4f8ff;
+  border-bottom: 1px solid #e6efff;
+}
+
+.settingsTitle {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.settingsDescription {
+  margin-top: 2px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.settingsBody {
+  display: grid;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 16px 18px 18px;
+  grid-template-columns: max-content minmax(300px, 560px);
+}
+
+.settingBlock {
+  min-width: 0;
+}
+
+.settingLabel {
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.renderModeGroup {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.renderModeOption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  height: 32px;
+  padding: 0 14px;
+  margin: 0;
+  margin-left: -1px;
+  color: rgba(0, 0, 0, 0.65);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+
+  &:first-child {
+    margin-left: 0;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &:last-child {
+    border-radius: 0 6px 6px 0;
+  }
+
+  &:hover {
+    position: relative;
+    z-index: 1;
+    color: #1677ff;
+    border-color: #91caff;
+  }
+}
+
+.renderModeOptionActive {
+  position: relative;
+  z-index: 2;
+  color: #1677ff;
+  background: #f0f7ff;
+  border-color: #1677ff;
+  font-weight: 600;
+}
+
+.settingHint {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.instanceLineBlock {
+  width: 100%;
+  max-width: 560px;
+}
+
+.modelLineInput {
+  width: 100%;
+}
+
+.settingHint {
+  margin-top: 6px;
+}
+
+.instanceSummary {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 14px;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 6px;
+}
+
+.listSection {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.listHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 0 0 10px;
+}
+
+.listHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.listTitle {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.listCount {
+  color: rgba(0, 0, 0, 0.42);
+  font-size: 12px;
+}
+
+.summaryDot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  background: #52c41a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(82, 196, 26, 0.12);
+}
+
+.tableWrap {
+  flex: 1;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  :global(.cube-visualization-app-table-wrapper) {
+    min-width: 720px;
+  }
+}
+
+.tablePagination {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 48px;
+  padding-top: 12px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(5, 5, 5, 0.06);
+
+  :global(.cube-visualization-app-pagination) {
+    margin: 0;
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.guideWizard {
+  display: flex;
+  min-height: 548px;
+  margin: 0 -24px;
+}
+
+.modalTitle {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 24px;
+}
+
+.modalTitleText {
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modalTitleDivider {
+  flex-shrink: 0;
+  width: 1px;
+  height: 14px;
+  margin: 0 10px;
+  background: rgba(5, 5, 5, 0.12);
+}
+
+.modalGuideName {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 13px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wizardAside {
+  display: flex;
+  flex: 0 0 214px;
+  flex-direction: column;
+  padding: 28px 18px 22px;
+  background: #f7f9fc;
+  border-radius: 8px 0 0 8px;
+}
+
+.asideHeader {
+  padding: 0 10px 22px;
+}
+
+.asideTitle {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.asideDescription {
+  margin-top: 2px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.wizardNav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wizardStep {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 10px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+
+  &:hover {
+    background: rgba(22, 119, 255, 0.06);
+  }
+}
+
+.wizardStepActive {
+  color: #1677ff;
+  background: #eaf3ff;
+
+  &:hover {
+    background: #eaf3ff;
+  }
+}
+
+.wizardStepComplete {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.stepMarker {
+  display: inline-flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid rgba(5, 5, 5, 0.12);
+  border-radius: 50%;
+}
+
+.wizardStepActive .stepMarker {
+  color: #fff;
+  background: #1677ff;
+  border-color: #1677ff;
+  box-shadow: 0 2px 6px rgba(22, 119, 255, 0.25);
+}
+
+.wizardStepComplete .stepMarker {
+  color: #1677ff;
+  background: #e6f4ff;
+  border-color: #91caff;
+}
+
+.stepText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.stepDescription {
+  color: rgba(0, 0, 0, 0.42);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.asideTip {
+  padding: 12px 10px 0;
+  margin-top: auto;
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.wizardMain {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 26px;
+  background: #fff;
+}
+
+.wizardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.wizardContent {
+  height: 500px;
+  padding: 0 2px 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-bottom: 16px;
+}
+
+.contentTitle {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.contentDescription {
+  margin-top: 2px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.screenCard {
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  background: #fff;
+  border: 1px solid rgba(5, 5, 5, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(5, 5, 5, 0.02);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cardTitle {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.cardDescription {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.screenForm,
+.pointForm {
+  :global(.cube-visualization-app-form-item) {
+    margin-bottom: 16px;
+  }
+}
+
+.pointForm {
+  margin-top: 12px;
+}
+
+.durationInput {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+}
+
+.durationUnit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 10px;
+  margin-left: -1px;
+  color: rgba(0, 0, 0, 0.65);
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 0 6px 6px 0;
+}
+
+.durationInput :global(.cube-visualization-app-input-number) {
+  border-radius: 6px 0 0 6px;
+}
+
+.effects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.effectRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 6px 10px;
+  background: #fafafa;
+  border: 1px solid rgba(5, 5, 5, 0.06);
+  border-radius: 6px;
+}
+
+.effectIndex {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e6f4ff;
+  border-radius: 50%;
+}
+
+.effectValueInput {
+  flex: 1;
+  min-width: 200px;
+}
+
+.effectRoamHint {
+  flex: 1;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.pointTableWrap {
+  flex: 1;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 8px;
+
+  :global(.cube-visualization-app-table-wrapper) {
+    min-width: 720px;
+  }
+}
+
+.pointsContent {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .contentHeader {
+    flex-shrink: 0;
+  }
+
+  .tablePagination {
+    min-height: 46px;
+    padding-top: 10px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .settingsBody {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .renderModeGroup {
+    flex-wrap: wrap;
+  }
+
+  .instanceLineBlock,
+  .instanceSummary {
+    width: 100%;
+    max-width: none;
+  }
+
+  .guideWizard {
+    min-height: 520px;
+  }
+
+  .wizardAside {
+    flex-basis: 184px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .wizardMain {
+    padding: 20px;
+  }
+
+  .wizardContent {
+    height: 472px;
+  }
+
+  .effectRow {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .effectValueInput {
+    flex-basis: calc(100% - 210px);
+  }
+}

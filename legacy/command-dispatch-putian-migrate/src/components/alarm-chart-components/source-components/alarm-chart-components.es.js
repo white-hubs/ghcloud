@@ -1,0 +1,877 @@
+import { defineComponent as l, ref as k, watch as s, onMounted as c, createVNode as e } from "vue";
+import * as A from "echarts";
+const z = () => "id-" + (/* @__PURE__ */ new Date()).getTime().toString(36) + "-" + Math.random().toString(36).substr(2, 9), v = /* @__PURE__ */ l({
+  props: {
+    id: {
+      type: String,
+      default: () => z()
+    },
+    width: {
+      type: String,
+      default: () => "100px"
+    },
+    height: {
+      type: String,
+      default: () => "50px"
+    },
+    value: {
+      type: Number,
+      default: () => 300
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 400
+    }
+  },
+  setup: (t) => {
+    const n = k(), i = () => {
+      if (!n.value)
+        return;
+      const a = {
+        series: [{
+          type: "gauge",
+          startAngle: 200,
+          endAngle: -20,
+          min: Math.min(t.value, t.min),
+          radius: "140%",
+          center: ["50%", "70%"],
+          max: Math.max(t.value, t.max),
+          splitNumber: 12,
+          itemStyle: {
+            color: "#1890FF",
+            shadowColor: "rgba(0,138,255,0.45)"
+          },
+          progress: {
+            show: !0,
+            width: 4
+          },
+          pointer: {
+            icon: "path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z",
+            length: "60%",
+            width: 4,
+            offsetCenter: [0, 0]
+          },
+          axisLine: {
+            lineStyle: {
+              width: 4
+            }
+          },
+          axisTick: {
+            distance: 0,
+            length: "10%",
+            show: !1
+          },
+          splitLine: {
+            length: 3,
+            distance: 0,
+            lineStyle: {
+              width: 0.5,
+              color: "#EDF0F3"
+            }
+          },
+          axisLabel: {
+            show: !1
+          },
+          title: {
+            show: !1
+          },
+          anchor: {
+            show: !0,
+            size: 20,
+            offsetCenter: [0, 0],
+            itemStyle: {
+              color: "#fff"
+            }
+          },
+          detail: {
+            show: !1,
+            backgroundColor: "#fff",
+            width: "60%",
+            lineHeight: 40,
+            height: 40,
+            offsetCenter: [0, "-35%"],
+            valueAnimation: !0,
+            formatter: function(j) {
+              return "{value|" + j.toFixed(0) + `}{unit|V}
+{label|A相电压}`;
+            },
+            rich: {
+              value: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#777"
+              },
+              label: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#777"
+              },
+              unit: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#777"
+              }
+            }
+          },
+          data: [{
+            value: t.value,
+            name: "A相电压"
+          }]
+        }]
+      };
+      n.value.setOption(a);
+    };
+    return s(() => t.value, () => {
+      i();
+    }), c(() => {
+      n.value = A.init(document.getElementById(t.id)), i();
+    }), () => e("div", {
+      class: "container"
+    }, [e("div", {
+      id: t.id,
+      style: {
+        width: t.width,
+        height: t.height
+      }
+    }, null)]);
+  }
+}), h = /* @__PURE__ */ l({
+  props: {
+    id: {
+      type: String,
+      default: () => z()
+    },
+    width: {
+      type: String,
+      default: () => "110px"
+    },
+    height: {
+      type: String,
+      default: () => "55px"
+    },
+    value: {
+      type: Number,
+      default: () => 100
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 400
+    }
+  },
+  setup: (t) => {
+    const n = k(), i = () => {
+      if (!n.value)
+        return;
+      const a = {
+        series: [{
+          type: "gauge",
+          startAngle: 210,
+          endAngle: -30,
+          min: Math.min(t.value, t.min),
+          radius: "130%",
+          center: ["50%", "65%"],
+          max: Math.max(t.value, t.max),
+          splitNumber: 12,
+          itemStyle: {
+            shadowColor: "rgba(0,138,255,0.45)"
+          },
+          // progress: {
+          //   show: true,
+          //   width: 4
+          // },
+          pointer: {
+            icon: "path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z",
+            length: "60%",
+            width: 4,
+            itemStyle: {
+              color: "auto"
+            },
+            offsetCenter: [0, 0]
+          },
+          axisLine: {
+            lineStyle: {
+              width: 4,
+              color: [[0.3, "#1890FF"], [0.7, "#00BA8B"], [1, "#E56F71"]]
+            }
+          },
+          axisTick: {
+            distance: 0,
+            length: "10%",
+            show: !1
+          },
+          splitLine: {
+            length: 3,
+            distance: 0,
+            lineStyle: {
+              width: 0.5
+            }
+          },
+          axisLabel: {
+            show: !1
+          },
+          title: {
+            show: !1
+          },
+          anchor: {
+            show: !0,
+            size: 30,
+            offsetCenter: [0, 0],
+            itemStyle: {
+              color: "#fff"
+            }
+          },
+          detail: {
+            show: !1
+          },
+          data: [{
+            value: t.value,
+            name: "A相电压"
+          }]
+        }]
+      };
+      n.value.setOption(a);
+    };
+    return s(() => t.value, () => {
+      i();
+    }), c(() => {
+      n.value = A.init(document.getElementById(t.id)), i();
+    }), () => e("div", {
+      class: "container"
+    }, [e("div", {
+      id: t.id,
+      style: {
+        width: t.width,
+        height: t.height
+      }
+    }, null)]);
+  }
+}), g = "_container_15e9w_1", m = "_content_15e9w_9", y = "_title_15e9w_14", b = "_value_15e9w_19", d = {
+  container: g,
+  content: m,
+  title: y,
+  value: b
+}, Z = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: Number,
+      default: () => 40
+    },
+    isAlarmModal: {
+      type: Boolean,
+      default: () => !1
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 200
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: d.container
+  }, [e(v, {
+    min: t.min,
+    max: t.max,
+    value: t.value
+  }, null), e("div", {
+    class: d.content
+  }, [e("div", {
+    class: d.title
+  }, [t.label]), e("div", {
+    class: d.value
+  }, [t.value, t.unit])])])
+}), w = "_container_1ca8v_1", C = "_content_1ca8v_9", S = "_title_1ca8v_14", B = "_value_1ca8v_19", u = {
+  container: w,
+  content: C,
+  title: S,
+  value: B
+}, V = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "温度"
+    },
+    value: {
+      type: Number,
+      default: () => 40
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 200
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: u.container
+  }, [e(h, {
+    value: t.value,
+    min: t.min,
+    max: t.max
+  }, null), e("div", {
+    class: u.content
+  }, [e("div", {
+    class: u.title
+  }, [t.label]), e("div", {
+    class: u.value
+  }, [t.value, t.unit])])])
+}), M = "_container_mpsvt_1", x = "_content_mpsvt_9", L = "_title_mpsvt_14", F = "_value_mpsvt_19", o = {
+  container: M,
+  content: x,
+  title: L,
+  value: F
+}, D = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAABFCAMAAADQBC7EAAAAAXNSR0IArs4c6QAAAfhQTFRFAAAA////v7+//79A1dX/v9/f39/f4+Pj0dHo1dXq2NjrzMzdz8/f759AydfXztvn0NDj0Nnj9qFCzNXd96pV0djozNLfy9biztTkztnk0NXlztrm0Nrj/KNB/KRD0Njl/KNAztjk+qQ/z9nlz9jj+KhK0Nfkz9jj9qlPztfjz9fkz9nk+aNCzdfj+aE+ztjkz9jj+6RA0Nnj+qI/z9jlz9nk0Njkz9jlz9fjz9jjz9jjz9jk0Njjz9jkz9jkz9jk+qI/z9jkztjj+qNAz9jk+qM/z9jkz9jlz9jkz9jk+6Q/+6M/+6Q/z9fkz9fk0Njkz9jk+6M/z9fj+qNAztfkz9fkztjk+6RC+6M+z9fiz9jk0tXa1NHP1tDK2MzB28m23sar4cKg4sCa47+W5b2R8a9k86xc86xd+KdL+aZI+qNB+qRC+qRD+qRE+6M/+6NA+6RB+6RC+6VE+6ZF+6ZG+6dH+6hJ+6lL+6lM+6tP+65X+7Zn/LBb/LRi/LRj/LZm/Ltw/Lxz/L54/MB7/MF+/MOC/MSF/MWH/cuT/c6Z/c+b/dCe/dGf/dOj/dit/dmw/du0/dy2/d24/tu0/uLC/uTH/ujO/ujP/unR/unS/vDh/vHi/vfu//To//Xr//fv//jw//nz//r1//v3//37//78//79////koEOOgAAAFl0Uk5TAAEEBAYICAkLDA0PEBATFRsbGx4eISgsLy8xPlJTXGFkaWprb29ydnd4eXp/gICDioySkpufo6Wur7W/wsXK0Nna3Nzd3uDh4+Tw8vP09ff4+Pr6+/v8/P1UHOBLAAABiklEQVRIx+3WZU/DQBjA8Q13d5fi7u4uQ4oXl+EUHe4wBoPh7jBYvyZtciNkZdwd4RXp/+3TX5s+aZMTif4gYw/fQIIgQqK4ggnC39MYarzyq2pIkmykuOpJsrrYC0aM4indYg0gxjyZZxJNIcYqlWeSzGAmDd+Yx2ToFmYCMWJLW90sxKI/y8bFHZ6r3RfhnJJXUgavtDDdTUvsMynUsh2BCW9ANlQEMDnohMoCRoJhJMBQOAlGMIIRjGD+v2nt7O7tQ6inq60FmHbp4NgwjdDIUH8HMFIavQFgRvmjud0Dtu0p3mAUmG9ut/7EsJ3K+BO9ZlKlYcmrnMYwC1fcY+4WcczaG2dU4zjmkCPMsVIpRzazjwxoH9nsaMnZDLK5UKvfWaE5n0d/nxWF4oY1t6s4O6Cnrhnmfglrb/TyA/O88e0Hp99svaj3pvHMhPL9SEb/ZJp5A9nJpR6iNUX8FWwu6iEVwPjVov9zccAYBuSW1yFc31RZkGD9ecB28A6KjIYVGerj9OtD/wcubvkKJDrBSAAAAABJRU5ErkJggg==", $ = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: Number || String,
+      default: () => "40"
+    },
+    isAlarmModal: {
+      type: Boolean,
+      default: () => !1
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: o.container
+  }, [e("img", {
+    src: D,
+    width: "34",
+    height: "46",
+    alt: "",
+    srcset: ""
+  }, null), e("div", {
+    class: o.content
+  }, [e("div", {
+    class: o.title
+  }, [t.label]), e("div", {
+    class: o.value
+  }, [t.value, t.unit])])])
+}), I = "_container_4il64_1", E = "_content_4il64_9", X = "_title_4il64_14", Q = "_value_4il64_19", f = {
+  container: I,
+  content: E,
+  title: X,
+  value: Q
+}, R = "data:image/png;base64,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", tt = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: String,
+      default: () => "40"
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: f.container
+  }, [e("img", {
+    src: R,
+    width: "34",
+    height: "46",
+    alt: "",
+    srcset: ""
+  }, null), e("div", {
+    class: f.content
+  }, [e("div", {
+    class: f.title
+  }, [t.label]), e("div", {
+    class: f.value
+  }, [t.value])])])
+}), T = /* @__PURE__ */ l({
+  props: {
+    id: {
+      type: String,
+      default: () => z()
+    },
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    width: {
+      type: String,
+      default: () => "200px"
+    },
+    height: {
+      type: String,
+      default: () => "200px"
+    },
+    value: {
+      type: Number,
+      default: () => 300
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    unit: {
+      type: String,
+      default: () => "v"
+    },
+    max: {
+      type: Number,
+      default: () => 400
+    }
+  },
+  setup: (t) => {
+    const n = k(), i = () => {
+      if (!n.value)
+        return;
+      const a = {
+        series: [{
+          type: "gauge",
+          startAngle: 220,
+          endAngle: -40,
+          min: Math.min(t.value, t.min),
+          radius: "100%",
+          center: ["50%", "50%"],
+          max: Math.max(t.value, t.max),
+          itemStyle: {
+            color: "#1890FF",
+            shadowColor: "rgba(0,138,255,0.45)"
+          },
+          progress: {
+            show: !0,
+            width: 8
+          },
+          pointer: {
+            icon: "triangle",
+            length: "70%",
+            width: 10,
+            offsetCenter: [0, 0]
+          },
+          axisLine: {
+            lineStyle: {
+              width: 8
+            }
+          },
+          axisTick: {
+            distance: 0,
+            length: 5,
+            lineStyle: {
+              color: "#86909C",
+              width: 1
+              // 刻度线线宽
+            }
+          },
+          splitLine: {
+            length: 12,
+            distance: 0,
+            lineStyle: {
+              width: 1,
+              color: "#EDF0F3"
+            }
+          },
+          axisLabel: {
+            color: "#999",
+            distance: 10,
+            fontSize: 8,
+            show: !0
+          },
+          title: {
+            show: !1
+          },
+          anchor: {
+            show: !0,
+            icon: "circle",
+            size: 30,
+            showAbove: !0,
+            offsetCenter: [0, 0],
+            itemStyle: {
+              color: "#fff",
+              borderWidth: 40,
+              borderColor: "rgba(21,120,255,0.15)"
+            }
+          },
+          detail: {
+            width: "60%",
+            lineHeight: 40,
+            height: 40,
+            offsetCenter: [0, "90%"],
+            valueAnimation: !0,
+            formatter: function(j) {
+              return "{label|" + t.label + "}` `{value|" + j + "}{unit|" + t.unit + "}";
+            },
+            rich: {
+              value: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#fff"
+              },
+              label: {
+                fontSize: 16,
+                fontWeight: "bolder",
+                color: "#D6DADF"
+              },
+              unit: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#fff"
+              }
+            }
+          },
+          data: [{
+            value: t.value,
+            name: "A相电压"
+          }]
+        }]
+      };
+      n.value.setOption(a);
+    };
+    return s(() => t.value, () => {
+      i();
+    }), c(() => {
+      n.value = A.init(document.getElementById(t.id)), i();
+    }), () => e("div", {
+      class: "container"
+    }, [e("div", {
+      id: t.id,
+      style: {
+        width: t.width,
+        height: t.height
+      }
+    }, null)]);
+  }
+}), p = /* @__PURE__ */ l({
+  props: {
+    id: {
+      type: String,
+      default: () => z()
+    },
+    width: {
+      type: String,
+      default: () => "200px"
+    },
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    unit: {
+      type: String,
+      default: () => "v"
+    },
+    height: {
+      type: String,
+      default: () => "200px"
+    },
+    value: {
+      type: Number,
+      default: () => 100
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 400
+    }
+  },
+  setup: (t) => {
+    const n = k(), i = () => {
+      if (!n.value)
+        return;
+      const a = {
+        series: [{
+          type: "gauge",
+          startAngle: 220,
+          endAngle: -40,
+          min: Math.min(t.value, t.min),
+          radius: "100%",
+          center: ["50%", "50%"],
+          max: Math.max(t.value, t.max),
+          itemStyle: {
+            color: "#1890FF",
+            shadowColor: "rgba(0,138,255,0.45)"
+          },
+          progress: {
+            show: !0,
+            width: 8
+          },
+          pointer: {
+            icon: "triangle",
+            length: "70%",
+            width: 10,
+            offsetCenter: [0, 0]
+          },
+          axisLine: {
+            lineStyle: {
+              width: 8,
+              color: [[0.3, "#1890FF"], [0.7, "#00BA8B"], [1, "#E56F71"]]
+            }
+          },
+          axisTick: {
+            distance: 0,
+            length: 5,
+            lineStyle: {
+              color: "#86909C",
+              width: 1
+              // 刻度线线宽
+            }
+          },
+          splitLine: {
+            length: 12,
+            distance: 0,
+            lineStyle: {
+              width: 1,
+              color: "#EDF0F3"
+            }
+          },
+          axisLabel: {
+            color: "#999",
+            distance: 10,
+            fontSize: 8,
+            show: !0
+          },
+          title: {
+            show: !1
+          },
+          anchor: {
+            show: !0,
+            icon: "circle",
+            size: 30,
+            showAbove: !0,
+            offsetCenter: [0, 0],
+            itemStyle: {
+              color: "#fff",
+              borderWidth: 40,
+              borderColor: "rgba(21,120,255,0.15)"
+            }
+          },
+          detail: {
+            width: "60%",
+            lineHeight: 40,
+            height: 40,
+            offsetCenter: [0, "90%"],
+            valueAnimation: !0,
+            formatter: function(j) {
+              return "{label|" + t.label + "}` `{value|" + j + "}{unit|" + t.unit + "}";
+            },
+            rich: {
+              value: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#fff"
+              },
+              label: {
+                fontSize: 16,
+                fontWeight: "bolder",
+                color: "#D6DADF"
+              },
+              unit: {
+                fontSize: 20,
+                fontWeight: "bolder",
+                color: "#fff"
+              }
+            }
+          },
+          data: [{
+            value: t.value,
+            name: "A相电压"
+          }]
+        }]
+      };
+      n.value.setOption(a);
+    };
+    return s(() => t.value, () => {
+      i();
+    }), c(() => {
+      n.value = A.init(document.getElementById(t.id)), i();
+    }), () => e("div", {
+      class: "container"
+    }, [e("div", {
+      id: t.id,
+      style: {
+        width: t.width,
+        height: t.height
+      }
+    }, null)]);
+  }
+}), et = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: Number,
+      default: () => 40
+    },
+    isAlarmModal: {
+      type: Boolean,
+      default: () => !1
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 200
+    }
+  },
+  setup: (t) => () => e("div", null, [e(T, {
+    unit: t.unit,
+    label: t.label,
+    min: t.min,
+    max: t.max,
+    value: t.value
+  }, null)])
+}), nt = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: Number,
+      default: () => 40
+    },
+    isAlarmModal: {
+      type: Boolean,
+      default: () => !1
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    },
+    min: {
+      type: Number,
+      default: () => 0
+    },
+    max: {
+      type: Number,
+      default: () => 200
+    }
+  },
+  setup: (t) => () => e("div", null, [e(p, {
+    min: t.min,
+    max: t.max,
+    label: t.label,
+    unit: t.unit,
+    value: t.value
+  }, null)])
+}), O = "_container_14h5x_1", W = "_content_14h5x_9", G = "_title_14h5x_14", J = "_value_14h5x_19", r = {
+  container: O,
+  content: W,
+  title: G,
+  value: J
+}, H = "data:image/png;base64,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", lt = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: String,
+      default: () => "40"
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    },
+    isAlarmModal: {
+      type: Boolean,
+      default: () => !1
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: r.container
+  }, [e("img", {
+    src: H,
+    width: "68",
+    height: "92",
+    alt: "",
+    srcset: ""
+  }, null), e("div", {
+    class: r.content
+  }, [e("div", {
+    class: r.title
+  }, [t.label]), e("div", {
+    class: r.value
+  }, [t.value])])])
+}), U = "_container_14h5x_1", K = "_content_14h5x_9", Y = "_title_14h5x_14", _ = "_value_14h5x_19", N = {
+  container: U,
+  content: K,
+  title: Y,
+  value: _
+}, q = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAABFCAMAAADQBC7EAAAAAXNSR0IArs4c6QAAAfhQTFRFAAAA////v7+//79A1dX/v9/f39/f4+Pj0dHo1dXq2NjrzMzdz8/f759AydfXztvn0NDj0Nnj9qFCzNXd96pV0djozNLfy9biztTkztnk0NXlztrm0Nrj/KNB/KRD0Njl/KNAztjk+qQ/z9nlz9jj+KhK0Nfkz9jj9qlPztfjz9fkz9nk+aNCzdfj+aE+ztjkz9jj+6RA0Nnj+qI/z9jlz9nk0Njkz9jlz9fjz9jjz9jjz9jk0Njjz9jkz9jkz9jk+qI/z9jkztjj+qNAz9jk+qM/z9jkz9jlz9jkz9jk+6Q/+6M/+6Q/z9fkz9fk0Njkz9jk+6M/z9fj+qNAztfkz9fkztjk+6RC+6M+z9fiz9jk0tXa1NHP1tDK2MzB28m23sar4cKg4sCa47+W5b2R8a9k86xc86xd+KdL+aZI+qNB+qRC+qRD+qRE+6M/+6NA+6RB+6RC+6VE+6ZF+6ZG+6dH+6hJ+6lL+6lM+6tP+65X+7Zn/LBb/LRi/LRj/LZm/Ltw/Lxz/L54/MB7/MF+/MOC/MSF/MWH/cuT/c6Z/c+b/dCe/dGf/dOj/dit/dmw/du0/dy2/d24/tu0/uLC/uTH/ujO/ujP/unR/unS/vDh/vHi/vfu//To//Xr//fv//jw//nz//r1//v3//37//78//79////koEOOgAAAFl0Uk5TAAEEBAYICAkLDA0PEBATFRsbGx4eISgsLy8xPlJTXGFkaWprb29ydnd4eXp/gICDioySkpufo6Wur7W/wsXK0Nna3Nzd3uDh4+Tw8vP09ff4+Pr6+/v8/P1UHOBLAAABiklEQVRIx+3WZU/DQBjA8Q13d5fi7u4uQ4oXl+EUHe4wBoPh7jBYvyZtciNkZdwd4RXp/+3TX5s+aZMTif4gYw/fQIIgQqK4ggnC39MYarzyq2pIkmykuOpJsrrYC0aM4indYg0gxjyZZxJNIcYqlWeSzGAmDd+Yx2ToFmYCMWJLW90sxKI/y8bFHZ6r3RfhnJJXUgavtDDdTUvsMynUsh2BCW9ANlQEMDnohMoCRoJhJMBQOAlGMIIRjGD+v2nt7O7tQ6inq60FmHbp4NgwjdDIUH8HMFIavQFgRvmjud0Dtu0p3mAUmG9ut/7EsJ3K+BO9ZlKlYcmrnMYwC1fcY+4WcczaG2dU4zjmkCPMsVIpRzazjwxoH9nsaMnZDLK5UKvfWaE5n0d/nxWF4oY1t6s4O6Cnrhnmfglrb/TyA/O88e0Hp99svaj3pvHMhPL9SEb/ZJp5A9nJpR6iNUX8FWwu6iEVwPjVov9zccAYBuSW1yFc31RZkGD9ecB28A6KjIYVGerj9OtD/wcubvkKJDrBSAAAAABJRU5ErkJggg==", it = /* @__PURE__ */ l({
+  props: {
+    label: {
+      type: String,
+      default: () => "A相电压"
+    },
+    value: {
+      type: Number || String,
+      default: () => "40"
+    },
+    unit: {
+      type: String,
+      default: () => ""
+    }
+  },
+  setup: (t) => () => e("div", {
+    class: N.container
+  }, [e("img", {
+    src: q,
+    width: "68",
+    height: "92",
+    alt: "",
+    srcset: ""
+  }, null), e("div", {
+    class: N.content
+  }, [e("div", {
+    class: N.title
+  }, [t.label]), e("div", {
+    class: N.value
+  }, [t.value, t.unit])])])
+});
+export {
+  $ as BatteryRemainderComponent,
+  V as HeatComponent,
+  it as ModalBatteryRemainderComponent,
+  nt as ModalHeatComponent,
+  lt as ModalUpsStatusComponent,
+  et as ModalVoltageComponent,
+  tt as UpsStatusComponent,
+  Z as VoltageComponent
+};

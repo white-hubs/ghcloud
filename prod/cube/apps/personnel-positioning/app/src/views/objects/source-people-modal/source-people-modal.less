@@ -1,0 +1,63 @@
+.pp-source-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pp-source-options .pp-source-option {
+  height: auto;
+  padding: 14px 18px;
+  text-align: left;
+  white-space: normal;
+}
+
+.pp-source-option strong,
+.pp-source-option span {
+  display: block;
+}
+
+.pp-source-option span {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.pp-source-option.is-selected {
+  color: #1677ff;
+  border-color: #91caff;
+  background: #f0f7ff;
+}
+
+.pp-source-modal .ant-modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.pp-source-filter-form {
+  margin-top: 16px;
+}
+
+.pp-source-filter-form .ant-form-item {
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.pp-source-filter-keyword {
+  width: 220px;
+}
+
+.pp-source-filter-department {
+  width: 220px;
+}
+
+.pp-source-filter-actions .ant-form-item-control-input-content {
+  display: flex;
+  gap: 8px;
+}
+
+.pp-source-modal .pp-cell-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

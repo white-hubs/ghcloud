@@ -1,0 +1,57 @@
+{
+  "name": "@ghcloud/cube-knowledge-document-app",
+  "private": false,
+  "version": "1.0.6",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts ",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-bi-data-management": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-knowledge-document-service": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "dayjs": "catalog:",
+    "dayjs-calendar": "1.0.1",
+    "echarts": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "pinia": "catalog:",
+    "lodash": "4.17.21",
+    "exceljs": "^4.2.0",
+    "file-saver": "^2.0.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:",
+    "@types/lodash": "4.17.0",
+    "vite-plugin-html": "catalog:"
+  }
+}

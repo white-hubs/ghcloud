@@ -1,0 +1,79 @@
+{
+  // https://www.typescriptlang.org/zh/tsconfig#strict
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    // true: 必须标注函数返回值类型
+    "noImplicitReturns": true,
+    // false: 无法访问的代码会引发编译错误
+    "allowUnreachableCode": false,
+    // false: 未使用的引用会引发编译错误
+    "allowUnusedLabels": false,
+    // true: 可选类型不允许赋值 undefined，除非显式标注
+    "exactOptionalPropertyTypes": true,
+    // true: 避免出现 fallthrough case
+    "noFallthroughCasesInSwitch": true,
+    // true: 复写父类方法时，需要明确的 override 标注
+    "noImplicitOverride": true,
+    // true: 不允许未使用的局部变量
+    "noUnusedLocals": true,
+    // true: 不允许未使用的函数参数
+    "noUnusedParameters": true,
+    // 在 TypeScript 5.0 中，当导入路径以不是已知 JavaScript 或 TypeScript 文件扩展名的扩展名结尾时，编译器将以{file basename}.d.{extension}.ts. 
+    "allowArbitraryExtensions": true,
+    // 允许 TypeScript 文件使用特定于 TypeScript 的扩展名
+    "allowImportingTsExtensions": true,
+    // false: 不允许全局 umd 导入，导入时必须明确声明
+    "allowUmdGlobalAccess": false,
+    // true: 导入的 type 将在运行时被删除; 仅导入 type 时需要显式标注 type
+    "verbatimModuleSyntax": true,
+    // 指定换行符: unix-lf
+    "newLine": "lf",
+    // 合并默认导入：import A 而不是 import * as A
+    "allowSyntheticDefaultImports": true,
+    // 文件名强制使用一致大小写
+    "forceConsistentCasingInFileNames": true,
+    // 支持装饰器元数据
+    "emitDecoratorMetadata": true,
+    // 支持装饰器
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [
+      "unplugin-vue-macros/macros-global",
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "components.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "vueCompilerOptions": {
+    "jsxTemplates": true,
+    "experimentalRfc436": true
+  }
+}

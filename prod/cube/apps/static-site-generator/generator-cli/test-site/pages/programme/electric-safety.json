@@ -1,0 +1,321 @@
+{
+  "path": "/programme/electric-safety.html",
+  "meta": {
+    "title": "电气安全_电气安全管理系统_古河云科技",
+    "keywords": "电气安全,配电运行监控,电气火灾预警,电能质量监测,能耗管理",
+    "description": "古河云电气安全管理系统适用于工业产线、商业建筑、老旧设施等场景，可有效预防电气火灾、优化能耗管理，提供24小时预警与干预能力。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-electric-safety-banner.webp",
+            "title": "电气安全管理系统",
+            "subtitle": "基于物联网技术，通过实时监测、数据分析及远程控制，实现对电气线路的全方位安全管理。该系统适用于工业产线、商业建筑、老旧设施等场景，可有效预防电气火灾、优化能耗管理，提供24小时预警与干预能力。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "隐蔽隐患难发现",
+            "description": "传统人工难识别老化、漏电等潜在风险，隐患长期积累。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "监管效率低",
+            "description": "分散设备缺乏统一监管，故障响应滞后，管理成本高。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "用能浪费严重",
+            "description": "缺乏精细数据支撑，无法实现节能优化与成本分摊。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "数据粗糙不准确",
+            "description": "传统平台不够灵活，数据不准确，各线路用电数据不够明细或无法采集。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "subtitle": "国家层面对电气安全的监管持续强化，重点围绕 “隐患治理”“智能化转型”“新能源安全” 三大方向。",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《电气火灾综合治理》",
+            "description": "国务院安委会明确要求严查电器产品全链条隐患，推动建立 “生产-流通-使用”闭环监管，将电气火灾防控纳入省级政府考核。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《国家发改委、能源局联合发文》",
+            "description": "强调落实企业主体责任，构建电力安全预控体系，推行 “互联网+安全监管” 。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《电力监控系统安全防护规定》",
+            "description": "要求建立 “安全免疫”和“态势感知”体系，禁止使用无线通信设备，强化工控系统边界隔离。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《国能发安全〔2024〕90号》",
+            "description": "“双碳”目标驱动下，我国能源绿色低碳转型持续推进，新型电力系统加速构建，其安全稳定运行成为能源保供的重要任务。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/remote-monitor.webp",
+            "title": "配电运行监控",
+            "subtitle": "系统通过智能终端设备，采集电流、电压、温度、漏电等参数，实时监测关键数据，通过算法检测过载、短路等异常，实现实时报警，保障安全用电。",
+            "features": [
+              {
+                "label": "实时监测：",
+                "value": "24小时不间断监测配电设备运行参数"
+              },
+              {
+                "label": "异常预警：",
+                "value": "参数越限自动告警，支持多级预警机制"
+              },
+              {
+                "label": "远程控制：",
+                "value": "支持远程分合闸操作，紧急情况下快速响应"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/fire-alarm.webp",
+            "title": "电气火灾预警",
+            "subtitle": "对大量电力数据进行分析，帮助用户了解电力消耗情况、峰谷用电情况等。动态生成隐患报告，定位高故障率路线，提供老化趋势预测与负载优化建议。",
+            "features": [
+              {
+                "label": "漏电监测：",
+                "value": "实时监测剩余电流，及时发现绝缘故障"
+              },
+              {
+                "label": "温度监测：",
+                "value": "监测线缆、接头温度，防止过热引发火灾"
+              },
+              {
+                "label": "故障电弧：",
+                "value": "识别故障电弧，预警潜在火灾风险"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/wireless-detect.webp",
+            "title": "电能质量监测",
+            "subtitle": "管理人员可以通过APP端、电脑端实时查看运行状态，并进行远程控制和管理，紧急拉闸、参数调整等操作，支持设备快速联动，形成处置闭环。",
+            "features": [
+              {
+                "label": "谐波分析：",
+                "value": "监测2-31次谐波含量，识别电能质量问题"
+              },
+              {
+                "label": "不平衡度：",
+                "value": "实时计算三相电压电流不平衡度"
+              },
+              {
+                "label": "功率因数：",
+                "value": "监测功率因数变化，提供优化建议"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/water-supply.webp",
+            "title": "能耗分析与能效管理",
+            "subtitle": "通过驾驶舱看板、多维度图表、拓扑图及电气视图等，将电气参数、隐患定位及能耗分析直观图形化，实现运行状态与风险的一目了然，辅助高效决策。",
+            "features": [
+              {
+                "label": "分项计量：",
+                "value": "按区域、设备类型进行用电分项计量"
+              },
+              {
+                "label": "能耗分析：",
+                "value": "多维度能耗分析，识别节能空间"
+              },
+              {
+                "label": "能效对标：",
+                "value": "与行业标准对标，评估能效水平"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "火灾隐患精准防控",
+            "description": "实时监测，实现提前预警风险，保障企业资产与人员安全。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "设备全生命周期管理",
+            "description": "实时监控设备状态，预测老化趋势并主动干预，延长设备寿命。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "管理效率智能化提升",
+            "description": "自动化支撑人工巡检，支持数据回溯与多维分析，辅助决策优化。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "合规与可持续发展",
+            "description": "支撑监管要求，数据资产可为电力管理及碳核算提供基础支撑。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "安防监控",
+                "href": "/product-center/app-security-detail.html"
+              },
+              {
+                "name": "日常巡检",
+                "href": "/product-center/app-daily-inspection-detail.html"
+              },
+              {
+                "name": "电动车管理",
+                "href": "/product-center/app-ev-detail.html"
+              },
+              {
+                "name": "隐患整改",
+                "href": "/product-center/app-hidden-danger-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "边缘智算中枢",
+                "href": "#"
+              },
+              {
+                "name": "无线手动火灾报警按钮",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-chengdu.webp",
+            "title": "成都东部新区产业园",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-bengbu.webp",
+            "title": "天津海吉星",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/case-foshan.webp",
+            "title": "彭州中医药创新港",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,73 @@
+/* components/electronic-guide.wxss */
+.container {
+	height: 100%;
+}
+
+.customCallout {
+	background: #fff;
+	padding: 10rpx 12rpx;
+	border-radius: 8rpx;
+	display: flex;
+	align-items: center;
+}
+
+.customCallout .flex {
+	display: flex;
+	align-items: flex-start;
+}
+
+.customCallout .merchant-png {
+	width: 120rpx;
+	height: 120rpx;
+	flex-shrink: 0;
+	margin-right: 20rpx;
+}
+
+.customCallout .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 260rpx;
+}
+
+.customCallout .content .title {
+	font-size: 30rpx;
+	color: #222;
+	font-weight: 600;
+}
+
+.customCallout .content .desc {
+	display: flex;
+	margin-top: 12rpx;
+	align-items: center;
+	font-size: 24rpx;
+	font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+	font-weight: Regular;
+	text-align: justify;
+	color: #7c8380;
+}
+
+.customCallout .content .desc .icon {
+	width: 20rpx;
+	margin-right: 8rpx;
+	height: 20rpx;
+}
+
+.customCallout .nav-handle {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	margin-left: 80rpx;
+	padding: 16rpx;
+	background: #006B3A;
+	border-radius: 12rpx;
+	color: #fff;
+	font-size: 24rpx;
+}
+
+.customCallout .nav-handle .nav-png {
+	width: 20rpx;
+	margin-right: 10rpx;
+	height: 24rpx;
+	vertical-align: middle;
+}

@@ -1,0 +1,116 @@
+.sub-panel-wrapper {
+  position: relative;
+
+  &.is-zoomable {
+    /* 标题栏默认 grab；文本 / 按钮 / 选项单独 pointer */
+    :global(.sub-panel-header) {
+      cursor: grab;
+    }
+
+    :global(.sub-panel-header .title),
+    :global(.sub-panel-header .zoomable-title),
+    :global(.sub-panel-header .title-icon-slot),
+    :global(.sub-panel-header .title-icon-slot *),
+    :global(.sub-panel-header .mark),
+    :global(.sub-panel-header .mark *),
+    :global(.sub-panel-header .header-extra) {
+      cursor: grab;
+    }
+
+    :global(.sub-panel-header .sub-title),
+    :global(.sub-panel-header button),
+    :global(.sub-panel-header a),
+    :global(.sub-panel-header input),
+    :global(.sub-panel-header select),
+    :global(.sub-panel-header textarea),
+    :global(.sub-panel-header label),
+    :global(.sub-panel-header .zoom-trigger-btn),
+    :global(.sub-panel-header .ant-select),
+    :global(.sub-panel-header .ant-select-selector),
+    :global(.sub-panel-header .ant-select-selection-item),
+    :global(.sub-panel-header .ant-select-arrow),
+    :global(.sub-panel-header .ant-select-clear),
+    :global(.sub-panel-header .ant-picker),
+    :global(.sub-panel-header .ant-picker-input),
+    :global(.sub-panel-header .ant-picker-input > input),
+    :global(.sub-panel-header .ant-btn),
+    :global(.sub-panel-header .ant-radio-wrapper),
+    :global(.sub-panel-header .ant-checkbox-wrapper),
+    :global(.sub-panel-header .date-inline-form),
+    :global(.sub-panel-header .date-inline-form *),
+    :global(.sub-panel-header .v2-time-button),
+    :global(.sub-panel-header .v2-time-switch),
+    :global(.sub-panel-header .energy-v2-more-link),
+    :global(.sub-panel-header .energy-v2-filter-group),
+    :global(.sub-panel-header .energy-v2-filter-group *) {
+      cursor: pointer;
+    }
+
+    :global(.sub-panel) {
+      transition:
+        opacity 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+  }
+
+  &.is-dragging,
+  &.is-launching {
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+
+    :global(.sub-panel-header),
+    :global(.sub-panel-header *) {
+      cursor: grabbing;
+    }
+
+    :global(.sub-panel) {
+      opacity: 0.38;
+      filter: none;
+      transform: none;
+      box-shadow: none;
+      transition: opacity 0.12s ease;
+    }
+  }
+}
+
+.zoom-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin-left: 0;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid var(--visual-zoom-btn-border, rgba(41, 137, 255, 0.45));
+  background: var(--visual-zoom-btn-bg, rgba(41, 137, 255, 0.12));
+  color: var(--visual-zoom-btn-color, var(--visual-primary, #2989ff));
+  box-shadow: var(--visual-zoom-btn-shadow, none);
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  svg {
+    display: block;
+    width: 13px;
+    height: 13px;
+  }
+
+  &:hover {
+    color: var(--visual-zoom-btn-hover-color, #ffffff);
+    background: var(--visual-zoom-btn-hover-bg, rgba(41, 137, 255, 0.55));
+    border-color: var(--visual-zoom-btn-hover-border, var(--visual-primary, #2989ff));
+    box-shadow: var(--visual-zoom-btn-hover-shadow, 0 0 10px rgba(41, 137, 255, 0.35));
+  }
+
+  &:active {
+    transform: none;
+  }
+}

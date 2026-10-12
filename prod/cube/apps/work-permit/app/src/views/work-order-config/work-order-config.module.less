@@ -1,0 +1,135 @@
+.page {
+  min-height: 100vh;
+  padding: 0 12px 16px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.title {
+  position: relative;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 18px;
+  background: #1677ff;
+  transform: translateY(-50%);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  min-height: calc(100vh - 62px);
+  background: #ffffff;
+}
+
+.groupPanel,
+.tablePanel {
+  min-height: calc(100vh - 62px);
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.groupPanel {
+  border-right: 1px solid #f0f0f0;
+  padding: 0;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.groupList {
+  max-height: calc(100vh - 114px);
+  overflow-y: auto;
+}
+
+.groupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 12px 0 16px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.groupItem:hover {
+  background: #f3f4f6;
+}
+
+.groupItemActive {
+  background: #e6f4ff;
+  color: #1677ff;
+}
+
+.groupName {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+}
+
+.groupText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.groupCount {
+  flex-shrink: 0;
+  color: #8c8c8c;
+}
+
+.groupActions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tablePanel {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px 28px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  margin-bottom: 0;
+}
+
+.tableWrap {
+  flex: 1;
+  min-height: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}

@@ -1,0 +1,171 @@
+
+.ml-10px{
+  margin-left: 16px;
+}
+.mr-16px{
+  margin-right: 16px;
+}
+.mt-20px{
+  margin-top: 20px;
+}
+.mb-20px{
+  margin-bottom: 20px;
+}
+.title{
+  font-size: 14px;
+  font-weight: 700;
+}
+.detail-form{
+  .iot-configure-form-item,.ant-form-item{
+    margin-bottom: 5px;
+  }
+  .iot-configure-form-item-control-input-content{
+    // text-wrap: nowrap;
+  }
+}
+.dynamic-form{
+  position: relative;
+  z-index: 0;
+  margin: 16px 0px !important;
+  padding-top: 16px !important;
+  margin-left: 15px !important;
+  padding-bottom: 3px !important;
+  margin-top: 0 !important;
+  &::after {
+    display: inline-block;
+    content: '';
+    // background: rgba(203, 225,255, 0.6);
+    z-index: -1;
+    width: calc(100% - 0px);
+    height: calc(100% - 6px);
+    left: -8px;
+    position: absolute;
+    top: 2px;
+    border: 1px dashed #096dd9;
+    border-radius: 4px;
+  }
+  &:nth-child(even) {
+    &::after {
+      border-top: none;
+    }
+  }
+  // .cube-input-number {
+  //   background: transparent !important;
+  // }
+}
+.verticalLine {
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  font-weight: 700;
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 3px;
+    height: 18px;
+    background-color: #2a86f8;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+  }
+}
+.gateway-detail{
+  &.layout-container {
+    .layout-right{
+      padding-left: 0;
+    }
+  }
+}
+.ml-5px{
+  margin-left:5px;
+}
+.form-modal-wrap{
+  position: relative;
+  .iot-configure-modal-body,.ant-modal-body{
+    max-height: 600px;
+    overflow-y: auto;
+  }
+}
+
+.text{
+  &.sucess{
+    color: #52c41a;
+  }
+  &.warn{
+    color: #faad14;
+  }
+  &.error{
+    color:#ff4d4f;
+  }
+  &.info{
+    color:#1890ff;
+  }
+
+}
+.iot-configure-form-item-control-input-content{
+  word-wrap: break-word;
+}
+.verticalLine {
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  font-weight: 700;
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 3px;
+    height: 18px;
+    background-color: #2a86f8;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+  }
+}
+.gateway-detail{
+  &.layout-container {
+    .layout-right{
+      padding-left: 0;
+    }
+  }
+}
+.iot-configure-upload-list-item-card-actions,
+.iot-configure-upload-list-item-card-actions .anticon,
+.iot-configure-upload-list-item-card-actions-btn.iot-configure-btn-sm {
+  color: #ff4d4f !important;
+}
+.error-msg{
+  color: red; 
+  font-size:12px;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  display: block;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.input-wrap{
+  position: relative;
+  padding: 10px 0 14px 0;
+}
+
+div {
+  &::-webkit-scrollbar {
+    width: 10px !important; 
+    height: 10px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1) !important;
+    background: #b2b2b2 !important;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1) !important;
+    border-radius: 10px !important;
+    background: #eaeaea !important;
+  }
+}
+.table-striped td{
+  background-color: #fafafa;
+}

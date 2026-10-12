@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Grid Vis SDK Test</title>
+    <style>
+      body { 
+        margin: 0; 
+        overflow: hidden; 
+        font-family: sans-serif; 
+      }
+      #renderCanvas { width: 100%; height: 100vh; display: block; }
+      #controls { position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 4px; }
+      button { margin: 5px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <h3>SDK Test Controls</h3>
+      <div style="margin: 5px 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <div style="display: flex; gap: 5px;">
+           <input type="text" id="model-url-input" placeholder="Enter GLB/GLTF URL" style="padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 200px;" />
+           <button id="btn-load-url">Load URL</button>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <label for="file-upload" style="cursor: pointer; background: #eee; padding: 6px 12px; border: 1px solid #999; border-radius: 4px; font-size: 14px; transition: background 0.3s;">
+            Upload GLB/GLTF
+          </label>
+          <input type="file" id="file-upload" accept=".glb,.gltf" style="display: none;" />
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px;">
+            <input type="checkbox" id="chk-append-model" />
+            <label for="chk-append-model" style="font-size: 14px; cursor: pointer;">Append Model (Keep Previous)</label>
+        </div>
+        <button id="btn-smart-cam">Reset View (Smart)</button>
+        <button id="btn-top-view">Top View</button>
+        <button id="btn-add-labels">Add Labels</button>
+        <button id="btn-screenshot">Screenshot</button>
+        <button id="btn-dispose" style="background: #ffdddd; color: #cc0000; border-color: #ff9999;">Dispose SDK</button>
+      </div>
+      <div id="status" style="margin-top: 10px; font-size: 14px; color: #333;">SDK Initialized</div>
+      <div id="fps-stats" style="margin-top: 5px; font-size: 12px; color: #666;">FPS: -</div>
+    </div>
+    <canvas id="renderCanvas"></canvas>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

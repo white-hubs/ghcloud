@@ -1,0 +1,151 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 200px;
+  flex-direction: column;
+}
+
+.titleIcon {
+  display: block;
+  width: var(--card-title-icon-size, 32px);
+  height: var(--card-title-icon-size, 32px);
+  object-fit: contain;
+}
+
+.metricPanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0;
+  padding: 4px 8px;
+  background:
+    linear-gradient(180deg, rgba(8, 20, 42, 0.12), rgba(4, 12, 28, 0.04)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.18));
+  border-radius: 10px;
+}
+
+.metricRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 4px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(70, 166, 255, 0.1);
+  }
+}
+
+.rowBody {
+  min-width: 0;
+  flex: 1;
+}
+
+.rowHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.rowLabel {
+  min-width: 0;
+  flex: 1;
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.rowValue {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: baseline;
+  gap: 1px;
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.28);
+}
+
+.rowUnit {
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  font-weight: 600;
+}
+
+.rowTrack {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  background: rgba(125, 198, 255, 0.14);
+  border-radius: 999px;
+}
+
+.rowFill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 320ms ease;
+}
+
+.emptySurface {
+  display: flex;
+  flex: 1;
+  min-height: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 380px;
+
+  .metricPanel {
+    padding: 8px 14px;
+  }
+
+  .metricRow {
+    padding: 14px 4px;
+  }
+
+  .rowLabel {
+    font-size: calc(var(--font-size-scale, 1) * 14px);
+  }
+
+  .rowValue {
+    font-size: calc(var(--font-size-scale, 1) * 22px);
+  }
+
+  .rowTrack {
+    height: 6px;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .cmd-alarm-accuracy-v2-panel) {
+  .metricPanel {
+    background: linear-gradient(145deg, rgba(244, 249, 255, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(116, 158, 210, 0.22);
+  }
+
+  .metricRow:not(:last-child) {
+    border-bottom-color: rgba(116, 158, 210, 0.16);
+  }
+
+  .rowLabel {
+    color: #49628f;
+  }
+
+  .rowValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .rowTrack {
+    background: rgba(116, 158, 210, 0.18);
+  }
+}
+
+.v2-minimal-white-panel(cmd-alarm-accuracy-v2-panel);

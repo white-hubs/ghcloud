@@ -1,0 +1,66 @@
+.container {
+  min-height: calc(100vh - 48px);
+  background: #F3F7FA;
+  width: 100%;
+  padding: 12px 0;
+
+  :global {
+    .van-form {
+      background: #fff;
+    }
+
+    .van-cell {
+      background: none;
+    }
+  }
+
+  .upload {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px dashed var(--van-gray-5);
+  }
+
+  .uploadedList {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+
+    .uploaded {
+      position: relative;
+      margin-right: 12px;
+      img{
+        width: 65px;
+        height: 65px;
+        vertical-align: middle;
+      }
+
+      :global {
+        .van-icon-clear {
+          position: absolute;
+          right: -6px;
+          top: -8px;
+        }
+      }
+    }
+  }
+
+  .button-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    padding: 15px 12px 25px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+
+    .btn {
+      flex: 1;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+}

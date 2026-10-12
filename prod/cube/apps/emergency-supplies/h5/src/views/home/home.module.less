@@ -1,0 +1,145 @@
+.page {
+  min-height: 100vh;
+  padding: 0 8px 28px;
+  color: #15283d;
+  background: #f6f8fb;
+}
+
+.appHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  margin: 0 -8px 10px;
+  background: #fff;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.appHeader h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.contentBlock {
+  padding: 0;
+}
+
+.entryMenu {
+  margin-bottom: 12px;
+}
+
+.entryMenu :global(.van-cell-group) {
+  width: 100%;
+  margin: 0 !important;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #edf1f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.035);
+}
+
+.entryMenu :global(.van-cell) {
+  padding: 14px 14px 8px;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.entryMenu :global(.van-cell-group) > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px 10px 10px;
+}
+
+.entryMenu :global(.van-cell-group) > div:last-child > div {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 44px;
+  padding: 0 10px;
+  background: #f7f8fa;
+  border-radius: 6px;
+}
+
+.entryMenu :global(.van-cell-group) > div:last-child > div img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.entryMenu :global(.van-cell-group) > div:last-child > div span {
+  overflow: hidden;
+  color: #1f2937;
+  font-size: 13px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panel {
+  min-height: 102px;
+  padding: 14px 14px 16px;
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid #edf1f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.035);
+}
+
+.panel h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.statItem strong {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.statItem span {
+  margin-top: 6px;
+  color: #8a94a6;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.blue {
+  color: #2f6df6;
+}
+
+.green {
+  color: #18a35f;
+}
+
+.orange {
+  color: #ff6b1a;
+}
+
+.purple {
+  color: #8b5cf6;
+}

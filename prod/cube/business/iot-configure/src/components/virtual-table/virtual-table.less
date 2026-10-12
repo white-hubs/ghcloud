@@ -1,0 +1,74 @@
+// 在文件顶部添加全局样式覆盖
+:global {
+  .ant-table-wrapper .ant-table-sticky-holder {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: #fff !important;
+  }
+  
+  .ant-table-wrapper .ant-table-sticky-scroll {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    margin-top: -17px !important;
+  }
+  
+  // 增加对表头的直接控制
+  .ant-table-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: #fff !important;
+  }
+}
+
+.virtual-table-container {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden; // 修改为hidden，让水平滚动由表格控制
+  width: 100%;
+  
+  .virtual-table-phantom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  
+  .virtual-table-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .virtual-table {
+    // 确保表头固定
+    :global(.ant-table-thead){
+      position: sticky;
+      top: 0;
+      z-index: 100; // 增加z-index值，确保表头始终在最上层
+      background: #fff;
+    }
+    
+    // 允许表格水平滚动，但垂直滚动仍然隐藏
+    :global(.ant-table-body) {
+      overflow-y: hidden !important; // 保持垂直滚动隐藏
+      overflow-x: auto !important; // 允许水平滚动
+    }
+    
+    // 确保固定列正常显示
+    :global(.ant-table-cell.ant-table-cell-fix-left) {
+      position: sticky !important;
+      z-index: 2; // 确保固定列的z-index小于表头但大于普通单元格
+    }
+    
+    // 确保固定列的表头正常显示
+    :global(.ant-table-cell.ant-table-cell-fix-left.ant-table-cell-fix-left-last) {
+      box-shadow: 1px 0 0 #f0f0f0;
+    }
+  }
+}

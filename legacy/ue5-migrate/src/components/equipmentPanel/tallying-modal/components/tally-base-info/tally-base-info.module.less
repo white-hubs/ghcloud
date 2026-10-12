@@ -1,0 +1,49 @@
+.tallyBaseInfo {
+  background: rgba(12,59,126,0.20);
+  height: 83px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+
+  .infoContent {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    font-size: 15px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #ffffff;
+    line-height: 15px;
+
+    .infoItem {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .label {
+        margin-right: 8px;
+        color: #a8b1bb;
+      }
+
+      .value {
+        color: #fff;
+        line-height: 1.5;
+        max-width: calc(100% - 80px);
+      }
+
+      &.phone {
+        .value {
+          font-size: 15px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #ffffff;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}

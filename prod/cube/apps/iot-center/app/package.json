@@ -1,0 +1,54 @@
+{
+  "name": "@ghcloud/cube-iot-center-app",
+  "version": "1.10.27",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "src/public.ts",
+  "publishConfig": {
+    "main": "./dist/index.html",
+    "module": "./dist/index.html",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts ",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons": "catalog:",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-message-center-service": "workspace:^",
+    "@ghcloud/cube-mf-root": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-security-management-service": "workspace:^",
+    "@ghcloud/cube-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/event-bus": "workspace:^",
+    "@ghcloud/ghcloud-business-request": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "antd": "catalog:",
+    "dayjs": "catalog:",
+    "node-fetch": "3.3.2",
+    "qiankun": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "use-immer": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "less": "catalog:",
+    "typescript": "*",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vite-tsconfig-paths": "catalog:"
+  }
+}

@@ -1,0 +1,83 @@
+.layout-container {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  >div {
+    width: 100%;
+
+    &.layout-header {
+      box-sizing: border-box;
+      min-height: 53px;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #f3f3f3;
+
+      .ant-btn {
+        margin-left: 14px;
+      }
+    }
+
+    &.layout-content {
+      height: calc(100% - 125px);
+      overflow-y: overlay;
+      position: relative;
+      
+      &.no-footer {
+        height: calc(100% - 72px);
+      }
+      
+      &.has-table-scroll {
+        height: calc(100% - 145px); /* 减去滚动条区域的高度 */
+        overflow-x: hidden; /* 隐藏内容区的水平滚动条 */
+      }
+    }
+
+    &.scroll-capture-area {
+      /* 高度将由 JS 动态设置 */
+      min-height: 5px;
+      cursor: ew-resize; /* 显示水平调整光标 */
+      position: relative;
+      z-index: 1; /* 确保在滚动条上方 */
+    }
+
+    &.table-scroll-container {
+      height: 20px; 
+      overflow-x: auto;
+      overflow-y: hidden;
+      
+      .table-scroll-content {
+        height: 1px; 
+      }
+    }
+
+    &.layout-footer {
+      height: 72px;
+      border-top: 1px solid #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .footer-btn {
+        .ant-btn {
+          margin-left: 14px;
+        }
+      }
+
+      .footer-page {
+        .ant-btn {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

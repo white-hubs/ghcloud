@@ -1,0 +1,28 @@
+{
+  "name": "@ghcloud/cube-static-site-generator-components",
+  "version": "0.0.38",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./components/*/schema": "./src/components/*/schema.ts",
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "dependencies": {
+    "dplayer": "^1.27.1",
+    "swiper": "^12.1.2",
+    "tailwindcss": "catalog:"
+  }
+}

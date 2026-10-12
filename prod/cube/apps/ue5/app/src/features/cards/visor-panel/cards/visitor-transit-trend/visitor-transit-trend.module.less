@@ -1,0 +1,21 @@
+@import "../../_shared/visor-panel-v2.less";
+
+.visor-v2-panel-chrome(visor-visitor-trend-v2-panel);
+
+:global {
+  .visor-visitor-trend-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .visor-visitor-trend-v2-panel .chart-panel {
+    min-height: 180px;
+
+    &.is-zoom {
+      min-height: 420px;
+    }
+  }
+}

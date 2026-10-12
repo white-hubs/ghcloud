@@ -1,0 +1,166 @@
+.container {
+  height: calc(100vh - 12.6667vw);
+  background: #F3F7FA;
+  padding: 12px;
+
+  .app-group {
+    width: 351px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    :global {
+      .van-cell__title {
+        font-family: Source Han Sans CN, Source Han Sans CN;
+        font-weight: 400;
+        font-size: 15px;
+        color: #1F3140;
+        line-height: 21px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        text-align: left;
+        flex: unset
+      }
+
+      .van-cell__value {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .van-cell {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    .app-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      width: 158px;
+      height: 56px;
+      background: #f7f7f7;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #1F3140;
+        user-select: none;
+        margin-left: 10px;
+      }
+    }
+
+    .time-picker {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      div {
+        width: 52px;
+        height: 24px;
+        text-align: center;
+        transition: all 0.2s;
+
+        &.time-picker-selected {
+          background: var(--van-primary-color);
+          border-radius: 4px 4px 4px 4px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .stat-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 2px 0px;
+
+    .stat-bottom-item {
+      width: 33.33%;
+      text-align: center;
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 500;
+      font-size: 14px;
+      color: #1F3140;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+
+      .stat-bottom-item-value {
+        position: relative;
+        font-family: Roboto, Roboto;
+        font-weight: 400;
+        color: #888888;
+        font-style: normal;
+        text-transform: none;
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .case-group {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    .case-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      height: 56px;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .caseTitle {
+        line-height: 40px;
+        font-weight: 400;
+        font-size: 3.733333vw;
+        color: #1F3140;
+        margin-left: 10px;
+      }
+
+      span {
+        margin-right: 18px;
+      }
+
+      span::after {
+        position: absolute;
+        height: 5.333333vw;
+        right: 10px;
+        top: 18px;
+        content: '个';
+        font-weight: 400;
+        font-size: 3.733333vw;
+        color: #1F3140;
+      }
+    }
+  }
+
+  .hidden {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-attendance-detail.html",
+  "meta": {
+    "title": "考勤管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "考勤管理主要是用于规范管理员工的工作日上下班、请假、加班、出差、外出等行为的应用工具，并为公司人事财务提供员工的考勤数据，包括迟到、请假、加班、早退、旷工等，以备主管对员工打绩效，财务对员工做薪资计算等。",
+    "keywords": "考勤管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/考勤管理/main.png",
+        "productName": "考勤管理",
+        "productDescription": "考勤管理主要是用于规范管理员工的工作日上下班、请假、加班、出差、外出等行为的应用工具，并为公司人事财务提供员工的考勤数据，包括迟到、请假、加班、早退、旷工等，以备主管对员工打绩效，财务对员工做薪资计算等。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "考勤管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">在各企业单位通过打卡考勤管理软件实现对员工考勤数据的集中管理和自动化处理，针对异地办公场景可通过手机等终端设备进行考勤打卡，使得企业能够更好地适应远程办公和灵活工作制度。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">考勤管理主要是用于规范管理员工的工作日上下班、请假、加班、出差、外出等行为的应用工具，并为公司人事财务提供员工的考勤数据，包括迟到、请假、加班、早退、旷工等，以备主管对员工打绩效，财务对员工做薪资计算等。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>班次管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持各种假期控制管理方案，联动考勤数据；内置多种假期方案贴合国家政策，发放条件自由配置。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965245952581185538.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; &nbsp; &nbsp;</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965245748071116802.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>考勤审批</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">异常处理及请假、出差、加班、调休等考勤实现流程审批，将繁琐流程简单化，关联考勤打卡数据业务实时同步</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>考勤台账</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">考勤数据分析，员工出勤、请假、加班工时一目了然；假期使用进度清晰可见，辅助企业进行后续薪酬结算。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410928599041",
+            "name": "智能照明",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/智能照明/main.png",
+            "version": "1.0.1",
+            "description": "智能照明能够全面监测照明设备的运行状态，实时获取各回路工作参数，并对异常情况如灯具损坏、电路故障等进行自动诊断与即时报警，通过消息推送或声光提示通知运维人员迅速响应，大幅降低因照明失效导致的安全风险。",
+            "href": "/product-center/app-lighting-detail.html"
+          },
+          {
+            "id": "1811344410567888897",
+            "name": "医用气体",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/医用气体/main.png",
+            "version": "1.0.1",
+            "description": "在可视化场景中展示ICU内各个床位的位置和布局，以立体化的方式呈现，病床、监护仪、氧气、吸氧机等设备的摆放位置和空间关系。 实时监测ICU中各种设备的运行状态，包括监护仪、呼吸机、输液泵等设备的工作状态，以立体化的方式呈现设备的运行情况。",
+            "href": "/product-center/app-medical-gas-detail.html"
+          },
+          {
+            "id": "1811344410744049666",
+            "name": "门禁管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

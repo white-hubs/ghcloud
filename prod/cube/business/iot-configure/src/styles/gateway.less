@@ -1,0 +1,78 @@
+.gateway{
+  padding: 16px 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .card{
+    display: flex;
+    width: 25%;
+    min-width: 300px;
+    position: relative;
+    box-sizing: border-box;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+    cursor: pointer;
+    .wrap{
+      position: relative;
+      width: 100%;
+      border-radius: 2px;
+      border: 1px solid #f0f0f0;
+      margin:16px;
+      &:hover {
+        border-color: transparent;
+        box-shadow: 0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017;
+      }
+      .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
+        padding:  16px;
+        .title{
+          font-weight: 400;
+        }
+        .btns{
+          color:#1890ff;
+          >button{
+            font-size: 16px;
+          }
+        }
+      }
+      .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:16px;
+        .left{
+
+          .info{
+            margin-bottom: 10px;
+            text-align: left;
+            .label{
+              display: inline-block;
+              text-align: right;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.pt20{
+  padding-top: 40px;
+}
+.rote{
+  animation: rotate 1s linear infinite;
+}
+// 定义旋转动画的关键帧
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,43 @@
+.device-model-simplify {
+
+  :global {
+    .ant-modal {
+      width: 200px !important;
+      position: fixed;
+      z-index: 99999999;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+      border-bottom: 2px solid rgba(41, 137, 255, 1);
+    }
+  }
+
+  .alarmDetail-modal-content {
+    width: 100%;
+    overflow: hidden;
+
+    .content-body {
+      min-height: 91px;
+      font-size: 12px;
+      color: #FFFFFF;
+      line-height: 30px;
+
+      :deep(.box .content) {
+        margin-top: 15%;
+      }
+
+      .details-box {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .details {
+          color: #2989FF;
+          cursor: pointer;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

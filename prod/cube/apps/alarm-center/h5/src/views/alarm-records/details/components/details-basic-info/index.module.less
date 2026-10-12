@@ -1,0 +1,86 @@
+.basicInfo {
+
+
+
+  .cellContainer {
+
+    .customCell {
+      display: flex;
+      border-bottom: 1px solid #f8f9f9;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      padding: 12px 0;
+      position: relative;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .cellLabel {
+        text-indent: 6px;
+        color: #1f3140;
+        flex-shrink: 0;
+      }
+
+      .cellValue {
+        color: #666;
+        margin-left: 40px;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .item-value-popover {
+          position: absolute;
+          z-index: 100000;
+          top: 100%;
+          right: 20px;
+          background: #4a4a4a;
+          border: 1px solid #f8f9f9;
+          box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
+          border-radius: 4px;
+          color: #fff;
+          padding: 10px;
+          max-width: 200px;
+          word-break: break-all;
+          word-wrap: break-word;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    .customImageCell {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      // padding: 12px 0;
+      padding-top: 12px;
+
+      .cellLabel {
+        text-indent: 6px;
+        color: #1f3140;
+      }
+
+      .cellValue {
+        margin-left: 6px;
+        margin-top: 12px;
+
+
+        :global {
+          .van-field {
+            background: #f8f9f9;
+          }
+        }
+
+
+
+      }
+
+    }
+  }
+
+
+}

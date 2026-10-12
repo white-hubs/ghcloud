@@ -1,0 +1,80 @@
+.statistic-item {
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 12px;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  .statistic-more{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .statistic-item-title {
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #1f3140;
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .statistic-item-content {
+    margin: 0 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    .norm-cell-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 10px;
+      width: 73px;
+      height: 64px;
+      background: #f7f8fa;
+      border-radius: 8px;
+      .label {
+        flex-shrink: 0;
+        font-size: 18px;
+        font-family: Roboto, Roboto-Medium;
+        font-weight: Medium;
+        text-align: center;
+        color: #1f3140;
+        line-height: 21px;
+
+        &.VALID{
+          color: rgba(106,181,57,1);
+        }
+        &.ABNORMAL{
+          color: rgba(255,65,88,1);
+        }
+        &.INVALID{
+          color: rgba(246,151,3,1);
+        }
+      }
+      .value {
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        color: #86909c;
+        line-height: 12px;
+      }
+    }
+
+  }
+}

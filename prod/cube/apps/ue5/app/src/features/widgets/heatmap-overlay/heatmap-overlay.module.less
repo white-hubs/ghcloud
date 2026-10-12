@@ -1,0 +1,48 @@
+.heatmapCheckbox {
+  position: absolute;
+  top: 65px;
+  /* 低于右面板(99)，避免贴边时盖住「视频监控」等卡片 */
+  z-index: 95;
+  opacity: 1;
+  transition:
+    right 0.28s ease,
+    opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  color: var(--visual-text-color, #ffffff);
+  pointer-events: auto;
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--visual-control-border, #2989ff);
+    border-radius: 2px;
+    position: relative;
+    background-color: var(--visual-control-bg, rgba(255, 255, 255, 0.1));
+
+    &:checked {
+      background-color: var(--visual-primary, #2989ff);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}

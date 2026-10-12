@@ -1,0 +1,320 @@
+{
+  "path": "/programme/smart-patrol.html",
+  "meta": {
+    "title": "无人机巡检_智能巡检管理系统_古河云科技",
+    "keywords": "智能巡检,无人机巡检,机器人巡检,智能调度",
+    "description": "古河云智能巡检管理系统融合人工巡检、无人机巡检与机器人巡检的综合智能巡检管理，通过GPS定位、物联网传感器及AI分析技术构建多维巡检网络。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-energy-saving-banner.webp",
+            "title": "智能巡检管理系统",
+            "subtitle": "融合人工巡检、无人机巡检与机器人巡检的综合智能巡检管理，通过GPS定位、物联网传感器及AI分析技术构建多维巡检网络。支持数据存储与实时通讯，实现巡检过程全数字化管理，覆盖多种复杂场景的自动化监测需求。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "了解更多",
+              "link": "#"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "pain-points",
+            "name": "业务痛点"
+          },
+          {
+            "id": "policy",
+            "name": "政策要求"
+          },
+          {
+            "id": "scenario",
+            "name": "应用场景"
+          },
+          {
+            "id": "value",
+            "name": "应用价值"
+          },
+          {
+            "id": "products",
+            "name": "配套产品"
+          },
+          {
+            "id": "cases",
+            "name": "客户案例"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PainPoints",
+      "props": {
+        "sectionId": "pain-points",
+        "title": "业务痛点",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-1.webp",
+            "title": "人工依赖度高",
+            "description": "传统巡检依赖纸质记录与主观判断，误差率超15%，且难以追溯。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-2.webp",
+            "title": "高危场景局限",
+            "description": "人工难以进入高温、有毒或高空作业区域，存在安全风险。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-3.webp",
+            "title": "风险响应滞后",
+            "description": "故障发现平均延迟4小时以上，响应滞后，易引发连锁性生产损失。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/pain-points-icon-4.webp",
+            "title": "协同溯源困难",
+            "description": "流程链条长，问题处理和整改状态无法实时跟踪，责任难以追溯。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "sectionId": "policy",
+        "title": "政策驱动",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-1.webp",
+            "title": "《安全生产治本攻坚三年行动方案》",
+            "description": "明确要求企业建立隐患排查治理长效机制，推动巡检方式从传统人工向智能化转变。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-2.webp",
+            "title": "《危险化学品企业安全风险智能化管控平台建设指南》",
+            "description": "鼓励采用智能巡检机器人、无人机等技术手段，提升特殊场景巡检能力。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-3.webp",
+            "title": "《关于加快推进工贸行业安全生产标准化建设的通知》",
+            "description": "要求建立规范的巡检制度，实现巡检过程可追溯、可量化、可考核。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/policy-icon-4.webp",
+            "title": "《电力安全生产监督管理办法》",
+            "description": "明确电力企业应建立智能巡检系统，对重要设备和线路实施状态监测。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "sectionId": "scenario",
+        "title": "应用场景",
+        "theme": "dark",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-scene-1.png",
+            "title": "智能任务调度",
+            "subtitle": "智能巡检管理系统能够根据预设的巡检计划和路线，自动将巡检任务分配给相应的巡检人员。支持人工、无人机、机器人等多终端协同作业。",
+            "features": [
+              {
+                "label": "任务自动派发：",
+                "value": "根据巡检计划自动生成任务并派发"
+              },
+              {
+                "label": "路径优化：",
+                "value": "基于GIS的最优巡检路径规划"
+              },
+              {
+                "label": "资源调度：",
+                "value": "人员、设备资源智能调度分配"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-scene-2.png",
+            "title": "闭环工单管理",
+            "subtitle": "管理人员可以通过APP端、电脑端实时查看运行状态，并进行远程控制和管理，紧急拉闸、参数调整等操作，支持设备快速联动，形成处置闭环。",
+            "features": [
+              {
+                "label": "一键上报：",
+                "value": "现场拍照、语音快速上报问题"
+              },
+              {
+                "label": "智能派单：",
+                "value": "基于问题类型和位置自动派单"
+              },
+              {
+                "label": "进度跟踪：",
+                "value": "实时跟踪处理进度，超时预警"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-scene-3.png",
+            "title": "实时监测预警",
+            "subtitle": "融合大数据分析和物联网技术，实时监测巡检现场情况，通过温度等传感器采集，AI算法比对健康基线，异常即时推送告警，有助于及时发现并处理潜在的安全隐患，避免事故的发生。",
+            "features": [
+              {
+                "label": "多源感知：",
+                "value": "IoT传感器、图像识别等多维感知"
+              },
+              {
+                "label": "AI分析：",
+                "value": "智能识别异常，自动预警"
+              },
+              {
+                "label": "联动响应：",
+                "value": "与应急系统联动，快速响应"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-scene-4.png",
+            "title": "多维数据可视化",
+            "subtitle": "通过驾驶舱看板、多维度图表、拓扑图等，将无人机参数、隐患定位及能耗分析直观图形化，实现运行状态与风险的一目了然，辅助高效决策。",
+            "features": [
+              {
+                "label": "巡检看板：",
+                "value": "实时展示巡检进度和完成情况"
+              },
+              {
+                "label": "隐患地图：",
+                "value": "GIS地图展示隐患分布和状态"
+              },
+              {
+                "label": "统计分析：",
+                "value": "巡检数据多维度统计分析"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "sectionId": "value",
+        "title": "应用价值",
+        "backgroundColor": "#ebf2ff",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-1.webp",
+            "title": "风险隐患精准防控",
+            "description": "实时监测，实现提前预警风险，保障企业资产与人员安全。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-2.webp",
+            "title": "设备全生命周期管理",
+            "description": "实时监控设备状态，预测老化趋势并主动干预，延长设备寿命。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-3.webp",
+            "title": "管理效率智能化提升",
+            "description": "自动化支撑人工巡检，支持数据回溯与多维分析，辅助决策优化。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/value-icon-4.webp",
+            "title": "合规与可持续发展",
+            "description": "支撑监管要求，数据资产可为电力管理及碳核算提供基础支撑。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportingProducts",
+      "props": {
+        "sectionId": "products",
+        "title": "配套产品",
+        "theme": "light",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/supporting-bg.webp",
+        "cards": [
+          {
+            "cardTitle": "应用产品",
+            "cardUrl": "/product-center/app.html",
+            "items": [
+              {
+                "name": "日常巡检",
+                "href": "/product-center/app-daily-inspection-detail.html"
+              },
+              {
+                "name": "维保作业",
+                "href": "/product-center/app-maintenance-detail.html"
+              },
+              {
+                "name": "电子巡更",
+                "href": "/product-center/app-patrol-detail.html"
+              },
+              {
+                "name": "隐患整改",
+                "href": "/product-center/app-hidden-danger-detail.html"
+              }
+            ]
+          },
+          {
+            "cardTitle": "硬件产品",
+            "cardUrl": "/product-center/hardware.html",
+            "items": [
+              {
+                "name": "巡检无人机",
+                "href": "#"
+              },
+              {
+                "name": "巡检机器人",
+                "href": "#"
+              },
+              {
+                "name": "烟火检测摄像机",
+                "href": "#"
+              },
+              {
+                "name": "消火栓监测终端",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseSolution",
+      "props": {
+        "sectionId": "cases",
+        "title": "客户案例",
+        "theme": "light",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-case-1.webp",
+            "title": "凤凰山体育馆",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-case-2.webp",
+            "title": "深圳太子湾学校",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/patrol-case-3.webp",
+            "title": "成都市第六人民医院",
+            "href": "#"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

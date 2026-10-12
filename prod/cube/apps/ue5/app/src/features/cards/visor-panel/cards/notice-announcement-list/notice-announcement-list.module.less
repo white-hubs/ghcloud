@@ -1,0 +1,49 @@
+@import "../../_shared/visor-panel-v2.less";
+
+.visor-v2-panel-chrome(visor-notice-list-v2-panel);
+
+:global {
+  .visor-notice-list-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .visor-notice-list-v2-panel .table-wrap {
+    flex: 1 1 auto;
+    min-height: 180px;
+    overflow: hidden;
+
+    &.is-zoom {
+      min-height: 420px;
+    }
+  }
+
+  .visor-notice-list-v2-panel .details-btn {
+    color: #48baff;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: #7fd0ff;
+      text-decoration: underline;
+    }
+  }
+
+  .visor-notice-list-v2-panel .empty-panel {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+
+    &.is-zoom {
+      min-height: 420px;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .visor-notice-list-v2-panel .details-btn {
+    color: #176ce5;
+  }
+}

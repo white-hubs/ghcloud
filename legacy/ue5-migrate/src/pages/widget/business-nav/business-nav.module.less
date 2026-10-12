@@ -1,0 +1,80 @@
+.outSwiperBox {
+  position: relative;
+  width: 800px;
+  height: 30px;
+  overflow: hidden;
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .less-line {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.swiper-left-btn {
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  left: -60px;
+  transform: translateY(-50%) rotate(-180deg);
+  cursor: pointer;
+}
+
+.swiper-right-btn {
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  right: -60px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.business-nav {
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  width: auto;
+  align-items: flex-end;
+}
+
+:deep(.swiper-button-prev) {
+  background: url("/resource/v1/ue5-migrate/assets/images/business-icon/right-swiper.png") no-repeat;
+  background-size: 100%;
+  width: 57px;
+  height: 57px;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 25px;
+  left: 0;
+  margin-right: 30px;
+
+  &::after {
+    content: none;
+  }
+}
+
+:deep(.swiper-button-next) {
+  background: url("/resource/v1/ue5-migrate/assets/images/business-icon/right-swiper.png") no-repeat;
+  background-size: 100%;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  top: 25px;
+  right: 0;
+
+  &::after {
+    content: none;
+  }
+}

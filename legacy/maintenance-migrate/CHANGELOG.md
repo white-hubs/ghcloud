@@ -1,0 +1,71 @@
+## 2.2.12
+
+### Patch Changes
+
+- 版本更新: 2.2.12
+
+## 2.2.11
+
+### Patch Changes
+
+- 版本更新: 2.2.11
+
+## 2.2.10
+
+### Patch Changes
+
+- 版本更新: 2.2.10
+
+## 2.2.7
+
+### Patch Changes
+
+- 版本更新: 2.2.7
+
+## 2.2.6
+
+### Patch Changes
+
+- 版本更新: 2.2.6
+
+## 2.2.5
+
+### Patch Changes
+
+- 版本更新: 2.2.5
+
+## 2.2.4
+
+### Patch Changes
+
+- 版本更新: 2.2.4
+
+## 2.2.0
+
+### Minor Changes
+
+- 版本更新: 2.2.0
+
+## 2.1.6
+
+### Patch Changes
+
+- 版本更新: 2.1.6
+
+# @ghcloud-legacy/maintenance-migrate
+
+## 2.1.5
+
+### Patch Changes
+
+- 批量更新版本
+- Updated dependencies
+  - @ghcloud/cube-message-center-service@1.0.1
+  - @ghcloud/cube-iot-center-service@1.0.0
+  - @ghcloud-legacy/bimops-fe-web-migrate-lib@0.1.1
+  - @ghcloud/cube-gateway@1.0.2
+  - @ghcloud/cube-file-service@1.0.0
+  - @ghcloud/cube-theme@0.0.17
+  - @ghcloud/cube-utils@1.0.1
+  - @ghcloud/cube-mf-root@1.0.1
+  - @ghcloud/cube-protocol@1.0.1

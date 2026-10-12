@@ -1,0 +1,201 @@
+
+.header {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 53, 134, 0.6) 0%, rgba(0, 53, 134, 0) 100%);
+
+  .center-container {
+    width: 1294px;
+    height: 90px;
+    margin: 0 auto;
+    background: url("/resource/v1/ue5-migrate/assets/images/title.png");
+    text-align: center;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: YouSheBiaoTiHei;
+    padding-top: 4px;
+    pointer-events: none; /* 让背景不拦截点击事件 */
+  
+    .center-container-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto; /* 只有文字部分可以点击 */
+  
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .left-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 64px;
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 20px;
+
+    .weather {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .line {
+      height: 12px;
+      width: 1px;
+      background: #ffffff;
+      margin: 0 14px;
+    }
+
+    .model-time-option,
+    .model-camera-option {
+      margin: 0 20px;
+    }
+
+    .model-roaming-option {
+      margin-right: 20px;
+    }
+
+    .model-time-type {
+      margin-left: 20px;
+    }
+
+    .btn {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 8px;
+      border-radius: 6px 6px 6px 6px;
+      cursor: pointer;
+      user-select: none;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+      }
+
+      &.camera-view {
+        margin-left: 20px;
+      }
+    }
+
+    .list {
+      background: rgba(0, 0, 0, 0.3);
+
+      &-item {
+        color: #ffffff;
+        height: 36px;
+        min-width: 68px;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .model {
+      margin: 0 20px;
+
+      :deep(.ant-radio-button-wrapper) {
+        background: transparent;
+        color: #ffffff;
+        font-size: 14px;
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+
+  .right-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 64px;
+    font-size: 14px;
+    color: #ffffff;
+    padding-right: 20px;
+    display: flex;
+
+    .btn {
+      padding: 4px 8px;
+      border-radius: 6px 6px 6px 6px;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+      }
+
+      &.camera-view {
+        margin-left: 20px;
+      }
+    }
+
+    .list {
+      background: rgba(0, 0, 0, 0.6);
+
+      &-item {
+        color: #ffffff;
+        height: 36px;
+        min-width: 68px;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .model {
+      margin: 0 20px;
+
+      :deep(.ant-radio-button-wrapper) {
+        background: transparent;
+        color: #ffffff;
+        font-size: 14px;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    .business-name,
+    .user {
+      padding: 0 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .user img {
+      height: 28px;
+      width: 28px;
+    }
+  }
+  .list-item-camera{
+    span{
+      max-width: 120px;
+      padding: 0 2px;
+      white-space: nowrap;     /* 禁止换行 */
+      overflow: hidden;        /* 隐藏溢出部分 */
+      text-overflow: ellipsis;
+    }
+  }
+}

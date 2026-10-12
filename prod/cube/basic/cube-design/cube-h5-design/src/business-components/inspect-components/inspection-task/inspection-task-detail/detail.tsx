@@ -1,0 +1,420 @@
+import { cubeDailyInspectionService, cubeIdentityService } from "../../../../api/service";
+import { timeFormat } from "../../../../utils";
+import { ChoiceStaff } from "../../../ouaa-components/choice-staff/choice-staff";
+import { InspectionTask } from "../task";
+import { type InspectionParams, StatusType } from "../type";
+import styles from "./detail.module.less";
+import { CubeAppBusinessBridge, cubeAppService } from "@ghcloud/cube-app-js-sdk";
+import { getEnvironment } from "@ghcloud/cube-app-js-sdk/src/js/cube-h5-config";
+import type { TaskDetailType } from "@ghcloud/cube-daily-inspection-service";
+import qs from "qs";
+import { Divider, Loading, Button, Popup, Picker, showDialog, showNotify } from "vant";
+import { defineComponent, onMounted, ref, type PropType, type VNode } from "vue";
+import { useRouter } from "vue-router";
+interface FollowingObj {
+  location: string;
+  inspectionId: string;
+  result: string;
+  staff: string;
+  state: string;
+  targetCategory: string;
+  targetId: string;
+  targetName: string;
+  time: number;
+  latAndLon: string;
+  targetCode: string;
+  targetAddress: string;
+  areaName?: string;
+}
+interface OperateType {
+  code: string;
+  name: string;
+  status: string;
+  businessType?: string;
+  businessName?: string;
+}
+export const InspectionTaskDetail = defineComponent({
+  props: {
+    options: {
+      type: Object as PropType<{
+        searchParams: InspectionParams;
+        getDetailApi: (params?: InspectionParams) => Promise<TaskDetailType>;
+        resolveApi: (params?: unknown) => Promise<unknown>;
+        addPartnerApi: (params?: unknown) => Promise<unknown>;
+        transferApi: (params?: unknown) => Promise<unknown>;
+      }>,
+      default: () => ({}),
+    },
+    userId: {
+      type: String,
+      default: "",
+    },
+    operate: {
+      type: Array as PropType<OperateType[]>,
+      default: () => [],
+    },
+    businessType: {
+      type: String,
+      default: "",
+    },
+  },
+  // 巡检任务详情
+  setup(props) {
+    const followingList = ref<FollowingObj[]>([]);
+    const detail = ref<TaskDetailType>();
+    const router = useRouter();
+    const limitTime = ref("");
+    const showPicker = ref(false);
+    const currentObj = ref();
+    const showStaffPopUp = ref(false);
+    const actionType = ref("");
+    const isShowOperate = ref(false);
+    const mapOptions = [
+      { text: "高德地图", value: "gdMap" },
+      { text: "百度地图", value: "bdMap" },
+    ];
+    const typeMap = new Map([
+      ["DEVICE", "设备"],
+      ["STALL", "档位"],
+      ["PROPERTY", "资产"],
+      ["SITE_POINT", "现场点"],
+      ["RISK_SOURCE", "风险源"],
+      ["SMALL_ENGINEERING", "小散工程"],
+    ]);
+    const inspectionTask = new InspectionTask<TaskDetailType>({ ...props.options });
+    // 跳转巡检记录详情/流引擎
+    const handleInspectionRecord = (item: FollowingObj, operate: OperateType): void => {
+      if (operate.code === "order") {
+        sessionStorage.setItem("cube-app-maintenance-object-data", JSON.stringify(item));
+        sessionStorage.setItem(
+          "inspection-object-data",
+          JSON.stringify({ ...item, taskName: operate.businessName, businessType: operate.businessType }),
+        );
+        window.location.href = `/streamengineH5/initiating-work-order?processType=ADD&businessType=${operate.businessType}`;
+      } else {
+        router.push({ path: "inspection-record-detail", query: { id: item.inspectionId } });
+      }
+    };
+    const normal = ref();
+    onMounted(async () => {
+      getTaskDetail();
+      const item =
+        (sessionStorage.getItem("inspection-object-data") && JSON.parse(sessionStorage.getItem("inspection-object-data") ?? "")) ?? null;
+      const flowTaskId = sessionStorage.getItem("flowTaskId");
+      try {
+        flowTaskId &&
+          item &&
+          (await cubeDailyInspectionService.InspectRecordToBusiness(item.inspectionId as string, {
+            targetCategory: item.targetCategory,
+            targetId: item.targetId,
+            targetName: item.targetName,
+            businessCategory: item.businessType,
+            businessId: flowTaskId,
+            businessType: props.businessType,
+            businessName: `巡检${detail.value?.name ?? ""}发起了${item.targetName}的${item.taskName}`,
+          }));
+      } catch {}
+      sessionStorage.removeItem("flowTaskId");
+    });
+    // 获取任务详情
+    const getTaskDetail = async (): Promise<void> => {
+      await inspectionTask.getDetailData(props.options.getDetailApi, props.options.searchParams);
+      detail.value = inspectionTask.dataDetail as TaskDetailType;
+      isShowOperate.value = detail.value.inspectionObjs.some((x) => x.state === "EXECUTING") && props.userId === detail.value?.receiveIds;
+      followingList.value = detail.value.inspectionObjs.sort((a, b) => {
+        if (a.targetCategory === "RISK_SOURCE") {
+          return 1;
+        }
+        if (b.targetCategory === "RISK_SOURCE") {
+          return -1;
+        }
+        return 0;
+      });
+      normal.value = followingList.value.filter((x) => x.result).length;
+      limitTime.value = `${JSON.parse(detail.value.limitTimeJson).day}天${JSON.parse(detail.value.limitTimeJson).hour}时${JSON.parse(detail.value.limitTimeJson).minute}分`;
+    };
+    // 跳转执行巡检
+    const handleInspection = async (item: FollowingObj): Promise<void> => {
+      if (getEnvironment() === "cubeApp" && detail.value?.method === "SCAN_CODE") {
+        try {
+          // 扫码
+          const code = await CubeAppBusinessBridge.handleBusinessScanCode();
+          const scanCode = code.includes("https") ? (qs.parse(code)?.code?.toString() ?? code.toString()) : code.toString();
+          const data = await cubeIdentityService.getEntityByCode(encodeURIComponent(scanCode.toString()));
+          if (item.targetId === data?.entityId) {
+            router.push({ path: "/inspection-execute", query: { taskId: detail.value?.id, targetId: data?.entityId } });
+          } else {
+            showNotify({ type: "danger", message: "该巡检对象不匹配" });
+          }
+          return;
+        } catch {
+          showNotify({ type: "danger", message: "请求失败" });
+          return;
+        }
+      }
+      router.push({ path: "/inspection-execute", query: { taskId: detail.value?.id, targetId: item.targetId } });
+    };
+    // 定位导航
+    const openPicker = (item: FollowingObj): void => {
+      if (getEnvironment() === "cubeApp") {
+        const latAndLon = item.latAndLon.split(",");
+        cubeAppService.openTripartiteMap({
+          type: "route",
+          latitude: Number(latAndLon[1]),
+          longitude: Number(latAndLon[0]),
+          address: item.location,
+        });
+        return;
+      }
+      const isWeixinBrowser = /micromessenger/i.test(navigator.userAgent);
+      if (isWeixinBrowser) {
+        showDialog({ message: "请使用浏览器或在应用中打开" });
+      } else {
+        showPicker.value = true;
+        currentObj.value = item;
+      }
+    };
+    // 获取地图路径
+    const getMapScheme = (mapType = "gdMap"): string => {
+      const u = navigator.userAgent;
+      const isAndroid = u.includes("Android") || u.includes("Adr"); // android终端
+      const latAndLon = currentObj.value.latAndLon.split(",");
+      const androidBaidu = (): string =>
+        `bdapp://map/direction?destination=name:${currentObj.value.location}|latlng:${currentObj.value.latAndLon}&coord_type=gcj02&mode=driving&src=andr.jianghu.jianhao`;
+      const iosBaidu = (): string =>
+        `baidumap://map/direction?destination=name:${currentObj.value.location}|latlng:${currentObj.value.latAndLon}&coord_type=gcj02&mode=driving&src=ios.jianghu.jianhao`;
+      const androidGaode = (): string =>
+        `amapuri://route/plan/?sourceApplication=mhc&dlat=${latAndLon[0]}&dlon=${latAndLon[1]}&dname=${currentObj.value.location}&dev=0&t=0`;
+      const iosGaode = (): string =>
+        `iosamap://path?sourceApplication=mhc&dlat=${latAndLon[0]}&dlon=${latAndLon[1]}&dname=${currentObj.value.location}&dev=0&t=0`;
+      if (mapType === "bdMap") {
+        if (isAndroid) {
+          return androidBaidu();
+        }
+        return iosBaidu();
+      }
+      if (isAndroid) {
+        return androidGaode();
+      }
+      return iosGaode();
+    };
+    const changeMap = async (map: string[]): Promise<void> => {
+      const url = getMapScheme(map[0]);
+      window.location.href = url;
+    };
+    // 接收
+    const handleResolve = async (): Promise<void> => {
+      inspectionTask
+        .submitData(async (val) => props.options.resolveApi(val), detail.value, "接收成功")
+        .then(() => {
+          getTaskDetail();
+        });
+    };
+    // 选择人员
+    const handleChoiceStaff = async (e: Event, type: string): Promise<void> => {
+      actionType.value = type;
+      e.stopPropagation();
+      showStaffPopUp.value = true;
+    };
+    // 移交/添加协同人
+    const onSearchStaff = (val: { id: string }): void => {
+      if (actionType.value === "partner") {
+        inspectionTask.submitData(async (val) => props.options.addPartnerApi(val), { id: detail.value?.id, userId: val.id }, "添加成功");
+      } else {
+        inspectionTask.submitData(async (val) => props.options.transferApi(val), { id: detail.value?.id, userId: val.id }, "移交成功");
+      }
+      router.go(-1);
+    };
+    // 待巡检
+    const executingDom = (item: FollowingObj): VNode => (
+      <>
+        <div
+          v-show={props.operate.find((x) => x.code === "inspection")}
+          onClick={() => {
+            handleInspection(item);
+          }}
+        >
+          {props.operate.find((x) => x.code === "inspection")?.name}
+        </div>
+        <div
+          v-show={item.latAndLon !== "" && props.operate.find((x) => x.code === "positioning")}
+          onClick={() => {
+            openPicker(item);
+          }}
+        >
+          {props.operate.find((x) => x.code === "positioning")?.name}
+        </div>
+      </>
+    );
+    const finishedDom = (item: FollowingObj): VNode => (
+      <>
+        {props.operate
+          .filter((x) => x.status === "finished")
+          .map((x) => (
+            <div
+              onClick={() => {
+                handleInspectionRecord(item, x);
+              }}
+              key={x.code}
+            >
+              {x.name}
+            </div>
+          ))}
+      </>
+    );
+    const detailDom = (): VNode => (
+      <div class={styles["cell-group"]}>
+        <div class={styles.title}>
+          <span>巡检对象跟踪</span>
+          <div>
+            <span style={{ color: "#2879ff" }}>{normal.value}</span>/<span>{detail.value?.targetNum}</span>
+          </div>
+        </div>
+        <Divider />
+        {followingList.value.map((item) => (
+          <div class={styles.following} key={item.targetId}>
+            <div
+              class={styles.round}
+              style={{ backgroundColor: `${item.result === "NORMAL" ? "#07c160" : item.result === "" ? "#c1c1c1" : "#e0120e"}` }}
+            />
+            <div class={styles.card}>
+              <div class={styles.title}>
+                <span>{item.targetName}</span>
+                <span v-show={item.state === "EXECUTING"} style={{ color: "#ffaa65", fontWeight: "400" }}>
+                  待巡检
+                </span>
+              </div>
+              {/* <div class={styles.location}>
+                  <span>具体地址：</span>
+                  <span>{item.targetAddress}</span>
+                </div>
+                <div class={styles.location}>
+                  <span>所在区域：</span>
+                  <span>{item.areaName ?? '--'}</span>
+                </div> */}
+              <div class={styles.content}>
+                <span>
+                  {typeMap.get(item.targetCategory)}编码：{item?.targetCode || "--"}
+                </span>
+                <span>{timeFormat(item.time, true) ?? "--"}</span>
+              </div>
+              <div class={styles.content}>
+                <div>
+                  <span style={{ color: "black" }}>巡检人：</span>
+                  <span>{item.staff || "--"}</span>
+                </div>
+                <div>
+                  <span style={{ color: "black" }}>巡检结果：</span>
+                  <span>{item.result === "NORMAL" ? "正常" : item.result === "" ? "--" : "异常"}</span>
+                </div>
+              </div>
+              <div />
+              <Divider />
+              <div class={styles["item-footer"]}>{item.state === "EXECUTING" ? executingDom(item) : finishedDom(item)}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+    const cardDom = (): VNode => (
+      <div class={styles.body}>
+        <div class={styles["cell-group"]}>
+          <div class={styles.title}>基本信息</div>
+          <Divider />
+          <div class={styles.content}>
+            <div>
+              <span>任务编号：</span>
+              <span style={{ color: "black" }}>{detail.value?.id}</span>
+            </div>
+            <div>
+              <span>任务名称：</span>
+              <span style={{ color: "black" }}>{detail.value?.name}</span>
+            </div>
+            <div>
+              <span>责任人员：</span>
+              <span style={{ color: "black" }}>{detail.value?.receiveNames}</span>
+            </div>
+            <div>
+              <span>发布时间：</span>
+              <span style={{ color: "black" }}>{timeFormat(detail.value?.createTime ?? "", true)}</span>
+            </div>
+            <div>
+              <span>任务时限：</span>
+              <span style={{ color: "black" }}>{limitTime.value}</span>
+            </div>
+            <div>
+              <span>任务状态：</span>
+              <span style={{ color: "black" }}>{StatusType.get(detail.value?.status ?? "")}</span>
+            </div>
+            <div>
+              <span>巡检对象数：</span>
+              <span style={{ color: "black" }}>{detail.value?.targetNum}</span>
+            </div>
+            <div>
+              <span>协同人：</span>
+              <span style={{ color: "black" }}>{detail.value?.assistNames ?? "--"}</span>
+            </div>
+          </div>
+        </div>
+        {detail.value?.status !== "ACCEPT" ? detailDom() : null}
+      </div>
+    );
+    return (): JSX.Element => (
+      <div class={styles.wrapper}>
+        {inspectionTask.loadingStatus.loading ? (
+          <Loading size="24px" vertical>
+            加载中...
+          </Loading>
+        ) : (
+          cardDom()
+        )}
+        <div class={styles.footer} v-show={isShowOperate.value || detail.value?.status === "ACCEPT"}>
+          <Button
+            type="primary"
+            size="small"
+            v-show={detail.value?.status === "ACCEPT"}
+            onClick={() => {
+              handleResolve();
+            }}
+          >
+            接收
+          </Button>
+          <Button
+            v-show={isShowOperate.value && detail.value?.status !== "ACCEPT"}
+            plain
+            type="primary"
+            size="small"
+            onClick={(e: Event) => {
+              handleChoiceStaff(e, "transfer");
+            }}
+          >
+            移交
+          </Button>
+          <Button
+            v-show={isShowOperate.value && detail.value?.status !== "ACCEPT"}
+            type="primary"
+            size="small"
+            onClick={(e: Event) => {
+              handleChoiceStaff(e, "partner");
+            }}
+          >
+            添加协同
+          </Button>
+        </div>
+        <Popup v-model:show={showPicker.value} round position="bottom">
+          <Picker
+            columns={mapOptions}
+            onConfirm={({ selectedValues }: { selectedValues: string[] }) => {
+              changeMap(selectedValues);
+              showPicker.value = false;
+            }}
+            onCancel={() => {
+              showPicker.value = false;
+            }}
+          />
+        </Popup>
+        <ChoiceStaff v-model:visible={showStaffPopUp.value} onSearch={onSearchStaff} />
+      </div>
+    );
+  },
+});

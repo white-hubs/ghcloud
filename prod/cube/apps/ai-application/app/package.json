@@ -1,0 +1,73 @@
+{
+  "name": "@ghcloud/cube-ai-application-app",
+  "version": "1.0.9",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "main": "src/public.ts",
+  "exports": {
+    ".": "./src/public.ts"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts --mode dev",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "build:preview": "vite build -c vite.build.preview.config.ts --mode preview",
+    "preview": "vite preview -c vite.preview.config.ts --mode preview",
+    "preview:local": "vite preview -c vite.preview.config.ts --mode preview",
+    "preview:prod": "vite preview -c vite.preview.config.ts --mode prod",
+    "verify:preview": "vite build -c vite.build.preview.config.ts --mode preview && vite preview -c vite.preview.config.ts --mode preview",
+    "verify:prod": "vite build -c vite.build.config.ts --mode prod && vite preview -c vite.preview.config.ts --mode prod"
+  },
+  "dependencies": {
+    "@antv/x6": "catalog:",
+    "@antv/x6-vue-shape": "catalog:",
+    "@cube-ai/agent-sdk-client": "catalog:cube-ai",
+    "@cube-ai/agent-sdk-client-assistant": "catalog:cube-ai",
+    "@cube-ai/agent-sdk-client-vue": "catalog:cube-ai",
+    "@cube-ai/agent-sdk-console": "catalog:cube-ai",
+    "@cube-ai/contracts": "catalog:cube-ai",
+    "@fontsource/inter": "catalog:",
+    "@ghcloud/cube-ai-application-service": "workspace:^",
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-knowledge-document-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-speech-assistant": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "echarts": "catalog:",
+    "highlight.js": "catalog:",
+    "markdown-it": "catalog:",
+    "mermaid": "catalog:",
+    "pinia": "catalog:",
+    "pinyin-match": "catalog:",
+    "tslib": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "catalog:",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:vite-next",
+    "canvas": "catalog:",
+    "happy-dom": "catalog:",
+    "less": "catalog:",
+    "playwright": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "catalog:",
+    "vite": "catalog:vite-next",
+    "vite-plugin-html": "catalog:vite-next",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

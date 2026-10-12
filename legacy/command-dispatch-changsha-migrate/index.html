@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta version="<%- version %>" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <!-- 提前预热 h265web.js 播放器 SDK，避免无痕/无缓存首次加载时被其它请求挤占连接顺序，
+       导致 missile.js 和 h265webjs 没有紧挨着加载完成而播放失败 -->
+    <!-- <link rel="preload" as="script" href="/resource/h265-web/missile.js" /> -->
+    <!-- <link rel="preload" as="script" href="/resource/h265-web/h265webjs-v20221106.js" /> -->
+    <link rel="stylesheet" href="/static/animate-4.1.1.css" />
+    <link rel="stylesheet" href="/static/basscss.min.css" />
+    <script src="/config.js"></script>
+    <script src="/static/iconfont/iconfont.js"></script>
+    <script src="/webrtc-plugin/thirdlib/Ice.js"></script>
+    <script src="/webrtc-plugin/main.js"></script>
+    <title></title>
+    <style>
+      @font-face {
+        font-family: YouSheBiaoTiHei;
+        src: url("/static/family/you-she-biao-ti-hei.ttf");
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <strong> We're sorry but doesn't work properly without JavaScript enabled. Please enable it to continue. </strong>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <!-- built files will be auto injected -->
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <script>
+      window.less = {
+        async: true,
+        env: "production",
+      };
+      document.title = "AI安全管控平台";
+    </script>
+    <script type="text/javascript" src="/less.min.js"></script>
+  </body>
+</html>

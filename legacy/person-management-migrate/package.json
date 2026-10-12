@@ -1,0 +1,58 @@
+{
+  "name": "@ghcloud-legacy/person-management-migrate",
+  "version": "1.1.23",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite --mode dev",
+    "build:dev": "vite build --mode dev",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview --mode prod"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "@ghcloud-legacy/bimops-fe-web-migrate-lib": "workspace:^",
+    "@ghcloud/cube-access-control-service": "workspace:^",
+    "@ghcloud/cube-business-alias-manage-plugin": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-mf-root": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-parking-lot-service": "workspace:^",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-personnel-management-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "axios": "0.27.2",
+    "dayjs": "catalog:",
+    "echarts": "catalog:",
+    "leaflet": "catalog:",
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "20.3.2",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

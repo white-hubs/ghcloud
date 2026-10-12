@@ -1,0 +1,176 @@
+.feedback-box {
+  background-color: rgba(244, 232, 232, 0.3);
+  height: calc(100vh - 12.6667vw);
+  padding: 10px 10px 0 10px;
+  position: relative;
+
+  .feedback-content {
+    background-color: #fff;
+    min-height: 300px;
+    margin: auto;
+  }
+}
+
+.feedback-loading-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 100;
+
+  .feedback-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.engineering-info {
+  height: calc(100vh - 120px);
+  position: relative;
+  padding: 10px 10px 0 10px;
+  overflow-y: auto;
+  background-color: rgba(244, 232, 232, 0.3);
+
+  .engineering-info-item {
+    margin-bottom: 10px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    .engineering-info-item-title {
+      padding: 10px;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .engineering-info-item-content {
+      padding: 10px;
+      padding-top: 10px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .list-page-item-row {
+        .list-page-item-label {
+          color: #989595e2;
+        }
+      }
+
+      .list-page-item-button {
+        width: 100px;
+        height: 30px;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .engineering-progress {
+    height: 160px;
+
+    .engineering-info-item-content {
+      height: 100px;
+    }
+  }
+
+  .acceptance-work {
+    height: 140px;
+
+    .engineering-info-item-content {
+      height: 70px;
+    }
+  }
+
+  .step-box {
+    .step-title {
+      color: #000;
+    }
+
+    .step-content {
+      height: 90px;
+      padding: 8px;
+      display: flex;
+      margin-top: 6px;
+      flex-direction: column;
+      background-color: #fff;
+      justify-content: space-between;
+
+      .step-content-item {
+        color: #706f6f;
+
+        .department {
+          font-size: 12px;
+          display: inline-block;
+          margin-left: 4px;
+        }
+
+        .engineering-progress {
+          color: #4A995A;
+        }
+      }
+    }
+  }
+
+  :global(.van-steps) {
+    background-color: transparent;
+  }
+}
+
+.engineering-info-height {
+  height: calc(100vh - 120px);
+}
+
+.feedback-btn {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+
+  .feedback-btn-line {
+    width: 90%;
+    margin: 10px auto;
+    line-height: 70px;
+  }
+}
+
+.uploadedList {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  .uploaded {
+    position: relative;
+    margin-right: 12px;
+
+    img {
+      width: 65px;
+      height: 65px;
+      vertical-align: middle;
+    }
+
+    :global {
+      .van-icon-clear {
+        position: absolute;
+        right: -6px;
+        top: -8px;
+      }
+    }
+  }
+}
+
+.custom-button {
+  color: #fff;
+  text-align: center;
+  background-color: var(--van-primary-color);
+  border-radius: 100px;
+  width: 26px;
+  font-size: 10px;
+  line-height: 18px;
+}

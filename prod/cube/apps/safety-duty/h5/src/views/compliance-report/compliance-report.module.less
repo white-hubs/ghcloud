@@ -1,0 +1,224 @@
+.page {
+  min-height: 100vh;
+  background: #f3f7fa;
+  padding-bottom: 20px;
+}
+
+.content {
+  padding: 12px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+.filters :global(.van-button) {
+  flex: 0 0 auto;
+}
+
+.totalText {
+  flex: 0 0 auto;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.reportItem,
+.mappingItem,
+.evidenceItem,
+.detailHeader {
+  border-radius: 6px;
+  background: #fff;
+  padding: 12px;
+}
+
+.reportItem,
+.mappingItem,
+.evidenceItem {
+  margin-bottom: 10px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.meta {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.more {
+  margin-top: 12px;
+}
+
+.cardActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.methodTag {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.popupBody {
+  max-height: 76vh;
+  overflow: auto;
+  padding: 12px;
+}
+
+.previewBody {
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 12px;
+  background: #f3f4f6;
+}
+
+.detailName {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.summary div {
+  border-radius: 4px;
+  background: #f8fafc;
+  padding: 8px;
+}
+
+.summary span {
+  display: block;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.summary strong {
+  display: block;
+  margin-top: 4px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  margin: 16px 0 8px;
+  color: #303133;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gap {
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #fff7ed;
+  padding: 10px;
+  color: #9a3412;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.detailActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.pdfOutput {
+  position: fixed;
+  top: 0;
+  left: -9999px;
+  width: 794px;
+  padding: 40px;
+  color: #1f2937;
+  background: #fff;
+}
+
+.pdfPreview {
+  padding: 16px;
+  color: #1f2937;
+  background: #fff;
+}
+
+.pdfTitle {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pdfMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  margin-bottom: 20px;
+  padding: 12px;
+  color: #4b5563;
+  font-size: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.pdfSection {
+  margin-top: 16px;
+}
+
+.pdfSectionTitle {
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.pdfTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    vertical-align: top;
+    word-break: break-word;
+  }
+
+  th {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+}
+
+.pdfFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  color: #6b7280;
+  font-size: 11px;
+}

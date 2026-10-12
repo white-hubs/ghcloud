@@ -1,0 +1,42 @@
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.contentBox {
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+}
+
+.riskBox {
+  display: flex;
+  margin-bottom: 20px;
+
+  .riskLeft {
+    flex: 1
+  }
+
+  .riskRight {
+    flex: 1
+  }
+
+  .risk_item {
+    display: flex;
+    // justify-content: space-between;
+    font-size: 14px;
+    margin-top: 20px;
+
+    .risk_value {
+      font-size: 14px;
+      text-indent: 10px;
+
+      .risk_file {
+        color: rgba(0, 0, 238, 0.7);
+        cursor: pointer;
+      }
+    }
+  }
+}

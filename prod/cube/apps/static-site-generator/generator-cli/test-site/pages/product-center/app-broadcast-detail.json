@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-broadcast-detail.html",
+  "meta": {
+    "title": "广播中心 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+    "keywords": "广播中心,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+        "productName": "广播中心",
+        "productDescription": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "广播中心"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>广播监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">将物联网接入的广播设备数据，在业务平台以图文加列表的形式进行呈现，支持按照设备区域、设备状态、产品品类等进行筛选查询。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965014660476317698.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965015615213154305.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>广播记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">展示广播记录列表，可查看详情，包括广播时间、模板名称、广播内容、广播次数、广播终端、操作人、操作部门等。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>广播模版</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">配置广播喊话预置模板，用于紧急情况发生时直接使用模板喊话，节省情况发生时临时输入喊话内容的时间；同时规范广播喊话的措辞内容。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965015076299616258.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>广播规则</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持自定义设置广播规则，包括规则名称、广播模板、广播设备等。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>广播设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立广播设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现广播设备在线管理。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344409062133761",
+            "name": "肉类交易",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/肉类交易/main.png",
+            "version": "1.0.2",
+            "description": "肉类白条交易溯源系统依托开河智能中枢为基础，围绕肉类白条交易全链条搭建数字化交易溯源平台，提升肉类白条理货、交易等经营效率和管理水平，助推肉类滑轨理货交易智能化转型。",
+            "href": "/product-center/app-meat-detail.html"
+          },
+          {
+            "id": "1811344411729711105",
+            "name": "行政管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/行政管理/main.png",
+            "version": "1.0.1",
+            "description": "行政管理主要是用于公司内部无纸化办公场景。支持员工线上发起审批，线上处理、线上通知、线上数据存档。简化日常工作流程，解决员工日常行政办公反复跑审批时长无法预估，纸质文档不易留存的问题。",
+            "href": "/product-center/app-admin-detail.html"
+          },
+          {
+            "id": "1811344411511607298",
+            "name": "电子巡更",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/电子巡更/main.png",
+            "version": "1.0.1",
+            "description": "适用于安全保卫、设备设施管理、生产流程监控等多个场景，有效提升巡更工作的效率和规范性，并为管理者提供实时、准确的数据支持，以实现对安全隐患的及时发现和处理。",
+            "href": "/product-center/app-patrol-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,57 @@
+.title {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  span {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+:deep(.ant-table) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-container) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-content) {
+  background-color: transparent;
+}
+
+:deep(.ant-table-thead) {
+  th {
+    background-color: rgba(16, 40, 68, 0.4x);
+  }
+}
+
+:deep(.ant-table-tbody) {
+  td {
+    background-color: transparent;
+    border-bottom: thin solid rgba(105, 116, 140, 0.50);
+  }
+
+  tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
+    //自定义table行hover上去的背景颜色
+    background: transparent;
+    cursor: default;
+  }
+}
+
+:deep(.ant-empty) {
+  color: #d0deee;
+}
+.page{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  :deep(.ant-pagination-total-text){
+    color: white;
+  }
+}

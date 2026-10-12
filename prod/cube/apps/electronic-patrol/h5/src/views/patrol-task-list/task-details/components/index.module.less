@@ -1,0 +1,127 @@
+.pullRefresh {
+  margin-top: 12px;
+  padding: 12px 8px;
+  background: #fff;
+  border-radius: 6px;
+  height: calc(100vh - 408px);
+  overflow-y: scroll;
+}
+
+.taskRecord {
+
+
+  .taskItem {
+    padding-left: 18px;
+    margin-left: 8px;
+    position: relative;
+    border-left: 1px dashed #ebebeb;
+    padding-bottom: 12px;
+
+    &:last-child {
+      border-left: none !important;
+    }
+
+    .stepIcon {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(315deg,var(--van-gray-8) 0%, var(--van-gray-6) 69%, var(--van-gray-3) 100%);
+      // background: #ebebeb;
+
+      box-shadow: 0px 2px 4px 0px rgba(4, 139, 255, 0.2);
+      position: absolute;
+      left: -7px;
+      top: 0px;
+
+      &.NORMAL {
+        background: linear-gradient(315deg, #005DFF 0%, #0089FF 69%, #5FB5FF 100%);
+      }
+
+      &.ABNORMAL {
+        background: linear-gradient(315deg, #de3535 0%, #d92626 69%, #cf2e2e 100%);
+      }
+    }
+
+    .title-status {
+      font-weight: 400;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      color: #1F3140;
+
+      .status {
+        background: var(--van-gray-7);
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 11px;
+        margin-left: 6px;
+
+        &.NORMAL {
+          background: var(--van-success-color);
+          color: #fff;
+        }
+
+        &.ABNORMAL {
+          background: var(--van-danger-color);
+          color: #fff;
+        }
+      }
+    }
+
+    .taskInfo {
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      font-weight: 400;
+      font-size: 11px;
+      color: #1F3140;
+      margin: 12px 0 0;
+
+      .taskPerson {
+        margin-right: 12px;
+      }
+
+      .passed {
+        color: #6AB539;
+      }
+
+      .unpassed {
+        color: #FE8704;
+      }
+
+      .status {
+        color: #6AB539;
+      }
+
+      .task-operate {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+
+        .operate {
+          width: fit-content;
+          padding: 4px 8px;
+          background: var(--van-primary-color);
+          color: #fff;
+          font-size: 11px;
+          margin-left: 8px;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .hidden-danger {
+      width: fit-content;
+      padding: 4px 8px;
+      background: var(--van-primary-color);
+      color: #fff;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+  }
+
+}

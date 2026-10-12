@@ -1,0 +1,23 @@
+:global(.merchant-list-data-modal) {
+  /* 表体固定可视 10 行（行高 42px），避免默认页出现纵向滚动条 */
+  --data-list-table-body-min-height: 420px;
+  --device-records-table-min-height: calc(40px + 420px);
+
+  .device-records-table {
+    .ant-table-thead > tr > th:first-child,
+    .ant-table-tbody > tr > td:first-child {
+      padding-left: 24px;
+      text-align: left;
+    }
+
+    .ant-table-thead > tr > th:last-child,
+    .ant-table-tbody > tr > td:last-child {
+      padding-right: 24px;
+    }
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .merchant-list-data-modal) {
+  --data-list-table-body-min-height: 420px;
+  --device-records-table-min-height: calc(40px + 420px);
+}

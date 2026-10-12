@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --stream-control-radius: 6px;
+}
+
+.el-button:not(.is-round):not(.is-circle) {
+    border-radius: var(--stream-control-radius);
+}
+
+.el-input__inner,
+.el-textarea__inner,
+.el-range-editor.el-input__inner,
+.el-input-group__prepend,
+.el-input-group__append {
+    border-radius: var(--stream-control-radius);
+}
+
+.el-select .el-input__inner,
+.el-input-number .el-input__inner,
+.el-cascader .el-input__inner {
+    border-radius: var(--stream-control-radius);
+}
+
+.el-checkbox__inner,
+.el-radio.is-bordered,
+.el-checkbox.is-bordered {
+    border-radius: var(--stream-control-radius);
+}
+
+.el-tag,
+.el-pagination button,
+.el-pager li,
+.el-message-box,
+.el-dialog {
+    border-radius: var(--stream-control-radius);
+}
+
+/*路由切换动画*/
+.router-fade-enter-active {
+    transition: all 0.3s cubic-bezier(0.6, 0.5, 0.3, 0.1);
+}
+
+.router-fade-leave-active {
+    transition: all 0.3s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+
+.router-fade-enter {
+    transform: translateX(0px);
+    opacity: 0;
+}
+
+.router-fade-leave-to {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.tl{
+    text-align: left;
+}
+.tr{
+    text-align: right;
+}
+
+.layout-container .content-search .el-form--inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.layout-container .content-search .el-form--inline .el-form-item {
+    margin-right: 24px;
+    margin-bottom: 16px;
+}
+
+.layout-container .content-search .el-form--inline .el-form-item:last-child {
+    margin-right: 0;
+}
+
+.layout-container .content-search .el-form-item__label {
+    height: 32px;
+    padding-right: 8px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.layout-container .content-search .el-form-item__content {
+    line-height: 32px;
+}
+
+.layout-container .content-search .el-select {
+    width: 200px;
+}
+
+.layout-container .content-search .el-input {
+    width: 220px;
+}
+
+.layout-container .content-search .el-input__inner {
+    height: 32px;
+    border-color: #d9d9d9;
+    line-height: 32px;
+}
+
+.layout-container .content-search .el-input__inner:hover {
+    border-color: #40a9ff;
+}
+
+.layout-container .content-search .el-input__icon {
+    line-height: 32px;
+}
+
+.layout-container .content-search .el-button {
+    min-width: 64px;
+    height: 32px;
+    padding: 0 15px;
+    line-height: 30px;
+}
+
+.layout-container .content-search .el-button + .el-button {
+    margin-left: 8px;
+}
+
+.layout-container .content-table > .el-table {
+    border: none;
+    color: #262626;
+    font-size: 14px;
+}
+
+.layout-container .content-table > .el-table::before {
+    height: 0;
+}
+
+.layout-container .content-table > .el-table .el-table__header-wrapper th,
+.layout-container .content-table > .el-table .el-table__fixed-header-wrapper th {
+    height: 40px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    background: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+}
+
+.layout-container .content-table > .el-table .el-table__header-wrapper .cell,
+.layout-container .content-table > .el-table .el-table__fixed-header-wrapper .cell {
+    line-height: 40px;
+}
+
+.layout-container .content-table > .el-table .el-table__body-wrapper td,
+.layout-container .content-table > .el-table .el-table__fixed-body-wrapper td {
+    height: 40px;
+    padding: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.layout-container .content-table > .el-table .el-table__body-wrapper .cell,
+.layout-container .content-table > .el-table .el-table__fixed-body-wrapper .cell {
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.layout-container .content-table > .el-table .el-table__row:hover > td {
+    background: #fafafa;
+}
+
+.layout-container .content-table > .el-table .el-table__fixed-right-patch {
+    background: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.layout-container .content-table > .el-table .el-button--text {
+    padding: 0;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.layout-container .content-table > .el-table .el-button--text + .el-button--text,
+.layout-container .content-table > .el-table .el-button--text + .el-popover__reference-wrapper,
+.layout-container .content-table > .el-table .el-popover__reference-wrapper + .el-button--text {
+    margin-left: 12px;
+}

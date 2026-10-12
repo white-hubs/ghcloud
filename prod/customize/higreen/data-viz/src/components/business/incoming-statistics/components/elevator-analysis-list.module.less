@@ -1,0 +1,43 @@
+.analysis-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 10px;
+
+  .analysis-item {
+    width: 70px;
+    height: 17px;
+    background: rgba(108, 128, 151, 0.15);
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    margin-bottom: 9px;
+    justify-content: space-between;
+
+    .analysis-item-title-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .analysis-item-color {
+      width: 5px;
+      height: 6px;
+      background: #2989ff;
+      border-radius: 1px;
+      transform: skewX(-10deg);
+    }
+
+    .analysis-item-title {
+      font-size: 6px;
+      color: #85aad3;
+      margin-left: 3px;
+    }
+
+    .analysis-item-value {
+      font-size: 6px;
+      color: #d1e2ff;
+      margin-left: 8px;
+    }
+  }
+}

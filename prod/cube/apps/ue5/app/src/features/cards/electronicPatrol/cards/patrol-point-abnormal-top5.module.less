@@ -1,0 +1,68 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.tableSurface {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 232px;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+
+  :global(.roll-table) {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  :global(.scroll_warp) {
+    height: 200px;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .tableSurface {
+    height: 432px;
+
+    :global(.scroll_warp) {
+      height: 400px;
+    }
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .patrol-point-abnormal-top5-v2-panel) {
+  .tableSurface {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(116, 158, 210, 0.22);
+    border-radius: 8px;
+  }
+}
+
+.v2-minimal-white-panel(patrol-point-abnormal-top5-v2-panel);

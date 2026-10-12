@@ -1,0 +1,153 @@
+@import './variables';
+/** 全局样式 */
+:root {
+  font-size: 10px;
+}
+body {
+  // background-color: #f0f2f5 !important;
+  font-size: 1.4rem;
+  font-family: '微软雅黑' sans-serif;
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 1rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .custom-scroll:hover {
+    &::-webkit-scrollbar,
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+  }
+}
+
+.iconfont,
+.ant-badge {
+  font-size: inherit;
+}
+
+.ant-table-scroll {
+  .ant-table-body {
+    overflow: hidden !important;
+    overflow-x: auto !important;
+    overflow-y: scroll !important;
+  }
+}
+.ant-table-body {
+  overflow-x: auto;
+  .ant-table-tbody {
+    tr > td {
+      word-break: break-all;
+    }
+    tr.ant-table-row-selected td {
+      background-color: tint(@component-background, 10%);
+    }
+    tr.app-table-row-selected td {
+      background-color: tint(@primary-color, 80%);
+    }
+  }
+  & > table.ant-table-fixed {
+    table-layout: fixed;
+  }
+}
+.ant-table-tbody > tr.ant-table-row-selected td {
+  background-color: tint(@component-background, 10%);
+}
+.ant-table-fixed-header .ant-table-scroll .ant-table-header {
+  padding-bottom: 20px;
+  margin-bottom: -32px;
+  &.ant-table-fixed {
+    table-layout: fixed;
+  }
+}
+
+.ant-card-head-title {
+  font-weight: bold;
+}
+.ant-tag {
+  height: auto;
+}
+
+.ant-modal-wrap {
+  .ant-modal {
+    min-height: 100%;
+    // min-width: max-content;
+    top: 0;
+    padding-top: 24px;
+    // transform-origin: center center !important;
+    display: flex;
+    align-items: center;
+    .ant-modal-content {
+      min-width: 100%;
+    }
+  }
+}
+
+.ant-empty-image {
+  height: 50px;
+}
+.app-form-group-title {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+// number input width: 100%
+.ant-input-number {
+  width: 100%;
+}
+// 隐藏 bpmnjs 的logo
+.bjs-powered-by {
+  display: none;
+}
+
+// table 被禁用的行的样式
+.ant-table-tbody > tr.disabled td,
+.ant-table-tbody > tr.disabled:hover td {
+  background-color: tint(@component-background, 40%) !important;
+  cursor: not-allowed;
+}
+
+.ant-select-dropdown {
+  max-height: 250px !important;
+}
+
+// fix 修复 流程设计器拖动时闪烁/显示不全的问题
+.djs-container > svg {
+  position: absolute;
+}
+.djs-container {
+  .djs-overlay-container {
+    position: absolute;
+    z-index: 1;
+  }
+  .djs-tooltip-container {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.bf-drawable-text {
+  opacity: 1 !important;
+}
+.table_content .parent_row {
+  background: tint(@component-background, 10%);
+}
+.son_table {
+  .ant-table-tbody {
+    background-color: @component-background !important;
+  }
+}
+.tab-panel-container,
+.tab-pane-container {
+  position: relative;
+  height: calc(100vh - 24rem);
+  .app-table-page-layout {
+    .toolbar {
+      padding-top: 1px !important;
+    }
+  }
+}

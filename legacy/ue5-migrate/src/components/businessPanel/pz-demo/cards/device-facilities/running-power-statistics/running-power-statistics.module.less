@@ -1,0 +1,7 @@
+
+.card-container(@count, @height) {
+  height: calc((100vh - @count * @height) / @count);
+}
+.container {
+  .card-container(2, 205px);
+}

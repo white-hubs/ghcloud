@@ -1,0 +1,49 @@
+{
+  "name": "@ghcloud-legacy/government-management-migrate",
+  "private": false,
+  "version": "1.2.8",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "vite build --mode dev",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "@amap/amap-jsapi-types": "^0.0.13",
+    "@ghcloud/cube-theme": "workspace:^",
+    "ant-design-vue": "catalog:",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-message-center-service": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "axios": "^0.27.2",
+    "dayjs": "catalog:",
+    "@ghcloud/cube-utils": "workspace:^",
+    "moment": "^2.29.4",
+    "pinia": "catalog:",
+    "print-js": "^1.6.0",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-pug-plugin": "catalog:",
+    "vue-tsc": "catalog:",
+    "vite-plugin-html": "catalog:"
+  }
+}

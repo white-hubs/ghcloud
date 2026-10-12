@@ -1,0 +1,118 @@
+.container {
+  min-height: 94vh;
+  background: #F3F7FA;
+  width: 100%;
+  padding: 12px;
+
+
+  .examInfo {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px 12px 12px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      padding-bottom: 12px;
+      justify-content: space-between;
+      font-weight: 400;
+      font-size: 16px;
+      color: #1F3140;
+      border-bottom: 1px solid #f8f9f9;
+
+      .status {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .STAY_EXAM {
+        color: #FFAA26;
+      }
+
+      .IN_PROGRESS {
+        color: var(--van-primary-color);
+      }
+
+      .ENDED {
+        color: #C7C7C7;
+      }
+    }
+
+    .info {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .infoItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #666666;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        // gap: 6px;
+      }
+    }
+  }
+
+  .operate {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.07);
+    background: #fff;
+    padding: 15px 12px 25px;
+  }
+
+
+
+  .tabsContainer {
+    margin: 12px 0 86px;
+
+    .tabs {
+      position: relative;
+      display: flex;
+      height: 44px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 6px;
+    }
+
+    .tab {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      color: #666666;
+      font-size: 14px;
+      line-height: 44px;
+      text-align: center;
+    }
+
+    .activeTab {
+      color: #1F3140;
+      font-weight: 500;
+    }
+
+    .tabLine {
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--van-primary-color);
+      transform: translateX(-50%);
+      transition: left 0.3s;
+    }
+
+    .tabContent {
+      margin-top: 12px;
+    }
+  }
+}

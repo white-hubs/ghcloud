@@ -1,0 +1,25 @@
+{
+  "name": "@ghcloud/cube-gateway-server",
+  "module": "./src/main.ts",
+  "main": "./src/main.ts",
+  "version": "0.0.16",
+  "type": "module",
+  "scripts": {
+    "start": "bun debug.ts",
+    "dev": "bun --watch --inspect=4000 debug.ts",
+    "build": "bun run tsc",
+    "build:pkg": "bun build src/main.ts --compile --minify --bytecode --outfile=./.bin/cube-bff-gw",
+    "build:node": "bun build ./src/main.ts --target=node --bundle --external bun --outfile=./dist/cube-bff-gw.mjs"
+  },
+  "dependencies": {
+    "@cube-ai/flow-sdk-client": "catalog:cube-ai",
+    "@dangao/bun-server": "catalog:bun-server",
+    "@dangao/logsmith": "catalog:bun-server",
+    "reflect-metadata": "0.2.2"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "@ghcloud/cube-service-interface": "workspace:^"
+  }
+}

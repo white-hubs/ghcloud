@@ -1,0 +1,730 @@
+.pageShell {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 150px);
+  max-height: calc(100vh - 150px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* prefixCls=ai-application → ai-application-spin-*；须同时写 ant-spin 以兼容 */
+.page > :global(.ai-application-spin-nested-loading),
+.page > :global(.ant-spin-nested-loading) {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.page > :global(.ai-application-spin-nested-loading) :global(.ai-application-spin-container),
+.page > :global(.ant-spin-nested-loading) :global(.ant-spin-container) {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/*
+ * 竖线贯穿「标题栏下沿 → 双栏正文」：20px 间距在 .content 的 padding-top 内（与 knowledge-segmentation 一致）。
+ * 用整页伪元素：从标题栏底（66px 与 pageHeaderBar 一致）画到 .page 底；横坐标与左栏宽 530px 对齐。
+ */
+.page::after {
+  content: '';
+  position: absolute;
+  /* 必须高于 .content（曾用 z-index:1），否则整段竖线被正文层盖住 */
+  z-index: 2;
+  left: 530px;
+  top: 66px;
+  bottom: 0;
+  width: 1px;
+  background: #e6e8ea;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 24px 16px 24px 16px;
+  }
+
+  /* 与桌面相同：定位原点在 padding 内沿，左栏缝仍在 530px；底端留出与 padding 对称 */
+  .page::after {
+    bottom: 24px;
+  }
+}
+
+.pageHeaderBar {
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  height: 66px;
+  padding: 0 26px;
+  background: #ffffff;
+  opacity: 1;
+  border-bottom: 1px solid #eef0f3;
+  box-shadow: 0 2px 6px rgb(15 23 42 / 4%);
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1d2129;
+  cursor: pointer;
+}
+
+.pageHeader:hover {
+  color: #1677ff;
+}
+
+.backIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.backIcon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pageHeaderTitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.content {
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 530px) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  flex: 1 1 0%;
+  align-items: stretch;
+  align-content: stretch;
+  padding-top: 20px;
+  /* 顶栏与双栏 20px 在盒内 padding；双栏均为白底 + 极淡顶沿阴影（叠在 Spin 上不盖住顶栏投影观感） */
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, rgb(15 23 42 / 2.5%) 0%, rgb(15 23 42 / 0.6%) 5px, transparent 11px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.leftPanel,
+.rightPanel {
+  min-width: 0;
+  min-height: 0;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 530px;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #ffffff;
+}
+
+.leftPanel .settingsCard {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* 与左侧 settingsCard 同节奏：上 9 / 左右 24（与「测试问题」文字左缘对齐）；右侧横向铺满剩余列 */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  padding: 9px 24px 24px;
+  /* 仅右侧圆角：左侧与左栏接缝处保持直角，border-left 才是笔直竖线；四角同圆时左上角会把竖线拉成弧 */
+  border-radius: 0 18px 18px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 结果区占满右侧剩余高度，由内部列表滚动承载多条命中结果 */
+.resultDetailWrap {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.settingsCard,
+.resultCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  padding-top: 9px;
+  box-shadow: 0 4px 20px rgb(17 24 39 / 6%);
+}
+
+.panelTitle {
+  margin-bottom: 16px;
+  padding-left: 26px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #1d2129;
+}
+
+.formIntro {
+  margin-bottom: 18px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #86909c;
+}
+
+.configForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 测试问题 与 返回条数：区块间距 26dp */
+.configForm > .fieldItem:nth-child(1) {
+  margin-bottom: 26px;
+}
+
+/* 返回条数 与 相似度阈值：保持原 18dp 级间距 */
+.configForm > .fieldItem:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+.configForm > .fieldItem:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.fieldItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  line-height: 22px;
+  color: #4e5969;
+}
+
+/* 设计稿：测试问题 - 思源黑体 CN Medium */
+.testQuestionLabel {
+  box-sizing: border-box;
+  width: 64px;
+  height: 16px;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #191c1e;
+  opacity: 1;
+  flex: 0 0 auto;
+}
+
+/* 设计稿：返回条数 - 思源黑体 CN Medium */
+.topKFieldLabel {
+  box-sizing: border-box;
+  width: 135px;
+  height: 16px;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #191c1e;
+  opacity: 1;
+  flex: 0 0 auto;
+}
+
+.fieldControl {
+  min-width: 0;
+  width: 100%;
+}
+
+.fieldControl :global(.ant-input),
+.fieldControl :global(.ant-input-affix-wrapper),
+.fieldControl :global(.ant-input-textarea textarea) {
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.fieldControl :global(.ant-input-textarea textarea) {
+  min-height: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 设计稿：测试问题输入框 482×86，灰底 8 圆角 */
+.testQuestionField {
+  width: 482px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 业务根 ConfigProvider prefixCls=ai-application，类名为 ai-application-input-textarea；勿改全局 .fieldControl，仅约束本区块 */
+.testQuestionField :global(.ant-input-textarea),
+.testQuestionField :global(.ai-application-input-textarea) {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.testQuestionField :global(.ant-input-textarea textarea),
+.testQuestionField :global(.ai-application-input-textarea textarea) {
+  width: 100%;
+  min-width: 0;
+  min-height: 86px;
+  height: 86px;
+  max-height: 86px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f4f6fa;
+  resize: none;
+  overflow-y: auto;
+}
+
+.topKInput {
+  flex: 0 0 126px;
+  width: 126px;
+}
+
+/* 返回条数：外层 482×66，滑动条行 482×36 */
+.topKBlock {
+  width: 482px;
+  max-width: 100%;
+  height: 66px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.topKSliderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 482px;
+  max-width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.topKSliderHost {
+  flex: 0 0 340px;
+  width: 340px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 主题类名为 ai-application-input-number，与 ant-input-number 并存；矩形 5 */
+#AiApplicationApp .topKInput :global(.ai-application-input-number),
+#AiApplicationApp .topKInput :global(.ant-input-number.cube-input-number),
+#AiApplicationApp .topKInput :global(.ant-input-number) {
+  width: 126px !important;
+  min-width: 126px !important;
+  max-width: 126px !important;
+  height: 36px !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e6e8ea !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+#AiApplicationApp .topKInput :global(.ai-application-input-number-focused),
+#AiApplicationApp .topKInput :global(.ai-application-input-number:focus-within),
+#AiApplicationApp .topKInput :global(.ant-input-number-focused.ant-input-number),
+#AiApplicationApp .topKInput :global(.ant-input-number.ant-input-number-focused) {
+  border-color: #e6e8ea !important;
+  box-shadow: none !important;
+}
+
+/*
+ * 字色 / 字体 / 占位符：见 knowledge-retrieval-test.tsx 内 ConfigProvider theme（antd-vue4 InputNumber 用 CSS-in-JS 写死 color，Less 易被覆盖）。
+ * 此处仅保留布局与居中（组件 token 不含 textAlign）。
+ */
+#AiApplicationApp [data-krt-input-wrap] :global(.ai-application-input-number .ai-application-input-number-input),
+#AiApplicationApp [data-krt-input-wrap] :global(.ai-application-input-number input) {
+  box-sizing: border-box !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 10px 8px !important;
+  text-align: center !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.actionPanel {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  /* 与上方「相似度阈值」区块间距 36dp */
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+/* 原生 button，不走 Ant Button，尺寸与设计稿一致 */
+.actionPanel .testButton {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 168px;
+  min-width: 168px;
+  height: 46px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+  background: #1578ff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.actionPanel .testButton:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.actionPanel .testButton:focus {
+  outline: none;
+}
+
+.actionPanel .testButton:focus-visible {
+  outline: 2px solid #1578ff;
+  outline-offset: 2px;
+}
+
+.actionPanel .testButton:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.resultCard {
+  display: flex;
+  flex: 1 1 0%;
+  flex-basis: 0;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.resultHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  box-sizing: border-box;
+  width: 108px;
+  height: 18px;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: #191c1e;
+}
+
+.resultDesc {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #86909c;
+}
+
+.statusMeta {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  max-width: 100%;
+  min-width: 162px;
+  min-height: 32px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #f4f6fa;
+}
+
+.statusMetaInner {
+  box-sizing: border-box;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  color: #191c1e;
+  white-space: nowrap;
+}
+
+.resultBody {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 0%;
+  flex-basis: 0;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 16px;
+  scroll-padding-bottom: 16px;
+}
+
+.resultViewport {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  flex-basis: 0;
+  box-sizing: border-box;
+  min-height: 0;
+  overflow: hidden;
+  padding: 4px 0;
+  border-radius: 12px;
+  background: #fafcfe;
+}
+
+.hitList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 0 0 4px;
+}
+
+.hitCard {
+  flex-shrink: 0;
+  border: 1px solid #eef0f3;
+  border-radius: 10px;
+  padding: 14px 16px 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 4%);
+}
+
+.hitToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hitIndex {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d2129;
+}
+
+.scoreTag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background: #f2f3f5;
+  color: #4e5969;
+  font-size: 12px;
+}
+
+.hitMeta {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #4e5969;
+}
+
+.hitHeading {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #86909c;
+}
+
+.hitText {
+  box-sizing: border-box;
+  margin-top: 10px;
+  max-height: 216px;
+  padding: 12px 14px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #e0e2e9;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1d2129;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.empty {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 24px;
+  border-radius: 12px;
+  background: transparent;
+  text-align: center;
+  color: #86909c;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.emptyIcon {
+  flex-shrink: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* 未发起测试时的引导：图标与文案强制同一行（不换行；过长时整行在空态内横向滚动） */
+.emptyIdle {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.emptyHint {
+  flex-shrink: 0;
+  color: inherit;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* 「阈值无命中」主文案：字系、字号与色值 */
+.emptyHintEmphasis {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 482px;
+  width: 100%;
+  font-family: 'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #191c1e;
+}
+
+/* 测试后无命中：单行、水平居中（不换行；过长时在空态区内横向滚动） */
+.emptyThreshold {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.emptyHintThreshold {
+  flex-shrink: 0;
+  width: max-content;
+  max-width: none;
+  min-height: 24px;
+  white-space: nowrap;
+}
+
+.inputBackground {
+  background: #f4f6fa;
+}

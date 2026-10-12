@@ -1,0 +1,45 @@
+{
+  "name": "@ghcloud/cube-graph-editor-electrical",
+  "version": "0.1.5",
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "module": "./dist/index.js",
+    "main": "./dist/index.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@ghcloud/cube-graph-editor-core": "workspace:^",
+    "@ghcloud/cube-service": "workspace:^",
+    "@antv/x6": "^3.0.0",
+    "ant-design-vue": "catalog:",
+    "pinia": "catalog:",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

@@ -1,0 +1,114 @@
+.entry-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('/resource/v1/operating-room/entry-bg.webp');
+  background-size: cover;
+
+  .body {
+    height: calc(100% - 110px);
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .entry-items {
+      display: flex;
+      align-items: center;
+
+      .entry-item {
+        width: 376px;
+        height: 210px;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .entry-item-content {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-flow: column;
+          align-items: flex-end;
+          box-sizing: border-box;
+          padding: 30px 70px;
+
+          img {
+            width: 70px;
+            height: 70px;
+          }
+
+          .title {
+            height: 28px;
+            font-size: 28px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+            font-weight: Medium;
+            text-align: left;
+            color: #e6f1ff;
+            line-height: 28px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+          }
+
+          .desc {
+            height: 18px;
+            font-size: 18px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            text-align: left;
+            color: #92b3df;
+            line-height: 18px;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .entry-center {
+        width: 230px;
+        height: 230px;
+      }
+    }
+
+    .tenant-name {
+      min-width: 256px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: linear-gradient(272deg, rgba(21, 115, 255, 0.00) 1%, rgba(21, 115, 255, 0.40) 48%, rgba(21, 115, 255, 0.00) 99%);
+      font-size: 22px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      color: #c2dcff;
+      letter-spacing: 0.02px;
+      position: absolute;
+      right: 24px;
+      top: 33px
+    }
+
+    .tips {
+      font-size: 19px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #a7cdff;
+      margin-bottom: 41px;
+    }
+  }
+
+  .foot {
+    height: 50px;
+    text-align: center;
+    color: #7fbfff;
+    line-height: 50px;
+  }
+}

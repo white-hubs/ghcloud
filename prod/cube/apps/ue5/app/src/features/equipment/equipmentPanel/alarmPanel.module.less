@@ -1,0 +1,51 @@
+
+    :deep(.ant-tabs){
+        color: #FFFFFF;
+    }
+    .basics-info{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .info-item{
+            width: 33%;
+            color: rgba(255,255,255,0.6);
+            height: 40px;
+            line-height: 40px;
+            span{
+                color: #FFFFFF;
+                &.danger{
+                    color: red;
+                }
+            }
+        }
+    }
+    .scene{
+        width: 100%;
+        .camera-box{
+            height: 280px;
+            flex: 1;
+            &:first-child{
+                margin-right: 16px;
+            }
+        }
+    }
+    :deep(.ant-form-item-label > label){
+        color: rgba(255,255,255,0.6);
+    }
+    :deep(.ant-select){
+        color: rgba(255,255,255,1);
+        &:not(.ant-select-customize-input) .ant-select-selector{
+            background-color: transparent;
+        }
+    }
+    :deep(.ant-select-arrow){
+        color: #FFFFFF;
+    }
+    :deep(.ant-input){
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+    .footer{
+        margin-top: 240px;
+        text-align: center;
+    }

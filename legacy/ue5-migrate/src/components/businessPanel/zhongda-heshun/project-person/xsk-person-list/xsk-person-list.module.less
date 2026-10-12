@@ -1,0 +1,27 @@
+.user-list{
+  overflow-y: auto;
+  height: calc(100vh - 230px);
+  margin-top: 16px;
+  .item{
+    margin-bottom: 12px;
+  }
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:8px;
+  margin: 10px 0;
+  :global {
+    .ant-input{
+      &::placeholder{
+        color:#91afcd;
+      }
+      font-size: 18px;
+    }
+  .ant-btn-primary{
+    background: #567DE5 !important;
+    font-size: 18px;
+    line-height: 18px;
+  }}
+}

@@ -1,0 +1,66 @@
+
+.abnormal-statistics {
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 400px;
+  .abnormal-statistics-item {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 110px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(0, 34, 61, 0.00), #002a56 50%, #002a56 51%, rgba(9, 49, 114, 0.00));
+
+    .abnormal-statistics-item-left {
+      img {
+        width: 62px;
+        height: 62px;
+      }
+    }
+
+    .abnormal-statistics-item-right {
+      margin-left: 20px;
+      flex: 1;
+
+      .abnormal-statistics-item-right-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2px;
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .abnormal-statistics-item-right-middle {
+        margin-top: 2px;
+
+        div {
+          font-size: 20px;
+          color: #d9e5ff;
+        }
+
+        .right-middle-title {
+          color: #fff;
+          font-size: 16px;
+        }
+
+      }
+
+      .abnormal-statistics-item-right-bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        div {
+          font-size: 14px;
+          color: #7A89A9;
+
+        }
+      }
+    }
+  }
+}

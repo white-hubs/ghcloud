@@ -1,0 +1,68 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .header-toolbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .water-usage-situation-v2-panel .sub-panel-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 2px;
+    padding: 8px;
+    overflow: visible;
+  }
+
+  .water-usage-situation-v2 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .water-usage-situation-v2-panel .chart-panel {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 180px;
+    height: 100%;
+    overflow: visible;
+
+    .chart,
+    .power-factor,
+    .columnBox {
+      flex: 1 1 auto;
+      width: 100% !important;
+      min-height: 180px !important;
+      height: 180px !important;
+    }
+
+    &.is-zoom {
+      min-height: 420px;
+      height: 420px;
+
+      .chart,
+      .power-factor,
+      .columnBox {
+        min-height: 420px !important;
+        height: 420px !important;
+      }
+    }
+  }
+}
+
+.v2-minimal-white-panel(water-usage-situation-v2-panel);

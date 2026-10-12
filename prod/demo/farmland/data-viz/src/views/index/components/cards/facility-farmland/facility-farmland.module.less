@@ -1,0 +1,131 @@
+.container {
+  padding-bottom: 30px;
+  &.sz {
+    // padding-top: 10px;
+  }
+  &.sub-area {
+    padding-top: 30px;
+  }
+  .data-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+    .data-item {
+      display: flex;
+      align-items: center;
+      
+      .data-icon {
+        width: 72px;
+        height: 77px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/images/icon-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: relative;
+        transition: all 0.3s ease;
+        
+        /* 添加背景图动画效果 */
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle, rgba(77, 143, 255, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+          opacity: 0;
+          border-radius: 50%;
+          transition: opacity 1.5s ease;
+          animation: pulse 2s infinite alternate;
+        }
+        
+        img {
+          width: 36px;
+          height: 36px;
+          margin-bottom: 15px;
+          transition: all 0.3s ease;
+          animation: float 3s ease-in-out infinite;
+        }
+      }
+      
+      /* 添加悬停效果 */
+      &:hover {
+        .data-icon {
+          transform: scale(1.05);
+          
+          &::before {
+            opacity: 1;
+          }
+          
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+      
+      .data-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        align-items: flex-start;
+        
+        .data-title {
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          color: #d0deee;
+          white-space: nowrap;
+          margin-top: 5px;
+        }
+        
+        .data-value {
+          font-size: 22px;
+          font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+          font-weight: Regular;
+          color: #ffffff;
+          line-height: 26px;
+          display: flex;
+          align-items: baseline;
+          
+          .data-unit {
+            font-size: 14px;
+            margin-left: 5px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 添加动画关键帧 */
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

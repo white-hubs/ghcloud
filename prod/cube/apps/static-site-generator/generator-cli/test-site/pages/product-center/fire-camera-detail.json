@@ -1,0 +1,75 @@
+{
+  "path": "/product-center/fire-camera-detail.html",
+  "meta": {
+    "title": "轻防火筒型感温摄像机 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductDetailHero",
+      "props": {
+        "productImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/product-main.webp",
+        "productName": "轻防火筒型感温摄像机",
+        "productDescription": "热成像双光谱筒型摄像机是一款近距离精确测温防火设备。设备支持烟火检测、吸烟检测、温度异常等报警功能。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/fire.html"
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "产品特性"
+          },
+          {
+            "id": "advantages",
+            "name": "产品优势"
+          },
+          {
+            "id": "specs",
+            "name": "规格描述"
+          },
+          {
+            "id": "scenarios",
+            "name": "应用场景"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div id='product-intro' style='padding: 1.875vw 18.75vw;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin-bottom: 2.0833vw;'>硬件详情</h2><p style='font-size: 0.8333vw; color: #4c5867; line-height: 2;'>热成像双光谱筒型摄像机是一款近距离精确测温防火设备。设备支持烟火检测、吸烟检测、温度异常等报警功能。【功能特性】支持吸烟检测、火点检测、烟雾检测、温度异常。智能资源切换：不支持火点检测、吸烟检测同时开启，支持测温功能与上述一种智能功能同时开启，烟雾检测支持与测温功能、火点检测、吸烟检测同时开启。支持音频异常探测等功能。支持测温功能：支持普通测温，专家测温检测；可以画最多10个点，1条线，10个区域检测。支持AI开放平台。支持线性、直方图、自适应等热成像AGC模式，支持DDE、3D DNR。支持双光融合。</p></div><div id='features' style='padding: 1.875vw 18.75vw; margin-top: 3.3333vw;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin-bottom: 2.0833vw;'>产品特性</h2><div style='display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 4rem; font-size: 0.8333vw; color: #4c5867; line-height: 2;'><div>• 支持火焰检测<br>• 响应速度快：通用场景可达秒级响应，一般响应时间&lt;=3秒<br>• 抗干扰能力强：可有效过滤阳光、晚霞、复杂灯光、机动车危<br>• 最大支持256G本地存贮（TF卡）<br>• 支持双向语音对讲</div><div>• 支持告警语音播报<br>• 支持1路报警输入输出<br>• 支持1路RS485<br>• 支持扩展接入烟感等传感器<br>• 支持温度异常报警</div></div></div>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div id='advantages' style='padding: 1.875vw 18.75vw;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin-bottom: 2.0833vw;'>产品优势</h2><div style='font-size: 0.8333vw; color: #4c5867; line-height: 2;'><div style='display: flex; margin-bottom: 1rem;'><span style='color: #b1b5ba; width: 80px; flex-shrink: 0;'>低成本</span><span>采用新一代的 LPWAN 技术 TurMass™；无线通信距 1-2Km，单网关覆盖范围广，系统成本低；</span></div><div style='display: flex; margin-bottom: 1rem;'><span style='color: #b1b5ba; width: 80px; flex-shrink: 0;'>易安装</span><span>远距离无线通信，简易式壁挂安装，简单方便，大大缩短施工时间；</span></div><div style='display: flex; margin-bottom: 1rem;'><span style='color: #b1b5ba; width: 80px; flex-shrink: 0;'>易维护</span><span>采用市电供电，无需更换电池；智能运维，实时监测设备运行状态，及时发现故障；</span></div><div style='display: flex; margin-bottom: 1rem;'><span style='color: #b1b5ba; width: 80px; flex-shrink: 0;'>安全性</span><span>符合国家标准，具有 CCCF 认证，安全可靠；内置（备用）锂电池，在断电的情况下，不影响正常工作。</span></div><div style='display: flex;'><span style='color: #b1b5ba; width: 80px; flex-shrink: 0;'>便捷性</span><span>-40 °C~70 °C, &lt;95% RH</span></div></div></div>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div id='specs' style='padding: 1.875vw 18.75vw;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin-bottom: 2.0833vw;'>规格描述</h2><table style='width: 100%; border-collapse: collapse; font-size: 0.8333vw;'><tr style='background: #f8f9fa;'><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666; width: 12%;'>品牌</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333; width: 21%;'>屹森</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666; width: 12%;'>尺寸</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333; width: 21%;'>80*70*60</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666; width: 12%;'>重量</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333; width: 22%;'>1.5</td></tr><tr><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>电源</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>220V</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>电压</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>24V</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>测量对象</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>可燃气体</td></tr><tr style='background: #f8f9fa;'><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>测量精度</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>0-100</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>加工定制</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>是</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>反应时间</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>30S</td></tr><tr><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>预热时间</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>2</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>规格</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>三波段</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>工作电压</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>DC24V</td></tr><tr style='background: #f8f9fa;'><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>报警时间</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>≤30s</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>防爆等级</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>Exd II CT6Gb</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>环境温度</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>-30℃~+60℃</td></tr><tr><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>报警电流</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>30mA;</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>可售卖地</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>北京;天津;河北;山西;内蒙...</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>材质</td><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>铝压铸隔爆壳体</td></tr><tr style='background: #f8f9fa;'><td style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #666;'>类型</td><td colspan='5' style='padding: 0.75rem 1rem; border: 1px solid #e8eaec; color: #333;'>加油站用磁吸可燃气体探...</td></tr></table></div>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div id='scenarios' style='padding: 1.875vw 18.75vw;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin-bottom: 2.0833vw;'>应用场景</h2><div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;'><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/hardware/scenario-bg.webp' alt='医院' style='display:inline-block;width: 100%; height: 12vw; object-fit: cover;'><div style='padding: 1rem; text-align: center; font-size: 0.9375vw; color: #333; font-weight: 500;'>医院</div></div><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/hardware/scenario-bg.webp' alt='园区' style='display:inline-block;width: 100%; height: 12vw; object-fit: cover;'><div style='padding: 1rem; text-align: center; font-size: 0.9375vw; color: #333; font-weight: 500;'>园区</div></div><div style='background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);'><img src='https://qiniu.guhecloud.com/kaihe-static/images/hardware/scenario-bg.webp' alt='仓库' style='display:inline-block;width: 100%; height: 12vw; object-fit: cover;'><div style='padding: 1rem; text-align: center; font-size: 0.9375vw; color: #333; font-weight: 500;'>仓库</div></div></div></div>",
+        "background": "white"
+      }
+    }
+  ],
+  "layout": "default"
+}

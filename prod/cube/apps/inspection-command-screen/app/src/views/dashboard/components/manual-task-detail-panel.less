@@ -1,0 +1,332 @@
+.manual-task-detail-panel {
+  .manual-task-detail-card {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.manual-detail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .inspection-command-screen-btn {
+    height: 24px;
+    border-radius: 12px;
+    border-color: rgba(93, 138, 212, 0.45);
+    background: rgba(36, 70, 130, 0.45);
+    color: #84b4ff;
+    font-size: 12px;
+  }
+}
+
+.manual-detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--muted-border);
+
+  > strong {
+    color: var(--content-text);
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+}
+
+.manual-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+
+  > div {
+    border-radius: 9px;
+    background: var(--muted-bg);
+    border: 1px solid var(--list-border);
+    padding: 9px 10px;
+    min-width: 0;
+  }
+
+  span {
+    display: block;
+    color: var(--sub-text);
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  strong {
+    display: block;
+    color: var(--content-text);
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .task-status {
+    display: inline-flex;
+  }
+}
+
+.manual-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 12px;
+
+  > div {
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--list-border);
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  strong {
+    display: block;
+    color: var(--content-text);
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  strong.success {
+    color: #39d6a4;
+  }
+
+  strong.danger {
+    color: #ff7878;
+  }
+
+  span {
+    display: block;
+    margin-top: 3px;
+    color: var(--sub-text);
+    font-size: 11px;
+  }
+}
+
+.manual-detail-desc {
+  margin-top: 12px;
+  flex: none;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--list-border);
+  padding: 10px 11px;
+
+  span {
+    display: block;
+    color: var(--sub-text);
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(232, 242, 255, 0.82);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+.manual-detail-section {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--list-border);
+  padding: 10px 11px;
+}
+
+.manual-section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  margin-bottom: 8px;
+  color: rgba(180, 206, 238, 0.78);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manual-object-list {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 2px;
+}
+
+.manual-route-section {
+  flex: none;
+  min-height: auto;
+
+  .manual-object-status,
+  .manual-object-empty {
+    min-height: 64px;
+  }
+}
+
+.manual-route-progress {
+  color: rgba(180, 206, 238, 0.72);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manual-route-chip-list {
+  max-height: 84px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 7px;
+  padding-right: 2px;
+}
+
+.manual-route-chip-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.manual-route-chip-list::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.manual-route-chip {
+  max-width: 122px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  border: 1px solid rgba(143, 171, 224, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(186, 206, 233, 0.68);
+  padding: 0 8px;
+  font-size: 12px;
+  line-height: 22px;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(80, 162, 255, 0.6);
+    background: rgba(75, 139, 255, 0.14);
+    outline: none;
+  }
+
+  .anticon {
+    flex: none;
+    font-size: 12px;
+  }
+
+  em {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &.done {
+    border-color: rgba(57, 214, 164, 0.35);
+    background: rgba(57, 214, 164, 0.1);
+    color: #39d6a4;
+  }
+
+  &.abnormal {
+    border-color: rgba(255, 120, 120, 0.35);
+    background: rgba(255, 120, 120, 0.1);
+    color: #ff7878;
+  }
+}
+
+.manual-object-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.manual-object-list::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.manual-object-item {
+  border: 1px solid var(--list-border);
+  border-radius: 9px;
+  background: var(--list-bg);
+  padding: 9px 10px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.manual-object-icon {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.manual-object-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  strong {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--content-text);
+    font-size: 14px;
+  }
+
+  span {
+    flex: none;
+    color: #84b4ff;
+    font-size: 12px;
+  }
+}
+
+.manual-object-meta {
+  grid-column: 2;
+  display: flex;
+  gap: 3px;
+  margin-top: 6px;
+  color: var(--sub-text);
+  font-size: 12px;
+}
+
+.manual-object-status,
+.manual-object-empty {
+  flex: 1;
+  min-height: 180px;
+}
+
+.manual-object-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(186, 206, 233, 0.66);
+  font-size: 13px;
+}

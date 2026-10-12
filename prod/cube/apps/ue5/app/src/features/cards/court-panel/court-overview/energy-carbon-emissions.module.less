@@ -1,0 +1,144 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .energy-carbon-v2-body {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .energy-carbon-v2-body.is-zoom {
+    min-height: 520px;
+    gap: 14px;
+    padding: 8px;
+  }
+
+  .energy-carbon-metric-box {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .energy-carbon-metric-box .monitorPanel {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .energy-carbon-v2-panel .energy-carbon-child.sub-panel,
+  .energy-carbon-v2-panel .energy-carbon-child .sub-panel {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .energy-carbon-v2-panel .energy-carbon-child .child-panel-header {
+    min-height: 28px;
+    margin-bottom: 6px;
+    padding: 0 2px;
+  }
+
+  .energy-carbon-v2-panel .energy-carbon-child .sub-title {
+    color: var(--access-control-text-secondary, rgba(220, 238, 255, 0.92));
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .energy-carbon-v2-panel .energy-carbon-child .mark {
+    display: none;
+  }
+
+  .energy-carbon-v2-panel .energy-carbon-child .sub-panel-content {
+    margin: 0;
+    padding: 8px 10px;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.1), rgba(12, 230, 255, 0.03)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.06));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.22));
+    border-radius: 8px;
+  }
+
+  .energy-carbon-line-chart,
+  .energy-carbon-bar-chart {
+    min-height: 150px;
+  }
+
+  .energy-carbon-child-title {
+    margin-bottom: 6px;
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.86));
+    font-size: 12px;
+  }
+
+  .energy-carbon-space-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 148px;
+  }
+
+  .energy-carbon-pie-wrap {
+    display: flex;
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .energy-carbon-pie,
+  .energy-carbon-pie-chart {
+    width: 100%;
+    height: 100%;
+  }
+
+  .energy-carbon-pie-center {
+    text-align: center;
+  }
+
+  .energy-carbon-pie-value {
+    color: var(--access-control-value-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .energy-carbon-pie-label {
+    margin-top: 2px;
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.86));
+    font-size: 12px;
+  }
+
+  .energy-carbon-pie-list {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.v2-minimal-white-panel(energy-carbon-v2-panel);
+
+:root[data-visual-theme="minimal-white"] {
+  :global {
+    .energy-carbon-v2-panel .energy-carbon-child .sub-title,
+    .energy-carbon-v2-panel .energy-carbon-child-title {
+      color: rgba(40, 62, 96, 0.92);
+    }
+
+    .energy-carbon-v2-panel .energy-carbon-child .sub-panel-content {
+      background: rgba(255, 255, 255, 0.78);
+      border-color: rgba(47, 141, 255, 0.16);
+    }
+
+    .energy-carbon-v2-panel .energy-carbon-pie-value {
+      color: #1f3b63;
+      text-shadow: none;
+    }
+
+    .energy-carbon-v2-panel .energy-carbon-pie-label {
+      color: rgba(55, 78, 110, 0.88);
+    }
+  }
+}

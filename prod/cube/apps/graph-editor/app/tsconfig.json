@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@ghcloud/cube-graph-editor-core": [
+        "../../../basic/cube-graph-editor-basic/cube-graph-editor-core/src"
+      ],
+      "@ghcloud/cube-graph-editor-core/*": [
+        "../../../basic/cube-graph-editor-basic/cube-graph-editor-core/src/*"
+      ],
+      "@ghcloud/cube-graph-editor-electrical": [
+        "../../../basic/cube-graph-editor-basic/cube-graph-editor-electrical/src"
+      ],
+      "@ghcloud/cube-graph-editor-electrical/*": [
+        "../../../basic/cube-graph-editor-basic/cube-graph-editor-electrical/src/*"
+      ]
+    },
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

@@ -1,0 +1,71 @@
+.form-preview{
+  height: 100%;
+  position: relative;
+  :global{
+    .iot-configure-card-body{
+      height: 100%;
+    }
+    .widget-item{
+      position: relative;
+      color:transparent;
+      &::after{
+        content: '';
+        width: 100%;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .iot-configure-form-item{
+      width: 100%;
+    }
+    .iot-configure-form{
+      width: 100%;
+      height: 100%;
+    }
+    .iot-configure-empty{
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .form-item{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.01);
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      padding: 10px;
+      .close{
+        display: block;
+      }
+    }  
+  
+    .close{ 
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s;
+      background-color: red;
+    }
+  }
+  .selected{
+    transform: scale(1.01);
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 10px;
+  }
+}

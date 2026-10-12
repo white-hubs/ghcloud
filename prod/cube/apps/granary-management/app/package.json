@@ -1,0 +1,52 @@
+{
+  "name": "@ghcloud/cube-granary-management-app",
+  "version": "1.0.54",
+  "private": false,
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts ",
+    "build:dev": "vite build -c vite.build.config.ts --mode dev",
+    "build:test": "vite build -c vite.build.config.ts --mode test",
+    "build:prod": "vite build -c vite.build.config.ts --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "catalog:",
+    "@ghcloud/cube-app-design": "workspace:^",
+    "@ghcloud/cube-auth-service": "workspace:^",
+    "@ghcloud/cube-auth-utils": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-granary-management-service": "workspace:^",
+    "@ghcloud/cube-permission-codes": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/cube-ui": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/generic-component": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "animate.css": "4.1.1",
+    "ant-design-vue": "catalog:",
+    "dayjs": "catalog:",
+    "echarts": "catalog:",
+    "pinia": "catalog:",
+    "swiper": "9.1.1",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-qiankun": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

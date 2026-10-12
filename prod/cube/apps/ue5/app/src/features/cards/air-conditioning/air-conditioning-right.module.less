@@ -1,0 +1,73 @@
+.panelColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cardBody {
+  min-width: 0;
+}
+
+.pieBody {
+  min-height: 0;
+}
+
+.pieSurface {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: var(--access-control-space-md, 10px);
+  min-height: 118px;
+  padding: 4px 10px;
+}
+
+.pieContent {
+  color: var(--access-control-text-label, #fff);
+  font-size: var(--access-control-font-caption, 11px);
+  line-height: 1.35;
+  text-align: center;
+
+  span {
+    color: var(--access-control-value-color, #eff6ff);
+    font-family: DIN Alternate, Roboto, Source Han Sans CN, sans-serif;
+    font-size: var(--access-control-font-emphasis, 16px);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}
+
+.listBody {
+  min-height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.tableBody {
+  min-height: 210px;
+  overflow: hidden;
+}
+
+.zoomBody {
+  .pieSurface {
+    min-height: 280px;
+    gap: 20px;
+    padding: var(--access-control-surface-padding-zoom, 16px 18px);
+  }
+
+  .pieContent {
+    font-size: var(--access-control-font-label, 12px);
+
+    span {
+      font-size: var(--access-control-font-zoom-value, 24px);
+    }
+  }
+}
+
+:global(.air-conditioning-card-body.is-zoom).listBody {
+  min-height: 460px;
+}
+
+:global(.air-conditioning-card-body.is-zoom).tableBody {
+  min-height: 480px;
+}

@@ -1,0 +1,221 @@
+.security-analysis-body{
+  height: 100%;
+  width:100%;
+  background-color: #F3f4f5;
+}
+.security-analysis-content {
+  padding: 16px;
+  padding-bottom: 0;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(233deg,#ffffff 3%, #ffffff 89%);
+  .security-analysis-cards-header{
+    height: 420px;
+    width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .security-analysis-cards-header{
+      height: 420px;
+      width: 430px;
+    }
+  }
+  .security-analysis-title-header{
+    width: calc(100% - 430px) ;
+  
+  }
+}
+
+.security-analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+    .security-analysis-picker{
+      // height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 30px;
+    }
+}
+
+.security-analysis-title {
+  font-size: 32px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: bold;
+  color: #03070b;
+
+}
+
+.security-analysis-btn {
+  border-radius: 4px;
+  width: 200px;
+  height: 60px !important;
+  font-size: 28px !important;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: bold !important;
+  text-align: center;
+  color: #ffffff;
+  line-height: 28px;
+  background: linear-gradient(106deg,#5da1ff 12%, #1578ff 90%);
+  &:hover{
+    background: linear-gradient(106deg,#5da1ff 12%, #1578ff 90%);
+    border: none;
+  }
+  border: none;
+  &:focus{
+    background: linear-gradient(106deg,#5da1ff 12%, #1578ff 90%);
+    border: none;
+  }
+}
+
+.security-analysis-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.security-analysis-card {
+  width: 45%;
+  border-radius: 8px;
+  // padding: 16px;
+  display: flex;
+  align-items: center;
+  // margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.person-icon {
+  background-color: #E6F7FF;
+  background-image: url('/resource/v1/safety-supervision/img/person-icon.png');
+  background-size: cover;
+}
+
+.device-icon {
+  background-color: #F6FFED;
+  background-image: url('/resource/v1/safety-supervision/img/device-icon.png');
+   background-size: cover;
+}
+
+.security-icon {
+  background-color: #FFF7E6;
+  background-image: url('/resource/v1/safety-supervision/img/security-icon.png');
+   background-size: cover;
+}
+
+.dashboard-icon {
+  background-color: #F9F0FF;
+  background-image: url('/resource/v1/safety-supervision/img/dashboard-icon.png');
+  background-size: cover;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-content {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  width: calc(100% - 106px)
+}
+
+.history-report {
+  border-radius: 8px;
+  padding: 0 16px;
+  overflow-y: auto;
+  height: calc(100% - 470px);
+  margin-top: 16px;
+  padding-bottom: 0;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+.layout-footer{
+  height: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: center;
+  color: #000000;
+}
+.history-report-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+  padding-left: 10px;
+  // border-left: 4px solid #1890ff;
+}
+
+.history-report-content {
+  margin-bottom: 16px;
+  width: 100%;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  height: 52px;
+  background: rgba(222,236,255,0.30);
+  border-radius: 6px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: bold;
+  text-align: left;
+  color: #181d23;
+  .history-report-content-operate{
+    font-size: 18px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: left;
+    color: #1578ff;
+    cursor: pointer;
+    img{
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  
+  .header-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+}

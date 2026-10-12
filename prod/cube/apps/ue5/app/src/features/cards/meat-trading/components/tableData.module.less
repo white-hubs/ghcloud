@@ -1,0 +1,74 @@
+:global {
+  .meat-transaction-table {
+    display: flex;
+    min-height: 268px;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .meat-transaction-table__header,
+  .meat-transaction-table__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    align-items: center;
+  }
+
+  .meat-transaction-table__header {
+    min-height: 38px;
+    color: var(--visual-data-modal-muted-color, rgba(220, 238, 255, 0.78));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    background: rgba(16, 40, 68, 0.46);
+    border-bottom: 1px solid rgba(76, 160, 255, 0.14);
+  }
+
+  .meat-transaction-table__body {
+    flex: 1;
+    min-height: 230px;
+    overflow-y: auto;
+  }
+
+  .meat-transaction-table__row {
+    min-height: 42px;
+    color: var(--visual-data-modal-text-color, #ffffff);
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+    border-bottom: 1px solid rgba(105, 180, 241, 0.1);
+  }
+
+  .meat-transaction-table__row:nth-child(2n) {
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .meat-transaction-table__cell {
+    min-width: 0;
+    padding: 0 12px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .meat-transaction-table__empty {
+    display: flex;
+    min-height: 230px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :root[data-visual-theme="minimal-white"] .meat-transaction-table {
+    .meat-transaction-table__header {
+      color: rgba(29, 61, 108, 0.72);
+      background: rgba(232, 243, 255, 0.82);
+      border-bottom-color: rgba(116, 158, 210, 0.16);
+    }
+
+    .meat-transaction-table__row {
+      color: #0d2f75;
+      border-bottom-color: rgba(116, 158, 210, 0.12);
+    }
+
+    .meat-transaction-table__row:nth-child(2n) {
+      background: rgba(232, 243, 255, 0.34);
+    }
+  }
+}

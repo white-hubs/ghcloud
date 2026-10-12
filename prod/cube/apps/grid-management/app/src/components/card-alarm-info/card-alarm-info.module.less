@@ -1,0 +1,145 @@
+.top {
+  width: 100%;
+  height: 74px;
+  background: linear-gradient(305deg, #ffeeee 12%, #fbfcff 84%);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    &:first-child {
+      .value {
+        color: var(--grid-management-primary-color);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 22px;
+      border: 1px dashed #bfcada;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    .label {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #8e97a4;
+    }
+
+    .value {
+      font-size: 20px;
+      font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #0a1121;
+    }
+  }
+}
+
+.table {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    margin-bottom: 11px;
+
+    .tab-item {
+      flex: 1;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.50);
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+      color: #0a1121;
+      line-height: 14px;
+      cursor: pointer;
+
+
+      &.active {
+        background: #ffffff;
+      }
+    }
+  }
+
+  .table-header {
+    background: #e3efff;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #5c6572 !important;
+  }
+
+  .table-scroll {
+    overflow: hidden;
+  }
+
+  .table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+
+    &.even-row {
+      background: #fff;
+    }
+
+    .table-cell {
+      flex: 1;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #77808c;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0 8px;
+    }
+  }
+}

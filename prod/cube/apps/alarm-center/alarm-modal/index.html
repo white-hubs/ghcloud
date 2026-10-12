@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta version="<%- version %>" />
+  <title>PC报警弹窗</title>
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+      background: transparent;
+    }
+    body{
+      background: transparent;
+    }
+    iframe {
+      border: 0;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    .cube-alarm-modal-tabs-tab{
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body style="background: transparent;">
+  <div id="cube-alarm-modal-root" style="height: 100%; width: 100%;"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

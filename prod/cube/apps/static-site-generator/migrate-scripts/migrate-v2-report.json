@@ -1,0 +1,8822 @@
+[
+  {
+    "phase": "setting",
+    "name": "website-setting",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "layout",
+    "name": "default",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "category",
+    "name": "公司动态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "category",
+    "name": "行业新闻",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "category",
+    "name": "政策报告",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "category",
+    "name": "产品动态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "information-detail-id",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-agriculture",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-hospital",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-electric-safety",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-emergency-dispatch",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-smart-patrol",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-ai-agent",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-monitoring-early-warning",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-fire-safety",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-physical",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-energy-saving",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-video-safety",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-park",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-safety-training",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "programme-railway",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "service",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "information",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "consultation",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "engines-business",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "engines-ai",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "engines-data",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "engines-twin",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "engines-iot",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-demo",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-education",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-other",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-city",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-medical",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-transport",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-video",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-venue",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-park",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "industry-index",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "cooperation",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "about",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "index",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-patrol-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-repair-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-access-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-maintenance-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-alarm-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-elevator-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-broadcast-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-admin-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-agriculture",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-customized",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-safety-edu-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-hospital",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-hardware",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-managed",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-fire",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-hvac-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-energy-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-meat-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-patrol",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-asset-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-risk-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-hidden-danger-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-medical-gas-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-meeting-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-attendance-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-security-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-env",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-parking-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-outsourcing-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-ev-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-safety-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-fire-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-modeling",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-upgrade-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-hr-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-fire-camera-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-electric",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-lighting-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-plan-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-env-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-surgery-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-price-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-attendance",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-intrusion-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-river",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-operation",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-video",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-park-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-base",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-internal",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-meat-track",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-electric-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-iot-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-command-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-integration",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-daily-inspection-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-ac-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-space-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-gas-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-app-small-project-detail",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "page",
+    "name": "product-center-safe",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1.json — 古河云科技针对IBMS建筑智能化、智慧化管理趋势的剖析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "2.json — 粽香情浓，IBMS行业专家古河云科技为您送来端午节祝福！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "3.json — 古河云科技中标喜报！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "4.json — 成都古河云科技有限公司高新研发中心正式揭牌",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "5.json — 古河云科技总经理应邀参加温江区两会 ，共话温江美好未来！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "6.json — 八一建军节，IBMS运维行业专家古河云科技向军人致敬！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "7.json — 中标喜讯 | 12月迎喜讯 中标鼓人心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "8.json — 古河云科技荣获“疫情防控优秀企业”称号",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "9.json — 一家人 一个梦 一起拼 一定赢——古河云科技毕棚沟&鹧鸪山团",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "10.json — 领导关怀 | 温江区委统战部副部长王雪一行莅临我司高新研发中",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "11.json — 业务动态｜食品安全难保障，溯源链条难建立？古河云物联网自助交",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "12.json — 成都大运会主场馆凤凰山体育馆三维可视化管理平台，BIM运维与",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "13.json — “老坛酸菜”食安问题引爆315，大数据溯源帮助企业自证“清白",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "14.json — 古河云案例｜科技如何赋能建筑运维管理？深圳广电金融中心案例分",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "15.json — BIM运维系统如何赋能建筑管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "16.json — BIM运维系统，如何解决行业痛点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "17.json — 成都政府开始收集BIM模型，BIM运维越来越被重视",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "18.json — 农批市场数字化安全系统如何构建，古河云数字孪生安全管控平台帮",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "19.json — IBMS系统的BIM可以应用哪些方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "20.json — 古河云告诉您BIM运维系统的意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "21.json — 产品业务｜智慧蓉城中的智慧养老，数字化如何赋能健康养老产业？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "22.json — 行业动态｜数字赋能蓉城，城市治理新趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "23.json — 产品业务｜疫情下农批市场的保供工作，一条任重道远的艰难之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "24.json — 古河云“五一”劳动节放假安排",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "25.json — 与古河云一起，数字一“夏”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "26.json — BIM运维系统场景应用分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "27.json — 古河云浅谈BIM未来发展前景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "28.json — 古河云动态｜以“互联网+医疗健康”为抓手，共探医疗场景发展新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "29.json — 产品业务｜古河云数字孪生水务管理系统平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "30.json — IBMS从高坛走向大众——新基础设施时代智慧园区的面貌",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "31.json — 基于BIM的智慧医院解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "32.json — 综合研究医院智能化集成管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "33.json — 建筑智能化管理系统软件一般包含什么具体内容？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "34.json — 如何把BIM数据可视化运用于工程建筑的一整个生命期？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "35.json — 建筑工程中BIM技术的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "36.json — BIM怎样助力“海绵城市建设”基本建设？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "37.json — BIM工程建筑企业战略转型：搭建聪慧建筑新时代。",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "38.json — 常熟市人民政府发布加快BIM技术应用的通知",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "39.json — 产品业务｜“开河”数字化云支撑平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "40.json — 拥有7项能力，做好BIM运维项目",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "41.json — 浅谈有关国内BIM+GIS应用的现状",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "42.json — BIM技术在设计阶段，属于你独有的优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "43.json — 智慧园区如何做到集成化管理控制",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "44.json — IBMS与BMS的不同之处",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "45.json — BIM运维平台独有的优势和价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "46.json — 古河云产品｜数字孪生决策分析平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "47.json — BIM技术在项目运维管理中，独有的优势是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "48.json — BIM模型建立的流程和步骤",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "49.json — 智慧社区的智能集成系统设计",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "50.json — 楼宇智能化管理系统一般包括哪些内容？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "51.json — BIM 在医院运维管理中的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "52.json — BIM建模需要注意什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "53.json — 古河云科技公司介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "54.json — 智能控制系统 知识要点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "55.json — 智能化 信息系统集成 检验 步骤",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "56.json — BIM 对建筑业 有什么好处 ？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "57.json — IBMS与智能楼宇的5A标准相结合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "58.json — BIM运维阶段数据构建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "59.json — 运用 BIM 技术应用 以及 在住房 产业园区 物业管理服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "60.json — BIM新项目应具有什么工作能力？能干什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "61.json — 智能化系统有多少个系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "62.json — 技术应掌握BIM运维系统哪些应用能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "63.json — IBMS系统在商业管理中的应用要求",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "64.json — 智能建筑管理系统包含哪些子系统 ？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "65.json — 智能化系统集成提高公司用电量精益化管理水准",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "66.json — 古河云带你了解楼宇智能化系统控制功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "67.json — 运用BIM技术应用目的",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "68.json — BIM技术能解决的问题",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "69.json — 智慧园区的主要管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "70.json — 古河云动态｜启动全国市场战略布局，多地分支机构陆续成立，公司",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "71.json — 项目风险管理领域特点建文信息系统集成解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "72.json — 智能化管控平台如何提高产能效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "73.json — BIM运维是什么?",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "74.json — BIM应用总体规划",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "75.json — 数字化转型下的智慧园区",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "76.json — 新型智慧园区的全新定位",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "77.json — 智慧园区的基本建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "78.json — 智慧园区系统重点功能场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "79.json — IBMS建模数据怎么强化？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "80.json — 什么是BIM",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "81.json — BIM应用的总体策划",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "82.json — 智能系统集成项目管理软件解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "83.json — 医院智能化方案如何实施",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "84.json — IBMS概述",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "85.json — IBMS系统分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "86.json — IBMS智慧楼宇解决方案系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "87.json — BIM运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "88.json — BIM在智慧管廊运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "89.json — BIM运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "90.json — BIM运维的神兵利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "91.json — 产品业务｜从蓝图到现实，农批市场进场缴费如何实现智慧化管理？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "92.json — 智能化集成系统（IBMS）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "93.json — 智能化集成管理系统（IBMS）解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "94.json — AI在智能建筑中的应用和发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "95.json — 产品业务｜“开河”数字化云支撑平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "96.json — 产品业务｜如何打造“智慧”与“绿色”相融的新时代医院后勤运维",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "97.json — 产品业务｜如何借力科技，解锁农批市场管理新路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "98.json — 基于 BIM 技术的可视化管理系统简介",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "99.json — 基于 BIM 技术的可视化系统分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "100.json — BIM运维案例分享",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "101.json — 智能化集成系统的构成",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "102.json — 智能化办公场景的集成管理系统构建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "103.json — 智能化集成系统（IBMS）联动设计",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "104.json — 智能化系统集成(IBMS)技术解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "105.json — IBMS能给我们带来什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "106.json — IBMS系统分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "107.json — BIM技术在项目运维管理的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "108.json — BIM技术运维阶段的分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "109.json — BIM智慧运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "110.json — BIM技术——让智慧建筑运维“火”起来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "111.json — 实现IBMS的功能要求",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "112.json — IBMS平台价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "113.json — 智能建筑的痛点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "114.json — IBMS智能化集成综合管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "115.json — IBMS管理平台功能（一）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "116.json — IBMS管理平台功能（二）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "117.json — IBMS管理平台功能（三）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "118.json — IBMS管理平台功能（四）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "119.json — 新闻动态｜成都市成华区加强疫情管控，物资保供成关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "120.json — BIM运维系统的市场特性和优势分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "121.json — BIM运维系统让建筑管理更“智慧”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "122.json — IBMS系统在酒店的应用技术要求",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "123.json — IBMS在医院如何应用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "124.json — BIM运维如何高效实现其价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "125.json — 古河云科技-IBMS智能建筑集成管理设计及应用解析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "126.json — 媒体报道｜古河云推动农批市场数字化转型 助力市场提升保供能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "127.json — BIM技术的应用探究在工程咨询中的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "128.json — BIM遇上项目施工，会有什么样的能量",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "129.json — IBMS如何让联动集成各个子系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "130.json — 科技部、国家卫生健康委等6部门联合发布《关于加快场景创新以人",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "131.json — 医院发展的关键点是掌握智慧医院的发展脉络",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "132.json — IBMS在建筑体中有什么作用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "133.json — 智慧医院未来发展方向在何方？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "134.json — 数字孪生建筑综合管理平台实现对楼宇的智慧化建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "135.json — 用“数字孪生”管理地下空间 上海数字化转型可观可感",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "136.json — 古河云动态｜温江区政府党组成员姚毅一行莅临古河云科技，共探数",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "137.json — 智慧医院解决方案如何应用在实际场景中",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "138.json — 数字孪生如何让城市更智慧",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "139.json — 建筑业数字化如何完成转型？具体应用在何处？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "140.json — 产品业务｜智慧绿色建筑，“技术+创新”构建建筑新形态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "141.json — 古河云IBMS楼宇自控集成管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "142.json — 智慧楼宇自控系统，让楼宇建筑更智能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "143.json — 智慧园区数字化解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "144.json — 系统集成有哪些原则性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "145.json — 数字孪生下的智慧楼宇应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "146.json — 智慧园区数字化转型之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "147.json — BIM运维系统面临哪些挑战",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "148.json — 如何让楼宇园区更加智慧",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "149.json — BIM运维技术发展的几个阶段",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "150.json — 智赋建筑｜古河云科技亮相湖南智能建筑行业发展论坛",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "151.json — IBMS对于写字楼智能化的价值体现",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "152.json — IBMS如何帮助楼宇节能减碳",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "153.json — IBMS如何为守护楼宇门禁安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "154.json — 古河云动态｜公司通过2022年度四川省“专精特新”中小企业认",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "155.json — 系统集成服务有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "156.json — 什么是智慧园区？如何让智慧园区更智慧？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "157.json — 媒体报道｜古河云依托数字孪生技术打造的节能降耗产品得到主流媒",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "158.json — 智慧园区如何进行物业管理？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "159.json — 如何打造一座数字孪生工厂管理系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "160.json — 2022年数字孪生对物联网带来的影响",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "161.json — 什么是IBMS？IBMS有什么好处！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "162.json — 智慧楼宇如何监控各智能化子系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "163.json — 古河云动态｜公司参加“2022-2023天马专精特新投融资大",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "164.json — 能耗监测系统监测哪些内容？应用在什么地方？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "165.json — 三维可视化如何应用在智慧园区场景管理中",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "166.json — 智慧园区如何赋能全业务运营管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "167.json — 医院后勤运维管理中的风险预判系统应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "168.json — 智慧园区概念与建设背景介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "169.json — 智慧园区建设五大挑战",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "170.json — 智慧园区建设四大价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "171.json — 智慧园区主要建设内容",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "172.json — 智慧园区新发展，聚焦“双碳”新目标",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "173.json — 数字孪生在智慧楼宇中的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "174.json — 项目案例｜医院后勤运维成本降低百万，这家医院到底做对了什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "175.json — 智慧园区发展历程和内涵",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "176.json — 智慧园区概念内涵与功能分区",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "177.json — 智慧园区市场需求分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "178.json — 智慧园区业务场景规划",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "179.json — 2023智慧园区将会走向何方？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "180.json — 古河云孪生综合运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "181.json — 古河云动态｜古河云科技申报项目入选“2022年示范应用场景入",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "182.json — 智慧园区运维管理平台如何赋能数字城市建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "183.json — 新闻动态｜成都将启动新一批未来公园社区建设，绿色低碳新场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "184.json — 智慧园区的前世今生，该如何建设？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "185.json — 为什么现在智慧楼宇越来越重要了",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "186.json — 中国智慧园区建设面临的挑战",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "187.json — 古河云动态丨“软件力量 数字担当” ，古河云科技斩获3项殊荣",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "188.json — 喜讯！古河云科技荣获“2022年示范应用场景立项项目三等奖”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "189.json — 医院智慧后勤管理系统建设到底解决了医院什么问题？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "190.json — 建设智慧物流园区需要考虑哪些因素？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "191.json — 数字孪生技术下的智慧交通项目系统包括哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "192.json — 《零碳数字园区发展路径研究报告》发布，数字化成为园区转型破局",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "193.json — 智慧楼宇：数字孪生技术的智能化解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "194.json — 媒体报道丨温江三大新经济场景获成都市立项！快来“探秘”→",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "195.json — 楼宇自控如何让建筑更智能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "196.json — 智慧医院包括哪些系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "197.json — 智慧消防的三大类应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "198.json — 智慧医院解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "199.json — 传统场馆如何走向智慧场馆？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "200.json — 智慧园区能耗管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "201.json — 智慧场馆建设相关政策及发展现状",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "202.json — 智慧场馆有哪些典型案例？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "203.json — 智慧场馆解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "204.json — 零碳数字园区的定义及建设框架",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "205.json — IOC智控中心平台是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "206.json — 数字孪生智慧园区架构设计",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "207.json — 我国双碳“1+N”政策体系包括哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "208.json — 零碳数字园区内涵与发展现状",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "209.json — 数字孪生关键技术有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "210.json — 艾瑞咨询《2023年中国数字孪生行业研究报告》核心摘要",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "211.json — 《2023年中国数字孪生行业研究报告》（一）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "212.json — 打造高效医院后勤服务：探秘一站式服务管理模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "213.json — 智慧园区综合管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "214.json — 智慧园区建设价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "215.json — 智慧园区与传统园区的区别",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "216.json — 企业综合能耗包括哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "217.json — 园区数字孪生方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "218.json — 智慧物流园区规划",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "219.json — 智慧医院管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "220.json — 智慧医院：医疗与科技融合的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "221.json — 智慧医院建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "222.json — 数字孪生如何助力智慧医院建设？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "223.json — 孪生安全调度系统的未来发展：未来孪生技术将如何影响安全调度行",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "224.json — 智慧园区安全指挥调度系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "225.json — 智慧医院：医疗行业数字化转型的代表",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "226.json — 智慧园区助力管理者节能减排",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "227.json — 智慧园区已成为社区管理的一种新理念",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "228.json — 智慧园区是构建智慧城市的核心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "229.json — 医院的数字孪生体，助力院方高效管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "230.json — 古河云科技赋能凤凰山体育馆，登录温江新闻中心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "231.json — 古河云科技助力智慧园区安防系统高效建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "232.json — 智能化产业园区已成为很多高科技企业关心的全新路轨",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "233.json — 智慧园区已成为未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "234.json — 园区发展该何去何从？智慧园区也许是最优解",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "235.json — 智慧园区的发展，将为学校、医院提供个性化服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "236.json — 园区的智慧化改造已成为社会发展的必然趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "237.json — 智慧园区可以构建各种应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "238.json — 智慧园区的引入可以让企业更加高效地运作",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "239.json — 数字未来将影响每一个人的生活",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "240.json — 智慧园区需要打通园区各系统之间的数据共享",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "241.json — 科技发展，越来越多的智慧化服务出现在我们生活之中",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "242.json — 智慧生活是一个非常广泛的智慧化服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "243.json — 智慧园区综合信息化解决方案，实现数据融合互通",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "244.json — 智慧园区旨在将各个部门和业务之间数据进行整合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "245.json — 越来越多的智慧园区开始注重信息化建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "246.json — 智绘未来：世界正走向新的“破茧时刻”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "247.json — 古河云黑科技赋能大运会主场馆，让建筑“活起来”！高新区官媒高",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "248.json — 古河云科技登录四川日报科创未来版面 | 探秘大运会场馆 有“",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "249.json — 在数字化时代，数据成为了一种重要资源",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "250.json — 智慧化管理系统实现城市的可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "251.json — “智慧大脑”赋能智慧园区可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "252.json — 古河云科技赋能“智慧大运”，各方媒体争相报道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "253.json — IBMS在学校、宾馆和工厂等建筑物的智能化应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "254.json — 园区安全事故频发，只因少了这一环？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "255.json — 凤凰山体育馆数字孪生体硬核科技助力大运会",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "256.json — 成都竟然“隐藏”了一个超高逼格的智慧场馆！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "257.json — 成都大运会，古河云科技凭实力出圈！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "258.json — 厉害了！古河云科技挺进决赛！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "259.json — 智慧园区已经成为城市建设的重要方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "260.json — 重新定义智慧园区，实现终端互联、数据融合、业务汇聚",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "261.json — 智慧园区的建设对于城市的发展和经济增长具有重要的意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "262.json — 智慧园区的发展能够为城市带来重大的推动力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "263.json — 重新定义智慧园区的建筑结构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "264.json — 云边协同构建智慧园区新中枢成为了一种新的管理模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "265.json — 智慧园区的建设不仅仅是经济发展的需要，也是城市现代化的必然要",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "266.json — 云计算和物联网技术正在快速改变着智慧园区的运营方式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "267.json — 智能化和智慧化是智慧园区不可或缺的两大要素",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "268.json — 古河云科技智慧交通解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "269.json — 在智慧园区的建设过程中，要实现“两网融合”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "270.json — 现代智慧园区的建设注重系统间的有效互联和数据共享",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "271.json — 打造生态友好、智能化、高效节能的新型智慧场馆！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "272.json — 智慧场馆平台实时感知建筑运行的“身体数据”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "273.json — 未来节能降碳的智慧园区将更受青睐",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "274.json — 智慧园区建设应将节能降碳作为核心设计理念",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "275.json — 智慧场馆的打造必须着重考虑安全要素",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "276.json — 智慧园区的建设是一项复杂而又具有挑战性的任务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "277.json — 各类园区中，数字化改革的浪潮正席卷而来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "278.json — 数字化浪潮下，智慧园区的革新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "279.json — 智慧场馆的建设需要让各系统形成耦合效应",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "280.json — 古河云科技智慧医院解决方案帮助医院适应未来医疗发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "281.json — 古河云科技智慧交通解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "282.json — 古河云科技校园数字孪生解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "283.json — 古河云科技做客CDTV-1直播间揭秘大运会“狠活”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "284.json — 古河云科技数字孪生城市解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "285.json — 古河云科技智慧医院解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "286.json — 智慧场馆可视化是一款基于数字孪生技术的创新型系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "287.json — 智慧场馆管理系统旨在实现全面而高效的楼宇管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "288.json — 智慧楼宇已成为未来建筑发展的新趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "289.json — 场馆的安全性能是场馆运营的重中之重",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "290.json — 智慧园区采用多种硬核科技实现空间智能管理和控制",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "291.json — 建设绿色、节能的智慧园区已经成为园区发展的共识",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "292.json — 大数据分析技术正在被广泛应用于智慧园区",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "293.json — 智慧城市的未来：数字孪生与能耗管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "294.json — 中国建筑智能化行业的四个重要阶段",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "295.json — 古河云科技智慧园区解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "296.json — 智慧园区智能照明带来更便捷、舒适和节能的照明环境",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "297.json — IBMS让每一个建筑物都成为智慧的个体",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "298.json — 智慧园区已成为园区建设的共识",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "299.json — 未来的智慧园区，充满令人惊艳的场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "300.json — IBMS系统集成构建智能建筑新面貌",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "301.json — 全面解密！揭开建筑能耗在线监测系统奥秘！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "302.json — 智能化地铁站建设，提升城市轨道交通运营效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "303.json — 智慧医院：数字改革的里程碑",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "304.json — 安全与便利共存：智能园区照明系统的特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "305.json — 智慧产业园区楼宇控制系统，节能减排经营效率双提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "306.json — 智慧园区让城市的发展变得更智能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "307.json — 智能化IBMS集成管理系统：迈入智慧管理新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "308.json — 智能化IBMS集成管理系统：智慧园区综合管理的利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "309.json — 智慧园区安防系统：助力社区全面管理与安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "310.json — 建筑能效管理：提高建筑能源利用效率的全新解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "311.json — 智慧园区：构建安全调度和预警管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "312.json — 智慧园区：解析集成运维的未来之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "313.json — 智慧园区与IBM的结合，开创节能降耗新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "314.json — 智慧园区：打造智慧的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "315.json — 智慧园区：解析IBMS集成运维的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "316.json — 智慧园区：未来城市建设的重要一环",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "317.json — 超越未来：智能运维与震撼3D园区",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "318.json — 未来园区发展离不开“智慧”二字",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "319.json — 智慧园区：打造安全调度、集中监控与可视化园区体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "320.json — 智慧园区：安全调度与集中监控新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "321.json — 智慧医院：打造未来医疗的领航者",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "322.json — 智慧医疗，为健康护航",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "323.json — 智慧交通助力实现车路协同",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "324.json — 智慧交通将成为未来城市发展的重要支柱",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "325.json — 智慧运维与智能照明结合的智慧医院将是未来医院建设的趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "326.json — 智慧交通，智能消防系统助力高铁站安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "327.json — 智慧交通系统：安全保障与便利出行",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "328.json — 智慧园区建设，构建智能监控和安防体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "329.json — 智慧安防，打造智慧园区的核心竞争力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "330.json — 打造智慧医院，楼宇自控引领智慧化变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "331.json — 智慧医院：探索医疗服务新方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "332.json — 数字孪生技术：实现园区智慧空间全面智能管理的利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "333.json — 古河云科技为医院打造“最强大脑”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "334.json — 智能医院：尖端技术与健康服务的完美融合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "335.json — 智慧园区：IBMS与设备管理的创新应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "336.json — 智慧医院：为未来健康护航",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "337.json — 智慧医院：引领医疗新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "338.json — IBMS楼宇自控系统：安全无忧的智能楼宇解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "339.json — 智能楼宇解决方案，安全省心便捷",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "340.json — 智慧交通实现高效车站管理，促进车路协同",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "341.json — 依托数字孪生技术，构建现代化智慧新空间",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "342.json — 各行业板块数字孪生对应相关政策",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "343.json — 智慧医院将科技与医疗有效融合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "344.json — 智慧医院：实现医疗服务升级的新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "345.json — 智慧园区的未来发展之路，能耗管理为先",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "346.json — 集成运维管理：智慧园区的关键环节",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "347.json — 智慧医院：数字化医疗新境界",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "348.json — 智能医院建设：优化医疗资源管理的新思维",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "349.json — 智慧医院：改变未来医疗的新引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "350.json — 智慧园区让建筑5A系统高效集成",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "351.json — 智慧校园：数据分析、巡检漫游，全方位守护校园安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "352.json — 智慧交通：科技保障出行安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "353.json — 智慧交通系统：构建高效安全的城市交通网络",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "354.json — Ibms楼宇自控系统：助力实现智能化建筑管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "355.json — 楼宇自控系统：打造智能化的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "356.json — 智慧未来，建筑自动控制系统助力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "357.json — 创新科技驱动智能楼宇的发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "358.json — 智能化楼宇管理系统：让建筑更智慧更安全更便捷",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "359.json — 建设高效智能办公环境，智慧楼宇管理系统助力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "360.json — 建筑智能化：为你打造智能生活",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "361.json — 未来已来！智能建筑引领新生活",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "362.json — 智慧园区管理系统的全面介绍与优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "363.json — 科技驱动，智慧地铁站引领城市交通改革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "364.json — 智慧地铁站：打造安全舒适的出行环境",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "365.json — 智能楼宇管理系统IBMS，助力高效节能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "366.json — 智能化升级，提升运营效率，IBMS系统助力楼宇管理新突破",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "367.json — 智慧园区：开创数字化智能时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "368.json — 打造智慧园区，优化资源管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "369.json — 智能化医院管理系统的全方位应用与前景展望",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "370.json — 智能化病房管理，提高安全性和工作效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "371.json — 安全驾驶，顺畅行进，城市轨道交通综合监控系统全程护航",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "372.json — 智能化楼宇关键领域：能源管理、环境监测、设备维护、数据分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "373.json — 智慧建筑：实现建筑、办公、通信、消防和安全自动化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "374.json — 智能化IBMS集成管理系统：改变医院能耗管理新模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "375.json — 系统集成提升医院能耗管理效率和质量",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "376.json — 节能减排，建设绿色建筑",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "377.json — 智慧地铁站：打造智慧出行新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "378.json — 信息集成系统：打造智慧化的数字化平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "379.json — 智慧楼宇管理系统(IBMS)：提升能源效率的利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "380.json — 智能平台助力智慧城市建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "381.json — 智慧楼宇系统：构建智能化未来的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "382.json — 楼宇控制系统：打造智慧楼宇，引领未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "383.json — 智能建筑控制系统，引领建筑创新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "384.json — 智能建筑系统驱动智能住宅发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "385.json — 智慧医院数字化转型建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "386.json — 未来，这4项技术将颠覆传统医院！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "387.json — 智慧地铁站：城市公共交通管理的新突破",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "388.json — 智慧地铁站，打造安全高效的公共交通节点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "389.json — 尖端技术驱动，创新智慧园区管理模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "390.json — 云计算、物联网、大数据等技术助推智能化园区发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "391.json — 古河云科技智能医院，数字孪生引领医疗改革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "392.json — 智能化运维提升智慧医院效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "393.json — 数字化管理提升地铁运营效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "394.json — 古河云科技助力地铁站智能化转型升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "395.json — 在当今的医疗行业中，智慧医院建设已成为一种趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "396.json — 智能化诊疗助力医疗决策",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "397.json — 智慧园区建设：数字化、智能化、绿色发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "398.json — 楼宇自控系统，实现建筑智能化管理与能源节约",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "399.json — ibms系统：高效、灵活的综合性信息管理解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "400.json — 先进技术构建的建筑智能化解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "401.json — 智慧医院管理：信息化技术重塑医疗服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "402.json — 智慧医院管理：科技赋能，提升患者就医体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "403.json — 智慧园区安防系统：构建高效安全壁垒",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "404.json — 智慧园区方案大揭秘：打造未来智能生活的终极解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "405.json — 智慧产业园：引领未来的智能化发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "406.json — 打造智慧医院，让病患享受更便捷的医疗服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "407.json — 智慧医院：创新科技助力便捷健康服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "408.json — 智慧园区管理平台：实时监控，优化运营",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "409.json — 智能化管理助力园区建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "410.json — 医疗行业的可持续发展离不开这个技术……",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "411.json — 让医院更智慧，让决策更容易",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "412.json — 积极创新模式，推动智慧场馆建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "413.json — 楼宇智能化：打造未来智慧楼宇控制系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "414.json — 楼宇自动化技术：实现智能控制和管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "415.json — 智慧交通系统：科技助力交通管理革新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "416.json — 未来智能化交通系统的关键与发展方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "417.json — 探索未来医疗智能化的新时代——智慧医院建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "418.json — 打造智能化医院，构建智慧医疗健康管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "419.json — 智能医疗健康管理平台，打造智慧医院",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "420.json — 智能建筑系统：科技与生活的融合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "421.json — 智能建筑系统带来的舒适、安全、高效生活环境",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "422.json — 智能建筑系统，实现智慧城市的可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "423.json — 智慧园区安防系统-打造安全、高效的园区管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "424.json — 智慧园区防护系统——提升园区安全性的关键工具",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "425.json — 建设安全高效的智慧园区管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "426.json — 智慧交通：携手智能科技，共筑安全畅通之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "427.json — 智能交通解决方案：创造便利出行体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "428.json — 楼宇智能化：提升建筑管理的巅峰之选",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "429.json — 楼宇智能系统：安全、节能的建筑智能化方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "430.json — 建筑智能化：信息化与智能化技术的完美结合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "431.json — 智慧高速车路协同系统：交通管理的\"黑科技\"",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "432.json — 智能高速公路协同系统：实现智能交通管理的新方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "433.json — 楼宇集成管理系统，助力智慧城市建设与管理优化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "434.json — 智能建筑集成管理系统：建筑管理的新技术革命",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "435.json — 智能化建筑集成管理系统：实现建筑安全与节能双重优化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "436.json — 楼宇智能化，未来城市的必由之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "437.json — 建筑智能，推动智慧社区发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "438.json — 智慧交通：将物联网与人工智能完美融合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "439.json — 建筑智能化技术：实现绿色可持续发展的路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "440.json — 智慧交通：实现城市出行的智能化转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "441.json — 智慧交通技术推动城市发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "442.json — 智能楼宇建设：节能的未来之道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "443.json — 智能化建筑建设：城市绿色发展的必然趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "444.json — 构建智慧未来，推动智慧楼宇建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "445.json — 智慧楼宇基本建设，实现智能化未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "446.json — 智慧医院：引领医疗服务的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "447.json — 智能医院信息系统：提升医疗服务的精细化和个性化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "448.json — 智慧医疗综合服务管理云平台——打造智慧医院的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "449.json — 未来智能医院建设-智能诊疗综合服务管理云平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "450.json — 智慧园区建设解决方案深度解析，助力创造智慧未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "451.json — 构建智慧园区的核心方案与策略",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "452.json — 智慧园区建设解决方法深度解读，助推造就智慧未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "453.json — 楼宇智能化：打造智慧社区的创新方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "454.json — 医院系统集成商的关键作用和功能分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "455.json — 智能交通系统的黑科技：智能高速公路协同系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "456.json — 科技驱动，智能建筑引领节能革命",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "457.json — 成都智能建筑：实现城市绿色低碳发展的必选之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "458.json — 智慧交通公司：支持城市交通智能化发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "459.json — 物联网与人工智能：智慧交通的黄金组合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "460.json — 智能楼宇系统：建设智慧生活的基石",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "461.json — 改变生活的智能建筑技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "462.json — 智慧交通：让我们的出行更安全便捷",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "463.json — 智能公共交通：高效数据与智能城市的结合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "464.json — 楼宇智能化系统：提升建筑运营效率的关键技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "465.json — 未来建筑智能化的核心技术：智能建筑设备监控系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "466.json — 智能化医疗综合服务管理云平台-未来智慧医院建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "467.json — 智慧医疗一站式服务管理方法云平台，助力医疗企业战略转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "468.json — 智慧医院：革命性的医疗服务进化之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "469.json — 智能医院：数字化时代下的医疗变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "470.json — 智慧楼宇虚拟仿真：打造智能楼宇的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "471.json — 智能建筑虚拟仿真技术：未来智能建筑的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "472.json — 数字孪生技术驱动未来智能化发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "473.json — 数字双应用场景，推动行业变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "474.json — 交通物联网：打造智慧交通新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "475.json — 物联网技术与交通出行：构建智慧城市交通网络",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "476.json — 数字孪生技术，提升生产效率和质量预测",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "477.json — 实时监测与分析，提升企业能源效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "478.json — 智慧交通：构建智能城市的关键基础",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "479.json — 智慧交通：建设智慧城市的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "480.json — 智慧楼宇：实现未来城市的智能化与可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "481.json — 智慧医疗：让医疗更智慧、更高效、更人性化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "482.json — 数字孪生：当数字科技遇上现实世界",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "483.json — 智慧建筑运维：提升生活品质的未来之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "484.json — 智能场馆：信息化浪潮下的未来之城",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "485.json — BIM运维：革新智能建筑管理的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "486.json — 智慧场馆建设方案，为现代场馆带来革命性变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "487.json — 智慧场馆建设方案，为现代场馆带来革命性变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "488.json — 智能化安防系统：保护你的安全无忧",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "489.json — 数字解决方案：探索数字化时代的创新路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "490.json — 数字孪生智慧医院：以科技引领医疗未来的新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "491.json — BIM运维：提升建筑行业效率和可持续发展的利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "492.json — 智慧建筑运维：改变你生活的未来之道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "493.json — 物联网平台：实现智慧未来的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "494.json — 智慧安防：保护您和您的家人的安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "495.json — 智慧消防：保障生命财产安全的新利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "496.json — 指挥调度：为企业带来优异的业绩",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "497.json — 三维可视化：让数据更清晰、更生动的表达方式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "498.json — 节能降耗：科技创新引领绿色未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "499.json — 安全信息化系统：打造企业信息安全的坚实防线",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "500.json — 能耗管理：高效能源利用的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "501.json — 三维可视：展现未来的视觉盛宴",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "502.json — 智能物联管理：解锁未来的无限可能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "503.json — 智慧交通：让城市出行更便捷的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "504.json — IBMS系统：提升效率的利器",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "505.json — 节能降碳管理系统：创新技术助力企业腾飞",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "506.json — 数字孪生：创新科技的未来之光",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "507.json — 三维可视化智慧园区：创新科技驱动城市发展的新引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "508.json — 三维可视化智慧园区：创新科技驱动城市发展的新引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "509.json — 智慧园区：三维可视化推动智慧价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "510.json — 分析BIM运维发展现状",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "511.json — IBMS系统集成组成，实现功能？哪些弱电系统集成？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "512.json — 智能建筑解决方案的基本概念、应用场景、技术架构和未来发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "513.json — 智慧建筑——?未来的方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "514.json — BIM智能建筑运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "515.json — 数字孪生-前方之路？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "516.json — 智能交通如何节省出行时",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "517.json — 智慧建筑-智能城市发展的强大动力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "518.json — BIM运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "519.json — 关于智慧建筑解析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "520.json — 智慧园区运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "521.json — 【BIM运维】BIM后期运维实施方法和场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "522.json — 智慧医院",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "523.json — 物联网技术到底是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "524.json — 古河云科技智慧园区解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "525.json — 恭喜！古河云科技获评成都市市级“守合同重信用”企业！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "526.json — 古河云科技节能降碳管理系统，助力企业降本增效",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "527.json — 智慧楼宇，智慧园区管理系统，商办写字楼管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "528.json — 智慧楼宇，智慧园区管理系统，商办写字楼管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "529.json — 什么是数字孪生",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "530.json — 智慧园区建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "531.json — 数字孪生-智慧场馆",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "532.json — 智慧城市-可视化，进一步提高信息化建设水平",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "533.json — 楼宇自控-楼宇可视化管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "534.json — 智慧文旅数字孪生解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "535.json — 关于智慧园区管理系统的联动设计",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "536.json — BIM运维管理平台智能化运作",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "537.json — 智慧园区的概念",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "538.json — 如何理解系统集成以及特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "539.json — 什么是数字孪生，数字孪生的优势是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "540.json — IBMS智能化集成运维管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "541.json — 智慧社区转型对智慧城市起到了哪些积极作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "542.json — 全面介绍IBMS智能化集成综合管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "543.json — 三维可视化是什么？它的优点是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "544.json — 智能场馆是未来发展的趋势，与传统场馆相比有什么区别？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "545.json — 智慧安防，打造建筑安全的“铜墙铁壁”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "546.json — 园区安全事故频发，只因少了这一环？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "547.json — BIM运维管理系统建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "548.json — 60000平米的大型智慧高铁站如何建设？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "549.json — 数字孪生与虚拟仿真有什么不同？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "550.json — 建筑自动控制作为建筑设备智能管理系统，可以实现舒适、节能的双",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "551.json — 楼宇自控--智慧楼宇解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "552.json — 虚拟现实(VR)和数字孪生(DT)的联系与区别",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "553.json — 虚拟仿真与数字孪生的不同",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "554.json — 三维可视化为工厂带来的效益",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "555.json — IBMS系统集成组成，实现功能？集成哪些弱电系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "556.json — IBMS集成管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "557.json — 智慧园区综合安防集成系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "558.json — 2023中国智能交通产业现状及发展趋势分析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "559.json — 园区3d可视化线上三维展示数字孪生平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "560.json — 数字孪生应用领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "561.json — 数字孪生园区",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "562.json — BIM运维能解决的问题",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "563.json — 智慧医院都包含了哪些方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "564.json — 楼宇安防系统功能主要有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "565.json — 数字孪生应用技术应用在哪些方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "566.json — 智慧场馆-有据可循的运营管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "567.json — 数字孪生是什么？特点是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "568.json — 智慧园区三维可视化怎么做",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "569.json — 共惠轻合作｜古河云科技提供高效专业的建模服务！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "570.json — 打破传统，古河云科技安全调度系统大揭秘！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "571.json — 智慧医院是什么？优势有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "572.json — 智慧体育场馆的优势都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "573.json — 智慧楼宇解决方案-提高楼宇整体效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "574.json — 数字孪生技术如何打破传统园区管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "575.json — 智慧园区解决方案—引领园区管理新时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "576.json — 智慧医院——定义下一代的CDSS",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "577.json — 智慧场馆解决方案之应用场景介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "578.json — 国内领先医院，如何打造高端绿色智慧医院？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "579.json — 数字孪生智慧园区整体解决方案优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "580.json — 智慧园区安全调度管理都有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "581.json — 数字孪生智慧交通的应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "582.json — 智慧楼宇——生活中的智能专家",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "583.json — 智慧园区解决方案——智能化信息服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "584.json — 智慧医院可视化管理——实现多系统联动和统一",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "585.json — 智慧医院能耗管理都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "586.json — 智能运维，全流程闭环全生命周期监管！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "587.json — 智慧场馆有哪些系统功能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "588.json — 智慧园区节能降耗的优点都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "589.json — 智慧园区通行管理系统，让数智赋能！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "590.json — 三维可视化是怎么做的？特点有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "591.json — 智慧园区解决方案——西部设计产业园",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "592.json — 医院暖通空调能耗大？可以采取这几项节能措施",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "593.json — 智慧园区安全调度系统的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "594.json — 智慧场馆解决方案，让场馆“会说话”！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "595.json — 数字孪生智慧医院，实现高效运营！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "596.json — 如何解决园区能耗高的问题？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "597.json — 智慧园区安防监控系统有哪些功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "598.json — 数字孪生——连接虚拟与现实的桥梁",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "599.json — 指挥调度系统，引领企业迈向智能化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "600.json — 集成运维管理系统的优势都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "601.json — 古河云科技智慧肉类滑轨解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "602.json — 猪肉滑轨交易系统的特点都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "603.json — 智慧园区——数字化成为园区转型破局的关键",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "604.json — 智慧场馆安全消防管理，全方位保障园区安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "605.json — 智慧园区设备监管的功能模块有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "606.json — 智慧楼宇能耗管理解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "607.json — 智慧交通三维可视化，让数据场景融合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "608.json — 3D建模的特点和优势都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "609.json — 智慧园区，实现多系统统一管理及联动",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "610.json — IBMS智能化集成管理，让管理具象化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "611.json — 智慧园区三维可视化的重要性！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "612.json — 智慧医院建设包括哪些方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "613.json — 安全指挥调度系统的场景应用有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "614.json — 安全指挥调度系统对管理者有什么帮助",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "615.json — 智慧场馆系统功能和技术运用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "616.json — 智慧场馆中智能照明系统都有哪些功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "617.json — 解析智慧医院能耗管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "618.json — 数字孪生场景构建的技术和优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "619.json — 如何实现园区大屏可视化？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "620.json — 什么是智慧运营中心IOC？功能有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "621.json — 数字孪生场景构建行业应用和优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "622.json — 智慧城市都有哪些功能？优势有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "623.json — 大屏数据可视化是什么？运用了什么技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "624.json — 指挥调度系统主要用在哪些场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "625.json — 三维可视化的优势有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "626.json — 三维可视化数据大屏的设计原理和技巧",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "627.json — 第24届成都安博会精彩回顾",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "628.json — IBMS集成平台是什么？优势是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "629.json — 全面介绍智慧楼宇IBMS管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "630.json — 智慧场馆应用场景—聚力赋能，智领未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "631.json — 智慧交通包括哪些系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "632.json — 零碳智慧园区白皮书",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "633.json — 腾讯未来交通白皮书2.0",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "634.json — 数字孪生城市软件人机交互技术总体要求",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "635.json — 大屏数据可视化的作用和意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "636.json — 城市数字孪生标准化白皮书（2022版）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "637.json — 基于城市信息模型（CIM） 的智慧社区建设指南",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "638.json — 数字孪生核心能力与典型应用白皮书",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "639.json — 数字孪生技术应用白皮书（2021）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "640.json — 园区内智慧出行标准化白皮书（2022年）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "641.json — 三维可视化应用在哪些领域？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "642.json — 智慧高铁站的建设内容",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "643.json — 医院智慧后勤建设内容有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "644.json — 智慧园区建设的核心是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "645.json — 隧道BIM如何设计和建模",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "646.json — 数字孪生世界白皮书（2022）",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "647.json — 数字孪生场景构建的步骤和方法",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "648.json — 实现大屏数据可视化的原理和条件",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "649.json — 发展智慧交通的目的和意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "650.json — 智慧园区为园区管理带来的好处",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "651.json — 中国智慧园区标准化白皮书",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "652.json — 智慧园区主要用在什么地方？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "653.json — 智慧校园有什么优势？包括哪些系统？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "654.json — 数字孪生场景构建的未来发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "655.json — 选择合适的数字孪生开发平台因素有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "656.json — 智慧交通的四大优势要知道！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "657.json — 三维可视化系统平台介绍及优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "658.json — 数字孪生三维可视化需要什么技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "659.json — ibms在医院系统是如何应用的",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "660.json — 校园智慧安防综合管理平台介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "661.json — 智慧安防平台系统整体建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "662.json — 建筑智能控制系统的特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "663.json — 智慧安保管理平台内容有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "664.json — 智慧安防综合平台应用在哪些场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "665.json — 智慧交通-助力城市可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "666.json — 智慧楼宇建设需要哪些系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "667.json — 智慧校园如何实现管理智能化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "668.json — 建设智慧城市的要素",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "669.json — 能耗在线监测系统-“全感可视”孪生数据中台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "670.json — 智慧车站建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "671.json — IBMS智能化集成运维管理平台特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "672.json — 智慧安防综合平台包括哪些方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "673.json — 智慧医院后勤管理系统详细介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "674.json — 集成运维管理系统的应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "675.json — 楼宇自动化系统，先进的建筑管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "676.json — 智能化安防系统的组成部分",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "677.json — 如何选择数字孪生开发平台？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "678.json — 楼宇自控系统的应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "679.json — 3D建模的重要内容和应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "680.json — 智慧运营中心如何实现运维管理？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "681.json — 智慧应急如何应用于场景当中",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "682.json — 数字孪生开发平台的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "683.json — 数字孪生解决方案的作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "684.json — 智慧医院气体系统包括哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "685.json — 数字孪生！温江企业为全国240余个场景植入“智慧大脑”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "686.json — 医院集成平台解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "687.json — 大屏数据可视化建设步骤",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "688.json — 智慧交通—为出行植入“智慧大脑”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "689.json — 数字孪生三维可视化平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "690.json — 医院后勤信息化系统优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "691.json — 数字孪生要实现哪些功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "692.json — 智慧园区综合安防系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "693.json — 智能化楼控系统包括什么",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "694.json — 三维可视化运维技术的主要特点和应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "695.json — 智慧产业园区解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "696.json — 数字孪生要实现哪些功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "697.json — 如何搭建3d数字孪生平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "698.json — 酒店楼宇智能化系统包括哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "699.json — 数字孪生智慧校园解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "700.json — 智慧校园建设，推动教育前行",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "701.json — 智慧医院：构建三维可视化医疗",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "702.json — 深度分析智慧楼宇管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "703.json — 科技前沿：智慧化系统的核心组成要素",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "704.json — 智慧城市指挥调度系统内容详情",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "705.json — 校园智慧安防系统建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "706.json — 能耗监测管理系统，推动智能化发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "707.json — 酒店节能降耗管理平台建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "708.json — 探讨水电节能降耗监测平台的应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "709.json — 医院智慧后勤管理，打造管理新标杆",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "710.json — 如何实现三维地图可视化交互系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "711.json — 3d场景建模可视化，场景1:1还原",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "712.json — 智慧园区管理平台，助力园区数字化升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "713.json — IBMS智慧运营，实现企业管理的高效转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "714.json — 医院智能化涉及了哪些层面和领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "715.json — 基于数字孪生的智慧城市",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "716.json — 成都bim数字孪生平台重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "717.json — 如何建设体育场馆智慧系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "718.json — 深入探讨数字孪生在智慧医院建设中的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "719.json — 智慧医院信息化建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "720.json — 三维可视化的魅力与应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "721.json — 智慧高铁站，“全感可视”的孪生数据中台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "722.json — IBMS管理平台如何帮助企业实现数字化转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "723.json — 智慧城市指挥中心系统介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "724.json — 智慧园区—实现园区的智能化管理和服务",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "725.json — 三维可视化运用的主要技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "726.json — 集成管理系统包括哪些内容",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "727.json — 三维可视化建筑建模特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "728.json — 可视化数据大屏的制作流程",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "729.json — 发展智慧交通的目的是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "730.json — 探讨智慧校园实现校园管理智能化的方面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "731.json — 安防管理系统，为用户提供安全保障",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "732.json — 智慧安防管理系统的重要作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "733.json — 安消一体化平台建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "734.json — 智慧消防：为企业安全提供重要支持",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "735.json — 智慧地铁站可视化建设的意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "736.json — 大屏展示驾驶舱，实现动态炫酷效果",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "737.json — 系统集成都有哪些项目？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "738.json — 智慧城市数据中台建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "739.json — 智慧园区的建设目标是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "740.json — 建筑运维在数字化应用中有什么用处？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "741.json — 数字孪生3D大屏可视化技术应用优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "742.json — 智慧园区—助力园区实现数字化转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "743.json — 智慧交通，让科技触手可及！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "744.json — 节能降耗系统，全面实现能碳智能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "745.json — IBMS管理系统——多数据融合，高效运维",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "746.json — 园区安防智能建筑管理系统全面介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "747.json — 楼宇自控系统，实现园区安全管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "748.json — 智慧医院——实现院区可视可管可控",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "749.json — 智慧建筑三维可视化与数字孪生楼宇管控",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "750.json — 基于BIM技术的可视化管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "751.json — 产业园区数字化管理：提升效率与可持续发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "752.json — 如何做好智慧园区运营？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "753.json — 数字孪生：概述、应用场景与意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "754.json — 如何利用数字孪生技术实现可视化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "755.json — 产业园区如何实现智慧化建设？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "756.json — 传统园区与智慧园区的对比及优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "757.json — 数字孪生在建筑业中的广泛作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "758.json — 智慧园区——打造安全可靠的园区管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "759.json — IBMS管理平台，推动建筑行业向智能化发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "760.json — 智慧楼宇管理系统建设与开发",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "761.json — 全面介绍数字孪生地下综合管廊平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "762.json — 校园三维可视化解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "763.json — 智慧产业园区规划的注意事项",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "764.json — 传统园区转型升级智慧园区的路径探讨",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "765.json — 数字孪生技术在交通领域的应用现状和展望",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "766.json — 数字孪生颠覆传统能耗管理运维模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "767.json — 智慧医院后勤管理系统功能详解",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "768.json — 指挥调度平台——数字赋能,让出行更有温度",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "769.json — 智慧园区项目建设主要内容",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "770.json — 数字孪生：概念、优势与发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "771.json — 智慧园区系统开发对智慧城市建设发展的促进",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "772.json — 智慧园区为城市带来全新的可能性与优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "773.json — 基于数字孪生搭建的智慧地铁站管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "774.json — 深入探讨楼宇自控系统解决方案所带来的益处",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "775.json — 数字孪生在隧道运营阶段起了什么作用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "776.json — 节能降耗管理平台的六大核心能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "777.json — 数字孪生在新型智慧城市建设中的具体应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "778.json — 智慧体育馆如何区别于传统场馆?",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "779.json — 如何实现数字孪生？看这篇就够了",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "780.json — 智慧园区，为园区多场景提供智能化赋能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "781.json — 数智赋能，绿色发展｜湖南省智能建筑展会圆满落幕",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "782.json — 三维可视化技术主要领域及其具体运用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "783.json — 构建综合指挥调度系统的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "784.json — 详细介绍三维建模的优势和未来发展方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "785.json — 医院后勤数字孪生解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "786.json — 智慧交通：关键技术及应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "787.json — 数字孪生引领智慧医院革新：未来医疗的智能化之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "788.json — 智慧体育场馆：科技引领未来运动体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "789.json — 创新数字生态：智慧园区的益处与影响",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "790.json — 构建未来教育：智慧校园的功能与特色",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "791.json — 智慧园区的“智慧”表现在哪些地方",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "792.json — 智慧楼宇IBMS整体解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "793.json — 数据三维可视化技术的应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "794.json — 数字化转型中的IBMS管理平台优势与应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "795.json — 建设数字化校园，实现校园节能减碳",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "796.json — 数据中心三维可视化管理系统功能特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "797.json — 物联网助力智慧交通：优势与前景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "798.json — 高校转型数字化的原因有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "799.json — 智慧校园建设该如何落地？看这些你就知道了",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "800.json — 三维可视化技术的应用现状和发展前景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "801.json — 智慧园区与智能城市融合发展的关键举措",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "802.json — 智慧出行：数字孪生三维可视化大屏交通管控系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "803.json — 智慧园区能耗管理系统解析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "804.json — 三维可视化技术：引领多领域创新与发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "805.json — 智慧体育馆：实时监控与智能管理的完美结合",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "806.json — IBMS集成管理平台——推动建筑业数字化转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "807.json — 智慧高铁站的概念与优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "808.json — 建设智慧医院的关键步骤都有哪几点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "809.json — 智能化管理系统：商业综合体的未来愿景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "810.json — 未来智慧建筑：人工智能技术的无限可能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "811.json — 开启数字化时代的智能园区：破局之道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "812.json — IBMS管理系统：建筑智能化的关键驱动",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "813.json — 智慧交通的需求分析与建设内容",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "814.json — 智慧园区的未来：三维可视化系统建设策略",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "815.json — 未来智慧城市发展的四大引领方向",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "816.json — 智慧城市的核心概念与联系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "817.json — 传统园区与智慧园区：现代化发展的差异和优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "818.json — 数字孪生三维可视化制作指南",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "819.json — 智慧园区建设：关键方案与策略",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "820.json — 数字孪生：智慧交通三维可视化运维平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "821.json — 智慧交通系统的需求分析和建设目标",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "822.json — 智慧园区安防优化：策略与实施",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "823.json — 数字孪生三维可视化场景如何搭建？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "824.json — 为何打造智慧园区？给我们带来哪些便利",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "825.json — 智慧场馆：安全、节能与智能化管理的未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "826.json — 数字孪生的建构之路：从数据到智能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "827.json — 构建智慧城市：数字孪生技术的发展之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "828.json — 传统园区转型智慧园区的重点是什么",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "829.json — 智慧园区的核心本质内容有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "830.json — 智慧隧道建设的重点内容有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "831.json — 智慧园区数据可视化优势体现在哪些地方",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "832.json — 群英荟萃！古河云亮相第四届数字经济投融资机构四川行",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "833.json — 智慧楼宇可视化的优点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "834.json — 智慧医院照明系统：为医疗环境带来全面提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "835.json — 智能交通建设挑战：难点与解决",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "836.json — 医院智慧运营管理变革：有效策略与实施路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "837.json — 赋能未来：智慧园区管理新篇章",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "838.json — 智慧医院是什么？如何制定建设方案？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "839.json — 如何实现数字孪生？分为以下四步骤",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "840.json — 哪些关键技术助力智慧园区建设",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "841.json — 智慧应急技术的多方面解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "842.json — 如何选择合适的数字孪生开发平台？这几点要注意",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "843.json — 实现医院智慧运营管理转型的全面推动策略和措施",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "844.json — 可视化数据大屏存在的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "845.json — IBMS楼宇自控系统的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "846.json — 如何选择数字孪生解决方案？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "847.json — 探讨智慧校园的特征与优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "848.json — 如何选择三维可视化开发公司？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "849.json — 智慧交通技术的广泛应用领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "850.json — 智慧应急具有哪几种常见功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "851.json — 数字孪生技术：赋能多行业场景构建的创新应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "852.json — 如何找到适合的大屏数据可视化系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "853.json — 什么是大屏数据可视化？特点有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "854.json — 数字孪生场景构建的主要应用行业",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "855.json — 选择数字孪生厂商要考虑哪四点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "856.json — 智慧校园对校园管理有哪些好处？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "857.json — IBMS系统集成的功能有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "858.json — 深度探索智慧园区的创新魅力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "859.json — 数字孪生场景构建好处的详细阐述",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "860.json — 智慧城市可以实现哪些方面的监测",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "861.json — 智慧医院的功能都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "862.json — 谈智慧园区运营的五个层面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "863.json — 智慧消防，助力园区产业多元化发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "864.json — 解析智慧校园三维可视化数字孪生管理系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "865.json — 智慧校园的系统功能特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "866.json — 智慧交通对交通的帮助有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "867.json — 智慧园区三维可视化系统的具体作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "868.json — 古河云接入DeepSeek！AI赋能，智能化应用场景再升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "869.json — 智慧升级，赋能未来——开启安全高效与绿色低碳新篇章",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "870.json — 接入DeepSeek后，智慧园区安全调度系统的全面提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "871.json — 智能化管理系统：驱动未来管理与效率革命",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "872.json — 智慧园区安全调度的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "873.json — DeepSeek赋能古河云：AI驱动内部协同效率全面提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "874.json — 低碳节能管理系统的优势都有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "875.json — 智能化管理系统在不同领域的应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "876.json — 智能化管理系统的特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "877.json — 接入DeepSeek后智能化管理系统的升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "878.json — 智慧体育场馆：未来体育的核心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "879.json — 智慧场馆管理系统：如何显著提升运营效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "880.json — 智慧医院建设：医疗服务的未来之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "881.json — 智慧高铁站：未来交通枢纽的新标杆",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "882.json — 智慧交通：构建未来城市交通的新模式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "883.json — 智能化管理系统：数字化转型的核心引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "884.json — 接入DeepSeek后智慧园区的全面提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "885.json — 智能化管理平台的核心能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "886.json — 接入DeepSeek后智能化管理平台的突破性发展",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "887.json — 智慧消防系统的主要组成部分",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "888.json — 智能运维管理系统的主要优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "889.json — 人工智能对智慧园区的提升和帮助",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "890.json — 节能降耗系统：智能化升级与高效管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "891.json — 智慧园区：构建未来产业生态的综合体",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "892.json — 智慧交通系统：重塑城市出行体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "893.json — 智能交通的关键技术支撑",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "894.json — 智慧建筑系统集成的核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "895.json — DeepSeek在安防行业的创新应用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "896.json — 楼宇智能化管理系统如何搭建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "897.json — 智慧交通是什么，可以帮助我们解决什么问题?",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "898.json — 零碳智慧园区是指什么？优势是什么？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "899.json — 接入DeepSeek后智慧场馆的全面提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "900.json — 智慧高铁站：引领城市新发展的引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "901.json — 节能降耗系统的主要作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "902.json — 智能照明系统具备哪些核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "903.json — 智慧农批解决方案：构建现代化农产品新生态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "904.json — 智能化集成系统包括哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "905.json — 智能化集成管理系统的核心特点与发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "906.json — 智能安防管理平台的优势与多维价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "907.json — 资产管理系统：企业数字化转型的核心引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "908.json — 智能医院如何重塑现代医疗生态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "909.json — 智慧农批市场整体建设方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "910.json — 农批市场数字化安防系统的优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "911.json — 智能化管理系统对高铁站的帮助与提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "912.json — 接入DeepSeek后智慧场馆的能力提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "913.json — 校园智能照明系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "914.json — 智慧校园建设的深远意义与价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "915.json — 智能照明控制系统是什么？有什么作用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "916.json — 智慧交通可以帮助我们解决什么问题？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "917.json — 应急指挥调度管理系统的核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "918.json — 医院后勤管理系统的四大优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "919.json — 门禁管理系统：守护安全的智能卫士",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "920.json — 深度剖析：综合安防管理平台的显著特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "921.json — 智能照明系统：开启照明新时代的四大优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "922.json — 门禁管理系统的应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "923.json — 医院后勤管理系统的建设意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "924.json — 考勤管理系统的功能都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "925.json — 浅析停车管理系统接入AI的提升",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "926.json — 人事管理系统的核心价值：自动化流程与数据安全",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "927.json — 资产管理系统：如何实现高效、合规与低成本？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "928.json — 智能分拣，全程保鲜：肉类滑轨理货系统的价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "929.json — 智慧安防：巡更巡检系统的功能特点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "930.json — 智能照明系统：照亮智慧生活的多重价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "931.json — 工单管理系统的核心产品功能解析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "932.json — 智慧安全管理平台是什么？优势有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "933.json — 安全调度系统：安全管理的智能中枢",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "934.json — AI赋能安全调度系统：智能升级与功能跃迁",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "935.json — 智能化调度系统：安全管理的核心引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "936.json — 能碳管理系统助力企业实现双碳目标！",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "937.json — 智慧医院建设的三大关键领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "938.json — 人事管理系统是什么？功能有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "939.json — 安全管理平台：构建全方位防护体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "940.json — 设备安全管理：AI赋能的智能守护者",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "941.json — 能碳管理系统：构建绿色未来的智能中枢",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "942.json — 能碳管理系统，企业绿色低碳转型的支撑",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "943.json — 设备管理系统的功能架构与核心价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "944.json — 企业生产安全管理平台的功能架构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "945.json — 安全管理平台的智能化跃迁",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "946.json — 智慧之光：智能照明系统的绿色节能之道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "947.json — 智慧校园安全可视化指挥调度系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "948.json — 智守未来：安全管理平台的五大核心价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "949.json — 智慧交通：驶向未来的数字化之路",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "950.json — 建设智慧园区的五个重要步骤",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "951.json — 能耗管理系统的技术与创新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "952.json — 医院后勤管理管理：如何实现高效运作",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "953.json — 构建智慧校园建设的必要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "954.json — 安全生产调度管理系统的核心功能模块",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "955.json — 能碳管理系统：助力企业实现\"双碳\"目标",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "956.json — 人事管理系统：企业高效管理的数字中枢",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "957.json — 安全管理平台是什么？有什么用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "958.json — 智能照明系统重塑建筑空间新生态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "959.json — AI+能碳管理系统：全生命周期碳管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "960.json — 智慧应急指挥调度系统：构建城市安全“防护罩”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "961.json — 智慧交通解决了哪些行业难点？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "962.json — 分析智慧园区建设的关键问题",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "963.json — 安全监测预警系统的核心价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "964.json — 智慧场馆：科技赋能的艺术盛宴",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "965.json — AIoT赋能场馆数字化转型：智能管理新生态",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "966.json — AI应急处置管理的范式变革",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "967.json — AI安全风险监测平台的架构与使命",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "968.json — 隧道监测预警系统：构筑智慧交通的安全中枢",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "969.json — 智慧高铁站：数字时代交通枢纽的标杆",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "970.json — 智慧园区：数字化转型的多维应用图景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "971.json — 智慧医院建设的七大行业痛点",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "972.json — 监测预警系统重塑隧道安全新范式",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "973.json — 智能照明系统：具备认知能力的“光神经网络”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "974.json — AI驱动智慧交通：加速应用场景落地",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "975.json — 智慧园区：园区管理革命与永续发展新路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "976.json — 应急指挥调度平台：应急管理的智能核心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "977.json — AI集成运维管理平台的架构与核心构成解析",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "978.json — 应急指挥调度平台：应急管理的核心支柱",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "979.json — AI安全风险监测平台：全周期防护体系构建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "980.json — 智慧交通站房：面向未来的综合解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "981.json — 智慧站房的核心优势与价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "982.json — AI安全风险监测：构筑智能时代的“数字免疫系统”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "983.json — 安全生产监测预警系统：构筑智能化的安全防线",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "984.json — 展会邀请 | 数智创新，古河云邀您共赴ISE安博会",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "985.json — 聚焦前沿，共话安全｜古河云科技深圳安防展圆满收官",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "986.json — 安全风险监测预警平台对企业的价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "987.json — 应急处置管理平台的平台功能都有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "988.json — 应急处置管理平台的优势都有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "989.json — 节能降耗管理系统的应用场景与效益",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "990.json — 成都古河云科技介绍",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "991.json — 隧道安全监测系统的应用意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "992.json — 安全监测预警平台的应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "993.json — 智能运维管理平台：AI赋能的数字化转型引擎",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "994.json — 智慧消防：消防安全监测系统的核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "995.json — 电气安全监测系统：筑牢电气安全防线",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "996.json — 企业级智能体是什么？有什么作用？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "997.json — 从大模型到智能体：企业级智能体如何搭建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "998.json — AI智能体的技术应用与未来图景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "999.json — AI视频识别系统的应用领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1000.json — 应急救援指挥系统的核心功能模块",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1001.json — 安全风险监测平台：被动应对向主动预防的转变",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1002.json — 节能降耗系统：全链条节能管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1003.json — 安全风险监测系统是什么？内容有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1004.json — AI智能体：推动企业变革的核心驱动力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1005.json — 到底什么是AI智能体?这篇文章告诉你",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1006.json — 监测预警系统：让园区更高效、更安全、更智能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1007.json — 园区能耗监测系统是什么？应用场景有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1008.json — 破解\"多系统孤岛\"难题：IBMS的整合之道",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1009.json — 智慧体育馆的“智慧”体现在哪些方面？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1010.json — 消防安全预警系统包括哪些功能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1011.json — 安全监测预警系统的核心价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1012.json — 电气安全预警系统：全流程闭环管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1013.json — 园区应急调度系统的核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1014.json — 视频安全预警系统的应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1015.json — 消防安全预警系统助力安全生产",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1016.json — 烟火识别监测系统的应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1017.json — 安防监控管理平台：实现全域风险的动态管控",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1018.json — 消防应急处置方案的三个关键环节",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1019.json — 消防安全应急预案内容包括哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1020.json — 如何选择合适的安全监测预警系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1021.json — 安全风险监测预警系统如何实现“防患于未然”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1022.json — 电气安全管理系统的构建",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1023.json — 安防监控系统的功能和应用领域",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1024.json — 深入探讨可视化技术如何实现安全监测",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1025.json — 农批市场监测预警系统的核心优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1026.json — 如何搭建一套安防监控管理平台？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1027.json — 智慧用电安全解决方案：打造全流程可视化管控",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1028.json — 从指挥到现场：指挥调度系统如何重塑应急救援体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1029.json — 电子巡更系统的应用场景都有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1030.json — 可视化应急指挥调度系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1031.json — 安全生产管理平台的五大核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1032.json — 视频安防监控系统是什么？具备哪些功能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1033.json — 学校电气火灾监控系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1034.json — 智慧用电安全管理系统的核心优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1035.json — 农批市场指挥调度系统的核心作用",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1036.json — 论园区电气安全管理系统的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1037.json — 能碳管理平台：让校园管理 “能效双升” 的智慧中枢",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1038.json — 什么是入侵报警系统？应用场景有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1039.json — 能碳管理系统：如何助力企业解决节能降耗问题?",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1040.json — 安防监控系统的架构与组成原理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1041.json — 园区智能照明系统的重要性",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1042.json — 智能门禁管理系统的功能与优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1043.json — 机房动环监控系统：定义与核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1044.json — 应急指挥调度系统的功能模块有哪些",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1045.json — 智慧消防： 从“被动响应”到“主动预警”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1046.json — 如何构建有效的入侵报警系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1047.json — 园区安全管理平台解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1048.json — 从“被动记录”到“主动预警”：安防监控系统的智能进化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1049.json — 消防管理系统如何构筑“智慧防火墙”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1050.json — 电气管理系统如何构筑数字时代的用电安全基石",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1051.json — 指挥调度系统如何织就协同作战一张网",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1052.json — 安防监控系统如何成为城市的“智慧视觉中枢”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1053.json — 智能巡检系统如何重塑运维边界",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1054.json — 安防监控系统如何成为企业的“视觉智囊”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1055.json — 消防管理系统如何重构现代空间防御体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1056.json — 指挥调度系统：从“指令台”到“智能核心”的升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1057.json — 电气管理系统：实现预测性维护与能耗优化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1058.json — 数据驱动的资产管理系统：提升效率与优化投资决策",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1059.json — 考勤管理系统助力自动化、合规性与员工体验的统一",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1060.json — 智能巡检：从人工记录到预测性维护的跨越",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1061.json — 指挥调度系统重新定义企业的响应能力与决策水平",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1062.json — 用气安全与能效优化平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1063.json — 智能门禁：构建企业安全与效率的数字化基石",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1064.json — 监测预警系统：数据智能驱动的风险管控平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1065.json — 智能巡检系统从传统人工巡检到智能化运维的转变",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1066.json — AI智能体管理系统构建企业级应用的管理框架",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1067.json — 智能巡检系统：企业管理的数字化转型",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1068.json — 如何有效管理和部署的AI智能体",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1069.json — 风险感知中枢：监测预警系统的架构与核心",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1070.json — AI智能体：企业级智能体管理解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1071.json — 应急调度：实时响应与资源协同管理平台",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1072.json — 消防管理系统：构建全链条防控体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1073.json — 感知即安全：安防监控系统的价值重构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1074.json — 预见，方能遇见：监测预警系统，让风险无处遁形",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1075.json — 从\"看得见\"到\"看得懂\"：监控安全管理的智能进化",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1076.json — 智慧用电平台让安全走在事故前面",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1077.json — 用能监测系统，让能源管理从未如此清晰",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1078.json — 智能照明系统，重新定义光与空间的关系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1079.json — 入侵报警系统的智能进化论",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1080.json — 安防监控系统：安防之眼，智守未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1081.json — 电气管理系统的四大核心能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1082.json — 指挥调度系统成为企业智慧运营的“决策大脑”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1083.json — 智慧消防：预见风险，智御火患",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1084.json — 智守边界：入侵报警系统的主动防御时代",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1085.json — 门禁管理系统的四大核心能力",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1086.json — 智能巡检解决方案：让设备管理更智能、更精准",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1087.json — 应急调度系统让每一次救援都精准到位",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1088.json — 安全风险监测系统核心技术",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1089.json — 视频安全监测系统，从\"看见\"到\"看懂\"",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1090.json — 安防监控系统，如何为你的生活构筑智慧安全屏障？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1091.json — 用能监测系统如何成为碳路先锋？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1092.json — 用能监测系统是什么？运用了哪些技术？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1093.json — 监测预警系统，如何成为数字时代的“智能守夜人”？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1094.json — 节能降碳系统：覆盖“监测-分析-优化-管控”全链条",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1095.json — 智慧消防平台：构建“感、知、决、行”一体化消防体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1096.json — 智慧暖通节能构建建筑热力系统“智慧大脑”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1097.json — AI智能体管理平台：从孤立的“个体”到协同的“军团”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1098.json — 节能降耗平台的四大技术架构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1099.json — 智能巡检系统：智能化管理的安全守护者",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1100.json — 当能耗成为运营成本的“不可承受之重”，企业该如何破局？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1101.json — 智慧停车管理系统：以科技重塑交通效率与体验",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1102.json — 安防监控管理系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1103.json — 智能巡检管理系统是什么？主要功能有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1104.json — 应急调度管理系统：构建全流程闭环管理",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1105.json — 监测预警系统四大核心功能模块",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1106.json — 应急调度系统的核心应用价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1107.json — 古河云科技智慧消防解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1108.json — 什么是智慧消防？优势有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1109.json — 智慧消防管理系统如何重塑安全未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1110.json — 用电安全管理系统的三大系统架构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1111.json — 智能预警系统如何让风险在发生前被化解",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1112.json — 智能预警系统的三个核心架构",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1113.json — 智慧用电安全，助力实现哪些功能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1114.json — 园区的安全隐患有哪些？智能预警系统让风险“看得见”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1115.json — 智慧工地安全隐患智能预警解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1116.json — 智能巡检系统：大幅提升巡检覆盖的深度与响应效率",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1117.json — 什么是智能巡检?有何作用与价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1118.json — 安全风险监测预警系统如何重塑企业安全防线",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1119.json — 视频安全监测系统的三大核心突破",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1120.json — AI智能体管理系统：当企业拥有了一支会思考、会协作的数字团队",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1121.json — 什么是AI智能体？古河云AI智能体系统优势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1122.json — 一体化智能安防监控管理平台解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1123.json — 监测预警系统的核心技术与发展趋势",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1124.json — 智能巡检系统：从“人工巡查”到“智能感知”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1125.json — 电气安全管理系统：架构、技术与智能预警体系",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1126.json — 智慧消防管理平台的关键技术突破与创新",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1127.json — 智能巡检：技术融合与系统生成",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1128.json — 节能降耗管理系统：从静态优化到动态能源寻优的技术演进",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1129.json — 消防安全管理系统的核心价值与实践路径",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1130.json — 电气安全管理系统：核心功能、应用场景",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1131.json — 智慧消防管理系统的核心价值",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1132.json — 安防监控系统如何实现AI智能识别",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1133.json — 消防预警系统：多维感知、智能分析与快速联动",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1134.json — 电气安全管理系统：筑牢现代用电安全的智能防线",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1135.json — 智能守护：视频安全监测系统的演进与未来",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1136.json — 节能降耗系统从“经验直觉”推向“精准智控”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1137.json — 什么是安全监测预警系统？应用场景有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1138.json — 有哪些典型安防监控系统应用场景？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1139.json — 用电安全管理系统：从“用上电”到“用好电、用安全电”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1140.json — 什么是智能巡检系统？核心能力有哪些？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1141.json — 一文了解 | 古河云智慧消防解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1142.json — 用电安全管理系统的业务痛点和核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1143.json — 安全风险监测预警系统随时掌握市场“安全脉搏”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1144.json — 节能降耗管理系统如何实现高效节能？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1145.json — 智慧消防与传统消防有哪些关键区别？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1146.json — “可感知、会思考、快响应”的智能巡检系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1147.json — 电气安全管理系统有哪些技术升级",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1148.json — 应急调度管理系统对农批市场的意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1149.json — 解读视频安全预警系统的核心功能",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1150.json — 综合监测预警系统解决方案",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1151.json — 安全风险预警系统的核价值与战略意义",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1152.json — 构筑安全防线：深入解析视频安全预警系统",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1153.json — AI安全监测预警系统 | 让监控“活”起来，让风险“看得见”",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1154.json — 行业分享 | 重要！已明确：新标GB 6441-2025生效",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1155.json — 别再只会装烟感了！消防安全管理平台选型与实战指南",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  },
+  {
+    "phase": "article",
+    "name": "1156.json — 2026年智能巡检管理系统如何让设备隐患无处遁形？",
+    "ok": true,
+    "status": 200,
+    "detail": "null"
+  }
+]

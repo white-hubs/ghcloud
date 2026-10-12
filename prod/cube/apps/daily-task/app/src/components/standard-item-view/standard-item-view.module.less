@@ -1,0 +1,25 @@
+@spacing: 8px;
+
+.tableActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: @spacing;
+  margin-bottom: @spacing;
+}
+
+.rich-text-content {
+  max-width: 480px;
+  max-height: 360px;
+  overflow: auto;
+  text-align: left;
+  word-break: break-word;
+
+  :global(img) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  :global(table) {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+
+.transaction-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .transaction-info {
+    margin: 10px;
+    color: #fff;
+
+    .transaction-info-title {
+      font-size: 12px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .transaction-info-data {
+      font-size: 22px;
+
+      .unit {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.ringRatio {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  color: #fff;
+
+  .downtriangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #d2fff3;
+    margin-right: 3px;
+    transform: rotate(180deg);
+  }
+
+  .uptriangle {
+    border-bottom: 8px solid #ffcece;
+    transform: rotate(0deg);
+  }
+}
+
+.transaction-list {
+  margin-bottom: 20px;
+
+  .transaction-column {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width: 340px;
+    height: 24px;
+    background: rgba(41, 137, 255, 0.2);
+    padding-left: 8px;
+    color: #fff;
+
+    .transaction-column-drop {
+      width: 4px;
+      height: 4px;
+      background: #ffab10;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+  }
+}

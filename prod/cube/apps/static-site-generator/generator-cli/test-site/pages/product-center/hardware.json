@@ -1,0 +1,313 @@
+{
+  "path": "/product-center/hardware.html",
+  "meta": {
+    "title": "全部硬件产品 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "硬件产品",
+        "subtitle": "古河云科技持续打磨产品，深耕技术，探索智慧新空间，以创新驱动未来。",
+        "placeholder": "搜索你感兴趣的产品",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/search-banner-bg-1.webp"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "video",
+            "name": "视频安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-video.svg",
+            "href": "/product-center/video.html"
+          },
+          {
+            "id": "fire",
+            "name": "消防安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-fire.svg",
+            "href": "/product-center/fire.html"
+          },
+          {
+            "id": "electric",
+            "name": "电气管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-electric.svg",
+            "href": "/product-center/electric.html"
+          },
+          {
+            "id": "attendance",
+            "name": "考勤管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-attendance.svg",
+            "href": "/product-center/attendance.html"
+          },
+          {
+            "id": "env",
+            "name": "机房动环",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-env.svg",
+            "href": "/product-center/env.html"
+          },
+          {
+            "id": "patrol",
+            "name": "电子巡更",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-patrol.svg",
+            "href": "/product-center/patrol.html"
+          },
+          {
+            "id": "meat",
+            "name": "肉类滑轨",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-meat.svg",
+            "href": "/product-center/meat-track.html"
+          }
+        ],
+        "activeId": "all",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/product-fire-camera.webp",
+            "name": "32路智能边缘分析一体机",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能设备支持烟火检测、吸烟检测、温度异常等报…",
+            "href": "/product-center/fire-camera-detail.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "192路智能分析服务器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能设备支持烟火检测、吸烟检测、温能功",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/product-fire-camera.webp",
+            "name": "轻防火筒型感温摄像机",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能设备支持烟火检测",
+            "href": "/product-center/fire-camera-detail.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "边缘智算中枢（300路）",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "384路智能分析服务器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "烟火检测摄像机",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "边缘智算中枢（500路）",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "独立式感温火灾探测报警器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "无线手动火灾报警按钮",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "网络适配器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "独立式光电感烟火灾探测报警器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "无线火灾声光警报器",
+            "description": "设备支持烟火检测、吸烟检测、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能视频监控摄像头",
+            "description": "高清视频监控，支持夜视功能，适用于室内外各种环境…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "人脸识别门禁系统",
+            "description": "快速识别人脸，支持活体检测，提升出入口安全管理…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能温湿度传感器",
+            "description": "实时监测环境温湿度，异常自动报警，保障设备安全…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "烟雾报警探测器",
+            "description": "高灵敏度烟雾探测，及时预警火灾隐患，保障人员安全…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "电气火灾监控设备",
+            "description": "监测电气线路温度电流，预防电气火灾，智能预警…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "无线门磁感应器",
+            "description": "门窗开关状态实时监控，异常开启立即报警，防范入侵…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "应急照明指示灯",
+            "description": "断电自动启动，LED节能光源，保障紧急疏散照明…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "气体泄漏检测仪",
+            "description": "检测可燃气体浓度，超标自动报警，预防燃气事故…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能巡检手持终端",
+            "description": "NFC识别巡检点，数据实时上传，规范巡检流程…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "水位监测报警器",
+            "description": "实时监测水位变化，超限自动报警，防范水浸事故…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "红外入侵探测器",
+            "description": "被动红外探测技术，有效识别人员入侵，误报率低…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "声光报警器",
+            "description": "高分贝警报声配合强光闪烁，紧急情况下快速警示…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能电气监测设备",
+            "description": "设备支持电气火灾监测、漏电保护、温度异常等报警功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "电气火灾监控探测器",
+            "description": "设备支持剩余电流监测、温度监测、故障报警等功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能断路器",
+            "description": "设备支持远程控制、过载保护、短路保护等功能…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "人脸识别考勤机",
+            "description": "支持人脸识别、刷卡等多种考勤方式，考勤数据实时上传…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "指纹识别门禁考勤一体机",
+            "description": "指纹识别+门禁控制+考勤管理三合一，支持多种验证方式…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "IC卡考勤机",
+            "description": "非接触式IC卡识别，支持脱机考勤，数据自动同步…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "机房温湿度传感器",
+            "description": "实时监测机房温湿度，超限自动报警，保障设备安全运行…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "UPS监控模块",
+            "description": "监测UPS运行状态，电池容量、输入输出电压等参数…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "空调监控控制器",
+            "description": "远程控制空调开关、温度设定，监测空调运行状态…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "电子巡更棒",
+            "description": "NFC感应巡更点，记录巡更时间地点，数据自动上传…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "巡更点标签",
+            "description": "防水防尘设计，安装简便，支持NFC和RFID读取…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能巡更手持终端",
+            "description": "集巡更、拍照、报修于一体，支持离线巡更…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能滑轨定位器",
+            "description": "精准定位滑轨位置，实时监测运行状态，支持远程控制…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "滑轨重量传感器",
+            "description": "高精度称重，实时记录肉类重量，数据自动上传…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "滑轨RFID识别器",
+            "description": "自动识别滑轨上的RFID标签，追踪肉类来源和流向…",
+            "href": "#"
+          }
+        ],
+        "pageSize": 9,
+        "currentPage": 1
+      }
+    }
+  ],
+  "layout": "default"
+}

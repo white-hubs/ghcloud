@@ -1,0 +1,64 @@
+.layout-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  /* 3D 壳层保留系统指针；像素流 HoveringMouse 不会另画光标 */
+  :global(#player) {
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: default;
+  }
+
+  .layout-header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+    transition: all 1s ease;
+    padding: 0 !important;
+  }
+
+  .layout-menu {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 102;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+
+    &.show {
+      bottom: 20px;
+      opacity: 1;
+    }
+
+    &.hide {
+      bottom: -100px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .layout-area-tag {
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.views-gis {
+  background-color: #010C18;
+}

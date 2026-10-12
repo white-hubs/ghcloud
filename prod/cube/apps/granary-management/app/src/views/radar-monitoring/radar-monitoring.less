@@ -1,0 +1,331 @@
+.radar-monitoring-root {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.radar-monitoring-dashboard-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  width: 100%;
+}
+
+.radar-monitoring-error {
+  background: #fff1f0;
+  border: 1px solid #ffccc7;
+  border-radius: 6px;
+  color: #cf1322;
+  padding: 9px 12px;
+}
+
+.radar-monitoring-summary-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.radar-monitoring-summary-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
+  display: flex;
+  gap: 14px;
+  min-height: 88px;
+  padding: 14px 16px;
+}
+
+.radar-monitoring-summary-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.radar-monitoring-summary-card strong {
+  color: #2c3035;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.radar-monitoring-summary-card span:last-child {
+  color: #969aa1;
+  font-size: 13px;
+}
+
+.radar-monitoring-summary-icon {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 26px;
+  height: 44px;
+  justify-content: center;
+  line-height: 1;
+  width: 44px;
+}
+
+.radar-monitoring-summary-icon--blue { background: #edf6ff; color: #2f91ff; }
+.radar-monitoring-summary-icon--green { background: #eff9e9; color: #5cc52d; }
+.radar-monitoring-summary-icon--gray { background: #f3f3f5; color: #90949b; }
+.radar-monitoring-summary-icon--red { background: #fff0f0; color: #ff6268; }
+
+.radar-monitoring-warehouse-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.radar-monitoring-warehouse-card {
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-height: 198px;
+  padding: 16px;
+}
+
+.radar-monitoring-warehouse-card--alarm {
+  background: #fffafa;
+  border-color: #ff666b;
+}
+
+.radar-monitoring-warehouse-card--offline {
+  background: #fafafa;
+  color: #8b8f94;
+}
+
+.radar-monitoring-warehouse-header,
+.radar-monitoring-warehouse-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radar-monitoring-warehouse-header h2 {
+  color: #35383d;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+
+.radar-monitoring-warehouse-card--offline .radar-monitoring-warehouse-header h2,
+.radar-monitoring-warehouse-card--offline .radar-monitoring-measure-grid strong {
+  color: #7b7f84;
+}
+
+.radar-monitoring-status {
+  background: #eff9e9;
+  border-radius: 10px;
+  color: #58b82b;
+  font-size: 11px;
+  line-height: 20px;
+  padding: 0 9px;
+}
+
+.radar-monitoring-warehouse-card--alarm .radar-monitoring-status {
+  background: #fff0f0;
+  color: #ff6268;
+}
+
+.radar-monitoring-warehouse-card--offline .radar-monitoring-status {
+  background: #f1f1f2;
+  color: #9da1a6;
+}
+
+.radar-monitoring-measure-grid {
+  border-bottom: 1px solid #f0f0f0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 17px;
+  padding-bottom: 14px;
+}
+
+.radar-monitoring-measure-grid > div {
+  background: #fafafa;
+  border-radius: 3px;
+  padding: 11px 12px 9px;
+}
+
+.radar-monitoring-measure-grid span {
+  color: #9a9da3;
+  display: block;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.radar-monitoring-measure-grid strong {
+  color: #34383d;
+  display: block;
+  font-size: 17px;
+  line-height: 24px;
+  margin-top: 2px;
+}
+
+.radar-monitoring-measure-grid small {
+  color: #858a91;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.radar-monitoring-offline-message,
+.radar-monitoring-alarm-message {
+  color: #ff666b;
+  font-size: 11px;
+  line-height: 17px;
+  min-height: 17px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.radar-monitoring-alarm-message { color: #ff6268; }
+
+.radar-monitoring-warehouse-footer {
+  color: #969aa1;
+  font-size: 11px;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.radar-monitoring-device-status {
+  align-items: center;
+  color: #59bd2f;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 5px;
+}
+
+.radar-monitoring-device-status i,
+.radar-monitoring-level i {
+  background: currentColor;
+  border-radius: 50%;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+}
+
+.radar-monitoring-device-status--offline { color: #adb0b5; }
+
+.radar-monitoring-report-time {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.radar-monitoring-empty {
+  background: #fff;
+  border-radius: 6px;
+  color: #9a9da3;
+  grid-column: 1 / -1;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.radar-monitoring-alarm-panel {
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.radar-monitoring-panel-header {
+  align-items: center;
+  border-bottom: 1px solid #eef0f2;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.radar-monitoring-panel-header h2 {
+  color: #34383d;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.radar-monitoring-panel-actions { display: flex; align-items: center; gap: 16px; }
+.radar-monitoring-panel-actions span { color: #969aa1; font-size: 12px; }
+.radar-monitoring-panel-actions button {
+  background: transparent;
+  border: 0;
+  color: #2f91ff;
+  cursor: pointer;
+  font-size: 12px;
+  height: auto;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.radar-monitoring-panel-actions button::after { content: " →"; }
+.radar-monitoring-panel-actions button:hover { color: #1677ff; }
+
+.radar-monitoring-table-wrap { overflow-x: auto; }
+
+.radar-monitoring-table-wrap table {
+  border-collapse: collapse;
+  min-width: 760px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.radar-monitoring-table-wrap th,
+.radar-monitoring-table-wrap td {
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  height: 44px;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.radar-monitoring-table-wrap th {
+  background: #fafafa;
+  color: #666b73;
+  font-weight: 600;
+}
+
+.radar-monitoring-table-wrap th:first-child,
+.radar-monitoring-table-wrap td:first-child { width: 50%; }
+.radar-monitoring-table-wrap th:nth-child(2),
+.radar-monitoring-table-wrap td:nth-child(2) { width: 14%; }
+.radar-monitoring-table-wrap th:nth-child(3),
+.radar-monitoring-table-wrap td:nth-child(3) { width: 14%; }
+.radar-monitoring-table-wrap th:nth-child(4),
+.radar-monitoring-table-wrap td:nth-child(4) { width: 22%; }
+
+.radar-monitoring-level {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.radar-monitoring-level--one { color: #ff6268; }
+.radar-monitoring-level--two { color: #eaa52c; }
+.radar-monitoring-level--three { color: #6daff3; }
+
+.radar-monitoring-table-empty {
+  color: #9a9da3;
+  height: 88px !important;
+  text-align: center !important;
+}
+
+@media (max-width: 1200px) {
+  .radar-monitoring-summary-grid,
+  .radar-monitoring-warehouse-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .radar-monitoring-summary-grid,
+  .radar-monitoring-warehouse-grid { grid-template-columns: 1fr; }
+  .radar-monitoring-summary-card { min-height: 84px; }
+}

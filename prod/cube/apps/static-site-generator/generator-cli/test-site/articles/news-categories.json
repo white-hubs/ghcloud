@@ -1,0 +1,22 @@
+[
+  {
+    "id": "company",
+    "name": "公司动态",
+    "href": "/information/category/company.html#category-filter"
+  },
+  {
+    "id": "industry",
+    "name": "行业新闻",
+    "href": "/information/category/industry.html#category-filter"
+  },
+  {
+    "id": "product",
+    "name": "产品动态",
+    "href": "/information/category/product.html#category-filter"
+  },
+  {
+    "id": "policy",
+    "name": "政策报告",
+    "href": "/information/category/policy.html#category-filter"
+  }
+]

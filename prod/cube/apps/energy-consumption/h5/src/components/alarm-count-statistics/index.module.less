@@ -1,0 +1,80 @@
+.container {
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F1F8FF;
+  width: 100%;
+
+  .active {
+    background: #ffffff;
+    border: 1px solid #1578ff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .item {
+    display: flex;
+    padding: 14px 0;
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+
+
+    .title {
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #646d81;
+    }
+
+    .unit {
+      font-size: 12px;
+      font-family: Roboto, Roboto-Medium;
+      font-weight: Medium;
+      color: #1f3140;
+    }
+
+    .count {
+      font-size: 24px;
+      font-family: Roboto, Roboto-Medium;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .ratio {
+      display: flex;
+      align-items: center;
+      margin-left: 3px;
+      font-size: 11px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      gap: 2px;
+      text-align: left;
+      color: #707579;
+
+
+      .ratio_num {
+        color: #01b377;
+      }
+
+      .ratio_up {
+        color: red;
+      }
+
+      .img_down {
+        transform: rotateX(180deg);
+      }
+
+      img {
+        width: 6px;
+        height: 8px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+export { ChoiceStaff } from "./business-components/ouaa-components/choice-staff/choice-staff";
+export { ProductPicker } from "./business-components/product-picker/product-picker";
+export { DepartmentCascader } from "./business-components/ouaa-components/department-cascader/department-cascader";
+export { ChoiceDepartment } from "./business-components/ouaa-components/choice-department/choice-department";
+export { InspectionTaskList } from "./business-components/inspect-components/inspection-task/inspection-task-list/inspection-task-list";
+export { InspectionTaskDetail } from "./business-components/inspect-components/inspection-task/inspection-task-detail/detail";
+export { InspectionRecordDetail } from "./business-components/inspect-components/inspection-record/inspection-record-detail/detail";
+export { InspectionExecute } from "./business-components/inspect-components/inspection-execute/inspection-execute";
+export { InspectionStandard } from "./business-components/inspect-components/inspection-standard/inspection-standard";
+export { InspectionRecordList } from "./business-components/inspect-components/inspection-record/inspection-record-list/inspection-record-list";
+export { ObjectPopupSelect } from "./business-components/object-popup-select/object-popup-select";
+export { UploadFile, type FileListVo } from "./business-components/basic-components/upload-file/upload-file";

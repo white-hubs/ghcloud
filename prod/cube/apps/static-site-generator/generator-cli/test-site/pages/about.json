@@ -1,0 +1,253 @@
+{
+  "path": "/about.html",
+  "meta": {
+    "title": "关于我们 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/background/2.png",
+            "title": "看见不可见，守护未发生！",
+            "subtitle": "AI驱动的全场景主动安全防御生态构建者",
+            "titleColor": "#333333",
+            "subtitleColor": "#333333"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AboutCompanyIntro",
+      "props": {
+        "title": "企业简介",
+        "image": "https://qiniu.guhecloud.com/imgs/pages/about/2.png",
+        "companyName": "成都古河云科技有限公司",
+        "description": "成都古河云科技有限公司（简称“古河云科技”）成立于2017年，总部位于成都，在长沙、深圳等地设有分支机构。公司依托人工智能技术，以自研“开河智能中枢”为核心，深耕“AI+安全应急”领域，构建覆盖“监测预警-风险评估-应急处置-灾后恢复”的全场景主动防御生态。聚焦高危行业（批发市场、物流仓储、能源行业等）辐射城市安全（智慧园区、交通枢纽等）场景，通过AIoT、边缘计算与数字孪生技术，为客户提供智能化安全风险管理解决方案，致力于从“被动响应”向“主动防御”升级，重塑安全应急管理新范式。<br><br>凭借多年专业实践，古河云科技已成功为全国18个省市自治区、110个城市提供数字化解决方案和服务，累计服务客户超500家，建设项目超240个。2019年获“A轮”千万融资，公司先后获得“国家高新技术企业”、“省专精特新企业”、“科技型中小企业”、“新经济梯度培育企业”、“规上企业”、“AAA级”信用企业等多项认证。<br><br>秉承\"用AI预见风险，以智能守护生命\"的企业使命，古河云科技持续深化人工智能与产业安全的融合创新，致力于构建全域联动的智能安防生态，推动安全应急管理数字化转型，为数字经济发展注入科技动能。"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div style=\"width: 100%; height: 46.1458vw; background: #f9fcff; position: relative; overflow: hidden;\">\n  <div style=\"height: 1.6667vw; font-size: 1.5625vw; font-family: SOURCEHANSANSSC-BOLD; font-weight: 700; color: #182b44; position: absolute; left: 50%; transform: translateX(-50%); top: 3.125vw;\">企业发展历程</div>\n  <div style=\"height: 0.7292vw; font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; position: absolute; left: 50%; transform: translateX(-50%); top: 6.1979vw; white-space: nowrap;\">古河云重要发展历程和里程碑</div>\n  <div style=\"position: relative; width: 100.0vw; height: 100%; margin: 0 auto;\">\n    <div style=\"position: absolute; left: 8.3333vw; top: 10.4167vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(209deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">11月古河云科技有限公司成立</div><div style=\"position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 27.5vw; top: 10.4167vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(209deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 认定为 “新经济梯度培育企业</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 获得“中小型科技企业”荣誉称号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 获得四川省高新技术企业称号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">4月 获得资本市场千万级A轮融资</div><div style=\"position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 46.0417vw; top: 10.4167vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(209deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 获得疫情防控优秀企业称号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 获得AAA级信用企业证书、AAA级重合同守信用企业证书</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 古河云高新研发中心正式揭牌</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">4月 入选成都“规上企业”名单</div><div style=\"position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 64.3229vw; top: 10.4167vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(209deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 获得发明专利【一种通过分布 式架构访问三维模型的方法】</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 获得2022年度四川省最具核心 竞争力软件企业、2022年度四川省 优秀软件产品</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月“开河”多场景应用平台获得成 都市“2022年城市示范应用场景项目”三等奖（无一、二等奖）</div><div style=\"position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 83.0729vw; top: 10.4167vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(209deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">5月 软件著作权--物流配送管理系统V1.0</div><div style=\"position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div>\n    <div style=\"position: absolute; left: 17.8125vw; top: 28.6458vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(383deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 城市级插件式物联路由器研 发完成</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 获得“雏鹰企业”荣誉称号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 相继获得CMMI3、ISO27001 、IS O9001、ISO20000、软著等30 余项证书</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">4月 获得电子与智能化工程专业 承包 二级资质</div><div style=\"position: absolute; left: 50%; top: -10px; transform: translateX(-50%) rotate(180deg); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 36.6146vw; top: 28.6458vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(383deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 获得智能物联网关控制器专利</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 获得“四川省双软企业”荣誉称号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 成为四川省软件协会常务理事单位</div><div style=\"position: absolute; left: 50%; top: -10px; transform: translateX(-50%) rotate(180deg); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 55.625vw; top: 28.6458vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(383deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 长沙办事处正式揭牌成立</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">2月 电子科大研究生就业实践基地授牌</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 通过2022年度四川省“专 精特新”中小企业认定</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">4月 公司8名研发人员获得“20 22年成都市软件资深工程师” 荣誉称号</div><div style=\"position: absolute; left: 50%; top: -10px; transform: translateX(-50%) rotate(180deg); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div><div style=\"position: absolute; left: 74.4792vw; top: 28.6458vw; width: 12.9167vw; height: 13.125vw; background: linear-gradient(383deg, #f4f9ff 0%, #ffffff 100%); box-shadow: 0px 0px 22px 0px rgba(3, 9, 26, 0.06); border: 1px solid #ffffff; box-sizing: border-box; padding: 0.625vw 18px; padding-right: 0.5208vw; overflow: hidden;\"><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">1月 获得发明专利【三维模型视觉穿透方法、系统、电子设备、及存储设备】</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">3月 荣获成都市温江区数字经济产业联盟第一届副理事长单位</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">9月 软件著作权--数字孪生管理平台V1.0</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">12月 发明专利证书--一种基于用电监测时序数据的设备异常检测方法</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">12月 公司成功入选“高价值知识产权创造和实施产业化资助支持项目</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; overflow: hidden; text-overflow: ellipsis; margin-bottom: 0.5208vw; word-break: break-all;\">12月 荣获新华三合作伙伴认证证书《解决方案合作伙伴认证》</div><div style=\"position: absolute; left: 50%; top: -10px; transform: translateX(-50%) rotate(180deg); width: 0; height: 0; border-top: 0.5208vw solid #fff; border-right: 0.5208vw solid transparent; border-left: 0.5208vw solid transparent;\"></div></div>\n    <div style=\"position: absolute; top: 26.8229vw; left: 50%; transform: translateX(-50%); width: 86.875vw; height: 0.0521vw; z-index: 0;\">\n      <div style=\"position: absolute; top: 0; left: 0; height: 0.1042vw; width: 100%; background-image: linear-gradient(to right, #c9d9ee 0%, #c9d9ee 50%, transparent 65%); background-size: 20px 10px; background-repeat: repeat-x;\"></div>\n      <div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 5.8333vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2017.11</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 15.1042vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2018</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 24.4792vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2019</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 33.75vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2020</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 43.125vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2021</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 52.3958vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2022</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 61.875vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2023</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 71.3542vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2024</span></div><div style=\"position: absolute; width: 1.1458vw; height: 1.1458vw; background: #d5e8ff; border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 1; left: 80.8333vw;\"><div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5208vw; height: 0.5208vw; background: #1578ff; border-radius: 50%;\"></div><span style=\"font-size: 0.9375vw; font-weight: 500; color: #1578ff; position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap;\">2025</span></div>\n    </div>\n  </div>\n</div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"width: 100%; height: 37.5vw; background: #ffffff; position: relative; overflow: hidden;\"><div style=\"height: 1.6667vw; font-size: 1.5625vw; font-family: SOURCEHANSANSSC-BOLD; font-weight: 700; color: #182b44; position: absolute; left: 50%; transform: translateX(-50%); top: 4.1667vw;\">企业文化</div><img src=\"https://qiniu.guhecloud.com/imgs/pages/about/3.png\" style=\"width: 26.3542vw; height: 24.7917vw; position: absolute; left: 50%; transform: translateX(-50%); top: 10.0vw; display: block;\"><div style=\"position: absolute; left: 15.625vw; top: 13.0729vw; width: 18.75vw; height: 6.0417vw; background: linear-gradient(209deg, #f2f7fd 0%, #ffffff 100%); box-shadow: 0px 0px 20px 0px rgba(132, 132, 132, 0.1); border-radius: 0.2083vw; border: 1px solid #ffffff; transition: all 0.1s ease-in;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/about-culture.png\" style=\"margin-left: 1.5625vw; margin-top: 1.875vw; width: 2.1875vw; height: 2.1875vw; display: block; max-width: unset;\"><div style=\"height: 1.4583vw; font-size: 0.9375vw; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #1578ff; line-height: 1.4583vw; margin-left: 4.7917vw; margin-top: -60px;\">定位</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; line-height: 1.25vw; margin-top: 0.4167vw; margin-left: 4.7917vw; margin-right: 0.5208vw;\">AI驱动的全场景主动安全防御生态构建者</div></div><div style=\"position: absolute; left: 70.8333vw; top: 13.0729vw; width: 18.75vw; height: 6.0417vw; background: linear-gradient(209deg, #f2f7fd 0%, #ffffff 100%); box-shadow: 0px 0px 20px 0px rgba(132, 132, 132, 0.1); border-radius: 0.2083vw; border: 1px solid #ffffff; transition: all 0.1s ease-in;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/about-culture.png\" style=\"margin-left: 1.5625vw; margin-top: 1.875vw; width: 2.1875vw; height: 2.1875vw; display: block; max-width: unset;\"><div style=\"height: 1.4583vw; font-size: 0.9375vw; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #1578ff; line-height: 1.4583vw; margin-left: 4.7917vw; margin-top: -60px;\">愿景</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; line-height: 1.25vw; margin-top: 0.4167vw; margin-left: 4.7917vw; margin-right: 0.5208vw;\">成为安全应急领域的智能决策大脑</div></div><div style=\"position: absolute; left: 15.625vw; top: 23.2812vw; width: 18.75vw; height: 6.0417vw; background: linear-gradient(209deg, #f2f7fd 0%, #ffffff 100%); box-shadow: 0px 0px 20px 0px rgba(132, 132, 132, 0.1); border-radius: 0.2083vw; border: 1px solid #ffffff; transition: all 0.1s ease-in;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/about-culture.png\" style=\"margin-left: 1.5625vw; margin-top: 1.875vw; width: 2.1875vw; height: 2.1875vw; display: block; max-width: unset;\"><div style=\"height: 1.4583vw; font-size: 0.9375vw; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #1578ff; line-height: 1.4583vw; margin-left: 4.7917vw; margin-top: -60px;\">口号</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; line-height: 1.25vw; margin-top: 0.4167vw; margin-left: 4.7917vw; margin-right: 0.5208vw;\">看见不可见，守护未发生！</div></div><div style=\"position: absolute; left: 70.8333vw; top: 23.2812vw; width: 18.75vw; height: 6.0417vw; background: linear-gradient(209deg, #f2f7fd 0%, #ffffff 100%); box-shadow: 0px 0px 20px 0px rgba(132, 132, 132, 0.1); border-radius: 0.2083vw; border: 1px solid #ffffff; transition: all 0.1s ease-in;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/about-culture.png\" style=\"margin-left: 1.5625vw; margin-top: 1.875vw; width: 2.1875vw; height: 2.1875vw; display: block; max-width: unset;\"><div style=\"height: 1.4583vw; font-size: 0.9375vw; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #1578ff; line-height: 1.4583vw; margin-left: 4.7917vw; margin-top: -60px;\">使命</div><div style=\"font-size: 0.7292vw; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585c60; line-height: 1.25vw; margin-top: 0.4167vw; margin-left: 4.7917vw; margin-right: 0.5208vw;\">引领数字技术创新， 建设虚实美好世界！</div></div></div>"
+      }
+    },
+    {
+      "name": "AboutTeamGallery",
+      "props": {
+        "images": [
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/3.jpg",
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/1.jpg",
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/7.jpg",
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/2.jpg",
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/5.jpg",
+          "https://qiniu.guhecloud.com/imgs/pages/about/team/6.jpg"
+        ]
+      }
+    },
+    {
+      "name": "AboutHonorTabs",
+      "props": {
+        "stats": [
+          {
+            "img": "https://qiniu.guhecloud.com/imgs/icons/honor-01.png",
+            "value": "20+",
+            "label": "专利保护"
+          },
+          {
+            "img": "https://qiniu.guhecloud.com/imgs/icons/honor-02.png",
+            "value": "20+",
+            "label": "资质证书"
+          },
+          {
+            "img": "https://qiniu.guhecloud.com/imgs/icons/honor-03.png",
+            "value": "60+",
+            "label": "软著著作权"
+          }
+        ],
+        "tabs": [
+          "发明专利",
+          "资质证书",
+          "软著著作"
+        ],
+        "images": [
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/1.png",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/2.jpg",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/3.jpg",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/4.png",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/5.png",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/patent/6.jpg",
+            "tabIndex": 0
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/11.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/12.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/3.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/4.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/13.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/17.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/14.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/15.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/9.png",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/certificate/16.jpg",
+            "tabIndex": 1
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/1.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/2.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/3.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/4.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/5.png",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/6.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/7.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/8.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/9.jpg",
+            "tabIndex": 2
+          },
+          {
+            "src": "https://qiniu.guhecloud.com/imgs/pages/about/honor/work/10.jpg",
+            "tabIndex": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "BusinessIconMarquee",
+      "props": {
+        "title": "众多企业数字化的优先选择",
+        "subtitle": "为500+企业伙伴提供全方位、先进的孪生空间管理服务",
+        "logos": [
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/1.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/2.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/3.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/4.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/5.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/6.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/7.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/8.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/9.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/10.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/11.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/12.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/13.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/14.png",
+          "https://qiniu.guhecloud.com/imgs/components/bussinessicon/15.png"
+        ]
+      }
+    },
+    {
+      "name": "AboutContact",
+      "props": {
+        "locations": [
+          {
+            "name": "公司总部",
+            "phone": "4001-055-388",
+            "address": "成都市温江区光华大道三段1868号德坤新天地2栋2301、2302号",
+            "lng": 103.856377,
+            "lat": 30.688154
+          },
+          {
+            "name": "成都研发中心",
+            "phone": "028-85176681 15281057317（彭先生）18583232567（邓女士）",
+            "address": "府城大道西段399号天府新谷10号楼701室",
+            "lng": 104.056715,
+            "lat": 30.5859133
+          },
+          {
+            "name": "长沙办事处",
+            "phone": "18390838872（孙先生）",
+            "address": "湖南省长沙市芙蓉区八一路壹号品座",
+            "lng": 113.00983,
+            "lat": 28.19716
+          },
+          {
+            "name": "深圳办事处",
+            "phone": "13923463730（姜先生）",
+            "address": "深圳市南山区茶光路波顿科技园",
+            "lng": 113.938721,
+            "lat": 22.567909
+          }
+        ],
+        "mapKey": "11ce1f353a30f9fa2b125c842780a4cf"
+      }
+    }
+  ],
+  "layout": "default"
+}

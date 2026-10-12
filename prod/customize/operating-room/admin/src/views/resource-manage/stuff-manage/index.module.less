@@ -1,0 +1,36 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .contentHeader {
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+  }
+
+  .contentBody {
+    // flex: 1;
+    height:calc(100% - 55px) ;
+    display: flex;
+    align-items: center;
+
+    .leftTree {
+      width: 200px;
+      padding: 12px;
+      border-right: 1px solid #e8e8e8;
+      flex-shrink: 0;
+      height: 100%;
+    }
+
+    .contentTable {
+      padding: 12px;
+      height: 100%;
+
+      .searchBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

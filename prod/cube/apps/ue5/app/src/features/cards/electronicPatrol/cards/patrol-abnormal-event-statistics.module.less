@@ -1,0 +1,91 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.detailBtn {
+  padding: 0;
+  color: #74b2ff;
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  line-height: 1;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+
+  &:hover,
+  &:focus-visible {
+    color: #9cccff;
+    outline: none;
+  }
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.tableSurface {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 232px;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+
+  :global(.roll-table) {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  :global(.scroll_warp) {
+    height: 200px;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .tableSurface {
+    height: 432px;
+
+    :global(.scroll_warp) {
+      height: 400px;
+    }
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .patrol-abnormal-event-v2-panel) {
+  .detailBtn {
+    color: #176ce5;
+
+    &:hover,
+    &:focus-visible {
+      color: #0f5bcc;
+    }
+  }
+
+  .tableSurface {
+    background: linear-gradient(180deg, rgba(232, 242, 255, 0.92), rgba(255, 255, 255, 0.96));
+    border: 1px solid rgba(82, 142, 222, 0.34);
+    border-radius: 8px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.1);
+  }
+}
+
+.v2-minimal-white-panel(patrol-abnormal-event-v2-panel);

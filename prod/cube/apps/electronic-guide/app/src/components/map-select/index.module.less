@@ -1,0 +1,63 @@
+.full-modal {
+
+  :global {
+    .electronic-guide-modal {
+      max-width: 100%;
+      top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .electronic-guide-modal-content {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh);
+    }
+
+    .electronic-guide-modal-body {
+      flex: 1;
+      padding: 0 !important;
+    }
+  }
+
+  .operate {
+    background: #fff;
+    padding: 12px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    .footer {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .map-handle-item {
+      display: flex;
+      margin-top: 12px;
+      align-items: center;
+      white-space: nowrap;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .value {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .handle-content {
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+  }
+}

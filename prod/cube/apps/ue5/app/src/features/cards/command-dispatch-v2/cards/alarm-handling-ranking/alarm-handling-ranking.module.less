@@ -1,0 +1,50 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  min-width: 0;
+  min-height: 220px;
+}
+
+.listSurface {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 220px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.rankItem {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomBody {
+  .listSurface,
+  .emptySurface {
+    min-height: 420px;
+  }
+
+  .listSurface {
+    padding: 4px 0 0;
+  }
+}
+
+.v2-minimal-white-panel(cmd-alarm-rank-v2-panel);

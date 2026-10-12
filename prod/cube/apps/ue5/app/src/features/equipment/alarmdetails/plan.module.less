@@ -1,0 +1,83 @@
+:global {
+  .alarmDetail-plan {
+    height: 100%;
+    padding-right: 6px;
+    overflow: auto;
+    color: var(--visual-data-modal-text-color);
+    font-size: var(--visual-data-modal-cell-font-size, 14px);
+    scrollbar-width: thin;
+    scrollbar-color: var(--visual-scrollbar-thumb) var(--visual-scrollbar-track);
+
+    &::-webkit-scrollbar {
+      width: var(--visual-scrollbar-size, 6px);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--visual-scrollbar-track);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--visual-scrollbar-thumb);
+      border-radius: 999px;
+    }
+
+    .plan-table {
+      .title {
+        color: var(--visual-data-modal-title-color);
+        font-size: var(--visual-data-modal-section-title-size, 16px);
+        font-weight: 500;
+        line-height: var(--visual-data-modal-row-height, 48px);
+      }
+    }
+
+    .table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--visual-data-modal-row-height, 48px);
+      color: var(--visual-data-modal-text-color);
+      font-size: var(--visual-data-modal-cell-font-size, 14px);
+      line-height: var(--visual-data-modal-row-height, 48px);
+      background: var(--visual-data-modal-table-header-bg);
+      border: 1px solid var(--visual-data-modal-toolbar-border);
+      border-radius: 8px 8px 0 0;
+
+      > div {
+        flex: 1;
+        text-align: center;
+      }
+    }
+
+    .table-body {
+      background: var(--visual-data-modal-table-body-bg);
+      border: 1px solid var(--visual-data-modal-toolbar-border);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: var(--visual-data-modal-row-height, 48px);
+        color: var(--visual-data-modal-text-color);
+        font-size: var(--visual-data-modal-cell-font-size, 14px);
+        line-height: var(--visual-data-modal-cell-line-height, 22px);
+        border-bottom: solid 1px var(--visual-data-modal-toolbar-border);
+
+        > div {
+          flex: 1;
+          text-align: center;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .ant-btn-link {
+      color: var(--visual-data-modal-link-color);
+    }
+  }
+}

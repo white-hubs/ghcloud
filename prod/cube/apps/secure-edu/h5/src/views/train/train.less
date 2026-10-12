@@ -1,0 +1,93 @@
+.train-cell {
+  .van-cell__value {
+    text-align: left;
+  }
+
+  &::after {
+    left: 0 !important;
+    right: 0;
+  }
+
+}
+
+.OVER {
+  background: #C7C7C7 !important;
+}
+
+.operate-cell {
+  .van-cell__value {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .sign {
+    padding: 5px 12px;
+    background: var(--van-primary-color);
+    border-radius: 6px;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+}
+
+.train-cell-group {
+  margin: 3vw;
+}
+
+.van-pull-refresh {
+  height: 100%;
+}
+
+.train-cell-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+
+  .name-status {
+    display: flex;
+    align-items: center;
+
+    .train-status {
+      padding: 1px 6px 0px;
+      font-size: 12px;
+      color: #FFFFFF;
+      background: #FE8704;
+      border-radius: 10px 10px 10px 0px;
+      margin-right: 6px;
+    }
+
+    .name {
+      font-family: Source Han Sans CN, Source Han Sans CN;
+      font-weight: 400;
+      font-size: 15px;
+      color: #1F3140;
+    }
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+}
+
+.train-cell-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  label {
+    color: #666;
+  }
+}

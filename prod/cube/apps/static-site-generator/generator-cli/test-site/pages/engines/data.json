@@ -1,0 +1,209 @@
+{
+  "path": "/engines/data.html",
+  "meta": {
+    "title": "数据引擎_数据中台_古河云科技",
+    "keywords": "数据引擎,数据采集,数据清洗,数据治理,数据分析,数据服务",
+    "description": "古河云数据引擎承担全域数据融合与分发的核心角色，通过整合多源异构数据，提供高效的数据存储与服务化能力，为上层业务系统提供标准化数据支撑。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-banner.webp",
+            "title": "数据引擎",
+            "subtitle": "承担全域数据融合与分发的核心角色，通过整合多源异构数据，提供高效的数据存储与服务化能力，为上层业务系统提供标准化数据支撑。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "title": "引擎特点",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-feature-1.webp",
+            "title": "全流程智能管理",
+            "description": "自动化流程与AI深度赋能，高效处理海量数据，全面挖掘并释放数据价值。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-feature-2.webp",
+            "title": "灵活可扩展架构",
+            "description": "采用模块化弹性设计，无缝适配多场景动态需求，确保系统稳定高效运行。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-feature-3.webp",
+            "title": "安全可信防护",
+            "description": "构建全周期加密管控体系，融合隐私计算技术，全方位筑牢数据安全防线。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-feature-4.webp",
+            "title": "生态协同能力",
+            "description": "依托开放接口对接多元生态，打破数据孤岛，驱动产业协同与创新升级。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapabilityDetails",
+      "props": {
+        "title": "引擎能力",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-capability-1.png",
+            "title": "数据采集",
+            "subtitle": "对各类数据源的采集，包括结构化数据、半结构化数据和非结构化数据，如数据库、日志、API等",
+            "features": [
+              {
+                "label": "多源异构适配：",
+                "value": "支持结构化数据、半结构化数据和非结构化数据，实现一键式接入。"
+              },
+              {
+                "label": "智能采集模式：",
+                "value": "提供批量采集与实时流采集的混合模式，并内置断点续传、流量控制和错误重试机制。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-capability-2.png",
+            "title": "数据清洗",
+            "subtitle": "通过消除“垃圾进、垃圾出”风险，数据清洗能力为业务系统提供“即用型”数据资产。",
+            "features": [
+              {
+                "label": "智能清洗规则引擎：",
+                "value": "内置20+预定义规则，结合AI模型，可识别隐性错误，清洗准确率达95%以上。"
+              },
+              {
+                "label": "实时与批量双模处理：",
+                "value": "减少存储冗余，同时支持离线批量清洗任务，处理历史脏数据。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-capability-3.png",
+            "title": "数据治理",
+            "subtitle": "数据引擎的“治理中枢”，聚焦数据的全生命周期管理，确保数据的合规性、安全性和可管理性。",
+            "features": [
+              {
+                "label": "元数据管理：",
+                "value": "自动采集技术元数据和业务元数据，构建企业级数据目录。"
+              },
+              {
+                "label": "数据质量管理：",
+                "value": "设定业务规则，实时监控数据质量指标，通过告警机制驱动问题修复。"
+              },
+              {
+                "label": "安全与合规：",
+                "value": "支持数据血缘追踪，清晰展示数据从采集到服务的流转路径，确保可解释性。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-capability-5.png",
+            "title": "数据分析",
+            "subtitle": "将清洗治理后的数据转化为业务洞察，支持从基础查询到高级智能分析的全场景需求。",
+            "features": [
+              {
+                "label": "批处理分析：",
+                "value": "基于Spark引擎执行大规模SQL查询、聚合计算，处理PB级历史数据。"
+              },
+              {
+                "label": "高级分析集成：",
+                "value": "无缝对接机器学习平台，提供特征工程、模型训练API，实现预测性分析。"
+              },
+              {
+                "label": "友好性与性能优化：",
+                "value": "提供可视化分析工具和开放API，降低业务人员使用门槛。"
+              }
+            ]
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-capability-4.png",
+            "title": "数据服务",
+            "subtitle": "将数据以服务化、API化的方式高效分发给上层业务系统。",
+            "features": [
+              {
+                "label": "API服务：",
+                "value": "自动生成RESTful/GraphQL API，支持按需调用；提供API网关，实现流量控制、认证鉴权和版本管理。"
+              },
+              {
+                "label": "数据产品化：",
+                "value": "封装常用数据集为标准化“数据产品”，通过数据市场供业务方订阅。"
+              },
+              {
+                "label": "服务治理与监控：",
+                "value": "集成服务SLA管理，自动熔断异常请求；提供使用统计看板，帮助优化服务性能。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ValueProposition",
+      "props": {
+        "title": "引擎价值",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-value-1.webp",
+            "title": "提升决策效率",
+            "description": "引擎整合实时与历史数据，实现毫秒级洞察，取代滞后报表。全链路自动化缩短响应周期，实现数据驱动的敏捷决策。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-value-2.webp",
+            "title": "驱动业务创新",
+            "description": "通过开放API打破数据孤岛，业务部门可快速调用高质量数据，孵化智能风控、精准营销等场景，加速产品迭代。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-value-3.webp",
+            "title": "降低运维成本",
+            "description": "模块化弹性架构降低硬件依赖，自动化工作流替代人工操作，减少错误。资源智能调度避免算力浪费，实现降本增效。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-value-4.webp",
+            "title": "构建安全生态",
+            "description": "全生命周期安全体系覆盖数据采集、存储到服务，结合加密传输与权限隔离，确保数据可追溯，规避合规风险。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductApplication",
+      "props": {
+        "title": "产品应用",
+        "subtitle": "科技赋能行业，全面拥抱数字化",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-park.png",
+            "title": "智慧园区"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-transport.png",
+            "title": "智慧交通"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-venue.png",
+            "title": "智慧体育馆"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-hospital.png",
+            "title": "智慧医院"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

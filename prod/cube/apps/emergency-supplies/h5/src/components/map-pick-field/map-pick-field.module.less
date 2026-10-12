@@ -1,0 +1,83 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  background: #fff;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  align-items: center;
+  height: 48px;
+  padding: 0 12px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.header span {
+  text-align: center;
+}
+
+.cancel,
+.confirm {
+  padding: 0;
+  color: #2f6df6;
+  font-size: 15px;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+}
+
+.cancel {
+  color: #6b7280;
+  text-align: left;
+}
+
+.confirm {
+  text-align: right;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.addressInput {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 12px;
+  color: #15283d;
+  font-size: 14px;
+  background: #f4f6f9;
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+}
+
+.mapWrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.mapLoading {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}

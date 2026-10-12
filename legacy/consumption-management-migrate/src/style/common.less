@@ -1,0 +1,43 @@
+@import "./theme/color.less";
+.Layout {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 4px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #fff !important;
+  .LayoutHeader {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f3f3;
+    font-family: SourceHanSansCN-Medium-2;
+    background-color: #fff;
+    padding: 0;
+  }
+}
+.item-title {
+  width: 100%;
+  height: auto !important;
+  // line-height: 35px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000000d9;
+  border-top: 1px solid #e8e8e88c;
+  padding-top: 16px !important;
+  font-family: PingFang SC-Medium;
+  &:first-child {
+    border: none;
+    padding-top: 0 !important ;
+  }
+}
+.detail-form {
+  padding: 20px;
+  box-sizing: border-box;
+}

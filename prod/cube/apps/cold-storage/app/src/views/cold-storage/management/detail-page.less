@@ -1,0 +1,236 @@
+.cold-store-detail-page {
+  min-width: 0;
+  padding: 16px 20px 24px;
+  background: #fff;
+}
+
+.cold-store-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cold-store-detail-section {
+  min-width: 0;
+  padding-bottom: 18px;
+
+  h3 {
+    margin: 0 0 16px;
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.cold-store-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cold-store-detail-field {
+  min-width: 0;
+  padding: 18px 16px;
+
+  span {
+    display: block;
+    margin-bottom: 8px;
+    color: #7b8494;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  b {
+    display: block;
+    min-height: 22px;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+    word-break: break-word;
+  }
+}
+
+.cold-store-monitor {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.cold-store-camera-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.cold-store-camera-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 118px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #171d38, #111934);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 26px 26px;
+    content: "";
+    opacity: 0.45;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &.is-active {
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.24);
+    transform: translateY(-1px);
+  }
+
+  &.is-active {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  &.is-offline {
+    background: linear-gradient(135deg, #3b4254, #202738);
+  }
+
+  b {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  span {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  small {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+  }
+}
+
+.cold-store-camera-card__live {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #52e395;
+  font-size: 11px;
+
+  i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+
+.cold-store-camera-card.is-offline .cold-store-camera-card__live {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.cold-store-camera-card__icon {
+  display: flex;
+  width: 42px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cold-store-player-panel {
+  display: flex;
+  min-width: 0;
+  min-height: 386px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #0f172a;
+}
+
+.cold-store-player-panel__title {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+
+  b {
+    min-width: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.cold-store-player-panel__body {
+  min-height: 0;
+  flex: 1;
+
+  .ant-empty {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cold-store-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cold-store-monitor {
+    grid-template-columns: 1fr;
+  }
+
+  .cold-store-camera-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .cold-store-detail-grid,
+  .cold-store-camera-grid {
+    grid-template-columns: 1fr;
+  }
+}

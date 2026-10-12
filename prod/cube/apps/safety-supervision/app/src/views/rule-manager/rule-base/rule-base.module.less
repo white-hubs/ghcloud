@@ -1,0 +1,134 @@
+.rule-tree-container{
+  height: calc(100% - 38px);
+  overflow-y: auto;
+  
+  /* 隐藏滚动条但保持滚动功能 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 和 Edge */
+  
+  /* Webkit 浏览器 (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.input-max-value{
+  &:focus{
+    box-shadow: none;
+  }
+}
+.modal-content-container{
+  height: 50vh;
+}
+.item-container{
+  height: calc(100% - 50px);
+  padding-top: 20px;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  // color:white;
+   /* 隐藏滚动条但保持滚动功能 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 和 Edge */
+  
+  /* Webkit 浏览器 (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  span{
+    padding: 5px 10px;
+    height: 30px;
+    // background-color: rgb(125, 176, 234);
+  background: #f1f5fb;
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+}
+
+.rule-add-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.display-metrics-form {
+  width: 720px;
+}
+
+.display-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.display-metrics-full {
+  grid-column: 1 / -1;
+}
+
+.display-metrics-label {
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+
+.display-metrics-required {
+  &::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #ff4d4f;
+    line-height: 1;
+    content: "*";
+  }
+}
+
+.display-metrics-tip {
+  margin-top: 6px;
+  color: #8c8c8c;
+}
+
+.display-metrics-static-value {
+  min-height: 32px;
+  line-height: 32px;
+  color: #5f6b7a;
+}
+
+.text-metric-config {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #edf1f6;
+  border-radius: 6px;
+  background: #fbfdff;
+}
+
+.text-metric-config-title {
+  color: #1f2d3d;
+  font-weight: 500;
+}
+
+.text-metric-config-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.text-metric-display-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) 100px 64px;
+  gap: 12px;
+  align-items: end;
+  margin-top: 10px;
+}
+
+.text-metric-display-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 32px;
+}

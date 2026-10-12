@@ -1,0 +1,79 @@
+.page {
+  min-height: 100vh;
+  padding: 0 12px 88px;
+  color: #15283d;
+  background: #f6f8fb;
+}
+
+.appHeader {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  align-items: center;
+  height: 52px;
+  margin: 0 -12px 10px;
+  padding: 0 12px;
+  background: #fff;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.appHeader h1 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.appHeader i {
+  display: block;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  width: 72px;
+  height: 52px;
+  padding: 0;
+  color: #2f6df6;
+  font-size: 15px;
+  background: transparent;
+  border: 0;
+}
+
+.backButton span {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.contentBlock {
+  padding: 6px 14px 14px;
+  background: #fff;
+  border: 1px solid #edf1f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.035);
+}
+
+.footer {
+  position: fixed;
+  right: 12px;
+  bottom: 10px;
+  left: 12px;
+}
+
+.submitButton {
+  height: 44px;
+  background: #2f6df6;
+  border-color: #2f6df6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}

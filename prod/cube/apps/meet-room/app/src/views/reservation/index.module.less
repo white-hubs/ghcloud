@@ -1,0 +1,103 @@
+.foot_tip{
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3D3D3D;
+  line-height: 22px;
+  margin-top: 20px;
+  .dot{
+    display: inline-block;
+    margin-right: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px 2px 2px 2px;
+  }
+  .item{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    &:nth-child(1) .dot{
+      background: #333333;
+    }
+    &:nth-child(2) .dot{
+      background: #E7E7E7;
+    }
+    &:nth-child(3) .dot{
+      background: #FFA318;
+    }
+    &:nth-child(4) .dot{
+      background: #1890FF;
+    }
+    &:nth-child(5) .dot{
+      background: #5BCBD6;
+    }
+  }
+}
+.my_tag{
+  display: inline-block;
+  padding: 30px 40px;
+  width: 100%;
+  word-break: keep-all !important;
+  white-space: nowrap !important;
+  cursor: pointer;
+}
+.reserved{
+  color: #1890FF;
+  background: #EDF6FF;
+}
+.approval{
+  color: #5BCBD6;
+  background: #f7fcfd;
+}
+.reservable{
+  color: #333333;
+  background-color: #fff;
+}
+.used{
+  color: #FFA318;
+  background-color: #FFF7ED;
+}
+.cancel, .expire{
+  color: #C0C4CC; 
+  background-color: #fff;
+}
+.no_reservable{
+  color: #C0C4CC;
+  background: #F6F6F6;
+}
+.select_icon{
+  display: none;
+}
+.select{
+  border: 2px solid #1890FF;
+  position: relative;
+  &::after, .select_icon{
+    display: block;
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top:-1px;
+    right: 0px;
+    width: 29px;
+    height: 23px;
+    background-color: #1890FF ;
+    // background: url(./get.png) no-repeat;
+    // background-repeat: no-repeat;
+    background: url(./get.png) no-repeat center;
+  }
+}
+#MeetRoomApp .meet-room-table-cell{
+  padding: 0 !important;
+  word-break: keep-all !important;
+  white-space: nowrap !important;
+}
+
+.goods-checkbox-wrapper{ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  white-space: nowrap;
+  grid-gap: 8px;
+  >label {
+    margin-left: 0 !important;
+  }
+}

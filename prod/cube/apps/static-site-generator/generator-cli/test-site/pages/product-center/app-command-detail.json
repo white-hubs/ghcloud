@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-command-detail.html",
+  "meta": {
+    "title": "指挥调度 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进 技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企 业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+    "keywords": "指挥调度,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+        "productName": "指挥调度",
+        "productDescription": "运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进 技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企 业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "指挥调度"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">指挥调度基于“开河智能中枢“，以可视化、物联网技术为基础，运用Al人工智能、大数据、云计算、智慧消防、融合通信等先进技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企业综合管控和调度指挥，为安全生产、安全监管提供有力保障。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965375901568872449.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>报警统计与总览</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">提供每日报警数据的统计分析功能，用户可以了解园区每日的报警总况，包括报警类型、数量等信息，便于后续的调度推进和处理。</span></p><p style=\"text-align: center;\"><img src=\"https://cube-test.guhecloud.com:30000/minio/guhecloud-prod-ouaa/1958812208532631554.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp; &nbsp; &nbsp; <img src=\"https://cube-test.guhecloud.com:30000/minio/guhecloud-prod-ouaa/1958812246893735937.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>报警事件一键定位</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">调度中心实时同步园区所有的报警数据，在地图上点击报警事件可一键定位到事发地，并呈现周围的现场人员和设备信息，支持紧急联动设备。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>现场广播设备联动</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">接入现场广播设备，支持联动区域内广播设备进行喊话，联动信息发布系统，支持控制区域内的信息发布终端展示告警信息，撤离路线等，及时传达紧急通知和指令。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>报警工单指派与处理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">当现场发生紧急事件后，调度中心可将报警工单一键指派给现场人员，现场人员收到工单后进行处理和上报，实现紧急事件的快速处置和记录，为后续安全分析提供数据支撑。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>录音记录</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">可查看突发事件指挥调度过程中的在线呼叫的录音记录，包括主叫、被叫、呼叫类型、开始时间、结束时间等，支持按照时间段、呼叫类型、号码进行检索查询，实现事件处理留痕。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>系统配置</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">可配置对讲组，包括对讲组名称、登记、组内成员，创建时间等，实现突发事件指挥调度中快速对讲。</span></p><h4 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>地图配置</strong></span></h4><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">结合GIS地图技术，实时呈现现场人员的位置信息和相关设备位置，用户可以直观地了解现场的情况，支持地图上进行相关业务操作。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410706300930",
+            "name": "能碳管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。",
+            "href": "/product-center/app-energy-detail.html"
+          },
+          {
+            "id": "1811344408835641346",
+            "name": "用气管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/用气管理/main.png",
+            "version": "1.0.0",
+            "description": "用气管理统一管理园区所有用气安全，支持查看用气设备状态、设备相关参数；提供报警相关能力，若园区较大，可在用气安全设置管理员，配合指挥调度实现分级管理，减小指挥中心管理压力。",
+            "href": "/product-center/app-gas-detail.html"
+          },
+          {
+            "id": "1811344411255754753",
+            "name": "隐患整改",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/隐患排查/main.png",
+            "version": "1.0.0",
+            "description": "隐患整改业务主要针对园区内消防、设备类等各类隐患，管理人员根据隐患性质，确认隐患的级别同时，给出整改限时，并通过工单流程通知相关运维人员进行隐患整改工作，工作完成之后由设备管理人员确认隐患整改完成，关闭隐患单。",
+            "href": "/product-center/app-hidden-danger-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,75 @@
+.alarm-action-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  max-width: 500px;
+}
+
+.alarm-action-title__name {
+  flex: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.alarm-action-title__event {
+  min-width: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alarm-action-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .ant-select,
+  .ant-picker,
+  .ant-input,
+  .ant-input-affix-wrapper {
+    width: 100%;
+  }
+}
+
+.alarm-action-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 10px 12px;
+  color: var(--text-secondary);
+  line-height: 20px;
+  background: #f7f8fa;
+  border: 1px solid #edf0f5;
+  border-radius: 6px;
+}
+
+.alarm-action-confirm {
+  padding: 4px 0;
+  line-height: 1.8;
+}
+
+.alarm-action-confirm__title {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.alarm-action-confirm__desc {
+  margin-top: 4px;
+  color: var(--text-secondary);
+}

@@ -1,0 +1,166 @@
+import { defineComponent, h } from "vue";
+
+/**
+ * 布局内容插槽占位组件
+ * 在设计器画布中展示页面内容占位区域
+ */
+const SlotPlaceholder = defineComponent({
+  props: {
+    slot: { type: String, default: "main" },
+  },
+  setup(props) {
+    return () =>
+      h(
+        "div",
+        {
+          style: {
+            minHeight: "500px",
+            border: "2px dashed #d9d9d9",
+            borderRadius: "8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#999",
+            fontSize: "14px",
+            background: "#fafafa",
+            padding: "40px",
+          },
+        },
+        `页面内容插槽（${props.slot}）`,
+      );
+  },
+});
+
+/**
+ * ssg-components 组件映射表
+ * 用于设计器画布中动态渲染组件预览
+ */
+import {
+  AboutCompanyIntro,
+  AboutContact,
+  AboutHonorTabs,
+  AboutTeamGallery,
+  AppDetailHero,
+  ApplicationScene,
+  AppRecommendations,
+  ArticleDetail,
+  AssetLibrary,
+  BrandLogos,
+  BusinessIconMarquee,
+  CapabilityDetails,
+  CaseCard,
+  CaseDetail,
+  CaseShowcase,
+  CaseShowcaseSimple,
+  CaseSolution,
+  CaseVideoShowcase,
+  CategoryTabs,
+  ConsultationForm,
+  CoreTechStack,
+  DerivativeProductGrid,
+  EngineCards,
+  EngineFeatures,
+  EvaluationStandards,
+  FloatingSidebar,
+  HardwareProducts,
+  IndustryCases,
+  IntelligentAnalysis,
+  IntelligentHub,
+  ManagedAdvantages,
+  ModelTransform,
+  ModelingAssetLibrary,
+  ModelingBeauty,
+  NavMenu,
+  NewsSection,
+  Pagination,
+  PainPoints,
+  ProcessFlow,
+  ProductApplication,
+  ProductDetailAnchor,
+  ProductDetailHero,
+  ProductMatrix,
+  ProductSearchHero,
+  ProtocolTags,
+  RichText,
+  ScenarioCarousel,
+  SceneCase,
+  ServiceAdvantages,
+  ServiceOverview,
+  ServiceTeam,
+  SiteFooter,
+  SupportCards,
+  SupportingProducts,
+  SolutionDesign,
+  SwiperCarousel,
+  ValueProposition,
+  VideoPlayer,
+} from "@ghcloud/cube-static-site-generator-components";
+
+export const COMPONENT_MAP: Record<string, unknown> = {
+  __slot__: SlotPlaceholder,
+  AboutCompanyIntro,
+  AboutContact,
+  AboutHonorTabs,
+  AboutTeamGallery,
+  AppDetailHero,
+  ApplicationScene,
+  AppRecommendations,
+  ArticleDetail,
+  AssetLibrary,
+  BrandLogos,
+  BusinessIconMarquee,
+  CapabilityDetails,
+  CaseCard,
+  CaseDetail,
+  CaseShowcase,
+  CaseShowcaseSimple,
+  CaseSolution,
+  CaseVideoShowcase,
+  CategoryTabs,
+  ConsultationForm,
+  CoreTechStack,
+  DerivativeProductGrid,
+  EngineCards,
+  EngineFeatures,
+  EvaluationStandards,
+  FloatingSidebar,
+  HardwareProducts,
+  IndustryCases,
+  IntelligentAnalysis,
+  IntelligentHub,
+  ManagedAdvantages,
+  ModelTransform,
+  ModelingAssetLibrary,
+  ModelingBeauty,
+  NavMenu,
+  NewsSection,
+  Pagination,
+  PainPoints,
+  ProcessFlow,
+  ProductApplication,
+  ProductDetailAnchor,
+  ProductDetailHero,
+  ProductMatrix,
+  ProductSearchHero,
+  ProtocolTags,
+  RichText,
+  ScenarioCarousel,
+  SceneCase,
+  ServiceAdvantages,
+  ServiceOverview,
+  ServiceTeam,
+  SiteFooter,
+  SupportCards,
+  SupportingProducts,
+  SolutionDesign,
+  SwiperCarousel,
+  ValueProposition,
+  VideoPlayer,
+};
+
+/**
+ * 获取组件的 Vue 组件定义
+ */
+export function getVueComponent(name: string): unknown | undefined {
+  return COMPONENT_MAP[name];
+}

@@ -1,0 +1,206 @@
+.editContainer {
+  padding: 24px;
+  background: #fff;
+  
+  .basicInfo {
+    margin-bottom: 24px;
+    margin-top: 24px;
+    
+    .infoRow {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      
+      .infoItem {
+        // FormItem 样式调整
+        &:global(.ant-form-item) {
+          margin-bottom: 0 !important;
+          
+          :global(.ant-form-item-label) {
+            padding: 0 !important;
+            
+            > label {
+              font-size: 14px;
+              color: #262626;
+              height: 32px;
+              line-height: 32px;
+              
+              &.ant-form-item-required {
+                &::before {
+                  color: #ff4d4f;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+          
+          :global(.ant-form-item-control) {
+            margin-left: 8px !important;
+          }
+        }
+        
+        // 非表单项的样式（上次迭代版本）
+        &:not(.ant-form-item) {
+          display: flex;
+          align-items: center;
+          height: 32px;
+          
+          .label {
+            font-size: 14px;
+            color: #262626;
+            margin-right: 8px;
+            white-space: nowrap;
+          }
+          
+          .value {
+            color: #595959;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  
+  .iterationContent {
+    margin-bottom: 40px;
+    margin-top: 24px;
+    
+    .tableContainer {
+      // 移除外边框，使用更简洁的样式
+      .tableHeader {
+        display: flex;
+        height: 40px;
+        border-bottom: 1px solid #f0f0f0;
+        
+        .headerCell {
+          display: flex;
+          align-items: center;
+          padding: 0 16px;
+          font-size: 14px;
+          color: #8c8c8c;
+          
+          &.typeCol {
+            width: 120px;
+          }
+          
+          &.contentCol {
+            flex: 1;
+          }
+          
+          &.actionCol {
+            width: 80px;
+            justify-content: center;
+          }
+        }
+      }
+      
+      .tableBody {
+        .tableRow {
+          display: flex;
+          min-height: 40px;
+          border-bottom: 1px solid #f0f0f0;
+          
+          &:last-child {
+            border-bottom: none;
+          }
+          
+          .tableCell {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            
+            &.typeCol {
+              width: 120px;
+            }
+            
+            &.contentCol {
+              flex: 1;
+            }
+            
+            &.actionCol {
+              width: 80px;
+              justify-content: center;
+            }
+          }
+          
+          .typeSelect {
+            width: 100%;
+            
+            :global(.ant-select-selector) {
+              border: none !important;
+              box-shadow: none !important;
+              background: transparent !important;
+              padding: 0 !important;
+            }
+            
+            :global(.ant-select-selection-item) {
+              padding: 0 !important;
+            }
+          }
+          
+          .contentInput {
+            width: 100%;
+            
+            :global(.ant-input) {
+              border: none !important;
+              box-shadow: none !important;
+              background: transparent !important;
+              padding: 0 !important;
+            }
+          }
+          
+          .deleteBtn {
+            color: #ff4d4f;
+            cursor: pointer;
+            font-size: 14px;
+            
+            &:hover {
+              color: #ff7875;
+            }
+          }
+        }
+      }
+    }
+    
+    .addButton {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      color: #1890ff;
+      cursor: pointer;
+      font-size: 14px;
+      background: none;
+      border: none;
+      padding: 0;
+      
+      &:hover {
+        color: #40a9ff;
+      }
+      
+      .addIcon {
+        margin-right: 4px;
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .footerActions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 32px;
+  }
+}
+
+// 全局样式调整
+:global(.ant-select-dropdown) {
+  z-index: 9999;
+}
+
+// 为页面底部留出空间
+:global(body) {
+  padding-bottom: 64px;
+}

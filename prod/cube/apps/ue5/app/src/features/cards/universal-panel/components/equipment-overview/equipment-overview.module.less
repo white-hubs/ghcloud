@@ -1,0 +1,55 @@
+@import "../../_shared/universal-panel-v2-shared.less";
+@import "@/shared-ui/panel/v2-ring-legend.less";
+
+:global {
+  .equipment-overview-v2-panel .legend-item {
+    .v2-ring-legend-item();
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+  }
+
+  .equipment-overview-v2-panel .stat-card {
+    appearance: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+  }
+
+  .equipment-overview-v2-panel .stat-content {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .equipment-overview-v2-panel .stat-label {
+    display: block;
+  }
+
+  .equipment-overview-v2-panel .stat-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .equipment-overview-v2-panel .stat-value {
+    display: inline-block;
+  }
+
+  .equipment-overview-v2-panel .stat-unit {
+    flex: 0 0 auto;
+    color: var(--visual-muted-color, #d0deee);
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    line-height: 1;
+  }
+
+  :root[data-visual-theme="minimal-white"] .equipment-overview-v2-panel .stat-unit {
+    color: #6b84a8;
+  }
+}
+
+.v2-minimal-white-panel(equipment-overview-v2-panel);

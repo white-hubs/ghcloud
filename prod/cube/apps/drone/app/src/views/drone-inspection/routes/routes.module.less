@@ -1,0 +1,367 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.editorContent {
+  padding-bottom: 12px;
+}
+
+.nameButton,
+.actionButton {
+  padding: 0;
+}
+
+.statusTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.statusDraft {
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+.statusEnabled {
+  color: #078242;
+  background: #e8f7ef;
+}
+
+.statusDisabled {
+  color: #cf1322;
+  background: #fff1f0;
+}
+
+.statusDefault {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.summaryBar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #edf0f5;
+  border-radius: 4px;
+  background: #f8fafc;
+
+  div {
+    min-width: 0;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 4px;
+    color: #6b7280;
+    font-size: 12px;
+  }
+
+  strong {
+    display: block;
+    overflow: hidden;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.routeForm {
+  padding-top: 4px;
+}
+
+.formSection {
+  padding: 16px 0 4px;
+  border-bottom: 1px solid #edf0f5;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  margin-bottom: 14px;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+.fullControl {
+  width: 100%;
+}
+
+.waypointEditor {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) 220px 360px;
+  gap: 14px;
+  height: calc(100vh - 300px);
+  min-height: 560px;
+}
+
+.mapPanel,
+.waypointList,
+.waypointDetail {
+  min-height: 0;
+  border: 1px solid #edf0f5;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.mapPanel {
+  overflow: hidden;
+  background: #eef3f8;
+}
+
+.waypointList,
+.waypointDetail {
+  overflow: auto;
+}
+
+.waypointListHeader {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #edf0f5;
+  background: #fff;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.waypointItems {
+  padding: 8px;
+}
+
+.selectionHint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d8e8ff;
+  background: #f3f8ff;
+  color: #165dff;
+  font-size: 12px;
+}
+
+.waypointItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #edf0f5;
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  cursor: grab;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    opacity 0.15s ease;
+
+  &:hover,
+  &.activeWaypoint {
+    border-color: #1684fc;
+    background: #f3f8ff;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.readonlyWaypointItem {
+  cursor: default;
+
+  &:active {
+    cursor: default;
+  }
+}
+
+.draggingWaypoint {
+  border-style: dashed;
+  opacity: 0.58;
+}
+
+.waypointDragHandle {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  color: #94a3b8;
+}
+
+.waypointItemMain {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.waypointDeleteButton {
+  flex: none;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.waypointIndex {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #1684fc;
+  background: #e8f2ff;
+  font-weight: 700;
+}
+
+.waypointInfo {
+  flex: 1;
+  min-width: 0;
+
+  strong,
+  em {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  strong {
+    color: #1f2937;
+    font-size: 13px;
+  }
+
+  em {
+    margin-top: 3px;
+    color: #6b7280;
+    font-size: 12px;
+    font-style: normal;
+  }
+}
+
+.waypointDetail {
+  padding: 14px;
+}
+
+.waypointDetailHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #edf0f5;
+
+  strong,
+  span {
+    display: block;
+  }
+
+  strong {
+    color: #1f2937;
+    font-size: 15px;
+  }
+
+  span {
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 12px;
+  }
+}
+
+.pointFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 12px;
+}
+
+.inlineActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 0 0 12px;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 1px solid #edf0f5;
+  border-radius: 4px;
+  background: #f8fafc;
+
+  span {
+    color: #374151;
+  }
+}
+
+.emptyWaypoint,
+.loadingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: #6b7280;
+}
+
+.pageFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 1280px) {
+  .formGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .waypointEditor {
+    grid-template-columns: minmax(360px, 1fr) 210px 340px;
+  }
+}

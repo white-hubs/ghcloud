@@ -1,0 +1,87 @@
+.rankItem {
+
+  margin-top: 6px;
+
+  .rank-info {
+    padding-right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 6px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: right;
+    color: #e6f7ff;
+
+    .info-left {
+      display: flex;
+      align-items: center;
+
+      .rank-num {
+        font-size: 7px;
+        font-weight: Regular;
+        text-align: left;
+        color: #d0deee;
+        margin-right: 4px;
+      }
+
+      .rank-name {
+        font-size: 7px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #e6f7ff;
+      }
+
+    }
+
+    .info-right {
+      .count {
+        font-size: 9px;
+        font-family: Roboto, Roboto-Regular;
+        font-weight: Regular;
+        text-align: right;
+        color: #e6f7ff;
+      }
+    }
+  }
+
+  .rank-progress {
+    margin-top: 3px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.10);
+
+    .progress-bar {
+      height: 100%;
+
+      position: relative;
+
+      &.one {
+        background: linear-gradient(to right, #06132e, #d82a2a);
+      }
+
+      &.two {
+        background: linear-gradient(to right, #0a101d, #e77b32);
+      }
+
+      &.three {
+        background: linear-gradient(to right, #072358, #2989ff);
+      }
+
+      &.normal {
+        background: linear-gradient(to right, #072358, #97c3f8);
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 6.5px;
+        background: #ffffff;
+        top: -1px;
+        right: 0;
+      }
+    }
+  }
+}

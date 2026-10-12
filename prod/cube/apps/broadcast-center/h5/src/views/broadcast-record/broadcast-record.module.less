@@ -1,0 +1,28 @@
+.record-list {
+  min-height: 100vh;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 12px 19px;
+
+  .record-list-item {
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    .record-info-item{
+      display: flex;
+      margin-bottom: 10px;
+      .label{
+        white-space: nowrap;
+      }
+      .label,.value{
+        display: inline-block;
+        color: black;
+      }
+    }
+  }
+}
+
+:global(.van-pull-refresh) {
+  background-color: #f7f7f7;
+}

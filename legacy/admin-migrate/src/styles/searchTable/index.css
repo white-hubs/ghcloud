@@ -1,0 +1,65 @@
+:deep(.ant-layout-header) {
+  min-height: 64px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+:deep(.ant-layout-header) .ant-form-item-control-input {
+  width: 200px;
+  text-align: left;
+}
+:deep(.ant-layout-content) {
+  max-height: calc(100% - 64px);
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+:deep(.ant-table-body-inner) {
+  overflow-y: auto;
+}
+:deep(.ant-table-column-title) {
+  font-family: "SourceHanSansCN-Medium-2";
+  color: #535b6c;
+  font-weight: 500;
+}
+:deep(.ant-table-tbody) {
+  color: #666666;
+}
+.menuOperate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  height: 52px;
+  border-bottom: 1px solid #eee;
+}
+:deep(.rightCtr .ant-layout-header .ant-form) {
+  grid-row-gap: 15px;
+}
+:deep(.rightCtr .ant-layout-header .ant-form) .ant-form-item-label > label {
+  width: 70px;
+}
+:deep(.ant-form.p2) {
+  grid-row-gap: 15px;
+}
+:deep(.ant-form.p2) .ant-form-item-label {
+  width: 70px;
+}
+:deep(.ant-layout-header .ant-select-selector) {
+  width: 200px !important;
+}
+:deep(.ant-layout-header .ant-select-selector) .ant-select-selection-placeholder,
+:deep(.ant-layout-header .ant-select-selector) .ant-select-selection-item {
+  text-align: left;
+}
+:deep(.ant-table.ant-table-bordered .ant-table-title) {
+  border: none;
+}
+:deep(.ant-calendar-picker-input) {
+  width: 200px;
+}
+:deep(.ant-table-title) {
+  border: none;
+  text-align: left;
+}

@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+}
+
+.object-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.object-group {
+  padding: 0 12px;
+}
+
+.object-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 40px;
+  margin-bottom: 8px;
+}
+
+.object-group-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #1f2633;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.object-group-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #edf4ff;
+  font-size: 14px;
+}
+
+.object-group-count {
+  color: #86909c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.object-group-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.object-group :global(.ant-table-wrapper) {
+  width: 100%;
+}
+
+.modal-body {
+  min-height: 420px;
+}
+
+@media (max-width: 960px) {
+  .object-group-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .object-group-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

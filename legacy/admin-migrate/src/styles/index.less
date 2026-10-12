@@ -1,0 +1,110 @@
+// @import url('~basscss/css/basscss.css');
+// @import url('./theme/color.less');
+@import "~basscss/css/basscss.css";
+@import "./theme/color.less";
+.deleteRow {
+  color: @danger_color;
+}
+.normalRow {
+  color: @green;
+}
+.auditRow {
+  color: @auditRow;
+}
+.singleLine {
+  @media (max-width: 1366px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  @media (min-width: 1366px) and (max-width: 1600px) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  @media (min-width: 1600px) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+:deep(.ant-input-textarea) {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+  }
+}
+.verticalLine {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: @blue;
+    vertical-align: middle;
+  }
+}
+.bottomLine {
+  border-bottom: 1px solid @tableBottomLine;
+  padding-bottom: 12px;
+}
+.ant-layout {
+  height: 100%;
+  &-header {
+    height: auto;
+    padding: 0;
+    line-height: 100%;
+    background-color: @white;
+  }
+}
+:deep(.ant-btn) {
+  line-height: 1.5;
+}
+.a_primary {
+  color: @blue;
+}
+.a_danger {
+  color: @danger_color;
+}
+.view_sider {
+  width: 200px;
+  margin-right: 10px;
+  padding: 20px 10px;
+  text-align: left;
+}
+.form_header {
+  padding: 20px 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.info_content {
+  background-color: @white;
+  border-radius: 4px;
+}
+.edit_form {
+  height: 100%;
+  background-color: @white;
+  border-radius: 4px;
+  padding: 10px;
+  &_header {
+    border-bottom: solid 1px #ebf0fb;
+    font-weight: 500;
+    text-align: left;
+    font-size: 16px;
+    padding: 16px;
+  }
+  &_content {
+    padding: 20px 30px;
+  }
+  &_footer {
+    border-top: solid 1px #ebf0fb;
+    padding: 6px 20px;
+    background-color: @white;
+    text-align: right;
+  }
+}
+.ant-layout-header{
+  background: #fff !important;
+}

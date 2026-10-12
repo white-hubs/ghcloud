@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "PangMenZhengDaoBiao";
+  src: url("/resource/v1/fonts/PangMenZhengDaoBiao.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCN-Medium-2";
+  src: url("/resource/v1/admin-migrate/fonts/chinese/SourceHanSansCN-Medium-2.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCN-Regular-2";
+  src: url("/resource/v1/admin-migrate/fonts/chinese/SourceHanSansCN-Regular-2.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@ghcloud/cube-scada-studio-service",
+  "private": false,
+  "version": "0.1.2",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "bun run --watch src/main.ts",
+    "start": "bun run src/main.ts",
+    "build": "bun build src/main.ts --target bun --outdir dist",
+    "build:bin": "bun build src/main.ts --target bun --compile --outfile dist/server"
+  },
+  "dependencies": {
+    "@cube-scada/core": "workspace:*",
+    "@dangao/bun-server": "catalog:bun-server"
+  }
+}

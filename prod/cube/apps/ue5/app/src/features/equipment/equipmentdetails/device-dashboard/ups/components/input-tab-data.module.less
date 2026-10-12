@@ -1,0 +1,98 @@
+
+.card {
+  border-radius: 4px;
+  padding: 0;
+  .title {
+    font-family: Source Han Sans, Source Han Sans;
+    font-size: 14px;
+    color: #1D2129;
+    line-height: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E4E7EDFF;
+  }
+
+  .tip {
+    margin: 5px 10px 15px 0;
+    padding: 10px 0 10px 20px;
+    color: #F9FAFC;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #2989FF;
+
+    font-size: 14px;
+    font-family: Source Han Sans, Source Han Sans;
+    font-weight: 400;
+    color: #F9FAFC;
+
+    .val {
+      font-size: 14px;
+      font-family: Source Han Sans, Source Han Sans;
+      font-weight: 500;
+      color: #F9FAFC;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .title2 {
+      font-size: 14px;
+      flex-shrink: 0;
+      font-family: Source Han Sans, Source Han Sans;
+      font-weight: 500;
+      color: #fff;
+      margin-right: 20px;
+    }
+
+  }
+
+  &.list-data {
+    .wrap {
+      .list {
+        display: flex;
+
+        .item {
+          width: 78px;
+          height: 78px;
+        }
+      }
+    }
+
+  }
+}
+
+.chart-item {
+  width: 200px;
+  height: 170px;
+  margin-bottom: 40px;
+  display: inline-block;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    color: white;
+  }
+}
+
+.content-table .a-title .ant-tabs-nav-wrap,
+:deep(.content-table .a-title .ant-tabs-nav-wrap) {
+  background-color: transparent !important;
+  border-bottom: 1px solid #E4E7EDFF;
+}
+
+.content-table .a-title {
+  :deep(.ant-tabs-nav-wrap) {
+    background-color: transparent !important;
+  }
+}
+
+:deep(.ant-tabs-nav .ant-tabs-tab),
+.ant-tabs-nav .ant-tabs-tab {
+  padding: 0;
+  font-family: Source Han Sans, Source Han Sans;
+  font-weight: 500;
+  color: #1D2129;
+  line-height: 24px;
+  padding-bottom: 6px;
+}

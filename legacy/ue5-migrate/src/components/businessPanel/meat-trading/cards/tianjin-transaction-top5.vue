@@ -1,0 +1,68 @@
+<template>
+  <whiteStripeTrading
+    @getTime="transactionEvent"
+    @showMore="showMoreTransaction"
+    :title="transactionTop.title"
+    :table-head="transactionTop.tableHead"
+    :areaAlarmRank="transactionTop.areaAlarmRank"
+  />
+  <modalTransactionTable :showModal="showTransactionModal" :type="transactionData" @close="closeTransactionModal" />
+</template>
+
+<script setup lang="ts">
+import { ref, reactive } from "vue";
+
+import modalTransactionTable from "../components/modal-transaction-table.vue";
+import whiteStripeTrading from "../components/white-stripe-trading.vue";
+import { supplierDetails } from "@/api/mdata";
+import { supplTradeRank } from "@/api/slide-tianjin";
+
+const transactionData = ref("TODAY");
+const showTransactionModal = ref(false);
+
+const transactionTop = reactive({
+  title: "白条交易大户（Top5）",
+  tableHead: ["商家名称", "手机号", "来货重量(kg)"],
+  areaAlarmRank: [],
+});
+
+const transactionEvent = (value) => {
+  transactionData.value = value;
+  supplTradeTop();
+};
+
+const showMoreTransaction = (item: any) => {
+  showTransactionModal.value = true;
+};
+
+const closeTransactionModal = () => {
+  showTransactionModal.value = false;
+};
+
+//  白条交易大户（TOP5）
+const supplTradeTop = async () => {
+  let res = await supplTradeRank({ type: transactionData.value, pageSize: 5 });
+  const wholesalerData = res.records.map((item) => {
+    return supplierDetails(item.supplierId);
+  });
+  let wholesalerList = [];
+  try {
+    await Promise.all(wholesalerData).then((res) => {
+      wholesalerList = res;
+    });
+  } catch (error) {}
+
+  transactionTop.areaAlarmRank = res.records.map((item) => {
+    return {
+      alarmNum: item.tradeWeight,
+      chainRatio: item.qoqTradeWeight,
+      name: item.supplyName,
+      ratio: item.tradeWeight, //占比不准确
+      code: item.supplierCode,
+      phone: wholesalerList.find((wholesaler) => wholesaler.id === item.supplierId)?.phone,
+    };
+  });
+};
+</script>
+
+<style scoped lang="less"></style>

@@ -1,0 +1,43 @@
+.container {
+  height: 100%;
+  padding: 30px 24px 64px;
+  background: #e4e4e4;
+  box-shadow: -5px 0px 13px 0px rgba(0, 0, 0, 0.10);
+
+  .search {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    width: 380px;
+    height: 58px;
+    padding: 18px;
+    background: #f6f6f6;
+    border-radius: 8px;
+
+    img {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+    }
+
+    input {
+      flex: 1;
+      margin-left: 6px;
+      background: none;
+      outline: none;
+      height: 100%;
+      height: 22px;
+      border: 0px;
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .listContainer {
+    height: calc(100% - 58px);
+    background: '#fff'
+  }
+}

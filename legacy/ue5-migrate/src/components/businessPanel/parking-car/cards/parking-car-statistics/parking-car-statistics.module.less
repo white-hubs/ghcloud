@@ -1,0 +1,123 @@
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+
+  .iconWrapper {
+    position: relative;
+    margin-right: 20px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .info {
+    flex: 1;
+
+    .mainStat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      background: linear-gradient(90deg,rgba(0,121,255,0.26), rgba(0,121,255,0.26) 28%, rgba(0,119,255,0.24) 37%, rgba(0,118,255,0.16) 56%, rgba(0,96,208,0.00));
+      .value {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 14px;
+      }
+    }
+
+    .subStats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      .subStatItem {
+        .subValue {
+          color: #f5a623; // 橙色，您可以根据需要调整
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+// 放大弹窗内的样式
+.zoomWrapper {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+
+  .zoomIconWrapper {
+    position: relative;
+    margin-right: 40px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .zoomIcon {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .zoomInfo {
+    flex: 1;
+
+    .zoomMainStat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      background: linear-gradient(90deg,rgba(0,121,255,0.26), rgba(0,121,255,0.26) 28%, rgba(0,119,255,0.24) 37%, rgba(0,118,255,0.16) 56%, rgba(0,96,208,0.00));
+
+      .zoomStatTitle {
+        font-size: 24px;
+      }
+
+      .zoomValue {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+    }
+
+    .zoomSubStats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+
+      .zoomSubStatItem {
+        .zoomSubValue {
+          color: #f5a623;
+          margin-left: 8px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

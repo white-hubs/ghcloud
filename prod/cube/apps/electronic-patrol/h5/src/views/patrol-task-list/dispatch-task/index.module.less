@@ -1,0 +1,53 @@
+.cellContent{
+  text-align: left;
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  .cellTitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+      &.NORMAL {
+        background: linear-gradient(315deg, #005DFF 0%, #0089FF 69%, #5FB5FF 100%);
+      }
+
+      &.ABNORMAL {
+        background: linear-gradient(315deg, #de3535 0%, #d92626 69%, #cf2e2e 100%);
+      }
+    // overflow: hidden;
+    // text-overflow:ellipsis;
+    // white-space: nowrap;
+    span{
+      text-align: left;
+      margin-right: 10px;
+    }
+     .status {
+    background: var(--van-gray-7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-left: 6px;
+
+    &.NORMAL {
+      background: var(--van-success-color);
+      color: #fff;
+    }
+
+    &.ABNORMAL {
+      background: var(--van-danger-color);
+      color: #fff;
+    }
+  }
+  }
+  .cellTitleFlex{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+}
+ 
+.tags{
+  font-size: 12px;
+  padding: 1px 3px;
+}

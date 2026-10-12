@@ -1,0 +1,80 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 230px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tableSurface {
+  /* 表头 30 + 5×40 */
+  flex: 0 0 230px;
+  height: 230px;
+  min-width: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 230px;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .tableSurface,
+  .emptySurface {
+    flex-basis: 430px;
+    height: 430px;
+    min-height: 430px;
+  }
+}
+
+:global(.information-publish-v2-panel .roll-table .header) {
+  height: 30px;
+  color: var(--visual-muted-color, #d0deee);
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  font-weight: 700;
+  line-height: 1.2;
+  background: rgba(41, 137, 255, 0.16);
+  border-bottom: 1px solid rgba(70, 166, 255, 0.24);
+}
+
+:global(.information-publish-v2-panel .roll-table .table-tr) {
+  height: 40px;
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  background: linear-gradient(90deg, rgba(42, 112, 198, 0.14), rgba(255, 255, 255, 0.03));
+  border-bottom: 1px solid rgba(70, 166, 255, 0.12);
+}
+
+:global(.information-publish-v2-panel .roll-table .table-tr:nth-child(2n)) {
+  background: linear-gradient(90deg, rgba(42, 112, 198, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+.v2-minimal-white-panel(information-publish-v2-panel);
+
+:global(:root[data-visual-theme="minimal-white"] .information-publish-v2-panel) {
+  .roll-table .header {
+    color: #49628f;
+    background: rgba(214, 233, 255, 0.46);
+    border-bottom: 1px solid rgba(116, 158, 210, 0.25);
+  }
+
+  .roll-table .table-tr {
+    background: linear-gradient(90deg, rgba(224, 239, 255, 0.98), rgba(247, 251, 255, 0.98));
+    border-bottom: 1px solid rgba(116, 158, 210, 0.18);
+  }
+
+  .roll-table .table-tr:nth-child(2n) {
+    background: linear-gradient(90deg, rgba(236, 246, 255, 0.98), rgba(255, 255, 255, 0.98));
+  }
+}

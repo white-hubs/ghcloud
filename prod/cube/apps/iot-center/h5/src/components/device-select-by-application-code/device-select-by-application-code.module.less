@@ -1,0 +1,121 @@
+.cell-group {
+  margin: 3vw;
+}
+
+.cell-title {
+  display: flex;
+  align-items: center;
+  font-family: Source Han Sans CN, Source Han Sans CN;
+  font-weight: 500;
+  font-size: 13px;
+  color: #1F3140;
+  margin-left: 10px;
+
+  & :first-child {
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+}
+
+.cell {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cell-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .cell-content {
+    margin-left: 10px;
+    width: 66vw;
+    display: flex;
+    align-items: center;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6px;
+    color: #666666;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    label {
+      color: #666666;
+    }
+  }
+}
+
+.filter {
+  margin-left: 12px;
+  margin-top: 20px;
+
+  .checkbox {
+    margin-top: 10px;
+    margin-right: 12px;
+    border-radius: 4px 4px 4px 4px;
+    width: 90px;
+    height: 32px;
+    color: #1F3140;
+    background-color: #F8F9F9;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.radio-button {
+  background: #F8F9F9;
+  border-radius: 4px 4px 4px 4px;
+  width: 20vw;
+  color: black;
+  margin: 0;
+  margin-bottom: 2vw;
+  margin-left: 3%;
+  height: 30px;
+  border: 0;
+  font-size: 13px;
+  span{text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;}
+  &.active {
+    background: #E6EFFF;
+    color: var(--van-primary-color) !important;
+  }
+}
+.checkbox-button {
+  background: #F8F9F9;
+  border-radius: 4px 4px 4px 4px;
+  width: 25vw;
+  color: black;
+  margin: 0;
+  margin-bottom: 2vw;
+  margin-left:0vw !important;
+  margin-right:3%;
+  padding:0px 18px;
+  height: 30px;
+  border: 0;
+  font-size: 13px;
+  span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;}
+  &.active {
+    // background: #E6EFFF;
+    border: 1px solid var(--van-primary-color) ;
+    color: var(--van-primary-color) !important;
+  }
+  .checkIcon{
+    width: 16px;
+    height: 16px;
+    border-radius: 5px 0px 0px 0px;
+    background-color:var(--van-primary-color)  ;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+}

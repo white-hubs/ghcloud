@@ -1,0 +1,131 @@
+.top-card {
+  margin-top: 8px;
+  padding: 16px 30px 15px 14px;
+  background: #fff;
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f8f9f9;
+
+    .card-title {
+      margin-bottom: 6px;
+      font-size: 16px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+      font-weight: Bold;
+      color: #1f3140;
+    }
+
+    .status-level {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+
+      .status {
+        padding: 5px;
+        border-radius: 4px;
+      }
+
+      .ALARM_UN_CONFIRMED,
+      .ALARM_PROGRESS_CONFIRMED {
+        color: #f69703;
+        background: rgba(246, 151, 3, 0.10);
+      }
+
+      .ALARM_SUSPEND {
+        background: rgba(21, 120, 255, 0.10);
+        color: #1578FF;
+      }
+
+      .ALARM_HANDLER {
+        background: rgba(106, 181, 57, 0.10);
+        color: #6AB539;
+      }
+
+      .level {
+        padding: 5px;
+        margin-left: 8px;
+        border-radius: 4px;
+      }
+
+      .one_level {
+        color: #f01c1c;
+        background: rgba(240, 28, 28, 0.10);
+      }
+
+      .two_level {
+        color: #F69703;
+        background: rgba(246, 151, 3, 0.10);
+      }
+
+      .three_level {
+        color: #F4CF00;
+        background: rgba(244, 207, 0, 0.10)
+      }
+
+      .four_level {
+        color: #1578FF;
+        background: rgba(21, 120, 255, 0.10);
+      }
+    }
+  }
+
+  .card-content {
+    .content-item {
+      display: flex;
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      margin-top: 8px;
+      color: #666666;
+      align-items: center;
+
+      .item-label {
+        flex-shrink: 0;
+      }
+
+      &:last-child {
+        margin-top: 6px;
+      }
+
+      &:nth-last-child(2) {
+        margin-top: 6px;
+      }
+
+      .item-value {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .item-value-address {
+          max-width: 200px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          .item-value-popover {
+            position: absolute;
+            z-index: 100;
+            top: 20px;
+            background: #4a4a4a;
+            border: 1px solid #f8f9f9;
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            max-width: 200px;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+          }
+        }
+
+      }
+    }
+  }
+}

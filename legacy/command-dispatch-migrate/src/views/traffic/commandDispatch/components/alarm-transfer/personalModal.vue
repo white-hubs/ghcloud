@@ -1,0 +1,176 @@
+<template>
+  <custom-modal className="alarm-transfer-modal" v-model:visible="visible" :isMinimized="isMinimized" @changeIsMinimized="changeIsMinimized" :title="'选择人员'" @close="close">
+    <div class="alarm-transfer-modal-content flex-column">
+      <div class="conent-body" v-if="transferModal.id">
+        <personList :id="transferModal.id" :personalList="personalList" @close="close" @submit="submit"/>
+      </div>
+    </div>
+  </custom-modal>
+</template>
+
+<script>
+import { defineComponent, onMounted, reactive, ref, toRefs } from "vue";
+import personList from "../../person.vue";
+import { CloseOutlined } from "@ant-design/icons-vue";
+import customModal from '../custom-modal/index.vue'
+
+export default defineComponent({
+  components: {
+    CloseOutlined,
+    customModal,
+    personList
+  },
+  props: {
+    transferModal: {
+      type: Object,
+      default: () => { }
+    },
+    visible: {
+      type: Boolean,
+      default: false
+    },
+    isMinimized:{
+      Boolean,
+      default: false
+    },
+    personalList:{
+      type: Array,
+      default: () => {
+        return []
+      }
+    }
+  },
+  setup(props, { emit }) {
+    const close = () => {
+      emit('closeTransfer')
+    }
+    const submit = (ids) => {
+      emit('submit', ids)
+    } 
+    const changeIsMinimized=(bol)=>{
+      emit('update:isMinimized',bol)
+    }
+    return {
+      close,
+      submit,
+      changeIsMinimized
+    }
+  }
+})
+</script>
+
+<style lang="less">
+.alarm-transfer-modal {
+  width: 1000px;
+  // height: 650px;
+  position: fixed;
+  top: calc(50% - 650px /2);
+  left: calc(50% - 900px /2);
+  background: rgba(4, 14, 38, 0.96);
+  border: 1px solid rgba(41, 137, 255, 1);
+  z-index: 999;
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .alarm-transfer-modal-header {
+    height: 50px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      >span {
+        font-size: 16px;
+        font-family: PingFang SC-Medium;
+        font-weight: 500;
+        color: #ffffff;
+        margin-left: 4px;
+      }
+    }
+
+    .header-close {
+      width: 24px;
+      height: 24px;
+      background: #101010;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .alarm-transfer-modal-content {
+    // height: 565px;
+    width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
+
+    .content-tabs {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      font-family: PingFang SC-Regular;
+      font-weight: 400;
+      color: #ffffff;
+
+      >div {
+        width: 84px;
+        height: 26px;
+        opacity: 1;
+        border: 1px solid rgba(183, 197, 211, 0.3);
+        margin-right: 12px;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 2px 0px rgba(56, 142, 243, 0.45);
+        cursor: pointer;
+
+        >span {
+          display: inline-block;
+          color: white;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+          margin-left: 2px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.active {
+          background: #2989ff;
+
+          >span {
+            color: rgba(4, 14, 38, 0.96);
+            background: white;
+          }
+        }
+      }
+    }
+
+    .conent-body {
+      flex: 1;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+  }
+
+  .vidiconcontent {
+    height: 670px;
+  }
+}
+</style>

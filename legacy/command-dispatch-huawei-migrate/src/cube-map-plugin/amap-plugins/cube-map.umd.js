@@ -1,0 +1,465 @@
+(function (M, w) {
+  typeof exports == "object" && typeof module < "u"
+    ? w(exports)
+    : typeof define == "function" && define.amd
+      ? define(["exports"], w)
+      : ((M = typeof globalThis < "u" ? globalThis : M || self), w((M["cube-map"] = {})));
+})(this, function (M) {
+  "use strict";
+  var H = Object.defineProperty;
+  var N = (M, w, v) => (w in M ? H(M, w, { enumerable: !0, configurable: !0, writable: !0, value: v }) : (M[w] = v));
+  var b = (M, w, v) => (N(M, typeof w != "symbol" ? w + "" : w, v), v);
+  var w =
+    typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
+  function v(d) {
+    return d && d.__esModule && Object.prototype.hasOwnProperty.call(d, "default") ? d.default : d;
+  }
+  var L = { exports: {} };
+  (function (d, e) {
+    (function (t, n) {
+      d.exports = n();
+    })(w, function () {
+      function t(a) {
+        var f = [];
+        return (a.AMapUI && f.push(n(a.AMapUI)), a.Loca && f.push(o(a.Loca)), Promise.all(f));
+      }
+      function n(a) {
+        return new Promise(function (f, i) {
+          var c = [];
+          if (a.plugins) for (var u = 0; u < a.plugins.length; u += 1) s.AMapUI.plugins.indexOf(a.plugins[u]) == -1 && c.push(a.plugins[u]);
+          if (l.AMapUI === r.failed) i("前次请求 AMapUI 失败");
+          else if (l.AMapUI === r.notload) {
+            ((l.AMapUI = r.loading), (s.AMapUI.version = a.version || s.AMapUI.version), (u = s.AMapUI.version));
+            var g = document.body || document.head,
+              h = document.createElement("script");
+            ((h.type = "text/javascript"),
+              (h.src = "https://webapi.amap.com/ui/" + u + "/main.js"),
+              (h.onerror = function (p) {
+                ((l.AMapUI = r.failed), i("请求 AMapUI 失败"));
+              }),
+              (h.onload = function () {
+                if (((l.AMapUI = r.loaded), c.length))
+                  window.AMapUI.loadUI(c, function () {
+                    for (var p = 0, m = c.length; p < m; p++) {
+                      var I = c[p].split("/").slice(-1)[0];
+                      window.AMapUI[I] = arguments[p];
+                    }
+                    for (f(); A.AMapUI.length; ) A.AMapUI.splice(0, 1)[0]();
+                  });
+                else for (f(); A.AMapUI.length; ) A.AMapUI.splice(0, 1)[0]();
+              }),
+              g.appendChild(h));
+          } else
+            l.AMapUI === r.loaded
+              ? a.version && a.version !== s.AMapUI.version
+                ? i("不允许多个版本 AMapUI 混用")
+                : c.length
+                  ? window.AMapUI.loadUI(c, function () {
+                      for (var p = 0, m = c.length; p < m; p++) {
+                        var I = c[p].split("/").slice(-1)[0];
+                        window.AMapUI[I] = arguments[p];
+                      }
+                      f();
+                    })
+                  : f()
+              : a.version && a.version !== s.AMapUI.version
+                ? i("不允许多个版本 AMapUI 混用")
+                : A.AMapUI.push(function (p) {
+                    p
+                      ? i(p)
+                      : c.length
+                        ? window.AMapUI.loadUI(c, function () {
+                            for (var m = 0, I = c.length; m < I; m++) {
+                              var G = c[m].split("/").slice(-1)[0];
+                              window.AMapUI[G] = arguments[m];
+                            }
+                            f();
+                          })
+                        : f();
+                  });
+        });
+      }
+      function o(a) {
+        return new Promise(function (f, i) {
+          if (l.Loca === r.failed) i("前次请求 Loca 失败");
+          else if (l.Loca === r.notload) {
+            ((l.Loca = r.loading), (s.Loca.version = a.version || s.Loca.version));
+            var c = s.Loca.version,
+              u = s.AMap.version.startsWith("2"),
+              g = c.startsWith("2");
+            if ((u && !g) || (!u && g)) i("JSAPI 与 Loca 版本不对应！！");
+            else {
+              ((u = s.key), (g = document.body || document.head));
+              var h = document.createElement("script");
+              ((h.type = "text/javascript"),
+                (h.src = "https://webapi.amap.com/loca?v=" + c + "&key=" + u),
+                (h.onerror = function (p) {
+                  ((l.Loca = r.failed), i("请求 AMapUI 失败"));
+                }),
+                (h.onload = function () {
+                  for (l.Loca = r.loaded, f(); A.Loca.length; ) A.Loca.splice(0, 1)[0]();
+                }),
+                g.appendChild(h));
+            }
+          } else
+            l.Loca === r.loaded
+              ? a.version && a.version !== s.Loca.version
+                ? i("不允许多个版本 Loca 混用")
+                : f()
+              : a.version && a.version !== s.Loca.version
+                ? i("不允许多个版本 Loca 混用")
+                : A.Loca.push(function (p) {
+                    p ? i(p) : i();
+                  });
+        });
+      }
+      if (!window) throw Error("AMap JSAPI can only be used in Browser.");
+      var r;
+      (function (a) {
+        ((a.notload = "notload"), (a.loading = "loading"), (a.loaded = "loaded"), (a.failed = "failed"));
+      })(r || (r = {}));
+      var s = { key: "", AMap: { version: "1.4.15", plugins: [] }, AMapUI: { version: "1.1", plugins: [] }, Loca: { version: "1.3.2" } },
+        l = { AMap: r.notload, AMapUI: r.notload, Loca: r.notload },
+        A = { AMap: [], AMapUI: [], Loca: [] },
+        D = [],
+        J = function (a) {
+          typeof a == "function" && (l.AMap === r.loaded ? a(window.AMap) : D.push(a));
+        };
+      return {
+        load: function (a) {
+          return new Promise(function (f, i) {
+            if (l.AMap == r.failed) i("");
+            else if (l.AMap == r.notload) {
+              var c = a.key,
+                u = a.version,
+                g = a.plugins;
+              c
+                ? (window.AMap && location.host !== "lbs.amap.com" && i("禁止多种API加载方式混用"),
+                  (s.key = c),
+                  (s.AMap.version = u || s.AMap.version),
+                  (s.AMap.plugins = g || s.AMap.plugins),
+                  (l.AMap = r.loading),
+                  (u = document.body || document.head),
+                  (window.___onAPILoaded = function (p) {
+                    if ((delete window.___onAPILoaded, p)) ((l.AMap = r.failed), i(p));
+                    else
+                      for (
+                        l.AMap = r.loaded,
+                          t(a)
+                            .then(function () {
+                              f(window.AMap);
+                            })
+                            .catch(i);
+                        D.length;
+                      )
+                        D.splice(0, 1)[0]();
+                  }),
+                  (g = document.createElement("script")),
+                  (g.type = "text/javascript"),
+                  (g.src =
+                    "https://webapi.amap.com/maps?callback=___onAPILoaded&v=" +
+                    s.AMap.version +
+                    "&key=" +
+                    c +
+                    "&plugin=" +
+                    s.AMap.plugins.join(",")),
+                  (g.onerror = function (p) {
+                    ((l.AMap = r.failed), i(p));
+                  }),
+                  u.appendChild(g))
+                : i("请填写key");
+            } else if (l.AMap == r.loaded)
+              if (a.key && a.key !== s.key) i("多个不一致的 key");
+              else if (a.version && a.version !== s.AMap.version) i("不允许多个版本 JSAPI 混用");
+              else {
+                if (((c = []), a.plugins))
+                  for (u = 0; u < a.plugins.length; u += 1) s.AMap.plugins.indexOf(a.plugins[u]) == -1 && c.push(a.plugins[u]);
+                c.length
+                  ? window.AMap.plugin(c, function () {
+                      t(a)
+                        .then(function () {
+                          f(window.AMap);
+                        })
+                        .catch(i);
+                    })
+                  : t(a)
+                      .then(function () {
+                        f(window.AMap);
+                      })
+                      .catch(i);
+              }
+            else if (a.key && a.key !== s.key) i("多个不一致的 key");
+            else if (a.version && a.version !== s.AMap.version) i("不允许多个版本 JSAPI 混用");
+            else {
+              var h = [];
+              if (a.plugins) for (u = 0; u < a.plugins.length; u += 1) s.AMap.plugins.indexOf(a.plugins[u]) == -1 && h.push(a.plugins[u]);
+              J(function () {
+                h.length
+                  ? window.AMap.plugin(h, function () {
+                      t(a)
+                        .then(function () {
+                          f(window.AMap);
+                        })
+                        .catch(i);
+                    })
+                  : t(a)
+                      .then(function () {
+                        f(window.AMap);
+                      })
+                      .catch(i);
+              });
+            }
+          });
+        },
+        reset: function () {
+          (delete window.AMap,
+            delete window.AMapUI,
+            delete window.Loca,
+            (s = {
+              key: "",
+              AMap: { version: "1.4.15", plugins: [] },
+              AMapUI: { version: "1.1", plugins: [] },
+              Loca: { version: "1.3.2" },
+            }),
+            (l = { AMap: r.notload, AMapUI: r.notload, Loca: r.notload }),
+            (A = { AMap: [], AMapUI: [], Loca: [] }));
+        },
+      };
+    });
+  })(L);
+  var E = L.exports;
+  const S = v(E),
+    C = 299;
+  function P(d) {
+    return d <= C;
+  }
+  class $ {
+    static create(e, t) {
+      const { errorCode: n, errorMessage: o, errorDetail: r, errorDescription: s } = t;
+      switch (e) {
+        case 400:
+          return new T(n, o, r, s);
+        case 404:
+          return new B(n, o, r);
+        case 401:
+          return new k(n, o, r);
+        default:
+          return new j(n, o, r);
+      }
+    }
+  }
+  class U extends Error {
+    constructor(e, t, n, o) {
+      (super(), (this.errorCode = e), (this.errorMessage = t), (this.errorDetail = n), (this.errorDescription = o));
+    }
+    toJSON() {
+      return {
+        errorCode: this.errorCode,
+        errorMessage: this.errorMessage,
+        errorDetail: this.errorDetail,
+        errorDescription: this.errorDescription,
+      };
+    }
+  }
+  class T extends U {}
+  class k extends U {}
+  class B extends U {}
+  class j extends U {}
+  function _(d) {
+    return !!d.code;
+  }
+  function x(d) {
+    return !!d.error_description;
+  }
+  class q {
+    constructor(e) {
+      b(this, "authHeaders", new Headers());
+      e && this.updateAuth(e);
+    }
+    async delete(e) {
+      await this.request({ url: this.makeURLParams(e.url, e.payload ?? {}), method: "DELETE" });
+    }
+    async get(e) {
+      const t = this.makeURLParams(e.url, e.payload ?? {});
+      return await (await this.request({ url: t, method: "GET" })).json();
+    }
+    async getText(e) {
+      const t = this.makeURLParams(e.url, e.payload ?? {});
+      return (await this.request({ url: t, method: "GET" })).text();
+    }
+    async list(e) {
+      const t = this.makeURLParams(e.url, e.payload ?? {});
+      return await (await this.request({ url: t, method: "GET" })).json();
+    }
+    async create(e) {
+      return await (await this.request({ ...e, method: "POST" })).json();
+    }
+    async update(e) {
+      return await (await this.request({ ...e, method: "PUT" })).json();
+    }
+    async custom(e) {
+      let t = this.makeURLParams(e.url, (e == null ? void 0 : e.query) ?? {});
+      return (
+        ["GET", "DELETE"].includes(e.method) && !e.query && (t = this.makeURLParams(e.url, (e == null ? void 0 : e.payload) ?? {})),
+        await (await this.request({ ...e, url: t })).json()
+      );
+    }
+    async customBlob(e) {
+      return (await this.request({ ...e })).blob();
+    }
+    updateAuth(e) {
+      const { tenant: t, terminal: n, token: o } = e,
+        r = this.authHeaders;
+      (t + "" == "0" && r.set("tenant", "0"),
+        t && r.set("tenant", t),
+        o && r.set("Authorization", `Bearer ${o}`),
+        n && r.set("terminal", n),
+        r.set("Content-Type", "application/json;charset=utf-8"));
+    }
+    async request(e) {
+      const t = this.makeHeaders(e),
+        n = this.makeBody(e),
+        o = await fetch(e.url, { method: e.method, headers: t, body: n });
+      if (P(o.status)) return o;
+      const r = await o.json();
+      let s = r;
+      throw (
+        _(r) &&
+          (s = {
+            errorCode: `${r.code}`,
+            errorMessage: r.message,
+            errorDetail: typeof r.data == "string" ? `${r.data}` : JSON.stringify(r.data),
+          }),
+        x(r) && (s.errorDescription = `${r.error_description}`),
+        $.create(o.status, s)
+      );
+    }
+    makeBody(e) {
+      if (!["GET", "DELETE"].includes(e.method)) return this.payloadIsMetadata(e.payload) ? e.payload : JSON.stringify(e.payload);
+    }
+    makeHeaders(e) {
+      const t = new Headers(this.authHeaders);
+      return (
+        this.payloadIsMetadata(e.payload) && t.delete("Content-Type"),
+        e.headers &&
+          Object.entries(e.headers).forEach(([n, o]) => {
+            t.set(n, o);
+          }),
+        t
+      );
+    }
+    payloadIsMetadata(e) {
+      return e instanceof FormData || e instanceof Blob || typeof e == "string";
+    }
+    makeURLParams(e, t) {
+      const n = Object.entries(t)
+        .filter((o) => typeof o[1] < "u")
+        .map(([o, r]) => `${o}=${encodeURIComponent(`${r}`)}`)
+        .join("&");
+      return n ? (e.includes("?") ? `${e}&${n}` : `${e}?${n}`) : e;
+    }
+  }
+  const y = "/api/dictionary";
+  class O {
+    constructor(e) {
+      b(this, "gateway");
+      this.gateway = new q(e);
+    }
+    async getDictionaryByItem(e) {
+      const t = `${y}/getDataDictionaryByItem`,
+        n = e.tenant ? { headers: { tenant: e.tenant } } : {};
+      return (await this.gateway.custom({ url: t, query: e, method: "GET", ...n })).data;
+    }
+    async getAdminDictionaryByItem(e) {
+      const t = `${y}/admin/getDataDictionaryByItem`;
+      return (await this.gateway.custom({ url: t, query: e, method: "GET" })).data;
+    }
+    async getDictionaryItemByCode(e) {
+      const t = `${y}/getDictionaryItemByCode/${e.code}`;
+      return (await this.gateway.get({ url: t })).data;
+    }
+    async getDictionaryTree(e) {
+      const t = `${y}/getCascadeDictionaryItem`;
+      return (await this.gateway.get({ url: t, payload: e })).data;
+    }
+    async getDataDictionaryById(e) {
+      const t = y + `/getDataDictionaryById/${e.id}`;
+      return (await this.gateway.get({ url: t, payload: e })).data;
+    }
+    async addDataDictionaryItem(e) {
+      const t = `${y}/addDictionaryItem`;
+      return (await this.gateway.create({ url: t, payload: e })).data;
+    }
+    async addDataDictionary(e) {
+      const t = `${y}/addDataDictionary`,
+        n = e.tenant ? { headers: { tenant: e.tenant } } : {};
+      return (await this.gateway.custom({ url: t, payload: e, method: "POST", ...n })).data;
+    }
+    async updateDataDictionary(e) {
+      const t = `${y}/updateDataDictionary`,
+        n = e.tenant ? { headers: { tenant: e.tenant } } : {};
+      return (await this.gateway.custom({ url: t, payload: e, method: "PUT", ...n })).data;
+    }
+    async deleteDataDictionary(e) {
+      const t = `${y}/deleteDataDictionary/${e.id}`,
+        n = e.tenant ? { headers: { tenant: e.tenant } } : {};
+      await this.gateway.custom({ url: t, method: "DELETE", ...n });
+    }
+    async addUserDictionary(e) {
+      const t = `${y}/user-dictionary/add`;
+      return (await this.gateway.create({ url: t, payload: e })).data;
+    }
+    async updateUserDictionary(e) {
+      const t = `${y}/user-dictionary/update`;
+      await this.gateway.update({ url: t, payload: e });
+    }
+    async deleteUserDictionary(e) {
+      const t = `${y}/user-dictionary/delete/${e}`;
+      await this.gateway.delete({ url: t });
+    }
+    async getUserDictionaryList(e) {
+      const t = `${y}/user-dictionary/list`;
+      return await this.gateway.get({ url: t, payload: e });
+    }
+    async batchUserDictionaryAddOrUpdate(e) {
+      const t = `${y}/user-dictionary/add/or/update/batch`;
+      return (await this.gateway.create({ url: t, payload: e })).data;
+    }
+    async getSysDictionaryByItem(e) {
+      const t = `${y}/getSysDictionaryByItem`;
+      return await this.gateway.get({ url: t, payload: e });
+    }
+  }
+  class R {
+    constructor(e, t) {
+      b(this, "options");
+      b(this, "auth");
+      ((this.auth = e), (this.options = t), (this.options.aMapKey = t.aMapKey ?? "11ce1f353a30f9fa2b125c842780a4cf"));
+    }
+    async getAMapInstance() {
+      const e = await this.getMapConfig("gdMap");
+      return (
+        e.securityJsCode && (window._AMapSecurityConfig = { securityJsCode: e.securityJsCode }),
+        await S.load({
+          key: e.webKey,
+          version: "2.0",
+          plugins: [
+            "AMap.Geocoder",
+            "AMap.MouseTool",
+            "AMap.ControlBar",
+            "AMap.Walking",
+            "AMap.Geolocation",
+            "AMap.IndexCluster",
+            "AMap.MarkerCluster",
+          ],
+        })
+      );
+    }
+    async getMapConfig(e) {
+      const n = await new O(this.auth).getDictionaryByItem({ itemCode: "THIRD_SERVICE", code: e });
+      if (!(n != null && n[0])) throw new Error("未获取到地图配置");
+      return JSON.parse(n[0].variable);
+    }
+  }
+  ((M.CubeMapPlugins = R), Object.defineProperty(M, Symbol.toStringTag, { value: "Module" }));
+});

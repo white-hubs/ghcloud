@@ -1,0 +1,102 @@
+.station-header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #010c2d 2%, #010d32 31%, #021c65 97%);
+
+  .left {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    .anticon-left-circle {
+      margin-right: 10px;
+
+      svg {
+        fill: white;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .time-area {
+    display: flex;
+    color: #ffffff;
+    margin-right: 20px;
+    align-items: center;
+
+    :first-child {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    :last-child {
+      font-size: 22px;
+    }
+  }
+
+
+  .title {
+    position: relative;
+    height: 100%;
+    width: 808px;
+    background-image: url('/resource/v1/operating-room/images/nurse-station-header.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 36px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: Regular;
+    color: #ffffff;
+    letter-spacing: 0.11px;
+    text-shadow: 0px 2px 4px 0px rgba(15, 53, 104, 0.50);
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 14px;
+    box-sizing: border-box;
+  }
+
+  .right-bar {
+    display: flex;
+    align-items: center;
+
+    .select-box {
+      min-width: 80px;
+      height: 32px;
+      background: rgba(21, 120, 255, 0.20);
+      border-radius: 22px;
+      box-sizing: border-box;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: Regular;
+      color: #ffffff;
+      cursor: pointer;
+      margin-right: 20px;
+
+      .label {
+        margin-right: 10px;
+      }
+
+      .operating-room-dropdown-trigger {
+        font-size: 16px;
+        font-weight: Regular;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+
+        .anticon {
+          margin-left: 10px;
+        }
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+  }
+}

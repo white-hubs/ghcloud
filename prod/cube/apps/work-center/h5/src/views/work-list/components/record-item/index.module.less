@@ -1,0 +1,218 @@
+.record-item {
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 12px;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &.checkboxItem {
+    margin: 0;
+    flex: 1;
+    width: calc(100% - 40px);
+    :global{
+      .van-cell:after {
+        display: none;
+      }
+    }
+    .record-item-content {
+      padding-top: 0;
+    }
+  }
+
+  :global {
+    .van-cell__title, .van-cell__value {
+      width: calc(100% - 15px);
+    }
+    .van-cell{
+      padding-left: 10px;
+      align-items: baseline;
+    }
+    .van-icon {
+      height: auto;
+    }
+  }
+}
+  .record-market-name {
+    padding: 12px 15px;
+    font-size: 15px;
+    background: linear-gradient(160deg, #e3efff, #ffffff);
+    border-radius: 8px 8px 0px 0px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #0e161d;
+    font-size: 15px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: var(--van-primary-color);;
+    margin-bottom: 12px;
+  }
+
+  .record-item-title-combine {
+    border: none !important;
+    padding: 10px 12px !important;
+    background: #fafafa;
+    border-radius: 4px;
+
+    .timeout {
+      width: 58px;
+      height: 58px;
+      position: absolute;
+      top: 64px !important;
+      right: 20px !important;
+    }
+  }
+
+  .record-item-title {
+    display: flex;
+
+    .text {
+      flex: 1;
+      margin-left: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      white-space: nowrap;
+    }
+
+    .timeout {
+      width: 58px;
+      height: 58px;
+      position: absolute;
+      top: 98px;
+      right: 14px;
+    }
+
+    .status-level {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+
+      .status {
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+        margin-right: 8px;
+      }
+      .ALARM_UN_CONFIRMED,
+      .ALARM_PROGRESS_CONFIRMED {
+        color: #f69703;
+        background: rgba(246, 151, 3, 0.10);
+      }
+
+      .ALARM_SUSPEND {
+        background: rgba(21, 120, 255, 0.10);
+        color: var(--van-primary-color);;
+      }
+
+      .ALARM_HANDLER {
+        background: rgba(106, 181, 57, 0.10);
+        color: #6AB539;
+      }
+
+      .level {
+        padding: 5px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: center;
+      }
+
+      .one_level {
+        color: #f01c1c;
+        background: rgba(240, 28, 28, 0.10);
+      }
+
+      .two_level {
+        color: #F69703;
+        background: rgba(246, 151, 3, 0.10);
+      }
+
+      .three_level {
+        color: #F4CF00;
+        background: rgba(244, 207, 0, 0.10)
+      }
+
+      .four_level {
+        color: var(--van-primary-color);;
+        background: rgba(21, 120, 255, 0.10);
+      }
+    }
+  }
+
+  .record-item-content {
+    padding: 10px 0;
+    margin: 0 10px;
+    font-size: 13px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: left;
+    color: #666666;
+
+    .alarm-cell-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .label {
+        flex-shrink: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .value {
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+
+        .address {
+          max-width: 200px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+
+  }
+
+  .record-operate {
+    padding: 12px;
+    display: flex;
+    border-top: 1px solid #f8f9f9;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    div {
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--van-primary-color);;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      background: var(--van-primary-color);;
+      text-align: left;
+    }
+
+    .transfer {
+      background: transparent;
+      color: var(--van-primary-color);;
+    }
+
+    .handle {
+      margin-left: 12px;
+      color: #fff;
+    }
+  }

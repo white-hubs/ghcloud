@@ -1,0 +1,76 @@
+.progress-bar {
+  width: 100%;
+  cursor: pointer;
+
+  .progress-bar-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .progress-bar-label {
+      font-size: 20px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #D9E7FF;
+      letter-spacing: 0.02px;
+      max-width: 80%;
+      // overflow-x: scroll;
+      // overflow-y: scroll;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .progress-bar-value {
+      font-size: 22px;
+      font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #d2e0fd;
+      margin-right: 10px;
+    }
+  }
+
+  .progress-bar-inner-wrapper {
+    width: 96%;
+    height: 6px;
+    background: rgba(217, 231, 255, 0.10);
+    box-sizing: border-box;
+    margin: 6px auto;
+
+    .progress-bar-inner {
+      height: 100%;
+      background: linear-gradient(63deg, rgba(97, 148, 247, 0.14) 2%, #94baf9 83%);
+      position: relative;
+      overflow: visible;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4px;
+        width: 8px;
+        height: 8px;
+        background: #edf4ff;
+        border-radius: 50%;
+        z-index: 1;
+        // border: 6px solid rgba(97, 148, 247, 0.60);
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -9px;
+        width: 18px;
+        height: 18px;
+        background: rgba(97, 148, 247, 0.60);
+        border-radius: 50%;
+      }
+    }
+  }
+}

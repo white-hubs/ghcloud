@@ -1,0 +1,55 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.app-header__left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.app-subtitle {
+  font-size: 12px;
+  color: #999;
+}
+
+.app-header__right {
+  /* Ant Design Space 组件会处理间距 */
+}
+
+.app-main {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 在 qiankun 场景下，强制 Ant Design/Cube UI 的全局 message 水平居中 */
+
+.ant-message{
+  left: 50% !important
+}
+.graph-editor .ant-message-notice,
+.graph-editor-message-notice {
+  text-align: center;
+}

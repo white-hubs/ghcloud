@@ -1,0 +1,101 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  background: #F3F7FA;
+  box-sizing: border-box;
+
+  :global(.van-search) {
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+  }
+
+  :global(.van-search__content) {
+    background-color: #F3F7FA;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  :global(.van-cell__title) {
+    width: 100%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  :global(.van-tabs){
+    width: 100%;
+  }
+  :global(.van-tabs__wrap){
+    position: sticky;
+    height: 40px;
+    top: 50px;
+    z-index: 99;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 25px 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    height: 34px;
+    .search-bar-right {
+      width: calc(100% - 295px);
+      padding-left: 12px;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .content {
+    min-height: calc(100% - 48px);
+    padding: 10px 12px;
+    padding-top: 0;
+    box-sizing: border-box;
+    :global(.van-cell-group) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #0f181f;
+    }
+    .card-content {
+      white-space: nowrap;
+      width: 315px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #999999;
+      div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .card-footer-time,
+    .card-footer-detail-entry {
+      font-size: 12px;
+      font-family: Roboto, Roboto-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #cccccc;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.fields :global(.van-cell) {
+  align-items: center;
+  padding: 10px 0;
+  background: transparent;
+}
+
+.fields :global(.van-field__label) {
+  flex: none;
+  width: 96px;
+  margin-right: 12px;
+  color: #4b5563;
+}
+
+.fields :global(.van-field__value) {
+  min-width: 0;
+}
+
+.fields :global(.van-field__body) {
+  min-height: 38px;
+}
+
+.fields :global(.van-field__control) {
+  min-height: 38px;
+  padding: 0 12px;
+  overflow: visible;
+  color: #15283d;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: #f4f6f9;
+  border-radius: 8px;
+}
+
+.fields :global(.van-field__control--textarea) {
+  padding: 8px 12px;
+  white-space: normal;
+}
+
+.fields :global(.van-field__control[readonly]) {
+  cursor: pointer;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 12px;
+}
+
+.formRow :global(.van-cell) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.formRow :global(.van-field__label) {
+  width: 48px;
+  margin-right: 8px;
+}

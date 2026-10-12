@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-risk-detail.html",
+  "meta": {
+    "title": "风险源管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+    "keywords": "风险源管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+        "productName": "风险源管理",
+        "productDescription": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "风险源管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">风险源管理致力于实现对园区内各类消防安全风险源的统一、精细化建档与管理。系统覆盖电动车、氧气瓶、灭火器、消防栓等易引发安全事故的设施设备，提供从事前建档维护到事后可追溯管理的全流程支持。</span></p><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统支持对风险源进行自定义分类维护，可从类型、区域、状态、使用人等多个维度建立电子台账，并为每一设备生成唯一档案标识码，便于现场扫码快速查看信息。同时，系统具备灵活的消息通知机制，可自定义配置各类提醒规则，包括到期、强检等事项，并指定接收人员和通知方式，实现主动预警。系统还集成安全教育与执行情况统计功能，有效辅助管理者全面掌握风险源状态和安全事务执行成效，提升整体消防安全管理能力。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>风险源分类</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于园区安全教育数据汇总统计数据查看,掌握安全培训、安全考试的执行情况；展示风险源类型列表，支持编辑和新增分类，包括分类名称、备注说明。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965369686491148290.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>风险源管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立风险源台账，包括风险源编码、风险源名称、风险源分类、所在区域、使用人类型、状态等，点击可查看和编辑风险源详情，支持按照多种条件筛选查询。支持导入和新增风险源，对风险源设备生成唯一档位码，用于现场通过扫码查看建档信息。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965369819924541441.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"><span style=\"color: rgb(38, 38, 38);\"> &nbsp; </span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965369905215713281.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>消息配置</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持自定义配置即将到期提醒、已经到期提醒、强检提醒消息通知，可设置通知条件、通知方式、通知人员、通知模板等。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411729711105",
+            "name": "行政管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/行政管理/main.png",
+            "version": "1.0.1",
+            "description": "行政管理主要是用于公司内部无纸化办公场景。支持员工线上发起审批，线上处理、线上通知、线上数据存档。简化日常工作流程，解决员工日常行政办公反复跑审批时长无法预估，纸质文档不易留存的问题。",
+            "href": "/product-center/app-admin-detail.html"
+          },
+          {
+            "id": "1811344408936304641",
+            "name": "风险源管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/风险源管理/main.png",
+            "version": "1.0.1",
+            "description": "统一建档管理现场风险源，包括但不限于电动车、氧气瓶、灭火器、消防栓等，会直接或间接引发消防安全事故的设施设备，事前建档维护，事后追溯管理。",
+            "href": "/product-center/app-risk-detail.html"
+          },
+          {
+            "id": "1811344410706300930",
+            "name": "能碳管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。",
+            "href": "/product-center/app-energy-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

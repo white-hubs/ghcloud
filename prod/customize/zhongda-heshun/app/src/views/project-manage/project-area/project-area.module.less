@@ -1,0 +1,58 @@
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  button{
+    margin-left: 10px;
+  }
+}
+
+.page-flex{
+  display: flex;
+  height: calc(100% - 2px);
+  position: relative;
+}
+
+.page-left{
+  height: 100%;
+  padding-right: 5px;
+  min-width: 200px;
+  max-width: 600px;
+  
+  .page-left-menu{
+    height: calc(100% - 48px);
+    overflow-y: auto;
+
+    // 隐藏滚动条（适用于WebKit浏览器）
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  
+    // 兼容Firefox
+    scrollbar-width: none;
+  
+    // 兼容IE/Edge
+    -ms-overflow-style: none;
+  }
+}
+
+.page-right{
+  flex: 1;
+  min-width: 300px; /* 确保右侧有最小宽度 */
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+.divider {
+  width: 2px;
+  height: 100%;
+  background-color: #d9d9d9;
+  cursor: col-resize;
+  position: relative;
+  z-index: 1;
+  
+  &:hover, &:active {
+    background-color: #1890ff;
+    width: 2.5px;
+  }
+}

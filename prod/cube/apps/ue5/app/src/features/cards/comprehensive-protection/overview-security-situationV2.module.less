@@ -1,0 +1,261 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .title-card-icon {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .overview-security-situation-v2-panel .sub-panel-header {
+    align-items: center;
+    min-height: 50px;
+  }
+
+  .overview-security-situation-v2-panel .title {
+    display: flex;
+    align-items: center;
+  }
+
+  .overview-security-situation-v2-panel .mark {
+    display: none;
+  }
+
+  .overview-security-situation-v2-panel .sub-title {
+    max-width: none;
+  }
+
+  .overview-security-situation-v2-panel .sub-panel-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .overview-security-situation-v2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    padding: 0;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .stat-card {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 8px 8px 8px 4px;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.04)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 12px rgba(46, 148, 255, 0.12),
+      0 4px 12px rgba(0, 27, 66, 0.08);
+
+    &.is-total {
+      cursor: pointer;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+      &:hover {
+        border-color: rgba(72, 186, 255, 0.52);
+      }
+    }
+
+    &.is-processed {
+      cursor: pointer;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+      background:
+        linear-gradient(135deg, rgba(38, 194, 188, 0.14), rgba(12, 230, 255, 0.04)),
+        var(--visual-card-inner-bg, rgba(255, 255, 255, 0.08));
+
+      &:hover {
+        border-color: rgba(38, 194, 188, 0.52);
+      }
+    }
+  }
+
+  .stat-icon {
+    display: flex;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 50%;
+
+    &.stat-icon-image {
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  .stat-icon-img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .stat-content {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .stat-label {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.82));
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    line-height: calc(var(--font-size-scale, 1) * 16px);
+    text-align: left;
+  }
+
+  .stat-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .stat-value {
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: calc(var(--font-size-scale, 1) * 20px);
+    font-weight: 700;
+    line-height: calc(var(--font-size-scale, 1) * 24px);
+    text-align: left;
+    text-shadow: 0 0 10px rgba(43, 147, 255, 0.22);
+
+    &.is-processed-value {
+      color: #3de8d8;
+      text-shadow: 0 0 10px rgba(38, 194, 188, 0.28);
+    }
+  }
+
+  .stat-unit {
+    flex: 0 0 auto;
+    color: var(--visual-muted-color, #d0deee);
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    line-height: 1;
+  }
+
+  .stat-sub {
+    margin-top: 2px;
+    color: var(--visual-muted-color, #d9e7ff);
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+    line-height: calc(var(--font-size-scale, 1) * 16px);
+    text-align: left;
+  }
+
+  .chart-panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 168px;
+    height: auto;
+    /* 图表区允许提示阴影溢出；真正的 tooltip 已 appendToBody */
+    overflow: visible;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .power-factor,
+    .chart {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 168px !important;
+      height: 100% !important;
+      overflow: visible;
+      background: transparent !important;
+    }
+
+    &.is-zoom {
+      min-height: 320px;
+      height: 320px;
+      margin-top: 12px;
+
+      .power-factor,
+      .chart {
+        min-height: 300px !important;
+      }
+    }
+  }
+
+  .overview-security-situation-v2.is-zoom {
+    .stat-value {
+      font-size: calc(var(--font-size-scale, 1) * 24px);
+      line-height: calc(var(--font-size-scale, 1) * 28px);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .sub-panel-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-card {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.78));
+    border-color: rgba(116, 158, 210, 0.16);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(61, 111, 175, 0.06);
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-card.is-total {
+    background: linear-gradient(180deg, rgba(244, 249, 255, 0.98), rgba(255, 255, 255, 0.96));
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-card.is-processed {
+    background: linear-gradient(180deg, rgba(241, 252, 251, 0.98), rgba(255, 255, 255, 0.96));
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-label,
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-sub {
+    color: var(--visual-muted-color, #49628f);
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-value {
+    color: #17366d;
+    text-shadow: none;
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-unit {
+    color: #6b84a8;
+  }
+
+  :root[data-visual-theme="minimal-white"] .overview-security-situation-v2-panel .stat-value.is-processed-value {
+    color: #0f9b95;
+  }
+}
+
+.v2-minimal-white-panel(overview-security-situation-v2-panel);

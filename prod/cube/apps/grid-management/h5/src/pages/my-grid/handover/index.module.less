@@ -1,0 +1,143 @@
+.container {
+  min-height: calc(100vh - 46px);
+  background: #F3F7FA;
+  padding-top: 12px;
+
+  .form-container {
+    padding-bottom: 100px;
+
+    .textarea {
+      padding-top: 0;
+      padding-bottom: 10px;
+
+      :global {
+        .van-field__body {
+          background: #FBFBFB;
+          padding: 8px;
+        }
+      }
+    }
+
+    .upload {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .text-overflow {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .selected-grid-list {
+      padding: 0 12px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: #fff;
+    }
+
+    .selected-grid-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef5ff;
+      color: #1578ff;
+      font-size: 12px;
+      line-height: 16px;
+      max-width: 100%;
+
+      span {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .selected-grid-remove {
+      color: #1578ff;
+      cursor: pointer;
+    }
+
+    .submit {
+      position: fixed;
+      padding: 14px 12px 30px;
+      width: 100%;
+      background: #fff;
+      bottom: 0;
+    }
+  }
+}
+
+.grid-popup {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.grid-popup-header {
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f3140;
+  text-align: center;
+  padding: 14px 12px;
+  border-bottom: 1px solid #ebedf0;
+}
+
+.grid-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+
+.grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 0 4px;
+  border-bottom: 1px solid #f2f3f5;
+}
+
+.grid-item-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  color: #303133;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grid-checkbox {
+  flex-shrink: 0;
+  margin-left: 12px;
+
+  :global {
+    .van-checkbox__label {
+      display: none;
+    }
+  }
+}
+
+.grid-popup-footer {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid #ebedf0;
+  background: #fff;
+}
+
+.popup-btn {
+  height: 40px;
+  border-radius: 8px;
+}

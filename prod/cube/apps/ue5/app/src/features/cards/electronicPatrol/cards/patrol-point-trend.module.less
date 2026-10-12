@@ -1,0 +1,62 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 200px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.chartSurface {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 200px;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .chartSurface {
+    height: 380px;
+  }
+}
+
+:global(.patrol-point-trend-v2-panel .sub-panel-content) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .patrol-point-trend-v2-panel) {
+  .chartSurface,
+  .emptySurface {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.v2-minimal-white-panel(patrol-point-trend-v2-panel);

@@ -1,0 +1,111 @@
+{
+  "path": "/product-center/managed.html",
+  "meta": {
+    "title": "托管服务_设备托管_古河云科技",
+    "keywords": "托管服务,全生命周期运维服务,设备托管",
+    "description": "古河云托管服务为客户提供基于安全管理平台及配套安全硬件的全生命周期运维服务。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-managed-banner.webp",
+            "title": "托管服务",
+            "subtitle": "为客户提供基于安全管理平台及配套安全硬件（如智能监控、电气、消防等设备）的全生命周期运维服务。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "联系我们",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ManagedAdvantages",
+      "props": {
+        "title": "托管优势",
+        "subtitle": "提供全生命周期的运维服务，为客户打造极致的服务体验",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-advantage-1.webp",
+            "title": "专业技术保障与快速响应"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-advantage-2.webp",
+            "title": "资源集约化与成本优化"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-advantage-3.webp",
+            "title": "标准化流程与风险管控"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-advantage-4.webp",
+            "title": "业务适配与持续迭代"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AboutTeamGallery",
+      "props": {
+        "title": "服务内容",
+        "subtitle": "专业团队确保平台与设备的持续稳定运行，降低客户自主运维的技术门槛和成本",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-gallery-1.webp",
+            "title": "设备托管维护",
+            "description": "定期巡查，实时监测设备运行状态，及时进行设备维修更换，保障设备运行稳定，促进监测预警准确性。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-gallery-2.webp",
+            "title": "日常培训使用",
+            "description": "针对平台日常业务调整与配置使用进行支持，支撑业务参数进行配置调整，并定期进行使用培训。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/managed-gallery-3.webp",
+            "title": "维护服务报告",
+            "description": "定期根据使用进行反馈，跟踪客户适用情况，并出具平台相关报告，协助进行运行调优。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CaseShowcaseSimple",
+      "props": {
+        "title": "项目案例",
+        "subtitle": "基于强大的研发能力和完善的服务流程，为您提供极具性价比的项目解决方案",
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-park.png",
+            "title": "智慧园区",
+            "link": "/programme/park.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-transport.png",
+            "title": "智慧交通",
+            "link": "/programme/railway.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-venue.png",
+            "title": "智慧体育馆",
+            "link": "/programme/physical.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/engines/data-app-hospital.png",
+            "title": "智慧医院",
+            "link": "/programme/hospital.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

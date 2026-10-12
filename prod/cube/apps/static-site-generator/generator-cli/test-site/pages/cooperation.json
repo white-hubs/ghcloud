@@ -1,0 +1,184 @@
+{
+  "path": "/cooperation.html",
+  "meta": {
+    "title": "数字孪生渠道合作 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "渠道合作",
+            "subtitle": "赋能渠道合作伙伴，助力行业智能化变革！",
+            "titleColor": "#FFFFFF",
+            "subtitleColor": "#FFFFFF"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EngineFeatures",
+      "props": {
+        "title": "合作方式",
+        "bgColor": "#ffffff",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/2.png",
+            "title": "行业合作",
+            "description": "对于具备智慧园区、智慧交通、智慧医疗、智慧场馆、等行业优质资源的平台方、集成商持开放合作态度，并以不限于行业代理、战略合作等在内的合作方式。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/3.png",
+            "title": "渠道合作",
+            "description": "合作模式：销售代理合作模式/服务交付合作模式/集成合作模式。\n合作权益：产品折扣、平台功能、营销支持、销售支持、技术服务、项目赋能。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/4.png",
+            "title": "独家授权",
+            "description": "基于X城市X行业进行独家授权：\n合作伙伴可以根据自身业务需要，自由选择服务的城市和服务的细分行业。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/5.png",
+            "title": "其他类型合作伙伴",
+            "description": "技术合作伙伴、市场推广合作伙伴、学术合作伙伴、OEM合作伙伴、国际合作伙伴"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProcessFlow",
+      "props": {
+        "title": "合作流程",
+        "steps": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/57.png",
+            "label": "注册账号"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/54.png",
+            "label": "提交资料"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/52.png",
+            "label": "选择合作类型"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/50.png",
+            "label": "认证合作资质"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/53.png",
+            "label": "成为合作伙伴"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EvaluationStandards",
+      "props": {
+        "title": "评估标准",
+        "items": [
+          {
+            "number": "01",
+            "description": "筛选潜在代理商并进行初步评估",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-01.png"
+          },
+          {
+            "number": "02",
+            "description": "进行面对面会议以了解其销售能力和市场知识",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-02.png"
+          },
+          {
+            "number": "03",
+            "description": "签订合作协议，明确双方权益和责任",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-03.png"
+          },
+          {
+            "number": "04",
+            "description": "提供产品培训和销售资源支持",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-04.png"
+          },
+          {
+            "number": "05",
+            "description": "定期沟通并监督代理商的销售活动",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-05.png"
+          },
+          {
+            "number": "06",
+            "description": "根据实际销售表现评估代理商绩效",
+            "image": "https://qiniu.guhecloud.com/imgs/pages/cooperation/standard-06.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportCards",
+      "props": {
+        "title": "销售支持",
+        "background": "gray",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/76.png",
+            "title": "产品培训",
+            "description": "提供全面的产品培训，包括产品功能、优势、应用案例等。确保合作伙伴充分了解产品，并能准确向客户传递产品价值。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/103.png",
+            "title": "销售资源共享",
+            "description": "提供销售工具和资源，如演示文稿、销售手册、竞争情报等。帮助合作伙伴更好展示产品，并与客户进行有效沟通和谈判。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/104.png",
+            "title": "市场支持",
+            "description": "共同制定市场推广计划，提供市场营销资料、广告支持、活动支持等，帮助合作伙伴扩大品牌影响力和市场份额。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/105.png",
+            "title": "销售培训",
+            "description": "为合作伙伴提供销售技巧培训，包括客户挖掘、需求分析、提案编写、销售谈判等方面的培训，以增强销售能力。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SupportCards",
+      "props": {
+        "title": "技术支持",
+        "background": "white",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/106.png",
+            "title": "技术培训",
+            "description": "为合作伙伴提供全面的技术培训，包括产品架构、系统配置、部署和集成等方面的培训，确保熟练掌握产品的技术知识。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/107.png",
+            "title": "技术知识库",
+            "description": "建立完善的技术文档和知识库，供合作伙伴查询学习。包括安装手册、操作指南、故障排除方法等，帮助解决常见问题。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/108.png",
+            "title": "支持团队",
+            "description": "设立专门的技术支持团队，负责解答合作伙伴的技术问题，提供远程或现场支持。确保及时响应和解决技术难题。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/pages/cooperation/icons/109.png",
+            "title": "协助实施",
+            "description": "与合作伙伴紧密合作，协助项目实施，包括需求分析、方案设计、部署集成等。同时支持根据客户需求进行产品定制化开发。",
+            "decoration": "https://qiniu.guhecloud.com/imgs/icons/17.png"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

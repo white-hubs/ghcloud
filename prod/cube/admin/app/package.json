@@ -1,0 +1,36 @@
+{
+  "name": "@ghcloud/cube-admin-app",
+  "private": true,
+  "version": "2.0.4",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "start": "vite -c vite.dev.config.ts",
+    "build": "vite build -c vite.build.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "ant-design-vue": "catalog:antdv-next",
+    "@ant-design/icons-vue": "catalog:antdv-next",
+    "vue": "catalog:vue-next",
+    "vue-router": "catalog:vue-next",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/logger": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:vite-next",
+    "core-js": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:vite-next"
+  }
+}

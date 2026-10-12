@@ -1,0 +1,87 @@
+.droneDetailModal {
+  color: #1d2129;
+}
+
+.detailInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  background: #fafbfc;
+  border-radius: 8px;
+}
+
+.detailInfoItem {
+  min-width: 0;
+
+  span {
+    display: block;
+    margin-bottom: 4px;
+    color: #86909c;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  div {
+    overflow: hidden;
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.coordinateCell {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+
+.detailSectionTitle {
+  margin: 16px 0 10px;
+  color: #1d2129;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detailTableWrap {
+  margin-bottom: 16px;
+  overflow: auto;
+  border: 1px solid #e5e6eb;
+  border-radius: 6px;
+}
+
+.detailTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f2f3f5;
+    color: #1d2129;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  th {
+    background: #f7f8fa;
+    color: #4e5969;
+    font-weight: 500;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.emptyDetailCell,
+.emptyMedia {
+  padding: 34px 12px;
+  color: #c9cdd4;
+  font-size: 13px;
+  text-align: center;
+}

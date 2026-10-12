@@ -1,0 +1,77 @@
+{
+  "name": "@ghcloud/cube-h5-design",
+  "version": "1.0.8",
+  "description": "古河云开河平台通用 UI 组件库",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts",
+    "tsc": "vue-tsc",
+    "build:lib": "vue-tsc && vite build -c vite.lib.config.ts",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "files": [
+    "package.json",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "devDependencies": {
+    "@types/lodash": "4.17.16",
+    "@types/node": "catalog:",
+    "@types/qs": "^6.9.7",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vue/compiler-sfc": "^3.2.45",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-vue-macros": "^2.0.0",
+    "vite": "catalog:",
+    "vue-router": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "dependencies": {
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-auth-utils": "workspace:^",
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/cube-daily-inspection-service": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-identity-service": "workspace:^",
+    "@ghcloud/cube-mdata-service": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-maintain-service": "workspace:^",
+    "@ghcloud/cube-dictionary-service": "workspace:^",
+    "@ghcloud/cube-iot-center-service": "workspace:^",
+    "@ghcloud/cube-file-service": "workspace:^",
+    "@ghcloud/cube-small-engineering-service": "workspace:^",
+    "@ghcloud/cube-risk-management-service": "workspace:^",
+    "@ghcloud/cube-asset-management-service": "workspace:^",
+    "@ghcloud/cube-theme": "workspace:^",
+    "@ghcloud/ghcloud-business-request": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "@vant/auto-import-resolver": "^1.0.1",
+    "dayjs": "catalog:",
+    "dayjs-calendar": "1.0.1",
+    "echarts": "catalog:",
+    "lodash": "4.17.21",
+    "qs": "6.14.0",
+    "vant": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

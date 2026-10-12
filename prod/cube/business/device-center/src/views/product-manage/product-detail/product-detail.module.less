@@ -1,0 +1,79 @@
+.top-info {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .top-info-item {
+    margin-right: 60px;
+  }
+}
+
+.product-info-form{
+  :global(.device-center-form-item) {
+    margin:10px !important;
+  }
+}
+
+// 状态规则样式
+.status-rules {
+  width: 100%;
+  
+  .rule-section {
+    margin-bottom: 16px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    // border-left: 4px solid;
+    
+    &.online {
+      border-left-color: #52c41a;
+    }
+    
+    &.offline {
+      // border-left-color: #ff4d4f;
+      border-left-color: #aaa;
+    }
+    
+    .section-title {
+      font-weight: 500;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      
+      .status-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      
+      .online-dot {
+        background-color: #52c41a;
+      }
+      
+      .offline-dot {
+        // background-color: #ff4d4f;
+        background-color: #aaa;
+      }
+    }
+    
+    .rule-item {
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .no-data{
+      font-size: 12px;
+      margin-left: 12px;
+    }
+  }
+}

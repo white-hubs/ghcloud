@@ -1,0 +1,247 @@
+.storage-archive-root {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  background: #f1f4f8;
+}
+
+.storage-archive-panel {
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(18, 31, 56, 0.05);
+}
+
+.storage-archive-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.storage-archive-panel-head h2,
+.storage-archive-record-title {
+  margin: 0;
+  color: #202631;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.storage-archive-warehouse-select {
+  width: 160px;
+}
+
+.storage-archive-chart-head {
+  gap: 16px;
+}
+
+.storage-archive-trend-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.storage-archive-trend-date-picker {
+  width: 240px;
+}
+
+.storage-archive-basic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 20px;
+}
+
+.storage-archive-info-card {
+  min-height: 76px;
+  padding: 16px;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.storage-archive-info-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #969da8;
+  font-size: 13px;
+}
+
+.storage-archive-info-card strong {
+  color: #353941;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.storage-archive-info-card strong.is-warning,
+.storage-archive-warning-value {
+  color: #f59a23;
+}
+
+.storage-archive-info-card em {
+  margin-left: 6px;
+  color: #8c96a8;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.storage-archive-info-card .storage-archive-time {
+  font-size: 13px;
+}
+
+.storage-archive-chart {
+  height: 420px;
+}
+
+.storage-archive-record-panel {
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+
+.storage-archive-record-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.storage-archive-record-title {
+  margin: 0;
+}
+
+.storage-archive-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 58px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #edf0f5;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.storage-archive-filter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.storage-archive-filter-item span {
+  color: #4e5969;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.storage-archive-date-picker {
+  width: 260px;
+}
+
+.storage-archive-status-select {
+  width: 110px;
+}
+
+.storage-archive-query-button,
+.storage-archive-reset-button {
+  min-width: 64px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.storage-archive-query-button {
+  border-color: #1677ff;
+  background: #1677ff;
+  color: #fff;
+}
+
+.storage-archive-query-button:hover,
+.storage-archive-query-button:focus {
+  border-color: #4096ff;
+  background: #4096ff;
+  color: #fff;
+}
+
+.storage-archive-export-button {
+  min-width: 64px;
+  height: 32px;
+  border-color: #1677ff;
+  border-radius: 4px;
+  background: #1677ff;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.storage-archive-export-button:hover,
+.storage-archive-export-button:focus {
+  border-color: #4096ff;
+  background: #4096ff;
+  color: #fff;
+}
+
+.storage-archive-delta {
+  color: #52c41a;
+  font-weight: 600;
+}
+
+.storage-archive-delta.is-negative {
+  color: #ff4d4f;
+}
+
+.storage-archive-status {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.storage-archive-status.is-normal {
+  background: #edf9e8;
+  color: #52c41a;
+}
+
+.storage-archive-status.is-alarm {
+  background: #fff1f0;
+  color: #f26363;
+}
+
+.storage-archive-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 20px 0;
+}
+
+@media (max-width: 900px) {
+  .storage-archive-basic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storage-archive-filter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .storage-archive-chart-head,
+  .storage-archive-trend-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .storage-archive-chart-head {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .storage-archive-export-button {
+    margin-left: 0;
+  }
+}

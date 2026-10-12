@@ -1,0 +1,102 @@
+import type { RouteRecordRaw } from "vue-router";
+
+export const routes: RouteRecordRaw[] = [
+  {
+    path: "/",
+    redirect: "/warehouses",
+  },
+  {
+    path: "/warehouses",
+    name: "warehouses",
+    meta: { title: "仓库管理" },
+    component: async () => (await import("@/views/resource-page/warehouse-page")).WarehousePage,
+  },
+  {
+    path: "/warehouses/create",
+    name: "warehouseCreate",
+    meta: { title: "新增仓库" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "warehouse" },
+  },
+  {
+    path: "/warehouses/:id/edit",
+    name: "warehouseEdit",
+    meta: { title: "编辑仓库" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "warehouse" },
+  },
+  {
+    path: "/warehouses/:id",
+    name: "warehouseDetail",
+    meta: { title: "仓库详情" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "warehouse", mode: "detail" },
+  },
+  {
+    path: "/shelves",
+    name: "shelves",
+    meta: { title: "货架管理" },
+    component: async () => (await import("@/views/resource-page/shelf-page")).ShelfPage,
+  },
+  {
+    path: "/shelves/create",
+    name: "shelfCreate",
+    meta: { title: "新增区域" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "shelf" },
+  },
+  {
+    path: "/shelves/:id/edit",
+    name: "shelfEdit",
+    meta: { title: "编辑区域" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "shelf" },
+  },
+  {
+    path: "/shelves/:id",
+    name: "shelfDetail",
+    meta: { title: "区域详情" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "shelf", mode: "detail" },
+  },
+  {
+    path: "/forklifts",
+    name: "forklifts",
+    meta: { title: "叉车管理" },
+    component: async () => (await import("@/views/resource-page/forklift-page")).ForkliftPage,
+  },
+  {
+    path: "/forklifts/create",
+    name: "forkliftCreate",
+    meta: { title: "新增叉车" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "forklift" },
+  },
+  {
+    path: "/forklifts/:id/edit",
+    name: "forkliftEdit",
+    meta: { title: "编辑叉车" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "forklift" },
+  },
+  {
+    path: "/forklifts/:id",
+    name: "forkliftDetail",
+    meta: { title: "叉车详情" },
+    component: async () => (await import("@/views/resource-form/resource-form")).ResourceFormPage,
+    props: { type: "forklift", mode: "detail" },
+  },
+  {
+    path: "/forklift-monitor",
+    alias: "/forkliftMonitor",
+    name: "forkliftMonitor",
+    meta: { title: "叉车作业监测" },
+    component: async () => (await import("@/views/forklift-monitor/forklift-monitor")).ForkliftMonitor,
+  },
+  {
+    path: "/events",
+    name: "events",
+    meta: { title: "事件档案" },
+    component: async () => (await import("@/views/event-archive/event-archive")).EventArchive,
+  },
+];

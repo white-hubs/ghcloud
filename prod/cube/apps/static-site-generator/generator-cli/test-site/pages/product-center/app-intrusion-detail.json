@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-intrusion-detail.html",
+  "meta": {
+    "title": "入侵报警 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。",
+    "keywords": "入侵报警,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+        "productName": "入侵报警",
+        "productDescription": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "入侵报警"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">主要实现入侵报警的设备监管，实时掌握设备的状态、故障等点对点的监测；支持远程关闭设备；入侵分为按钮报警和防控区域入侵报警。通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>入侵中心</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">基于入侵报警系统产生的事件，生成统计数据，以可视化形式呈现，满足管理及业务需求</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965368711269330946.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp; <img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965368812670824450.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>设备监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">入侵监测：将物联网接入的动环传感器设备数据，在业务平台以图文加列表的形式进行呈现，支持按照设备区域、设备状态、产品品类等进行筛选查询<br>二维组态：支持添加二维组态链接，构建可交互的入侵报警设备监测界面</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>入侵报警</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">报警记录：展示入侵报警设备报警记录，包括报警事件、报警级别、报警区域、详细位置、报警时间、报警设备、处理状态、处理人等，点击报警记录可查看详情、联动动作及处理记录<br>报警配置：支持配置报警规则，可指派处理人员和设置消息推送，当入侵报警设备数据有异常情况时，触发规则，系统自动推送报警数据至相关人员进行处理</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">报警统计：展示入侵报警统计数据，包括报警事件、报警总数、待接收、处理中、已处理、已挂起报警数等，支持按照时间、事件进行筛选查询<br>报警处理统计：展示报警处理统计数据，包括人员姓名、所属部门、部门报警数、个人报警数、报警处理率、报警响应率等，支持按照时间、所属部门进行查询</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>入侵报警设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">建立入侵报警设备台账，包括设备编码、设备名称、产品品类、产品名称、设备品牌、所属区域等，支持按照设备名称进行筛选查询，实现用气设备在线管理</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411633242113",
+            "name": "园区管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/园区管理/main.png",
+            "version": "1.0.1",
+            "description": "该系统聚焦于客户管理、房间管理、走访诉求、租赁管理及运营监管等关键运营数据的查询与分析功能，旨在帮助管理者快速了解当前园区的运营状况，为决策提供坚实的数据支撑。",
+            "href": "/product-center/app-park-detail.html"
+          },
+          {
+            "id": "1811344411469664258",
+            "name": "停车管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/停车管理/main.png",
+            "version": "1.0.2",
+            "description": "停车管理依托数据统计分析面板，可清晰掌握车场运营状况。此外，系统提供智能导航与停车模拟功能，通过视觉或语音引导车主高效停放，显著提升停车效率与管理智能化水平。",
+            "href": "/product-center/app-parking-detail.html"
+          },
+          {
+            "id": "1811344408588177410",
+            "name": "预案管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/预案管理/main.png",
+            "version": "1.0.1",
+            "description": "对园区安全监测建立隐患机制，在预案管理处可设置针对电气设备、监控设备、消防设备、动环设备等的报警机制，通过物联平台接入相关设备、构建物模型，在预案配置处进行调用，配置报警触发条件、报警通知、消息通知等内容，当事故现场发生报警时，系统自动触发报警，并推送报警数据到指挥调度驾驶舱。",
+            "href": "/product-center/app-plan-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

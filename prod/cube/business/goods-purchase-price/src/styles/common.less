@@ -1,0 +1,105 @@
+
+.ml-10px{
+  margin-left: 16px;
+}
+.mr-16px{
+  margin-right: 16px;
+}
+.mt-20px{
+  margin-top: 20px;
+}
+.mb-20px{
+  margin-bottom: 20px;
+}
+
+:deep(.goods-purchase-price-image-img), img{
+  width: auto;
+  height: 100%;
+}
+
+// 滚动条
+&::-webkit-scrollbar {
+  display: block;
+  width: 3px !important;
+  height: 5px;
+  background: rgba(146, 146, 146, 0.2);
+  border-radius: 0.08rem;
+}
+&::-webkit-scrollbar-button {
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background-color: rgba(50,50,50,.3);
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-track {
+    border-radius: 1em;
+    background-color: rgba(50,50,50,.1);
+}
+
+.mr-10{
+  margin-right: 10px;
+}
+.rate-item{
+  display: flex;
+  align-items: center;
+}
+.page-right{
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+}
+
+// .goods-purchase-price-form-item .rule-item{
+//   width: 120px !important;
+//   &.w-180{
+//     min-width: 180px !important;
+//   }
+// }
+.rule-space{
+  display: flex;
+  margin-bottom: 8px
+}
+.rule-add{
+  margin-bottom: 10px;
+}
+.desc{
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 18px;
+  padding: 15px 0 15px 0;
+}
+.goods-purchase-price-table-wrapper, 
+.goods-purchase-price-modal-body {
+  max-height: 700px;
+  overflow: auto;
+}
+.btn{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  .del{
+    color: var(--cube-theme-var--primary-color);
+    color: var(--goods-purchase-price-error-color);
+  }
+  .add{
+    color: var(--cube-theme-var--primary-color);
+  }
+}
+
+
+:deep(.anticon-minus-circle), .anticon-minus-circle{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-left: 10px;
+  &.del{
+    color: var(--cube-theme-var--primary-color);
+    color: var(--goods-purchase-price-error-color);
+  }
+  &.add{
+    color: var(--cube-theme-var--primary-color);
+  }
+}

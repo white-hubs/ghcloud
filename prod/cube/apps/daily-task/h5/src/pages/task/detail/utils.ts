@@ -1,0 +1,2 @@
+export const typeList = ['doc', 'docx', 'excel', 'xlsx', 'xls', 'pdf', 'ppt', 'txt', 'zip', 'rar','mp4','mp3']
+export const imgType = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'jpge', 'webp', 'mpeg', 'raw', 'heic']

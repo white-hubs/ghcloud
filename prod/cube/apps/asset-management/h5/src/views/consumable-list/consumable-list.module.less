@@ -1,0 +1,129 @@
+.cell-group {
+  margin: 3vw;
+}
+
+
+.cell {
+
+
+  .cell-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6px;
+
+    .content {
+      text-align: left;
+
+      &>div:nth-of-type(1) {
+        font-weight: 500;
+      }
+
+      &>div:nth-of-type(2) {
+        font-size: 12px;
+      }
+    }
+
+
+    .img {
+      border-radius: 10%;
+      margin-right: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  }
+
+  .cell-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: Source Han Sans CN, Source Han Sans CN;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 6px;
+    position: relative;
+    height: 50px;
+    padding-left: 5px;
+    span{
+      margin-right: 10px;
+    }
+  }
+
+  .cell-bottom::before {
+    left: 0px;
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 50px;
+    border-radius: 5px;
+    content: '';
+    background-color: var(--van-primary-color);
+    opacity: .2;
+  }
+}
+
+.filter {
+  margin-left: 12px;
+  margin-top: 20px;
+
+  p {
+    margin: 10px 0px;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+    margin-right: 12px;
+    border-radius: 4px 4px 4px 4px;
+    width: 90px;
+    height: 32px;
+    color: #1F3140;
+    background-color: #F8F9F9;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .filter-button {
+    margin: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 80vw;
+  }
+}
+
+
+.search {
+  display: flex;
+  padding-bottom: 5px;
+  width: 100vw;
+  align-items: center;
+
+  .filter {
+    color: #646566;
+    width: 60px;
+    margin: 0;
+  }
+
+  .keyword {
+    flex: 1;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.statistics {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+
+  p>span:nth-of-type(1) {
+    color: #969799;
+  }
+}

@@ -1,0 +1,35 @@
+.list-page{
+  min-height: calc(100vh - 90px);
+  :global(.van-list) {
+    padding: 10px;
+  }
+}
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  background: #F3F7FA;
+  box-sizing: border-box;
+  :global(.van-tabs__wrap) {
+    position: sticky;
+    top: 46px;
+    z-index: 1;
+  }
+
+  .card-item{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    :global{
+      .van-cell__value{
+      text-align: left;
+      }
+
+      .van-icon-arrow:before{
+        position: absolute;
+        left: -3vw;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

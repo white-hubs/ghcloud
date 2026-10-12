@@ -1,0 +1,100 @@
+
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 250px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tableSurface {
+  /* 表头 30px + 4 行 × 40px，超出 4 条由 RollTable 无缝滚动 */
+  flex: 0 0 190px;
+  height: 190px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.isZoom {
+  min-height: 360px;
+
+  .tableSurface {
+    flex-basis: 190px;
+    height: 190px;
+  }
+}
+
+.dataTitle {
+  color: #5ea6ff;
+  font-size: 14px;
+  text-align: right;
+}
+
+.dataTitleRight {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  transition: background 180ms ease, border-color 180ms ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #2b7fff;
+    text-decoration: underline;
+    outline: 0;
+  }
+}
+
+:global(.lift-five-way-call-v2-panel .roll-table .table-row) {
+  padding: 0 6px;
+}
+
+:global(.lift-five-way-call-v2-panel .roll-table .header) {
+  height: 30px;
+  color: #49628f;
+  font-size: calc(var(--font-size-scale, 1) * 14px);
+  font-weight: 700;
+  line-height: 1.2;
+  background: rgba(214, 233, 255, 0.46);
+  border-bottom: 1px solid rgba(116, 158, 210, 0.25);
+}
+
+:global(.lift-five-way-call-v2-panel .roll-table .table-tr) {
+  height: 40px;
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  background: linear-gradient(90deg, rgba(42, 112, 198, 0.16), rgba(255, 255, 255, 0.04));
+  border-bottom: 1px solid rgba(116, 158, 210, 0.14);
+}
+
+:global(.lift-five-way-call-v2-panel .roll-table .table-tr:nth-child(2n)) {
+  background: linear-gradient(90deg, rgba(42, 112, 198, 0.1), rgba(255, 255, 255, 0.02));
+}
+
+:global(.lift-five-way-call-v2-panel .roll-table .table-th),
+:global(.lift-five-way-call-v2-panel .roll-table .table-td) {
+  text-align: left;
+}
+
+:global(:root[data-visual-theme="minimal-white"] .lift-five-way-call-v2-panel) {
+  --visual-roll-table-text-color: #1455b3;
+  --visual-roll-table-row-bg: linear-gradient(90deg, rgba(224, 239, 255, 0.98), rgba(247, 251, 255, 0.98));
+  --visual-roll-table-row-alt-bg: linear-gradient(90deg, rgba(236, 246, 255, 0.98), rgba(255, 255, 255, 0.98));
+  --visual-roll-table-row-hover-bg: rgba(20, 85, 179, 0.1);
+  --visual-roll-table-row-border: rgba(116, 158, 210, 0.25);
+
+  .roll-table .header {
+    color: #49628f;
+    background: rgba(224, 239, 255, 0.82);
+  }
+}
+
+.v2-minimal-white-panel(lift-five-way-call-v2-panel);

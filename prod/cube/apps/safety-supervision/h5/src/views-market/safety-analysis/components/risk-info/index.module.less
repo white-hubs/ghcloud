@@ -1,0 +1,137 @@
+.container {
+  background-color: #fff;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+
+  .title {
+    font-size: 15px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    color: #1f3140;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon{
+    font-size: 15px;
+    color: #183241 !important;
+    margin-left: 4px;
+  }
+  .tipspan{
+    font-size: 12px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: left;
+    color: #999999;
+    line-height: 12px;
+  }
+
+  .info{
+    display: flex;
+    margin-left: 10px;
+    .info_left{
+      .score{
+        display: flex;
+        align-items: baseline;
+        margin-left: 4px;
+        margin-bottom: 4px;
+        color: #01B377;
+        .score_num{
+          font-size: 50px;
+          font-family: Roboto, Roboto-Medium;
+          font-weight: Medium;
+          text-align: left;
+          line-height: 58px;
+        }
+        .score_unit{
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          line-height: 14px;
+        }
+      }
+      .score_txt{
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        line-height: 20px;
+        padding: 8px 20px 8px 10px;
+        border-radius: 8px;
+        position: relative;
+        background: #ecfff8;
+        color: #00B772;
+
+        &::after{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 8px;
+          height: 8px;
+          border: 8px solid;
+          border-color: transparent transparent #ecfff8 transparent;
+          top: -13px;
+          left: 22%;
+        }
+
+      }
+    }
+
+    &.high{
+      .info_left{
+        .score{
+          color: #E94D15;
+        }
+        .score_txt{
+          background: #FFF3EF;
+          color: #E94D15;
+
+          &::after{
+            border-color: transparent transparent #FFF3EF transparent;
+          }
+
+        }
+      }
+    }
+    &.low{
+      .info_left{
+        .score{
+          color: #01B377;
+        }
+        .score_txt{
+          background: #ecfff8;
+          color: #00B772;
+
+          &::after{
+            border-color: transparent transparent #ecfff8 transparent;
+          }
+
+        }
+      }
+    }
+    &.middle{
+      .info_left{
+        .score{
+          color: #ECA914;
+        }
+        .score_txt{
+          background: #FFF9EB;
+          color: #ECA914;
+
+          &::after{
+            border-color: transparent transparent #FFF9EB transparent;
+          }
+
+        }
+      }
+    }
+
+    .info_right{
+      flex:1;
+      margin-left: 20px;
+    }
+  }
+}

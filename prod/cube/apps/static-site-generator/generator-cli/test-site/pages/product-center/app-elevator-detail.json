@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-elevator-detail.html",
+  "meta": {
+    "title": "电梯管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "电梯管理系统实现了对电梯运行状态的实时采集与监控。通过先进的技术手段，系统能够实时捕捉电梯的运行数据，包括但不限于速度、楼层停靠、运行时长等关键指标。",
+    "keywords": "电梯管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/电梯管理/main.png",
+        "productName": "电梯管理",
+        "productDescription": "电梯管理系统实现了对电梯运行状态的实时采集与监控。通过先进的技术手段，系统能够实时捕捉电梯的运行数据，包括但不限于速度、楼层停靠、运行时长等关键指标。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "电梯管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">电梯管理实现了对电梯运行状态的实时采集与监控。通过先进的技术手段，系统能够实时捕捉电梯的运行数据，包括但不限于速度、楼层停靠、运行时长等关键指标。同时，系统还具备对电梯是否发生故障的即时判断能力，一旦检测到异常或故障，系统会立即作出响应。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">在故障处理方面，电梯管理系统通过灵活的规则配置，能够在电梯发生故障或触发报警时，迅速将相关信息通知给指定的相关人员。这种即时通讯机制确保了运维团队能够第一时间获知故障情况，从而迅速采取行动，减少故障对电梯使用的影响。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965374944139292673.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电梯监测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过与电梯系统对接，实时监控各部电梯的运行状态，包括当前位置、运行方向、载客情况、故障状态等。系统将提供实时的监控界面。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>电梯报警</strong></span></p><h3 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警配置</strong></span></h3><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持全面的设备报警配置管理功能，允许用户自定义报警规则，确保对设备异常情况的及时响应。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>报警记录</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">规则配置完成并启用后，系统会根据用户配置的报警规则，自动监控并检测相关数据或事件。一旦满足报警条件，系统将立即生成相应的报警记录。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用户可以在“报警记录”页面查看所有生成的报警记录，对于每条报警记录，用户可选择进行“处理”操作，在处理过程中，用户可记录详细的处理步骤、结果及任何相关备注信息。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>统计分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台系统可以对电梯的使用数据进行统计、分析和报告生成。报警分析模块提供全面的数据总览，汇总了关键报警分析指标，便于用户快速了解系统整体运行状态，包括但不限于支持设备的状态统计、报警趋势、事件分析、区域分析等核心趋势数据。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>五方通话</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台系统与电梯梯控系统对接后，对接控制电梯的通话功能，同时拉起多个相关参与者，如电梯维修团队、安全管理人员、物业管理人员、技术支持人员和紧急联系人，在通话中实时显示电梯的运行状态、位置信息和故障警报，并具备录音保存功能将通话内容实时转录或记录确认在内的预警业务。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408730783745",
+            "name": "广播中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+            "version": "1.0.0",
+            "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+            "href": "/product-center/app-broadcast-detail.html"
+          },
+          {
+            "id": "1811344411369000962",
+            "name": "维保作业",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          },
+          {
+            "id": "1811344411943620610",
+            "name": "小散工程",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "version": "1.0.1",
+            "description": "小散工程系统，通过无纸化工单，全流程监管小散工程的立项、施工、验收，保证工程实施 保质保量；通过工程数据统计辅助管理层掌握园区的工程情况。",
+            "href": "/product-center/app-small-project-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

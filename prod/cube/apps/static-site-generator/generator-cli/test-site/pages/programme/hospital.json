@@ -1,0 +1,114 @@
+{
+  "path": "/programme/hospital.html",
+  "meta": {
+    "title": "智慧医院解决方案 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/programme-hospital-banner.png",
+            "title": "智慧医院解决方案",
+            "subtitle": "全面实现能碳智能，引领绿色可持续未来",
+            "description": "智慧医院借助开河支撑平台，以系统全联接，数据全融合趋势发展。围绕运行支撑数据管理、业务数据管理、基础数据管理，实现医疗服务管理、设施设备管理、医院能源管理等功能。实现整个院区可视、可管、可控。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "产品试用",
+              "link": "#"
+            },
+            "secondaryButton": {
+              "text": "联系我们",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"height: 328px; background: linear-gradient(0deg, rgba(51,153,255,0) 0%, rgba(166,210,255,0.2) 100%); padding-top: 80px; box-sizing: border-box;\"><h2 style=\"text-align: center; height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD; font-weight: bold; color: #182B44; line-height: 32px; margin: 0;\">方案背景</h2><div style=\"width: 1200px; height: 96px; font-size: 16px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #585C60; line-height: 32px; margin: 40px auto 0;\">智慧医院建设背景源于社会经济的快速发展和医疗领域的需求升级。人口老龄化、疾病负担增加以及医疗资源不均衡等问题使得传统医疗模式面临挑战，而信息技术的快速发展为解决这些问题提供了新的可能。智慧医院建设借助数字化、互联网和人工智能等技术，实现医疗信息的整合与共享，优化医疗资源配置，提升医疗服务效率和质量，满足患者对更便捷、智能化医疗服务的需求。</div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"padding-top: 80px; height: 562px; background: #FFFFFF; box-sizing: border-box;\"><h2 style=\"text-align: center; height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD; font-weight: bold; color: #182B44; line-height: 32px; margin: 0;\">痛点问题</h2><div style=\"display: flex; justify-content: center; margin-top: 50px; margin-right: 30px;\"><div style=\"width: 309px; height: 276px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 2px solid #FFFFFF; margin-left: 30px; padding-top: 55px; box-sizing: border-box;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/49.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; margin-left: 135px; display: block;\"><div style=\"text-align: center; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 11px;\">资源管理太单一</div><div style=\"width: 260px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 24px; margin: 16px auto 0;\">基础设施功能单一，缺乏全面认知，导致资源管理不便，医院频繁扩容改造。</div></div><div style=\"width: 309px; height: 276px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 2px solid #FFFFFF; margin-left: 30px; padding-top: 55px; box-sizing: border-box;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/48.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; margin-left: 135px; display: block;\"><div style=\"text-align: center; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 11px;\">运营管理难协同</div><div style=\"width: 260px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 24px; margin: 16px auto 0;\">传统医院在业务、管理等方面未构建成体系、可视的运营体系，运营效率低。</div></div><div style=\"width: 309px; height: 276px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 2px solid #FFFFFF; margin-left: 30px; padding-top: 55px; box-sizing: border-box;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/46.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; margin-left: 135px; display: block;\"><div style=\"text-align: center; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 11px;\">数据价值难开发</div><div style=\"width: 260px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 24px; margin: 16px auto 0;\">传统医院有大量有价值的数据，但难以有效整合，数据价值开发程度低。</div></div><div style=\"width: 309px; height: 276px; background: linear-gradient(180deg, #F1F7FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 2px solid #FFFFFF; margin-left: 30px; padding-top: 55px; box-sizing: border-box;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/47.png?imageView2/0/format/webp/q/74\" style=\"width: 40px; height: 40px; margin-left: 135px; display: block;\"><div style=\"text-align: center; height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 11px;\">运维管理太传统</div><div style=\"width: 260px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 24px; margin: 16px auto 0;\">医院各系统庞杂，信息孤岛化，难以辅助运维管理。</div></div></div></div>"
+      }
+    },
+    {
+      "name": "SolutionDesign",
+      "props": {
+        "title": "概要设计",
+        "subtitle": "古河云通过梳理智慧医院和数字孪生各自的技术特点、产业环境和场景实例，提供数字孪生赋能智慧医院建设的解决方案，为智慧医院的应用场景和数字化管理提供新思路",
+        "items": [
+          {
+            "topic": "高效展现，多屏协同",
+            "title": "广泛应用于各类监管、指挥、分析和展示场景\n系统具备优秀的大数据显示性能以及多机协同管理机制，支持网页、大屏、多屏、超大分辨率等显示情景；可广泛应用于运营监管、监测指挥、分析研判、展示汇报等应用场景。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/drop/11.png"
+          },
+          {
+            "topic": "一体化平台，连接医院各部门信息系统",
+            "title": "实现高效管理、精准决策\n古河云医院数字孪生运营决策管理平台，面向医院管理部门，支持整合医院各部门现有信息系统的数据资源，覆盖医院管理各领域，凭借先进的人机交互方式，实现医院综合态势监测、医院运营态势监测、医院运维态势监测、医院安全态势监测、医院低碳节能态势监测、应急指挥调度等多种功能。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/drop/6.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ApplicationScene",
+      "props": {
+        "title": "应用场景",
+        "items": [
+          {
+            "label": "住院智能管理",
+            "content": "在院区层级空间展示医院全部床位的床位分布与占用情况，联动摄像头进行ICU管理，打破看护时空的限制。手术室管理，查看手术室的使用情况。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/9.png"
+          },
+          {
+            "label": "医用设施管理",
+            "content": "对消毒设备间、污泥脱水间、电控间等医疗废水处理设备进行三维建模，并对接环保数据采集仪，对余氯、需氧量、PH值等关键运行数据进行实时监测。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/3.png"
+          },
+          {
+            "label": "后勤保障管理",
+            "content": "以图表的方式进行供电管理、供水管理，直观查看水电数据，降低用电量和用水量。对于重点监控的冷源设备展示监测值，如实时压力值、频率等。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/4.png"
+          },
+          {
+            "label": "照明设备可视化",
+            "content": "可以查看每个照明设备的运行功率、耗电量等信息。此外，还具备远程操作功能，可以反向控制照明设备的开关、调光或其他操作。",
+            "image": "https://qiniu.guhecloud.com/imgs/components/active/2.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div style=\"height: 582px; background: #F9FCFF; padding-top: 80px; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD; font-weight: bold; color: #182B44; line-height: 32px; text-align: center; margin: 0;\">方案优势</h2><div style=\"width: 1320px; margin: 20px auto 0; display: flex; flex-wrap: wrap; gap: 30px;\"><div style=\"width: 645px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 1px solid #FFFFFF;\"><div style=\"height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 30px; margin-left: 30px; display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/37.png\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px;\">\"数据全景\"的孪生基础服务</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 22px; margin-left: 74px; margin-top: 14px;\">数据中台辅助建设数字孪生多尺度场景，通过数据清洗、数据治理，提升数据质量、数据共享能力。</div></div><div style=\"width: 645px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 1px solid #FFFFFF;\"><div style=\"height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 30px; margin-left: 30px; display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/35.png\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px;\">\"全感可视\"的孪生数据中台</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 22px; margin-left: 74px; margin-top: 14px;\">多年业务沉淀，铸就行业真实口碑，继续打造行业标杆。</div></div><div style=\"width: 645px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 1px solid #FFFFFF;\"><div style=\"height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 30px; margin-left: 30px; display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/function/9.png\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px;\">\"轻量便捷\"的矩阵实施应用</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 22px; margin-left: 74px; margin-top: 14px;\">轻量化模型搭建、数据采集实时渲染、精细化管理等功能实现和应用实施。</div></div><div style=\"width: 645px; height: 148px; background: linear-gradient(180deg, #F5F9FF 0%, #FEFEFF 100%); box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); border-radius: 4px; border: 1px solid #FFFFFF;\"><div style=\"height: 32px; font-size: 20px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182B44; line-height: 32px; margin-top: 30px; margin-left: 30px; display: flex; align-items: center;\"><img src=\"https://qiniu.guhecloud.com/imgs/icons/36.png\" style=\"width: 36px; height: 36px;\"><span style=\"margin-left: 8px;\">\"领先前沿\"的行业经验沉淀</span></div><div style=\"width: 374px; height: 42px; font-size: 14px; font-family: SOURCEHANSANSSC-REGULAR; font-weight: 400; color: #999EA2; line-height: 22px; margin-left: 74px; margin-top: 14px;\">团队具备多年智慧园区项目经验，并集中各领域优秀人才。不仅关注软件开发本身，更关注行业未来发展。</div></div></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"padding-top: 80px; height: 556px; background: #ffffff; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD; font-weight: bold; color: #182b44; line-height: 32px; text-align: center; margin: 0;\">应用产品</h2><div style=\"display: flex; justify-content: center; align-items: center; margin-top: 50px; gap: 30px; padding: 0 30px;\"><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/9.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #ffffff; box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">集成管理系统</div></div><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/8.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #ffffff; box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">能耗管理系统</div></div><div style=\"display: flex; flex-flow: column;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/7.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 280px; object-fit: cover; display: block;\"><div style=\"width: 420px; height: 74px; background: #ffffff; box-shadow: 0px 0px 20px 0px rgba(86,118,162,0.1); font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">孪生可视基础平台</div></div></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "white",
+        "content": "<div style=\"padding-top: 80px; height: 646px; background: #ffffff; box-sizing: border-box;\"><h2 style=\"height: 32px; font-size: 30px; font-family: SOURCEHANSANSSC-BOLD; font-weight: bold; color: #182b44; line-height: 32px; text-align: center; margin: 0;\">客户案例</h2><div style=\"display: flex; justify-content: center; align-items: center; margin-top: 50px; gap: 30px; padding: 0 30px;\"><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/3.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">深农集团</div></div><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/1.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">成都市第六人民医院</div></div><div style=\"display: flex; flex-flow: column; margin-left: 30px; margin-top: 50px;\"><img src=\"https://qiniu.guhecloud.com/imgs/components/case/5.png?imageView2/0/format/webp/q/74\" style=\"width: 420px; height: 240px; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03); display: block;\"><div style=\"width: 420px; height: 74px; background: #fbfcfb; border: 1px solid #ffffff; font-size: 24px; font-family: SourceHanSansCN-Medium-2; font-weight: 500; color: #182b44; line-height: 74px; text-align: center;\">凤凰山体育馆</div></div></div></div>"
+      }
+    }
+  ],
+  "layout": "default"
+}

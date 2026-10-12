@@ -1,0 +1,88 @@
+.personList {
+  padding: 12px;
+
+  .personItem {
+    display: flex;
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .personInfo {
+      display: flex;
+      align-items: center;
+
+      .personImg {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: var(--van-primary-color);
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 12px;
+        font-size: 17px;
+      }
+
+      .info {
+        width: 230px;
+        .personName {
+          font-size: 16px;
+          color: var(--van-text-color);
+        }
+        .infoItem {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          color: #666666;
+          margin-top: 4px;
+          .label {
+            width: 45px;
+            white-space: nowrap;
+          }
+          .value {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 180px;
+            display: block;
+            text-overflow: ellipsis;
+          }
+          .workStatusTag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 13px;
+            box-sizing: border-box;
+            margin-left: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rest {
+  color: #999999;
+}
+
+.working {
+  color: #07c160;
+}
+
+.leavePost {
+  color: #ee0a24;
+}
+
+.awayBusiness {
+  color: #1578ff;
+}
+
+.askLeave {
+  color: #f4cf00;
+}

@@ -1,0 +1,428 @@
+import _ from "lodash";
+export const joinUrl = (...args) => {
+  return args
+    .join("/")
+    .replace(/\/+/g, "/")
+    .replace(/(https?:)\/+/gi, "$1//");
+};
+export const mapRootUrl = (url) => {
+  return joinUrl("/api", url);
+};
+
+export function treezen(
+  data,
+  parentProp = "parentId",
+  prop = "id",
+  rootId = null
+) {
+  data.forEach((item) => {
+    item.children = data.filter((a) => a[parentProp] === item[prop]);
+    if (_.isEmpty(item.children)) {
+      item.children = null;
+    }
+  });
+  return data.filter((a) => a[parentProp] === rootId);
+}
+
+export function treezenFiltered(
+  filteredData,
+  data,
+  parentProp = "parentId",
+  prop = "id",
+  rootId = null
+) {
+  let mapData = {};
+  data.forEach((item) => {
+    mapData[item[prop]] = item;
+    item.children = data.filter((a) => a[parentProp] === item[prop]);
+    if (_.isEmpty(item.children)) {
+      item.children = null;
+    }
+  });
+  return data.filter(
+    (a) => a[parentProp] === rootId || !mapData[a[parentProp]]
+  );
+}
+
+// 与treezen相反
+export function flattenTree(data, childrenProp = "children") {
+  const flatData = [];
+  data.forEach((item) => {
+    flatData.push(item);
+    if (item[childrenProp]) {
+      flatData.push(...flattenTree(item[childrenProp], childrenProp));
+    }
+  });
+  return flatData;
+}
+
+export const recurse = (data, handler, key) => {
+  let sourceData = _.cloneDeep(data);
+  if (_.isArray(sourceData)) {
+    sourceData = _.map(sourceData, (item, i) => {
+      return recurse(item, handler, i);
+    });
+  } else if (_.isPlainObject(sourceData)) {
+    sourceData = _.transform(
+      sourceData,
+      (result, value, i) => {
+        result[i] = recurse(value, handler, i);
+      },
+      {}
+    );
+  } else {
+    sourceData = handler ? handler(sourceData, key) : sourceData;
+  }
+  return sourceData;
+};
+// tree中匹配的项
+export function treematch(tree, value, key = "id", childrenProp = "children") {
+  let matchValue;
+  for (let i = 0; i < tree.length; i++) {
+    if (tree[i][key] == value) {
+      matchValue = tree[i];
+      break;
+    } else {
+      if (tree[i][childrenProp] && tree[i][childrenProp].length) {
+        matchValue = treematch(tree[i][childrenProp], value, key, childrenProp);
+        if (matchValue) break;
+      }
+    }
+  }
+  return matchValue;
+}
+// json数据中根据指定项找到所有父级 tree=>json数据 value=>要匹配的值 key=>json数据中匹配属性名 params=>返回的属性名
+export function getParentNode(
+  tree,
+  value,
+  key = "id",
+  params = "id",
+  childrenProp = "children",
+  path
+) {
+  if (path === undefined) {
+    path = [];
+  }
+  for (let i = 0; i < tree.length; i++) {
+    let temPath = path.concat();
+    temPath.push(tree[i][params]);
+    if (value == tree[i][key]) {
+      return temPath;
+    }
+    if (tree[i][childrenProp]) {
+      let findResult = getParentNode(
+        tree[i][childrenProp],
+        value,
+        key,
+        params,
+        childrenProp,
+        temPath
+      );
+      if (findResult) {
+        return findResult;
+      }
+    }
+  }
+}
+// 递归删除对象中children为空数组的字段
+export function deleteNullChild(data) {
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i].children) {
+      return;
+    }
+    if (data[i].children.length == 0) {
+      let { children, ...items } = data[i];
+      data[i] = items;
+    } else {
+      deleteNullChild(data[i].children);
+    }
+  }
+  return data;
+}
+
+// 递归删除对象中children为空数组的字段
+export function deleteNullChi(data, name = "children") {
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i][name]) {
+      return;
+    }
+    if (data[i][name].length == 0) {
+      let { children, ...items } = data[i];
+      data[i] = items;
+    } else {
+      deleteNullChild(data[i][name]);
+    }
+  }
+  return data;
+}
+/**
+ *
+ * @param {*} data 查询数据
+ * @param {*} childKeyword 子选项关键字
+ * @param {*} keyword 获取数据的关键字
+ * @returns
+ */
+export function getParentKey(
+  data,
+  result = [],
+  childKeyword = "children",
+  keyword = "id"
+) {
+  for (let i of data) {
+    if (i[childKeyword]?.length) {
+      result.push(i[keyword]);
+      getParentKey(i[childKeyword], result);
+    }
+  }
+  return result;
+}
+
+/**
+ *
+ * @param {*} data number
+ * @returns
+ */
+export function millennial(data, status = true) {
+  let res;
+  const decimal = Number(data).toFixed(2);
+  const pointFront = decimal.split(".")[0];
+  const pointBehind = decimal.split(".")[1];
+  const pointFrontRes = Number(pointFront).toLocaleString();
+
+  if (status) {
+    res = pointFrontRes + "." + pointBehind;
+  } else {
+    res = pointFrontRes;
+  }
+  return res;
+}
+
+export function timeFormat(time, status) {
+  if (!time) {
+    return null;
+  }
+  const date = new Date(time);
+  let res = "";
+  // 年
+  const year = date.getFullYear();
+  // 月
+  const month =
+    date.getMonth() + 1 > 9 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`;
+  // 日
+  const day = date.getDate() > 9 ? date.getDate() : `0${date.getDate()}`;
+  // 时
+  const hour = date.getHours() > 9 ? date.getHours() : `0${date.getHours()}`;
+  // 分
+  const minutes =
+    date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinutes()}`;
+  // 秒
+  const second =
+    date.getSeconds() > 9 ? date.getSeconds() : `0${date.getSeconds()}`;
+  if (status) {
+    res = `${year}-${month}-${day} ${hour}:${minutes}:${second}`;
+  } else {
+    res = `${year}-${month}-${day}`;
+  }
+  return res;
+}
+
+export function dateAdd(interval, number, date) {
+  switch (interval) {
+    case "y": {
+      date.setFullYear(date.getFullYear() + number);
+      return date;
+    }
+    case "m": {
+      date.setMonth(date.getMonth() + number);
+      return date;
+    }
+    case "d": {
+      date.setDate(date.getDate() + number * 30);
+      return date;
+    }
+  }
+}
+
+export function dateReduce(interval, number, date) {
+  switch (interval) {
+    case "y": {
+      date.setFullYear(date.getFullYear() - number);
+      return date;
+    }
+    case "m": {
+      date.setMonth(date.getMonth() - number);
+      return date;
+    }
+    case "w": {
+      date.setDate(date.getDate() - number);
+      return date;
+    }
+    case "d": {
+      date.setDate(date.getDate() - number * 30);
+      return date;
+    }
+  }
+}
+
+export function validArray(value) {
+  let res;
+  value.forEach((item) => {
+    if (item instanceof Array) {
+      validArray(item);
+    } else {
+      res = item ? true : false;
+    }
+  });
+  return res;
+}
+
+export function S4() {
+  return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+}
+// 生成guid
+export function guid() {
+  return (
+    S4() +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    S4() +
+    S4()
+  );
+}
+
+/**
+ * 查询当前数据的兄弟数据
+ * @param {array} data 基础数据
+ * @param {string} value 查询数据
+ * @param {string} key 查询标准
+ * @param {string} child 多层关键字
+ * @returns
+ */
+export function checkBroData(data, value, key = "parentId") {
+  let res;
+  if (data.length) {
+    // 先将数据拍平
+    const flattenData = flattenTree(data);
+    // 查找相同父级
+    res = flattenData.filter((item) => item[key] === value);
+  }
+  return res;
+}
+
+//扁平化
+/*
+ *  bossArr  树形数据
+ *  children 树形数据子数据的属性名, 本项目为 children
+ * */
+export function extractTree(bossArr, children) {
+  //如果为空 返回空（防止 children 递归报错）
+  if (!Array.isArray(bossArr) && !bossArr.length) return [];
+  let list = [];
+  const getObj = (arr) => {
+    arr.forEach((row) => {
+      let obj = {};
+      obj = JSON.parse(JSON.stringify(row));
+      list.push(obj);
+      if (row[children]) {
+        getObj(row[children]);
+      }
+    });
+    return list;
+  };
+  return getObj(bossArr);
+}
+
+// 数组去重
+export const removeDuplicateObj = (arr, text) => {
+  let newArr = []
+  let obj = {};
+  for (var i = 0; i < arr.length; i++) {
+    if (!obj[arr[i][text]]) {
+      newArr.push(arr[i]);
+      obj[arr[i][text]] = true;
+    }
+  }
+  return newArr
+};
+
+/**
+ * 判断对象是否为空
+ * @param obj 对象
+ * @returns {boolean} 为空返回true，不为空返回false
+ */
+function isEmptyObj(obj) {
+  //如果对象的键数组的长度是0，表示为空对象
+  return Object.keys(obj).length === 0;
+}
+
+/**
+* 找到两个相同结构的对象的差异内容，并返回包含所有差异的数组
+* 注意对象内的值只能是简单类型，复杂类型不考虑
+* @param obj1 原对象
+* @param obj2 可能修改过的对象
+* @returns {{}} 包含所有差异的数组
+*/
+const findObjOperate = (obj1, obj2) => {
+  const resultObj = {};
+  //遍历obj1的键数组，因为obj1和obj2结构相同，所以不考虑结构上的差异
+  Object.keys(obj1).forEach(key => {
+    if (obj1[key] !== obj2[key]) {
+      //将变化过的属性挂载到返回对象中
+      resultObj[key] = obj2[key];
+    }
+  });
+  return resultObj;
+}
+
+/**
+* 找到两个对象数组的差异，并打印从list1到list2的所有变化
+* 注意约定id不能修改
+* @param list1 原数组
+* @param list2 可能修改过的数组
+*/
+export const findOperate = (list1, list2) => {
+  //用于记录id值和索引值之间差别的平衡值（以下简称平衡值）
+  let step = 0;
+  //遍历list2
+  list2.forEach((obj2, index) => {
+    //当前id和平衡过差值后的索引值（以下简称新索引值）还是不等
+    if (obj2.id !== index + step) {
+      //当前id和新索引值之间的差值就是被删除对象的个数
+      for (let j = index + step; j < obj2.id; j++) {
+      }
+      //更新平衡值
+      step = obj2.id - index;
+    }
+    //根据新索引值在list1中找到对应的对象
+    const obj1 = list1[index + step];
+    if (obj1) {
+      //比较obj1和obj2的差异
+      const objOperateObj = findObjOperate(obj1, obj2);
+      //如果返回的对象为空对象，表示没有差异
+      if (!isEmptyObj(objOperateObj)) {
+      }
+    } else {
+      //js没有下标越界，所以如果obj1是undefined，那么obj2就是新增出的对象
+    }
+  });
+}
+/**
+* 把数组分割为二维数组
+* @param array 原数组
+* @param chunkSize 每个数组的大小
+*/
+export const chunkArray = (array, chunkSize)=> {
+  const result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+      const chunk = array.slice(i, i + chunkSize);
+      result.push(chunk);
+  }
+  return result;
+}

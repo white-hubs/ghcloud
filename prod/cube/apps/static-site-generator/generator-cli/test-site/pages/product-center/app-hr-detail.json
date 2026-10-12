@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-hr-detail.html",
+  "meta": {
+    "title": "人事管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "对入离职人员进行流程申请审批操作，实现工作流自动化，工作流程自定义设置，规范人员的入离职操作，提高工作效率；支持对人员类别、人员信息进行统一管理，通过信息集中有效管理，可以获得整体的信息，了解人员情况。",
+    "keywords": "人事管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/人事管理/main.png",
+        "productName": "人事管理",
+        "productDescription": "对入离职人员进行流程申请审批操作，实现工作流自动化，工作流程自定义设置，规范人员的入离职操作，提高工作效率；支持对人员类别、人员信息进行统一管理，通过信息集中有效管理，可以获得整体的信息，了解人员情况。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "人事管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">对入离职人员进行流程申请审批操作，实现工作流自动化，工作流程自定义设置，规范人员的入离职操作，提高工作效率；支持对人员类别、人员信息进行统一管理，通过信息集中有效管理，可以获得整体的信息，了解人员情况。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965333492415868930.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"> &nbsp; </p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>员工花名册管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> 支持管理员工的基本信息，包括姓名、工号、部门、职位、联系方式等，便于人事管理和查询。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965333872851824642.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965367319129501698.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>人员异动管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"> 管理员可以记录和管理员工的人员异动信息，包括调岗、晋升、降职等变动情况。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>招聘管理 </strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持业务部门根据人员需求发起招聘申请，并通过流程进行审批，以确保招聘流程的规范和透明。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965334588483973121.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"> &nbsp; </p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>入职办理管理 </strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持人事部门发起入职申请，办理新员工的入职手续，并以岗位维度统计入职情况。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>考核管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持员工或人事发起考核申请，定义考核评分条件，并通过配置的流程进行审批和评分。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>转正管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持各业务部门员工或人事发起员工转正申请，将试用期员工信息转为正式员工。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>轮岗管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持各业务部门或人事发起人员轮岗申请，明确轮岗部门、职位、时间等信息。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>培训管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持员工或人事发起培训申请，明确培训内容、人员、地点等信息。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>离职管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持员工或人事在离职时发起离职申请，填写离职时间、原因等信息。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\"><strong>流程审批管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持通过流程审批关联表单和审批流程，用于上层业务审批流转。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411910066178",
+            "name": "考勤管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/考勤管理/main.png",
+            "version": "1.0.1",
+            "description": "考勤管理主要是用于规范管理员工的工作日上下班、请假、加班、出差、外出等行为的应用工具，并为公司人事财务提供员工的考勤数据，包括迟到、请假、加班、早退、旷工等，以备主管对员工打绩效，财务对员工做薪资计算等。",
+            "href": "/product-center/app-attendance-detail.html"
+          },
+          {
+            "id": "1811344411826180098",
+            "name": "资产管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/资产管理/main.png",
+            "version": "1.0.0",
+            "description": "资产信息化管理，包含固定资产管理、耗材管理，从资产入库、派发、调拨、报废实现资产全生命周期管理，提供资产盘点的能力，辅助内部半自动化盘点，减少现场人力投入。",
+            "href": "/product-center/app-asset-detail.html"
+          },
+          {
+            "id": "1811344411331252226",
+            "name": "日常巡检",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "version": "1.0.1",
+            "description": "巡检管理是设备预防维修的基础，是现代设备管理的核心部分。通过对设备的巡检作业，准确掌握设备状态，实行有效的预防检修，以设备受控作业点检管理的目标，从以修为主转为以管为主，使设备获得最大的综合效益。",
+            "href": "/product-center/app-daily-inspection-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

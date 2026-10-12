@@ -1,0 +1,79 @@
+.form-group-container {
+  border-radius: 2px;
+  .header {
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding:10px 16px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .form-group-list {
+
+    :global(.cube-form-audit-app-tree-node-content-wrapper) {
+      width: 100%;
+      padding: 0 !important;
+      border-radius: 6px;
+    }
+
+    :global(.cube-form-audit-app-tree-treenode) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    :global(.cube-form-audit-app-tree-title) {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+    }
+   
+
+    .form-group-item {
+      min-height: 40px;
+      font-size: 16px;
+      padding: 8px 12px;
+      width:100%;
+      cursor: pointer;
+      display: flex;
+      .form-group-name{
+      display: flex;
+      width: calc(100% - 72px);
+      .form-group-title{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;    
+      }
+      }
+      justify-content: space-between;
+      align-items: center;
+      &:hover {
+        .actions {
+          display: inline-block;
+        }
+      }
+
+      &.active {
+        background-color: #e6f7ff;
+      }
+
+      .actions {
+        display: none;
+        width: 72px;
+        .action-icon {
+          margin-left: 8px;
+          color: #1890ff;
+        }
+      }
+    }
+    :global(.cube-form-audit-app-tree-switcher) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+  }
+}

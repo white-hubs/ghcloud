@@ -1,0 +1,76 @@
+.visiting-data {
+
+  .item {
+    height: 60px;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    display: inline-block;
+
+    .unit {
+      font-size: 12px;
+    }
+  }
+
+  .ringRatio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .downtriangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #d2fff3;
+    margin: 0 3px;
+    transform: rotate(180deg);
+  }
+
+  .uptriangle {
+    border-bottom: 8px solid #ffcece;
+    transform: rotate(0deg);
+  }
+
+  .down {
+    color: #2ae8bd;
+    font-family: Roboto-Regular, Roboto;
+  }
+
+  .up {
+    color: #f14545;
+    font-family: Roboto-Regular, Roboto;
+  }
+}
+
+
+:global{
+  .ant-statistic {
+    display: inline-flex;
+    flex-flow: column-reverse;
+
+    .ant-statistic-content {
+      height: 29px;
+
+      .ant-statistic-content-value {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 400;
+        position: relative;
+        top: -25px;
+      }
+    }
+
+    .ant-statistic-title {
+      color: #D0DEEE;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

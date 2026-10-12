@@ -1,0 +1,43 @@
+.modalLayout {
+  display: flex;
+  min-height: 560px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tableWrapper {
+  min-height: 462px;
+}
+
+.tableHeader {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  color: var(--visual-data-modal-text-color, #fff);
+  font-weight: 600;
+  line-height: 42px;
+  background: var(--visual-data-modal-table-header-bg, rgba(16, 40, 68, 0.8));
+
+  div {
+    width: 20%;
+    padding: 0 12px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.tableContent {
+  min-height: 420px;
+  max-height: 480px;
+  overflow: auto;
+  color: var(--visual-data-modal-text-color, #fff);
+}
+
+.noContent {
+  display: flex;
+  min-height: 360px;
+  align-items: center;
+  justify-content: center;
+}

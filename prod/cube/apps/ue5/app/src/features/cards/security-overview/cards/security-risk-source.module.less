@@ -1,0 +1,368 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .safe-risk-source-body {
+    display: flex;
+    min-height: 0;
+    height: auto;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--card-section-gap, 10px);
+  }
+
+  .safe-risk-source-body.is-zoom {
+    min-height: 420px;
+  }
+
+  .safe-risk-source-stats {
+    display: grid;
+    flex: 0 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--card-stat-gap, 8px);
+  }
+
+  .safe-risk-source-stat {
+    appearance: none;
+    display: flex;
+    min-width: 0;
+    min-height: 56px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.16), rgba(12, 230, 255, 0.04)),
+      rgba(8, 28, 58, 0.35);
+    border: 1px solid rgba(70, 166, 255, 0.28);
+    border-radius: 10px;
+    box-shadow: inset 0 0 12px rgba(46, 148, 255, 0.1);
+  }
+
+  .safe-risk-source-stat.is-expire {
+    background:
+      linear-gradient(135deg, rgba(255, 107, 74, 0.16), rgba(255, 171, 16, 0.04)),
+      rgba(8, 28, 58, 0.35);
+    border-color: rgba(255, 122, 74, 0.32);
+  }
+
+  .safe-risk-source-stat .v2-title-icon,
+  .risk-source-stat-icon {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .risk-source-stat-icon img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.28));
+  }
+
+  .risk-source-stat-main {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .risk-source-stat-label {
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: 12px;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .risk-source-stat-value {
+    overflow: hidden;
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    text-overflow: clip;
+    white-space: nowrap;
+    text-shadow: 0 0 10px rgba(43, 147, 255, 0.28);
+  }
+
+  .safe-risk-source-stat.is-expire .risk-source-stat-value {
+    color: #ff8d6b;
+    text-shadow: 0 0 10px rgba(255, 107, 74, 0.28);
+  }
+
+  .safe-risk-source-body.is-zoom .safe-risk-source-stat {
+    min-height: 86px;
+    padding: 14px 18px;
+  }
+
+  .safe-risk-source-body.is-zoom .risk-source-stat-value {
+    font-size: 30px;
+  }
+
+  .safe-risk-source-body .overview-v2-pie-row {
+    display: flex;
+    min-height: 0;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+    gap: var(--card-section-gap, 8px);
+    padding: 0;
+    overflow: hidden;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .safe-risk-source-body .overview-v2-pie,
+  .safe-risk-source-body .overview-v2-pie-list,
+  .safe-risk-source-body .overview-v2-pie-chart {
+    height: 100% !important;
+    max-height: var(--card-pie-size, 110px);
+  }
+
+  .safe-risk-source-empty {
+    display: flex;
+    min-height: 0;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .safe-risk-source-empty.is-zoom {
+    min-height: 320px;
+  }
+
+  .safe-risk-pie-wrap {
+    position: relative;
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    width: min(100%, var(--card-pie-size, 110px));
+    height: min(100%, var(--card-pie-size, 110px));
+    max-width: var(--card-pie-size, 110px);
+    max-height: var(--card-pie-size, 110px);
+    aspect-ratio: 1;
+    overflow: visible;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(53, 169, 255, 0.22), rgba(12, 230, 255, 0.04) 55%, transparent 72%);
+    box-shadow: inset 0 0 18px rgba(46, 148, 255, 0.16);
+  }
+
+  .safe-risk-pie-wrap.is-zoom {
+    flex-basis: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .safe-risk-pie-wrap .overview-v2-pie,
+  .safe-risk-pie-wrap .elevator-analysis-pie-box,
+  .safe-risk-pie-wrap .overview-v2-pie-chart {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .safe-risk-legend {
+    --legend-row-height: var(--card-legend-row-height, 30px);
+    --legend-row-gap: var(--card-legend-row-gap, 6px);
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    max-height: 100%;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--legend-row-gap);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .safe-risk-legend.is-zoom {
+    --legend-row-height: 40px;
+    --legend-row-gap: 8px;
+  }
+
+  .safe-risk-legend-item {
+    appearance: none;
+    display: flex;
+    flex: 0 0 var(--legend-row-height);
+    box-sizing: border-box;
+    min-width: 0;
+    height: var(--legend-row-height);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 10px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.12), rgba(12, 230, 255, 0.03)),
+      rgba(8, 28, 58, 0.28);
+    border: 1px solid rgba(113, 178, 255, 0.2);
+    border-radius: 8px;
+  }
+
+  .safe-risk-legend-item:hover {
+    border-color: rgba(73, 151, 255, 0.45);
+    background:
+      linear-gradient(135deg, rgba(47, 141, 255, 0.2), rgba(19, 58, 110, 0.22)),
+      rgba(8, 28, 58, 0.35);
+  }
+
+  .safe-risk-legend-name {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 7px;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+    font-size: var(--card-legend-name-size, 12px);
+    line-height: 1.3;
+  }
+
+  .safe-risk-legend-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .safe-risk-legend-name-text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .safe-risk-legend-value {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 2px;
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: var(--card-legend-value-size, 15px);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .safe-risk-legend-unit {
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.72));
+    font-family: Source Han Sans CN, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  :root[data-visual-theme="minimal-white"] .safe-risk-source-panel {
+    .safe-risk-source-stat,
+    .safe-risk-legend-item {
+      background: linear-gradient(145deg, rgba(232, 244, 255, 0.98), rgba(255, 255, 255, 0.96));
+      border-color: rgba(82, 142, 222, 0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 6px 16px rgba(50, 102, 166, 0.08);
+    }
+
+    .safe-risk-source-stat.is-expire {
+      background: linear-gradient(145deg, rgba(255, 244, 238, 0.98), rgba(255, 255, 255, 0.96));
+      border-color: rgba(232, 128, 96, 0.3);
+    }
+
+    .risk-source-stat-label,
+    .safe-risk-legend-name,
+    .safe-risk-legend-unit {
+      color: #49628f;
+    }
+
+    .risk-source-stat-value,
+    .safe-risk-legend-value {
+      color: #1455b3;
+      text-shadow: none;
+    }
+
+    .safe-risk-source-stat.is-expire .risk-source-stat-value {
+      color: #d75a3a;
+      text-shadow: none;
+    }
+
+    .risk-source-stat-icon img {
+      filter: none;
+    }
+
+    .safe-risk-pie-wrap {
+      background: radial-gradient(circle at 50% 45%, rgba(53, 129, 255, 0.14), rgba(232, 244, 255, 0.5) 55%, transparent 72%);
+    }
+  }
+}
+
+.v2-minimal-white-panel(safe-risk-source-panel);
+
+:global {
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-body,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-body,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-body {
+    gap: var(--card-section-gap, 6px);
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-stats,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-stats,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-stats {
+    gap: var(--card-stat-gap, 4px);
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-body .overview-v2-pie-row,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-body .overview-v2-pie-row,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-body .overview-v2-pie-row {
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-body .overview-v2-pie,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-body .overview-v2-pie,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-body .overview-v2-pie,
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-body .overview-v2-pie-chart,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-body .overview-v2-pie-chart,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-body .overview-v2-pie-chart {
+    height: 100% !important;
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-stat,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-stat,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-stat {
+    min-height: 44px;
+    padding: 4px 8px;
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-pie-wrap,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-pie-wrap,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-pie-wrap {
+    flex: 0 0 var(--card-pie-size, 100px);
+    width: var(--card-pie-size, 100px);
+    height: var(--card-pie-size, 100px);
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-legend,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-legend,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-legend {
+    --legend-row-height: var(--card-legend-row-height, 28px);
+    --legend-row-gap: var(--card-legend-row-gap, 4px);
+  }
+
+  .panel-card-slot[data-card-density="compact"] .safe-risk-source-empty,
+  .panel-card-slot[data-card-density="rearrange"] .safe-risk-source-empty,
+  .panel-card-slot[data-card-density="scroll"] .safe-risk-source-empty {
+    min-height: 72px;
+  }
+}

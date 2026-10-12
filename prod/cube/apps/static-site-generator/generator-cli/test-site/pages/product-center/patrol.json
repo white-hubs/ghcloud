@@ -1,0 +1,99 @@
+{
+  "path": "/product-center/patrol.html",
+  "meta": {
+    "title": "电子巡更 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "硬件产品",
+        "subtitle": "古河云科技持续打磨产品，深耕技术，探索智慧新空间，以创新驱动未来。",
+        "placeholder": "搜索你感兴趣的产品",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/search-banner-bg-1.webp",
+        "searchAllHref": "/product-center/hardware"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "video",
+            "name": "视频安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-video.svg",
+            "href": "/product-center/video.html"
+          },
+          {
+            "id": "fire",
+            "name": "消防安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-fire.svg",
+            "href": "/product-center/fire.html"
+          },
+          {
+            "id": "electric",
+            "name": "电气管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-electric.svg",
+            "href": "/product-center/electric.html"
+          },
+          {
+            "id": "attendance",
+            "name": "考勤管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-attendance.svg",
+            "href": "/product-center/attendance.html"
+          },
+          {
+            "id": "env",
+            "name": "机房动环",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-env.svg",
+            "href": "/product-center/env.html"
+          },
+          {
+            "id": "patrol",
+            "name": "电子巡更",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-patrol.svg",
+            "href": "/product-center/patrol.html"
+          },
+          {
+            "id": "meat",
+            "name": "肉类滑轨",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-meat.svg",
+            "href": "/product-center/meat-track.html"
+          }
+        ],
+        "activeId": "patrol",
+        "allHref": "/product-center/hardware.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "电子巡更棒",
+            "description": "NFC感应巡更点，记录巡更时间地点，数据自动上传…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "巡更点标签",
+            "description": "防水防尘设计，安装简便，支持NFC和RFID读取…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能巡更手持终端",
+            "description": "集巡更、拍照、报修于一体，支持离线巡更…",
+            "href": "#"
+          }
+        ],
+        "pageSize": 9,
+        "currentPage": 1
+      }
+    }
+  ],
+  "layout": "default"
+}

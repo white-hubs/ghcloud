@@ -1,0 +1,16 @@
+/node_modules/
+/lib/
+dist
+
+*.tsbuildinfo
+*.d.ts.map
+*.js.map
+
+/debug.js
+/debug.d.ts
+/debug.d.ts.map
+
+/config/app.json
+
+/tests/*.d.ts
+/tests/*.d.ts.map

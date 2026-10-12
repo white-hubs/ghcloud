@@ -1,0 +1,22 @@
+import { CubeFileService } from '@ghcloud/cube-file-service'
+import { CubeMdataService } from '@ghcloud/cube-mdata-service'
+import { CubeOuaaService } from '@ghcloud/cube-ouaa-service'
+import { CubeMaintainService } from '@ghcloud/cube-maintain-service'
+import { CubeDailyInspectionService } from '@ghcloud/cube-daily-inspection-service'
+import { CubeDictionaryService } from '@ghcloud/cube-dictionary-service'
+import { CubeSmallEngineeringService } from '@ghcloud/cube-small-engineering-service'
+import { CubePropertyService } from '@ghcloud/cube-risk-management-service'
+import { CubeAssetManagementService } from '@ghcloud/cube-asset-management-service'
+import { CubeDeviceCenterService } from '@ghcloud/cube-iot-center-service'
+import { authStore } from './auth-store'
+
+export const cubeFileService = new CubeFileService(authStore)
+export const cubeMdataService = new CubeMdataService(authStore)
+export const cubeDailyInspectionService = new CubeDailyInspectionService(authStore)
+export const cubeOuaaService = new CubeOuaaService(authStore)
+export const cubeMaintainService = new CubeMaintainService(authStore)
+export const cubeDictionaryService = new CubeDictionaryService(authStore)
+export const cubeSmallEngineeringService = new CubeSmallEngineeringService(authStore)
+export const cubePropertyService = new CubePropertyService(authStore)
+export const cubeAssetManagementService = new CubeAssetManagementService(authStore)
+export const cubeDeviceCenterService = new CubeDeviceCenterService(authStore)

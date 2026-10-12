@@ -1,0 +1,195 @@
+.key-place-popup {
+  width: 436px;
+  min-height: 128px;
+  background: rgba(8, 36, 89, 0.9);
+  border: 1px solid rgba(102, 136, 210, 1);
+  position: relative;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+
+
+  .avatar {
+    width: 90px;
+    height: 100%;
+    margin-right: 10px;
+    background: #7BAEEF;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    :global {
+      .ant-avatar-lg {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: #7BAEEF;
+      }
+
+      .ant-avatar-string {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .ant-empty{
+        height: 100%;
+      }
+      .ant-empty-image{
+        height: 70%;
+        .ant-empty-img-default{
+          width: 100%;
+        }
+      }
+      .ant-empty-description{
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+
+  .info {
+    flex: 1;
+    height: 100%;
+
+    .title {
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(90deg, rgba(56, 100, 222, 0.78), rgba(62, 111, 243, 0.68) 26%, rgba(84, 131, 230, 0.26) 69%, rgba(79, 116, 234, 0.00));
+      border: 1px solid;
+      border-image: linear-gradient(90deg, #95b3fa 2%, rgba(76, 108, 232, 0.02)) 1 1;
+      border-radius: 2px;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #ffffff;
+      border-right: 0;
+    }
+
+    .row-text {
+      box-sizing: border-box;
+      padding-left: 10px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-top: 10px;
+
+      .label {
+        font-size: 18px;
+        font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #a5b6da;
+      }
+
+      .value {
+        font-size: 18px;
+        line-height: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #dce8ff;
+      }
+      .more {
+        font-size: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #7191ea;
+        line-height: 14px;
+        cursor: pointer;
+        padding-right: 4px;
+      }
+      .number {
+        font-family: D-DIN-PRO;
+        font-weight: Regular;
+        text-align: left;
+        color: #81afff;
+        line-height: 31px;
+        letter-spacing: 0.03px;
+        position: relative;
+        text-align: center;
+        font-size: 28px;
+        color: #cee0ff;
+
+        .unit {
+          font-size: 14px;
+          font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #bfdfff;
+          margin-left: 2px;
+        }
+      }
+    }
+    .row-text-number {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+}
+
+.key-place-popup::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  /* 调整三角形位置 */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #66a8d2;
+  /* 与边框同色 */
+}
+
+/* 如果需要背景色三角形 */
+.key-place-popup::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(8, 36, 89, 1);
+  z-index: 1;
+}
+
+.close-button {
+  width: 22px;
+  height: 22px;
+  line-height: 18px;
+  border: 1px solid #6688D2;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  font-size: 22px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0.9);
+    width: 100%;
+    content: 'x';
+    font-weight: 100;
+    color: #6688D2;
+    text-align: center;
+    font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+  }
+}

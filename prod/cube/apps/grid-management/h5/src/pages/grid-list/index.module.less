@@ -1,0 +1,191 @@
+.container {
+  min-height: calc(100vh - 48px);
+  background: #F6F7FB;
+  padding: 20px 14px;
+
+  .grid-list-title {
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #172433;
+  }
+
+  .grid-list-stat {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
+
+    .stat-item {
+      flex: 1;
+      padding: 16px 16px 13px 17px;
+      display: flex;
+      background: linear-gradient(90deg, #d6e5fc 2%, #f0f3fa 99%);
+      border: 1px solid #ffffff;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+
+      &.stat-user {
+        background: linear-gradient(90deg, #cdf5f8 2%, #edfbfb 99%);
+
+        .count {
+          color: #29BC9F !important;
+        }
+      }
+
+      .stat-count {
+        .label {
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: center;
+          color: #373840;
+        }
+
+        .count {
+          font-size: 26px;
+          font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+          font-weight: Regular;
+          color: #2152b3;
+        }
+      }
+
+      .stat-img {
+        width: 48px;
+        height: 48px;
+        vertical-align: middle;
+      }
+    }
+
+
+  }
+
+  .grid-list-container {
+    margin-top: 20px;
+
+    .title {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      color: #8e97a4;
+    }
+
+    .pull-refresh {
+      margin-top: 10px;
+      height: 68.5vh;
+      overflow: auto;
+    }
+
+    .list-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .grid-item {
+        padding: 14px 10px;
+        background: #fff;
+        border-radius: 8px;
+        gap: 12px;
+
+        .grid-header {
+          font-size: 15px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: left;
+          color: #172433;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #F6F7FB;
+        }
+
+        .grid-content {
+          padding-top: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+
+          .grid-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+          }
+
+          .takeover-action {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+          }
+
+          .content-item {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+            font-weight: Regular;
+            text-align: left;
+            color: #8e97a4;
+
+            .item-value {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+
+              &.item-manage-list {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 6px;
+
+                .manage-item {
+                  display: flex;
+                  align-items: center;
+                  gap: 4px;
+                }
+              }
+
+              img {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+              }
+
+              .status {
+                padding: 3px 4px;
+                background: #ddfbe6;
+                border-radius: 4px;
+                font-size: 12px;
+                font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+                font-weight: Regular;
+                text-align: left;
+                color: #269360;
+
+                &.status-rest {
+                  background: #fdeaea;
+                  color: #f56c6c;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}

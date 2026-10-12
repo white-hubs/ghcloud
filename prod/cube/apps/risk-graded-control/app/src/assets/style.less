@@ -1,0 +1,198 @@
+// 全局布局与列表页公共样式（对齐 security-opinion-monitoring）
+
+:root {
+  --template-color-primary: rgb(24, 144, 255);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#RiskGradedControl {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#RiskGradedControl > * {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-route {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+[data-layout-toolbar] {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+
+  :global(.ant-form-item),
+  :global(.risk-graded-control-form-item) {
+    padding-right: 0 !important;
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  :global(.ant-form-item-label),
+  :global(.risk-graded-control-form-item-label) {
+    padding-right: 4px;
+  }
+
+  :global(.toolbar-filter-item .ant-form-item-control),
+  :global(.toolbar-filter-item .risk-graded-control-form-item-control) {
+    flex: none;
+    width: auto;
+  }
+
+  :global(.toolbar-filter-select),
+  :global(.toolbar-filter-select.ant-select),
+  :global(.toolbar-filter-select.risk-graded-control-select) {
+    width: 160px !important;
+    min-width: 160px !important;
+  }
+}
+
+.listPageBody {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+}
+
+.tableWrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  :global(.risk-graded-control-table),
+  :global(.ant-table-wrapper) {
+    max-width: 100%;
+  }
+}
+
+:global(.listActionLink.ant-btn-link),
+:global(.listActionLink.risk-graded-control-btn-link) {
+  color: var(--template-color-primary);
+
+  &:hover,
+  &:focus {
+    color: var(--template-color-primary);
+    opacity: 0.85;
+  }
+
+  &:disabled,
+  &:global(.ant-btn-disabled),
+  &:global(.risk-graded-control-btn-disabled) {
+    color: rgba(0, 0, 0, 0.25);
+    opacity: 1;
+  }
+}
+
+.statCardRow {
+  margin-bottom: 16px;
+}
+
+.statCardTitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.statCardValue {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.expandPanel {
+  padding: 12px 24px;
+  background: #fafafa;
+}
+
+.expandPanelTitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.expandPanelDesc {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 13px;
+}
+
+.expandSectionTitle {
+  margin: 12px 0 8px;
+  font-weight: 600;
+}
+
+.pickerInput {
+  cursor: pointer;
+}
+
+:global(#cube-layout-content) {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.ml-10 { margin-left: 10px; }
+.mr-10 { margin-right: 10px; }
+.pd-10 { padding: 10px; }
+.pd-20 { padding: 20px; }

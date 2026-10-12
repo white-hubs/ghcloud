@@ -1,0 +1,131 @@
+/* 统一空态：纸箱 +「暂无数据」铺满卡片剩余区域，并在块内垂直居中 */
+:global {
+  .sub-panel-wrapper:has(.ue5-no-data),
+  .v2-panel-root:has(.ue5-no-data),
+  .sub-panel:has(.ue5-no-data) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .sub-panel:has(.ue5-no-data) {
+    flex: 1 1 auto;
+  }
+
+  .sub-panel-content:has(.ue5-no-data) {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .sub-panel-content:has(.ue5-no-data) > * {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  /* 含空态的祖先把剩余高度往下传；不要写 height:100%，以免和顶部指标卡叠高出父级 */
+  .sub-panel-content:has(.ue5-no-data) *:has(.ue5-no-data) {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .ue5-no-data {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    padding: 8px;
+    border-radius: 10px;
+    background:
+      linear-gradient(180deg, rgba(41, 137, 255, 0.1), rgba(12, 230, 255, 0.03)),
+      rgba(8, 28, 58, 0.32);
+    border: 1px dashed rgba(83, 164, 255, 0.32);
+    box-shadow: inset 0 0 18px rgba(46, 148, 255, 0.1);
+  }
+
+  .ue5-no-data-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    color: var(--visual-data-modal-muted-color, #d0deee);
+    text-align: center;
+  }
+
+  .ue5-no-data-inner img {
+    display: block;
+    width: clamp(56px, 28%, 97px);
+    height: auto;
+    max-height: min(112px, 55%);
+    object-fit: contain;
+  }
+
+  .ue5-no-data-text {
+    margin-top: clamp(6px, 2vh, 12px);
+    font-size: clamp(13px, 1.6vw, 16px);
+    line-height: 1.4;
+    color: inherit;
+  }
+
+  :root[data-visual-theme="minimal-white"] .ue5-no-data {
+    background:
+      linear-gradient(180deg, rgba(240, 247, 255, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(116, 158, 210, 0.32);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 4px 12px rgba(50, 102, 166, 0.06);
+  }
+
+  :root[data-visual-theme="minimal-white"] .ue5-no-data-inner {
+    color: #49628f;
+  }
+
+  /* 表格空态：铺满占位格，避免小纸箱悬在大片空白里 */
+  .ant-table-placeholder:has(.ue5-no-data) > td {
+    height: 240px;
+    padding: 8px !important;
+    vertical-align: middle;
+    background: transparent !important;
+    border-bottom: none !important;
+  }
+
+  .ant-table-placeholder .ant-table-expanded-row-fixed:has(.ue5-no-data) {
+    display: flex !important;
+    width: 100% !important;
+    height: 100%;
+    min-height: 224px;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+  .ant-table-placeholder .ue5-no-data {
+    min-height: 224px;
+    height: 100%;
+  }
+
+  .ant-table-body:has(.ue5-no-data) table {
+    height: 100%;
+  }
+
+  .ant-table-body:has(.ue5-no-data) .ant-table-placeholder {
+    height: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/animate-4.1.1.css" />
+  <!--All-->
+  <script src="/config.js"></script>
+  <!-- <script src="//unpkg.com/vue"></script> -->
+  <script src="/vue.global.js"></script>
+  <script src="/vue-router.global.js"></script>
+  <script src="/vuex.global.js"></script>
+  <script src="./webrtc-plugin/plugin/thirdlib/Ice.js"></script>
+  <script src="./webrtc-plugin/plugin/main.js"></script>
+  <script src="/static/iconfont/iconfont.js"></script>
+  <script type="text/javascript"
+    src="https://webapi.amap.com/maps?v=2.0&key=11ce1f353a30f9fa2b125c842780a4cf&plugin=AMap.MouseTool,AMap.Geocoder"></script>
+  <title></title>
+</head>
+
+<body>
+  <noscript>
+    <strong>
+      We're sorry but doesn't work
+      properly without JavaScript enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <!-- built files will be auto injected -->
+  <link rel="stylesheet/less" type="text/css" href="/color.less" />
+  <script>
+    window.less = {
+      async: true,
+      env: "production",
+    };
+    document.title = '指挥调度平台'
+  </script>
+  <script type="text/javascript" src="/less.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.project-supervise {
+  height: 100vh;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    flex: 1;
+    margin-top: 12px;
+  }
+
+  .footer {
+    padding: 12px 16px;
+    background: #fff;
+  }
+
+  :global {
+
+    .van-form,
+    .van-field {
+      background: #fff;
+    }
+
+    .van-field:nth-child(3),
+    .van-field:nth-child(4),
+    .van-field:nth-child(5) {
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    textarea {
+      padding: 6px;
+      border-radius: 2px;
+      background: #fff;
+    }
+  }
+
+  .date-range {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+
+
+    .placeholder {
+      color: var(--van-text-color-3);
+    }
+  }
+
+  .uploadedList {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+
+    .uploaded {
+      position: relative;
+      margin-right: 12px;
+
+      img {
+        width: 65px;
+        height: 65px;
+        vertical-align: middle;
+      }
+
+      .van-icon-clear {
+        position: absolute;
+        right: -6px;
+        top: -8px;
+      }
+
+      :global {
+        .van-icon-clear {
+          position: absolute;
+          right: -6px;
+          top: -8px;
+        }
+      }
+    }
+  }
+}
+
+.mb-5 {
+  margin-bottom: 4px;
+}

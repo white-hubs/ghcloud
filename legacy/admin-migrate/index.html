@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico">
+  <meta version="<%- version %>" />
+  <script src="/config.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <strong>
+      We're sorry but doesn't work
+      properly without JavaScript enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div id="app"></div>
+  <script type="module" src="./src/main.js"></script>
+  <!-- built files will be auto injected -->
+  <script>
+    if (window.name) {
+      try {
+        const injectConfig = JSON.parse(window.name) ?? []
+        for (const key in injectConfig) {
+          const element = injectConfig[key];
+
+          if (key === 'microApps') {
+            for (const microApp of element) {
+              const microAppIndex = window.config.microApps.findIndex(e => e.name === microApp.name)
+              if (microAppIndex === -1) {
+                window.config.microApps.push(microApp)
+              } else {
+                window.config.microApps[microAppIndex] = microApp
+              }
+            }
+          } else {
+            window.config[key] = element
+          }
+        }
+        window.config.useAdmin = true
+      } catch (error) {
+        // 注入失败时保持默认配置
+      }
+      window.name = ''
+    }
+    document.title = window.config.systemName ? window.config.systemName : null
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "@ghcloud/operating-room-mqtt-broadcast",
+  "version": "1.0.1",
+  "main": "/src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./src/server.js",
+    "build": "npx ncc build src/server.js -o node_modules/.tmpout/dist",
+    "preview": "node ./dist/index.js"
+  },
+  "description": "",
+  "dependencies": {
+    "dayjs": "catalog:",
+    "mqtt": "5.7.0",
+    "axios": "1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "@vercel/ncc": "catalog:"
+  }
+}

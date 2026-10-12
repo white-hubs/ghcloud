@@ -1,0 +1,27 @@
+{
+  "name": "@ghcloud/cube-video-monitor-service",
+  "private": true,
+  "version": "1.0.2",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-utils": "workspace:^",
+    "@ghcloud/epp": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:vite-next",
+    "vite-plugin-dts": "catalog:"
+  }
+}

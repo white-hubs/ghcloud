@@ -1,0 +1,25 @@
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .tab {
+    padding: 5px 8px;
+    cursor: pointer;
+    background: rgba(41, 137, 255, 0.40);
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: justify;
+    color: #c5dbff;
+    border: 1px solid rgba(41, 137, 255, 0.40);
+
+    &.active {
+      color: #c5dbff;
+      background: rgba(41, 137, 255, 0.60);
+      border: 1px solid #2989ff;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.details {
+  min-height: 100vh;
+  background: #F3F7FA;
+  padding-bottom: 80px;
+
+  .tabs {
+    margin-top: 8px;
+  }
+
+  :global {
+    .van-tabs {
+      box-shadow: none !important;
+    }
+
+    .van-tabs__line {
+      bottom: calc(4vw + 8px) !important;
+      width: 20px !important;
+    }
+  }
+
+  .bottom {
+    padding: 12px 24px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.1);
+
+    .btn {
+      padding: 5px 24px;
+      line-height: 30px;
+      border-radius: 6px
+    }
+
+    .normal {
+      color: var(--van-button-primary-background);
+      background: var(--van-button-plain-background);
+      border: var(--van-button-border-width) solid var(--van-button-primary-border-color);
+    }
+
+    .primary {
+      color: var(--van-button-primary-color);
+      background: var(--van-button-primary-background);
+      border: var(--van-button-border-width) solid var(--van-button-primary-border-color);
+    }
+  }
+}

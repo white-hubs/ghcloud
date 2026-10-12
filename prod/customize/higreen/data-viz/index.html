@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta version="<%- version %>" />
+  <title>光明海吉星运营大屏</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+      background: transparent;
+    }
+
+    body {
+      font-family:'YouSheBiaoTiHei';
+      background-image: url("/images/background.webp");
+      background-size: cover;
+    }
+
+    iframe {
+      border: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    @font-face {
+      font-family: YouSheBiaoTiHei;
+      src: url("/fonts/you-she-biao-ti-hei.ttf")
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="higreen-data-viz" style="height: 100%; width: 100%;"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

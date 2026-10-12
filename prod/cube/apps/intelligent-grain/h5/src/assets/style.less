@@ -1,0 +1,490 @@
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+  background: #f5f7fb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.ig-h5-page {
+  min-height: 100vh;
+  color: #1f2937;
+  background: #f5f7fb;
+}
+
+.ig-h5-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 58px;
+  padding: 10px 10px 8px;
+  background: #fff;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.ig-h5-current-warehouse {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ig-h5-current-warehouse span {
+  flex: 0 0 auto;
+  font-size: 20px;
+}
+
+.ig-h5-current-warehouse strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-warehouse-select {
+  flex: 0 0 140px;
+  width: 140px;
+  height: 30px;
+  padding: 0 28px 0 10px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #1e6fff;
+  border-radius: 8px;
+  outline: none;
+}
+
+.ig-h5-main-tabs {
+  background: #fff;
+}
+
+.ig-h5-main-tabs .van-tabs__wrap {
+  height: 42px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.ig-h5-main-tabs .van-tab {
+  color: #667085;
+  font-size: 14px;
+}
+
+.ig-h5-main-tabs .van-tab--active {
+  color: #1e6fff;
+  font-weight: 600;
+}
+
+.ig-h5-main-tabs .van-tabs__line {
+  height: 2px;
+  background: #1e6fff;
+  border-radius: 0;
+}
+
+.ig-h5-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: calc(100vh - 146px);
+  padding: 8px 8px 20px;
+}
+
+.ig-h5-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ig-h5-metric-card,
+.ig-h5-health-card,
+.ig-h5-trend-card,
+.ig-h5-alert-tabs,
+.ig-h5-alert-card {
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.03);
+}
+
+.ig-h5-metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 108px;
+  padding: 12px;
+}
+
+.ig-h5-metric-card__title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  color: #8b95a5;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.ig-h5-metric-card__title span {
+  flex: 0 0 auto;
+}
+
+.ig-h5-metric-card > strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-metric-card p {
+  min-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-metric-card p.is-danger,
+.ig-h5-gas-list strong.is-danger {
+  color: #ff4d4f;
+}
+
+.ig-h5-metric-card p.is-normal,
+.ig-h5-gas-list strong.is-normal {
+  color: #12b76a;
+}
+
+.ig-h5-metric-card p.is-muted,
+.ig-h5-gas-list strong.is-muted {
+  color: #98a2b3;
+}
+
+.ig-h5-gas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ig-h5-gas-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ig-h5-gas-list span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.ig-h5-gas-list strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-health-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 12px 16px;
+  text-align: center;
+}
+
+.ig-h5-health-card__title {
+  color: #8b95a5;
+  font-size: 13px;
+}
+
+.ig-h5-health-card__score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 54px;
+  color: #ee2f4d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  background: #fff1f3;
+  border-radius: 8px;
+}
+
+.ig-h5-health-card.is-good .ig-h5-health-card__score {
+  color: #12b76a;
+  background: #edfff5;
+}
+
+.ig-h5-health-card.is-warn .ig-h5-health-card__score {
+  color: #fa8c16;
+  background: #fff7e8;
+}
+
+.ig-h5-health-card.is-offline .ig-h5-health-card__score {
+  color: #667085;
+  background: #f2f4f7;
+}
+
+.ig-h5-health-card > strong {
+  color: #ee2f4d;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.ig-h5-health-card.is-good > strong {
+  color: #12b76a;
+}
+
+.ig-h5-health-card.is-warn > strong {
+  color: #fa8c16;
+}
+
+.ig-h5-health-card.is-offline > strong {
+  color: #667085;
+}
+
+.ig-h5-health-card > span,
+.ig-h5-warehouse-meta,
+.ig-h5-section__head span,
+.ig-h5-alert-card__head span,
+.ig-h5-alert-card__body span {
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+.ig-h5-warehouse-meta {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-trend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 12px 10px;
+}
+
+.ig-h5-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 26px;
+}
+
+.ig-h5-section__head strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-section__head span {
+  flex: 0 0 auto;
+}
+
+.ig-h5-chart {
+  padding: 4px 0 0;
+}
+
+.ig-h5-chart svg {
+  display: block;
+  width: 100%;
+  height: 132px;
+}
+
+.ig-h5-chart rect {
+  fill: #f8fafc;
+}
+
+.ig-h5-chart__threshold {
+  stroke: #ff6b6b;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.ig-h5-chart__threshold-text {
+  fill: #ff4d4f;
+  font-size: 10px;
+}
+
+.ig-h5-chart__line {
+  fill: none;
+  stroke: #1e6fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.ig-h5-chart__point {
+  fill: #1e6fff;
+}
+
+.ig-h5-chart__point.is-alert {
+  fill: #ff4d4f;
+}
+
+.ig-h5-chart__labels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0 4px;
+}
+
+.ig-h5-chart__labels span {
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+.ig-h5-chart__labels span:not(:first-child) {
+  text-align: center;
+}
+
+.ig-h5-chart__labels span:last-child {
+  text-align: right;
+}
+
+.ig-h5-alert-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  min-height: 34px;
+  border-radius: 8px;
+}
+
+.ig-h5-alert-tabs button {
+  position: relative;
+  height: 34px;
+  color: #667085;
+  background: transparent;
+  border: 0;
+}
+
+.ig-h5-alert-tabs button.is-active {
+  color: #1e6fff;
+  font-weight: 600;
+}
+
+.ig-h5-alert-tabs button.is-active::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #1e6fff;
+  content: "";
+}
+
+.ig-h5-alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ig-h5-alert-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 68px;
+  padding: 12px 12px 12px 14px;
+  overflow: hidden;
+}
+
+.ig-h5-alert-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: #ff4d4f;
+  content: "";
+}
+
+.ig-h5-alert-card.is-level-2::before {
+  background: #fa8c16;
+}
+
+.ig-h5-alert-card.is-level-3::before {
+  background: #facc15;
+}
+
+.ig-h5-alert-card.is-level-4::before {
+  background: #2f6bff;
+}
+
+.ig-h5-alert-card__head,
+.ig-h5-alert-card__body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ig-h5-alert-card__head {
+  justify-content: space-between;
+}
+
+.ig-h5-alert-card__head strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-alert-card__head span {
+  flex: 0 0 auto;
+}
+
+.ig-h5-alert-card__body span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ig-h5-alert-card__level {
+  flex: 0 0 auto;
+  border-radius: 4px;
+}
+
+.ig-h5-alert-card__level.is-level-1 {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.ig-h5-alert-card__level.is-level-2 {
+  color: #fa8c16;
+  border-color: #fa8c16;
+}
+
+.ig-h5-alert-card__level.is-level-3 {
+  color: #d99700;
+  border-color: #facc15;
+}
+
+.ig-h5-alert-card__level.is-level-4 {
+  color: #2f6bff;
+  border-color: #2f6bff;
+}

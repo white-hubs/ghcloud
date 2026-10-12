@@ -1,0 +1,91 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  :global {
+    .van-tabs {
+      min-height: 100vh;
+      background: #f7f7f7;
+    }
+
+    .van-tabs__wrap {
+      margin-bottom: 15px;
+    }
+
+    .van-steps {
+      background: transparent;
+    }
+  }
+
+  .base-info {
+    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+
+    div {
+      white-space: nowrap;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #999999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .patrol-detail-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .abnormal-item {
+    display: flex;
+    align-items: center;
+    width: 351px;
+    height: 88px;
+    background: #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 12px;
+
+    .abnormal-item-content {
+      height: 20vw;
+      margin-left: 15px;
+      flex: 1;
+      .abnormal-item-title {
+        height: 20px;
+        font-family: Source Han Sans, Source Han Sans;
+        font-weight: 500;
+        font-size: 15px;
+        color: #1F3140;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+        text-transform: none;
+        white-space: nowrap;
+      }
+
+      .abnormal-item-remark {
+        height: 40px;
+        font-family: Source Han Sans, Source Han Sans;
+        font-weight: 400;
+        font-size: 13px;
+        color: #666666;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+        text-transform: none;
+      }
+    }
+
+  }
+}

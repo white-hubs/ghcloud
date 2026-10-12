@@ -1,0 +1,164 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 332px;
+  height: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.segmentedWrap {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+
+  :global(.ant-radio-button-wrapper) {
+    display: inline-flex;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 28px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 6px;
+    overflow: visible;
+    color: var(--visual-muted-color, #d9e7ff);
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+    line-height: 1.25;
+    text-align: center;
+    text-overflow: unset;
+    white-space: normal;
+    word-break: keep-all;
+    background:
+      linear-gradient(135deg, rgba(41, 137, 255, 0.08), rgba(12, 230, 255, 0.02)),
+      var(--visual-card-inner-bg, rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(70, 166, 255, 0.18);
+    border-radius: 6px;
+    box-shadow: none;
+
+    &::before {
+      display: none;
+    }
+
+    > span {
+      display: block;
+      overflow: visible;
+      text-overflow: unset;
+      white-space: normal;
+      word-break: keep-all;
+    }
+  }
+
+  :global(.ant-radio-button-wrapper-checked) {
+    color: #fff;
+    background: linear-gradient(145deg, rgba(41, 137, 255, 0.86), rgba(24, 103, 218, 0.72));
+    border-color: rgba(70, 166, 255, 0.52);
+    box-shadow: 0 3px 8px rgba(32, 113, 224, 0.22);
+  }
+}
+
+.statusSurface {
+  min-height: 76px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.statusEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+
+  :global(.ue5-no-data) {
+    min-height: 60px;
+  }
+
+  :global(.ue5-no-data-inner img) {
+    width: 46px;
+  }
+
+  :global(.ue5-no-data-text) {
+    margin-top: 4px;
+    font-size: calc(var(--font-size-scale, 1) * 11px);
+  }
+}
+
+.chartSurface {
+  display: flex;
+  min-height: 198px;
+  height: 198px;
+  padding: 4px 0 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.chartEmpty {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+}
+
+.isZoomChart {
+  min-height: 360px;
+  height: 360px;
+}
+
+.isZoom {
+  min-height: 520px;
+  gap: 14px;
+
+  .statusSurface {
+    min-height: 92px;
+  }
+
+  .statusEmpty {
+    min-height: 76px;
+  }
+
+  .chartEmpty {
+    min-height: 350px;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .hospital-alarm-trend-v2-panel) {
+  .segmented :global(.ant-radio-button-wrapper) {
+    color: #49628f;
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(116, 158, 210, 0.24);
+  }
+
+  .segmented :global(.ant-radio-button-wrapper-checked) {
+    color: #fff;
+    background: linear-gradient(145deg, #5b9ce2, #2f7fe8);
+  }
+}
+
+:global(.hospital-alarm-trend-v2-panel .sub-panel-content) {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.v2-minimal-white-panel(hospital-alarm-trend-v2-panel);

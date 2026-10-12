@@ -1,0 +1,324 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+/* 对齐 security-device-count 横向卡片行：圆角底块 + 名称左/数值右，完整展示 5 条 */
+.cardBody {
+  --top5-row-height: 54px;
+  --top5-row-gap: 6px;
+  --top5-visible-rows: 5;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.listSurface {
+  display: flex;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: var(--top5-row-gap);
+  height: calc(var(--top5-row-height) * var(--top5-visible-rows) + var(--top5-row-gap) * (var(--top5-visible-rows) - 1));
+  max-height: calc(var(--top5-row-height) * var(--top5-visible-rows) + var(--top5-row-gap) * (var(--top5-visible-rows) - 1));
+  min-height: calc(var(--top5-row-height) * var(--top5-visible-rows) + var(--top5-row-gap) * (var(--top5-visible-rows) - 1));
+  padding: 0;
+  .v2-list-scroll-snap();
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.rankItem {
+  display: flex;
+  flex: 0 0 var(--top5-row-height);
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--top5-row-height);
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  .v2-list-scroll-snap-item();
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.12), rgba(12, 230, 255, 0.03)),
+    rgba(8, 28, 58, 0.28);
+  border: 1px solid rgba(113, 178, 255, 0.2);
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    border-color: rgba(73, 151, 255, 0.45);
+    background:
+      linear-gradient(135deg, rgba(47, 141, 255, 0.2), rgba(19, 58, 110, 0.22)),
+      rgba(8, 28, 58, 0.35);
+  }
+}
+
+.sort {
+  display: inline-flex;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+.sort1 {
+  color: #ff8f8f;
+  background: rgba(241, 69, 69, 0.22);
+  border: 1px solid rgba(241, 69, 69, 0.85);
+}
+
+.sort2 {
+  color: #ffc86a;
+  background: rgba(255, 171, 16, 0.2);
+  border: 1px solid rgba(255, 171, 16, 0.85);
+}
+
+.sort3 {
+  color: #7eb6ff;
+  background: rgba(47, 141, 255, 0.2);
+  border: 1px solid rgba(47, 141, 255, 0.85);
+}
+
+.sortMuted {
+  color: rgba(230, 247, 255, 0.88);
+  background: rgba(125, 198, 255, 0.1);
+  border: 1px solid rgba(121, 160, 208, 0.55);
+}
+
+.rankMain {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.rankTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rankName {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rankValue {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: baseline;
+  gap: 2px;
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.rankUnit {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.72));
+  font-family: Source Han Sans CN, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rankBarTrack {
+  display: block;
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  background: rgba(125, 198, 255, 0.16);
+  border-radius: 999px;
+}
+
+.rankBarFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.rankMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.rankShare {
+  color: var(--visual-muted-color, rgba(217, 231, 255, 0.78));
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.rankTrend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.rankTrendLabel {
+  color: var(--access-control-text-secondary, #d9e7ff);
+}
+
+.rankArrow {
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #2ae8bd;
+  border-left: 4px solid transparent;
+  transform: rotate(180deg);
+}
+
+.rankArrowUp {
+  border-bottom-color: #f14545;
+  transform: rotate(0deg);
+}
+
+.rankTrendUp {
+  color: #f14545;
+  font-weight: 600;
+}
+
+.rankTrendDown {
+  color: #2ae8bd;
+  font-weight: 600;
+}
+
+.emptySurface {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+}
+
+.zoomBody {
+  --top5-row-height: 64px;
+  --top5-row-gap: 10px;
+  display: flex;
+  min-height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+
+  .listSurface,
+  .isZoomList {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .rankItem {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: var(--top5-row-height);
+    padding: 10px 14px;
+  }
+
+  .rankName {
+    font-size: 14px;
+  }
+
+  .rankValue {
+    font-size: 18px;
+  }
+
+  .rankShare {
+    font-size: 12px;
+  }
+
+  .emptySurface {
+    min-height: 240px;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .cmd-alarm-area-top5-v2-panel) {
+  .rankItem {
+    background: linear-gradient(145deg, rgba(232, 244, 255, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.08);
+  }
+
+  .rankName,
+  .rankUnit,
+  .rankShare,
+  .rankTrendLabel {
+    color: #49628f;
+  }
+
+  .rankValue {
+    color: #1455b3;
+  }
+
+  .sort {
+    color: #1455b3;
+  }
+
+  .sort1 {
+    color: #c0392b;
+    background: rgba(239, 66, 74, 0.12);
+    border-color: rgba(239, 66, 74, 0.45);
+  }
+
+  .sort2 {
+    color: #d48806;
+    background: rgba(255, 171, 16, 0.14);
+    border-color: rgba(230, 162, 60, 0.5);
+  }
+
+  .sort3,
+  .sortMuted {
+    color: #1455b3;
+    background: rgba(41, 137, 255, 0.12);
+    border-color: rgba(82, 142, 222, 0.34);
+  }
+
+  .rankBarTrack {
+    background: rgba(116, 158, 210, 0.16);
+  }
+}
+
+.v2-minimal-white-panel(cmd-alarm-area-top5-v2-panel);
+
+:global {
+  .cmd-alarm-area-top5-v2-panel .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+}

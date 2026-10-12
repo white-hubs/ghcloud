@@ -1,0 +1,26 @@
+{
+  "name": "Ghy",
+  "prefix": "Ghy",
+  "uri": "http://ghy",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "Start",
+      "superClass": ["bpmn:Event"],
+      "properties": []
+    },
+    {
+      "name": "End",
+      "superClass": ["bpmn:Event"],
+      "properties": []
+    },
+    {
+      "name": "UserTask",
+      "superClass": ["bpmn:UserTask"],
+      "properties": []
+    }
+  ]
+}

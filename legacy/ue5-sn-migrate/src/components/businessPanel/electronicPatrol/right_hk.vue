@@ -1,0 +1,104 @@
+<template>
+  <div class="panel">
+    <SubPanelTemplate title="今日巡更人员最新位置">
+      <div style="height: 200px;">
+        <RollTable :column="columns" :data="personnelLocationData">
+        </RollTable>
+      </div>
+    </SubPanelTemplate>
+    <SubPanelTemplate title="巡更点位排行榜Top10">
+      <template #extra>
+        <DateInlineForm v-model:modelValue="intercomTime" @search="getIntercomEvent"></DateInlineForm>
+      </template>
+      <div class="body" v-show="intercomRank.length" style="min-height: 250px">
+        <EventAlarmItem :sn="false" v-for="(item, index) in intercomRank" :sort="index + 1" :name="item.key"
+          :count="item.value" />
+      </div>
+      <div class="body" v-show="!intercomRank.length" style="min-height: 250px">
+        <noData></noData>
+      </div>
+    </SubPanelTemplate>
+    <SubPanelTemplate title="巡更点位趋势图">
+      <template #extra>
+        <DateInlineForm v-model:modelValue="trendTime" @search="getTrendEvent"></DateInlineForm>
+      </template>
+      <div class="chart">
+        <LineChart :unit="{x:'',y:''}" :gridTop="'5'" :x-data="xData" :series="[
+            {
+              data: yDataTrend,
+              linearGradientColor: ['rgb(86, 142, 255)', 'rgb(86, 142, 255,0)'],
+            },
+          ]" />
+      </div>
+    </SubPanelTemplate>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, reactive,onMounted} from 'vue'
+import RollTable from "../public/rollTable/index.vue";
+import SubPanelTemplate from "../../businessPanel/public/subPanelTemplate.vue";
+import LineChart from "@/components/businessPanel/public/lineChart.vue";
+import DateInlineForm from "@/components/businessPanel/public/dateInlineForm.vue";
+import EventAlarmItem from "../public/eventAlarmItem.vue";
+import noData from "../public/noData.vue";
+import { ModelValueItf } from '../public/types';
+import { patrolLocationTop, patrolLocationTrend, patrolPersonLocationNew } from '@/api/door';
+import moment from 'moment';
+const columns = [
+  {
+    title: "时间",
+    dataIndex: "datetime",
+  },
+  {
+    title: "人员",
+    dataIndex: "personName",
+  },
+  {
+    title: "点位",
+    dataIndex: "location",
+  },
+];
+const intercomTime = ref<ModelValueItf>()
+const trendTime = ref<ModelValueItf>()
+const intercomRank = ref([]);
+const xData = ref<string[]>(['1','2','3','4']);
+const yDataTrend = ref<number[]>([1,2,3,4,5,6]);
+
+const personnelLocationData = ref([])
+
+const getIntercomEvent = async () => {
+  intercomRank.value = await patrolLocationTop({period:intercomTime.value.dateRange.join(",")})
+}
+const getTrendEvent = async () => {
+  const res = await patrolLocationTrend({period:trendTime.value.dateRange.join(","),type:trendTime.value.timeType})
+  xData.value = []
+  yDataTrend.value = []
+  res.forEach(item=>{
+    xData.value.push(item.key)
+    yDataTrend.value.push(item.value)
+  })
+}
+const getPatrolPersonLocationNew = async () => {
+  const res = await patrolPersonLocationNew({type:'TODAY'})
+  personnelLocationData.value = res.map(e=>{
+    return {
+      ...e,
+      datetime:moment(e.datetime).format('YYYY-MM-DD 00:00:00')
+    }
+  })
+}
+onMounted(()=>{
+  getPatrolPersonLocationNew()
+})
+</script>
+<style lang="less" scoped>
+.chart {
+  height: 250px;
+}
+
+.body {
+  max-height: 300px;
+  overflow: auto;
+}
+</style>

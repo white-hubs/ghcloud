@@ -1,0 +1,32 @@
+{
+  "name": "@ghcloud/data-viz-offline-config-generator",
+  "description": "手术室驾驶仓离线配置生成器，该工具配合工控机运维工具使用",
+  "private": true,
+  "version": "0.0.4",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/generator.cjs",
+  "module": "./dist/generator.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "rm -rf node_modules/.tmpout/dist/*  &&  ncc build ./lib/main.js -o node_modules/.tmpout/dist -m && cp ./lib/config.yaml ./node_modules/.tmpout/dist/config.yaml"
+  },
+  "dependencies": {
+    "dayjs": "catalog:",
+    "fs-extra": "11.2.0",
+    "js-yaml": "4.1.0",
+    "axios": "1.7.7",
+    "form-data": "4.0.0",
+    "decompress": "4.2.1"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "@types/fs-extra": "11.0.4",
+    "vite-plugin-commonjs-externals": "0.1.4",
+    "@vercel/ncc": "catalog:"
+  }
+}

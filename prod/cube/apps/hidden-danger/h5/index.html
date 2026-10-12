@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta version="<%- version %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐患排查</title>
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img,
+    video {
+      height: auto;
+      max-width: 100%;
+    }
+
+    iframe {
+      border: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .color-normal {
+      color: var(--van-success-color);
+    }
+
+    .color-high {
+      color: var(--van-danger-color);
+    }
+
+    .color-low {
+      color: var(--van-warning-color);
+    }
+
+    .bg-normal {
+      background-color: var(--van-success-color);
+    }
+
+    .bg-high {
+      background-color: var(--van-danger-color);
+    }
+
+    .bg-low {
+      background-color: var(--van-warning-color);
+    }
+
+    .after-normal::after {
+      background-color: var(--van-success-color);
+    }
+
+    .after-high::after {
+      background-color: var(--van-danger-color);
+    }
+
+    .after-low::after {
+      background-color: var(--van-warning-color);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" style="height: 100%; width: 100%;"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

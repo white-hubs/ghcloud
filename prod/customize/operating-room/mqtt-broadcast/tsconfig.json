@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",                          // JavaScript 语言目标版本
+    "module": "commonjs",                     // 生成代码的模块系统
+    "outDir": "./dist",                       // 输出目录
+    "rootDir": "./src",                       // 输入文件的根目录
+    "strict": true,                           // 启用所有严格类型检查选项
+    "esModuleInterop": true,                  // 允许默认导入非 ES 模块
+    "skipLibCheck": true,                     // 跳过类型检查库文件（.d.ts）
+    "forceConsistentCasingInFileNames": true  // 强制在文件名中使用一致的大小写
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}

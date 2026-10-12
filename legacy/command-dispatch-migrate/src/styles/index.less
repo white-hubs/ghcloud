@@ -1,0 +1,300 @@
+@white: #fff;
+@black: #000;
+@gray: #eff3fa;
+@fontColor: #535b6c;
+@green: #23c993;
+@greendeep: #1abe89;
+@blue: #1890FF;
+@bluedeep: #117cdf;
+@blueHover: #6eb0ee4d;
+@colorEee: #eee;
+@fontMedium: "SourceHanSansCN-Medium-2";
+@fontRegular: "SourceHanSansCN-Regular-2";
+@background_th: #f5f8fc;
+@t_body_color: #999999;
+@danger_color: #ff493f;
+@selected_color: #f3f9ff;
+@lightBlue: #f3f9ff;
+@tatalBgc: #fbfcff;
+@totalFontColor: #00ba8b;
+@infoHover: #e6f7ff;
+@statistics1: #f8fffd;
+@statistics2: #fffbf8;
+@statistics3: #f8fcff;
+@listStyleLast: #f75100;
+@listStylnormal: #ff827b;
+@auditRow: #f0a737;
+@tableBottomLine: #f3f3f3;
+
+@font-face {
+  font-family: "PingFang SC-Medium";
+  src: url("/static/family/SourceHanSansCN-Medium-2.otf");
+}
+
+@font-face {
+  font-family: "PingFang SC-Regular";
+  src: url("/static/family/SourceHanSansCN-Regular-2.otf");
+}
+
+html,
+body {
+  font-family: PANGFIMARY;
+  // 配置页面文字不可选中
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.deleteRow {
+  color: @danger_color !important;
+}
+
+.normalRow {
+  color: @green;
+}
+
+.blueRow {
+  color: @blue;
+}
+
+.riskLow {
+  font-size: 12px;
+  padding: 0 7px;
+  border: 1px solid #b7eb8f;
+  border-radius: 2px;
+  background: #f6ffed;
+  color: #389e0d;
+}
+
+.riskMedium {
+  font-size: 12px;
+  padding: 0 7px;
+  border: 1px solid #ffd591;
+  border-radius: 2px;
+  background: #fff7e6;
+  color: #d46b08;
+}
+
+.riskHigh {
+  font-size: 12px;
+  padding: 0 7px;
+  border: 1px solid #ffa39e;
+  border-radius: 2px;
+  background: #fff1f0;
+  color: #cf1322;
+}
+
+.tableDotNormal {
+  background-color: @green;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tableDotDelete {
+  background-color: @danger_color;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tableDotAudit {
+  background-color: @t_body_color;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tableStatus {
+  vertical-align: middle;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.mediaGrid {
+  display: grid;
+
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1366px) and (max-width: 1600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.singleLine {
+  @media (max-width: 1366px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: 1366px) and (max-width: 1600px) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  @media (min-width: 1600px) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.position {
+  position: relative;
+}
+
+:deep(.ant-table-tbody) {
+  tr td .ant-badge.ant-badge-not-a-wrapper {
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    top: -15px;
+    left: -5px;
+  }
+
+  >tr>td.ant-table-column-sort.ant-table-cell-fix-right {
+    background: white;
+  }
+}
+
+.verticalLine {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+.ant-layout {
+  height: 100%;
+
+  &-header {
+    height: auto;
+    padding: 0;
+    line-height: 100%;
+    background-color: @white;
+  }
+}
+
+:deep(.ant-btn) {
+  line-height: 1.5;
+}
+
+:deep(.ant-spin-nested-loading) {
+  width: 100%;
+  height: 100%;
+
+  .ant-spin-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes bounce-wodn {
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fc-style {
+  .ant-form {
+    .ant-col-3 {
+      flex: none !important;
+      max-width: 100% !important;
+    }
+  }
+}
+
+//=========================================样式统一=======================
+.content-table {
+  :deep(.ant-tabs-nav-wrap) {
+    background-color: #fafafa !important;
+  }
+}
+
+//弹框表单样式
+.ant-modal {
+  .ant-modal-body {
+    .ant-tabs-nav-wrap {
+      background-color: #fafafa !important;
+    }
+
+    .ant-form {
+      .ant-form-item {
+        margin-bottom: 10px !important;
+      }
+
+      .ant-form-item-label {
+        width: 80px !important;
+        margin-right: 10px;
+      }
+
+      .g-select.ant-select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+div {
+  &::-webkit-scrollbar {
+    display: block;
+    width: 2px !important;
+  }
+}
+
+:deep(.ant-form-item-label) {
+  margin-right: 10px !important;
+}
+
+:deep( .ant-tabs-nav ){
+ .ant-tabs-tab-active{
+    color: #2989FF ;
+   
+  }
+ .ant-tabs-tab:hover{
+ color: #2989FF ;
+ }
+}
+.ant-tabs-ink-bar {
+  background-color: #2989FF  !important;
+}

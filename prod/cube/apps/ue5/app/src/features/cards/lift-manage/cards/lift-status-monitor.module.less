@@ -1,0 +1,226 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 248px;
+  flex-direction: column;
+}
+
+.analysisSurface {
+  display: flex;
+  min-width: 0;
+  min-height: 222px;
+  align-items: center;
+  gap: 12px;
+}
+
+.chartWrap {
+  display: flex;
+  flex: 0 0 126px;
+  width: 126px;
+  height: 126px;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusRing {
+  width: 126px !important;
+  height: 126px !important;
+}
+
+.statusList {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statusItem {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 49px;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 9px;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.1), rgba(12, 230, 255, 0.03)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(83, 164, 255, 0.22);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(46, 148, 255, 0.06);
+}
+
+.statusTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.statusName {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  color: var(--visual-text-color, rgba(230, 247, 255, 0.92));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusDot {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 7px currentColor;
+}
+
+.statusCount {
+  flex: 0 0 auto;
+  color: var(--visual-number-color, #35a9ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(43, 147, 255, 0.25);
+}
+
+.statusBarTrack {
+  display: block;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background: rgba(125, 198, 255, 0.12);
+  border-radius: 999px;
+}
+
+.statusBarFill {
+  display: block;
+  height: 100%;
+  min-width: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 7px rgba(41, 137, 255, 0.24);
+  transition: width 320ms ease;
+}
+
+.statusPercent {
+  color: var(--visual-muted-color, rgba(217, 231, 255, 0.68));
+  font-size: calc(var(--font-size-scale, 1) * 10px);
+  line-height: 1;
+  text-align: right;
+}
+
+.pieCenterValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.3);
+}
+
+.pieCenterLabel {
+  color: var(--visual-chart-label-color, rgba(220, 238, 255, 0.84));
+  font-size: calc(var(--font-size-scale, 1) * 10px);
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .analysisSurface {
+    min-height: 330px;
+    gap: 20px;
+  }
+
+  .chartWrap,
+  .statusRing {
+    flex-basis: 190px;
+    width: 190px !important;
+    height: 190px !important;
+  }
+
+  .statusList {
+    gap: 10px;
+  }
+
+  .statusItem {
+    min-height: 64px;
+    padding: 10px 13px;
+  }
+
+  .statusName {
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+  }
+
+  .statusCount {
+    font-size: calc(var(--font-size-scale, 1) * 17px);
+  }
+
+  .pieCenterValue {
+    font-size: calc(var(--font-size-scale, 1) * 28px);
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .lift-status-monitor-v2-panel) {
+  .statusItem {
+    background: linear-gradient(145deg, rgba(214, 233, 255, 0.98), rgba(240, 247, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.1);
+  }
+
+  .isNORMAL {
+    background: linear-gradient(145deg, rgba(230, 252, 244, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(61, 184, 146, 0.34);
+  }
+
+  .isALARM {
+    background: linear-gradient(145deg, rgba(255, 235, 236, 0.98), rgba(255, 250, 250, 0.96));
+    border-color: rgba(239, 66, 74, 0.3);
+  }
+
+  .isTROUBLE {
+    background: linear-gradient(145deg, rgba(255, 244, 230, 0.98), rgba(255, 250, 244, 0.96));
+    border-color: rgba(230, 162, 60, 0.34);
+  }
+
+  .isOFFLINE {
+    background: linear-gradient(145deg, rgba(238, 245, 252, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(124, 165, 201, 0.34);
+  }
+
+  .statusName,
+  .statusPercent,
+  .pieCenterLabel {
+    color: #49628f;
+  }
+
+  .statusCount,
+  .pieCenterValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .isNORMAL .statusCount {
+    color: #0f9f5a;
+  }
+
+  .isALARM .statusCount {
+    color: #c0392b;
+  }
+
+  .isTROUBLE .statusCount {
+    color: #d48806;
+  }
+
+  .statusBarTrack {
+    background: rgba(116, 158, 210, 0.16);
+  }
+}
+
+.v2-minimal-white-panel(lift-status-monitor-v2-panel);

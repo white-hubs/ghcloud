@@ -1,0 +1,370 @@
+.monitoring-detail {
+  min-width: 0;
+}
+
+.monitoring-detail-page {
+  gap: 18px;
+}
+
+.monitoring-basic-card .cs-card-hd {
+  padding: 12px 14px;
+}
+
+.monitoring-detail-page .cs-card {
+  border: 0;
+  box-shadow: none;
+}
+
+.monitoring-detail-page .cs-card-hd {
+  border-bottom: 0;
+}
+
+.monitoring-basic-grid {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0 14px 12px;
+}
+
+.monitoring-basic-item {
+  min-height: 72px;
+  padding: 12px 10px;
+}
+
+.monitoring-basic-item span {
+  color: #8b95a1;
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.monitoring-basic-item b {
+  color: #1f2937;
+  display: block;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+
+.monitoring-trend-card .cs-card-hd {
+  border-bottom: 0;
+  padding: 12px 14px 0;
+}
+
+.monitoring-trend-card .ant-btn {
+  border-radius: 4px;
+  height: 28px;
+  min-width: 64px;
+  padding: 0 12px;
+}
+
+.monitoring-trend-chart {
+  background: #fff;
+  border-radius: 6px;
+  height: 220px;
+  margin: 12px 14px 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.monitoring-trend-chart svg {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.monitoring-trend-chart text {
+  fill: #8b95a1;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.monitoring-axis-labels {
+  color: #8b95a1;
+  display: grid;
+  font-size: 15px;
+  font-weight: 700;
+  gap: 22px;
+  left: 18px;
+  line-height: 1;
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+}
+
+.monitoring-grid-line {
+  stroke: #eceff4;
+  stroke-dasharray: 5 7;
+  stroke-width: 1;
+}
+
+.monitoring-trend-line {
+  fill: none;
+  stroke: #d84b53;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.monitoring-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.monitoring-section-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 30px;
+}
+
+.monitoring-section-title h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.monitoring-device-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.monitoring-device-group {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.monitoring-device-group__head {
+  align-items: center;
+  background: linear-gradient(180deg, #f3f5f9 0%, #f7f8fb 100%);
+  display: flex;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.monitoring-device-group__head b {
+  font-size: 14px;
+}
+
+.monitoring-device-group__icon,
+.monitoring-device-icon {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 800;
+  justify-content: center;
+}
+
+.monitoring-device-group__icon {
+  background: #eef6ff;
+  color: #1677ff;
+  height: 22px;
+  width: 22px;
+}
+
+.monitoring-device-icon {
+  background: #eef3ff;
+  color: #4b74db;
+  height: 32px;
+  width: 32px;
+}
+
+.monitoring-device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+.monitoring-device-item {
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  min-height: 58px;
+  padding: 8px 10px;
+}
+
+.monitoring-device-item b {
+  color: #2366c6;
+  display: block;
+  font-size: 13px;
+}
+
+.monitoring-device-item small {
+  color: #4b5563;
+  display: block;
+  margin-top: 2px;
+}
+
+.monitoring-camera-monitor {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+}
+
+.monitoring-camera-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.monitoring-camera-card {
+  align-items: center;
+  background: #12162c;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  justify-content: center;
+  min-height: 128px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.monitoring-camera-card:hover,
+.monitoring-camera-card.is-active {
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.24);
+  transform: translateY(-1px);
+}
+
+.monitoring-camera-card.is-active {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.monitoring-camera-card.is-offline {
+  background: #2c3447;
+}
+
+.monitoring-live {
+  align-items: center;
+  background: #f4fff7;
+  border-radius: 4px;
+  color: #16a34a;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 800;
+  gap: 4px;
+  line-height: 1;
+  padding: 6px 8px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.monitoring-live i {
+  background: currentColor;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+}
+
+.monitoring-live.off {
+  color: #8b95a1;
+}
+
+.monitoring-camera-icon {
+  background: #f3f4f6;
+  border-radius: 4px;
+  color: #4b5563;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  padding: 5px 7px;
+}
+
+.monitoring-camera-card b {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.monitoring-camera-card span:not(.monitoring-live) {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.monitoring-camera-card small {
+  color: rgba(255, 255, 255, 0.76);
+  margin-top: 4px;
+}
+
+.monitoring-player-panel {
+  background: #0f172a;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.monitoring-player-panel__title {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  font-size: 13px;
+  gap: 12px;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 0 14px;
+}
+
+.monitoring-player-panel__title b {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.monitoring-player-panel__body {
+  flex: 1;
+  min-height: 0;
+}
+
+.monitoring-player-panel__body .ant-empty {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.monitoring-empty {
+  background: #fff;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+@media (max-width: 1200px) {
+  .monitoring-basic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .monitoring-device-grid,
+  .monitoring-camera-monitor,
+  .monitoring-camera-grid {
+    grid-template-columns: 1fr;
+  }
+}

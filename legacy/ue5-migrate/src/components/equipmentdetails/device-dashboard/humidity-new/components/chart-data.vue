@@ -1,0 +1,292 @@
+<template>
+  <div class="card list-data">
+    <div class="bottom">
+      <div class="wrap2">
+        <div class="list">
+          <div class="item" v-for="(sub, idx) in codeList" :key="idx">
+            <div class="chart">
+              <ElectricGaugeChart :value="getCodeValue(sub.propCode)" :min="Math.min(...sub.dataConstraint)"
+                :max="Math.max(...sub.dataConstraint)" :unit="sub.unitName" />
+            </div>
+            <div class="label">{{ sub.propName }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="jsx">
+import {
+  defineComponent, 
+  reactive, toRefs, watch
+} from "vue";
+import ElectricGaugeChart from "../../components/electric-gauge-chart.vue";
+
+export default defineComponent({
+  components: {
+    ElectricGaugeChart
+  },
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    productPropVoList: {
+      type: Object,
+      default: []
+    },
+    data: {
+      type: Object,
+      default: {}
+    }
+  },
+  setup(props, { emit }) {
+    const state = reactive({
+      deviceData: {
+        fileVO: {
+          path: "",
+        },
+      },
+      codeList: [],
+      attributeData: {},
+      inputData: [],
+    })
+    watch(() => props.productPropVoList, (newVal) => {
+      
+      state.codeList = newVal
+    }, { immediate: true, deep: true })
+    watch(() => props.data, (newVal) => {
+      state.attributeData = newVal
+    }, { immediate: true, deep: true })
+    const getCodeValue = (codeName) => {
+      try {
+        const iotCode = state.codeList.filter(item => item.propCode === codeName)[0]
+        const iotVal = state.attributeData[codeName] ?? ''
+        const res = {
+          code: iotCode.propCode,
+          name: iotCode.propName,
+          unit: iotCode.unitName,
+          value: iotVal
+        }
+        if (['enum', 'boolean', 'bool'].includes(iotCode.dataType)) {
+          const enumCur = iotCode.dataConstraint.filter(e => e.value === iotVal)[0]
+          res.value = enumCur ? enumCur?.label : ''
+        }
+        return res.value
+      } catch (error) {
+        return ''
+      }
+    }
+    return {
+      ...toRefs(state),
+      getCodeValue,
+    };
+  },
+});
+</script>
+<style scoped lang="less">
+.card {
+  margin-top: 10px;
+  padding: 0;
+
+  .title {
+    font-family: Source Han Sans, Source Han Sans;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E4E7EDFF;
+  }
+
+  .tip {
+    margin: 5px 10px 15px 0;
+    padding: 10px 0 10px 20px;
+    background: #F9FAFC;
+    border-radius: 4px 4px 4px 4px;
+
+    font-size: 14px;
+    font-family: Source Han Sans, Source Han Sans;
+    font-weight: 400;
+    color: #4E5969;
+
+    .val {
+      font-size: 14px;
+      font-family: Source Han Sans, Source Han Sans;
+      font-weight: 500;
+      color: #4E5969;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+
+    .title2 {
+      font-size: 14px;
+      font-family: Source Han Sans, Source Han Sans;
+      font-weight: 500;
+      color: #4E5969;
+      margin-right: 20px;
+    }
+
+  }
+
+  &.list-data {
+    .wrap {
+
+      // margin: 10px 0;
+      .list {
+        display: flex;
+        gap: 20px;
+
+        .item {
+          width: 78px;
+          height: 78px;
+        }
+      }
+
+    }
+  }
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+
+  .item {
+    width: 78px;
+    height: 78px;
+  }
+}
+
+.chart-item {
+  padding: 30px;
+  background: #f9fafc;
+  min-width: 360px;
+  width: 33%;
+  height: 380px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  span {
+    display: inline-block;
+  }
+}
+
+
+.wrap2 {
+  margin: 10px 0;
+  flex-shrink: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  opacity: 1;
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+
+      .label {
+        font-size: 16px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        top:-10px;
+      }
+
+      .chart {
+        height: 360px;
+        width: 280px;
+      }
+
+      .battery-time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .label {
+          margin-top: 20px;
+        }
+
+        img {
+          width: 64px;
+          height: 87px;
+        }
+
+      }
+
+      .wrap {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 20px;
+        border-radius: 8px;
+      }
+
+      &:first-child {
+        .wrap {
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        .wrap {
+          margin-right: 20px;
+        }
+      }
+
+      .info {
+        margin-left: 15px;
+      }
+
+      .tit {
+        font-size: 12px;
+        font-family: Source Han Sans, Source Han Sans;
+        font-weight: 400;
+        color: #606266;
+        line-height: 20px;
+        text-wrap: nowrap;
+      }
+
+      .text {
+        font-size: 14px;
+        font-family: Source Han Sans, Source Han Sans;
+        font-weight: 500;
+        line-height: 20px;
+        color: #4E5969;
+      }
+
+      // .chart {
+      //   width: 78px;
+      //   height: 50px;
+      // }
+
+      .icon {
+        width: 44px;
+        height: 44px;
+        margin-left: 36px;
+        position: relative;
+      }
+    }
+  }
+
+}
+
+</style>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680">
+  <rect width="1100" height="680" fill="#f7f9fc"/>
+  <g fill="#fff" stroke="#64748b" stroke-width="5">
+    <rect x="80" y="100" width="940" height="470"/>
+    <path d="M80 300H1020M80 395H1020M360 100V300M740 100V300M430 395V570M740 395V570"/>
+  </g>
+  <g fill="#eaf2ff"><rect x="85" y="105" width="270" height="190"/><rect x="365" y="105" width="370" height="190"/><rect x="745" y="105" width="270" height="190"/></g>
+  <g fill="#eef8f3"><rect x="85" y="400" width="340" height="165"/><rect x="435" y="400" width="300" height="165"/></g>
+  <rect x="745" y="400" width="270" height="165" fill="#fff5e7"/>
+  <g stroke="#fff" stroke-width="9"><path d="M175 300H240M480 300H545M835 300H900M200 395H265M505 395H570M835 395H900"/><path d="M520 570H590"/></g>
+  <g font-family="sans-serif" text-anchor="middle" fill="#334155" font-size="22">
+    <text x="550" y="58" font-size="28" font-weight="600">数据对接楼 · 10层平面图</text>
+    <text x="220" y="200">办公室 R1001</text><text x="550" y="200">会议室 R1002</text><text x="880" y="200">机房 R1003</text>
+    <text x="550" y="358" fill="#64748b">公共走廊 R1004</text><text x="255" y="490">开放办公区</text><text x="585" y="490">公共服务区</text><text x="880" y="490">楼梯 / 电梯</text>
+    <text x="550" y="622" fill="#64748b" font-size="16">空间档案演示图 · 不含定位点、坐标标定或房间边界配置</text>
+  </g>
+  <path d="M1045 80V32L1037 48M1045 32L1053 48" fill="none" stroke="#64748b" stroke-width="2"/><text x="1045" y="23" text-anchor="middle" font-family="sans-serif" fill="#64748b">N</text>
+</svg>

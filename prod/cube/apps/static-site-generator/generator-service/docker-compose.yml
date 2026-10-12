@@ -1,0 +1,12 @@
+services:
+  generator-service:
+    image: ghcloud/ssg-generator-service:latest
+    ports:
+      - "4000:3000"
+    volumes:
+      - generator-data:/app/generator-service/data
+    environment:
+      - PORT=3000
+
+volumes:
+  generator-data:

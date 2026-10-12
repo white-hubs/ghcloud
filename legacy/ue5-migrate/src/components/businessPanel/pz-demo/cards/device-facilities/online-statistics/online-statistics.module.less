@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.statusItem {
+  text-align: center;
+
+  .label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    .number {
+      font-size: 32px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-right: 4px;
+    }
+
+    .unit {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+}

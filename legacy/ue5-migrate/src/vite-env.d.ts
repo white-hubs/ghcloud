@@ -1,0 +1,10 @@
+// /// <reference types="vite/client" />
+declare module '*.vue' {
+    import type { DefineComponent } from 'vue'
+    const component: DefineComponent<{}, {}, any>
+    export default component
+}
+declare module '*.js'
+declare module '*.ts'
+declare module 'vue3-count-to'
+declare module 'Vue3SeamlessScroll'

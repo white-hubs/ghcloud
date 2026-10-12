@@ -1,0 +1,40 @@
+.legend{
+  display: inline-flex;
+  align-items: center;
+  margin-top: -1vw;
+  box-sizing: border-box;
+  padding-left: 2.5vw;
+  width: 100%;
+  background: #F3F7FA;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  span{
+    font-size: 12px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    display: block;
+    margin-right: 30px;
+    color: #86909C;
+    &::before{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      content: '';
+      width: 2vw;
+      height: 2vw;
+      border-radius: 50%;
+    }
+
+    &.normal::before{
+      background-color: var(--van-success-color);
+    }
+    &.high::before{
+      background-color: var(--van-danger-color);
+    }
+    &.low::before{
+      background-color: var(--van-warning-color);
+    }
+  }
+}

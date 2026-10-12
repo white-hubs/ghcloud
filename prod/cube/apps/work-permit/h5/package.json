@@ -1,0 +1,45 @@
+{
+  "name": "@ghcloud/cube-work-permit-h5",
+  "private": false,
+  "version": "1.0.1",
+  "description": "作业管理 H5 应用。",
+  "type": "module",
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite -c vite.dev.config.ts --mode dev",
+    "build": "vite build -c vite.build.config.ts",
+    "build:dev": "vite build --mode test",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview -c vite.preview.config.ts"
+  },
+  "dependencies": {
+    "@ghcloud/cube-app-js-sdk": "workspace:^",
+    "@ghcloud/cube-app-generic-component": "workspace:^",
+    "@ghcloud/cube-auth-utils": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^",
+    "@ghcloud/cube-service-interface": "workspace:^",
+    "@ghcloud/cube-services-client": "workspace:^",
+    "@ghcloud/logger": "workspace:^",
+    "pinia": "catalog:",
+    "vant": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "less": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

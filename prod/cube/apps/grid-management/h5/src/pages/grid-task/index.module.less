@@ -1,0 +1,115 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px;
+  background: #fff;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+
+
+  :global {
+    .van-search {
+      flex: 1;
+      padding: 0;
+    }
+  }
+
+}
+
+.pull-refresh {
+  height: 84vh;
+  overflow-y: scroll;
+  background: #F3F7FA;
+  padding: 12px;
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .list-item {
+      padding: 14px 12px;
+      background: #ffffff;
+      border-radius: 8px;
+
+      .list-header {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        text-align: left;
+        color: #101927;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f7f6f8;
+
+        .item-status {
+          padding: 4px 5px;
+          background: rgba(21, 120, 255, 0.16);
+          border-radius: 2px;
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: center;
+          color: #1578FF;
+        }
+      }
+
+      .list-content {
+        padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .content-item {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #8e97a4;
+
+          .item-value {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            img {
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+            }
+
+            .status {
+              padding: 3px 4px;
+              background: #ddfbe6;
+              border-radius: 4px;
+              font-size: 12px;
+              font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+              font-weight: Regular;
+              text-align: left;
+              color: #269360;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.nav-add {
+  font-size: 16px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+  font-weight: Medium;
+  text-align: center;
+  color: #1578FF;
+}

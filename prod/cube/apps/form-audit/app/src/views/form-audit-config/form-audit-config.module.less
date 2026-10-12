@@ -1,0 +1,34 @@
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  button{
+    margin-left: 10px;
+  }
+}
+.layout-header-item{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout-content-main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  .main-left{
+    background-color: #fff;
+    border-right: 1px solid rgb(250, 250, 250) ;
+    width: 300px;
+    min-width: 300px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .main-right{
+    width: calc(1005 - 300px);
+    margin-left: 16px;
+    overflow: auto;
+  }
+}

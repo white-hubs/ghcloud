@@ -1,0 +1,162 @@
+.indoor-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+  padding: 16px;
+}
+
+.indoor-detail-hero,
+.indoor-detail-section {
+  background: #fff;
+  border-radius: 6px;
+}
+
+.indoor-detail-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+
+  h2 {
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+  }
+}
+
+.indoor-detail-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 20px 24px 24px;
+}
+
+.indoor-detail-field {
+  align-items: center;
+  background: #fafbfe;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 84px;
+  padding: 12px;
+  text-align: center;
+
+  span {
+    color: #7b8494;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  b {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+}
+
+.indoor-detail-section {
+  padding-bottom: 8px;
+
+  h3 {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    padding: 14px 18px;
+  }
+}
+
+.indoor-event-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 24px 20px 12px;
+}
+
+.indoor-event-item {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 20px minmax(0, 1fr);
+  min-height: 96px;
+  position: relative;
+
+  &::before {
+    background: #e5e7eb;
+    bottom: 0;
+    content: "";
+    left: 6px;
+    position: absolute;
+    top: 16px;
+    width: 1px;
+  }
+
+  &:last-child::before {
+    display: none;
+  }
+
+  > i {
+    border-radius: 50%;
+    height: 12px;
+    margin-top: 8px;
+    position: relative;
+    width: 12px;
+    z-index: 1;
+  }
+
+  > i.tone-blue {
+    background: #2563eb;
+  }
+
+  > i.tone-orange {
+    background: #f97316;
+  }
+}
+
+.indoor-event-card {
+  background: #fafbfe;
+  border-radius: 6px;
+  min-height: 74px;
+  padding: 12px 16px;
+
+  span {
+    color: #7b8494;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  b {
+    color: #111827;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 4px;
+  }
+
+  p {
+    color: #374151;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 2px 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .indoor-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .indoor-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

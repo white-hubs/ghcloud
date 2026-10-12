@@ -1,0 +1,45 @@
+.statusConfigSection {
+  margin-bottom: 16px;
+
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .title {
+      color: rgba(0,0,0,0.85);
+      font-size: 14px;
+      width: 150px;
+      text-align: right;
+    }
+
+    .addButton {
+      border-radius: 4px;
+    }
+  }
+
+  .ruleRow {
+    margin-left: 150px;
+    width: 100%;
+    &:nth-child(:last-child){
+      margin-bottom: 0;
+    }
+
+    .deleteButtonCol {
+      display: flex;
+      align-items: center;
+      height: 32px;
+
+      .deleteButton {
+        padding: 4px 0;
+      }
+    }
+  }
+  .inputWrapper{
+    display: flex;
+    align-items: center;
+  }
+  .unit{
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,26 @@
+
+.appointment-data {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  :deep(.policeList) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    .thePolice {
+      margin-bottom: 6px;
+      background: rgba(171, 177, 189, 0.12);
+
+      .thePoliceLeft {
+        overflow: visible;
+      }
+    }
+  }
+}

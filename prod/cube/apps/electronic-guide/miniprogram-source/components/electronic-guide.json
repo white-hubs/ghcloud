@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "search-bar":"./search-bar/search-bar",
+    "type-select":"./type-select/type-select",
+    "bottom-container":"./bottom-container/bottom-container"
+  }
+}

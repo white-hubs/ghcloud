@@ -1,0 +1,41 @@
+// 仅保留全局最小公共样式；业务样式请写在组件同目录的 *.less / *.module.less 中。
+
+// 开河蓝，供业务样式引用
+:root {
+  --template-color-primary: var(--van-primary-color, #1d66ff);
+}
+
+// 全局 border-box：padding/border 计入元素尺寸；含 Teleport 到 `body` 的浮层。
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.pd-10 {
+  padding: 10px;
+}
+.pd-20 {
+  padding: 20px;
+}

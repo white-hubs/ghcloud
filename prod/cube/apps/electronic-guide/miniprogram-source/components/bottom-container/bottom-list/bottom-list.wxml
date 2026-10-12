@@ -1,0 +1,24 @@
+<!--components/bottom/bottom-list/bottom-list.wxml-->
+<view class="bottom-touch {{popupUp?'popup-up':''}}">
+	<view class="content-top-tabs" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd">
+		<view class="strip-bar"></view>
+		<v-tabs bindtabChange="handleTabChange" model:active="{{$state.firstRegionActive}}" tabs="{{$state.firstRegionList}}"></v-tabs>
+	</view>
+	<view class="content-bottom">
+		<scroll-view wx:if="{{$state.secondRegionList.length}}" class="left-select" scroll-y="true">
+			<view class="left-select-item {{$state.secondRegionActive===item.id?'active':''}}" bindtap="handleChangeSecond" data-index="{{index}}" wx:for="{{$state.secondRegionList}}" wx:key="id">
+				{{item.name}}
+			</view>
+		</scroll-view>
+		<view class="content-right">
+			<floor-select bindchangeFloor="handleChangeFloor" wx:if="{{$state.thirdRegionList.length}}"></floor-select>
+			<view class="content-list">
+				<scroll-view scroll-into-view="point-{{$state.currentPointIndex}}" scroll-y="true" class="point-list">
+					<view wx:for="{{$state.pointList}}" bindtap="handleCheckPoint" class="list-item" id="point-{{index}}" data-index="{{index}}" wx:key="id">
+						<point-item pointItem="{{item}}"></point-item>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+</view>

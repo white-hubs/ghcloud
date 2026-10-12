@@ -1,0 +1,25 @@
+{
+  "name": "@ghcloud/logger",
+  "version": "1.1.2",
+  "description": "ghcloud logger",
+  "module": "./lib/es/main.js",
+  "main": "./lib/cjs/main.js",
+  "types": "./lib/types/main.d.ts",
+  "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/",
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "log",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/utils": "workspace:^"
+  }
+}

@@ -1,0 +1,39 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.chartSurface {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 220px;
+  overflow: hidden;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 180px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.isZoom {
+  min-height: 420px;
+
+  .chartSurface {
+    height: 380px;
+  }
+}
+
+.v2-minimal-white-panel(patrol-route-new-v2-panel);

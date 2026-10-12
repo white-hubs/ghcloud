@@ -1,0 +1,29 @@
+{
+  "path" : "/information/detail-{id}.html",
+  "layout" : "default",
+  "meta" : {
+    "title" : "文章详情 - 古河云科技",
+    "description" : "",
+    "keywords" : "",
+    "navStyle" : "light"
+  },
+  "components" : [ {
+    "name" : "SwiperCarousel",
+    "props" : {
+      "items" : [ {
+        "image" : "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+        "title" : "资讯中心",
+        "subtitle" : "垂直于数字孪生、物联、建模领域的资讯整合",
+        "titleColor" : "#ffffff",
+        "subtitleColor" : "#ffffff"
+      } ]
+    }
+  }, {
+    "name" : "ArticleDetail",
+    "props" : {
+      "title" : "${title}",
+      "createTime" : "${create_time}",
+      "content" : "${content}"
+    }
+  } ]
+}

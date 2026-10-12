@@ -1,0 +1,221 @@
+
+p {
+  margin: 0;
+}
+
+.model-top {
+  color: #fff;
+  // width: 1164px;
+  // height: 132px;
+  margin: 4px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1018);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  background: rgba(255, 255, 255, 0.1);
+
+  .quantityTally-title {
+    font-size: 16px;
+  }
+
+  .model-personnel {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 300px;
+
+    .personnel-headSculpture {
+      width: 76px;
+      height: 76px;
+      margin-right: 4px;
+
+      img {
+        width: 76px;
+        height: 76px;
+      }
+    }
+
+    .personnel-info {
+      font-size: 14px;
+
+      .personnel-name {
+        font-size: 20px;
+      }
+
+      .personnel-infoRow {
+        font-size: 12px;
+      }
+    }
+
+  }
+
+  .quantityTally {
+    width: 200px;
+
+    .quantityTally-total {
+      font-size: 48px;
+    }
+  }
+
+  .TallyingWeight {
+    :deep(.gh-count-to) {
+      font-size: 48px;
+    }
+  }
+
+  .tallyingStatus {
+    position: relative;
+    width: 162px;
+
+    img {
+      width: 162px;
+      height: 162px;
+    }
+
+    div {
+      position: absolute;
+      width: 162px;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+.middle {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #2989ff;
+  border-right: 5px solid #2989ff;
+  height: 450px;
+}
+
+.model-middle {
+  font-size: 12px;
+  color: #fff;
+
+  padding: 15px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .middle-video {
+    width: 464px;
+    height: 410px;
+    margin-right: 8px;
+  }
+
+  .middle-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 410px;
+  }
+
+  .middle-img {
+    :deep(.ant-image-img){
+      height: 205px;
+    }
+  }
+}
+
+.cargo—info {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &>p:first-child {
+    color: #A9C2C5;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &>p:last-child {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+}
+
+.middle-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 10px;
+}
+
+.data-title {
+  background: rgba(41, 137, 255, 0.2);
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .9;
+  margin: 4px 0px;
+  color: #FFFFFF;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #FFAB10;
+    margin: 4px 6px;
+    border-radius: 50%;
+  }
+
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-title {
+  color: #8e9190;
+}
+
+.item {
+  color: #ffffff
+}
+
+.report {
+  font-size: 14px;
+  color: #FFFFFF;
+  .odd-bg{
+    background: url("/resource/v1/ue5-migrate/assets/images/odd-bg.png");
+    background-position: 50% 50%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    width: 76px;
+    height: 76px;
+  }
+  .odd-numbers {
+    width: 100px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+
+  .status-title {
+    margin-bottom: 10px;
+  }
+
+  .status {
+    border-left: 4px solid #3d4242;
+    margin: 0px 10px;
+    padding: 0px 10px;
+  }
+}
+
+.device {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin: 4px 0px;
+}

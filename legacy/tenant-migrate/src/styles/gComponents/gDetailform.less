@@ -1,0 +1,158 @@
+.detail-form {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-y: overlay;
+  .item-title {
+    width: 100%;
+    height: auto !important;
+    // line-height: 35px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000000D9;
+    border-top: 1px solid #e8e8e88c;
+    padding-top: 16px !important;
+    font-family:PingFang SC-Medium ;
+    &:first-child{
+      border: none;
+      padding-top:0 !important ;
+    }
+  }
+  .item-line{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed rgba(232, 232, 232, 1);
+    margin-bottom: 16px;
+    &:last-child{
+      display: none;
+      margin-bottom:0;
+    }
+  }
+  .a-form-item-100 {
+    width: 100% !important;
+  }
+  :deep(.ant-form-inline .ant-form-item) {
+    width: 33%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  :deep(.ant-form-inline .ant-form-item > .ant-form-item-control) {
+    text-align: left;
+  }
+  :deep(.ant-image) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+  // :deep(.ant-image-img) {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  :deep(.ant-form-inline .ant-form-item > .ant-form-item-label) {
+    width: 105px;
+  }
+  :deep(.ant-form-item .ant-cascader-picker) {
+    max-width: 300px !important;
+    width: 100% !important;
+  }
+  :deep(.ant-input-number) {
+    max-width: 300px !important;
+    width: 100% !important;
+  }
+  :deep(.timeline) {
+    padding-left: 0;
+  }
+  :deep(.ant-timeline-item-content) {
+    text-align: left;
+  }
+  .ant-form-item-control-input-content {
+    > span {
+      word-break: break-word;
+      span{
+        word-break: break-word;
+      }
+      max-width: 300px !important;
+      width: 100% !important;
+      &.ant-upload-picture-card-wrapper{
+        max-width: 300px !important;
+        width: 100% !important;
+      }
+      &.ant-tag{
+        width: auto !important;
+      }
+    }
+    > input {
+      max-width: 300px !important;
+      width: 100% !important;
+    }
+    .ant-select {
+      max-width: 300px !important;
+      width: 100% !important;
+    }
+    .ant-cascader-picker{
+      max-width: 300px !important;
+      width: 100% !important;
+    }
+  }
+  .staff-pics{
+    .ant-form-item-control-input-content {
+      > span {
+        &.ant-upload-picture-card-wrapper{
+          max-width: unset !important;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+/* 与 gDetailForm 根类 g-detail-form-wrap 联用：固定 inline label 宽度，控件左缘对齐（兼容 ant-form-item-row 结构） */
+.g-detail-form-wrap.detail-form {
+  :deep(.ant-form-inline .ant-form-item .ant-form-item-row) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 100%;
+  }
+  :deep(.ant-form-inline .ant-form-item .ant-form-item-label) {
+    flex: 0 0 190px;
+    width: 190px !important;
+    max-width: 190px !important;
+    min-width: 190px !important;
+    text-align: right;
+    padding-right: 8px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 32px;
+  }
+  :deep(.ant-form-inline .ant-form-item .ant-form-item-control) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  :deep(.ant-form-inline .ant-form-item.remark) {
+    width: 100%;
+  }
+  /* 区域范围：label 与按钮+说明整体垂直居中 */
+  :deep(.ant-form-inline .ant-form-item.form-item-area-scope .ant-form-item-row) {
+    align-items: center;
+  }
+  :deep(.ant-form-inline .ant-form-item.form-item-area-scope .ant-form-item-label) {
+    align-self: center;
+    line-height: 1.4;
+  }
+  :deep(.area-scope-control) {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 8px;
+    max-width: 100%;
+  }
+  :deep(.area-scope-control__hint) {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+}

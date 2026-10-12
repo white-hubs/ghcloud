@@ -1,0 +1,94 @@
+.bottom-touch {
+  height: 600rpx;
+  background: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  transition: height 0.2s ease;
+  background: #fbfbfb;
+}
+.bottom-touch .content-right {
+  height: 500rpx;
+}
+.bottom-touch .content-right .content-list {
+  margin-top: 20rpx;
+  padding: 0 28rpx;
+  height: 400rpx;
+  padding-bottom: 100rpx;
+}
+.bottom-touch .content-right .content-list ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.bottom-touch .content-right .content-list .point-list {
+  height: 400rpx;
+}
+.bottom-touch .content-right .content-list .point-list .list-item:last-child {
+  margin-bottom: 100rpx;
+}
+.bottom-touch .content-right .content-list .empty {
+  margin-top: 50rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rpx;
+  font-size: 26rpx;
+}
+.bottom-touch .content-right .content-list .empty image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.bottom-touch .strip-bar {
+  width: 80rpx;
+  height: 8rpx;
+  background: #dbdbdb;
+  border-radius: 4rpx;
+  margin: 0 auto;
+  margin-bottom: 8rpx;
+}
+.bottom-touch .content-top-tabs {
+  padding: 24rpx 0;
+}
+.bottom-touch .content-bottom {
+  height: 500rpx;
+  display: flex;
+  background: #fff;
+}
+.bottom-touch .content-bottom .content-right {
+  position: relative;
+  flex: 1;
+}
+.bottom-touch .content-bottom .left-select {
+  width: 168rpx;
+  text-align: center;
+  flex-shrink: 0;
+  height: calc(100% - 50rpx);
+  background: #F2F2F2;
+  padding-bottom: 50rpx;
+}
+.bottom-touch .content-bottom .left-select .left-select-item {
+  padding: 26rpx 32rpx;
+  color: #1f3140;
+  font-size: 26rpx;
+}
+.bottom-touch .content-bottom .left-select .left-select-item.active {
+  background: #006b3a;
+  color: #FFF;
+}
+.popup-up {
+  height: 1000rpx;
+}
+.popup-up .content-bottom {
+  height: 900rpx;
+}
+.popup-up .content-bottom ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.popup-up .content-bottom .content-list .point-list {
+  height: 800rpx;
+}

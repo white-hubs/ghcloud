@@ -1,0 +1,42 @@
+.bottom-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.bottom-container .handle {
+  display: flex;
+  padding: 0 24rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12rpx;
+}
+.bottom-container .handle .handle-current-location {
+  padding: 12rpx 18rpx 18rpx;
+  background: #fff;
+  border-radius: 16rpx;
+}
+.bottom-container .handle .handle-current-location .location-icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.bottom-container .handle .handle-bootom {
+  background: #006b3a;
+  display: flex;
+  align-items: center;
+  gap: 6rpx;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 14rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  color: #ffffff;
+}
+.bottom-container .handle .handle-bootom image {
+  width: 22rpx;
+  height: 22rpx;
+}

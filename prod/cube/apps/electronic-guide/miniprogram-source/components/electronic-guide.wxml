@@ -1,0 +1,36 @@
+<!--components/electronic-guide.wxml-->
+<view class="container">
+	<search-bar bindsearch="handleSearch"></search-bar>
+	<type-select bindchangeType="handleChangeType"></type-select>
+	<map scale="{{mapState.scale}}" id="myMap" markers="{{markers}}" style="width: 100%;height: 100vh;" min-scale="{{mapState.minScale}}" latitude="{{mapState.center.latitude}}" longitude="{{mapState.center.longitude}}" bindlabeltap="handleClickMarker" bindcallouttap="handleClickCallouttap" bindmarkertap="handleClickMarker" show-location="{{true}}">
+		<cover-view slot="callout">
+			<block wx:for="{{pointMarkers}}" wx:for-item="item" wx:key="id">
+				<cover-view class="customCallout" marker-id="{{item.id}}">
+					<cover-view style="display:flex;align-items:center;padding:12rpx;justify-content:space-between;width:600rpx">
+						<cover-image wx:if="{{item.filePath}}" class="merchant-png" src="{{item.filePath}}"></cover-image>
+						<cover-image wx:else src="./static/images/default-merchant.png" class="merchant-png"></cover-image>
+						<cover-view class="content">
+							<cover-view class="title">
+								{{item.name}}
+							</cover-view>
+							<cover-view class="desc">
+								<cover-image class="icon" src="./static/images/area-icon.png"></cover-image>
+								<cover-view>{{item.areaName}}</cover-view>
+							</cover-view>
+							<cover-view class="desc">
+								<cover-image class="icon" src="./static/images/address-icon.png"></cover-image>
+								<cover-view>{{item.address}}</cover-view>
+							</cover-view>
+						</cover-view>
+						<cover-view class="nav-handle">
+							<cover-image class="nav-png" src="./static/images/nav.png"></cover-image>
+							<cover-view>到这去</cover-view>
+						</cover-view>
+					</cover-view>
+				</cover-view>
+
+			</block>
+		</cover-view>
+	</map>
+	<bottom-container bindbackMapCenter="handleBackMapCenter" bindcheckedPoint="handleCheckedPoint" bindchangeRegion="handleChangeRegion"></bottom-container>
+</view>

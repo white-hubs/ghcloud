@@ -1,0 +1,376 @@
+---
+// oxlint-disable complexity
+// oxlint-disable no-console
+// oxlint-disable object-shorthand
+// oxlint-disable max-lines-per-function
+// oxlint-disable no-inline-comments
+// oxlint-disable no-loop-func
+// oxlint-disable no-magic-numbers
+// oxlint-disable no-explicit-any
+// oxlint-disable no-magic-numbers
+// oxlint-disable func-names
+import '@ghcloud/cube-static-site-generator-components/tailwind.css';
+import DynamicComponent from '~components/components/dynamic-component/dynamic-component.vue'
+import { resolveBinding, resolveProps } from '../utils/binding'
+import { resolveRef, resolveRefs, applyLayout } from '../utils/layout-resolver'
+import { readFileSync, existsSync, readdirSync } from 'fs'
+import { join } from 'path'
+
+const componentImports = import.meta.glob('~components/**/*.vue', { eager: true })
+
+const componentRegistry: Record<string, any> = {}
+for (const [path, mod] of Object.entries(componentImports)) {
+  const match = path.match(/\/([^/]+)\/([^/]+)\.vue$/)
+  if (match) {
+    const [, dirName] = match
+    const name = dirName
+      .split('-')
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join('')
+    componentRegistry[name] = (mod as any).default
+  }
+}
+
+const schemaImports = import.meta.glob('~components/**/schema.ts', { eager: true })
+
+const interactiveMap: Record<string, boolean> = {}
+for (const [path, mod] of Object.entries(schemaImports)) {
+  const match = path.match(/\/([^/]+)\/schema\.ts$/)
+  if (match) {
+    const [, dirName] = match
+    const name = dirName
+      .split('-')
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join('')
+    interactiveMap[name] = (mod as any).schema?.interactive ?? false
+  }
+}
+
+export async function getStaticPaths() {
+  const inputDir = process.env.SSG_INPUT_DIR || './test-site'
+  const schemaPath = join(inputDir, 'schema.json')
+  
+  const schema = JSON.parse(readFileSync(schemaPath, 'utf-8'))
+  
+  let siteConfig = { site: {}, seo: {}, contact: {}, navigation: [], footer: {} }
+  if (existsSync(join(inputDir, 'site.config.json'))) {
+    siteConfig = JSON.parse(readFileSync(join(inputDir, 'site.config.json'), 'utf-8'))
+  }
+  
+  const layouts: Record<string, any> = {}
+  if (schema.layouts) {
+    for (const [name, ref] of Object.entries(schema.layouts)) {
+      if (typeof ref === 'string') {
+        layouts[name] = resolveRefs(resolveRef(ref, inputDir, new Set()), inputDir, new Set())
+      } else {
+        layouts[name] = resolveRefs(ref, inputDir)
+      }
+    }
+  }
+  
+  const paths = []
+  
+  for (const pageRef of schema.pages) {
+    let page = resolveRefs(pageRef, inputDir)
+    if (!page || !page.path) {
+      (function(){})(`[WARN] Skipping page without path: ${page?.meta?.title || 'Unknown page'}`)
+      continue
+    }
+    if (page.layout) {
+      page = applyLayout(page, layouts, siteConfig)
+    }
+    
+    const resolvedComponents = page.components.map((comp: any) => ({
+      ...comp,
+      props: resolveProps(comp.props, siteConfig),
+      interactive: comp.interactive || false
+    }))
+    
+    // 自动分页：检测资讯列表页面且未手动限制数量
+    const newsSectionIdx = resolvedComponents.findIndex((comp: any) => comp.name === 'NewsSection')
+    if (newsSectionIdx >= 0) {
+      const newsSection = resolvedComponents[newsSectionIdx]
+      const news = newsSection.props?.news
+      const limit = newsSection.props?.limit
+      
+      if (Array.isArray(news) && news.length > 0 && limit === 0) {
+        const pageSize = 12
+        const basePath = page.path.replace(/\.html$/, '')
+        const originalEnableCategoryFilter = newsSection.props?.enableCategoryFilter ?? false
+        
+        // 收集分类
+        const categoryFilterIdx = resolvedComponents.findIndex((comp: any) => comp.name === 'CategoryTabs')
+        const categories = categoryFilterIdx >= 0 
+          ? (Array.isArray(resolvedComponents[categoryFilterIdx].props?.categories) 
+              ? resolvedComponents[categoryFilterIdx].props.categories 
+              : []) 
+          : []
+        
+        // 1. 生成"全部"分页
+        const totalPages = Math.ceil(news.length / pageSize)
+        const allPageUrlTemplate = `${basePath}/page/{page}.html`
+        for (let i = 1; i <= totalPages; i++) {
+          const pagePath = i === 1 ? page.path : `${basePath}/page/${i}.html`
+          const paginatedNews = news.slice((i - 1) * pageSize, i * pageSize)
+          
+          const paginatedComponents = [...resolvedComponents]
+          paginatedComponents[newsSectionIdx] = {
+            ...newsSection,
+            props: {
+              ...newsSection.props,
+              news: paginatedNews,
+              currentPage: i,
+              totalPages: totalPages,
+              pageSize: pageSize,
+              paginationMode: 'link',
+              pageUrlTemplate: allPageUrlTemplate,
+              enableCategoryFilter: originalEnableCategoryFilter
+            }
+          }
+          
+          paths.push({
+            params: { slug: pagePath.replace(/^\//, '').replace(/\.html$/, '') || undefined },
+            props: { 
+              page: { ...page, path: pagePath, components: paginatedComponents }, 
+              siteConfig,
+              seo: siteConfig.seo || {}
+            }
+          })
+        }
+        
+        // 2. 为每个分类单独生成分页
+        for (const category of categories) {
+          const catNews = news.filter((item: any) => item.category === category.name)
+          if (catNews.length === 0) {continue}
+          
+          const catTotalPages = Math.ceil(catNews.length / pageSize)
+          const catBasePath = `${basePath}/category/${category.id}`
+          const catPageUrlTemplate = `${catBasePath}/page/{page}.html`
+          
+          for (let i = 1; i <= catTotalPages; i++) {
+            const pagePath = i === 1 ? `${catBasePath}.html` : `${catBasePath}/page/${i}.html`
+            const paginatedNews = catNews.slice((i - 1) * pageSize, i * pageSize)
+            
+            const paginatedComponents = [...resolvedComponents]
+            paginatedComponents[newsSectionIdx] = {
+              ...newsSection,
+              props: {
+                ...newsSection.props,
+                news: paginatedNews,
+                currentPage: i,
+                totalPages: catTotalPages,
+                pageSize: pageSize,
+                paginationMode: 'link',
+                pageUrlTemplate: catPageUrlTemplate,
+                enableCategoryFilter: false // 分类页面禁用客户端再筛选
+              }
+            }
+            
+            // 显式注入 CategoryTabs 的 activeId，避免客户端路径匹配失控
+            if (categoryFilterIdx >= 0) {
+              const categoryTabs = paginatedComponents[categoryFilterIdx]
+              paginatedComponents[categoryFilterIdx] = {
+                ...categoryTabs,
+                props: {
+                  ...categoryTabs.props,
+                  activeId: category.id
+                }
+              }
+            }
+            
+            paths.push({
+              params: { slug: pagePath.replace(/^\//, '').replace(/\.html$/, '') || undefined },
+              props: { 
+                page: { ...page, path: pagePath, components: paginatedComponents }, 
+                siteConfig,
+                seo: siteConfig.seo || {}
+              }
+            })
+          }
+        }
+        
+        continue
+      }
+    }
+    
+    // 截断 NewsSection 的 news：当 limit > 0 时只保留前 limit 条，避免把全部数据序列化到 HTML
+    resolvedComponents.forEach((comp: any) => {
+      if (comp.name === 'NewsSection' && Array.isArray(comp.props?.news)) {
+        const limit = comp.props?.limit ?? 4
+        if (limit > 0 && comp.props.news.length > limit) {
+          comp.props.news = comp.props.news.slice(0, limit)
+        }
+      }
+    })
+    
+    paths.push({
+      params: { slug: page.path.replace(/^\//, '').replace(/\.html$/, '') || undefined },
+      props: { 
+        page: { ...page, components: resolvedComponents }, 
+        siteConfig,
+        seo: siteConfig.seo || {}
+      }
+    })
+  }
+
+  // 读取文章详情页模板配置
+  let articleDetailTemplate: any = null
+  if (schema.articleDetailTemplate) {
+    articleDetailTemplate = resolveRefs(schema.articleDetailTemplate, inputDir)
+  }
+
+  // 自动生成资讯详情页
+  const articlesDir = join(inputDir, 'articles')
+  if (existsSync(articlesDir)) {
+    for (const file of readdirSync(articlesDir)) {
+      if (!file.endsWith('.json') || file === 'index.json' || file === 'news-categories.json') {continue}
+      
+      const articlePath = join(articlesDir, file)
+      const article = JSON.parse(readFileSync(articlePath, 'utf-8'))
+      const id = file.replace('.json', '')
+      const detailPath = `/information/detail-${id}.html`
+      
+      let detailPage: any
+      
+      if (articleDetailTemplate) {
+        // 合并 siteConfig 和 article 作为绑定上下文
+        const bindingContext = { ...siteConfig, ...article }
+        
+        const templateComponents = articleDetailTemplate.components?.map((comp: any) => ({
+          ...comp,
+          props: resolveProps(comp.props, bindingContext),
+          interactive: comp.interactive || false
+        })) || []
+        
+        detailPage = {
+          path: detailPath,
+          meta: {
+            title: article.title || articleDetailTemplate.meta?.title || '资讯详情'
+          },
+          components: templateComponents,
+          layout: articleDetailTemplate.layout
+        }
+        
+        // 应用布局（如果指定了 layout）
+        if (detailPage.layout && layouts[detailPage.layout]) {
+          detailPage = applyLayout(detailPage, layouts, siteConfig)
+        }
+      } else {
+        // 回退到硬编码行为（保持向后兼容）
+        detailPage = {
+          path: detailPath,
+          meta: { title: article.title || '资讯详情' },
+          components: [
+            {
+              name: 'SwiperCarousel',
+              interactive: true,
+              props: {
+                items: [{
+                  image: '',
+                  title: '资讯中心',
+                  subtitle: '垂直于数字孪生、物联、建模领域的资讯整合',
+                  titleColor: '#ffffff',
+                  subtitleColor: '#ffffff'
+                }]
+              }
+            },
+            {
+              name: 'ArticleDetail',
+              interactive: false,
+              props: {
+                title: article.title || '',
+                createTime: article.create_time || article.date || '',
+                content: article.content || ''
+              }
+            }
+          ]
+        }
+      }
+      
+      paths.push({
+        params: { slug: detailPath.replace(/^\//, '').replace(/\.html$/, '') },
+        props: { page: detailPage, siteConfig, seo: siteConfig.seo || {} }
+      })
+    }
+  }
+
+  return paths
+}
+
+const { page, siteConfig, seo } = Astro.props
+const pageMeta = page?.meta || {}
+
+const resolvedTitle = resolveBinding(pageMeta.title || seo.defaultTitle || siteConfig.site?.name || 'My Site', siteConfig)
+const resolvedDescription = resolveBinding(pageMeta.description || seo.defaultDescription || '', siteConfig)
+const resolvedKeywords = resolveBinding(pageMeta.keywords || seo.defaultKeywords || '', siteConfig)
+
+let metaTitle = resolvedTitle
+if (pageMeta.title && siteConfig.site?.name && !resolvedTitle.includes(siteConfig.site.name)) {
+  metaTitle = `${pageMeta.title} - ${siteConfig.site.name}`
+}
+
+const meta = {
+  title: metaTitle,
+  description: resolvedDescription,
+  keywords: resolvedKeywords,
+  ogImage: resolveBinding(pageMeta.ogImage || siteConfig.site?.ogImage || '', siteConfig),
+}
+
+const components = page?.components || []
+---
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {siteConfig.site?.favicon && (
+    <link rel="icon" href={siteConfig.site.favicon} type="image/x-icon" />
+  )}
+  <title>{meta.title}</title>
+  <style define:vars={{ primaryColor: siteConfig.site?.primaryColor || '#1578FF' }}>
+    :root {
+      --primary: var(--primaryColor);
+    }
+  </style>
+  <meta name="description" content={meta.description} />
+  {meta.keywords && meta.keywords !== '' && <meta name="keywords" content={meta.keywords} />}
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  {meta.ogImage && meta.ogImage !== '' && <meta property="og:image" content={meta.ogImage} />}
+  <meta property="og:url" content={`${siteConfig.site?.url || ''}${page?.path || ''}`} />
+  {siteConfig.trackingScripts?.map((script: any) => {
+    const html = typeof script === 'string' ? script : script?.html
+    return html ? <Fragment is:inline set:html={html} /> : null
+  })}
+  <script is:inline>
+// oxlint-disable eqeqeq
+// oxlint-disable no-magic-numbers
+// oxlint-disable prefer-template
+    (function() {
+      const html = document.documentElement;
+      function update() {
+        const width = window.innerWidth;
+        const size = Math.round(Math.max((width / 1920) * 16, 12) * 100) / 100;
+        if (html.getAttribute('data-fontsize') != size) {
+          html.style.fontSize = size + 'px';
+          html.setAttribute('data-fontsize', size);
+        }
+      }
+      update();
+      window.addEventListener('resize', update);
+    })();
+  </script>
+</head>
+<body style='width:100vw;overflow-x:hidden'>
+  {components.map((comp: any) => {
+    // SwiperCarousel 单图时强制 SSR，无需 hydration
+    const isSingleSwiper = comp.name === 'SwiperCarousel' && comp.props?.items?.length === 1
+    
+    if ((interactiveMap[comp.name] ?? false) && !isSingleSwiper) {
+      return <DynamicComponent name={comp.name} {...comp.props} client:load />
+    }
+    const Comp = componentRegistry[comp.name]
+    return Comp ? <Comp {...comp.props} /> : null
+  })}
+</body>
+</html>

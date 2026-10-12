@@ -1,0 +1,35 @@
+
+.searchBar { 
+  margin-bottom: 12px;
+  border-radius: 6px;
+  &.close {
+    :global {
+      .van-dropdown-menu__bar{
+        border-radius: 6px;
+      }
+    }
+  }
+  &.open {
+    :global {
+      .van-dropdown-menu__bar{
+        border-radius:0;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+    }
+  }
+
+  :global {
+    .van-dropdown-item {
+      margin: 0 16px;
+    }
+    .van-dropdown-menu__bar{
+      height: 42px;
+      line-height: 42px;
+      border-radius: 6px;
+    }
+    .van-dropdown-item{
+      margin: 0 12px;
+    }
+  }
+}

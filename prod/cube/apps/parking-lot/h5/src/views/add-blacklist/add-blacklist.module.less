@@ -1,0 +1,89 @@
+.container {
+  height: 100vh;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px; /* Space for the footer */
+  }
+
+  :global(.van-cell-group--inset) {
+    margin: 16px;
+  }
+
+  .form {
+    background: #fff;
+    flex: 1;
+    margin-top: 12px;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  :global {
+    .van-field__label {
+        width: 100%;
+    }
+    .van-field--label-top .van-field__label {
+        margin-bottom: 8px;
+    }
+    textarea {
+      padding: 6px;
+      border-radius: 2px;
+      background: #f8f9f9;
+      width: 100%;
+      border: none;
+      min-height: 80px;
+    }
+    .van-field__control--custom {
+        min-height: auto;
+    }
+  }
+
+  .plateNumberContainer {
+    position: relative;
+  }
+
+  .suggestionsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ebedf0;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .suggestionItem {
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #323233;
+    cursor: pointer;
+    &:active {
+      background-color: #f2f3f5;
+    }
+  }
+
+  .loadingItem {
+    padding: 10px 16px;
+    text-align: center;
+    color: #969799;
+    font-size: 12px;
+  }
+}

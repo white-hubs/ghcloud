@@ -1,0 +1,44 @@
+.search-bar {
+  position: fixed;
+  top: 0rpx;
+  padding: 8px 0 0;
+  z-index: 10;
+  width: 100%;
+}
+.search-bar .container {
+  width: 87%;
+  margin: 0 auto;
+  padding: 12rpx 24rpx;
+  background: #ffffff;
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.search-bar .container image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.search-bar .container .uni-icon {
+  font-family: uniicons;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  color: #999;
+}
+.search-bar .container input {
+  flex: 1;
+  height: 28rpx !important;
+  font-size: 28rpx;
+}
+.search-bar .container .search-button {
+  padding: 10rpx 14rpx;
+  background: #006b3a;
+  border: 1px solid #006b3a;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 26rpx;
+}

@@ -1,0 +1,83 @@
+.call-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  // 接听按钮
+  &-accept {
+    background-color: #4CAF50;
+    
+    &:hover {
+      background-color: darken(#4CAF50, 10%);
+    }
+  }
+  
+  // 挂断按钮
+  &-hangup {
+    background-color: #F44336;
+    
+    &:hover {
+      background-color: darken(#F44336, 10%);
+    }
+  }
+  
+  // 静音按钮
+  &-mute {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  // 免提按钮
+  &-handsfree {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  // 摄像头按钮
+  &-camera {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  // 切换摄像头按钮
+  &-switch-camera {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  // 激活状态
+  &-active {
+    background-color: #2196F3;
+    
+    &:hover {
+      background-color: darken(#2196F3, 10%);
+    }
+    
+    &.call-button-mute,
+    &.call-button-handsfree,
+    &.call-button-camera {
+      background-color: #2196F3;
+    }
+  }
+}
+
+// 按钮组容器
+.call-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}

@@ -1,0 +1,78 @@
+.popup {
+  display: flex;
+  height: min(76vh, 620px);
+  flex-direction: column;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ebedf0;
+  padding: 0 48px;
+  background: #fff;
+  color: #323233;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  border: 0;
+  padding: 8px;
+  color: #969799;
+  background: transparent;
+}
+
+.search {
+  flex: 0 0 auto;
+}
+
+.searchAction {
+  border: 0;
+  padding: 0;
+  color: var(--van-primary-color);
+  background: transparent;
+  font-size: 14px;
+}
+
+.list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cell {
+  align-items: center;
+}
+
+.cell :global(.van-cell__title) {
+  min-width: 0;
+}
+
+.cell :global(.van-cell__title span) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell :global(.van-cell__right-icon) {
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+.selected {
+  color: var(--van-primary-color);
+  font-weight: 500;
+}
+
+.empty {
+  padding-top: 72px;
+}

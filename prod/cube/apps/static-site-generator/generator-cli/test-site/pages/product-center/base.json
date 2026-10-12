@@ -1,0 +1,94 @@
+{
+  "path": "/product-center/base.html",
+  "meta": {
+    "title": "基础管理 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "应用中心",
+        "subtitle": "古河云科技深耕技术，打造企业级SaaS平台，为客户提供全场景的产品与服务。",
+        "placeholder": "搜索您感兴趣的应用",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/product-center/app-search-bg.webp",
+        "searchAllHref": "/product-center/app"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "internal",
+            "name": "内部管理",
+            "href": "/product-center/internal.html"
+          },
+          {
+            "id": "safe",
+            "name": "安全管理",
+            "href": "/product-center/safe.html"
+          },
+          {
+            "id": "agriculture",
+            "name": "农批运营",
+            "href": "/product-center/agriculture.html"
+          },
+          {
+            "id": "hospital",
+            "name": "医院运营",
+            "href": "/product-center/hospital.html"
+          },
+          {
+            "id": "operation",
+            "name": "运维作业",
+            "href": "/product-center/operation.html"
+          },
+          {
+            "id": "base",
+            "name": "基础管理",
+            "href": "/product-center/base.html"
+          },
+          {
+            "id": "integration",
+            "name": "集成管理",
+            "href": "/product-center/integration.html"
+          }
+        ],
+        "activeId": "base",
+        "allHref": "/product-center/app.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "cardType": "application",
+        "products": [
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/报警中心/main.png",
+            "name": "报警中心",
+            "version": "1.0.1",
+            "description": "统一管理园区内所有报警数据，在预案管理处设置报警机制后，当事故现场发生报警时，系统自动触发报警，并在报警中心记录报警数据，可直接在报警中心快捷处理报警。",
+            "href": "/product-center/app-alarm-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/设备中心/main.png",
+            "name": "物联中心",
+            "version": "1.0.0",
+            "description": "物联中心是一个集成了设备管理，数据安全通讯、消息订阅、设备台账、健康分析等能力的设备一体化设备管理中心，针对所有需要接入的设备进行统一管理，为上层提供物联数据采集与反控能力。",
+            "href": "/product-center/app-iot-detail.html"
+          },
+          {
+            "icon": "https://cube.guhecloud.com/resource/app-icons/日常巡检/main.png",
+            "name": "空间管理",
+            "version": "1.0.0",
+            "description": "空间是指组织或企业所拥有、管理或使用的物理空间资源。这些资源通常具有明确的空间位置和边界，可以包括建筑物、楼层、房间。空间管理主要给园区管理者、园区设备设施维护人员、实验室管理员、物业服务管理员、公共服务管理员等使用。",
+            "href": "/product-center/app-space-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

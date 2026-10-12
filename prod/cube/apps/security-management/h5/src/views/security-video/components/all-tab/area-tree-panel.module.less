@@ -1,0 +1,39 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  max-height: 50vh;
+}
+
+.tree {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid var(--van-border-color);
+  background: var(--van-background-2);
+}
+
+.item {
+  :global(.van-cell__title) {
+    flex: 1;
+  }
+}
+
+.selected {
+  :global(.van-cell__title) {
+    color: var(--van-primary-color);
+    font-weight: 500;
+  }
+}
+
+.expandIcon {
+  padding: 4px 8px;
+  color: #969799;
+}

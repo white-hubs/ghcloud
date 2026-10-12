@@ -1,0 +1,44 @@
+{
+  "name": "@ghcloud/epp-web",
+  "version": "1.0.1",
+  "description": "古河云 typescript 通用工具包. 仅含语言基础相关工具，不含运行环境依赖[如: `web/nodejs/deno`]",
+  "type": "module",
+  "module": "src/main.ts",
+  "main": "src/main.ts",
+  "publishConfig": {
+    "module": "./lib/main.js",
+    "main": "./lib/main.js",
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.guhecloud.com:cube/ghcloud.git"
+  },
+  "keywords": [
+    "web",
+    "utils",
+    "epp",
+    "cube",
+    "ghcloud"
+  ],
+  "author": "ghcloud",
+  "dependencies": {
+    "@ghcloud/epp": "workspace:^"
+  },
+  "devDependencies": {
+    "@ghcloud/vite-utils": "0.0.10",
+    "@types/lodash-es": "4.17.12",
+    "@types/node": "catalog:",
+    "@types/qs": "^6.9.7",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

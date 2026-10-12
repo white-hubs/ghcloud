@@ -1,0 +1,61 @@
+
+.arrange-info {
+  .court-stat {
+    min-height: 100px;
+  }
+
+  .trend-chart {
+    .chart {
+      height: 200px;
+    }
+  }
+
+  .wait-court-trail {
+    .list {
+      margin: 12px 0;
+      height: 200px;
+      overflow: hidden;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    .line {
+      content: '';
+      display: inline-block;
+      background: #2989ff;
+      width: 2px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    .text {
+      flex: 1;
+      padding: 8px 10px 4px;
+      opacity: .9;
+      background: linear-gradient(13deg, #2989ff 10%, rgba(41, 137, 255, 0.00) 100%);
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      position: relative;
+      color: #e6f2ff;
+    }
+  }
+
+}
+.monitorPanelBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+
+  :deep(.monitorPanel-right) {
+    min-width: 80px;
+  }
+}
+.line-chart{
+  height: 180px;
+}

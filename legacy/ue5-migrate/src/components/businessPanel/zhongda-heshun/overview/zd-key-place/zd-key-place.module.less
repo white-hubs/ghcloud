@@ -1,0 +1,123 @@
+.zd-key-place {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 17.5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    border-bottom: 1px dashed rgba(165, 182, 218, 0.30);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 8px;
+    height: 50px;
+    background: linear-gradient(180deg, #20334c, #0c1428);
+    border-radius: 4px;
+    cursor: pointer;
+
+    .label {
+      width: 56px;
+      height: 14px;
+      font-size: 16px;
+      font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #bfdfff;
+      line-height: 14px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      .icon{
+        // width: 22px;
+        height: 22px;
+        margin-right: 4px;
+      }
+    }
+
+    .value {
+      font-size: 26px;
+      font-family: D-DIN-PRO;
+      font-weight: Regular;
+      text-align: left;
+      color: #81afff;
+      line-height: 31px;
+      letter-spacing: 0.03px;
+      position: relative;
+      text-align: center;
+
+      .unit {
+        width: 12px;
+        height: 12px;
+        font-size: 14px;
+        font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #bfdfff;
+        line-height: 12px;
+      }
+    }
+  }
+}
+
+.charts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.right-list {
+  width: 60% !important;
+
+  :global {
+    .ant-empty-normal {
+      color: #D9E7FF;
+    }
+    .ant-select-dropdown, .ant-select-item-empty {
+      color: #D9E7FF;
+      text-align: center;
+    }
+    .ant-select-clear{
+      background: transparent;
+    }
+    .alarm-analysisBox {
+      white-space: nowrap;
+      width: 100% !important;
+      height: 36px !important;
+      background: linear-gradient(0deg, rgba(104, 123, 164, 0.16) 1%, rgba(110, 143, 214, 0.00) 65%);
+      flex-shrink: 0;
+      box-sizing: border-box;
+      padding: 0 10px;
+      padding-left: 0;
+      font-size: 20px;
+      font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #CEE0FF;
+
+      .alarm-analysis-name {
+        height: auto !important;
+        width: auto !important;
+        max-width: 100px;
+        font-size: 18px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #a5b6da;
+        line-height: 20px;
+      }
+    }
+  }
+}

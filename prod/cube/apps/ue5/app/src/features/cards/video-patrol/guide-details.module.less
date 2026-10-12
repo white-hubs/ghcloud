@@ -1,0 +1,173 @@
+
+.auto-play {
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.guide-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  overflow-y: auto;
+
+
+  .guide-item {
+    margin-bottom: 20px;
+
+    .guide-item-img {
+      width: 150px;
+      height: 72px;
+      border: 1px solid #abd1ff;
+      border-radius: 4px;
+      background: rgba(41, 137, 255, 0.20);
+      position: relative;
+      font-size: 14px;
+      line-height: 112px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: center;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .guide-item-img-play {
+        width: 20px;
+        height: 20px;
+        // margin-top: 20px;
+
+        .play-icon,
+        .pause-icon {
+         font-size: 18px;
+          color:white;
+          z-index: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+.guideDetail-modal {
+  width: 382px;
+  position: fixed;
+  position: absolute;
+  left: 350px;
+  top: 100px;
+  background: transparent;
+  border-bottom: 2px solid rgba(41, 137, 255, 1);
+
+  .guideDetail-modal-header {
+    height: 30px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(41, 137, 255, 1);
+    background-image: url('/resource/v1/ue5-migrate/assets/images/modal-title.png');
+    background-size: 100%95%;
+    background-repeat: no-repeat;
+
+    .header-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #FFFFFF
+    }
+
+    .header-close {
+      width: 24px;
+      height: 24px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .guideDetail-modal-body {
+    height: 200px;
+    background: rgba(1, 29, 62, 0.60);
+    overflow-y: auto;
+    color: #fff;
+    font-size: 16px;
+    padding: 4px;
+    text-indent: 20px;
+  }
+}
+
+.guideDetail-chare-modal {
+  width: 300px;
+  position: fixed;
+  position: absolute;
+  left: 350px;
+  top: 100px;
+  background: transparent;
+  border-bottom: 2px solid rgba(41, 137, 255, 1);
+
+  .guideDetail-chare-modal-header {
+    height: 30px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(41, 137, 255, 1);
+    background-image: url('/resource/v1/ue5-migrate/assets/images/modal-title.png');
+    background-size: 100%95%;
+    background-repeat: no-repeat;
+
+    .header-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #FFFFFF
+    }
+
+    .header-close {
+      width: 24px;
+      height: 24px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .guideDetail-chare-modal-body {
+    height: 100px;
+    background: rgba(1, 29, 62, 0.60);
+    color: #fff;
+    font-size: 16px;
+    padding: 4px;
+    text-indent: 20px;
+
+    .guideDetail-chare-modal-body-left {
+      font-size: 30px;
+
+      .unit {
+        font-size: 16px
+      }
+    }
+
+    .guideDetail-chare-modal-body-right {
+      display: flex;
+    }
+  }
+  
+}

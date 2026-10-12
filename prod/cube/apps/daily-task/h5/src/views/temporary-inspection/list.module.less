@@ -1,0 +1,76 @@
+.wrapper{
+  background: #f3f7fa; min-height: 100vh;
+  .screen{
+    display: flex;
+  }
+  .cell-group {
+    margin: 0 auto;
+    margin-bottom: 12px;
+    width: 351px;
+    min-height: 134px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 14px 12px;
+  
+    .title {
+      font-size: 17px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #0e161d;
+      line-height: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title-name{
+        display: inline-block;
+        // max-width: 60vw;
+        overflow: hidden;
+	      text-overflow:ellipsis;
+	      white-space: nowrap;
+        vertical-align: text-bottom;
+      }
+      div:nth-of-type(2){
+        font-size: 14px;
+      }
+    }
+    .tag{
+      margin-left: 5px;
+      font-size: 12px;
+      color: rgb(25, 137, 250);
+      background: rgba(25, 137, 250, 0.1);
+      &.warning{
+        color: rgb(255, 65, 88);
+        background: rgba(255, 65, 88, 0.1);
+      }
+      &.gray{
+        background-color: rgba(153, 153, 153, 0.1);
+        color: #999999;
+      }
+    }
+  
+    .content {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #131111;
+      margin-top: 8px;
+      line-height: 25px;
+      .label{
+        color: #8f8f8f;
+      }
+      div{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .footer{
+      display: flex;
+      justify-content: flex-end;
+      button{margin-left: 4px;}
+    }
+  }
+}
+

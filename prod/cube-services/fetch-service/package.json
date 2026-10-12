@@ -1,0 +1,30 @@
+{
+  "name": "@ghcloud/cube-fetch-service",
+  "module": "./src/main.ts",
+  "main": "./src/main.ts",
+  "version": "0.0.4",
+  "type": "module",
+  "scripts": {
+    "start": "bun debug.ts",
+    "dev": "bun --watch debug.ts",
+    "mcp:stdio": "bun src/mcp-stdio.ts",
+    "build": "bun run tsc",
+    "build:node": "bun build ./src/main.ts --target=node --bundle --external bun --outfile=./dist/cube-fetch-service.mjs",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@dangao/bun-server": "catalog:bun-server",
+    "@modelcontextprotocol/sdk": "catalog:",
+    "@mozilla/readability": "catalog:",
+    "cheerio": "catalog:backend-jq",
+    "fast-xml-parser": "catalog:",
+    "iconv-lite": "catalog:",
+    "linkedom": "catalog:",
+    "reflect-metadata": "catalog:",
+    "zod": "catalog:cube-ai"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,228 @@
+.positioning-detail {
+  padding: 20px 24px;
+  color: #24354c;
+}
+
+.positioning-detail__tabs {
+  padding: 4px 24px 24px;
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #e9edf3;
+  border-radius: 8px;
+}
+
+.positioning-detail__empty {
+  display: flex;
+  min-height: 380px;
+  align-items: center;
+  justify-content: center;
+}
+
+.positioning-detail__summary {
+  display: flex;
+  gap: 42px;
+  align-items: center;
+  padding: 26px 28px;
+  background: #fff;
+  border: 1px solid #e9edf3;
+  border-radius: 8px;
+}
+
+.positioning-detail__identity {
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+  align-items: center;
+}
+
+.positioning-detail__avatar {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  color: #3976d7;
+  font-size: 20px;
+  font-weight: 600;
+  background: #ebf2fe;
+  border-radius: 10px;
+}
+
+.positioning-detail__name {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.positioning-detail__secondary,
+.positioning-detail__device-type {
+  color: #8993a3;
+  font-size: 12px;
+}
+
+.positioning-detail__device-type {
+  display: block;
+  margin-top: 5px;
+}
+
+.positioning-detail__facts {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr 0.8fr 1.5fr 0.8fr;
+  gap: 24px;
+  padding-left: 34px;
+  margin: 0;
+  border-left: 1px solid #edf0f5;
+}
+
+.positioning-detail__facts dt,
+.positioning-detail__position-meta dt {
+  margin-bottom: 9px;
+  color: #8591a2;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.positioning-detail__facts dd,
+.positioning-detail__position-meta dd {
+  margin: 0;
+  color: #293c55;
+}
+
+.positioning-detail__position-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0 20px;
+}
+
+.positioning-detail__position-heading h3 {
+  margin: 0 0 5px;
+  color: #263952;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.positioning-detail__position-heading p {
+  margin: 0;
+  color: #919cad;
+  font-size: 12px;
+}
+
+.positioning-detail__position-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 292px;
+  gap: 20px;
+  align-items: start;
+}
+
+.positioning-detail__floor-map,
+.positioning-detail__indoor-placeholder {
+  height: 420px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e5ebf2;
+  border-radius: 8px;
+}
+
+.positioning-detail__indoor-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #7a8799;
+  background: #f6f8fb;
+
+  strong {
+    color: #293c55;
+  }
+}
+
+.positioning-detail__position-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5ebf2;
+  border-radius: 8px;
+}
+
+.positioning-detail__card-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.positioning-detail__card-title > :last-child {
+  margin-left: auto;
+}
+
+.positioning-detail__scene-name {
+  margin: 24px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.positioning-detail__position-meta {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+}
+
+.positioning-detail__position-meta dd {
+  font-size: 13px;
+}
+
+.positioning-detail__position-note {
+  padding: 12px;
+  margin: 24px 0;
+  color: #8591a2;
+  font-size: 12px;
+  line-height: 1.7;
+  background: #f6f8fb;
+  border-radius: 5px;
+}
+
+@media (max-width: 1250px) {
+  .positioning-detail__summary {
+    align-items: start;
+    gap: 24px;
+  }
+  .positioning-detail__facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding-left: 24px;
+  }
+  .positioning-detail__position-grid {
+    grid-template-columns: minmax(0, 1fr) 255px;
+  }
+}
+
+@media (max-width: 850px) {
+  .positioning-detail {
+    padding: 16px;
+  }
+  .positioning-detail__tabs {
+    padding: 4px 16px 16px;
+  }
+  .positioning-detail__summary {
+    flex-direction: column;
+  }
+  .positioning-detail__facts {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  .positioning-detail__position-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .positioning-detail__floor-map,
+  .positioning-detail__indoor-placeholder {
+    height: 340px;
+  }
+}

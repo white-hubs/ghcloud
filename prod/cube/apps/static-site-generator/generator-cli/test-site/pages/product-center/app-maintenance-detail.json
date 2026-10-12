@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-maintenance-detail.html",
+  "meta": {
+    "title": "维保作业 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+    "keywords": "维保作业,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+        "productName": "维保作业",
+        "productDescription": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "维保作业"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(0, 0, 0); font-size: 15px; font-family: 微软雅黑;\">针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(0, 0, 0); font-size: 15px; font-family: 微软雅黑;\">系统自动根据维保计划以及作业标准自动生成维保任务，下发到指定维保作业班组及负责人，并自动启动维保工单的处理流程。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"font-size: 19px;\"><strong>维保计划</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(0, 0, 0); font-size: 15px; font-family: 微软雅黑;\">维保计划页面提供用户对维保计划的配置管理，用户可以创建新的维保计划，为维保设备配置维保项以及维保周期，系统将自动根据维保计划为维保设备生成维保任务，并驱动维保责任人进行相应维保工作。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965364821035593729.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><p style=\"text-align: left;\"><span style=\"font-size: 19px;\"><strong>维保任务</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(0, 0, 0); font-size: 15px; font-family: 微软雅黑;\">维保任务页面以列表的形式展示维保计划周期性为维保设备生成的维保任务信息。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965365294006284290.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965365644184530946.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"font-size: 19px;\"><strong>维保项</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(0, 0, 0); font-size: 15px; font-family: 微软雅黑;\">维保项页面将自动展示所有设备类型，并提供用户为同一种设备类型的设备进行维保项的配置管理。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 19px;\"><strong>维保统计</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px; font-family: 微软雅黑;\">对设备的维保数据进行统计，可查看设备维保次数及最近维保时间，点击维保次数，</span><span style=\"color: rgb(51, 51, 51); font-size: 15px; font-family: 微软雅黑;\">跳转至维保任务页面，页面过滤仅展示对应设备已完成状态的维保任务。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965365951429881858.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344410706300930",
+            "name": "能碳管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+            "version": "1.0.1",
+            "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。 ",
+            "href": "/product-center/app-energy-detail.html"
+          },
+          {
+            "id": "1811344410899238913",
+            "name": "空调管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/空调管理/main.png",
+            "version": "1.0.2",
+            "description": "空调管理通过监测空调系统、设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本 。",
+            "href": "/product-center/app-ac-detail.html"
+          },
+          {
+            "id": "1811344410744049666",
+            "name": "门禁管理",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/门禁管理/main.png",
+            "version": "1.0.1",
+            "description": "支持接入控制，可通过孪生设备进行门锁远程开关控制，对于门禁重点管制区域进行严格监测管控，异常实时报警，支持构建联动规则与其它业务进行联动，并且可支持关联就近视频画面展示，保障关键区域安全。",
+            "href": "/product-center/app-access-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

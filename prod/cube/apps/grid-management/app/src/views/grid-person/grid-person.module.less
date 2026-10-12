@@ -1,0 +1,55 @@
+.gridPerson {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+
+  .left {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .searchForm {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .areaName {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .areaTree {
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+
+  .right {
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    padding:0 10px;
+
+    .title{
+      font-size: 18px;
+      font-weight: bolder;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    &.empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

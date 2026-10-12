@@ -1,0 +1,27 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+:global {
+  .invest-target-body {
+    justify-content: center;
+    min-height: 120px;
+  }
+
+  .invest-target-body.is-zoom {
+    min-height: 220px;
+  }
+
+  .invest-target-panel .park-manage-metric-grid.is-three {
+    align-content: center;
+    flex: 1;
+  }
+
+  .invest-target-panel .park-manage-metric-card {
+    min-height: 88px;
+  }
+
+  .invest-target-body.is-zoom .park-manage-metric-card {
+    min-height: 120px;
+  }
+}
+
+.v2-minimal-white-panel(invest-target-panel);

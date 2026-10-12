@@ -1,0 +1,229 @@
+.root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background: #f0f2f5;
+  overflow: hidden;
+
+  /* 避免外层再出竖向滚动，仅由 CubeLayout / 表格内部处理 */
+  > :first-child {
+    height: 100%;
+  }
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  // width: 100%;
+  // max-width: 360px;
+  // min-width: 0;
+  // margin: 0 auto;
+  // padding: 0 16px;
+  line-height: 1.4;
+  // text-align: left;
+}
+
+.nameText {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nameId {
+  overflow: hidden;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.config {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 36px;
+  padding: 2px 0;
+}
+
+.configEntry {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 96px;
+  height: 30px;
+  padding: 0 12px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &::before {
+    position: absolute;
+    inset: -4px;
+    content: '';
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.configEntryIcon {
+  flex-shrink: 0;
+  color: #1677ff;
+  font-size: 14px;
+}
+
+.configEntryBusiness,
+.configEntryModel {
+  color: rgba(0, 0, 0, 0.78);
+  background: #f5f7fa;
+  border-color: #edf0f4;
+  box-shadow: 0 1px 2px rgba(31, 35, 41, 0.04);
+
+  &:hover {
+    color: #1677ff;
+    background: #edf5ff;
+    border-color: #b7d7ff;
+    box-shadow: 0 4px 12px rgba(22, 119, 255, 0.12);
+  }
+
+  &:active {
+    color: #0958d9;
+    background: #e1efff;
+    border-color: #91caff;
+    box-shadow: 0 1px 3px rgba(22, 119, 255, 0.12);
+  }
+}
+
+.configTooltipOverlay {
+  max-width: none;
+
+  :global(.cube-visualization-app-tooltip-inner) {
+    padding: 0;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.65);
+    background: #fff;
+    border: 0;
+    border-radius: 12px;
+    box-shadow:
+      0 16px 40px rgba(31, 35, 41, 0.13),
+      0 2px 8px rgba(31, 35, 41, 0.06);
+  }
+}
+
+.configTooltip {
+  width: 328px;
+  padding: 16px 18px 18px;
+}
+
+.configTooltipBusiness {
+  .configTooltipItems i {
+    background: #69b1ff;
+  }
+}
+
+.configTooltipModel {
+  .configTooltipItems i {
+    background: #5cdbd3;
+  }
+}
+
+.configTooltipDescription {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.configTooltipScope {
+  margin-top: 14px;
+  padding: 12px 14px 14px;
+  background: #f7f9fc;
+  border-radius: 8px;
+}
+
+.configTooltipScopeLabel {
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.configTooltipItems {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px 14px;
+
+  > span {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  i {
+    flex-shrink: 0;
+    width: 4px;
+    height: 4px;
+    margin-right: 7px;
+    background: #b8c2d1;
+    border-radius: 50%;
+  }
+}
+
+.actions {
+  :global(.cube-visualization-app-btn-link) {
+    padding-inline: 4px;
+  }
+}
+
+.total {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.modalForm {
+  padding-top: 8px;
+
+  :global {
+    .cube-visualization-app-form-item {
+      margin-bottom: 0;
+    }
+
+    .cube-visualization-app-form-item-label {
+      text-align: right;
+    }
+  }
+}

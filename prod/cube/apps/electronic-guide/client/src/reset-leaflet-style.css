@@ -1,0 +1,26 @@
+.leaflet-tooltip {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.leaflet-tooltip .info {
+  font-size: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.leaflet-div-icon {
+  border: none !important;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}

@@ -1,0 +1,177 @@
+@import "../../v2-ring-legend.less";
+
+:global {
+  .elevator-analysis-pie-box {
+    position: relative;
+    box-sizing: border-box;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(53, 169, 255, 0.22), rgba(12, 230, 255, 0.04) 55%, transparent 72%);
+    box-shadow: inset 0 0 18px rgba(46, 148, 255, 0.16);
+
+    > .power-factor {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+    }
+
+    /* 勿泄漏全局 .content，会污染报警列表等表格行 */
+    > .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 56%;
+      color: var(--visual-chart-label-color, rgba(220, 238, 255, 0.86));
+      font-size: calc(var(--font-size-scale, 1) * 11px);
+      line-height: 1.3;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      pointer-events: auto;
+    }
+
+    > .content .gh-count-to,
+    > .content .total-num,
+    > .content .pie-center-value {
+      color: var(--visual-number-color, #eff6ff);
+      font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+      font-size: calc(var(--font-size-scale, 1) * 18px);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .elevator-analysis-pie-box {
+    background: transparent;
+    box-shadow: none;
+
+    > .content {
+      color: #49628f;
+    }
+
+    > .content .gh-count-to,
+    > .content .total-num,
+    > .content .pie-center-value {
+      color: #1455b3;
+      text-shadow: none;
+    }
+  }
+
+  /* 动环设备容器：正方形裁成圆，尺寸走密度 token */
+  .chart-pie-wrap,
+  .safe-device-pie-wrap,
+  .safe-risk-pie-wrap {
+    position: relative;
+    display: flex;
+    flex: 0 0 var(--card-pie-size, 120px);
+    width: var(--card-pie-size, 120px);
+    height: var(--card-pie-size, 120px);
+    min-width: var(--card-pie-size, 120px);
+    max-width: var(--card-pie-size, 120px);
+    min-height: var(--card-pie-size, 120px);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+
+    .elevator-analysis-pie-box,
+    .overview-v2-pie,
+    .overview-v2-pie-chart,
+    .elevator-analysis-left,
+    .power-factor {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+    }
+  }
+
+  .chart-pie-wrap.is-zoom,
+  .safe-device-pie-wrap.is-zoom,
+  .safe-risk-pie-wrap.is-zoom {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+  }
+
+  .device-chart-row .legend-list,
+  .overview-v2-pie-row .safe-device-legend,
+  .overview-v2-pie-row .safe-risk-legend {
+    .v2-ring-legend-list();
+    min-height: 0;
+    max-height: 100%;
+  }
+
+  .device-chart-row .legend-item,
+  .safe-device-legend-item,
+  .safe-risk-legend-item {
+    .v2-ring-legend-item();
+  }
+
+  .device-chart-row .legend-item:hover,
+  .safe-device-legend-item:hover,
+  .safe-risk-legend-item:hover {
+    .v2-ring-legend-item-hover();
+  }
+
+  .device-chart-row .legend-name,
+  .device-chart-row .legend-left,
+  .safe-device-legend-name,
+  .safe-risk-legend-name {
+    .v2-ring-legend-name();
+  }
+
+  .device-chart-row .legend-color,
+  .safe-device-legend-dot,
+  .safe-risk-legend-dot {
+    .v2-ring-legend-dot();
+  }
+
+  .device-chart-row .legend-value,
+  .safe-device-legend-value,
+  .safe-risk-legend-value {
+    .v2-ring-legend-value();
+  }
+
+  .device-chart-row .legend-unit,
+  .safe-device-legend-unit,
+  .safe-risk-legend-unit {
+    .v2-ring-legend-unit();
+  }
+
+  :root[data-visual-theme="minimal-white"] .device-chart-row .legend-item,
+  :root[data-visual-theme="minimal-white"] .safe-device-legend-item,
+  :root[data-visual-theme="minimal-white"] .safe-risk-legend-item {
+    .v2-ring-legend-item-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .device-chart-row .legend-name,
+  :root[data-visual-theme="minimal-white"] .device-chart-row .legend-unit,
+  :root[data-visual-theme="minimal-white"] .safe-device-legend-name,
+  :root[data-visual-theme="minimal-white"] .safe-device-legend-unit,
+  :root[data-visual-theme="minimal-white"] .safe-risk-legend-name,
+  :root[data-visual-theme="minimal-white"] .safe-risk-legend-unit {
+    .v2-ring-legend-text-minimal-white();
+  }
+
+  :root[data-visual-theme="minimal-white"] .device-chart-row .legend-value,
+  :root[data-visual-theme="minimal-white"] .safe-device-legend-value,
+  :root[data-visual-theme="minimal-white"] .safe-risk-legend-value {
+    .v2-ring-legend-value-minimal-white();
+  }
+}

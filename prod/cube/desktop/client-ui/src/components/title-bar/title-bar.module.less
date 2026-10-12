@@ -1,0 +1,57 @@
+.title-bar {
+  width: 100%;
+  height: 50px;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(2px);
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 9px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    width: 100%;
+    height: 1px;
+    background: #d5dfec;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      margin-right: 12px;
+    }
+
+    .text {
+      font-size: 18px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+      font-weight: Bold;
+      text-align: left;
+      color: #121c32;
+      line-height: 0;
+    }
+  }
+
+  .window-set {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.can-be-drag {
+  /* 设置该属性表明这是可拖拽区域，用来移动窗口 */
+  -webkit-app-region: drag;
+}

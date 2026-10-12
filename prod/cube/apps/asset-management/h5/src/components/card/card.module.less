@@ -1,0 +1,58 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    color: #1f3140;
+    line-height: 16px;
+
+    .rTitle {
+      height: 13px;
+      font-size: 13px;
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: right;
+      color: #777777;
+      line-height: 13px;
+    }
+
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    .img {
+      width: 50px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .img::after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: var(--van-primary-color);
+      opacity: .2;
+      border-radius: 6px;
+    }
+  }
+
+  .detail {
+    font-size: 13px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #aeaeae;
+  }
+}

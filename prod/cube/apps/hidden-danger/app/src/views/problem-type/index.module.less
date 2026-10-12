@@ -1,0 +1,41 @@
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .list {
+    margin-top: 12px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .itemOperate {
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

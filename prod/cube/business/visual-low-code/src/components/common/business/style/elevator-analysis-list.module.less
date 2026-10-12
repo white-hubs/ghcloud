@@ -1,0 +1,42 @@
+
+.alarm-analysis {
+  z-index:9;
+  font-size: 14px;
+  width: 100%;
+  color: #fff;
+  color:rgba(165, 182, 218, 1);
+  
+cursor: pointer;
+.alarm-analysisBox{
+  width: 100px;
+
+}
+  .alarm-analysisBox,
+  .alarm-analysis-left {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .alarm-analysis-name {
+      width: 80px;
+      overflow: hidden;
+      /*内容会被修剪，并且其余内容是不可见的*/
+      text-overflow: ellipsis;
+      /*显示省略符号来代表被修剪的文本。*/
+      white-space: nowrap;
+      /*文本不换行*/
+    }
+
+    .alarm-analysis-color {
+      width: 10px;
+      height: 10px;
+      background: #306cca;
+      margin-right: 6px;
+    }
+  }
+
+  .alarm-analysisBox {
+    margin-bottom: 10px;
+  }
+}

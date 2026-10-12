@@ -1,0 +1,90 @@
+:global {
+  .flow-box {
+    height: 100%;
+    padding-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .alarmDetail-flow {
+    height: 100%;
+    padding-right: 6px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--visual-scrollbar-thumb) var(--visual-scrollbar-track);
+
+    &::-webkit-scrollbar {
+      width: var(--visual-scrollbar-size, 6px);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--visual-scrollbar-track);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--visual-scrollbar-thumb);
+      border-radius: 999px;
+    }
+
+    .alarmDetail-flow-item {
+      position: relative;
+      padding-bottom: 40px;
+
+      &:last-child::before {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        width: 1px;
+        height: 100%;
+        background: var(--visual-data-modal-toolbar-border);
+      }
+
+      .flow-time {
+        min-height: var(--visual-data-modal-cell-line-height, 22px);
+        color: var(--visual-data-modal-text-color);
+        font-size: var(--visual-data-modal-cell-font-size, 14px);
+        font-weight: 500;
+        line-height: var(--visual-data-modal-cell-line-height, 22px);
+        text-align: left;
+
+        > div {
+          display: inline-block;
+
+          &.flow-icon {
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            background: var(--visual-primary, #2989ff);
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .flow-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 20px;
+
+        > div {
+          width: 33.33%;
+          color: var(--visual-data-modal-muted-color);
+          font-size: var(--visual-data-modal-cell-font-size, 14px);
+          font-weight: 400;
+          line-height: var(--visual-data-modal-cell-line-height, 22px);
+        }
+      }
+    }
+
+    > div:last-child {
+      color: var(--visual-data-modal-muted-color);
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.container {
+  padding: 10px;
+  background: #F3F7FA;
+  .wrap{
+    background-color: #fff;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .title {
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+    font-weight: Bold;
+    color: #1f3140;
+    line-height: 16px;
+    padding: 12px;
+    text-align: left;
+    padding-left: 0;
+  }
+  .content{
+    padding: 12px;
+
+  }
+  .score{
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    .value{
+      font-size: 16px;
+      font-size: 28px;
+      font-family: Roboto, Roboto-Medium;
+      font-weight: Medium;
+      margin-left: 50px;
+    }
+    .label{
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: justify;
+      color: #1f3140;
+      line-height: 13px;
+    }
+    &.high{
+      background: #fff8f8;
+      .value{
+        color: #ff4242;
+      }
+    }
+    &.low{
+      background: #F6FFFA;
+      .value{
+        color: #00B358;
+      }
+    }
+    &.middle{
+      background: #FFFBF3;
+      .value{
+        color: #FFAA00;
+      }
+    }
+  }
+  .unit{
+    font-size: 13px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #1f3140;
+    margin-left: 2px;
+  }
+  .item{
+    position: relative;
+    padding-bottom: 5px;
+    &:not(:last-child){
+      &::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #e1e1e1;
+        display: block;
+      }
+    }
+    .row{
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: justify;
+      color: #1f3140;
+      margin-bottom: 5px;
+      .value{
+        font-size: 18px;
+        font-family: Roboto, Roboto-Medium;
+        font-weight: Medium;
+        text-align: justify;
+        color: #1f3140;
+        margin-left: 4px;
+      }
+      &:first-child{
+        .value{
+          font-size: 24px;
+        }
+      }
+      &:last-child{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,143 @@
+/* 设备详情弹窗：对齐 legacy，适配科技蓝 / 极简白 */
+:global {
+  .group {
+    display: flex;
+    justify-content: space-between;
+
+    .camera {
+      width: 100%;
+      height: 400px;
+      margin: 10px 6px 0;
+    }
+  }
+
+  .device-detail-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: var(--visual-zoom-modal-overlay-bg, rgba(2, 18, 42, 0.25));
+  }
+
+  .device-detail-panel.alarmDetail-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9001;
+    box-sizing: border-box;
+    width: 800px;
+    max-width: calc(100vw - 48px);
+    overflow: hidden;
+    color: var(--visual-data-modal-text-color, #fff);
+    background: var(--visual-data-modal-content-bg, rgba(5, 22, 45, 0.58));
+    border: 1px solid var(--visual-data-modal-border, #2989ff);
+    border-radius: 8px;
+    box-shadow: var(--visual-data-modal-shadow, 0 4px 20px rgba(0, 0, 0, 0.5));
+    backdrop-filter: var(--visual-data-modal-backdrop-filter, blur(10px) saturate(115%));
+    -webkit-backdrop-filter: var(--visual-data-modal-backdrop-filter, blur(10px) saturate(115%));
+    transform: translate(-50%, -50%);
+
+    .alarmDetail-modal-header {
+      cursor: move;
+    }
+
+    .alarmDetail-modal-content {
+      max-height: 560px;
+      padding: 0 16px 16px;
+      overflow: hidden;
+      background: transparent;
+
+      .content-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        min-height: 40px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        color: var(--visual-data-modal-text-color, #fff);
+        font-size: var(--visual-data-modal-cell-font-size, 14px);
+
+        > div {
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 76px;
+          height: 30px;
+          padding: 0 12px;
+          color: var(--visual-data-modal-muted-color, #d0deee);
+          font-size: var(--visual-data-modal-cell-font-size, 14px);
+          font-weight: 500;
+          background: transparent;
+          border: 1px solid var(--visual-data-modal-toolbar-border, rgba(76, 160, 255, 0.34));
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
+          &.active {
+            color: #fff;
+            background: var(--visual-primary, #2989ff);
+            border-color: var(--visual-primary, #2989ff);
+            box-shadow: 0 4px 12px rgba(36, 118, 238, 0.22);
+          }
+        }
+      }
+
+      .conent-body {
+        min-height: 280px;
+        max-height: 480px;
+        padding-top: 4px;
+        padding-right: 4px;
+        overflow: auto;
+        color: var(--visual-data-modal-text-color, #fff);
+        font-size: var(--visual-data-modal-cell-font-size, 14px);
+        scrollbar-width: thin;
+        scrollbar-color: var(--visual-scrollbar-thumb) var(--visual-scrollbar-track);
+
+        &::-webkit-scrollbar {
+          width: var(--visual-scrollbar-size, 6px);
+        }
+
+        &::-webkit-scrollbar-track {
+          background: var(--visual-scrollbar-track);
+          border-radius: 999px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--visual-scrollbar-thumb);
+          border-radius: 999px;
+        }
+
+        .ant-empty-description {
+          color: var(--visual-data-modal-muted-color, #d0deee);
+        }
+      }
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] .device-detail-panel.alarmDetail-modal {
+    .content-tabs > div:not(.active) {
+      color: #49628f;
+      background: rgba(255, 255, 255, 0.96);
+      border-color: rgba(67, 124, 204, 0.28);
+    }
+
+    .content-tabs > div.active {
+      color: #fff;
+      background: #2476ee;
+      border-color: #2476ee;
+    }
+
+    .header-close {
+      color: #31598f;
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(61, 125, 211, 0.3);
+
+      &:hover {
+        color: #2476ee;
+        background: rgba(36, 118, 238, 0.1);
+        border-color: #2476ee;
+      }
+    }
+  }
+}

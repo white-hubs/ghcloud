@@ -1,0 +1,77 @@
+.recordItem {
+  margin: 12px 12px 0;
+  padding: 14px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.status {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.status.ALARM_UN_CONFIRMED {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status.ALARM_PROGRESS_CONFIRMED {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.level {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.label {
+  color: #9ca3af;
+  width: 64px;
+  flex-shrink: 0;
+}
+
+.value {
+  color: #374151;
+  flex: 1;
+}

@@ -1,0 +1,457 @@
+.page {
+  min-height: 100vh;
+  padding: 10px 12px 24px;
+  background: #f6f8fb;
+  box-sizing: border-box;
+}
+
+.navbar :global(.van-nav-bar__title) {
+  right: 116px;
+  left: 48px;
+  max-width: none;
+}
+
+.navbar :global(.van-nav-bar__right) {
+  right: 8px;
+  max-width: 108px;
+}
+
+.warehouseSelectWrap {
+  position: relative;
+  width: 104px;
+}
+
+.warehouseSelectTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 32px;
+  padding: 0 10px 0 12px;
+  border: 1px solid #edf0f5;
+  border-radius: 18px;
+  outline: none;
+  background: #fff;
+  color: #4b5563;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  box-sizing: border-box;
+}
+
+.warehouseSelectTrigger:disabled {
+  color: #a0a8b5;
+}
+
+.warehouseSelectTrigger span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectArrow {
+  flex: 0 0 auto;
+  margin-left: 6px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.warehouseDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 100;
+  width: 220px;
+  max-height: 300px;
+  padding: 6px;
+  overflow-y: auto;
+  border: 1px solid #edf0f5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(31, 41, 55, 0.18);
+  box-sizing: border-box;
+}
+
+.warehouseDropdown::before {
+  position: absolute;
+  top: -6px;
+  right: 28px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #edf0f5;
+  border-left: 1px solid #edf0f5;
+  background: #fff;
+  transform: rotate(45deg);
+  content: '';
+}
+
+.warehouseOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #303746;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.warehouseOption span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.warehouseOption + .warehouseOption {
+  margin-top: 4px;
+}
+
+.warehouseOptionActive {
+  background: #eef7ff;
+  color: #1788e8;
+  font-weight: 600;
+}
+
+.card,
+.infoCard,
+.monitorCard,
+.stateCard {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(31, 41, 55, 0.06);
+}
+
+.stateCard {
+  margin-bottom: 10px;
+  padding: 14px;
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+}
+
+.infoCard {
+  position: relative;
+  padding: 16px 14px 16px 22px;
+  overflow: hidden;
+}
+
+.infoCard::before {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 12px;
+  width: 3px;
+  border-radius: 3px;
+  background: #46c9ee;
+  content: '';
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
+}
+
+.infoItem {
+  min-width: 0;
+}
+
+.infoItem span {
+  display: block;
+  margin-bottom: 4px;
+  color: #a0a8b5;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.infoItem strong {
+  display: block;
+  color: #303746;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.storageCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+  padding: 22px 28px;
+}
+
+.usageRing {
+  position: relative;
+  display: grid;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: conic-gradient(#2987ee var(--usage-rate), #e9f1fb 0);
+  place-items: center;
+}
+
+.usageRing::before {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  content: '';
+}
+
+.usageRing span {
+  position: relative;
+  color: #243041;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.storageTitle {
+  color: #9aa3b3;
+  font-size: 13px;
+}
+
+.storageTitle span {
+  margin-left: 12px;
+}
+
+.storageWeight {
+  margin-top: 4px;
+  color: #2d8ee8;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.storageWeight span {
+  margin-left: 6px;
+  color: #9aa3b3;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.storageLabel {
+  color: #9aa3b3;
+  font-size: 13px;
+}
+
+.capacityCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+.capacityCard div {
+  padding: 16px 4px;
+  text-align: center;
+}
+
+.capacityCard div + div {
+  border-left: 1px solid #edf0f5;
+}
+
+.capacityCard span,
+.capacityCard em {
+  display: block;
+  color: #a0a8b5;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.capacityCard strong {
+  display: block;
+  margin-top: 6px;
+  color: #303746;
+  font-size: 17px;
+}
+
+.timeCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 16px 14px;
+}
+
+.timeCard div {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #9aa3b3;
+  font-size: 13px;
+}
+
+.timeCard strong {
+  color: #303746;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.monitorCard {
+  margin-top: 10px;
+  padding: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sectionHeader h2 {
+  position: relative;
+  margin: 0;
+  padding-left: 10px;
+  color: #243041;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.sectionHeader h2::before {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: #45c9ee;
+  content: '';
+}
+
+.sectionHeader span {
+  position: relative;
+  color: #52d7aa;
+  font-size: 12px;
+}
+
+.sectionHeader span::before {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #52d7aa;
+  vertical-align: 2px;
+  content: '';
+}
+
+.temperaturePanel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 18px 4px 16px;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+.temperatureGauge {
+  color: #303746;
+}
+
+.temperatureDial {
+  position: relative;
+  display: grid;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--dial-color) 0 76%, #edf2f7 76% 100%);
+  place-items: center;
+}
+
+.temperatureDial::before {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 10px rgba(31, 41, 55, 0.08);
+  content: '';
+}
+
+.temperatureDial span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  color: #303746;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.temperatureLabel {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.environmentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.environmentItem {
+  min-height: 104px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fbfcff;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.04);
+  box-sizing: border-box;
+}
+
+.environmentLabel {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #8b96a9;
+  font-size: 13px;
+}
+
+.environmentLabel :global(.van-icon) {
+  color: #7c8ce9;
+  font-size: 15px;
+}
+
+.environmentValue {
+  margin-top: 10px;
+  color: #303746;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.environmentValue span {
+  margin-left: 4px;
+  color: #9aa3b3;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.statusBadge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #ecfff6;
+  color: #29c787;
+  font-size: 11px;
+  line-height: 20px;
+}

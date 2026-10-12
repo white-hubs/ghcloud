@@ -1,0 +1,8 @@
+lib
+dist
+tsconfig.tsbuildinfo
+.bin
+
+# Local runtime config; may contain OAuth client secrets.
+/app.json
+/app.*.json

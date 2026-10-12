@@ -1,0 +1,137 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/features/cards/parking-car/_shared/parking-v2-shared.less";
+
+:global {
+  .parking-statistics-v2-root {
+    position: relative;
+  }
+
+  .parking-v2-metric-hero {
+    .parking-v2-metric-hero();
+  }
+
+  .stats-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    color: var(--visual-text-color, #fff);
+
+    &.is-zoom {
+      padding: 24px 16px;
+
+      .icon-wrapper img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .inner-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .main-stat {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        font-size: calc(var(--font-size-scale, 1) * 24px);
+      }
+
+      .main-value {
+        font-size: calc(var(--font-size-scale, 1) * 40px);
+        line-height: calc(var(--font-size-scale, 1) * 24px);
+      }
+
+      .sub-stats {
+        font-size: calc(var(--font-size-scale, 1) * 20px);
+      }
+
+      .sub-value {
+        font-size: calc(var(--font-size-scale, 1) * 24px);
+      }
+    }
+  }
+
+  .icon-wrapper {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 20px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .inner-icon {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .stats-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .main-stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: calc(var(--font-size-scale, 1) * 16px);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 121, 255, 0.26),
+      rgba(0, 121, 255, 0.26) 28%,
+      rgba(0, 119, 255, 0.24) 37%,
+      rgba(0, 118, 255, 0.16) 56%,
+      rgba(0, 96, 208, 0)
+    );
+    border-radius: 4px;
+  }
+
+  .main-value {
+    font-size: calc(var(--font-size-scale, 1) * 24px);
+    line-height: calc(var(--font-size-scale, 1) * 14px);
+  }
+
+  .main-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .main-unit,
+  .sub-unit {
+    color: var(--visual-muted-color, #d0deee);
+    font-size: calc(var(--font-size-scale, 1) * 12px);
+  }
+
+  .stat-title {
+    color: var(--visual-muted-color, #d0deee);
+  }
+
+  .sub-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: calc(var(--font-size-scale, 1) * 14px);
+    color: var(--visual-muted-color, #d0deee);
+  }
+
+  .sub-stat-item {
+    .sub-value {
+      margin-left: 5px;
+      font-size: calc(var(--font-size-scale, 1) * 16px);
+    }
+
+    .sub-unit {
+      margin-left: 2px;
+    }
+  }
+}
+
+.v2-minimal-white-panel(parking-statistics-v2-panel);
+.parking-v2-minimal-white-children(parking-statistics-v2-panel);

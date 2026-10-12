@@ -1,0 +1,133 @@
+.feedback-box {
+  background-color: #f4f7fa;
+  min-height: calc(100vh - 46px);
+  padding: 10px 10px 80px;
+  position: relative;
+}
+
+.feedback-content {
+  background-color: #fff;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.feedback-loading-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .feedback-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.feedback-btn {
+  position: fixed;
+  width: 100%;
+  max-width: 100vw;
+  height: 64px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+
+  .feedback-btn-line {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+.uploaded-list {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.uploaded {
+  position: relative;
+  margin-right: 8px;
+
+  img {
+    width: 65px;
+    height: 65px;
+    vertical-align: middle;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  :global(.van-icon-clear) {
+    position: absolute;
+    right: -6px;
+    top: -8px;
+  }
+}
+
+.upload {
+  width: 65px;
+  height: 65px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-schedule {
+  :global(.van-field__body) {
+    align-items: center;
+  }
+
+  :global(.van-field__label) {
+    flex-shrink: 0;
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+
+  :global(.van-field__value) {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.schedule-slider-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 4px;
+  justify-content: center;
+  width: 100%;
+  max-width: min(196px, 100%);
+  min-width: 0;
+  padding: 0;
+}
+
+.schedule-ruler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1px;
+  font-size: 11px;
+  line-height: 1.1;
+  color: var(--van-text-color-3, #969799);
+}
+
+.schedule-percent {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--van-primary-color);
+}
+
+.schedule-slider {
+  width: 100%;
+  margin: 0;
+  padding: 0 1px;
+}

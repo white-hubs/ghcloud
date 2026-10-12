@@ -1,0 +1,32 @@
+#cube-video-monitor-app {
+  min-height: 100%;
+}
+
+#cube-video-monitor-app .cube-video-monitor-theme {
+  --vm-bg-page: #f5f7fa;
+  --vm-bg-card: #ffffff;
+  --vm-bg-elevated: #ffffff;
+  --vm-text-primary: #1f2329;
+  --vm-text-secondary: #86909c;
+  --vm-border: #e5e6eb;
+  --vm-border-subtle: #edf0f5;
+  min-height: 100%;
+  color: var(--vm-text-primary);
+  background: var(--vm-bg-page);
+
+  &[data-theme="night-black"] {
+    --vm-bg-page: #080e1c;
+    --vm-bg-card: #10182b;
+    --vm-bg-elevated: #16213a;
+    --vm-text-primary: #f4f7ff;
+    --vm-text-secondary: #9aa8bf;
+    --vm-border: #233758;
+    --vm-border-subtle: #1b2b47;
+  }
+}
+
+.cube-video-monitor-theme {
+  min-height: 100%;
+  color: var(--vm-text-primary);
+  background: var(--vm-bg-page);
+}

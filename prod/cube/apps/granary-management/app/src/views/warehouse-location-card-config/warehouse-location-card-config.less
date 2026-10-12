@@ -1,0 +1,230 @@
+.location-card-config-root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+.location-card-config-list,
+.location-card-config-detail,
+.location-card-config-records {
+  background: #fff;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.location-card-config-query {
+  margin-bottom: 28px;
+}
+
+.location-card-config-table {
+  flex: 0 0 auto;
+}
+
+.location-card-config-section .ant-table-cell {
+  white-space: nowrap;
+}
+
+.location-card-config-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.location-card-config-page-bar {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.location-card-config-tabs {
+  display: flex;
+  gap: 18px;
+}
+
+.location-card-config-tabs button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 34px;
+  padding: 0 14px;
+}
+
+.location-card-config-tabs button.is-active {
+  border-bottom-color: #1890ff;
+  color: #1890ff;
+}
+
+.location-card-config-section {
+  background: #fff;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(15 35 52 / 6%);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.location-card-config-section header {
+  align-items: center;
+  border-bottom: 1px solid #edf1f5;
+  display: flex;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 22px;
+}
+
+.location-card-config-section h3 {
+  color: #102235;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.location-card-config-form-grid {
+  display: grid;
+  gap: 18px 22px;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  padding: 18px 22px 28px;
+}
+
+.location-card-config-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.location-card-config-field-label {
+  color: #102235;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.location-card-config-native-input {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  font-size: 14px;
+  height: 32px;
+  line-height: 30px;
+  outline: none;
+  padding: 0 11px;
+  width: 100%;
+}
+
+.location-card-config-native-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+}
+
+.location-card-config-native-input:disabled {
+  background: #f5f5f5;
+  color: rgb(0 0 0 / 25%);
+  cursor: not-allowed;
+}
+
+.location-card-config-native-input::placeholder {
+  color: rgb(0 0 0 / 25%);
+}
+
+.location-card-config-range-inputs {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.location-card-config-range-inputs .location-card-config-native-input {
+  min-width: 0;
+}
+
+.location-card-config-range-separator {
+  color: #4e5969;
+  flex: none;
+  font-size: 12px;
+}
+
+.location-card-config-actions {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.location-card-config-quality-form {
+  display: grid;
+  gap: 14px 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 8px 0;
+}
+
+.location-card-config-modal-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.location-card-config-record-query {
+  margin-bottom: 12px;
+}
+
+.location-card-config-record-detail {
+  padding: 8px 0;
+}
+
+.location-card-config-record-detail-header,
+.location-card-config-record-detail-row {
+  align-items: center;
+  border-bottom: 1px solid #d7d5c8;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 36px 1.6fr;
+  line-height: 20px;
+  min-height: 20px;
+  height: 40px;
+}
+
+.location-card-config-record-detail-header {
+  color: #4f5559;
+  font-weight: 500;
+}
+
+.location-card-config-record-detail-row span,
+.location-card-config-record-detail-header span {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.location-card-config-record-detail-arrow {
+  color: #777;
+  text-align: center;
+}
+
+.location-card-config-record-detail-new {
+  color: #0a5ab8;
+  font-weight: 600;
+}
+
+.location-card-config-record-detail-empty {
+  color: #999;
+  font-size: 12px;
+  line-height: 48px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .location-card-config-form-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}

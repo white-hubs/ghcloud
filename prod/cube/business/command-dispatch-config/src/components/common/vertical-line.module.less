@@ -1,0 +1,22 @@
+.verticalLine {
+  display: block;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  font-family: PingFang SC-Medium;
+  position: relative;
+  padding-left: 8px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 18px;
+    vertical-align: middle;
+    background-color: var(--cube-theme-var--primary-color);
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 0;
+  }
+}

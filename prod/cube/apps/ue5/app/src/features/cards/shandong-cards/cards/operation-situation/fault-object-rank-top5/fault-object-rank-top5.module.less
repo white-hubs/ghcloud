@@ -1,0 +1,64 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.headerToolbar {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 188px;
+  flex-direction: column;
+}
+
+.listSurface {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0;
+  min-height: 188px;
+  max-height: 240px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.isZoomList {
+  max-width: 560px;
+  max-height: none;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.rankItem {
+  display: block;
+  width: 100%;
+}
+
+.emptySurface {
+  display: flex;
+  min-height: 188px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomBody {
+  display: flex;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+
+  .listSurface {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .emptySurface {
+    min-height: 240px;
+  }
+}
+
+.v2-minimal-white-panel(fault-object-rank-top5-v2-panel);

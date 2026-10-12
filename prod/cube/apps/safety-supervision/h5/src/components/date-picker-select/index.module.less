@@ -1,0 +1,58 @@
+.container {
+
+  font-family: Roboto, Roboto-Medium;
+  font-weight: Medium;
+  text-align: left;
+  color: #1f3140;
+  font-size: 15px;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    text-wrap: nowrap;
+  }
+
+  .topTabs {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+  .active {
+    :global {
+      .van-tabs__line {
+        display: block;
+      }
+
+      .van-tab--active {
+        font-weight: var(--van-font-bold);
+        color: var(--van-tab-active-text-color);
+      }
+    }
+  }
+
+  .activeNull {
+    :global {
+      .van-tabs__line {
+        display: none;
+      }
+
+      .van-tab--active {
+        font-weight: normal !important;
+        color: #646566;
+      }
+    }
+  }
+
+  .lastTab {
+    display: none;
+  }
+}

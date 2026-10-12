@@ -1,0 +1,15 @@
+{
+  "id": 122,
+  "title": "IBMS系统在酒店的应用技术要求",
+  "date": "2022-08-06",
+  "summary": "",
+  "abstract": null,
+  "category": "公司动态",
+  "href": "/information/detail-122.html",
+  "image": "https://qiniu.guhecloud.com/legacy-site/Uploadfiles/Picture/2022-7-4/202274145163096.png",
+  "author": "古河云科技",
+  "content": "<p style=\"text-indent:0em;\"><span style=\"font-family:宋体\"><img src=\"https://qiniu.guhecloud.com/legacy-site/Uploadfiles/Picture/2022-7-4/202274145163096.png\" alt=\"古河云科技BIM运维6.5\" title=\"古河云科技BIM运维6.5\" /><br /><br /><br /></span></p><p style=\"text-indent:0em;\"><span style=\"font-family:宋体\">近年来，随着智慧城市的不断发展，建筑智能化已经成为行业的一种趋势，而</span><a href=\"https://www.guhecloud.com/product.aspx?t=7\" target=\"_self\"><strong>IBMS</strong></a><span style=\"font-family:宋体\">系统在楼宇智能化的过程中发挥了重要的作用。今天，古河云就和大家分享一下</span> IBMS<span style=\"font-family:宋体\">系统在酒店应用有哪些技术要求。</span><br /></p><p style=\"text-indent:154px\"> </p><p><span style=\"font-family:宋体\">一、实现功能</span></p><p> </p><p><span style=\"font-family:宋体\">从日常运行管理和专业系统管理两个方面来看，</span><a href=\"https://www.guhecloud.com/product.aspx?t=7\" target=\"_self\"><strong>IBMS</strong></a><span style=\"font-family:宋体\">智能管理系统应具备以下两种功能：</span></p><p> </p><p>1.<span style=\"font-family:宋体\">用于日常运行管理，能够实时监控各功能子系统的关键运行数据，实现各设备子系统运行模式的设定。各子系统出现异常工作状态时，可通过集中控制软件在中控室发出声音提示。数据的显示和模式的设置应根据酒店物业管理的功能需求进行设计，人机交互界面应尽可能做到人性化、通俗易懂。</span></p><p> </p><p>2.<span style=\"font-family:宋体\">专业的系统管理，包括设备维护管理、长期节能诊断和系统运行模式改进等，针对以上功能需求，</span>IBMS<span style=\"font-family:宋体\">智能管理系统应提供运行方式的编辑和修改功能，远程修改特定设备的启停状态和参数设置功能，详细、长期、准确的数据记录功能，以及自动控制逻辑的修改功能。界面软件应具有专业性、全面性和易编辑性，方便专业人员对</span>IBMS<span style=\"font-family:宋体\">智能管理系统的集中控制功能进行修改和升级。</span></p><p> </p><p><span style=\"font-family:宋体\">二、标准化和兼容性</span></p><p style=\"text-indent:154px\"> </p><p>1.<span style=\"font-family:宋体\">标准化</span>:<span style=\"font-family:宋体\">要求同一套技术方案，实现多种酒店的标准应用。</span></p><p> </p><p>2.<span style=\"font-family:宋体\">兼容性</span>:<span style=\"font-family:宋体\">要求集成平台通过标准化的接口方案与酒店的主要子系统的技术兼容，主要子系统包括安防消防、照明、停车管理、电梯监控、客流统计、信息宣传、能耗测量等。</span></p><p> </p><p><span style=\"font-family:宋体\">三、灵活性和可扩展性</span></p><p> </p><p>IBMS<span style=\"font-family:宋体\">智能管理系统集成平台必须具有灵活性和可扩展，酒店机电系统发生变化时，</span>IBMS<span style=\"font-family:宋体\">系统集成平台应能轻松调整，无需重新设计的硬件、软件结构。此外，</span>IBMS<span style=\"font-family:宋体\">系统必须具备运营策略更新的功能，集成平台可以方便地导入更先进的运营策略。</span></p><p> </p><p><span style=\"font-family:宋体\">总之，</span><a href=\"https://www.guhecloud.com/product.aspx?t=7\" target=\"_self\"><strong>IBMS</strong></a><span style=\"font-family:宋体\">系统是智能建筑的核心，它在建筑中的应用有助于实现建筑的智能化管理、统一管理和节约运营成本。</span>IBMS<span style=\"font-family:宋体\">系统顺应了当前节能减排、提质增效的发展趋势。对智慧城市建设意义重大，前景光明。</span></p><p style=\"text-indent:154px\"> </p><p><br /></p>",
+  "click": 213604,
+  "create_time": "2022-08-06 10:19:51",
+  "update_time": "2026-04-14 01:07:26"
+}

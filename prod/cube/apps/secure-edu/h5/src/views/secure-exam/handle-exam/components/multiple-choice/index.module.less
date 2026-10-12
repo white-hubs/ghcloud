@@ -1,0 +1,126 @@
+.singleChoice {
+  padding: 12px;
+
+  .title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1F3140;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: #F6F8FB;
+    color: #1F3140;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .checkIcon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    border: 1px solid #B6C4D6;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 20px;
+  }
+
+  .optionId {
+    min-width: 18px;
+    color: #1F3140;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    flex: 0 0 auto;
+  }
+
+  .optionText {
+    flex: 1;
+    word-break: break-word;
+  }
+
+  .selected {
+    background: #EDF3FF;
+
+    .checkIcon {
+      border-color: var(--van-primary-color);
+      background: var(--van-primary-color);
+
+      &::after {
+        content: "✓";
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .right {
+    background: #F0FBEA;
+
+    .checkIcon {
+      border-color: #39B54A;
+      background: #39B54A;
+
+      &::after {
+        content: "✓";
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .wrong {
+    background: #FFF0F2;
+
+    .checkIcon {
+      border-color: #FF4158;
+      background: #FF4158;
+
+      &::after {
+        content: "×";
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .answerAnalysis {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #1F3140;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .answer {
+      background: #F6F8FB;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: #5B6B7E;
+      line-height: 1.5;
+    }
+  }
+}

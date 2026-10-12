@@ -1,0 +1,38 @@
+.status-tag {
+  width: 40px;
+  height: 18px;
+  background: rgba(88, 134, 255, 0.3);
+  border: 1px solid #5886ff;
+  color: #5886ff;
+  border-radius: 2px;
+  backdrop-filter: blur(3.68px);
+  font-size: 12px;
+  font-family: sourceMedium Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: left;
+  text-align: center;
+  line-height: 18px;
+}
+.status-tag.WAIT,
+.status-tag.WAIT_RECEIVE,
+.status-tag.WAIT_EXECUTE,
+.status-tag.WAITING {
+  background: rgba(88, 134, 255, 0.3);
+  border: 1px solid #5886ff;
+  color: #5886ff;
+}
+.status-tag.DOING,
+.status-tag.EXECUTING,
+.status-tag.PROCESSING,
+.status-tag.TERMINATED,
+.status-tag.EXPIRED {
+  background: rgba(255, 151, 55, 0.3);
+  border: 1px solid #ff9737;
+  color: #ff9737;
+}
+.status-tag.COMPLETED,
+.status-tag.FINISHED {
+  background: rgba(71, 214, 177, 0.3);
+  border: 1px solid #47d6b1;
+  color: #47d6b1;
+}

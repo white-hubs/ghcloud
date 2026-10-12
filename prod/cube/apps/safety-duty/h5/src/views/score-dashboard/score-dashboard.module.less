@@ -1,0 +1,184 @@
+.page {
+  min-height: 100vh;
+  background: #f3f7fa;
+  padding-bottom: 20px;
+}
+
+.content {
+  padding: 12px;
+}
+
+.periodLabel {
+  margin: 2px 0 10px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.periodTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.periodTab {
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.periodTabActive {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.card {
+  border-radius: 16px;
+  background: #fff;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.card strong {
+  display: block;
+  color: #111827;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.card span {
+  display: block;
+  margin-top: 6px;
+  color: #9ca3af;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.sectionTitle {
+  margin: 14px 0 8px 4px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.list {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.deptItem,
+.rankItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.deptItem:last-child,
+.rankItem:last-child {
+  border-bottom: 0;
+}
+
+.deptItem > span {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.deptItem div {
+  text-align: right;
+}
+
+.deptItem strong {
+  display: block;
+  font-size: 14px;
+}
+
+.deptItem em {
+  display: block;
+  margin-top: 2px;
+  color: #9ca3af;
+  font-size: 11px;
+  font-style: normal;
+}
+
+.rankSuccess {
+  background: #f0fdf4;
+}
+
+.rankWarning {
+  background: #fffbe6;
+}
+
+.rankDanger {
+  background: #fff2f0;
+}
+
+.rankNo {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.rankMain {
+  min-width: 0;
+  flex: 1;
+}
+
+.rankMain strong,
+.rankMain span {
+  display: block;
+}
+
+.rankMain strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.rankMain span,
+.rankScore span {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.rankScore {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.rankScore strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+}
+
+.successText {
+  color: #10b981 !important;
+}
+
+.warningText {
+  color: #f59e0b !important;
+}
+
+.dangerText {
+  color: #ef4444 !important;
+}

@@ -1,0 +1,56 @@
+.alarm-analysis {
+  z-index: 9;
+  width: 100%;
+  color: #fff;
+  max-height: 100%;
+  // overflow-y: auto;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  .alarm-analysisBox {
+    width: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 8px;
+    padding-bottom: 4px;
+    background: rgba(108,128,151,0.10);
+  }
+
+  .alarm-analysis-left {
+    display: flex;
+    align-items: baseline;
+
+    .alarm-analysis-name {
+      color: #fff;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      color: #d0deee;
+      line-height: 16px;
+      white-space: pre;
+    }
+
+    .alarm-analysis-color {
+      width: 12px;
+      height: 12px;
+      background: #306cca;
+      margin-right: 6px;
+      border-radius: 2px;
+    }
+  }
+  .alarm-analysis-value { 
+    font-size: 16px;
+    font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+    font-weight: Regular;
+    color: #ffffff;
+    line-height: 18px;
+    display: inline-block;
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,31 @@
+/* 外层包住 Spin；内层 Ant 使用 ConfigProvider prefixCls=cube-form-audit-app，类名为 cube-form-audit-app-spin-* */
+.spin-loading {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.spin-loading :global(.cube-form-audit-app-spin-nested-loading),
+.spin-loading :global(.ant-spin-nested-loading) {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.spin-loading :global(.cube-form-audit-app-spin-container),
+.spin-loading :global(.ant-spin-container) {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

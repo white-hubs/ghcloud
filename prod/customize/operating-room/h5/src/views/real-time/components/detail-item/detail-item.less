@@ -1,0 +1,96 @@
+.real-list-item {
+  background: #ffffff;
+  border-radius: 8px;
+  margin-top: 12px;
+  position: relative;
+  &:first-child {
+    margin-top: 0;
+  }
+  .list-item-content {
+    padding: 12px 12px 0 32px;
+    font-size: 13px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    color: #666666;
+    background: #f7f8fa;
+    border-radius: 8px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    .norm-cell-item {
+      margin-bottom: 8px;
+      position: relative;
+      &::after{
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        content: '';
+        width: 1px;
+        height: 20px;
+        border: 1px dashed #dee4ec;
+      }
+      &:nth-child(3n){
+        &::after{
+          display: none;
+        }
+      }
+      &.show{
+        opacity: 1;
+      }
+      &.hide{
+        opacity: 0;
+      }
+      &.normal .label::before, &.NORMAL .label::before{
+        background-color:rgba(106,181,57,1);
+      }
+      &.high .label::before, &.ABNORMAL .label::before, &.UPPER_LIMIT .label::before{
+        background-color: rgba(255,65,88,1);
+      }
+      &.low .label::before, &.LOWER_LIMIT .label::before{
+        background:rgba(246,151,3,1);
+      }
+      .label {
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #86909c;
+        line-height: 12px;
+        display: inline-block;
+        position: relative;
+        
+        &::before{
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          top: 6px;
+          left: -12px;
+          transform: translateY(-50%);
+          content: '';
+          border-radius: 50%;
+        }
+      }
+      .value {
+        margin-top: 4px;
+        display: flex;
+        align-items: baseline;
+        font-size: 12px;
+        font-family: Roboto, Roboto-Regular;
+        font-weight: Regular;
+        color: #1f3140;
+
+        .num{
+          font-size: 16px;
+          font-weight: 700;
+          margin-right: 2px;
+          &.font-12{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,304 @@
+{
+    "$schema": "./schema.json",
+    "siteConfig": "./site.config.json",
+    "tenant": "guhecloud",
+    "layouts": {
+        "default": "./layouts/default.json"
+    },
+    "articleDetailTemplate": {
+        "$ref": "./pages/information/detail-id.json"
+    },
+    "pages": [
+        {
+            "$ref": "./pages/index.json"
+        },
+        {
+            "$ref": "./pages/industry/index.json"
+        },
+        {
+            "$ref": "./pages/industry/park.json"
+        },
+        {
+            "$ref": "./pages/industry/venue.json"
+        },
+        {
+            "$ref": "./pages/industry/transport.json"
+        },
+        {
+            "$ref": "./pages/industry/medical.json"
+        },
+        {
+            "$ref": "./pages/industry/education.json"
+        },
+        {
+            "$ref": "./pages/industry/city.json"
+        },
+        {
+            "$ref": "./pages/industry/other.json"
+        },
+        {
+            "$ref": "./pages/industry/demo.json"
+        },
+        {
+            "$ref": "./pages/industry/video.json"
+        },
+        {
+            "$ref": "./pages/engines/iot.json"
+        },
+        {
+            "$ref": "./pages/engines/business.json"
+        },
+        {
+            "$ref": "./pages/engines/data.json"
+        },
+        {
+            "$ref": "./pages/engines/ai.json"
+        },
+        {
+            "$ref": "./pages/engines/twin.json"
+        },
+        {
+            "$ref": "./pages/product-center/river.json"
+        },
+        {
+            "$ref": "./pages/product-center/hardware.json"
+        },
+        {
+            "$ref": "./pages/product-center/video.json"
+        },
+        {
+            "$ref": "./pages/product-center/fire.json"
+        },
+        {
+            "$ref": "./pages/product-center/fire-camera-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/electric.json"
+        },
+        {
+            "$ref": "./pages/product-center/attendance.json"
+        },
+        {
+            "$ref": "./pages/product-center/env.json"
+        },
+        {
+            "$ref": "./pages/product-center/patrol.json"
+        },
+        {
+            "$ref": "./pages/product-center/meat-track.json"
+        },
+        {
+            "$ref": "./pages/product-center/app.json"
+        },
+        {
+            "$ref": "./pages/product-center/internal.json"
+        },
+        {
+            "$ref": "./pages/product-center/safe.json"
+        },
+        {
+            "$ref": "./pages/product-center/agriculture.json"
+        },
+        {
+            "$ref": "./pages/product-center/hospital.json"
+        },
+        {
+            "$ref": "./pages/product-center/operation.json"
+        },
+        {
+            "$ref": "./pages/product-center/base.json"
+        },
+        {
+            "$ref": "./pages/product-center/integration.json"
+        },
+        {
+            "$ref": "./pages/product-center/modeling.json"
+        },
+        {
+            "$ref": "./pages/product-center/customized.json"
+        },
+        {
+            "$ref": "./pages/product-center/managed.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-alarm-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-broadcast-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-command-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-electric-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-gas-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-intrusion-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-meat-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-plan-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-price-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-risk-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-safety-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-safety-edu-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-security-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-fire-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-env-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-park-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-hr-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-admin-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-meeting-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-asset-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-attendance-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-small-project-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-surgery-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-medical-gas-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-hidden-danger-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-repair-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-daily-inspection-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-maintenance-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-outsourcing-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-upgrade-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-parking-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-patrol-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-iot-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-space-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-energy-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-access-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-ac-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-lighting-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-elevator-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-hvac-detail.json"
+        },
+        {
+            "$ref": "./pages/product-center/app-ev-detail.json"
+        },
+        {
+            "$ref": "./pages/programme/park.json"
+        },
+        {
+            "$ref": "./pages/programme/hospital.json"
+        },
+        {
+            "$ref": "./pages/programme/physical.json"
+        },
+        {
+            "$ref": "./pages/programme/agriculture.json"
+        },
+        {
+            "$ref": "./pages/programme/railway.json"
+        },
+        {
+            "$ref": "./pages/programme/fire-safety.json"
+        },
+        {
+            "$ref": "./pages/programme/ai-agent.json"
+        },
+        {
+            "$ref": "./pages/programme/video-safety.json"
+        },
+        {
+            "$ref": "./pages/programme/electric-safety.json"
+        },
+        {
+            "$ref": "./pages/programme/energy-saving.json"
+        },
+        {
+            "$ref": "./pages/programme/smart-patrol.json"
+        },
+        {
+            "$ref": "./pages/programme/monitoring-early-warning.json"
+        },
+        {
+            "$ref": "./pages/programme/emergency-dispatch.json"
+        },
+        {
+            "$ref": "./pages/programme/safety-training.json"
+        },
+        {
+            "$ref": "./pages/cooperation.json"
+        },
+        {
+            "$ref": "./pages/service.json"
+        },
+        {
+            "$ref": "./pages/about.json"
+        },
+        {
+            "$ref": "./pages/information.json"
+        },
+        {
+            "$ref": "./pages/consultation.json"
+        }
+    ]
+}

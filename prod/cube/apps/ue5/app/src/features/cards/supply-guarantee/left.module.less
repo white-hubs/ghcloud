@@ -1,0 +1,63 @@
+
+.supply-merchant {
+  .statistic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    &-item {
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+      background: linear-gradient(
+        90deg,
+        rgba(78, 107, 140, 0.8) 0%,
+        rgba(78, 107, 140, 0) 100%
+      );
+      .value {
+        font-size: 30px;
+        color: #18f5ab;
+        font-family: "robotoMedium";
+      }
+      &:first-child .value {
+        color: #1890ff;
+      }
+      .name {
+        font-size: 14px;
+      }
+      .unit {
+        color: #ccc;
+      }
+    }
+  }
+  .carousel {
+    height: 320px;
+  }
+}
+
+.supply-shoop {
+  .table-list {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  .table-header {
+    background: rgba(86, 142, 255, 0.2);
+    font-weight: bold;
+  }
+  .table-body {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .td {
+    flex: 1;
+    padding: 6px 0;
+    text-align: center;
+    border: 1px solid #000;
+  }
+  .line-chart {
+    height: 240px;
+  }
+}

@@ -1,0 +1,11 @@
+<view class="tab-container">
+  <scroll-view scroll-with-animation scroll-x="true" id="scroll-view" class="tab-scroll-view" scroll-left="{{scrollLeft}}" bindscroll="onScroll" enhanced show-scrollbar="{{false}}">
+    <view class="tab-content">
+      <view wx:for="{{tabs}}" wx:key="index" class="tab-item {{currentIndex === index? 'active' : ''}}" bindtap="changeTab" data-index="{{index}}" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+      <view class="tab-line" style="transform: translate3d({{lineTranslateX}}px , 0, 0); width:{{lineWidth}}px;"></view>
+    </view>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,16 @@
+{
+  "port": 30210,
+  "hostname": "0.0.0.0",
+  "fetchServiceToken": "sk_1234567890",
+  "defaultTimeoutMs": 20000,
+  "maxTimeoutMs": 60000,
+  "defaultMaxRedirects": 10,
+  "maxRedirects": 10,
+  "defaultUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  "maxLimit": 200,
+  "maxBodyBytes": 5242880,
+  "maxRequestBodyBytes": 65536,
+  "mcpHttpEnabled": true,
+  "mcpPath": "/mcp",
+  "defaultMcpLimit": 10
+}

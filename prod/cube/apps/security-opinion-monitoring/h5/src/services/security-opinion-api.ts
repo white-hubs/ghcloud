@@ -1,0 +1,53 @@
+import type { SecurityOpinionGateway } from "@ghcloud/cube-service-interface/security-opinion";
+import * as securityOpinionClient from "@ghcloud/cube-services-client/security-opinion.client";
+
+import { useAuthRequest } from "@/hooks/use-auth-request";
+
+const withAuth = <T>(fn: () => Promise<T>): Promise<T> => useAuthRequest(fn);
+
+export const securityOpinionApi: SecurityOpinionGateway = {
+  pageOpinions: (params) => withAuth(() => securityOpinionClient.pageOpinions(params)),
+  getOpinion: (id) => withAuth(() => securityOpinionClient.getOpinion(id)),
+  exportOpinions: (params) => withAuth(() => securityOpinionClient.exportOpinions(params)),
+  batchDeleteOpinions: (ids) => withAuth(() => securityOpinionClient.batchDeleteOpinions(ids)),
+  listSources: () => withAuth(() => securityOpinionClient.listSources()),
+  createSource: (payload) => withAuth(() => securityOpinionClient.createSource(payload)),
+  updateSource: (id, payload) => withAuth(() => securityOpinionClient.updateSource(id, payload)),
+  deleteSource: (id) => withAuth(() => securityOpinionClient.deleteSource(id)),
+  pauseSource: (id) => withAuth(() => securityOpinionClient.pauseSource(id)),
+  resumeSource: (id) => withAuth(() => securityOpinionClient.resumeSource(id)),
+  getKeywordRule: () => withAuth(() => securityOpinionClient.getKeywordRule()),
+  updateKeywordRule: (payload) => withAuth(() => securityOpinionClient.updateKeywordRule(payload)),
+  listKeywords: (type) => withAuth(() => securityOpinionClient.listKeywords(type)),
+  addKeyword: (type, text) => withAuth(() => securityOpinionClient.addKeyword(type, text)),
+  deleteKeyword: (id) => withAuth(() => securityOpinionClient.deleteKeyword(id)),
+  listKeywordPresets: (type) => withAuth(() => securityOpinionClient.listKeywordPresets(type)),
+  addKeywordFromPreset: (type, text) => withAuth(() => securityOpinionClient.addKeywordFromPreset(type, text)),
+  batchAddKeywordPresets: (type) => withAuth(() => securityOpinionClient.batchAddKeywordPresets(type)),
+  getStatisticsOverview: () => withAuth(() => securityOpinionClient.getStatisticsOverview()),
+  getSentimentDistribution: () => withAuth(() => securityOpinionClient.getSentimentDistribution()),
+  getSourceDistribution: () => withAuth(() => securityOpinionClient.getSourceDistribution()),
+  getCollectionTrend: () => withAuth(() => securityOpinionClient.getCollectionTrend()),
+  getKeywordRanking: () => withAuth(() => securityOpinionClient.getKeywordRanking()),
+  getHotEvents: (limit) => withAuth(() => securityOpinionClient.getHotEvents(limit)),
+  pageTrash: (params) => withAuth(() => securityOpinionClient.pageTrash(params)),
+  getTrashItem: (id) => withAuth(() => securityOpinionClient.getTrashItem(id)),
+  restoreTrashItem: (id) => withAuth(() => securityOpinionClient.restoreTrashItem(id)),
+  deleteTrashItem: (id) => withAuth(() => securityOpinionClient.deleteTrashItem(id)),
+  clearTrash: () => withAuth(() => securityOpinionClient.clearTrash()),
+  pageAlerts: (params) => withAuth(() => securityOpinionClient.pageAlerts(params)),
+  getAlert: (opinionId) => withAuth(() => securityOpinionClient.getAlert(opinionId)),
+  listAlertChannels: (sceneCode) => withAuth(() => securityOpinionClient.listAlertChannels(sceneCode)),
+  pageAlertReceivers: (params) => withAuth(() => securityOpinionClient.pageAlertReceivers(params)),
+  pushAlert: (opinionId, payload) => withAuth(() => securityOpinionClient.pushAlert(opinionId, payload)),
+  listAlertPushRecords: (opinionId) => withAuth(() => securityOpinionClient.listAlertPushRecords(opinionId)),
+  getAlertEvent: (eventId) => withAuth(() => securityOpinionClient.getAlertEvent(eventId)),
+  archiveAlertEvent: (eventId, payload) => withAuth(() => securityOpinionClient.archiveAlertEvent(eventId, payload)),
+  getAlertNotificationConfig: () => withAuth(() => securityOpinionClient.getAlertNotificationConfig()),
+  saveAlertNotificationConfig: (payload) => withAuth(() => securityOpinionClient.saveAlertNotificationConfig(payload)),
+  pageReviewReports: (params) => withAuth(() => securityOpinionClient.pageReviewReports(params)),
+  getReviewReportEvent: (eventId) => withAuth(() => securityOpinionClient.getReviewReportEvent(eventId)),
+  generateReviewReport: (eventId) => withAuth(() => securityOpinionClient.generateReviewReport(eventId)),
+  saveReviewReportDraft: (reportId, payload) => withAuth(() => securityOpinionClient.saveReviewReportDraft(reportId, payload)),
+  finalizeReviewReport: (reportId) => withAuth(() => securityOpinionClient.finalizeReviewReport(reportId)),
+};

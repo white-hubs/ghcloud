@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+
+  .formItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .firstRow {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+
+    .typeSelect {
+      width: 120px;
+      flex-shrink: 0;
+    }
+    .label {
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .contentSelect {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+
+  .selectContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .conditionRow {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .select {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+  
+  .label {
+    width: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0 4px;
+    color: #333;
+  }
+
+  .errorMessage {
+    color: #ff4d4f;
+    font-size: 12px;
+    line-height: 1.5;
+    padding-left: 4px;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .hasError {
+    :global {
+      .ant-select-selector,
+      .ant-input,
+      .ant-picker {
+        border-color: #ff4d4f !important;
+      }
+
+      .ant-select-selector:hover,
+      .ant-input:hover,
+      .ant-picker:hover {
+        border-color: #ff7875 !important;
+      }
+
+      .ant-select-focused .ant-select-selector,
+      .ant-input:focus,
+      .ant-picker-focused {
+        border-color: #ff4d4f !important;
+        box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2) !important;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,207 @@
+.entrance-screen-header {
+  width: 100%;
+  height: 74px;
+  background-image: url('/resource/v1/operating-room/template-three/images/head-bg.png');
+  background-repeat: no-repeat;
+  background-size: 90% 100%;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 30px;
+  position: relative;
+
+  .anticon-left-circle{
+    margin-right: 5px;
+    svg{
+      fill: white;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .title {
+    text-align: left;
+    letter-spacing: 0.05px;
+    -webkit-background-clip: text; /* Safari/Chrome需要添加此属性才能正常显示背景渐变效果 */
+    color: transparent;
+    display: flex;
+    align-items: center;
+
+    font-family: HONORSansCN;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 2px rgba(4,0,0,0.75);
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .left-bar {
+    display: flex;
+    align-items: center;
+  }
+  .right-bar {
+    display: flex;
+    align-items: center;
+    .select-box {
+      min-width: 80px;
+      height: 32px;
+      background: rgba(21, 120, 255, 0.20);
+      border-radius: 22px;
+      box-sizing: border-box;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: Regular;
+      color: #ffffff;
+      cursor: pointer;
+      margin-left: 20px;
+      .label{
+        margin-right: 10px;
+      }
+      .operating-room-dropdown-trigger{
+        font-size: 16px;
+        font-weight: Regular;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        .anticon{
+          margin-left: 10px;
+        }
+        svg{
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .operating-room-select-input{
+      width: 150px;
+      .operating-room-select-selection-item{
+        color: white;
+      }
+      .operating-room-select-selecto{
+        border: 0;
+      }
+      .operating-room-select-selector{
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+      }
+      input{
+        height: 100% !important;
+      }
+      .operating-room-select-selection-placeholder{
+        line-height: 32px;
+      }
+      .operating-room-select-focused:not(.operating-room-select-disabled).operating-room-select:not(.operating-room-select-customize-input) .operating-room-select-selector{
+        border-color: transparent !important;
+      }
+      .operating-room-select-arrow .anticon{
+        color: white;
+      }
+      .operating-room-select-arrow {
+        margin-right: -10px;
+      }
+    }
+  }
+
+  .time-area {
+    display: flex;
+    color: #024789;
+    align-items: center;
+    .m1{
+      min-width: 105px;
+      font-family: HONORSansCN-Regular;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      color: #024789;
+      .label{
+        display: block;
+      }
+      .mt-5{
+        margin-top: 3px;
+      }
+
+    }
+    .m2{
+      min-width: 105px;
+      margin-right: 6px;
+      .label{
+        height: 24px;
+        font-size: 24px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        text-align: left;
+        color: #024789;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .legend {
+    display: flex;
+    align-items: center;
+
+    .text {
+      font-size: 14px;
+      font-family: HONORSansCN-Medium;
+      font-weight: 500;
+      font-size: 16px;
+      color: #262626;
+    }
+
+    .dot {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    
+    .item {
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.setting{
+  margin-right: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .setting-icon {
+    width: 70px;
+    height: 30px;
+    background-image: url('/resource/v1/operating-room/template-three/images/set-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    .icon{
+      width: 18px;
+    }
+    .text{
+      font-size: 16px;
+      font-family: HONORSansCN-Regular;
+      font-weight: 400;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 16px;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# 制品中心地址（不要修改）
+products-center-api: 'http://182.150.63.62:8082/service/extdirect'
+# 云端服务地址
+cloud-api: 'http://192.168.0.243:40201'
+# nginx 端口
+nginx-port: '80'
+# 默认用户名
+username: '13888888881'
+# 默认密码
+password: 'Ghy123456@'
+# 默认租户code 实际场景空着就行
+tenant: '29454808'
+# mqtt链接地址 同iot-run 配置
+EXTEND_CONFIG_MQTT_BROKER: '192.168.0.243:8083'
+# mqtt账号 同iot-run 配置
+EXTEND_CONFIG_MQTT_USERNAME: "acc-os"
+# mqtt密码 同iot-run 配置
+EXTEND_CONFIG_MQTT_PASSWORD: "acc-os"
+

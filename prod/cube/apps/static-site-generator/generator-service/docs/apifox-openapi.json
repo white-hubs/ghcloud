@@ -1,0 +1,842 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Generator Service API",
+    "description": "静态站点生成器服务 API，支持任务创建/查询/删除和部署功能",
+    "version": "2.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "本地开发环境"
+    }
+  ],
+  "paths": {
+    "/tasks": {
+      "post": {
+        "summary": "创建构建任务（URL 方式）",
+        "description": "通过压缩包 URL 创建一个新的静态站点构建任务，自动开始执行。支持 .tar.gz, .zip, .tar, .gz 等格式",
+        "operationId": "createTaskFromUrl",
+        "tags": ["Tasks"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["url", "tenantCode"],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "description": "压缩包下载地址"
+                  },
+                  "tenantCode": {
+                    "type": "string",
+                    "description": "租户代码"
+                  },
+                  "downloadStatic": {
+                    "type": "boolean",
+                    "description": "是否下载外部静态资源，默认 false"
+                  },
+                  "excludeHosts": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "下载外部静态资源时的排除名单（按域名后缀匹配）。命中的 URL 不下载、不本地化，配置中原样保留。仅在 downloadStatic=true 时生效"
+                  }
+                }
+              },
+              "example": {
+                "url": "https://example.com/source.tar.gz",
+                "tenantCode": "guhecloud",
+                "downloadStatic": false,
+                "excludeHosts": ["qiniu.xxx.com"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "任务创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "参数错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "查询任务列表",
+        "description": "分页查询构建任务列表，支持按状态筛选",
+        "operationId": "listTasks",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "按状态筛选",
+            "schema": {
+              "type": "string",
+              "enum": ["PENDING", "RUNNING", "SUCCESS", "FAILED"]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页数量",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "查询成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/upload": {
+      "post": {
+        "summary": "创建构建任务（上传方式）",
+        "description": "通过上传压缩包文件创建一个新的静态站点构建任务，自动开始执行。支持 .tar.gz, .tgz, .zip, .tar, .gz 等格式",
+        "operationId": "createTaskFromUpload",
+        "tags": ["Tasks"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["file", "tenantCode"],
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "压缩包文件"
+                  },
+                  "tenantCode": {
+                    "type": "string",
+                    "description": "租户代码"
+                  },
+                  "downloadStatic": {
+                    "type": "string",
+                    "description": "是否下载外部静态资源，true 或 1"
+                  },
+                  "excludeHosts": {
+                    "type": "string",
+                    "description": "下载外部静态资源时的排除名单（按域名后缀匹配），逗号分隔，如 qiniu.xxx.com,cdn.foo.com。命中的 URL 不下载、不本地化，配置中原样保留。仅在 downloadStatic 开启时生效"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "任务创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "参数错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/byBusinessData": {
+      "post": {
+        "summary": "创建构建任务（业务数据方式）",
+        "description": "接收后端打包的业务数据 ZIP，先转换为 generator-cli 所需的文件树格式，再执行构建。ZIP 内需包含 site-setting.json / site-layouts.json / site-pages.json / article-categories.json / articles.json",
+        "operationId": "createTaskFromBusinessData",
+        "tags": ["Tasks"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["file", "tenantCode"],
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "业务数据 ZIP（含 site-setting.json / site-layouts.json / site-pages.json / article-categories.json / articles.json）"
+                  },
+                  "tenantCode": {
+                    "type": "string",
+                    "description": "租户代码"
+                  },
+                  "downloadStatic": {
+                    "type": "string",
+                    "description": "是否下载外部静态资源，true 或 1"
+                  },
+                  "excludeHosts": {
+                    "type": "string",
+                    "description": "下载外部静态资源时的排除名单（按域名后缀匹配），逗号分隔，如 qiniu.xxx.com,cdn.foo.com。命中的 URL 不下载、不本地化，配置中原样保留。仅在 downloadStatic 开启时生效"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "任务创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "参数错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "summary": "查询单个任务",
+        "description": "根据任务 ID 查询任务详情",
+        "operationId": "getTask",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "任务 ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "查询成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "任务不存在",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "删除任务",
+        "description": "根据任务 ID 删除任务",
+        "operationId": "deleteTask",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "任务 ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "删除成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/deploys": {
+      "post": {
+        "summary": "创建部署任务",
+        "description": "创建一个新的部署任务，自动开始执行。部署前需确保关联的任务已完成且状态为 SUCCESS。注意：整个服务同时只能有一个部署任务在执行",
+        "operationId": "createDeploy",
+        "tags": ["Deploys"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["taskId", "provider", "providerConfig", "tenantCode"],
+                "properties": {
+                  "taskId": {
+                    "type": "string",
+                    "description": "关联的构建任务 ID"
+                  },
+                  "provider": {
+                    "type": "string",
+                    "enum": ["qiniu", "ftp", "sftp"],
+                    "description": "部署 provider"
+                  },
+                  "providerConfig": {
+                    "type": "object",
+                    "description": "provider 配置"
+                  },
+                  "tenantCode": {
+                    "type": "string",
+                    "description": "租户代码"
+                  }
+                }
+              },
+              "examples": {
+                "qiniu": {
+                  "summary": "七牛云部署",
+                  "value": {
+                    "taskId": "550e8400-e29b-41d4-a716-446655440000",
+                    "provider": "qiniu",
+                    "providerConfig": {
+                      "accessKey": "your-access-key",
+                      "secretKey": "your-secret-key",
+                      "bucket": "your-bucket",
+                      "zone": "z0",
+                      "domain": "cdn.example.com"
+                    },
+                    "tenantCode": "guhecloud"
+                  }
+                },
+                "ftp": {
+                  "summary": "FTP 部署",
+                  "value": {
+                    "taskId": "550e8400-e29b-41d4-a716-446655440000",
+                    "provider": "ftp",
+                    "providerConfig": {
+                      "host": "ftp.example.com",
+                      "port": 21,
+                      "username": "your-username",
+                      "password": "your-password",
+                      "remotePath": "/public_html"
+                    },
+                    "tenantCode": "guhecloud"
+                  }
+                },
+                "sftp": {
+                  "summary": "SFTP 部署",
+                  "value": {
+                    "taskId": "550e8400-e29b-41d4-a716-446655440000",
+                    "provider": "sftp",
+                    "providerConfig": {
+                      "host": "sftp.example.com",
+                      "port": 22,
+                      "username": "your-username",
+                      "password": "your-password",
+                      "remotePath": "/var/www"
+                    },
+                    "tenantCode": "guhecloud"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "部署任务创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeployResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "参数错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "查询部署列表",
+        "description": "分页查询部署任务列表，支持按状态筛选",
+        "operationId": "listDeploys",
+        "tags": ["Deploys"],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "按状态筛选",
+            "schema": {
+              "type": "string",
+              "enum": ["PENDING", "RUNNING", "SUCCESS", "FAILED"]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页数量",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "查询成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeployListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/qiniu/refresh": {
+      "post": {
+        "summary": "刷新七牛 CDN 缓存",
+        "description": "刷新七牛 CDN 缓存，支持按 URL 或目录刷新。若提供 domain 且 urls 和 dirs 均为空，则默认刷新域名首页和根目录",
+        "operationId": "refreshQiniuCdn",
+        "tags": ["Qiniu"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["accessKey", "secretKey"],
+                "properties": {
+                  "accessKey": {
+                    "type": "string",
+                    "description": "七牛云 AccessKey"
+                  },
+                  "secretKey": {
+                    "type": "string",
+                    "description": "七牛云 SecretKey"
+                  },
+                  "domain": {
+                    "type": "string",
+                    "description": "CDN 域名，提供时会自动补齐刷新 URL"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "需要刷新的 URL 列表"
+                  },
+                  "dirs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "需要刷新的目录列表"
+                  }
+                }
+              },
+              "example": {
+                "accessKey": "your-access-key",
+                "secretKey": "your-secret-key",
+                "domain": "cdn.example.com",
+                "urls": ["https://cdn.example.com/page.html"],
+                "dirs": ["https://cdn.example.com/"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "刷新成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "参数错误",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "刷新失败",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/deploys/{id}": {
+      "get": {
+        "summary": "查询单个部署",
+        "description": "根据部署 ID 查询部署详情",
+        "operationId": "getDeploy",
+        "tags": ["Deploys"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "部署 ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "查询成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeployResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "部署不存在",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "删除部署",
+        "description": "根据部署 ID 删除部署任务",
+        "operationId": "deleteDeploy",
+        "tags": ["Deploys"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "部署 ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "删除成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "任务 ID"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["build"],
+            "description": "任务类型"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PENDING", "RUNNING", "SUCCESS", "FAILED"],
+            "description": "任务状态"
+          },
+          "outputPath": {
+            "type": "string",
+            "description": "输出目录路径（任务成功后）"
+          },
+          "error": {
+            "type": "string",
+            "description": "错误信息（任务失败时）"
+          },
+          "tenantCode": {
+            "type": "string",
+            "description": "租户代码"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "创建时间"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "更新时间"
+          }
+        }
+      },
+      "TaskResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Task"
+          }
+        }
+      },
+      "TaskListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "records": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Task"
+                }
+              },
+              "total": {
+                "type": "integer",
+                "description": "总数量"
+              },
+              "page": {
+                "type": "integer",
+                "description": "当前页码"
+              },
+              "pageSize": {
+                "type": "integer",
+                "description": "每页数量"
+              }
+            }
+          }
+        }
+      },
+      "Deploy": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "部署 ID"
+          },
+          "taskId": {
+            "type": "string",
+            "description": "关联的任务 ID"
+          },
+          "provider": {
+            "type": "string",
+            "enum": ["qiniu", "ftp", "sftp"],
+            "description": "部署 provider"
+          },
+          "providerConfig": {
+            "type": "object",
+            "description": "provider 配置"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PENDING", "RUNNING", "SUCCESS", "FAILED"],
+            "description": "部署状态"
+          },
+          "progress": {
+            "type": "number",
+            "description": "部署进度 (0-100)，仅 qiniu 支持实时进度更新"
+          },
+          "output": {
+            "type": "string",
+            "description": "部署输出地址（部署成功时）"
+          },
+          "error": {
+            "type": "string",
+            "description": "错误信息（部署失败时）"
+          },
+          "tenantCode": {
+            "type": "string",
+            "description": "租户代码"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "创建时间"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "更新时间"
+          }
+        }
+      },
+      "DeployResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Deploy"
+          }
+        }
+      },
+      "DeployListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "records": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Deploy"
+                }
+              },
+              "total": {
+                "type": "integer",
+                "description": "总数量"
+              },
+              "page": {
+                "type": "integer",
+                "description": "当前页码"
+              },
+              "pageSize": {
+                "type": "integer",
+                "description": "每页数量"
+              }
+            }
+          }
+        }
+      },
+      "SuccessResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "错误代码"
+              },
+              "message": {
+                "type": "string",
+                "description": "错误信息"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

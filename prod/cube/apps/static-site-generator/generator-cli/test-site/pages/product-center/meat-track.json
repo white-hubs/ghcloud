@@ -1,0 +1,99 @@
+{
+  "path": "/product-center/meat-track.html",
+  "meta": {
+    "title": "肉类滑轨 - 古河云科技",
+    "navStyle": "dark"
+  },
+  "components": [
+    {
+      "name": "ProductSearchHero",
+      "props": {
+        "title": "硬件产品",
+        "subtitle": "古河云科技持续打磨产品，深耕技术，探索智慧新空间，以创新驱动未来。",
+        "placeholder": "搜索你感兴趣的产品",
+        "backgroundImage": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/search-banner-bg-1.webp",
+        "searchAllHref": "/product-center/hardware"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "video",
+            "name": "视频安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-video.svg",
+            "href": "/product-center/video.html"
+          },
+          {
+            "id": "fire",
+            "name": "消防安全",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-fire.svg",
+            "href": "/product-center/fire.html"
+          },
+          {
+            "id": "electric",
+            "name": "电气管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-electric.svg",
+            "href": "/product-center/electric.html"
+          },
+          {
+            "id": "attendance",
+            "name": "考勤管理",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-attendance.svg",
+            "href": "/product-center/attendance.html"
+          },
+          {
+            "id": "env",
+            "name": "机房动环",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-env.svg",
+            "href": "/product-center/env.html"
+          },
+          {
+            "id": "patrol",
+            "name": "电子巡更",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-patrol.svg",
+            "href": "/product-center/patrol.html"
+          },
+          {
+            "id": "meat",
+            "name": "肉类滑轨",
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/icons/category-filter/icon-meat.svg",
+            "href": "/product-center/meat-track.html"
+          }
+        ],
+        "activeId": "meat",
+        "allHref": "/product-center/hardware.html",
+        "allText": "全部分类"
+      }
+    },
+    {
+      "name": "HardwareProducts",
+      "props": {
+        "products": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "智能滑轨定位器",
+            "description": "精准定位滑轨位置，实时监测运行状态，支持远程控制…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "滑轨重量传感器",
+            "description": "高精度称重，实时记录肉类重量，数据自动上传…",
+            "href": "#"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/hardware/hardware-2.webp",
+            "name": "滑轨RFID识别器",
+            "description": "自动识别滑轨上的RFID标签，追踪肉类来源和流向…",
+            "href": "#"
+          }
+        ],
+        "pageSize": 9,
+        "currentPage": 1
+      }
+    }
+  ],
+  "layout": "default"
+}

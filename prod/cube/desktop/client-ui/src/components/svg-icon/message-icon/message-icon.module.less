@@ -1,0 +1,17 @@
+.icon{
+  height: 20px;
+  position: relative;
+}
+
+.dot{
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 8px;
+    height: 8px;
+    background: #ff4a4a;
+    border-radius: 50%;
+  }
+}

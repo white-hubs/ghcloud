@@ -1,0 +1,100 @@
+.page {
+  min-height: calc(100vh - 46px);
+  box-sizing: border-box;
+  padding: 12px;
+  background: #f5f7fb;
+}
+
+.summary {
+  margin-top: 12px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px 12px;
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.summaryHeader strong {
+  flex-shrink: 0;
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.summaryTitle {
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.summarySubTitle {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.progress {
+  height: 6px;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.statCard {
+  border-radius: 6px;
+  background: #f8fafc;
+  padding: 10px 4px;
+  text-align: center;
+}
+
+.statCard strong {
+  display: block;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.statCard span {
+  display: block;
+  margin-top: 3px;
+  color: #6b7280;
+  font-size: 11px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.successText {
+  color: #16a34a !important;
+}
+
+.warningText {
+  color: #d97706 !important;
+}
+
+.dangerText {
+  color: #ef4444 !important;
+}

@@ -1,0 +1,125 @@
+.top {
+  width: 100%;
+  min-height: 94px;
+  background: linear-gradient(283deg, #e4efff 5%, #f5f8ff 91%);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  overflow-y: auto;
+  .grid-name {
+    font-size: 16px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #0a1121;
+    line-height: 16px;
+  }
+
+  .grid-person {
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+    font-weight: Regular;
+    text-align: left;
+    color: #8e97a4;
+    line-height: 14px;
+  }
+}
+
+.table {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    margin-bottom: 11px;
+
+    .tab-item {
+      flex: 1;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.40);
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: center;
+      color: #0a1121;
+      line-height: 14px;
+      cursor: pointer;
+
+
+      &.active {
+        background: #ffffff;
+      }
+    }
+  }
+
+  .table-header {
+    background: #e3efff;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+    font-weight: Medium;
+    text-align: left;
+    color: #5c6572 !important;
+  }
+  .table-scroll{
+    overflow: hidden;
+    position: relative;
+    :global {
+      .grid-management-empty {
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .grid-management-empty-image {
+        height: 50px;
+      }
+    }
+  }
+
+  .table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+
+    &.even-row {
+      background: #fff;
+    }
+
+    .table-cell {
+      flex: 1;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #77808c;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0 8px;
+    }
+  }
+}

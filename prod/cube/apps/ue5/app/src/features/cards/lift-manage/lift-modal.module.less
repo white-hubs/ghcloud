@@ -1,0 +1,44 @@
+/* 五方通话弹窗复用设备列表弹窗的结构与主题变量，仅补充日期控件细节。 */
+:global {
+  .traffic-records-modal {
+    .ant-modal-content {
+      min-height: 520px;
+    }
+
+    .filter-toolbar .filter-control-input.ant-picker {
+      box-sizing: border-box;
+      width: 260px;
+      height: 32px;
+      padding: 0 11px;
+      background: var(--visual-date-control-bg, #fff) !important;
+      border: 1px solid var(--visual-date-control-border, rgba(67, 124, 204, 0.3)) !important;
+      border-radius: 6px;
+      box-shadow: none !important;
+    }
+
+    .filter-toolbar .filter-control-input.ant-picker:hover,
+    .filter-toolbar .filter-control-input.ant-picker-focused {
+      border-color: var(--visual-primary, #2476ee) !important;
+      box-shadow: var(--visual-date-control-focus-shadow, 0 0 0 2px rgba(36, 118, 238, 0.12)) !important;
+    }
+
+    .filter-toolbar .filter-control-input .ant-picker-input > input {
+      color: var(--visual-data-modal-text-color, #17366d) !important;
+      font-size: 13px;
+    }
+
+    .filter-toolbar .filter-control-input .ant-picker-input > input::placeholder,
+    .filter-toolbar .filter-control-input .ant-picker-separator,
+    .filter-toolbar .filter-control-input .ant-picker-suffix {
+      color: var(--visual-data-modal-muted-color, #667da3) !important;
+    }
+
+    .device-records-table .ant-table-thead > tr > th {
+      font-weight: 700;
+    }
+
+    .device-records-table .ant-table-tbody > tr > td {
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "path": "/service.html",
+  "meta": {
+    "title": "服务中心 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/components/background/4.png",
+            "title": "服务中心",
+            "subtitle": "秉承技术引领，服务为本的理念，提供迅速响应、高效交付的服务流程，拥有全程跟进，持续支持的服务保障，致力于提供全方位专业服务，确保用户成功，尽享科技无限可能！",
+            "titleColor": "#FFFFFF",
+            "subtitleColor": "#FFFFFF"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ServiceOverview",
+      "props": {
+        "title": "全方位服务",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/71.png",
+            "title": "服务理念",
+            "subtitle": "把用户需求放首位",
+            "description": "在技术选型和功能模块设计过程中，始终把用户需求放在首位，优化系统的技术方案和业务功能。以用户使用习惯为中心原则，确保用户核心需求，以最大程度超越用户期望。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/71.png",
+            "title": "服务体系",
+            "subtitle": "专助专理专项",
+            "description": "售前、售中、售后，建立专助专理专项团队，提供一站式对接服务，全权负责该项目全过程，覆盖用户全需求，做到快速协同，大幅提升项目实施效率和用户服务体验。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ServiceTeam",
+      "props": {
+        "title": "服务团队",
+        "subtitle": "拥有丰富实施经验，具备优秀技术能力，持续提升服务水平",
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/service/1.png",
+            "title": "10年+实施经验",
+            "description": "深刻理解用户需求，深耕行业场景，为用户量身定制实施及开发服务，让业务精准落地。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/service/2.png",
+            "title": "强大专业性",
+            "description": "团队成员来自国内一流高校和科研机构，专业背景涵盖项目相关各个领域。从产品研发到应用开发，提供优质方案。"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/service/3.png",
+            "title": "稳定执行力",
+            "description": "团队拥有多年开发及实施协作磨合历程，稳定成熟且具备高效的执行能力，全力推动及保证服务进程。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProcessFlow",
+      "props": {
+        "title": "服务流程",
+        "subtitle": "从需求调研至交付验收，为用户提供完善可靠的全周期服务",
+        "steps": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/12.png",
+            "label": "需求调研"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/8.png",
+            "label": "需求设计"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/6.png",
+            "label": "开发测试"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/10.png",
+            "label": "部署实施"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/9.png",
+            "label": "对接联调"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/7.png",
+            "label": "培训运行"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/supplement/11.png",
+            "label": "交付验收"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ServiceAdvantages",
+      "props": {
+        "title": "服务保障",
+        "subtitle": "围绕产品、技术、售后建立3大保障体系，建立具备价值的专业服务",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/76.png",
+            "title": "产品保障",
+            "description": "专业产品保障 全面保护"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/77.png",
+            "title": "技术保障",
+            "description": "全方位产测试 24小时解决问题 7*24小时服务热线"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/78.png",
+            "title": "售后保障",
+            "description": "行业最佳实践分享 专属顾客成功顾问 定期回访和业务回顾报告"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ServiceAdvantages",
+      "props": {
+        "title": "服务优势",
+        "subtitle": "具有强大的优势，为用户打造极致服务体验",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/81.png",
+            "title": "团队优势",
+            "description": "拥有丰富实施经验，具备优秀技术能力，持续提升服务水平。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/79.png",
+            "title": "经验优势",
+            "description": "多年业务沉淀，铸就行业真实口碑，继续打造行业标杆。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/imgs/icons/80.png",
+            "title": "产品优势",
+            "description": "产品聚焦，定位明确，具备领先强大的产品力，稳定输出。"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

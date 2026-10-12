@@ -1,0 +1,121 @@
+import { getNowEnterprise, getToken } from '@/utils/auth'
+import { message } from 'ant-design-vue'
+import type { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
+import axios from 'axios'
+/**
+ * 封装axios请求类
+ * @author 蒋衡
+ */
+export default class CustomAxiosInstance {
+  public readonly instance: AxiosInstance
+
+  private readonly backendConfig: Service.BackendResultConfig
+  /**
+   *
+   * @param axiosConfig - axios配置
+   * @param backendConfig - 后端返回的数据配置
+   */
+  public constructor (
+    axiosConfig: AxiosRequestConfig,
+    backendConfig: Service.BackendResultConfig = {
+      codeKey: 'code',
+      dataKey: 'data',
+      msgKey: 'message',
+      successCode: 200,
+    },
+  ) {
+    this.backendConfig = backendConfig
+    this.instance = axios.create(axiosConfig)
+    this.setInterceptor()
+  }
+
+  /** 设置请求拦截器 */
+  private setInterceptor () {
+    this.instance.interceptors.request.use(
+      async config => {
+        const handleConfig = { ...config }
+        if (handleConfig.headers) {
+          // 数据转换
+          config.timeout = 5000
+
+          handleConfig.headers.tenant = getNowEnterprise().code
+          handleConfig.headers.terminal = 10000
+          // 设置token
+          handleConfig.headers.Authorization = `Bearer ${getToken().accessToken}`
+        }
+        return handleConfig
+      },
+      (axiosError: AxiosError) => {
+        // const error = handleAxiosError(axiosError);
+
+        // return handleServiceResult(error, null);
+        return axiosError
+      },
+    )
+    // 响应拦截器
+    this.instance.interceptors.response.use(
+      async response => {
+        const { status, data, statusText = '', headers, config } = response
+        if (status === 200 || status < 300 || status === 304) {
+          const { codeKey, dataKey, successCode } = this.backendConfig
+          // 检查是否为标准结构（有code字段）
+          if (typeof data === 'object' && data !== null && codeKey in data && dataKey in data) {
+            if (data[codeKey] === successCode) {
+              return {
+                code: data.code,
+                data: data.data,
+                mes: data.message,
+                statusText,
+                status,
+                headers,
+                config
+              }
+            } else {
+              return {
+                code: data.code,
+                data: data.data,
+                mes: data.message,
+                statusText,
+                status,
+                headers,
+                config
+              }
+            }
+          } else {
+            // 非标准结构，直接返回数据（成功情况下的简化返回）
+            return {
+              code: 200,
+              data: data,
+              message: 'success',
+              statusText,
+              status,
+              headers,
+              config
+            }
+          }
+        }
+        return {
+          code: status,
+          data: data,
+          mes: statusText || '请求失败',
+          statusText,
+          status,
+          headers,
+          config
+        }
+      },
+      async (axiosError: AxiosError) => {
+        if (axiosError.response?.data) {
+          const responseData = axiosError.response.data as { code: number; message: string; }
+          message.error(responseData.message || '请求出现错误')
+        }
+        return new Promise((_resolve, reject) => {
+          reject({
+            code: axiosError.response?.status,
+            data: axiosError.response?.data,
+          })
+        })
+      },
+    )
+  }
+}

@@ -1,0 +1,25 @@
+.file-list {
+  min-height: 100vh;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 12px 19px;
+
+  .file-list-item {
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+
+    .file-list-item-remark {
+      display: flex;
+      .file-list-item-remark-content{
+        max-width: 72vw;
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+:global(.van-pull-refresh) {
+  background-color: #f7f7f7;
+}

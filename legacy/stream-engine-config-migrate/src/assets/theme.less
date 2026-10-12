@@ -1,0 +1,139 @@
+//主题定制
+
+@theme-primary: #1890FF; //主题色，应当与element-ui一致
+@theme-danger: #f56c6c; //主题色，应当与element-ui一致
+@primary-color: var(--cube-theme-var--primary-color); //主题色，应当与element-ui一致
+@theme-danger: #f56c6c; //主题色，应当与element-ui一致
+
+//审批流程节点配色
+@node-root: #576a95; //发起人
+@node-condition: #15bca3; //条件
+@node-cc: #3296fa; //抄送
+@node-concurrent: #718dff; //并行
+@node-approval: #ff943e;  //审批
+@node-delay: #f25643; //延时
+@node-trigger: #47bc82; //触发器
+
+.el-button--primary {
+	background-color: @primary-color !important;
+	border-color: @primary-color !important;
+}
+
+.el-button--default:hover {
+	color: @primary-color;
+	background-color: transparent;
+	border-color: @primary-color;
+}
+
+.el-button--primary:hover {
+	color: white;
+	background-color: transparent;
+	border-color: @primary-color;
+}
+.verticalLine::before {
+	background-color: @primary-color !important;
+}
+
+.el-button--text {
+	color: @primary-color
+}
+
+.el-menu--horizontal>.el-menu-item.is-active {
+	border-bottom: 2px solid @primary-color;
+	border-bottom-color: @primary-color !important;
+	color: @primary-color !important;
+}
+
+.el-switch.is-checked .el-switch__core {
+	border-color: @primary-color !important;
+	background-color: @primary-color !important;
+}
+
+.el-input__inner:focus,
+.el-select .el-input__inner:focus,
+.el-textarea__inner:focus {
+	border-color: @primary-color !important;
+}
+
+.el-range-editor.is-active,
+.el-range-editor.is-active:hover,
+.el-select .el-input.is-focus .el-input__inner {
+	border-color: @primary-color !important;
+}
+
+.el-select-dropdown__item.selected {
+	color: @primary-color !important;
+}
+
+.el-message-box__headerbtn:focus .el-message-box__close,
+.el-message-box__headerbtn:hover .el-message-box__close {
+	color: @primary-color !important;
+}
+
+.el-button--text:hover {
+	color: @primary-color !important;
+}
+
+.el-tabs__item:hover {
+	color: @primary-color !important;
+}
+
+.el-tabs__item.is-active {
+	color: @primary-color !important;
+}
+
+.el-tabs__active-bar {
+	background-color: @primary-color !important;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+	color: @primary-color !important;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+	border-color: @primary-color !important;
+	background: @primary-color !important;
+}
+
+.el-radio__inner:hover {
+	border-color: @primary-color !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+	border-color: @primary-color !important;
+	background: @primary-color !important;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+	color: @primary-color !important;
+}
+
+.el-pager li {
+	font-weight: 400;
+}
+
+.el-pager li.active {
+	color: @primary-color !important;
+	border-color: @primary-color !important;
+}
+
+.is-focus {
+	color: @primary-color !important;
+}
+
+.el-loading-spinner .path {
+	stroke: @primary-color !important;
+}
+
+.el-checkbox__inner:hover {
+	border-color: @primary-color !important;
+}
+
+
+.text-danger{
+  color:#ff4d4f
+}
+.text-danger:hover {
+	color: #ff4d4f !important;
+}

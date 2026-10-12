@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# 本地覆盖（与 legacy ue5-migrate 一致：.env / .env.* 可入库）
+.env.local
+.env.*.local

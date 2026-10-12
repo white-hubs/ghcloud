@@ -1,0 +1,365 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/features/cards/parking-car/_shared/parking-v2-shared.less";
+
+:global {
+  .title-card-icon {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+
+  .parking-car-device-list-v2-panel {
+    position: relative;
+    height: 100%;
+  }
+
+  .search-bar {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    height: 26px;
+    margin: 4px 0 8px;
+    overflow: hidden;
+
+    &.is-zoom {
+      height: 28px;
+      margin: 10px 0 16px;
+    }
+  }
+
+  .filter-arrow {
+    pointer-events: none;
+    font-size: 10px;
+  }
+
+  .status-select.panel-filter-select.ant-select {
+    flex: 0 0 96px;
+    width: 96px;
+    min-width: 96px;
+    max-width: 96px;
+    height: 26px;
+  }
+
+  .status-select.panel-filter-select .ant-select-selector,
+  .status-select.panel-filter-select.ant-select-focused .ant-select-selector {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 26px !important;
+    min-height: 26px !important;
+    padding: 0 20px 0 8px !important;
+    background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54)) !important;
+    border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34)) !important;
+    border-radius: 4px !important;
+    box-shadow: var(--visual-date-control-shadow, none) !important;
+  }
+
+  .status-select.panel-filter-select .ant-select-selection-item,
+  .status-select.panel-filter-select .ant-select-selection-placeholder {
+    color: var(--visual-date-control-color, #dcecff) !important;
+    font-size: 12px !important;
+    line-height: 24px !important;
+  }
+
+  .status-select.panel-filter-select .ant-select-selection-placeholder {
+    color: var(--visual-muted-color, rgba(210, 226, 245, 0.72)) !important;
+  }
+
+  .status-select.panel-filter-select .ant-select-arrow {
+    top: 50%;
+    right: 6px;
+    margin-top: 0;
+    transform: translateY(-50%);
+    color: var(--visual-date-control-color, #dcecff);
+    font-size: 10px;
+  }
+
+  .keyword-search {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    min-width: 0;
+    height: 26px;
+    overflow: hidden;
+    background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54));
+    border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34));
+    border-radius: 4px;
+    box-shadow: var(--visual-date-control-shadow, none);
+  }
+
+  .keyword-input.ant-input,
+  .keyword-input.ant-input-affix-wrapper {
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
+    height: 24px !important;
+    padding: 0 8px !important;
+    color: var(--visual-date-control-color, #dcecff) !important;
+    font-size: 12px !important;
+    line-height: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .keyword-input.ant-input-affix-wrapper .ant-input {
+    height: 24px !important;
+    padding: 0 !important;
+    color: inherit !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .keyword-input.ant-input::placeholder,
+  .keyword-input.ant-input-affix-wrapper .ant-input::placeholder {
+    color: var(--visual-muted-color, rgba(210, 226, 245, 0.72)) !important;
+  }
+
+  .keyword-input .ant-input-clear-icon {
+    color: var(--visual-muted-color, rgba(210, 226, 245, 0.72));
+    font-size: 10px;
+  }
+
+  .keyword-search:focus-within {
+    border-color: var(--visual-primary, #2989ff);
+    box-shadow: var(--visual-date-control-focus-shadow, 0 0 0 1px rgba(41, 137, 255, 0.32));
+  }
+
+  .keyword-search-btn {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 26px;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #3f8dff, #1f6fe5);
+    border: none;
+    border-left: 1px solid rgba(76, 160, 255, 0.28);
+    border-radius: 0;
+  }
+
+  .keyword-search-btn:hover {
+    filter: brightness(1.06);
+  }
+
+  .search-bar.is-zoom {
+    .status-select.panel-filter-select.ant-select,
+    .status-select.panel-filter-select .ant-select-selector,
+    .keyword-search {
+      height: 28px !important;
+    }
+
+    .status-select.panel-filter-select .ant-select-selection-item,
+    .status-select.panel-filter-select .ant-select-selection-placeholder,
+    .keyword-input.ant-input,
+    .keyword-input.ant-input-affix-wrapper,
+    .keyword-input.ant-input-affix-wrapper .ant-input {
+      height: 26px !important;
+      line-height: 26px !important;
+    }
+
+    .keyword-search-btn {
+      flex-basis: 28px;
+      width: 28px;
+      height: 26px;
+    }
+  }
+
+  .device-table {
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    &.is-zoom {
+      margin: 16px 0 0;
+    }
+  }
+
+  .device-roll-table {
+    .roll-table {
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(8, 13, 20, 0.42), rgba(4, 12, 28, 0.2)), var(--visual-card-inner-bg, rgba(255, 255, 255, 0.04));
+      border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.22));
+      border-radius: 8px;
+
+      .header {
+        height: calc(var(--font-size-scale, 1) * 32px);
+        padding: 0 10px;
+        color: var(--visual-stat-label-color, rgba(230, 240, 252, 0.92));
+        font-size: calc(var(--font-size-scale, 1) * 13px);
+        font-weight: 700;
+        background: linear-gradient(90deg, rgba(47, 61, 82, 0.78), rgba(25, 36, 52, 0.82));
+        border-bottom: 1px solid rgba(70, 166, 255, 0.16);
+        border-radius: 4px 4px 0 0;
+      }
+
+      .scroll_warp {
+        height: calc(var(--font-size-scale, 1) * 150px);
+      }
+
+      .table-tr {
+        height: calc(var(--font-size-scale, 1) * 30px);
+        padding: 0 10px;
+        color: rgba(220, 233, 251, 0.9);
+        font-size: calc(var(--font-size-scale, 1) * 13px);
+        font-weight: 600;
+        background: rgba(9, 15, 24, 0.66);
+        border-top: 1px solid rgba(255, 255, 255, 0.02);
+
+        &:nth-child(2n) {
+          background: rgba(24, 32, 43, 0.62);
+        }
+
+        &:hover {
+          color: #f6fbff;
+          background: rgba(39, 50, 66, 0.9) !important;
+        }
+      }
+
+      .table-th,
+      .table-td {
+        text-align: left;
+      }
+    }
+
+    &.is-zoom {
+      .roll-table {
+        .header {
+          height: calc(var(--font-size-scale, 1) * 40px);
+          padding: 0 16px;
+          font-size: calc(var(--font-size-scale, 1) * 15px);
+        }
+
+        .table-tr {
+          height: calc(var(--font-size-scale, 1) * 40px);
+          padding: 0 16px;
+          font-size: calc(var(--font-size-scale, 1) * 14px);
+        }
+      }
+    }
+  }
+
+  .status-online {
+    color: #58fab6;
+  }
+
+  .status-offline {
+    color: #d9e7ff;
+  }
+
+  .operate-link {
+    color: #2989ff;
+    cursor: pointer;
+  }
+:root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .device-roll-table .roll-table {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(116, 158, 210, 0.18);
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .device-roll-table .roll-table .header {
+    color: #17366d;
+    background: linear-gradient(180deg, rgba(236, 245, 255, 0.98), rgba(255, 255, 255, 0.98));
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .device-roll-table .roll-table .table-tr {
+    color: #2f4f7f;
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .device-roll-table .roll-table .table-tr:nth-child(2n) {
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .device-roll-table .roll-table .table-tr:hover {
+    color: #0d2f75;
+    background: rgba(232, 243, 255, 0.98) !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-offline {
+    color: #8c9bb5;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-online {
+    color: #0f9b5f;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .operate-link {
+    color: #2f7fe8;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-select.panel-filter-select .ant-select-selector,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-search {
+    background: rgba(255, 255, 255, 0.92) !important;
+    border-color: rgba(67, 124, 204, 0.28) !important;
+    box-shadow: 0 2px 8px rgba(56, 106, 172, 0.1) !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-select.panel-filter-select .ant-select-selection-item,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-input.ant-input,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-input .ant-input {
+    color: #17366d !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-select.panel-filter-select .ant-select-selection-placeholder,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-input.ant-input::placeholder,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-input .ant-input::placeholder {
+    color: #8c9bb5 !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .status-select.panel-filter-select .ant-select-arrow,
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .filter-arrow {
+    color: #49628f !important;
+  }
+
+  :root[data-visual-theme="minimal-white"] .parking-car-device-list-v2-panel .keyword-search-btn {
+    background: linear-gradient(145deg, #5b9ce2, #2f7fe8);
+    border-left-color: rgba(91, 155, 226, 0.28);
+  }
+}
+
+:global(.modal-panel-zoom-content .parking-device-list-zoom .zoom-table-viewport) {
+  height: 440px;
+  max-height: 440px;
+  overflow: hidden;
+}
+
+:global(.modal-panel-zoom-content .parking-device-list-zoom .zoom-table-viewport .roll-table) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+:global(.modal-panel-zoom-content .parking-device-list-zoom .zoom-table-viewport .header) {
+  flex: 0 0 40px;
+  height: 40px !important;
+}
+
+:global(.modal-panel-zoom-content .parking-device-list-zoom .zoom-table-viewport .scroll_warp) {
+  flex: 0 0 400px;
+  height: 400px !important;
+  max-height: 400px !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+:global(.modal-panel-zoom-content .parking-device-list-zoom .zoom-table-viewport .table-tr) {
+  height: 40px !important;
+  box-sizing: border-box;
+}
+
+.v2-minimal-white-panel(parking-car-device-list-v2-panel);
+.parking-v2-minimal-white-children(parking-car-device-list-v2-panel);

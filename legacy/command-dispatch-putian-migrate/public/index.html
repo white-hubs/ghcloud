@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link rel="stylesheet" href="<%= BASE_URL %>static/animate-4.1.1.css"/>
+    <script src="<%= BASE_URL %>config.js"></script>
+    <!-- <script src="//unpkg.com/vue"></script> -->
+    <script src="<%= BASE_URL %>vue.global.js"></script>
+    <script src="<%= BASE_URL %>vue-router.global.js"></script>
+    <script src="<%= BASE_URL %>vuex.global.js"></script>
+    <script src="<%= BASE_URL %>static/iconfont/iconfont.js"></script>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=2.0&key=11ce1f353a30f9fa2b125c842780a4cf&plugin=AMap.MouseTool"
+    ></script>
+    <title></title>
+  </head>
+
+  <body>
+    <noscript>
+      <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <link rel="stylesheet/less" type="text/css" href="<%= BASE_URL %>color.less" />
+    <script>
+      window.less = {
+        async: true,
+        env: "production",
+      };
+      document.title = window.config.systemName
+        ? window.config.systemName
+        : null;
+    </script>
+    <script type="text/javascript" src="<%= BASE_URL %>less.min.js"></script>
+  </body>
+</html>

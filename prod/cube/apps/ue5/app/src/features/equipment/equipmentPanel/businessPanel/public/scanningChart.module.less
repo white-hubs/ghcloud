@@ -1,0 +1,154 @@
+
+.bottom{
+    font-size: 16px;
+}
+.radar {
+    background: radial-gradient(rgba(38, 207, 207, 0.3) 0%, rgba(105, 164, 164, 0.1) 70%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid #2989FF;
+    box-sizing: border-box;
+}
+
+.radar:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation-timing-function: linear;
+    animation-delay: 1.4s;
+}
+
+.radar:after {
+    content: ' ';
+    display: block;
+    background-image: linear-gradient(56deg, rgba(9, 235, 250, 0) 50%, rgba(41, 137, 255, 1) 100%);
+    width: 50%;
+    border-right: solid #2989FF 2px;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    animation: radar-beam 8s infinite;
+    animation-timing-function: linear;
+    transform-origin: bottom right;
+    border-radius: 100% 0 0 0;
+}
+
+.radar-1 {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    color: #2989FF;
+    width: 50%;
+    height: 50%;
+    z-index: 999;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    animation-name: blinks;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.radar0 {
+    background: #2989FF;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    margin-top: -5%;
+    margin-left: -5%;
+}
+
+.radar1 {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background: #2989FF;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+.radar2 {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    border: 1px solid #2989FF;
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.radar3 {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 1px solid #2989FF;
+    box-sizing: border-box;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.radar4 {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 1px solid #2989FF;
+    box-sizing: border-box;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+.horizontal {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #2989FF;
+    top: 50%;
+    position: absolute;
+}
+
+.vertical {
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #2989FF;
+    left: 50%;
+    position: absolute;
+}
+
+.content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+
+    .bottom {
+        white-space: nowrap
+    }
+}
+
+@keyframes radar-beam {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

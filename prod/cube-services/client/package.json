@@ -1,0 +1,137 @@
+{
+  "name": "@ghcloud/cube-services-client",
+  "version": "0.1.10",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./video-monitor.client": {
+      "import": "./src/video-monitor.client.ts",
+      "default": "./src/video-monitor.client.ts"
+    },
+    "./auth-request": {
+      "import": "./src/auth-request.ts",
+      "default": "./src/auth-request.ts"
+    },
+    "./metadata.client": {
+      "import": "./src/metadata.client.ts",
+      "default": "./src/metadata.client.ts"
+    },
+    "./ouaa.client": {
+      "import": "./src/ouaa.client.ts",
+      "default": "./src/ouaa.client.ts"
+    },
+    "./dictionary.client": {
+      "import": "./src/dictionary.client.ts",
+      "default": "./src/dictionary.client.ts"
+    },
+    "./safety-personnel.client": {
+      "import": "./src/safety-personnel.client.ts",
+      "default": "./src/safety-personnel.client.ts"
+    },
+    "./access-control.client": {
+      "import": "./src/access-control.client.ts",
+      "default": "./src/access-control.client.ts"
+    },
+    "./hazard-governance.client": {
+      "import": "./src/hazard-governance.client.ts",
+      "default": "./src/hazard-governance.client.ts"
+    },
+    "./security-opinion.client": {
+      "import": "./src/security-opinion.client.ts",
+      "default": "./src/security-opinion.client.ts"
+    },
+    "./risk-graded-control.client": {
+      "import": "./src/risk-graded-control.client.ts",
+      "default": "./src/risk-graded-control.client.ts"
+    },
+    "./work-permit.client": {
+      "import": "./src/work-permit.client.ts",
+      "default": "./src/work-permit.client.ts"
+    },
+    "./fumigation-operation.client": {
+      "import": "./src/fumigation-operation.client.ts",
+      "default": "./src/fumigation-operation.client.ts"
+    },
+    "./emergency-plan-ai.client": {
+      "import": "./src/emergency-plan-ai.client.ts",
+      "default": "./src/emergency-plan-ai.client.ts"
+    },
+    "./emergency-dispatch.client": {
+      "import": "./src/emergency-dispatch.client.ts",
+      "default": "./src/emergency-dispatch.client.ts"
+    },
+    "./emergency-supplies.client": {
+      "import": "./src/emergency-supplies.client.ts",
+      "default": "./src/emergency-supplies.client.ts"
+    },
+    "./process-engine.client": {
+      "import": "./src/process-engine.client.ts",
+      "default": "./src/process-engine.client.ts"
+    },
+    "./template-demo.client": {
+      "import": "./src/template-demo.client.ts",
+      "default": "./src/template-demo.client.ts"
+    },
+    "./inspection-ai.client": {
+      "import": "./src/inspection-ai.client.ts",
+      "default": "./src/inspection-ai.client.ts"
+    },
+    "./intelligent-grain.client": {
+      "import": "./src/intelligent-grain.client.ts",
+      "default": "./src/intelligent-grain.client.ts"
+    },
+    "./cold-storage.client": {
+      "import": "./src/cold-storage.client.ts",
+      "default": "./src/cold-storage.client.ts"
+    },
+    "./alarm-center.client": {
+      "import": "./src/alarm-center.client.ts",
+      "default": "./src/alarm-center.client.ts"
+    },
+    "./warehouse-safety.client": {
+      "import": "./src/warehouse-safety.client.ts",
+      "default": "./src/warehouse-safety.client.ts"
+    },
+    "./fire-management.client": {
+      "import": "./src/fire-management.client.ts",
+      "default": "./src/fire-management.client.ts"
+    },
+    "./visualization.client": {
+      "import": "./src/visualization.client.ts",
+      "default": "./src/visualization.client.ts"
+    },
+    "./mdata.client": {
+      "import": "./src/mdata.client.ts",
+      "default": "./src/mdata.client.ts"
+    },
+    "./device-center.client": {
+      "import": "./src/device-center.client.ts",
+      "default": "./src/device-center.client.ts"
+    },
+    "./property.client": {
+      "import": "./src/property.client.ts",
+      "default": "./src/property.client.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run clean && bun run bundle && bun run dts",
+    "clean": "rm -rf dist",
+    "bundle": "bun build src/index.ts --target=bun --format=esm --outfile=dist/index.js",
+    "dts": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@ghcloud/cube-service-interface": "workspace:^",
+    "@ghcloud/cube-gateway": "workspace:^",
+    "@ghcloud/cube-ouaa-service": "workspace:^",
+    "@ghcloud/cube-protocol": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

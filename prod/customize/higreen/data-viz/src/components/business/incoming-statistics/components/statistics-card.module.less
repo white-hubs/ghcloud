@@ -1,0 +1,121 @@
+.statistics-box {
+  height: 40px;
+  opacity: 0.8;
+  background: rgba(41, 137, 255, 0.10);
+  border: 0.5px solid;
+  border-image: linear-gradient(90deg, rgba(79, 138, 255, 0.13), rgba(179, 213, 255, 0.60) 55%, rgba(79, 138, 255, 0.10)) 1 1;
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+
+  .statistics-title {
+    display: flex;
+    align-items: center;
+    font-size: 7px;
+
+    span {
+      margin-left: 2px;
+    }
+  }
+
+  .statistics-value {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+    .statistics-count {
+      font-size: 13px;
+      font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+    }
+
+    .statistics-unit {
+      font-size: 6px;
+      position: relative;
+      top: 2px;
+      left: 2px;
+    }
+
+    .statistics-ratio {
+      display: flex;
+      align-items: center;
+      font-size: 6px;
+      margin-left: 6px;
+
+      .down-triangle {
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 4px solid #d2fff3;
+        margin: 0 3px;
+        transform: rotate(180deg);
+        width: 0;
+        height: 0;
+      }
+
+      .up-triangle {
+        border-bottom: 4px solid #ffcece;
+        transform: rotate(0deg);
+      }
+
+      .ratio-value {
+        font-size: 6px;
+        color: #2AE8BD;
+      }
+
+      .down {
+        color: #2AE8BD;
+      }
+
+      .up {
+        color: #f14545;
+      }
+    }
+  }
+}
+
+.chart-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  .chart-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .chart-content {
+    width: 54px;
+    height: 54px;
+    background: rgba(41, 137, 255, 0.15);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .chart-content-value {
+      .statistics-count {
+        font-size: 13px;
+        font-family: YouSheBiaoTiHei, YouSheBiaoTiHei-Regular;
+      }
+
+      .chart-content-unit {
+        font-size: 6px;
+      }
+    }
+    .chart-content-title{
+      font-size: 7px;
+      color: #d0deee;
+    }
+  }
+}
+.bar-container{
+  width: 261px;
+  height: 150px;
+}
+.h170{
+  height: 160px;
+}

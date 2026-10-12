@@ -1,0 +1,21 @@
+@import "../_shared/universal-panel-v2-shared.less";
+
+.cardBody {
+  min-width: 0;
+}
+
+.chartSurface {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 160px;
+  overflow: hidden;
+}
+
+.zoomBody {
+  .chartSurface {
+    min-height: 430px;
+  }
+}
+
+.v2-minimal-white-panel(equipment-alarm-trend-v2-panel);

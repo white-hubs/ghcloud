@@ -1,0 +1,120 @@
+{
+  "path": "/product-center/modeling.html",
+  "meta": {
+    "title": "孪生建模服务_数字孪生建模_古河云科技",
+    "keywords": "建模服务,3D建模,建筑建模,仿真能力,虚拟仿真建模,园区建模",
+    "description": "古河云建模服务覆盖批发市场、园区、场馆、交通、医疗、教育等行业客户，为各行业客户提供专业、优质的数字孪生建模服务。"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/product-modeling-banner.webp",
+            "title": "建模服务",
+            "subtitle": "高质量建模，高效优质，事半功倍\n覆盖园区、场馆、交通、医疗、教育等行业客户，为各行业客户提供专业、优质的建模服务。",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff",
+            "primaryButton": {
+              "text": "立即咨询",
+              "link": "/consultation.html"
+            },
+            "secondaryButton": {
+              "text": "获取方案",
+              "link": "/consultation.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div class=\"w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw] bg-[#F1F6FF]\"><h2 style=\"color:#182b44;text-align:center;font-size:clamp(1.25rem,1.875vw,1.875rem);font-weight: bold;margin-bottom:clamp(1rem,2.0833vw,2rem);position:relative;padding-bottom:clamp(0.5rem,1.25vw,1rem);\">多采集方式，大幅提升建模效率<span style=\"position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:clamp(3rem,3.125vw,4rem);height:clamp(0.2rem,0.3125vw,0.4rem);background:#1578FF;border-radius:9999px;display:block;\"></span></h2><p style=\"color:#585c60;text-align:center;margin-bottom:3rem;\">支持倾斜摄影、激光点云、施工图纸、实景拍照、GIS地图等多种图像采集方式，灵活便捷采集，大幅提升建模的效率与完整性</p><div class=\"grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[1.5625vw]\"><div class=\"bg-white rounded-lg overflow-hidden\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-data-1.webp\" class=\"w-full h-[48vw] lg:h-[10vw] object-cover block\" alt=\"实景采集\"><div class=\"p-5 lg:py-[1.3021vw] lg:px-[0.9896vw] text-center\"><h3 class=\"text-lg lg:text-[1.0417vw] font-medium text-[#182b44] mb-3 lg:mb-[0.625vw] leading-tight\">实景采集</h3><p class=\"text-sm lg:text-[0.7292vw] text-[#585c60] leading-relaxed\">倾斜摄影<br>激光点云</p></div></div><div class=\"bg-white rounded-lg overflow-hidden\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-data-2.webp\" class=\"w-full h-[48vw] lg:h-[10vw] object-cover block\" alt=\"CAD图纸\"><div class=\"p-5 lg:py-[1.3021vw] lg:px-[0.9896vw] text-center\"><h3 class=\"text-lg lg:text-[1.0417vw] font-medium text-[#182b44] mb-3 lg:mb-[0.625vw] leading-tight\">CAD图纸</h3><p class=\"text-sm lg:text-[0.7292vw] text-[#585c60] leading-relaxed\">专业施工图纸</p></div></div><div class=\"bg-white rounded-lg overflow-hidden\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-data-3.webp\" class=\"w-full h-[48vw] lg:h-[10vw] object-cover block\" alt=\"照片视频\"><div class=\"p-5 lg:py-[1.3021vw] lg:px-[0.9896vw] text-center\"><h3 class=\"text-lg lg:text-[1.0417vw] font-medium text-[#182b44] mb-3 lg:mb-[0.625vw] leading-tight\">照片视频</h3><p class=\"text-sm lg:text-[0.7292vw] text-[#585c60] leading-relaxed\">实景拍照<br>效果图纸、视频拍摄等</p></div></div><div class=\"bg-white rounded-lg overflow-hidden\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-data-4.webp\" class=\"w-full h-[48vw] lg:h-[10vw] object-cover block\" alt=\"地图\"><div class=\"p-5 lg:py-[1.3021vw] lg:px-[0.9896vw] text-center\"><h3 class=\"text-lg lg:text-[1.0417vw] font-medium text-[#182b44] mb-3 lg:mb-[0.625vw] leading-tight\">地图</h3><p class=\"text-sm lg:text-[0.7292vw] text-[#585c60] leading-relaxed\">卫星影像、GIS数据、地理数据</p></div></div></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div class=\"w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]\"><h2 style=\"color:#182b44;text-align:center;font-size:clamp(1.25rem,1.875vw,1.875rem);font-weight: bold;margin-bottom:clamp(1rem,2.0833vw,2rem);position:relative;padding-bottom:clamp(0.5rem,1.25vw,1rem);\">BIM建模，精细还原展现逼真<span style=\"position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:clamp(3rem,3.125vw,4rem);height:clamp(0.2rem,0.3125vw,0.4rem);background:#1578FF;border-radius:9999px;display:block;\"></span></h2><p style=\"color:#585c60;text-align:center;margin-bottom:3rem;\">1比1还原现实建筑及设施所有构件、部件等模型元素信息及关系，确保还原的准确性和细节度，使模型展现更全面、更精准、更逼真</p><style>.bim-card{display:flex;flex-direction:column;gap:1rem;background:#fff;padding:1rem;border-radius:0.5rem;margin-bottom:1rem;}@media(min-width:1024px){.bim-card{flex-direction:row;gap:2.0833vw;padding:2.0833vw;border-radius:0.4167vw;margin-bottom:2.0833vw;}.bim-card.reverse{flex-direction:row-reverse;}}.bim-img{width:100%;height:40vw;object-fit:cover;border-radius:0.5rem;}@media(min-width:1024px){.bim-img{width:30.2083vw;height:15.9375vw;border-radius:0.4167vw;}}.bim-content{flex:1;}.bim-title{font-size:1.25rem;font-weight:500;color:#182b44;margin-bottom:0.5rem;}@media(min-width:1024px){.bim-title{font-size:1.25vw;margin-bottom:1.0417vw;}}.bim-desc{font-size:0.875rem;color:#585c60;line-height:1.6;margin-bottom:0.75rem;}@media(min-width:1024px){.bim-desc{font-size:0.9375vw;margin-bottom:1.0417vw;}}.bim-list{list-style:none;padding:0;margin:0;}.bim-list li{font-size:0.875rem;color:#495666;line-height:1.6;padding-left:1.25rem;position:relative;margin-bottom:0.5rem;}@media(min-width:1024px){.bim-list li{font-size:0.9375vw;padding-left:1.25vw;margin-bottom:0.5vw;}}.bim-list li::before{content:'';position:absolute;left:0;top:0.4em;width:0.5rem;height:0.5rem;background:#1578FF;border-radius:2px;}@media(min-width:1024px){.bim-list li::before{width:0.4167vw;height:0.4167vw;}}</style><div class=\"bim-card reverse\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-bim-1.webp\" class=\"bim-img\" alt=\"三维BIM模型\"><div class=\"bim-content\"><h3 class=\"bim-title\">三维BIM模型</h3><p class=\"bim-desc\">构建精准的三维BIM模型，完整还原建筑结构、设备设施等所有构件信息。</p><ul class=\"bim-list\"><li>支持多格式导入：兼容Revit、AutoCAD、SketchUp等主流建模软件格式</li><li>精细化建模：LOD100-LOD500级别模型构建，满足不同应用场景需求</li></ul></div></div><div class=\"bim-card\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-bim-2.webp\" class=\"bim-img\" alt=\"模型更新\"><div class=\"bim-content\"><h3 class=\"bim-title\">模型更新</h3><p class=\"bim-desc\">支持模型动态更新，实时同步现场变更，确保数字孪生模型与实际建筑保持一致。</p><ul class=\"bim-list\"><li>零延迟同步：现场变更实时上传，模型自动更新，保持数据一致性</li><li>版本管理：完整记录模型变更历史，支持任意版本回溯与对比</li></ul></div></div><div class=\"bim-card reverse\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-bim-3.webp\" class=\"bim-img\" alt=\"模型深化\"><div class=\"bim-content\"><h3 class=\"bim-title\">模型深化</h3><p class=\"bim-desc\">深化模型细节，补充构件参数与属性信息，提升模型应用价值。</p><ul class=\"bim-list\"><li>参数完善：补充构件尺寸、材质、厂商等完整属性信息</li><li>关联关系：建立构件间的逻辑关联，支持空间查询与属性统计</li></ul></div></div><div class=\"bim-card\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-bim-4.webp\" class=\"bim-img\" alt=\"模型整合\"><div class=\"bim-content\"><h3 class=\"bim-title\">模型整合</h3><p class=\"bim-desc\">整合多专业模型，实现建筑、结构、机电等专业协同，提供统一数据底座。</p><ul class=\"bim-list\"><li>多专业协同：整合建筑、结构、机电、幕墙等多专业模型</li><li>碰撞检测：自动识别各专业模型冲突，提前解决施工问题</li></ul></div></div><div class=\"bim-card reverse\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-bim-5.webp\" class=\"bim-img\" alt=\"模型信息录入\"><div class=\"bim-content\"><h3 class=\"bim-title\">模型信息录入</h3><p class=\"bim-desc\">支持多种数据源接入，快速录入模型关联信息，构建完整数字资产。</p><ul class=\"bim-list\"><li>批量导入：支持Excel、CSV等格式批量录入构件属性</li><li>文档关联：关联设计图纸、说明书、运维手册等相关文档</li></ul></div></div></div>"
+      }
+    },
+    {
+      "name": "ModelingBeauty",
+      "props": {
+        "title": "模型美化，打造震撼视觉体验",
+        "subtitle": "通过地形、路网、建筑、植被、天气等多元美化，经过精心细节设计呈现，构建更贴合实际环境、更具震撼力的场景",
+        "images": [
+          "https://qiniu.guhecloud.com/kaihe-static/images/modeling-beauty-1.webp",
+          "https://qiniu.guhecloud.com/kaihe-static/images/modeling-beauty-2.webp",
+          "https://qiniu.guhecloud.com/kaihe-static/images/modeling-beauty-3.webp"
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div class=\"w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]\"><h2 style=\"color:#182b44;text-align:center;font-size:clamp(1.25rem,1.875vw,1.875rem);font-weight: bold;margin-bottom:clamp(1rem,2.0833vw,2rem);position:relative;padding-bottom:clamp(0.5rem,1.25vw,1rem);\">模型优化，轻量产出真实呈现<span style=\"position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:clamp(3rem,3.125vw,4rem);height:clamp(0.2rem,0.3125vw,0.4rem);background:#1578FF;border-radius:9999px;display:block;\"></span></h2><p style='color:#585c60;text-align:center;margin-bottom:2rem;'>通过模型优化服务，可以获得更高性能适用于交互的3D模型。无论是简单修复调整，还是复杂模型替换，优化同时支持模型美化渲染能力，提升真实感</p><div style='display:flex;justify-content:center;'><img src='https://qiniu.guhecloud.com/kaihe-static/images/modeling-optimize.webp' style='width:100%;height:auto;object-fit:cover;border-radius:0.5rem;display:block;'></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div class=\"w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]\"><h2 style=\"color:#182b44;text-align:center;font-size:clamp(1.25rem,1.875vw,1.875rem);font-weight: bold;margin-bottom:clamp(1rem,2.0833vw,2rem);position:relative;padding-bottom:clamp(0.5rem,1.25vw,1rem);\">完善标准的建模流程，交付无忧<span style=\"position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:clamp(3rem,3.125vw,4rem);height:clamp(0.2rem,0.3125vw,0.4rem);background:#1578FF;border-radius:9999px;display:block;\"></span></h2><p style=\"color:#585c60;text-align:center;margin-bottom:3rem;font-size:0.9375vw;\">从项目启动到交付，每一步都明确交付内容，配合内部项目生产平台完成高效工厂化生产</p><div style=\"display:flex;justify-content:space-between;position:relative;max-width:78vw;margin:0 auto;\"><div style=\"position:absolute;top:2.0833vw;left:8%;right:8%;height:1px;background:#e5e7eb;z-index:0;\"></div><div style=\"flex:1;text-align:center;position:relative;z-index:1;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/icon1.webp\" style=\"width:4.25vw;height:4.25vw;display:block;margin:0 auto 1vw;\" alt=\"确定交付节点\"><h3 style=\"font-size:1.0417vw;color:#182b44;margin-bottom:0.5208vw;font-weight:500;\">确定交付节点</h3><p style=\"font-size:0.7292vw;color:#585c60;line-height:1.6;padding:0 0.7813vw;\">项目启动前确定交付节点、交付内容，双方都统一标准后，再启动生产</p></div><div style=\"flex:1;text-align:center;position:relative;z-index:1;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/icon2.webp\" style=\"width:4.25vw;height:4.25vw;display:block;margin:0 auto 1vw;\" alt=\"模型建立\"><h3 style=\"font-size:1.0417vw;color:#182b44;margin-bottom:0.5208vw;font-weight:500;\">模型建立</h3><p style=\"font-size:0.7292vw;color:#585c60;line-height:1.6;padding:0 0.7813vw;\">进一步流水线完成模型建立，配合检验点，保证不间断生产</p></div><div style=\"flex:1;text-align:center;position:relative;z-index:1;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/icon3.webp\" style=\"width:4.25vw;height:4.25vw;display:block;margin:0 auto 1vw;\" alt=\"启动生产\"><h3 style=\"font-size:1.0417vw;color:#182b44;margin-bottom:0.5208vw;font-weight:500;\">启动生产</h3><p style=\"font-size:0.7292vw;color:#585c60;line-height:1.6;padding:0 0.7813vw;\">完成立项、制定周密项目实施计划确定责任人机模型生产流水线，明确过程里程碑节点及交付时间</p></div><div style=\"flex:1;text-align:center;position:relative;z-index:1;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/icon4.webp\" style=\"width:4.25vw;height:4.25vw;display:block;margin:0 auto 1vw;\" alt=\"咨询成果\"><h3 style=\"font-size:1.0417vw;color:#182b44;margin-bottom:0.5208vw;font-weight:500;\">咨询成果</h3><p style=\"font-size:0.7292vw;color:#585c60;line-height:1.6;padding:0 0.7813vw;\">在关键点完成咨询成果、包括设计校核报告、碰撞检查报告、空间分析报告等常规BIM成果</p></div><div style=\"flex:1;text-align:center;position:relative;z-index:1;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/icon5.webp\" style=\"width:4.25vw;height:4.25vw;display:block;margin:0 auto 1vw;\" alt=\"审查验收\"><h3 style=\"font-size:1.0417vw;color:#182b44;margin-bottom:0.5208vw;font-weight:500;\">审查验收</h3><p style=\"font-size:0.7292vw;color:#585c60;line-height:1.6;padding:0 0.7813vw;\">过程中针对每一道流水线进行审查，同时集中完成模型汇总审查工作，保证成果质量。</p></div></div></div>"
+      }
+    },
+    {
+      "name": "ModelingAssetLibrary",
+      "props": {
+        "title": "我们的优势",
+        "items": [
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/modeling-asset-icon-1.webp",
+            "title": "精细化模型制作",
+            "description": "提供精细化、构建级的三维模型制作服务，场景信息更加真实、准确，为用户打造现实世界的“镜像空间”。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/modeling-asset-icon-2.webp",
+            "title": "轻量化平台适配",
+            "description": "支持多源数据一站式融合，快速形成可使用的数据资产，有效提升交付效率能力。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/modeling-asset-icon-3.webp",
+            "title": "支持场景一体化",
+            "description": "支持室内外、管网、设施设备等场景一体化，实现无缝交互切换，提升场景效果及表达方式，为上层业务提供更多交互的可能性。"
+          },
+          {
+            "icon": "https://qiniu.guhecloud.com/kaihe-static/images/modeling-asset-icon-4.webp",
+            "title": "轻量引擎渲染",
+            "description": "构建真实仿真三维模型，并结合模型分布式渲染、访问架构，实现流畅清晰、多实例运行。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "background": "gray",
+        "content": "<div class=\"w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]\" style=\"background:#070e24;\"><h2 style=\"color:#fff;text-align:center;font-size:1.875vw;font-weight: bold;margin-bottom:1.25vw;position:relative;padding-bottom:1vw;\">构建库<span style=\"position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:3.125vw;height:0.3125vw;background:#1578FF;border-radius:9999px;display:block;\"></span></h2><p style=\"color:#fff;text-align:center;font-size:0.8333vw;margin-bottom:2.0833vw;\">提供专业的三维模型制作服务，模拟可应用于各类演示场景。</p><div style=\"display:flex;gap:2.0833vw;justify-content:center;margin-bottom:2.0833vw;\"><div style=\"border-radius:0.4167vw;overflow:hidden;width:21.4063vw;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-lib-1.webp\" style=\"width:100%;height:10vw;object-fit:cover;display:block;\" alt=\"消防模型库\"><h3 style=\"text-align:center;font-size:1.0417vw;font-weight:500;color:#fff;padding:1.0417vw 0;margin:0;\">消防模型库</h3></div><div style=\"border-radius:0.4167vw;overflow:hidden;width:21.4063vw;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-lib-2.webp\" style=\"width:100%;height:10vw;object-fit:cover;display:block;\" alt=\"建筑模型库\"><h3 style=\"text-align:center;font-size:1.0417vw;font-weight:500;color:#fff;padding:1.0417vw 0;margin:0;\">建筑模型库</h3></div><div style=\"border-radius:0.4167vw;overflow:hidden;width:21.4063vw;\"><img src=\"https://qiniu.guhecloud.com/kaihe-static/images/modeling-lib-3.webp\" style=\"width:100%;height:10vw;object-fit:cover;display:block;\" alt=\"植被模型库\"><h3 style=\"text-align:center;font-size:1.0417vw;font-weight:500;color:#fff;padding:1.0417vw 0;margin:0;\">植被模型库</h3></div></div><div style=\"text-align:center;\"><a href=\"/engines/twin.html\" style=\"display:inline-block;padding:0.8333vw 1.875vw;border:1px solid #1578FF;color:#1578FF;font-size:0.9375vw;text-decoration:none;border-radius:0.4167vw;\">更多模型</a></div></div>"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<section class='w-full'><div class='w-full py-[6vw] lg:py-[3.3333vw] px-[5vw] lg:px-[15.625vw]'><div style='position: relative; margin-bottom: 3vw; text-align: center;'><h2 style='font-size: 1.5625vw; font-weight: bold; color: #182b44; margin: 0;'>仿真能力</h2><div style='position: absolute; bottom: -1vw; left: 50%; transform: translateX(-50%); width: 3.125vw; height: 0.3125vw; background: #1578ff; border-radius: 9999px;'></div></div><p style='text-align: center; color: #585c60; margin: 0 0 2.0833vw; font-size: 0.8333vw; line-height: 1.6;'>提供专业的三维模型动画制作服务，动画模拟可应用于各类演示场景。</p><img src='https://qiniu.guhecloud.com/kaihe-static/images/3d-gif-demo.webp' alt='仿真能力' style='display: block; width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);'></div></section>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"background-image:url('https://qiniu.guhecloud.com/kaihe-static/images/modeling-booking-bg.webp');background-size:cover;background-position:center;padding:3.6458vw 0;text-align:center;\"><div style=\"display:inline-block;\"><h3 style=\"font-size:1.5625vw;color:#fff;font-weight:500;margin-bottom:0.5208vw;\">古河云科技</h3><p style=\"font-size:1.0417vw;color:#fff;margin-bottom:1.5625vw;\">为客户提供AI+安全管理产品及解决方案，重塑安全应急管理新范式</p><a href=\"/consultation.html\" style=\"display:inline-block;padding:0.8333vw 2.0833vw;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:0.8333vw;text-decoration:none;border-radius:0.2083vw;backdrop-filter:blur(4px);\">预约演示</a></div></div>"
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,12 @@
+<!--components/search-bar/search-bar.wxml-->
+<view class="search-bar">
+	<view class="container">
+		<image src="../static/images/search.png" mode="" />
+		<input type="text" model:value="{{searchValue}}" placeholder="输入关键字搜索" />
+		<image src="../static/images/close.png" bindtap="handleClear" mode="" />
+		<view class="search-button" bindtap="handleSearch">
+			搜索
+		</view>
+	</view>
+
+</view>

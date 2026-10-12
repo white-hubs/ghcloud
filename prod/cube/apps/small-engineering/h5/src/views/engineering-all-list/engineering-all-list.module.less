@@ -1,0 +1,62 @@
+.list-page {
+  min-height: calc(100vh - 90px);
+
+  :global(.van-list) {
+    padding: 10px;
+  }
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  background: #F3F7FA;
+  box-sizing: border-box;
+  position: relative;
+
+  :global(.van-tabs__wrap) {
+    position: sticky;
+    top: 46px;
+    z-index: 1;
+  }
+
+  .card-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    :global {
+      .van-cell__value {
+        text-align: left;
+      }
+
+      .van-icon-arrow:before {
+        position: absolute;
+        left: -3vw;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .add-icon {
+    width: 54px;
+    height: 54px;
+    background: #1d66ff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 10vw;
+    right: 10vw;
+    border-radius: 50%;
+    font-size: 60px;
+    color: #599ed6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "name": "Custom",
+    "prefix": "custom",
+    "uri": "http://custom",
+    "xml": {
+        "tagAlias": "lowerCase"
+    },
+    "associations": [],
+    "types": [
+        {
+            "name": "BewitchedStartEvent",
+            "extends": [
+                "bpmn:StartEvent"
+            ],
+            "properties": [
+                {
+                    "name": "spell",
+                    "isAttr": true,
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "customProperty",
+            "extends": [
+                "bpmn:UserTask"
+            ],
+            "properties": [
+                {
+                    "name": "url",
+                    "isAttr": true,
+                    "type": "String"
+                },
+                {
+                    "name": "method",
+                    "isAttr": true,
+                    "type": "String"
+                },
+                {
+                    "name": "isLogin",
+                    "isAttr": true,
+                    "type": "Boolean"
+                },
+                {
+                    "name": "timeout",
+                    "isAttr": true,
+                    "type": "Number"
+                },
+                {
+                    "name": "users",
+                    "isAttr": true,
+                    "type": "Array",
+                    "tips": "只有简单的数组可以, 对象或者数组里面包含对象都不行, 并且数组也会转成用逗号连接的字符串"
+                }
+            ]
+        }
+    ]
+}

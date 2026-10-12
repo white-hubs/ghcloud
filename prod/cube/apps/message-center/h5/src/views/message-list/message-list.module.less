@@ -1,0 +1,79 @@
+.message-list {
+  min-height: 100vh;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 12px 19px;
+
+  .message-list-item {
+    width: 100%;
+    height: 72px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
+
+    .message-list-item-right {
+      width: calc(100% - 54px);
+      padding-top: 4px;
+      box-sizing: border-box;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+          font-size: 15px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: left;
+          color: #0f181f;
+        }
+
+        .time {
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #cccccc;
+        }
+      }
+
+      .content {
+        margin-top: 8px;
+        position: relative;
+        .msg-content {
+          width: 225px;
+          height: 12px;
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #999999;
+          line-height: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .un-read-msg-count{
+          position: absolute;
+          top: 50%;
+          right: 0px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+:global(.van-pull-refresh) {
+  background-color: #f7f7f7;
+}

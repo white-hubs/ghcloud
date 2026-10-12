@@ -1,0 +1,107 @@
+.container {
+  height: calc(100vh - var(--van-nav-bar-height, 46px));
+  overflow-y: auto;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom)) 12px;
+  background: #f3f7fa;
+  -webkit-overflow-scrolling: touch;
+}
+
+.summary {
+  margin-bottom: 10px;
+  color: #7b8794;
+  font-size: 13px;
+  padding: 0 12px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.cardCell {
+  --van-cell-vertical-padding: 14px;
+}
+
+.cardCell :global(.van-cell__value) {
+  min-width: 0;
+  text-align: left;
+}
+
+.titleRow,
+.meta,
+.timeMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.meta {
+  flex-wrap: wrap;
+}
+
+.id {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--van-primary-color);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.titleRow :global(.van-tag),
+.meta :global(.van-tag),
+.timeMeta :global(.van-tag) {
+  flex-shrink: 0;
+}
+
+.title {
+  margin-top: 8px;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.meta,
+.timeMeta {
+  margin-top: 10px;
+  color: #7b8794;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.timeMeta {
+  flex-wrap: nowrap;
+  font-size: 11px;
+}
+
+.metaText {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+.timeMeta .metaText {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.submittedTime {
+  flex: 0 1 auto;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.acceptButton {
+  flex: 0 0 auto;
+  min-width: 42px;
+  padding-right: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+}

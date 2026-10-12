@@ -1,0 +1,106 @@
+
+.monitorPanelBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.chart {
+  height: 238px;
+}
+
+:deep(.LightingBox) {
+  &.round-wrap .monitorBox {
+    flex-direction: column;
+    width: 90px;
+  }
+
+  .monitor .monitorBox .monitorValue {
+    font-size: 16px;
+    font-family: D-DIN, D-DIN;
+    font-weight: 700;
+  }
+
+  .monitor .monitorBox .monitorList .monitorColor {
+    display: none !important;
+  }
+
+  .monitor {
+    width: 180px !important;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .info {
+    position: relative;
+    justify-content: space-around;
+    flex-direction: row;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      position: absolute;
+      width: 200px;
+      top: 92px;
+      left: 121px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      position: absolute;
+      top: 80px;
+      left: 90px;
+      width: 35px;
+      transform: rotateZ(40deg);
+    }
+  }
+
+  .roate {
+    width: 67px !important;
+    height: 67px !important;
+  }
+
+  .r1 {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .r2 {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .r3 {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 100%;
+  }
+
+  .item {
+    height: 110px !important;
+  }
+
+  .icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+.ant-select-inline{
+  width: 160px;
+}
+:deep(.ant-select-dropdown){
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.65) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  .ant-cascader-menu-item-active{
+    background-color: #2989FF !important;
+    color: #fff !important;
+  }
+}

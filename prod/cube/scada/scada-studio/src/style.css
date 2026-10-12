@@ -1,0 +1,40 @@
+/* ── Editor layout fixes ─────────────────────────────────────────────────── */
+
+.scada-right-panel.ant-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.scada-right-panel .ant-tabs-content-holder {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* ── X6 scroller interaction feel (aligned with graph-editor) ───────────── */
+
+.x6-scroller {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31, 31, 31, 0.28) transparent;
+}
+
+.x6-scroller::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.x6-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.x6-scroller::-webkit-scrollbar-thumb {
+  background: rgba(31, 31, 31, 0.25);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.x6-scroller::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 31, 31, 0.45);
+  background-clip: padding-box;
+}

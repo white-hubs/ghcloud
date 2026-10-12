@@ -1,0 +1,56 @@
+.project-place-container {
+  // padding: 16px 0;
+  border-radius: 2px;
+  .header {
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:10px 16px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .place-list {
+    .place-item {
+      height:48px;
+      padding: 0px 12px;
+      font-size: 16px;
+      padding:  0 16px;
+      width:100%;
+      cursor: pointer;
+      display: flex;
+      .place-name{
+      display: flex;
+      width: calc(100% - 48px);
+      .place-title{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;    
+      }
+      }
+      justify-content: space-between;
+      align-items: center;
+      &:hover {
+        background-color: #f0f0f0 !important;
+        .actions {
+          display: inline-block;
+        }
+      }
+
+      &.active {
+        background-color: #e6f7ff;
+      }
+
+      .actions {
+        display: none;
+        width: 48px;
+        .action-icon {
+          margin-left: 8px;
+          color: #1890ff;
+        }
+      }
+    }
+  }
+}

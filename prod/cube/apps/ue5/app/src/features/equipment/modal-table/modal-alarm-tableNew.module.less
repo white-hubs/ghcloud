@@ -1,0 +1,128 @@
+/*
+ * 报警记录弹窗只保留业务字段尺寸。
+ * 外壳 / 筛选区 / 表格 / 分页 / 双主题统一复用 modal-equipmentAll-table.module.less。
+ */
+:global {
+  .alarm-records-modal {
+    .filter-item-status .filter-control-select,
+    .filter-item-level .filter-control-select {
+      width: 116px !important;
+    }
+
+    .filter-item-time .alarm-time-picker {
+      width: 288px !important;
+    }
+
+    .filter-item-keyword .filter-keyword,
+    .filter-item-keyword .ant-input-affix-wrapper {
+      width: 132px !important;
+    }
+
+    .filter-toolbar .filter-control-picker.ant-picker {
+      box-sizing: border-box;
+      min-height: 32px;
+      height: 32px;
+      padding: 4px 11px;
+      color: var(--visual-data-modal-text-color);
+      background: var(--visual-date-control-bg, rgba(7, 28, 56, 0.54)) !important;
+      border: 1px solid var(--visual-date-control-border, rgba(76, 160, 255, 0.34)) !important;
+      border-radius: 6px;
+      box-shadow: var(--visual-date-control-shadow, none);
+    }
+
+    .filter-toolbar .filter-control-picker input,
+    .filter-toolbar .filter-control-picker .ant-picker-separator,
+    .filter-toolbar .filter-control-picker .ant-picker-suffix {
+      color: var(--visual-data-modal-text-color) !important;
+      font-size: 14px !important;
+    }
+
+    .filter-toolbar .filter-control-picker.ant-picker-focused {
+      border-color: var(--visual-primary, #2989ff) !important;
+      box-shadow: var(--visual-date-control-focus-shadow, 0 0 0 1px rgba(41, 137, 255, 0.32));
+    }
+
+    .alarm-record-status-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      height: 22px;
+      padding: 0 8px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .alarm-record-status-tag.is-pending {
+      color: #f14545;
+      background: rgba(241, 69, 69, 0.14);
+    }
+
+    .alarm-record-status-tag.is-processing {
+      color: #ffab10;
+      background: rgba(255, 171, 16, 0.14);
+    }
+
+    .alarm-record-status-tag.is-suspend {
+      color: #74aee7;
+      background: rgba(116, 174, 231, 0.16);
+    }
+
+    .alarm-record-status-tag.is-done {
+      color: #00f27b;
+      background: rgba(0, 242, 123, 0.14);
+    }
+
+    .alarm-record-status-tag.is-default {
+      color: var(--visual-data-modal-text-color, #ffffff);
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  :root[data-visual-theme="minimal-white"] {
+    .alarm-records-modal .alarm-record-status-tag.is-pending {
+      color: #d4380d;
+      background: rgba(212, 56, 13, 0.1);
+    }
+
+    .alarm-records-modal .alarm-record-status-tag.is-processing {
+      color: #d48806;
+      background: rgba(212, 136, 6, 0.1);
+    }
+
+    .alarm-records-modal .alarm-record-status-tag.is-suspend {
+      color: #1677ff;
+      background: rgba(22, 119, 255, 0.1);
+    }
+
+    .alarm-records-modal .alarm-record-status-tag.is-done {
+      color: #0f9b5f;
+      background: rgba(15, 155, 95, 0.1);
+    }
+
+    .alarm-records-modal .alarm-record-status-tag.is-default {
+      color: #49628f;
+      background: rgba(116, 158, 210, 0.12);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .alarm-records-modal .filter-item-time .alarm-time-picker {
+      width: 240px !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .alarm-records-modal .filter-item-status .filter-control-select,
+    .alarm-records-modal .filter-item-level .filter-control-select,
+    .alarm-records-modal .filter-item-time .alarm-time-picker,
+    .alarm-records-modal .filter-item-keyword .filter-keyword,
+    .alarm-records-modal .filter-item-keyword .ant-input-affix-wrapper {
+      flex: 1;
+      width: auto !important;
+    }
+  }
+}

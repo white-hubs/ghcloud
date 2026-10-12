@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680">
+  <rect width="1100" height="680" fill="#edf3ec"/>
+  <g fill="#dfebdc"><path d="M0 0H1100V55H0Z"/><path d="M20 40H70V630H20Z"/><path d="M950 30H1070V650H950Z"/><path d="M60 590H950V650H60Z"/></g>
+  <g fill="none" stroke="#d6dfe5" stroke-width="44"><path d="M80 325H980M580 65V580"/><path d="M70 560H970"/></g>
+  <g stroke="#fff" stroke-width="2" stroke-dasharray="12 12"><path d="M80 325H980M580 65V580M70 560H970"/></g>
+  <g fill="#d7e5f2" stroke="#9db6cc" stroke-width="3"><rect x="130" y="110" width="260" height="155" rx="6"/><rect x="350" y="365" width="200" height="160" rx="6"/><rect x="670" y="365" width="280" height="160" rx="6"/></g>
+  <g fill="#e2e8ef" stroke="#acbac8" stroke-width="3"><circle cx="740" cy="135" r="45"/><circle cx="890" cy="135" r="45"/><circle cx="740" cy="245" r="45"/><circle cx="890" cy="245" r="45"/></g>
+  <g fill="#bed6b8"><circle cx="90" cy="90" r="12"/><circle cx="90" cy="140" r="12"/><circle cx="90" cy="190" r="12"/><circle cx="1010" cy="380" r="15"/><circle cx="1010" cy="440" r="15"/><circle cx="1010" cy="500" r="15"/></g>
+  <g font-family="sans-serif" fill="#61788d" text-anchor="middle" font-size="22"><text x="260" y="196">数据对接楼</text><text x="450" y="470">装置区</text><text x="810" y="465">仓储区</text><text x="815" y="200">储罐区</text><text x="280" y="335" font-size="14">园区主干道</text><text x="540" y="627" font-size="15">古河化工园区 · 室外二维示意地图</text></g>
+  <g transform="translate(1030 70)" stroke="#61788d" fill="none" stroke-width="2"><path d="M0 25V-12M0-12L-7 2M0-12L7 2"/></g><text x="1030" y="47" text-anchor="middle" font-family="sans-serif" fill="#61788d">N</text>
+</svg>

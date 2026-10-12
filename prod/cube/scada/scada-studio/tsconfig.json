@@ -1,0 +1,41 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "newLine": "lf",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@cube-scada/core": ["../basic/core/src/index.ts"],
+      "@cube-scada/engine": ["../basic/engine/src/index.ts"],
+      "@cube-scada/renderer": ["../basic/renderer/src/index.ts"],
+      "@cube-scada/editor": ["../basic/editor/src/index.ts"],
+      "@cube-scada/elements": ["../basic/elements/src/index.ts"],
+      "@cube-scada/runtime": ["../basic/runtime/src/index.ts"],
+      "@cube-scada/studio-sdk": ["../basic/studio-sdk/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "vueCompilerOptions": {
+    "jsxTemplates": true,
+    "experimentalRfc436": true
+  }
+}

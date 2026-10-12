@@ -1,0 +1,123 @@
+.container {
+  height: calc(100vh - var(--van-nav-bar-height, 46px));
+  overflow-y: auto;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom));
+  background: #f3f7fa;
+  -webkit-overflow-scrolling: touch;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.statCard {
+  width: 100%;
+  min-height: 82px;
+  border: 1px solid currentcolor;
+  border-radius: 8px;
+  padding: 14px 10px;
+  font: inherit;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.statLabel {
+  margin-top: 6px;
+  color: #1f2937;
+  font-size: 13px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 8px;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionBar {
+  width: 5px;
+  height: 16px;
+  border-radius: 999px;
+  background: currentcolor;
+}
+
+.sectionCount {
+  color: #98a2b3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.cardCell :global(.van-cell__value) {
+  text-align: left;
+}
+
+.titleRow,
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.id {
+  color: var(--van-primary-color);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.title {
+  margin-top: 8px;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.meta {
+  margin-top: 10px;
+}
+
+.orange {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+.purple {
+  color: #7c3aed;
+  background: #faf5ff;
+}
+
+.blue {
+  color: var(--van-primary-color);
+  background: #eff6ff;
+}
+
+.green {
+  color: #10b981;
+  background: #ecfdf5;
+}

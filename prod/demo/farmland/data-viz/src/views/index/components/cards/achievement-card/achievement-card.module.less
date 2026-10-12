@@ -1,0 +1,76 @@
+.achievement-container {
+  position: relative;
+  height: 320px;
+  // margin-top: 15px;
+  
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: opacity 0.5s ease; /* 增加过渡时间 */
+  }
+  
+  .items-container {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scroll-behavior: smooth;
+    padding-right: 5px; /* 添加一些内边距，防止内容贴边 */
+    
+    /* 隐藏滚动条 */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .achievement-item {
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(79,138,255,0.13), rgba(179,213,255,0.60) 55%, rgba(79,138,255,0.10)) 1 1;
+    background: rgba(77, 143, 255, 0.15);
+    margin-bottom: 8px;
+    padding: 0 15px;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &:hover {
+      background: rgba(77, 143, 255, 0.25); /* 稍微加深背景色 */
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .achievement-content {
+      flex: 1;
+      width: 100%;
+      .achievement-title {
+        font-size: 16px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+        font-weight: Medium;
+        color: #d0deee;
+        line-height: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 12px;;
+      }
+      
+      .achievement-description {
+        font-size: 14px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #879fbb;
+        line-height: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

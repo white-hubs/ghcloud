@@ -1,0 +1,75 @@
+
+.ringRatio {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  color: #fff;
+
+  .downtriangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #d2fff3;
+    margin-right: 3px;
+    transform: rotate(180deg);
+  }
+
+  .uptriangle {
+    border-bottom: 8px solid #ffcece;
+    transform: rotate(0deg);
+  }
+}
+
+.supply-material-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+
+  .supply-material-left {
+    position: relative;
+    width: 132px;
+    height: 118px;
+    background: linear-gradient(90deg, rgba(41, 137, 255, 0.2) 0%, rgba(41, 137, 255, 0.2) 100%);
+
+    .centerBox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .supply-material-name {
+      width: 100px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+
+  .supply-material-info {
+    text-align: center;
+    width: 180px;
+
+    .supply-material-data {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .supply-material-value {
+      width: 180px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.1);
+      line-height: 28px;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+
+      .unit {
+        font-size: 12px;
+      }
+    }
+  }
+}

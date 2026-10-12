@@ -1,0 +1,42 @@
+services:
+  scada-studio-service:
+    build:
+      context: ../../..
+      dockerfile: prod/cube/scada/scada-studio-service/Dockerfile
+    image: scada-studio-service:latest
+    container_name: scada-studio-service
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3100
+    ports:
+      - "3100:3100"
+    volumes:
+      - scada-studio-service-data:/app/prod/cube/scada/scada-studio-service/data
+
+  scada-studio:
+    build:
+      context: ../../..
+      dockerfile: prod/cube/scada/scada-studio/Dockerfile
+    image: scada-studio:latest
+    container_name: scada-studio
+    restart: unless-stopped
+    depends_on:
+      - scada-studio-service
+    ports:
+      - "5174:80"
+
+  scada-demo:
+    build:
+      context: ../../..
+      dockerfile: prod/cube/scada/scada-demo/Dockerfile
+    image: scada-demo:latest
+    container_name: scada-demo
+    restart: unless-stopped
+    depends_on:
+      - scada-studio-service
+    ports:
+      - "5175:80"
+
+volumes:
+  scada-studio-service-data:

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据大屏</title>
+  <meta version="<%- version %>" />
+  <script src="/config.js"></script>
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .monitor-modal .meet-room-modal-header{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="meetRoomDataViz" style="height: 100%; width: 100%;"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

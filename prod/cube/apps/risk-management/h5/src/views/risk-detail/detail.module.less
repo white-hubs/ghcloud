@@ -1,0 +1,77 @@
+.wrapper {
+  background: #f3f5f9;
+  min-height: calc(100vh - 46px);
+  position: relative;
+  padding-top: 10px;
+
+  .title {
+    padding: 10px 0px 10px 16px;
+  }
+
+  .basic {
+    margin-top: 12px;
+    background: #ffffff;
+  }
+
+  .detail {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+
+    .detailItem {
+      width: 100%;
+      label {
+        font-size: 14px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #86909C;
+      }
+
+      span {
+
+        font-size: 14px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #0B161E;
+      }
+    }
+  }
+
+  .note {
+    margin-top: 12px;
+    width: 319px;
+    padding-top: 13px;
+    padding-left: 9px;
+
+    background: #fafafa;
+    border-radius: 6px;
+    display: flex;
+
+    .title {
+      padding: 0px;
+      height: 13px;
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #1f3140;
+      line-height: 13px;
+    }
+
+    .content {
+      width: calc(100% - 60px);
+      height: 60px;
+      overflow-y: auto;
+      font-size: 13px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #a1a1a1;
+      line-height: 16px;
+    }
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0px;
+  }
+}

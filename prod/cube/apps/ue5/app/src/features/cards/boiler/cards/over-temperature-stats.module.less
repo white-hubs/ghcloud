@@ -1,0 +1,176 @@
+.body {
+  min-height: 320px;
+  gap: 10px;
+}
+
+.pieSurface {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 132px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.chartWrap {
+  display: flex;
+  flex: 0 0 118px;
+  width: 118px;
+  height: 118px;
+  align-items: center;
+  justify-content: center;
+}
+
+.levelList {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 140px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.levelItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 52px;
+  padding: 6px 10px;
+  background:
+    linear-gradient(135deg, rgba(241, 69, 69, 0.1), rgba(255, 171, 16, 0.03)),
+    var(--visual-card-inner-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(241, 120, 90, 0.28);
+  border-radius: 8px;
+}
+
+.levelTop,
+.levelBarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.levelTop {
+  justify-content: space-between;
+}
+
+.levelName {
+  overflow: hidden;
+  color: var(--visual-text-color, #e6f7ff);
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.levelCount {
+  color: #ff8d6b;
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 13px);
+  font-weight: 700;
+}
+
+.levelColor {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 2px;
+}
+
+.levelBarTrack {
+  display: block;
+  min-width: 0;
+  flex: 1;
+  height: 4px;
+  overflow: hidden;
+  background: rgba(255, 140, 100, 0.14);
+  border-radius: 999px;
+}
+
+.levelBarFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.levelShare {
+  color: var(--visual-muted-color, rgba(217, 231, 255, 0.78));
+  font-size: calc(var(--font-size-scale, 1) * 10px);
+}
+
+.emptyHint {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: center;
+  color: var(--visual-muted-color, rgba(217, 231, 255, 0.7));
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+}
+
+.pieCenterValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.pieCenterLabel {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  text-align: center;
+}
+
+.barChart {
+  min-height: 168px;
+  height: 168px;
+  padding: 4px 0 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.zoomBarChart {
+  min-height: 280px;
+  height: 280px;
+}
+
+:global(.boiler-card-body.is-zoom) {
+  .pieSurface {
+    min-height: 200px;
+    gap: 20px;
+  }
+
+  .chartWrap {
+    flex-basis: 180px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .levelList {
+    max-height: none;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"]) {
+  .levelItem {
+    background: linear-gradient(180deg, rgba(255, 248, 244, 0.98), rgba(255, 240, 232, 0.92));
+    border-color: rgba(232, 128, 96, 0.28);
+  }
+
+  .levelName,
+  .levelShare,
+  .pieCenterLabel,
+  .emptyHint {
+    color: #49628f;
+  }
+
+  .levelCount,
+  .pieCenterValue {
+    color: #d75a3a;
+  }
+}

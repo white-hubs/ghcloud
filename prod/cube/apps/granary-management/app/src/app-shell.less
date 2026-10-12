@@ -1,0 +1,130 @@
+/* 微前端 / RouterView 子页面需要占满 #cube-granary-management-app，避免中间区域高度塌陷与底部留白 */
+/* 对齐 legacy bimops-fe-web-migrate：#app、#appContainer 及子节点 height/width 100% */
+#cube-granary-management-app {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* ant-design-vue ConfigProvider 会在挂载点下多一层包裹，若不参与 flex，子节点 height:100% 会按内容高度计算，出现大块底部留白 */
+#cube-granary-management-app > * {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+#cube-granary-management-app .granary-management-app-shell {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+.granary-management-app-shell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+/* 与路由根节点形成完整 flex 链，否则 CubeLayout 的 height:100% / calc 无法计算 */
+.granary-management-router {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+/* 未使用 *-root 类名的路由页也能占满（如 granary-center） */
+.granary-management-router > * {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+/* 路由页根节点撑满壳层，避免 CubeLayout 高度按内容收缩、底部大块留白 */
+.granary-management-router .main-management-root,
+.granary-management-router .granary-unbind-root,
+.granary-management-router .warehouse-detail-dashboard-root,
+.granary-management-router .pallet-position-card-root,
+.granary-management-router .associate-devices-root,
+.granary-management-router .statistical-panel-root,
+.granary-management-router .radar-monitoring-root,
+.granary-management-router .granary-platform-hub-root,
+.granary-management-router .location-card-config-root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+/* meta.isFullWindow：fixed 盖住整个视口（仅独立打开子应用时）；qiankun 下由宿主收起壳层 */
+body.granary-management-full-window-active {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 若主应用在挂载祖先上使用 transform，会建立 containing block，导致 fixed 无法盖满视口，需在宿主侧规避 */
+.granary-management-app-shell--full-window {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+  height: 100dvh !important;
+  left: 0;
+  max-width: none;
+  min-height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw !important;
+  z-index: 3000;
+}
+
+.granary-management-app-shell--full-window .granary-management-router {
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  position: relative;
+  width: 100%;
+}
+
+.granary-management-app-shell--full-window .granary-management-router > .warehouse-detail-dashboard-root,
+.granary-management-app-shell--full-window .granary-management-router > .pallet-position-card-root {
+  bottom: 0;
+  flex: none;
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.granary-management-app-shell--full-window .granary-management-router > .statistical-panel-root,
+.granary-management-app-shell--full-window .granary-management-router > .granary-platform-hub-root {
+  bottom: 0;
+  flex: none;
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

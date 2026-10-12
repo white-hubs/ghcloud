@@ -1,0 +1,88 @@
+{
+  "path": "/industry/city.html",
+  "meta": {
+    "title": "城市案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "city",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E6%B8%A9%E6%B1%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E4%B8%AD%E5%BF%83.png",
+            "title": "温江大数据与电子政务中心",
+            "category": "城市",
+            "description": "古河云科技围绕提升城市治理能力智慧化水平提高数字政府服务能力。推行城市数据一网通用、城市运行一网统管、政务服务一网通办、公共服务一网通享，增强城市运行管理、决策辅助和应急处置能力。构建人、企、地、物、政五张城市基础要素全景图。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E5%9B%9B%E5%B7%9D%E5%A4%A9%E5%BA%9C%E6%96%B0%E5%8C%BAIDC%E4%B8%AD%E5%BF%83.jpeg",
+            "title": "中国联通四川天府新区IDC中心",
+            "category": "城市",
+            "description": "运用古河云科技数字孪生技术呈现别具风格的中国联通四川天府新区IDC中心，实现民生人口、商业消费、窗口效能、企业运营数据的一网统管，打造一体化一盘棋数字建设体系，推动在营商环境、生态文明、城市运营、民生保障、行政效能、公共支撑等领域的智慧管理。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

@@ -1,0 +1,54 @@
+.temporary-patrol {
+  height: 100vh;
+  background: #F3F7FA;
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    flex: 1;
+    margin-top: 12px;
+  }
+
+  .project {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+
+    .add{
+      width: 60px;
+    }
+  }
+
+  .uploadedList {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+
+    .uploaded {
+      position: relative;
+      margin-right: 12px;
+
+      img {
+        width: 65px;
+        height: 65px;
+        vertical-align: middle;
+      }
+
+      .van-icon-clear {
+        position: absolute;
+        right: -6px;
+        top: -8px;
+      }
+
+      :global {
+        .van-icon-clear {
+          position: absolute;
+          right: -6px;
+          top: -8px;
+        }
+      }
+    }
+  }
+
+}

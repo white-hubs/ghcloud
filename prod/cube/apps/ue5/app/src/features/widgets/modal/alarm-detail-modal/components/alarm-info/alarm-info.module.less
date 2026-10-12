@@ -1,0 +1,137 @@
+.alarmDetailInfo {
+  font-size: 16px;
+  color: var(--visual-data-modal-text-color, #ffffff);
+
+  .infoItem {
+    border-bottom: 1px dashed var(--visual-data-modal-toolbar-border, #394254);
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .infoItemTitle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+
+      .titleText {
+        font-size: 14px;
+        font-family: PingFang SC-Medium;
+        font-weight: 500;
+        color: var(--visual-data-modal-title-color, #ffffff);
+      }
+
+      .titleIcon {
+        width: 14px;
+        height: 14px;
+        background: rgba(41, 137, 255, 0.5);
+        border-radius: 50%;
+        position: relative;
+        margin-right: 4px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: var(--visual-primary, #2989ff);
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.userInfo {
+  width: 100%;
+  height: 300px;
+}
+
+.infoItemForm {
+  display: flex;
+  flex-wrap: wrap;
+
+  .formItem {
+    display: flex;
+    width: 33.33%;
+    line-height: 14px;
+    color: var(--visual-data-modal-muted-color, rgba(226, 226, 226, 0.75));
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-left: 18px;
+
+    .ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    > div {
+      display: inline-block;
+
+      &.formItemLabel {
+        width: 100px;
+        height: 20px;
+        text-align: right;
+        vertical-align: top;
+        margin-right: 5px;
+        color: var(--visual-data-modal-muted-color, rgba(226, 226, 226, 0.75));
+      }
+
+      &.formItemContent {
+        width: calc(100% - 70px);
+        color: var(--visual-data-modal-text-color, rgba(226, 226, 226, 1));
+
+        a {
+          color: var(--visual-data-modal-link-color, #4db3ff);
+        }
+      }
+    }
+  }
+
+  .formVideo {
+    width: 200px;
+    height: 110px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .formImage {
+    width: 60px;
+    height: 60px;
+    background: wheat;
+    margin-right: 8px;
+    display: inline-block;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.ellipsisFour {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}

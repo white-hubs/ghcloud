@@ -1,0 +1,377 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+@import "@/shared-ui/panel/v2-ring-legend.less";
+
+:global {
+  .device-situation-v2-body,
+  .monitor-situation-v2-body {
+    gap: 8px;
+  }
+
+  /* 总数卡：图标无底色方块 */
+  .device-situation-total-card,
+  .monitor-situation-total-card {
+    appearance: none;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 8px 12px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background: linear-gradient(145deg, rgba(47, 141, 255, 0.1), rgba(12, 230, 255, 0.02));
+    border: 1px solid rgba(99, 169, 255, 0.22);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .situation-v2-total-icon,
+  .situation-v2-metric-icon {
+    display: flex;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    img {
+      display: block;
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.28));
+    }
+  }
+
+  /* 四状态：无图标，保证大数字完整展示 */
+  .situation-v2-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .situation-v2-status-grid.is-two-by-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .situation-v2-status-grid.is-two-by-two .situation-v2-status-card {
+    min-height: 52px;
+    padding: 8px 10px;
+  }
+
+  .situation-v2-status-grid.is-two-by-two .situation-v2-status-value {
+    font-size: 18px;
+  }
+
+  .situation-v2-status-card {
+    appearance: none;
+    display: flex;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    padding: 6px 8px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background: linear-gradient(145deg, rgba(47, 141, 255, 0.08), rgba(12, 230, 255, 0.02));
+    border: 1px solid rgba(99, 169, 255, 0.18);
+    border-radius: 8px;
+  }
+
+  .situation-v2-status-card.is-online {
+    background: linear-gradient(145deg, rgba(0, 242, 123, 0.1), rgba(12, 230, 255, 0.02));
+    border-color: rgba(0, 242, 123, 0.26);
+  }
+
+  .situation-v2-status-card.is-offline {
+    background: linear-gradient(145deg, rgba(255, 171, 16, 0.1), rgba(255, 77, 79, 0.02));
+    border-color: rgba(255, 171, 16, 0.28);
+  }
+
+  .situation-v2-status-card.is-trouble {
+    background: linear-gradient(145deg, rgba(255, 199, 0, 0.1), rgba(255, 171, 16, 0.02));
+    border-color: rgba(255, 199, 0, 0.28);
+  }
+
+  .situation-v2-status-card.is-alarm {
+    background: linear-gradient(145deg, rgba(241, 69, 69, 0.1), rgba(255, 77, 79, 0.02));
+    border-color: rgba(241, 69, 69, 0.28);
+  }
+
+  .situation-v2-status-value {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: var(--access-control-value-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .situation-v2-status-card.is-online .situation-v2-status-value {
+    color: #00f27b;
+  }
+
+  .situation-v2-status-card.is-offline .situation-v2-status-value {
+    color: #ffab10;
+  }
+
+  .situation-v2-status-card.is-trouble .situation-v2-status-value {
+    color: #ffc700;
+  }
+
+  .situation-v2-status-card.is-alarm .situation-v2-status-value {
+    color: #f14545;
+  }
+
+  .situation-v2-status-label {
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.82));
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  /* 监控：紧凑五格条，避免铺太宽 */
+  .situation-v2-metric-strip {
+    display: grid;
+    grid-template-columns: 1.15fr repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .situation-v2-metric-cell {
+    appearance: none;
+    display: flex;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+    margin: 0;
+    padding: 6px 7px;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background: linear-gradient(145deg, rgba(47, 141, 255, 0.08), rgba(12, 230, 255, 0.02));
+    border: 1px solid rgba(99, 169, 255, 0.18);
+    border-radius: 8px;
+  }
+
+  .situation-v2-metric-cell.is-total {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+  }
+
+  .situation-v2-metric-cell.is-online {
+    background: linear-gradient(145deg, rgba(0, 242, 123, 0.1), rgba(12, 230, 255, 0.02));
+    border-color: rgba(0, 242, 123, 0.26);
+  }
+
+  .situation-v2-metric-cell.is-offline {
+    background: linear-gradient(145deg, rgba(255, 171, 16, 0.1), rgba(255, 77, 79, 0.02));
+    border-color: rgba(255, 171, 16, 0.28);
+  }
+
+  .situation-v2-metric-cell.is-trouble {
+    background: linear-gradient(145deg, rgba(255, 199, 0, 0.1), rgba(255, 171, 16, 0.02));
+    border-color: rgba(255, 199, 0, 0.28);
+  }
+
+  .situation-v2-metric-cell.is-alarm {
+    background: linear-gradient(145deg, rgba(241, 69, 69, 0.1), rgba(255, 77, 79, 0.02));
+    border-color: rgba(241, 69, 69, 0.28);
+  }
+
+  .situation-v2-metric-main {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .situation-v2-metric-value {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: var(--access-control-value-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .situation-v2-metric-label {
+    color: var(--access-control-text-label, rgba(220, 238, 255, 0.82));
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .situation-v2-pie-row {
+    padding: 4px 0 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  /* 图例对齐 PieList：扁平行，占比紧跟数值后 */
+  .situation-v2-legend {
+    .v2-ring-legend-list();
+  }
+
+  .situation-v2-legend.is-zoom {
+    .v2-ring-legend-list-zoom();
+  }
+
+  .situation-v2-legend-item {
+    .v2-ring-legend-item();
+
+    &:hover {
+      .v2-ring-legend-item-hover();
+    }
+  }
+
+  .situation-v2-legend-left {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .situation-v2-legend-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .situation-v2-legend-name {
+    overflow: hidden;
+    color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.84));
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .situation-v2-legend-right {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 8px;
+    min-width: 72px;
+  }
+
+  .situation-v2-legend-value {
+    color: var(--visual-number-color, #eff6ff);
+    font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .situation-v2-legend-share {
+    color: var(--access-control-text-secondary, rgba(217, 231, 255, 0.68));
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  :root[data-visual-theme="minimal-white"] .device-situation-v2-panel,
+  :root[data-visual-theme="minimal-white"] .monitor-situation-v2-panel {
+    .device-situation-total-card,
+    .monitor-situation-total-card,
+    .situation-v2-status-card {
+      background: linear-gradient(145deg, rgba(236, 245, 255, 0.96), rgba(255, 255, 255, 0.92));
+      border-color: rgba(82, 142, 222, 0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 4px 12px rgba(50, 102, 166, 0.08);
+    }
+
+    .situation-v2-status-card.is-online {
+      background: linear-gradient(145deg, rgba(230, 252, 244, 0.96), rgba(255, 255, 255, 0.94));
+      border-color: rgba(61, 184, 146, 0.32);
+    }
+
+    .situation-v2-status-card.is-offline,
+    .situation-v2-status-card.is-trouble {
+      background: linear-gradient(145deg, rgba(255, 244, 230, 0.96), rgba(255, 250, 244, 0.94));
+      border-color: rgba(230, 162, 60, 0.36);
+    }
+
+    .situation-v2-status-card.is-alarm {
+      background: linear-gradient(145deg, rgba(255, 236, 238, 0.96), rgba(255, 255, 255, 0.94));
+      border-color: rgba(220, 80, 90, 0.32);
+    }
+
+    .situation-v2-total-icon img {
+      filter: none;
+    }
+
+    .overview-v2-stat-value,
+    .situation-v2-legend-value {
+      color: #1455b3;
+      text-shadow: none;
+    }
+
+    /* 极简白：语义色加深，避免霓虹浅绿/浅黄看不清 */
+    .situation-v2-status-card.is-online .situation-v2-status-value {
+      color: #0f9b63;
+    }
+
+    .situation-v2-status-card.is-offline .situation-v2-status-value {
+      color: #d4890a;
+    }
+
+    .situation-v2-status-card.is-trouble .situation-v2-status-value {
+      color: #c99800;
+    }
+
+    .situation-v2-status-card.is-alarm .situation-v2-status-value {
+      color: #d93a3a;
+    }
+
+    .overview-v2-stat-label,
+    .situation-v2-status-label,
+    .situation-v2-legend-name,
+    .situation-v2-legend-share {
+      color: #49628f;
+    }
+
+    .situation-v2-legend-item {
+      .v2-ring-legend-item-minimal-white();
+    }
+
+    .plane-pie-box::after {
+      background-color: rgba(214, 233, 255, 0.65);
+    }
+  }
+}
+
+.v2-minimal-white-panel(device-situation-v2-panel);

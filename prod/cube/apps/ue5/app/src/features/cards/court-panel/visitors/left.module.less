@@ -1,0 +1,100 @@
+
+.monitorPanelBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 20px;
+
+  :deep(.monitorPanel-left) {
+    .bg {
+      width: 90px;
+
+      .rotate {
+        left: 30px;
+      }
+    }
+  }
+}
+
+.hospitalInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+
+  img {
+    width: 152px;
+    height: 128px;
+  }
+
+  .hospitalInfo-text {
+    width: 169px;
+    color: #fff;
+    font-size: 12px;
+
+    .hospitalInfo-title {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .scroll_box {
+    height: 100px;
+    overflow: hidden;
+
+    .scroll-text {
+      animation: scroll 10s linear infinite;
+      color: #D9E7FF;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.tab-container {
+  display: flex;
+  padding-right: 14px;
+  justify-self: flex-end;
+}
+
+.line-chart {
+  height: 200px;
+}
+
+.elevator-analysis {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+
+  .pie_list {
+    width: 180px;
+    height: 180px;
+
+    // margin-left: 10px;
+    :deep(.alarm-analysis-name) {
+      width: 90px;
+    }
+
+    :deep(.alarm-analysisBox) {
+      width: auto;
+    }
+  }
+
+  .chart {
+    flex: 1;
+    height: 140px;
+  }
+}
+.line-chart{
+  height: 180px;
+}

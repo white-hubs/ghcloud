@@ -1,0 +1,105 @@
+{
+  "path": "/industry/medical.html",
+  "meta": {
+    "title": "医疗案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "medical",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/5%E5%8C%BB%E9%99%A2.png",
+            "title": "成都市第五人民医院",
+            "category": "医疗",
+            "description": "古河云科技基于医院整体能耗高、缺乏整体能源信息窗口、运维管理效率低、智能化程度不高等问题。为成都市第五人民医院打造了一套能耗使用可预测、能耗数据价值挖掘、数据可视化展示、能耗实时监测诊断的数字医院节能降耗建设方案。",
+            "video": "https://qiniu.guhecloud.com/video/5%E5%8C%BB%E9%99%A2.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/6%E5%8C%BB%E9%99%A2.png",
+            "title": "成都市第六人民医院金牛院区",
+            "category": "医疗",
+            "description": "基于BIM、VR、数字孪生等技术，为院区进行了数字化集成升级与优化，建成了四川省内首个BIM运维+数字孪生可视化技术的医院智能化集成系统，实现了三维场景下医院的安全保障，减少了人力成本、降低了能耗成本、节约管理成本。",
+            "video": "https://qiniu.guhecloud.com/video/6%E5%8C%BB%E9%99%A2%E6%A1%88%E4%BE%8B%E9%A1%B5.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%86%85%E8%92%99%E5%8F%A4%E5%8C%BB%E9%99%A2.png",
+            "title": "内蒙古民族大学附属医院",
+            "category": "医疗",
+            "description": "内蒙古民族大学附属医院位于内蒙古自治区通辽市霍林河大街东段1742号。通过对医院的数字孪生，达到以虚预实的目的。提升场景数字化体验,实现能耗降低约15%,设备运行效率提升约20%，为医院实现精细化管理和降本增效助力。",
+            "video": "https://qiniu.guhecloud.com/video/%E5%86%85%E8%92%99%E5%8F%A4%E5%8C%BB%E9%99%A2%E6%94%B9.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%81%B5%E4%B9%89%E4%B8%AD%E5%8C%BB%E9%99%A2.png",
+            "title": "遵义市中医院",
+            "category": "医疗",
+            "description": "遵义市中医院智慧云医院综合运维管理系统，结合CAD图纸、BIM、GIS等进行3D模型的建立，1:1还原全院建筑和设备。基于空间的智能管理，提供完整解决方案，构建医院管理的智慧大脑，实现管理效率的大幅提升。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

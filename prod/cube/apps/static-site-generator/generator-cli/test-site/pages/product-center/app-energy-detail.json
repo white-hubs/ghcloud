@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-energy-detail.html",
+  "meta": {
+    "title": "能碳管理 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。 ",
+    "keywords": "能碳管理,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/能耗管理/main.png",
+        "productName": "能碳管理",
+        "productDescription": "支持多类型水电气、冷热源、变配电、光伏等多类型能源设备统一接入，实现数据自动采集、数据监测和能耗动态深度分析等，并可通过能流图、历史能耗、告警管理等模块对用能设备数据实时监控。 ",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "能碳管理"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">能耗监测系统指通过国家机关办公建筑和大型公共建筑安装分类能耗计量装置，采用远程传输等手段及时采集能耗数据，实现重点建筑能耗的在线监测和动态分析功能。</span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">通过能耗计量设备，记录设备抄表数据，对设备报警进行处理，将抄表数值进行统计，换算后进行能耗分析呈现，通过能耗数据的呈现，引入碳排放核算，将能耗使用转化为碳排并对其进行统计，生成报表，支持报表导出。</span><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965356408364871682.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgba(255, 255, 255, 0.5); font-size: 19px;\"><strong>深度能碳分析</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">系统对收集的数据进行深度分析，识别能耗高峰、低谷和异常情况，生成详细的能耗报告。这可以为企业决策者提供有关能源消耗和碳排放的依据，制定节能减排策略。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgba(255, 255, 255, 0.5); font-size: 19px;\"><strong>科学碳排放管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">系统计算设备的碳排放量，帮助企业监测碳排放情况，制定减排策略。这有助于企业实现低碳发展，满足政府和行业的节能减排要求。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965255577208631298.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp; &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965255601271353346.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgba(255, 255, 255, 0.5); font-size: 19px;\"><strong>精细计量设备</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">通过安装在设备上的传感器收集能源消耗数据，实时监测设备的运行状态、能耗情况和环境参数。这有助于及时发现设备故障、能源浪费等问题。</span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgba(255, 255, 255, 0.5); font-size: 19px;\"><strong>全面能耗管理</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">系统设定阈值，当能耗或碳排放超过预设值时，自动发出报警和预警，提示相关人员采取措施。这有助于及时处理能源异常和设备故障，减少损失。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965255754170511361.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"> &nbsp; &nbsp; &nbsp; &nbsp;<img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965255775578238978.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 30%;\"></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgba(255, 255, 255, 0.16); font-size: 19px;\"><strong>高效能耗预测</strong></span></p><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">系统支持对能耗数据进行建模，从而检测出能耗数据的异常值，以及预测未来一段时间内的能耗值。这有助于提高能源利用效率，降低能源成本。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344408781115393",
+            "name": "入侵报警",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/入侵报警/main.png",
+            "version": "1.0.1",
+            "description": "通过设备导入管理模块建立设备与系统的链接形成标准的设备运维解决方案，可以解决用户对设备的状态和工作数据监测管理，节约用户的管理成本，同样，也可将本解决方案快速复制到其他有入侵报警的需求做通用解决方案实现入侵报警的监管，以支撑客户方的管理诉求和行业解决方案的标准化。",
+            "href": "/product-center/app-intrusion-detail.html"
+          },
+          {
+            "id": "1811344411092176897",
+            "name": "冷热源",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/冷热源/main.png",
+            "version": "1.0.1",
+            "description": "通过对冷热源系统的对接，可对冷热源系统设备参数进行管理。如针对主机启停状态、制冷制热模式、锅炉、热循环泵压力、温度、冷却塔回水温、冷冻水温度压力、冷却泵/冷冻泵状态等。",
+            "href": "/product-center/app-hvac-detail.html"
+          },
+          {
+            "id": "1811344411369000962",
+            "name": "维保作业",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/维保作业/main.png",
+            "version": "1.0.1",
+            "description": "针对设备的日常周期性维保作业场景，系统提供维保作业标准工作模块，按照月度计划或者年度周期性建立计划维保工作，设定维保作业执行周期、工作内容、作业设备范围、作业步骤、作业班组、作业负责人。",
+            "href": "/product-center/app-maintenance-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

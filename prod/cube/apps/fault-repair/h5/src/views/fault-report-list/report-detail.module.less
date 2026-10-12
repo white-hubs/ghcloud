@@ -1,0 +1,89 @@
+@media screen and (orientation: portrait) {
+  .wrapper {
+    background: rgb(243, 247, 250);
+    padding: 10px;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    /* IE 9
+  -webkit-transform-origin:0% 0%; /* Safari 和 Chrome */
+    -moz-transform-origin: 0% 0%;
+    /* Firefox */
+    -o-transform-origin: 0% 0%;
+    /* Opera */
+    width: 100vh;
+    height: 55vh;
+    overflow: scroll;
+  }
+}
+
+.card {
+  margin: 4px;
+  // padding: 0 10px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(243, 247, 250);
+}
+
+.content {
+  padding: 5px 10px;
+  line-height: 25px;
+  color: #3d3b3b;
+}
+
+.table {
+  width: 94vh;
+  overflow: scroll;
+
+  table tbody {
+    display: block;
+    min-height: 30px;
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+
+  table {
+    width: 94vh;
+  }
+
+  table thead,
+  tbody tr {
+    display: table;
+    width: 160px;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 160px;
+  }
+  td{ color: #666666;}
+
+  table thead {
+    width: 94vh;
+  }
+
+  table thead th {
+    width: 160px;
+    background: #d2ebfd;
+    font-weight: 400;
+   
+  }
+}

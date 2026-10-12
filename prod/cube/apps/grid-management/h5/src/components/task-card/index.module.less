@@ -1,0 +1,158 @@
+.task-card {
+  .task-stat {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    .task-stat-item {
+      padding: 12px;
+      flex: 1;
+      border-radius: 6px;
+      background: #f5f8ff;
+
+      &.alarm-count {
+        .item-value {
+          color: #2152B3;
+        }
+      }
+
+      &.alarm-doing {
+        .item-value {
+          color: #FF7132;
+        }
+      }
+
+      &.alarm-done {
+        .item-value {
+          color: #29BC9F;
+        }
+      }
+
+      &.task-count {
+        background: #e4eefc;
+      }
+
+      &.task-doing {
+        background: #fff2ec;
+
+        .item-value {
+          color: #FF7132;
+        }
+      }
+
+      &.task-done {
+        background: #e3fbfd;
+
+        .item-value {
+          color: #29BC9F;
+        }
+      }
+
+      .item-label {
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        color: #373840;
+      }
+
+      .item-value {
+        font-size: 19px;
+        font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+        font-weight: Regular;
+        color: #2152b3;
+      }
+    }
+  }
+
+  .task-list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 360px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    .task-item {
+      padding: 16px 12px;
+      background: #f9fbff;
+      border-radius: 8px;
+
+      .task-item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .task-item-title {
+          font-size: 15px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          text-align: left;
+          color: #172433;
+        }
+
+        .task-item-status {
+          padding: 4px;
+          background: rgba(246, 151, 3, 0.16);
+          border-radius: 4px;
+          font-size: 12px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #f69703;
+          flex-shrink: 0;
+
+          &.DONE {
+            color: #FFF;
+            background: #29BC9F;
+          }
+
+        }
+      }
+
+      .task-item-content {
+        margin-top: 8px;
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        // justify-content: space-between;
+        gap: 4px;
+
+        .task-item-content-item {
+          font-size: 14px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+          font-weight: Regular;
+          text-align: left;
+          color: #8e97a4;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          // &:last-child {
+          //   &::after {
+          //     display: none;
+          //   }
+          // }
+
+          // &::after {
+          //   content: '';
+          //   width: 1px;
+          //   height: 12px;
+          //   // background: #e0e0e0;
+          //   border: 1px dashed #8e97a4;
+          //   margin-left: 56px;
+          // }
+        }
+      }
+    }
+
+    .load-status {
+      padding: 8px 0;
+      color: #969799;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

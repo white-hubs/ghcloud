@@ -1,0 +1,96 @@
+{
+  "path": "/industry/transport.html",
+  "meta": {
+    "title": "交通案例 - 古河云科技"
+  },
+  "components": [
+    {
+      "name": "SwiperCarousel",
+      "props": {
+        "items": [
+          {
+            "image": "https://qiniu.guhecloud.com/kaihe-static/images/cases/cases-banner.webp",
+            "title": "行业案例",
+            "subtitle": "深度构建多场景细分解决方案",
+            "titleColor": "#ffffff",
+            "subtitleColor": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "props": {
+        "categories": [
+          {
+            "id": "park",
+            "name": "园区",
+            "href": "/industry/park.html#category-filter"
+          },
+          {
+            "id": "venue",
+            "name": "场馆",
+            "href": "/industry/venue.html#category-filter"
+          },
+          {
+            "id": "transport",
+            "name": "交通",
+            "href": "/industry/transport.html#category-filter"
+          },
+          {
+            "id": "medical",
+            "name": "医疗",
+            "href": "/industry/medical.html#category-filter"
+          },
+          {
+            "id": "education",
+            "name": "教育",
+            "href": "/industry/education.html#category-filter"
+          },
+          {
+            "id": "city",
+            "name": "城市",
+            "href": "/industry/city.html#category-filter"
+          },
+          {
+            "id": "other",
+            "name": "其他",
+            "href": "/industry/other.html#category-filter"
+          }
+        ],
+        "activeId": "transport",
+        "allHref": "/industry.html#category-filter"
+      }
+    },
+    {
+      "name": "IndustryCases",
+      "props": {
+        "cases": [
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E9%AB%98%E9%93%81%E7%AB%99.png",
+            "title": "高铁站",
+            "category": "交通",
+            "description": "对高铁站智慧运营模式进行总体设计，呈现三维高铁站可视化平台。BIM三维建模，使数据和文本集成在一体化平台，结合GIS将现实世界中对象的空间位置与相关属性有机结合起来，从而为空间决策提供技术支持，让决策变得及时、准确。",
+            "video": "https://qiniu.guhecloud.com/video/%E4%BD%9B%E5%B1%B1%E9%AB%98%E9%93%81.mp4",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/%E5%A4%AA%E5%8E%9F%E5%8D%97.jpeg",
+            "title": "太原高铁站二期",
+            "category": "交通",
+            "description": "通过可视化、数字化、智能化手段的加持，让安检、票务、列车管理等系统数据有效融合。结合边缘计算、数据中台、语音识别、人工智能等技术实现智能安检、一键开关站、智能客服、智慧照明、风水联动等多种智慧功能，提高车站运维效率和乘客满意度。",
+            "href": "/industry/demo.html"
+          },
+          {
+            "image": "https://qiniu.guhecloud.com/imgs/pages/industry/5%E5%8F%B7%E7%BA%BF.png",
+            "title": "成都地铁五号线一、二期",
+            "category": "交通",
+            "description": "依托 PC 端、移动端，达到信息的实时发布，减少信息传递层级，确保实效性，实现多部门之间的协同作业。通过大数据、人工智能和可视化技术的应用，实现大数据运营模式，进一步提升服务质量、管理水平以及旅客满意度，赋能高铁运营全面发展。",
+            "href": "/industry/demo.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

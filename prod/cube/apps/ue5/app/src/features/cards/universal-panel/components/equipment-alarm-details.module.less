@@ -1,0 +1,54 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+.cardBody {
+  min-width: 0;
+}
+
+.tableSurface {
+  flex: 1 1 auto;
+  min-height: 140px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.moreLink {
+  padding: 0;
+  color: var(--visual-accent-color, #5ea6ff);
+  font-size: var(--up-font-label, 12px);
+  line-height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.statusPending {
+  color: #f14545;
+}
+
+.statusProcessing {
+  color: #ffab10;
+}
+
+.statusDone {
+  color: #00f27b;
+}
+
+.zoomBody {
+  .tableSurface {
+    min-height: 330px;
+    max-height: none;
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .equipment-alarm-details-v2-panel) {
+  .moreLink {
+    color: var(--visual-accent-color, #2f7fe8);
+  }
+}
+
+.v2-minimal-white-panel(equipment-alarm-details-v2-panel);

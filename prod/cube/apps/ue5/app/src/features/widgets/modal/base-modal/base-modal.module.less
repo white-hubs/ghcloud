@@ -1,0 +1,41 @@
+
+.global-base-modal-wrapper {
+  :global(.ant-modal) {
+    background: transparent;
+    font-family: sourceMedium;
+  }
+
+  :global(.ant-modal-content) {
+    overflow: hidden;
+    background: var(--visual-data-modal-content-bg, var(--visual-data-modal-bg, rgba(4, 23, 56, 0.18))) !important;
+    border: 1px solid var(--visual-data-modal-border, #2989ff);
+    border-radius: 8px;
+    box-shadow: var(--visual-data-modal-shadow, 0 10px 28px rgba(0, 0, 0, 0.32));
+    backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+    -webkit-backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+  }
+
+  :global(.ant-modal-body) {
+    border: 0;
+    min-height: 20vh;
+    color: var(--visual-data-modal-text-color, #fff);
+    background: var(--visual-data-modal-body-bg, rgba(4, 20, 42, 0.42));
+  }
+}
+
+.global-business-modal-wrapper {
+  :global(.ant-modal-body) {
+    background: var(--visual-data-modal-body-bg, rgba(4, 20, 42, 0.42));
+    color: var(--visual-data-modal-text-color, #fff);
+  }
+
+  :global(.ant-modal-content) {
+    overflow: hidden;
+    background: var(--visual-data-modal-content-bg, var(--visual-data-modal-bg, rgba(4, 23, 56, 0.18))) !important;
+    border: 1px solid var(--visual-data-modal-border, #2989ff);
+    border-radius: 8px;
+    box-shadow: var(--visual-data-modal-shadow, 0 10px 28px rgba(0, 0, 0, 0.32));
+    backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+    -webkit-backdrop-filter: var(--visual-data-modal-backdrop-filter, none);
+  }
+}

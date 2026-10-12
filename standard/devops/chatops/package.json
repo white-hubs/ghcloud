@@ -1,0 +1,21 @@
+{
+  "name": "@ghcloud/chatops-server",
+  "module": "./src/main.ts",
+  "main": "./src/main.ts",
+  "type": "module",
+  "version": "0.6.1",
+  "scripts": {
+    "start": "bun src/main.ts",
+    "dev": "bun --watch --inspect=4000 debug.ts",
+    "build:pkg": "bun build src/main.ts --compile --outfile=./.bin/chatops-server"
+  },
+  "dependencies": {
+    "@dangao/bun-server": "catalog:bun-server",
+    "@dangao/logsmith": "catalog:bun-server",
+    "reflect-metadata": "0.2.2"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

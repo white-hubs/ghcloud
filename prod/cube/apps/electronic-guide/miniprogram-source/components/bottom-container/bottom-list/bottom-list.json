@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-tabs":"../v-tab/v-tab",
+    "point-item":"./point-item/point-item",
+    "floor-select":"./floor-select/floor-select"
+  }
+}

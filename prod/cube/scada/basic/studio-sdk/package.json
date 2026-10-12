@@ -1,0 +1,42 @@
+{
+  "name": "@cube-scada/studio-sdk",
+  "version": "0.1.6",
+  "description": "Cube SCADA studio runtime SDK for embedding pages in external apps.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build",
+    "publish:nexus": "npm publish --registry http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.guhecloud.com:8888/repository/npm-hosted/"
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  },
+  "dependencies": {
+    "@cube-scada/core": "workspace:*",
+    "@cube-scada/elements": "workspace:*",
+    "@cube-scada/engine": "workspace:*",
+    "@cube-scada/runtime": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}

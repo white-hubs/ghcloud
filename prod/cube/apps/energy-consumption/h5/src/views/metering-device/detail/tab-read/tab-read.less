@@ -1,0 +1,77 @@
+.read{
+  margin: 10px;
+  height: calc(100vh - 50px);
+
+  .empty{
+    height: calc(100vh - 60px);
+    background-color: #fff;
+  }
+  
+  .van-pull-refresh{
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+
+  .list-item{
+    width: 94vw;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    .left{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 5px;
+      .img{
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .right{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      .item{
+        width: 100%;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 4px;
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #666666;
+
+        &.title{
+          text-align: left;
+          color: #1F3140;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 17px;
+          font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+          font-weight: Medium;
+          color: #0e161d;
+          padding: 4px 0;
+          margin: 0 10px;   
+          .name{
+            
+          }
+          .value{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    em{
+      font-size: 13px;
+      color: #000;
+      font-style: normal;
+    }
+  }
+}

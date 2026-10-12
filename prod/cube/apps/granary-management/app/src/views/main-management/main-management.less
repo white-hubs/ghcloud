@@ -1,0 +1,229 @@
+/* CubeLayout：禁止底栏被 flex-wrap 折到右侧；主区仅表格滚动；分页固定在底栏右侧 */
+.main-management-root {
+  box-sizing: border-box;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+
+  :global([class*='layout-container']) {
+    flex-wrap: nowrap !important;
+  }
+
+  :global(#cube-layout-content) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  :global([class*='layout-footer']) {
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+
+  :global([class*='layout-footer']) > :global([class*='footer-btn']:empty) {
+    display: none;
+  }
+
+  :global([class*='footer-page']) {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    min-width: 0;
+  }
+}
+
+.main-management-page {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  min-width: 0;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+.main-management-table-wrap {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  :global(.ant-table-wrapper) {
+    max-width: 100%;
+  }
+}
+
+/* 固定列宽 + scroll.x，避免表格在宽容器内右侧大块留白 */
+.main-management-bound-table {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Table customRender 使用单一根节点，避免 Fragment 在单元格内导致渲染异常 */
+.main-management-table-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  max-width: 100%;
+}
+
+
+.main-management-bind-toggle {
+  padding-top: 12px;
+  display: inline-flex;
+  flex-shrink: 0;
+
+  :where(.ant-btn) {
+    border-radius: 0;
+    margin-inline-end: -1px;
+  }
+
+  :where(.ant-btn:first-child) {
+    border-radius: 4px 0 0 4px;
+  }
+
+  :where(.ant-btn:last-child) {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.main-management-permission-modal {
+  box-sizing: border-box;
+  min-height: 460px;
+  padding: 16px 0;
+}
+
+.main-management-permission-filter {
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 64px;
+  gap: 12px;
+  width: 100%;
+}
+
+.main-management-permission-filter-input-wrap {
+  box-sizing: border-box;
+  min-width: 0;
+
+  .ant-input-affix-wrapper {
+    align-items: center;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0 11px;
+    width: 100%;
+  }
+
+  .ant-input-affix-wrapper-focused {
+    box-shadow: none;
+  }
+
+  .ant-input {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+.main-management-permission-dept-select {
+  min-width: 160px;
+  width: 160px;
+}
+
+.main-management-permission-filter > .ant-btn {
+  height: 32px;
+  padding: 0;
+  width: 64px;
+}
+
+
+.main-management-permission-content {
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 44% 56%;
+  height: 380px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.main-management-permission-dept-pane {
+  border-right: 1px solid #f0f0f0;
+  overflow: auto;
+  padding: 8px 0;
+}
+
+.main-management-permission-role-pane {
+  padding: 4px 0;
+}
+
+.main-management-permission-role-item {
+  cursor: pointer;
+  line-height: 32px;
+  min-height: 32px;
+  padding: 0 12px;
+  user-select: none;
+}
+
+.main-management-permission-role-item:hover {
+  background: #f5f7fa;
+}
+
+.main-management-permission-role-item.is-active {
+  background: #eaf4ff;
+  color: #1677ff;
+}
+
+.main-management-permission-dept-item {
+  cursor: pointer;
+  line-height: 32px;
+  min-height: 32px;
+  padding-right: 12px;
+  user-select: none;
+}
+
+.main-management-permission-dept-item:hover {
+  background: #f5f7fa;
+}
+
+.main-management-permission-dept-item.is-active {
+  background: #eaf4ff;
+  color: #1677ff;
+}
+
+.main-management-permission-user-pane {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 8px 12px;
+}
+
+.main-management-permission-user-item {
+  line-height: 32px;
+  min-height: 32px;
+}
+
+.main-management-permission-empty {
+  color: #999;
+  padding: 16px;
+}
+
+.main-management-permission-loading {
+  color: #999;
+  padding: 16px;
+  text-align: center;
+}
+
+.main-management-permission-footer {
+  display: flex;
+  justify-content: flex-end;
+}

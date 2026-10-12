@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta version="<%- version %>" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="/basscss.css" />
+  <script src="/config.js"></script>
+  <script>
+    (function () {
+      try {
+        var cacheText = localStorage.getItem("system-title-cache");
+        var lastUserId = localStorage.getItem("lastUserId");
+        if (!cacheText || !lastUserId) return;
+        var cache = JSON.parse(cacheText);
+        var userCache = cache && cache[lastUserId];
+        if (!userCache) return;
+        var lastTenantId = userCache.lastTenantId;
+        var tenantInfo =
+          lastTenantId && userCache.tenants ? userCache.tenants[lastTenantId] : null;
+        var cachedLogo = tenantInfo && tenantInfo.logo;
+        if (typeof cachedLogo === "string" && cachedLogo.trim()) {
+          window.__startupTenantLogo = cachedLogo;
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <title></title>
+  <link rel="icon" id="dynamic-favicon" href="/favicon.ico" type="image/x-icon">
+  <script>
+    (function () {
+      var cachedLogo = window.__startupTenantLogo;
+      if (typeof cachedLogo === "string" && cachedLogo.trim()) {
+        var icon = document.getElementById("dynamic-favicon");
+        if (icon) {
+          icon.setAttribute("href", cachedLogo);
+        }
+      }
+    })();
+  </script>
+
+</head>
+
+<body>
+  <style>
+    .svg-loading{
+      fill: #4096ff;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      width: 3vw;
+    }
+  </style>
+
+
+  <noscript>
+    <strong>
+      We're sorry but doesn't work
+      properly without JavaScript enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div id="app">
+      <svg class="svg-loading"  viewBox="0 0 135 140" xmlns="http://www.w3.org/2000/svg">
+        <rect y="10" width="15" height="120" rx="6">
+          <animate attributeName="height" begin="0.5s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+            calcMode="linear" repeatCount="indefinite" />
+          <animate attributeName="y" begin="0.5s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+            repeatCount="indefinite" />
+        </rect>
+        <rect x="30" y="10" width="15" height="120" rx="6">
+          <animate attributeName="height" begin="0.25s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+            calcMode="linear" repeatCount="indefinite" />
+          <animate attributeName="y" begin="0.25s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+            repeatCount="indefinite" />
+        </rect>
+        <rect x="60" width="15" height="140" rx="6">
+          <animate attributeName="height" begin="0s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+            calcMode="linear" repeatCount="indefinite" />
+          <animate attributeName="y" begin="0s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+            repeatCount="indefinite" />
+        </rect>
+        <rect x="90" y="10" width="15" height="120" rx="6">
+          <animate attributeName="height" begin="0.25s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+            calcMode="linear" repeatCount="indefinite" />
+          <animate attributeName="y" begin="0.25s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+            repeatCount="indefinite" />
+        </rect>
+        <rect x="120" y="10" width="15" height="120" rx="6">
+          <animate attributeName="height" begin="0.5s" dur="1s" values="120;110;100;90;80;70;60;50;40;140;120"
+            calcMode="linear" repeatCount="indefinite" />
+          <animate attributeName="y" begin="0.5s" dur="1s" values="10;15;20;25;30;35;40;45;50;0;10" calcMode="linear"
+            repeatCount="indefinite" />
+        </rect>
+      </svg>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+
+    window.less = {
+      async: true,
+      env: "production",
+    };
+
+  </script>
+  <script type="text/javascript" src="/less.min.js"></script>
+</body>
+
+</html>

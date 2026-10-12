@@ -1,0 +1,28 @@
+<view class="point-item {{$state.checkedPoint.id=== pointItem.id?'active':''}}">
+	<image wx:if="{{pointItem.filePath}}" class="merchant-png" src="{{pointItem.filePath}}">
+	</image>
+	<image wx:else src="../../../static/images/default-merchant.png" class="merchant-png"></image>
+	<view class="content">
+		<view class="title">
+			{{pointItem.name}}
+		</view>
+		<view class="address">
+			<image class="icon" src="../../../static/images/area-icon.png"></image>
+			<text>{{pointItem.areaName}}</text>
+		</view>
+		<view class="address">
+			<image class="icon" src="../../../static/images/address-icon.png"></image>
+			<text>{{pointItem.address}}</text>
+		</view>
+	</view>
+	<view class="right">
+		<view class="share">
+			<image src="../../../static/images/share.png"></image>
+			<button style="margin-right: 0;" class="share-btn" open-type="share" data-info="{{pointItem}}">分享</button>
+		</view>
+		<view class="right-nav" catchtap="handleNav">
+			<image class="nav-png" src="../../../static/images/nav.png"></image>
+			<view>到这去</view>
+		</view>
+	</view>
+</view>

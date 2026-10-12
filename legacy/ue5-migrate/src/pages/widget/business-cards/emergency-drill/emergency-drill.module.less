@@ -1,0 +1,99 @@
+.emergencyDrill {
+  width: 100%;
+  height: 100%;
+}
+
+.tags{
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 1px 3px;
+  font-size: 13px;
+  font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+  font-weight: Regular;
+  text-align: center;
+  white-space: nowrap;
+
+  &.finish{
+    color: #58fab6;
+    background: rgba(88,250,182,0.20);
+    border: 1px solid #58fab6;
+  }
+  &.handing{
+    color: #21F2FB;
+    background: rgba(24,192,199,0.20);
+    border: 1px solid #21F2FB;
+  }
+  &.waiting{
+    color: #FFAB10;
+    background: rgba(255,171,16,0.20);
+    border: 1px solid #FFAB10;
+  }
+}
+.time{
+  
+}
+.stepInfo {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  .item{
+    padding: 9px 6px;
+    margin-bottom: 6px;
+    background: rgba(0,0,0,0.20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover{
+      background: linear-gradient(90deg,rgba(21,120,255,0.20) 1%, rgba(21,120,255,0.20) 98%);
+      border-image: linear-gradient(270deg, rgba(21,120,255,0.10), rgba(21,120,255,0.40) 100%) 1 1;
+    }
+
+    .label{
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #d9e7ff;
+      line-height: 14px;
+      // 超出1行显示省略号
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &.show{
+        line-height: 18px;
+        overflow: visible;
+        text-overflow: visible;
+        white-space: inherit;
+      }
+    }
+    .btns{
+      cursor: pointer;
+      white-space: nowrap;
+      .btn{
+        padding: 0 4px;
+        font-size: 13px;
+        font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+        font-weight: Regular;
+        text-align: left;
+        color: #ffffff;
+        border-radius: 2px;
+        &.info{
+          background: #1578ff;
+          border: 1px solid rgba(21,120,255,0.50);
+          color: #ffffff;
+          white-space: nowrap;
+        }
+        &.call{
+          background: rgba(21,120,255,0.20);
+          border: 1px solid rgba(21,120,255,0.50);
+          color: #589EFF;
+        }
+        .icon{
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+}

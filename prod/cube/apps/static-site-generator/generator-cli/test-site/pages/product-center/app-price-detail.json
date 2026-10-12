@@ -1,0 +1,122 @@
+{
+  "path": "/product-center/app-price-detail.html",
+  "meta": {
+    "title": "商品采价 - 应用详情 - 古河云科技",
+    "navStyle": "dark",
+    "description": "商品采价功能用于农批场景下，主要是辅助管理方对场内的商品价格进行采价，了解各类商品价格趋势，动态掌握商品市场行情，给市场经营管理决策提供数据支撑。",
+    "keywords": "商品采价,智慧园区,物联网,数字化"
+  },
+  "components": [
+    {
+      "name": "AppDetailHero",
+      "props": {
+        "productImage": "https://cube.guhecloud.com/resource/app-icons/商品采价/main.png",
+        "productName": "商品采价",
+        "productDescription": "商品采价功能用于农批场景下，主要是辅助管理方对场内的商品价格进行采价，了解各类商品价格趋势，动态掌握商品市场行情，给市场经营管理决策提供数据支撑。",
+        "contactHref": "/consultation.html",
+        "backHref": "/product-center/app.html",
+        "breadcrumbs": [
+          {
+            "name": "首页",
+            "href": "/"
+          },
+          {
+            "name": "应用中心",
+            "href": "/product-center/app.html"
+          },
+          {
+            "name": "商品采价"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProductDetailAnchor",
+      "props": {
+        "anchors": [
+          {
+            "id": "product-intro",
+            "name": "产品介绍"
+          },
+          {
+            "id": "features",
+            "name": "功能说明"
+          },
+          {
+            "id": "help",
+            "name": "使用帮助"
+          },
+          {
+            "id": "purchase",
+            "name": "购买说明"
+          },
+          {
+            "id": "recommendations",
+            "name": "推荐应用"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='product-intro'>产品介绍</h2><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">商品采价功能是农产品批发市场数字化管理中的核心模块，旨在系统性地协助管理方对场内各类商品的价格进行采集、监控与分析。该功能通过移动终端或线上平台，高效完成每日主要农产品的价格录入与更新，覆盖蔬菜、水果、粮油、肉类等多个重要品类，有效避免人工记录误差，提升数据准确性与及时性。</span></p><p style=\"text-align: start;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">系统能够对历史采价数据进行自动归档与趋势分析，通过可视化图表直观展示不同时期、不同品类商品的价格波动情况，帮助管理人员动态掌握市场行情变化，识别价格异常与周期性规律。此外，该系统还支持生成价格行情报告，为市场经营决策、租金定价、招商调控等提供可靠的数据支撑，进一步提升农批市场的运营透明度与管理效率，助力市场在竞争环境中保持敏锐的数据响应和决策能力。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='features'>功能说明</h2><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>采价预警</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">采价预警是用来监测商品采价过程中是否有不合理的价格数据，一旦有异常的数据立即提醒、通知采价管理人员核实数据，保证商品行情来源的数据真实有效。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965316611491508225.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>采价计划</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">用于采价管理人员制定采价计划，包括采价时间、采价的商品品类、采价的人员等，系统可按照制定的计划定期生成对应采价任务，下发给对应人员。</span></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 19px;\"><strong>采价任务</strong></span></h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); font-size: 15px;\">支持查询采价计划系统生成采价任务；支持临时新建采价任务，临时新增的任务填写任务基础信息，采价商品品类，采价人员等数据即可。</span></p><p style=\"text-align: center;\"><img src=\"https://cube.guhecloud.com:3000/minio/ouaa/1965316807327756290.png\" alt=\"\" data-href=\"\" style=\"display:inline-block;width: 50%;\"></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='help'>使用帮助</h2><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>部署模式</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">平台支持多种部署方式：针对成本预算有限，可使用SaaS化模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">针对需要自建平台，私有化管理的方式，可以使用本地部署模式。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+SaaS服务</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件采购安装+平台按年支付少量服务费用。</span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\"><strong>硬件+本地部署</strong></span></p><p style=\"text-align: left;\"><span style=\"font-size: 15px;\">硬件+软件采购，质保一年，后续支付一定售后维保费用。</span></p>",
+        "background": "gray"
+      }
+    },
+    {
+      "name": "RichText",
+      "props": {
+        "content": "<div style=\"padding: 1.875vw 18.75vw;\"><h2 style='font-size: 24px; font-weight: bold; color: #262626; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; text-align: left;' id='purchase'>购买说明</h2><p style=\"text-align: left;\"><span style=\"color: rgb(38, 38, 38); background-color: rgb(255, 255, 255); font-size: 15px;\">针对安装之后的运营服务支持。如：定期设备巡检、定期系统巡检、设备维护与修复、设备升级等。体现出合同内部分的免费与合同外部分的增值收费项目。</span></p>",
+        "background": "white"
+      }
+    },
+    {
+      "name": "AppRecommendations",
+      "props": {
+        "title": "推荐应用",
+        "apps": [
+          {
+            "id": "1811344411398361090",
+            "name": "委外维修",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/委外维修/main.png",
+            "version": "1.0.1",
+            "description": "在运维领域，工程维护部会以智能化业务系统的维度与运维公司签订委外运维合同，委外维修管理包含设备部件委外、服务外委、外单位入场维修等多种模式。",
+            "href": "/product-center/app-outsourcing-detail.html"
+          },
+          {
+            "id": "1811344408730783745",
+            "name": "广播中心",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/广播中心/main.png",
+            "version": "1.0.0",
+            "description": "广播中心模块，通过对应园区IP广播系统，提供广播喊话的能力，园区出现安全报警时联动广播设备，配合指挥调度快速响应，调动现场人员发挥指挥中心大脑作用。",
+            "href": "/product-center/app-broadcast-detail.html"
+          },
+          {
+            "id": "1811344408881778690",
+            "name": "指挥调度",
+            "icon": "https://cube.guhecloud.com/resource/app-icons/消息中心/main.png",
+            "version": "1.0.2",
+            "description": "运用AI人工智能、大数据、云计算、智慧消防、融合通信等先进技术，围绕设备实时监测、安全数据上报、事件调度处理、数据智能分析，实现企业综合管控和调度指挥，为安全生产、安全监管提供有力保障。",
+            "href": "/product-center/app-command-detail.html"
+          }
+        ]
+      }
+    }
+  ],
+  "layout": "default"
+}

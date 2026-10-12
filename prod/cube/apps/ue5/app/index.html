@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta version="<%- version %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, user-scalable=no" />
+  <title>三维可视化</title>
+  <script>
+    (function () {
+      try {
+        var cached = localStorage.getItem("ue5-system-title");
+        if (cached && cached.trim()) {
+          document.title = cached.trim();
+        }
+      } catch (_err) {}
+    })();
+  </script>
+  <script src="config.js"></script>
+  <script>
+    (function () {
+      // Match viewport-metrics: set rem root before first paint so any rem splash CSS is readable.
+      var root = document.documentElement;
+      var width = root.clientWidth || window.innerWidth || 0;
+      var height = root.clientHeight || window.innerHeight || 0;
+      var rawScale = width > 0 && height > 0 ? Math.min(width / 1920, height / 1080) : 1;
+      var uiScale = Math.max(1, rawScale);
+      root.style.fontSize = 192 * uiScale + "px";
+
+      // Login / app-root: keep splash but use login copy (do not leave a bare background).
+      var base = "<%- publicPath %>".replace(/\/+$/, "");
+      var path = (location.pathname || "").replace(/\/+$/, "") || "/";
+      var tail = path;
+      if (base && (path === base || path.indexOf(base + "/") === 0)) {
+        tail = path.slice(base.length) || "/";
+      }
+      tail = tail.replace(/\/+$/, "") || "/";
+      if (tail === "/" || tail === "/login") {
+        root.dataset.ue5BootMode = "login";
+      }
+    })();
+  </script>
+  <style>
+    html,
+    body,
+    #Ue5 {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      background-color: #041838;
+      background-image: url("/resource/v1/ue5-migrate/assets/images/sky-texture2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #ue5-boot-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #e8f4ff;
+      /* Isolate from later antd/global line-height so copy height cannot jump. */
+      font: 16PX/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      /* Opaque cover so the login form cannot show through the splash. */
+      background-color: #041838;
+      background-image: url("/resource/v1/ue5-migrate/assets/images/sky-texture2.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+      transition: opacity 0.28s ease;
+      pointer-events: auto;
+    }
+
+    #ue5-boot-loader.is-leaving {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Drop copy/spinner immediately so they never ghost over the login card. */
+    #ue5-boot-loader.is-leaving .ue5-boot-loader__stage {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .ue5-boot-loader__stage {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      width: auto;
+      max-width: 92vw;
+      min-width: 280PX;
+      height: auto;
+      min-height: 188PX;
+      padding: 0 24PX;
+      box-sizing: border-box;
+      gap: 12PX;
+    }
+
+    .ue5-boot-loader__spinner {
+      display: block;
+      width: 48PX;
+      height: 48PX;
+      flex: 0 0 48PX;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 2PX solid rgba(125, 198, 255, 0.2);
+      border-top-color: #36a4ff;
+      border-right-color: rgba(125, 198, 255, 0.85);
+      box-shadow: 0 0 18PX rgba(54, 164, 255, 0.35);
+      animation: ue5-boot-spin 0.9s linear infinite;
+    }
+
+    .ue5-boot-loader__stage strong {
+      /* PX survives postcss-pxtorem so copy never flashes at ~2–4px before rem root applies */
+      display: block;
+      width: max-content;
+      max-width: 100%;
+      height: auto;
+      min-height: 48PX;
+      font-size: 36PX;
+      font-weight: 500;
+      line-height: 1.25;
+      color: #ffffff;
+      letter-spacing: 0.12em;
+      text-indent: 0;
+      overflow: visible;
+      white-space: nowrap;
+      opacity: 1;
+      transition: opacity 0.28s ease;
+    }
+
+    .ue5-boot-loader__stage [data-boot-hint] {
+      display: block;
+      width: 100%;
+      height: 24PX;
+      font-size: 16PX;
+      line-height: 24PX;
+      color: rgba(217, 231, 255, 0.82);
+      letter-spacing: 0.36em;
+      text-indent: 0.36em;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ue5-boot-loader__meter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8PX;
+      width: 280PX;
+      height: 32PX;
+      flex: 0 0 32PX;
+    }
+
+    .ue5-boot-loader__track {
+      display: block;
+      width: 280PX;
+      height: 4PX;
+      flex: 0 0 4PX;
+      overflow: hidden;
+      border-radius: 99PX;
+      background: rgba(41, 137, 255, 0.16);
+      box-shadow: 0 0 0 1PX rgba(54, 164, 255, 0.22);
+    }
+
+    .ue5-boot-loader__track i {
+      position: relative;
+      display: block;
+      width: 0%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(41, 137, 255, 0.35), #36a4ff);
+      box-shadow: 0 0 10px rgba(54, 164, 255, 0.45);
+      transition: width 0.18s linear;
+      /* Keep the bar feeling alive while real progress stalls. */
+      animation: ue5-boot-fill-pulse 1.8s ease-in-out infinite;
+    }
+
+    .ue5-boot-loader__track i::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.08) 35%,
+        rgba(210, 236, 255, 0.65) 50%,
+        rgba(255, 255, 255, 0.08) 65%,
+        transparent 100%
+      );
+      transform: translateX(-120%);
+      animation: ue5-boot-shimmer 1.6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    [data-boot-percent] {
+      display: block;
+      width: 56PX;
+      height: 20PX;
+      font-size: 14PX;
+      line-height: 20PX;
+      color: rgba(217, 231, 255, 0.88);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.08em;
+    }
+
+    #ue5-boot-loader.is-error .ue5-boot-loader__track i,
+    #ue5-boot-loader.is-error .ue5-boot-loader__track i::after,
+    #ue5-boot-loader.is-error .ue5-boot-loader__spinner {
+      animation: none;
+    }
+
+    #ue5-boot-loader.is-error .ue5-boot-loader__track i::after {
+      content: none;
+    }
+
+    #ue5-boot-loader.is-error [data-boot-hint] {
+      letter-spacing: 0.08em;
+      text-indent: 0;
+      color: #ffb4b4;
+    }
+
+    @keyframes ue5-boot-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes ue5-boot-shimmer {
+      0% {
+        transform: translateX(-120%);
+      }
+
+      100% {
+        transform: translateX(120%);
+      }
+    }
+
+    @keyframes ue5-boot-fill-pulse {
+      0%,
+      100% {
+        box-shadow:
+          0 0 10px rgba(54, 164, 255, 0.45),
+          2px 0 8px rgba(180, 230, 255, 0.35);
+      }
+
+      50% {
+        box-shadow:
+          0 0 16px rgba(54, 164, 255, 0.8),
+          3px 0 12px rgba(210, 236, 255, 0.75);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .ue5-boot-loader__spinner,
+      .ue5-boot-loader__track i,
+      .ue5-boot-loader__track i::after {
+        animation: none;
+      }
+
+      .ue5-boot-loader__track i::after {
+        content: none;
+      }
+
+      .ue5-boot-loader__track i,
+      .ue5-boot-loader__stage strong {
+        transition: none;
+      }
+    }
+
+    #cube-license-check {
+      position: fixed;
+      width: 0;
+      height: 0;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    #cube-license-check * {
+      pointer-events: auto;
+    }
+
+    #inspector-host .label {
+      color: inherit !important;
+    }
+
+    #inspector-host .label svg {
+      color: #fff !important;
+    }
+
+    #inspector-host input,
+    #inspector-host select {
+      color: #000 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ue5-boot-loader" role="status" aria-live="polite" aria-label="正在加载">
+    <div class="ue5-boot-loader__stage">
+      <span class="ue5-boot-loader__spinner" aria-hidden="true"></span>
+      <strong>三维可视化</strong>
+      <span data-boot-hint>正在加载</span>
+      <div class="ue5-boot-loader__meter">
+        <span class="ue5-boot-loader__track"><i data-boot-fill></i></span>
+        <span data-boot-percent>0%</span>
+      </div>
+    </div>
+  </div>
+  <div id="Ue5"></div>
+  <script>
+    (function () {
+      var el = document.getElementById("ue5-boot-loader");
+      if (!el) {
+        return;
+      }
+      var isLoginBoot = document.documentElement.dataset.ue5BootMode === "login";
+      var hint = isLoginBoot ? "正在加载" : "正在加载可视化数据";
+      try {
+        var cachedTitle = localStorage.getItem("ue5-system-title");
+        if (cachedTitle && cachedTitle.trim()) {
+          var titles = el.querySelectorAll("strong");
+          titles.forEach(function (node) {
+            node.textContent = cachedTitle.trim();
+          });
+        }
+      } catch (_err) {}
+      el.setAttribute("aria-label", hint);
+      var hints = el.querySelectorAll("[data-boot-hint]");
+      hints.forEach(function (node) {
+        node.textContent = hint;
+      });
+
+      var shown = 0;
+      var fills = el.querySelectorAll("[data-boot-fill]");
+      var percents = el.querySelectorAll("[data-boot-percent]");
+      var RESOURCE_CAP = 68;
+
+      var paint = function (value) {
+        var next = Math.max(0, Math.min(100, Math.round(value)));
+        if (next < shown) {
+          return;
+        }
+        shown = next;
+        var width = shown + "%";
+        var label = shown + "%";
+        fills.forEach(function (node) {
+          node.style.width = width;
+        });
+        percents.forEach(function (node) {
+          node.textContent = label;
+        });
+      };
+
+      window.__UE5_BOOT__ = {
+        setProgress: paint,
+      };
+      paint(1);
+
+      var isTrackable = function (name, initiatorType) {
+        if (initiatorType && initiatorType !== "script" && initiatorType !== "link" && initiatorType !== "css" && initiatorType !== "other") {
+          return false;
+        }
+        return /(\.m?js|\.ts|\.tsx|\.css|\.woff2?)(\?|$)/i.test(name) ||
+          name.indexOf("/src/") !== -1 ||
+          name.indexOf("/node_modules/") !== -1 ||
+          name.indexOf("/assets/") !== -1 ||
+          name.indexOf("config.js") !== -1;
+      };
+
+      var expected = document.querySelectorAll("script[src], link[rel='stylesheet'], link[rel='modulepreload']").length;
+      expected = Math.max(expected, 4);
+      var seen = {};
+      var PENDING = 8;
+
+      var recount = function () {
+        if (el.dataset.ready === "1") {
+          return;
+        }
+        var entries = performance.getEntriesByType("resource");
+        for (var i = 0; i < entries.length; i += 1) {
+          var entry = entries[i];
+          if (seen[entry.name] || !isTrackable(entry.name, entry.initiatorType)) {
+            continue;
+          }
+          if (!entry.responseEnd) {
+            continue;
+          }
+          seen[entry.name] = true;
+        }
+        var completed = Object.keys(seen).length;
+        var denom = Math.max(expected, completed + PENDING);
+        paint(Math.min(RESOURCE_CAP, (completed / denom) * RESOURCE_CAP));
+      };
+
+      if (typeof PerformanceObserver === "function") {
+        try {
+          var observer = new PerformanceObserver(function () {
+            recount();
+          });
+          observer.observe({ type: "resource", buffered: true });
+        } catch (_err) {
+          window.setInterval(recount, 200);
+        }
+      } else {
+        window.setInterval(recount, 200);
+      }
+      recount();
+    })();
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

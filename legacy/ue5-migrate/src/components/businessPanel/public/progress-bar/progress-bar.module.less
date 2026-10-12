@@ -1,0 +1,111 @@
+.progress-bar {
+  width: 100%;
+  cursor: pointer;
+  // padding-left: 10px;
+  margin-bottom: 12px;
+
+  .progress-bar-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .progress-bar-label {
+      font-size: 14px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Medium;
+      font-weight: Medium;
+      text-align: left;
+      color: #fff;
+      letter-spacing: 0.02px;
+      max-width: 80%;
+      // overflow-x: scroll;
+      // overflow-y: scroll;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-left: 2px;
+
+      .rank {
+        font-size: 16px;
+        padding: 1px 10px;
+        text-align: center;
+        color: #fff;
+        background: rgba(21,58,105,0.30);
+        border: 1px solid #79a0d0;
+        border-radius: 2px;
+        margin-right: 10px;
+      }
+
+      .rank-1 {
+        background: rgba(241,69,69,0.30);
+        border-color: #F14545;
+      }
+
+      .rank-2 {
+        background: rgba(255,171,16,0.30);
+        border-color: #FFAB10;
+      }
+
+      .rank-3 {
+        background-color: rgba(50,142,255,0.20);;
+        border-color: #2989FF;
+      }
+    }
+
+    .progress-bar-value {
+      font-size: 20px;
+      font-family: D-DIN-PRO, D-DIN-PRO-Regular;
+      font-weight: Regular;
+      text-align: left;
+      color: #fff;
+      margin-right: 10px;
+    }
+    .unit {
+      font-size: 12px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+      color: #d0deee;
+      margin-left: 2px;
+    }
+  }
+
+  .progress-bar-inner-wrapper {
+    width: calc(100% - 18px);
+    height: 6px;
+    background: rgba(217, 231, 255, 0.10);
+    box-sizing: border-box;
+    margin: 6px auto;
+
+    .progress-bar-inner {
+      height: 100%;
+      background: linear-gradient(63deg, rgba(97, 148, 247, 0.14) 2%, #94baf9 83%);
+      position: relative;
+      overflow: visible;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4px;
+        width: 6px;
+        height: 6px;
+        background: #edf4ff;
+        border-radius: 50%;
+        z-index: 1;
+        // border: 6px solid rgba(97, 148, 247, 0.60);
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -8px;
+        width: 14px;
+        height: 14px;
+        background: rgba(97, 148, 247, 0.60);
+        border-radius: 50%;
+      }
+    }
+  }
+}

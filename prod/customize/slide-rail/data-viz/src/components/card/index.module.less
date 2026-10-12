@@ -1,0 +1,43 @@
+.card-container {
+  background: rgba(18,30,30,0.70);
+  border: 0.5px solid #2989ff;
+  box-shadow: 0px 0px 5px 0px rgba(41,137,255,0.80) inset; 
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  &:nth-child(odd){
+    margin-right: 0;
+  }
+  .card-head{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .card-head-title {
+      width: 448px;
+      height: 83px;
+      background: url('/resource/v1/slide-rail/public/images/top-title-bg.png') no-repeat;
+      background-size: 100% 100%;
+      background-position-y: -10px;
+      text-align: center;
+      display: flex;
+      font-size: 28px;
+      font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+      font-weight: Bold;
+      text-align: center;
+      color: #ecf8ff;
+      line-height: 60px;
+      letter-spacing: 0.17px;
+      text-shadow: 0px 0px 2px 0px #0091ff; 
+      text-align: center;
+      justify-content: center;
+    }
+    .card-state{
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+  }
+  .card-body {
+    margin: 12px 0px 6px;
+  }
+}

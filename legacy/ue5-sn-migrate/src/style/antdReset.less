@@ -1,0 +1,350 @@
+// antd更新后覆盖了部分样式，逐步排查，后续遇到需要全局设置的都可以在此添加
+
+/* ========== 深色大屏：筛选控件统一视觉令牌 ========== */
+@sn-control-bg: rgba(16, 40, 68, 0.9);
+@sn-control-border: 1px solid rgba(41, 137, 255, 0.4);
+@sn-control-radius: 4px;
+@sn-control-height: 32px;
+@sn-popup-bg: #102844;
+@sn-popup-border: 1px solid rgba(41, 137, 255, 0.45);
+@sn-popup-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+@sn-text: rgba(255, 255, 255, 0.88);
+@sn-placeholder: rgba(217, 231, 255, 0.75);
+@sn-active: #2989ff;
+
+/* ========== 触发框：Select / DatePicker / Input 统一 ========== */
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-picker,
+.ant-picker-range,
+.ant-input,
+.ant-input-affix-wrapper {
+  background: @sn-control-bg !important;
+  border: @sn-control-border !important;
+  border-radius: @sn-control-radius !important;
+  min-height: @sn-control-height !important;
+  height: @sn-control-height !important;
+  box-shadow: none !important;
+  color: @sn-text !important;
+}
+
+/* Select / Input / DatePicker：placeholder 垂直居中 */
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  display: flex !important;
+  align-items: center !important;
+  padding-inline: 11px !important;
+
+  .ant-select-selection-search {
+    inset-inline-start: 11px !important;
+    inset-inline-end: 11px !important;
+  }
+
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder {
+    line-height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.ant-input-affix-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 11px !important;
+
+  > input.ant-input {
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0 !important;
+  }
+}
+
+.ant-input:not(textarea) {
+  height: @sn-control-height !important;
+  line-height: 30px !important;
+  padding: 0 11px !important;
+}
+
+.ant-picker,
+.ant-picker-range {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 11px !important;
+
+  .ant-picker-input > input {
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0 !important;
+  }
+}
+
+/* DatePicker 内部输入透明，避免浅色底透出 */
+.ant-picker .ant-picker-input > input,
+.ant-picker-range .ant-picker-input > input {
+  background: transparent !important;
+  color: @sn-text !important;
+  -webkit-text-fill-color: @sn-text !important;
+}
+
+/* affix 包裹时只保留外层边框，去掉内层 input 边框 */
+.ant-input-affix-wrapper > .ant-input,
+.ant-input-affix-wrapper .ant-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 30px !important;
+  padding: 0 !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-picker-focused,
+.ant-input:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: @sn-active !important;
+  box-shadow: 0 0 0 2px rgba(41, 137, 255, 0.2) !important;
+}
+
+.ant-select-selection-item,
+.ant-select-arrow,
+.ant-picker-separator,
+.ant-picker-suffix,
+.ant-picker-input > input,
+.ant-input {
+  color: @sn-text !important;
+}
+
+.ant-select-selection-placeholder,
+.ant-input::placeholder,
+.ant-input-affix-wrapper input::placeholder,
+.ant-picker-input > input::placeholder {
+  color: @sn-placeholder !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: @sn-placeholder !important;
+}
+
+/* ========== 浮层：Select 下拉 / DatePicker 面板统一 ========== */
+.ant-select-dropdown,
+.ant-picker-dropdown .ant-picker-panel-container {
+  background: @sn-popup-bg !important;
+  border: @sn-popup-border !important;
+  border-radius: @sn-control-radius !important;
+  box-shadow: @sn-popup-shadow !important;
+  padding: 4px;
+}
+
+.ant-select-dropdown .ant-select-item {
+  color: @sn-text !important;
+  border-radius: 2px;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled),
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: @sn-active !important;
+  color: #fff !important;
+}
+
+.ant-picker-dropdown {
+  .ant-picker-panels,
+  .ant-picker-panel {
+    background: @sn-popup-bg !important;
+    border: none !important;
+  }
+
+  .ant-picker-header,
+  .ant-picker-header button,
+  .ant-picker-content th,
+  .ant-picker-cell,
+  .ant-picker-cell-in-view {
+    color: @sn-text !important;
+  }
+
+  .ant-picker-header {
+    border-bottom: 1px solid rgba(41, 137, 255, 0.2);
+  }
+
+  .ant-picker-cell-inner {
+    color: inherit !important;
+  }
+
+  .ant-picker-cell:not(.ant-picker-cell-in-view) {
+    color: rgba(255, 255, 255, 0.25) !important;
+  }
+
+  .ant-picker-cell-disabled,
+  .ant-picker-cell-disabled .ant-picker-cell-inner {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-in-range::before,
+  .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+  .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+    background: rgba(41, 137, 255, 0.35) !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-in-range .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-hover .ant-picker-cell-inner {
+    color: #fff !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+    color: #fff !important;
+    background: @sn-active !important;
+  }
+
+  .ant-picker-cell-inner:hover {
+    background: rgba(41, 137, 255, 0.55) !important;
+  }
+
+  .ant-picker-footer {
+    border-top: 1px solid rgba(41, 137, 255, 0.2);
+  }
+
+  .ant-picker-ranges .ant-picker-preset > .ant-tag {
+    border-color: rgba(41, 137, 255, 0.25);
+    color: @sn-text;
+  }
+}
+
+/* ========== Popover：深色可读 ========== */
+.ant-popover {
+  .ant-popover-inner {
+    background: #163454 !important;
+    border: 1px solid rgba(41, 137, 255, 0.45);
+    box-shadow: @sn-popup-shadow;
+  }
+
+  .ant-popover-inner-content {
+    color: #fff !important;
+  }
+
+  .ant-popover-arrow::before,
+  .ant-popover-arrow::after {
+    background: #163454 !important;
+  }
+}
+
+/* ========== 弹窗公共布局：边距 / 列表高度 / 分页间距 ========== */
+.ant-modal {
+  .ant-modal-header {
+    /* 与内容区左右对齐 */
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .ant-modal-body {
+    /* 左右留白适中（原 24px 经 rem 放大后过宽） */
+    padding: 12px 12px 12px !important;
+  }
+
+  /* 详情内容嵌在 Modal 内时，不再叠加一层左右 padding */
+  .alarmDetail-modal-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 序号列：弹窗内统一收窄 */
+  .col-index {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    max-width: 48px !important;
+    min-width: 48px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    box-sizing: border-box;
+  }
+
+  .modal-layout {
+    box-sizing: border-box;
+    padding: 0;
+
+    /* 列表区：表头 + 10 行（约 48px/行） */
+    > div:has(.table_header),
+    > div:has(.table_content),
+    .table-body {
+      height: 528px !important;
+      max-height: 528px;
+      margin-top: 16px !important;
+      margin-bottom: 0 !important;
+      overflow-y: auto;
+    }
+
+    /* 分页区：与列表稍作分隔，紧贴弹窗底边 */
+    > div:has(.ant-pagination),
+    .table-pagination {
+      height: auto !important;
+      min-height: 32px;
+      margin-top: 12px !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0;
+      clear: both;
+      overflow: visible;
+
+      .ant-pagination {
+        float: none !important;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 !important;
+        color: #fff;
+      }
+    }
+  }
+
+  .table-top {
+    .ant-form-inline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 12px;
+    }
+
+    .ant-form-item {
+      margin-right: 16px;
+      margin-bottom: 0;
+      width: auto !important;
+      max-width: none;
+    }
+
+    .ant-form-item-control-input {
+      min-height: @sn-control-height;
+    }
+
+    .ant-form-item-label > label {
+      height: @sn-control-height;
+      line-height: @sn-control-height;
+    }
+  }
+
+  /* 查询主按钮：去掉底部白边/阴影 */
+  .ant-btn-primary {
+    background: #1285ff !important;
+    border: 1px solid #1285ff !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus,
+  .ant-btn-primary:active {
+    background: #3a9bff !important;
+    border-color: #3a9bff !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .ant-btn-primary::before,
+  .ant-btn-primary::after {
+    display: none !important;
+  }
+
+  .ant-btn-sm:not(.ant-btn-primary) {
+    border: 1px solid #1285ff !important;
+    background: rgba(4, 17, 32, 0.95) !important;
+    color: #1285ff !important;
+    box-shadow: none !important;
+  }
+}

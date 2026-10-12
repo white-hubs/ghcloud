@@ -1,0 +1,112 @@
+:global {
+  /* 仅 policeCard / BackgroundTitleBar 使用，避免污染 Convention 标题栏 */
+  .police-title-bar.sub-panel {
+    width: 100%;
+    color: var(--visual-text-color, #ffffff);
+    background: var(--visual-card-glass-bg, var(--visual-card-bg, transparent));
+    border: 1px solid var(--visual-card-glass-border, var(--visual-card-border, transparent));
+    border-radius: 8px;
+    box-sizing: border-box;
+    backdrop-filter: var(--visual-card-backdrop-filter, none);
+    -webkit-backdrop-filter: var(--visual-card-backdrop-filter, none);
+
+    .sub-panel-header {
+      width: 100%;
+      height: 50px;
+      border-bottom: var(--visual-line-weak, rgba(255, 255, 255, 0.3)) solid 1px;
+      background-image: url("/resource/v1/ue5-migrate/assets/images/overView117.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      .title {
+        font-size: 18px;
+        color: var(--visual-title-color, #ffffff);
+        font-family: sourceMedium;
+      }
+    }
+
+    .sub-panel-content {
+      margin-top: 4px;
+      flex: 1;
+      overflow: hidden;
+      background: var(--visual-card-inner-bg, rgba(6, 19, 59, 0.1));
+      border: 1px solid var(--visual-card-inner-border, rgba(34, 174, 230, 0.3));
+      border-radius: 4px;
+    }
+
+    .sub-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 250px;
+      font-size: 16px;
+      text-indent: 18px;
+    }
+  }
+
+  .police-title-bar {
+    .mark {
+      margin-right: 10px;
+      padding: 5px;
+      border: 1px solid var(--visual-primary, #2989ff);
+
+      .box {
+        width: 8px;
+        height: 8px;
+        background: var(--visual-title-color, #ffffff);
+      }
+    }
+
+    .lineBox {
+      display: flex;
+      align-items: center;
+
+      div {
+        height: 0;
+        opacity: 1;
+      }
+    }
+
+    .lineBox div:nth-child(1) {
+      width: 24px;
+      border-top: 1px solid var(--visual-line-strong, #ffffff);
+    }
+
+    .lineBox div:nth-child(2) {
+      width: 329px;
+      border-top: 1px solid var(--visual-line-weak, rgba(255, 255, 255, 0.3));
+    }
+
+    .lineBox div:nth-child(3) {
+      width: 12px;
+      height: 2px;
+      background: var(--visual-primary, #2989ff);
+      margin-left: 3px;
+    }
+
+    .header-extra {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-shrink: 0;
+      min-width: 0;
+      height: 24px;
+      margin-left: 8px;
+      line-height: 24px;
+    }
+
+    .zoomable-title {
+      cursor: grab;
+      user-select: none;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      .sub-title {
+        cursor: pointer;
+      }
+    }
+  }
+}

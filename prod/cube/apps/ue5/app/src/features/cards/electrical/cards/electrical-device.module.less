@@ -1,0 +1,437 @@
+@import "@/features/cards/_shared/v2-panel-base.less";
+
+/* 参照图3「设备统计」：顶部三卡 + 环形图 + 分类图例 */
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--card-section-gap, 10px);
+  height: 100%;
+}
+
+.statsRow {
+  display: flex;
+  min-width: 0;
+  gap: var(--card-stat-gap, 6px);
+  margin-bottom: var(--card-section-gap, 0);
+}
+
+.statCard {
+  appearance: none;
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  min-height: 60px;
+  align-items: center;
+  gap: var(--card-stat-gap, 6px);
+  padding: var(--card-stat-padding, 8px 6px 8px 4px);
+  overflow: hidden;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.14), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(8, 28, 58, 0.35));
+  border: 1px solid var(--visual-card-inner-border, rgba(70, 166, 255, 0.28));
+  border-radius: 8px;
+  box-shadow: inset 0 0 12px rgba(46, 148, 255, 0.1);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.isTotal {
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.2), rgba(12, 230, 255, 0.06)),
+    var(--visual-card-inner-bg, rgba(8, 28, 58, 0.35));
+}
+
+.isOnline {
+  background:
+    linear-gradient(135deg, rgba(0, 242, 123, 0.14), rgba(12, 230, 255, 0.04)),
+    var(--visual-card-inner-bg, rgba(8, 28, 58, 0.35));
+  border-color: rgba(0, 242, 123, 0.28);
+}
+
+.isOffline {
+  background:
+    linear-gradient(135deg, rgba(255, 171, 16, 0.16), rgba(255, 77, 79, 0.04)),
+    var(--visual-card-inner-bg, rgba(8, 28, 58, 0.35));
+  border-color: rgba(255, 171, 16, 0.32);
+}
+
+.isClickable {
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(92, 192, 255, 0.6);
+    box-shadow:
+      inset 0 0 16px rgba(46, 148, 255, 0.18),
+      0 6px 16px rgba(0, 27, 66, 0.14);
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+    border-color: rgba(92, 192, 255, 0.75);
+  }
+}
+
+.statIcon {
+  display: flex;
+  flex: 0 0 var(--card-stat-icon-size, 24px);
+  width: var(--card-stat-icon-size, 24px);
+  height: var(--card-stat-icon-size, 24px);
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(64, 168, 255, 0.28));
+  }
+}
+
+.statContent {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.statLabel {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.86));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.statValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(43, 147, 255, 0.28);
+}
+
+.isOnlineValue {
+  color: #2ae8bd;
+  text-shadow: 0 0 10px rgba(42, 232, 189, 0.28);
+}
+
+.isOfflineValue {
+  color: #ffab10;
+  text-shadow: 0 0 10px rgba(255, 171, 16, 0.28);
+}
+
+.analysisSurface {
+  display: flex;
+  align-items: center;
+  gap: var(--card-section-gap, 12px);
+  min-height: 0;
+  flex: 1 1 auto;
+  padding: 2px 0 0;
+  background: transparent;
+}
+
+.isEmpty {
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.chartWrap {
+  position: relative;
+  display: flex;
+  flex: 0 0 var(--card-pie-size, 120px);
+  width: var(--card-pie-size, 120px);
+  height: var(--card-pie-size, 120px);
+  min-width: var(--card-pie-size, 120px);
+  min-height: var(--card-pie-size, 120px);
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, rgba(53, 169, 255, 0.22), rgba(12, 230, 255, 0.04) 55%, transparent 72%);
+  box-shadow: inset 0 0 18px rgba(46, 148, 255, 0.16);
+
+  :global(.elevator-analysis-pie-box),
+  :global(.elevator-analysis-pie-chart) {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.pieCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pieCenterValue {
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 18px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.pieCenterLabel {
+  color: var(--visual-chart-label-color, rgba(220, 238, 255, 0.86));
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  text-align: center;
+}
+
+.genreList {
+  --legend-row-height: 30px;
+  --legend-row-gap: 6px;
+  --legend-visible-rows: 4;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--legend-row-gap);
+  height: calc(var(--legend-row-height) * var(--legend-visible-rows) + var(--legend-row-gap) * (var(--legend-visible-rows) - 1));
+  max-height: calc(var(--legend-row-height) * var(--legend-visible-rows) + var(--legend-row-gap) * (var(--legend-visible-rows) - 1));
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+/* 不足 4 条时相对圆环区域垂直居中 */
+.genreListCentered {
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.genreItem {
+  display: flex;
+  flex: 0 0 var(--legend-row-height);
+  box-sizing: border-box;
+  min-width: 0;
+  height: var(--legend-row-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+  background:
+    linear-gradient(135deg, rgba(41, 137, 255, 0.12), rgba(12, 230, 255, 0.03)),
+    var(--visual-card-inner-bg, rgba(8, 28, 58, 0.28));
+  border: 1px solid rgba(113, 178, 255, 0.2);
+  border-radius: 8px;
+}
+
+.genreName {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.9));
+  font-size: calc(var(--font-size-scale, 1) * 12px);
+  line-height: 1.3;
+}
+
+.genreColor {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.genreNameText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.genreCount {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: baseline;
+  gap: 2px;
+  color: var(--visual-number-color, #eff6ff);
+  font-family: D-DIN-PRO, DIN, sourceMedium, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 15px);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.genreUnit {
+  color: var(--visual-stat-label-color, rgba(220, 238, 255, 0.72));
+  font-family: Source Han Sans CN, sans-serif;
+  font-size: calc(var(--font-size-scale, 1) * 11px);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.isZoom {
+  min-height: 420px;
+  gap: 16px;
+
+  .statCard {
+    min-height: 78px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .statIcon {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .statLabel {
+    font-size: calc(var(--font-size-scale, 1) * 13px);
+  }
+
+  .statValue {
+    font-size: calc(var(--font-size-scale, 1) * 26px);
+  }
+
+  .analysisSurface {
+    min-height: 280px;
+  }
+
+  .chartWrap {
+    flex-basis: 200px;
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  .pieCenterValue {
+    font-size: calc(var(--font-size-scale, 1) * 22px);
+  }
+
+  .genreList {
+    --legend-row-height: 40px;
+    --legend-row-gap: 8px;
+    --legend-visible-rows: 4;
+    height: calc(var(--legend-row-height) * var(--legend-visible-rows) + var(--legend-row-gap) * (var(--legend-visible-rows) - 1));
+    max-height: calc(var(--legend-row-height) * var(--legend-visible-rows) + var(--legend-row-gap) * (var(--legend-visible-rows) - 1));
+  }
+
+  .genreCount {
+    font-size: calc(var(--font-size-scale, 1) * 18px);
+  }
+}
+
+:global(:root[data-visual-theme="minimal-white"] .electrical-device-v2-panel) {
+  .statCard,
+  .genreItem {
+    background: linear-gradient(145deg, rgba(232, 244, 255, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(82, 142, 222, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 6px 16px rgba(50, 102, 166, 0.08);
+  }
+
+  .isOnline {
+    background: linear-gradient(145deg, rgba(230, 252, 244, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(61, 184, 146, 0.3);
+  }
+
+  .isOffline {
+    background: linear-gradient(145deg, rgba(255, 244, 230, 0.98), rgba(255, 255, 255, 0.96));
+    border-color: rgba(230, 162, 60, 0.32);
+  }
+
+  .isClickable:hover,
+  .isClickable:focus-visible {
+    border-color: rgba(41, 137, 255, 0.55);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.98),
+      0 8px 18px rgba(50, 102, 166, 0.16);
+  }
+
+  .statLabel,
+  .genreName,
+  .genreUnit,
+  .pieCenterLabel {
+    color: #49628f;
+  }
+
+  .statValue,
+  .genreCount,
+  .pieCenterValue {
+    color: #1455b3;
+    text-shadow: none;
+  }
+
+  .isOnlineValue {
+    color: #0f9b5f;
+  }
+
+  .isOfflineValue {
+    color: #d48806;
+  }
+
+  .statIcon img {
+    filter: none;
+  }
+
+  .chartWrap {
+    background: radial-gradient(circle at 50% 45%, rgba(53, 129, 255, 0.14), rgba(232, 244, 255, 0.5) 55%, transparent 72%);
+  }
+}
+
+.v2-minimal-white-panel(electrical-device-v2-panel);
+
+.card-slot-density-compact-stats();
+
+:global(.panel-card-slot[data-card-density="compact"]),
+:global(.panel-card-slot[data-card-density="rearrange"]),
+:global(.panel-card-slot[data-card-density="scroll"]) {
+  .statCard {
+    min-height: 0;
+  }
+
+  .analysisSurface {
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  .chartWrap {
+    flex: 0 0 var(--card-pie-size, 100px);
+    width: var(--card-pie-size, 100px);
+    height: var(--card-pie-size, 100px);
+    min-width: var(--card-pie-size, 100px);
+    min-height: var(--card-pie-size, 100px);
+  }
+
+  .genreList {
+    --legend-row-height: 28px;
+    --legend-row-gap: 6px;
+  }
+}
+
+:global {
+  .electrical-device-v2-panel .title-icon-img {
+    display: block;
+    width: var(--card-title-icon-size, 32px);
+    height: var(--card-title-icon-size, 32px);
+    object-fit: contain;
+  }
+}
